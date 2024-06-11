@@ -1,0 +1,290 @@
+# mocha.yaml
+rosewater: &rosewater "#f5e0dc"
+flamingo: &flamingo "#f2cdcd"
+pink: &pink "#f5c2e7"
+mauve: &mauve "#cba6f7"
+red: &red "#f38ba8"
+maroon: &maroon "#eba0ac"
+peach: &peach "#faa5e8"
+orange: &orange "#fe8638"
+yellow: &yellow "#f9e2af"
+green: &green "#a6e3a1"
+teal: &teal "#94e2d5"
+sky: &sky "#89dceb"
+sapphire: &sapphire "#74c7ec"
+blue: &blue "#89b4fa"
+tokyo-blue: &tokyo-blue "#80a7fa"
+lavender: &lavender "#b4befe"
+text: &text "#cdd6f4"
+subtext1: &subtext1 "#bac2de"
+subtext0: &subtext0 "#a6adc8"
+overlay2: &overlay2 "#9399b2"
+overlay1: &overlay1 "#7f849c"
+overlay0: &overlay0 "#6c7086"
+surface2: &surface2 "#585b70"
+surface1: &surface1 "#45475a"
+surface0: &surface0 "#313244"
+base: &base "#1e1e2e"
+mantle: &mantle "#181825"
+crust: &crust "#11111b"
+
+bar:
+  height: "27px"
+  position: "top"
+  opacity: 0.9
+  background: *crust
+  foreground: *mauve
+  font_family: "Maple Mono NF CN"
+  font_size: "12px"
+  padding: "4px 6px"
+  offset_x: 0
+  offset_y: 0
+  border_radius: 8
+  border_color: "#343A41"
+  border_width: 2
+
+  components_left:
+    - type: "text"
+      text: "󰣇 Efterklang "
+      foreground: *sapphire
+    - type: "workspaces"
+      focused_workspace_background: *tokyo-blue
+      focused_workspace_foreground: *crust
+      displayed_workspace_background: *surface0
+      default_workspace_background: "transparent"
+      margin: "0px 10px 0px 0px"
+  components_center:
+    # - type: "window title"
+    - type: "clock"
+      # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
+      time_formatting: " yyyy-M-d "
+      foreground: *red
+    - type: "clock"
+      time_formatting: " hh:mm:ss tt "
+      foreground: *pink
+    - type: "clock"
+      time_formatting: "ddd "
+      foreground: *yellow
+  components_right:
+    - type: "tiling direction"
+      foreground: *blue
+      padding: "0 8px"
+      label_horizontal: "⮂" #⮂ 󰚉 ⬓ 󰯌
+      label_vertical: "⮁" #⮁ 󰚈 󱂪 󰯋
+    - type: "binding mode"
+      foreground: *red
+      margin: "0px 10px 0px 0px"
+    - type: "music"
+      margin: "0px 10px 0px 0px"
+      label_not_playing: "<attr fs='15' fg='#89b4fa'> </attr>Music"
+      label_paused: "<attr fs='15' fg='#89b4fa'>󰝛 </attr>{song_title}"
+      label_playing: "<attr fs='15' fg='#89b4fa'>󰥠 </attr>{song_title}"
+      max_title_length: 30
+    - type: "weather"
+      # chengdu: 30.3936N 104.0348E
+      latitude: 30.3936
+      longitude: 104.0348
+      margin: "0px 10px 0px 0px"
+      label: "{temperature_celsius}°C"
+      label_sun: "<attr fs='15' fg='#89b4fa'>☀️</attr>{temperature_celsius}°C"
+      label_moon: "<attr fs='15' fg='#89b4fa'>🌙</attr>{temperature_celsius}°C"
+      label_cloud_moon: "🌙<attr fs='15' fg='#89b4fa'>☁️</attr>{temperature_celsius}°C"
+      label_cloud_sun: "<attr fs='15' fg='#89b4fa'>⛅</attr>{temperature_celsius}°C"
+      label_cloud_moon_rain: "🌙<attr fs='15' fg='#89b4fa'>🌧️</attr>{temperature_celsius}°C"
+      label_cloud_sun_rain: "<attr fs='15' fg='#89b4fa'>🌦️</attr>{temperature_celsius}°C"
+      label_cloud_rain: "<attr fs='15' fg='#89b4fa'>🌧️</attr>{temperature_celsius}°C"
+      label_snow_flake: "<attr fs='15' fg='#89b4fa'>❄️</attr>{temperature_celsius}°C"
+      label_thunderstorm: "<attr fs='15' fg='#89b4fa'>⚡</attr>{temperature_celsius}°C"
+      label_cloud: "<attr fs='15' fg='#89b4fa'>☁️</attr>{temperature_celsius}°C"
+    - type: "cpu"
+      label: "<attr fs='15' fg='#89b4fa'> </attr>{percent_usage}%"
+      margin: "0px 10px 0px 0px"
+      refresh_interval_ms: 3000
+    - type: "gpu"
+      label: "<attr fs='15' fg='#89b4fa'>󰍛 </attr>{percent_usage}%"
+      margin: "0px 10px 0px 0px"
+      refresh_interval_ms: 3000
+    - type: "memory"
+      label: "<attr fs='15' fg='#89b4fa'> </attr> {percent_usage}%"
+      margin: "0px 10px 0px 0px"
+      refresh_interval_ms: 2000
+    - type: "volume"
+      margin: "0px 10px 0px 0px"
+      foreground: *yellow
+      label_low: "<attr fs='15'> </attr>{volume_level}%"
+      label_medium: "<attr fs='15'>󰕾 </attr>{volume_level}%"
+      label_high: "<attr fs='15'> </attr>{volume_level}%"
+      label_mute: "<attr fs='15'>󰝟 </attr>{volume_level}%"
+    - type: "battery"
+      # background: *surface0
+      margin: "0px 10px 0px 0px"
+      label_draining: "<attr fs='15' fg='#fab387'>󰂄 </attr>{battery_level}%"
+      label_power_saver: "<attr fs='15' fg='#89b4fa'>󰂄 </attr>{battery_level}%"
+      label_charging: "<attr fs='15' fg='#a6e3a1'>󰂄 </attr>{battery_level}%"
+    - type: "text"
+      text: "  "
+      foreground: *red
+      font_size: 14
+      margin: "0px 10px 0px 0px"
+      left_click_command: "exec taskmgr"
+      # left_click_command: "exec '%userprofile%/.glaze-wm/shutdownPC'"
+      right_click_command: ""
+
+general:
+  focus_follows_cursor: false
+  cursor_follows_focus: false
+  toggle_workspace_on_refocus: true
+  show_floating_on_top: false
+  floating_window_move_amount: "5%"
+  center_new_floating_windows: true
+
+  # window transition animations (on minimize, close, etc). Set to 'unchanged'
+  # to make no setting changes.
+  window_animations: "unchanged"
+
+gaps:
+  inner_gap: "2"
+  outer_gap: "1"
+
+# Highlight active/inactive windows with a colored border.
+focus_borders:
+  active:
+    enabled: true
+    color: "#89b4fa"
+
+  inactive:
+    enabled: false
+
+workspaces:
+  - name: "1"
+    display_name: " "
+    keep_alive: true
+  - name: "2"
+    display_name: " "
+  - name: "3"
+    display_name: "󰨞 "
+  - name: "4"
+    display_name: "󰨊 "
+  - name: "5"
+    display_name: " "
+  - name: "6"
+    display_name: " "
+
+window_rules:
+  # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
+  - command: "set floating"
+    match_class_name: "#32770"
+
+  - command: "set floating"
+    match_process_name: "/explorer|Taskmgr|ScreenClippingHost|SnippingTool|Clash for Windows/"
+
+  - command: "set floating"
+    match_title: "/.*[Pp]hoto.*|.*[Cc]amera.*/"
+
+  # Some 
+  # - command: "set floating"
+  #   match_process_name: "/^(?!(code-insiders|wezterm-gui)$)/"
+
+  - command: "move to workspace 2"
+    match_process_name: "/QQ|WeChat|Feishu/"
+
+  # - commands: ["move to workspace 3", focus workspace 3]
+  #   match_process_name: "lx-music-desktop"
+  - commands: ["move to workspace 4"]
+    match_process_name: "wezterm-gui"
+
+  - command: "move to workspace 6"
+    match_process_name: "steam"
+
+binding_modes:
+  - name: "view"
+    keybindings:
+      # Resize focused window by a percentage or pixel amount.
+      - command: "resize width -2%"
+        bindings: ["H", "Left"]
+      - command: "resize width +2%"
+        bindings: ["L", "Right"]
+      - command: "resize height +2%"
+        bindings: ["K", "Up"]
+      - command: "resize height -2%"
+        bindings: ["J", "Down"]
+      # Move focused window in a given direction.
+      - command: "move left"
+        binding: "Alt+A"
+      - command: "move right"
+        binding: "Alt+D"
+      - command: "move up"
+        binding: "Alt+W"
+      - command: "move down"
+        binding: "Alt+D"
+      - command: "tiling direction toggle"
+        binding: "Alt+V"
+      # Press enter/escape to return to default keybindings.
+      - command: "binding mode none"
+        bindings: ["Escape", "Enter"]
+  - name: "lock"
+    keybindings:
+      - command: "binding mode none"
+        bindings: ["Escape", "Enter"]
+
+keybindings:
+  - command: "binding mode view"
+    binding: "Alt+C"
+  - command: "binding mode lock"
+    binding: "Alt+Z"
+  - command: "toggle floating"
+    binding: "Alt+Space"
+  - command: "tiling direction toggle"
+    binding: "Alt+V"
+  - command: "reload config"
+    binding: "Alt+Shift+C"
+  - command: "set minimized"
+    binding: "Alt+M"
+  - commands: ["exec D:/Application/WezTerm/wezterm-gui.exe"]
+    binding: "Ctrl+Enter"
+  # Change focus tab
+  - command: "focus left"
+    binding: "Alt+H"
+  - command: "focus right"
+    binding: "Alt+L"
+  - command: "focus up"
+    binding: "Alt+K"
+  - command: "focus down"
+    binding: "Alt+J"
+  # Change focus to a workspace defined in `workspaces` config.
+  - command: "focus workspace 1"
+    binding: "Alt+1"
+  - command: "focus workspace 2"
+    binding: "Alt+2"
+  - command: "focus workspace 3"
+    binding: "Alt+3"
+  - command: "focus workspace 4"
+    binding: "Alt+4"
+  - command: "focus workspace 5"
+    binding: "Alt+5"
+  - command: "focus workspace 6"
+    binding: "Alt+6"
+  - command: "focus workspace next"
+    binding: "Alt+0"
+  - command: "focus workspace prev"
+    binding: "Alt+9"
+
+    # Focus the next/previous workspace defined in `workspaces` config.
+  - command: "focus workspace next"
+    binding: "Alt+Shift+H"
+  - command: "focus workspace prev"
+    binding: "Alt+Shift+L"
+
+  # Move focused window to a workspace defined in `workspaces` config.
+  - commands: ["move to workspace 1", focus workspace 1]
+    binding: "Alt+Shift+1"
+  - commands: ["move to workspace 2", focus workspace 2]
+    binding: "Alt+Shift+2"
+  - commands: ["move to workspace 3", focus workspace 3]
+    binding: "Alt+Shift+3"
+  - commands: ["move to workspace 4", focus workspace 4]
+    binding: "Alt+Shift+4"
+  - commands: ["move to workspace 5", focus workspace 5]
+    binding: "Alt+Shift+5"
+  - commands: ["move to workspace 6", focus workspace 6]
+    binding: "Alt+Shift+6"

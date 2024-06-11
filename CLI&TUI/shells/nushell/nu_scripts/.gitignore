@@ -1,0 +1,6 @@
+.DS_Store
+
+# ignore the git mailmap file
+.mailmap
+
+check-files.nu
