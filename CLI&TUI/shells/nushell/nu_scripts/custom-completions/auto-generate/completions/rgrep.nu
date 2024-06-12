@@ -1,4 +1,0 @@
-extern "rgrep" [
-
-	...args
-]

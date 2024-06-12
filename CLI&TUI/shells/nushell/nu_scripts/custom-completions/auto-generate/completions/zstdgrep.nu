@@ -1,4 +1,0 @@
-extern "zstdgrep" [
-
-	...args
-]

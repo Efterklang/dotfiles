@@ -1,4 +1,0 @@
-extern "mkfs.vfat" [
-
-	...args
-]

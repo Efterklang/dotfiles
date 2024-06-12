@@ -1,5 +1,0 @@
-# 
-extern "tig" [
-
-	...args
-]

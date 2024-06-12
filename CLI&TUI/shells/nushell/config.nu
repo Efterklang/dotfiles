@@ -179,7 +179,7 @@ $env.config = {
     }
 
     history: {
-        max_size: 100_000 # Session has to be reloaded for this to take effect
+        max_size: 10_000 # Session has to be reloaded for this to take effect
         sync_on_enter: true # Enable to share history between multiple sessions, else you have to close the session to write history to file
         file_format: "plaintext" # "sqlite" or "plaintext"
         isolation: false # only available with sqlite file_format. true enables history isolation, false disables it. true will allow the history to be isolated to the current session using up/down arrows. false will allow the history to be shared across all sessions.
@@ -336,28 +336,6 @@ $env.config = {
                 description_text: yellow
             }
         }
-        {
-            name: fzf_history_menu_fzf_ui
-            only_buffer_difference: false
-            marker: "# "
-            type: {
-                layout: columnar
-                columns: 4
-                col_width: 20
-                col_padding: 2
-            }
-            style: {
-                text: green
-                selected_text: green_reverse
-                description_text: yellow
-            }
-            source: { |buffer, position|
-                open -r $nu.history-path | fzf +s --tac | str trim
-                | where $it =~ $buffer
-                | each { |v| {value: ($v | str trim) } }
-            }
-        }
-
     ]
 
     keybindings: [
@@ -380,7 +358,10 @@ $env.config = {
             modifier: control
             keycode: char_r
             mode: [emacs, vi_normal, vi_insert]
-            event: { send: menu name: fzf_history_menu_fzf_ui }
+            event: { 
+                send: executehostcommand
+                cmd: "commandline edit --insert (open -r $nu.history-path | fzf --height 40% --layout reverse --border +s --tac | str trim)"
+            }
         }
         {
           name: fuzzy_file
@@ -432,7 +413,7 @@ $env.config = {
             keycode: char_z
             mode: emacs
             event: {
-                until: [
+                until: [   
                     { send: menupageprevious }
                     { edit: undo }
                 ]
@@ -448,7 +429,7 @@ $env.config = {
         {
             name: cancel_command
             modifier: control
-            keycode: char_c
+            keycode: char_q
             mode: [emacs, vi_normal, vi_insert]
             event: { send: ctrlc }
         }
@@ -465,13 +446,6 @@ $env.config = {
             keycode: char_l
             mode: [emacs, vi_normal, vi_insert]
             event: { send: clearscreen }
-        }
-        {
-            name: search_history
-            modifier: control
-            keycode: char_q
-            mode: [emacs, vi_normal, vi_insert]
-            event: { send: searchhistory }
         }
         {
             name: open_command_editor
@@ -677,7 +651,7 @@ $env.config = {
         {
             name: paste_before
             modifier: control
-            keycode: char_y
+            keycode: char_v
             mode: emacs
             event: { edit: pastecutbufferbefore }
         }
@@ -798,7 +772,7 @@ $env.config = {
         # using the internal clipboard.
         {
             name: copy_selection
-            modifier: control_shift
+            modifier: control
             keycode: char_c
             mode: [emacs, vi_normal, vi_insert]
             event: { edit: copyselection }
@@ -821,23 +795,6 @@ $env.config = {
     ]
 }
 
-def glog [num?] {
-    if $num == null {
-        git log --pretty=%h»¦«%s»¦«%aN»¦«%aE»¦«%aD -n 5 | lines | split column "»¦«" commit subject name email date | upsert date {|d| $d.date | into datetime} | sort-by date | reverse
-      } else {
-        git log --pretty=%h»¦«%s»¦«%aN»¦«%aE»¦«%aD -n $num | lines | split column "»¦«" commit subject name email date | upsert date {|d| $d.date | into datetime} | sort-by date | reverse
-      }
-    
-  }
-
-def gau [num?] {
-    if $num == null {
-        git log --pretty=%h»¦«%s»¦«%aN»¦«%aE»¦«%aD | lines | split column "»¦«" commit subject name email date | upsert date {|d| $d.date | into datetime} | group-by name | transpose | upsert column1 {|c| $c.column1 | length} | sort-by column1 | rename name commits | reverse | first 5
-      } else {
-        git log --pretty=%h»¦«%s»¦«%aN»¦«%aE»¦«%aD | lines | split column "»¦«" commit subject name email date | upsert date {|d| $d.date | into datetime} | group-by name | transpose | upsert column1 {|c| $c.column1 | length} | sort-by column1 | rename name commits | reverse | first $num
-      }
-  }
-
 def --env yy [...args] {
 	let tmp = (mktemp -t "yazi-cwd.XXXXXX")
 	yazi ...$args --cwd-file $tmp
@@ -856,52 +813,29 @@ def cpath [path?] {
       }    
   }
 
-def guinit [path?] {
-    ssh-agent;
-    ssh-add ~/.ssh/Efterklang
-  }
-
-
-# use example: ls | nfd | code $in.name
-def nfd [] {$in | each {|i| $i | to json --raw} | str join "\n" | fzf  | from json}
-
-def cim [path?] {
-    if $path == null {
-        ls . | nfd | code-insiders $in.name 
-    } else {
-        ls path | nfd | code-insiders $in.name 
-    }
-}
-
 
 def sync-dotfiles [] {
-    cp -r -f ~/AppData/Roaming/nushell/*.nu 'e:/OneDrive - Business/Private/dotfiles/%APPDATA%Roaming/nushell/'
-    cp -r -f ~/.config/* 'e:/OneDrive - Business/Private/dotfiles/.config/'
+    cp -r -f ~/AppData/Roaming/nushell/*.nu 'e:/OneDrive - Business/Private/dotfiles/CLI&TUI/shells/nushell/'
+    cp -r -f ~/AppData/Roaming/nushell/scripts 'e:/OneDrive - Business/Private/dotfiles/CLI&TUI/shells/nushell/'
+    cp -r -f ~/Documents/Powershell/* 'e:/OneDrive - Business/Private/dotfiles/CLI&TUI/shells/Powershell/'
+    cp -r -f ~/.config/wezterm/* 'e:/OneDrive - Business/Private/dotfiles/wezterm/'
     cp -r -f ~/.glaze-wm/* 'e:/OneDrive - Business/Private/dotfiles/.glaze-wm/'
-    cp -r -f ~/Documents/Powershell/* 'e:/OneDrive - Business/Private/dotfiles/shell/pwsh/'
-    scoop export > 'e:\OneDrive - Business\Private\dotfiles\scoop_app.json'
+    scoop export > 'e:\OneDrive - Business\Private\dotfiles\MISC\scoop_app.json'
 }
 
 def fzfp [] {
  fzf --preview "bat --color=always --style=numbers --line-range=:500 {}" 
 } 
 
-use C:/Users/24138/AppData/Roaming/nushell/nu_scripts\modules\weather\get-weather.nu
 
-# use C:/Users/24138/AppData/Roaming/nushell/nu_scripts\modules\gitv2\mod.nu
+def killf [] {
+    kill -f (ps | each {|i| $i | to json --raw} | str join "\n" | fzf --height 60% --layout reverse --border +s --tac | str trim | from json | get pid)
+}
 
-source C:/Users/24138/AppData/Roaming/nushell/ohmyposh.nu
-source C:/Users/24138/AppData/Roaming/nushell/zoxide.nu
-source C:\Users\24138\AppData\Roaming\nushell\nu_scripts\custom-completions\scoop\scoop-completions.nu
-source C:\Users\24138\AppData\Roaming\nushell\nu_scripts\custom-completions\code-insider\vscode-completions.nu
-source C:\Users\24138\AppData\Roaming\nushell\nu_scripts\custom-completions\poetry\poetry-completions.nu
-source C:\Users\24138\AppData\Roaming\nushell\nu_scripts\custom-completions\cargo\cargo-completions.nu
-source C:\Users\24138\AppData\Roaming\nushell\nu_scripts\custom-completions\git\git-completions.nu
-source C:\Users\24138\AppData\Roaming\nushell\nu_scripts\custom-completions\bat\bat-completions.nu
-source C:\Users\24138\AppData\Roaming\nushell\nu_scripts\custom-completions\mvn\mvn-completions.nu
-source C:\Users\24138\AppData\Roaming\nushell\nu_scripts\custom-completions\winget\winget-completions.nu
-source C:\Users\24138\AppData\Roaming\nushell\nu_scripts\custom-menus\zoxide-menu.nu
-source C:\Users\24138\AppData\Roaming\nushell\nu_scripts\aliases\git\git-aliases.nu
+
+source ./zoxide.nu
+source ./ohmyposh.nu
+source ./scripts/load_scripts.nu
 
 alias lx = D:\Application\LuoxueMusic\lxmusic
 alias obsidian = D:\Application\Obsidian\obsidian
@@ -918,11 +852,9 @@ alias ping = gping
 alias curl = curlie
 alias grep = rg
 alias ff = fastfetch
-alias la = eza -a
-alias ll = eza -l
 alias penv = virtualenv
 alias wez = wezterm
 alias top = btop
 alias ranger = mc
-alias weather = get-weather get_weather
 alias lzd = lazydocker
+alias cati = wezterm imgcat

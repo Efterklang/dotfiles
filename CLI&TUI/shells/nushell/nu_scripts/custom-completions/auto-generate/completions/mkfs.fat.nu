@@ -1,4 +1,0 @@
-extern "mkfs.fat" [
-
-	...args
-]

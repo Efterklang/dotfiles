@@ -1,4 +1,0 @@
-extern "zstdless" [
-
-	...args
-]

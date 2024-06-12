@@ -1,4 +1,0 @@
-extern "xinput" [
-
-	...args
-]

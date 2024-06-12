@@ -1,5 +1,0 @@
-# 
-extern "xdg-mime" [
-
-	...args
-]

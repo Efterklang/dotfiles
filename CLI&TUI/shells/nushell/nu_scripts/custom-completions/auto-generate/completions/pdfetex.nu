@@ -1,4 +1,0 @@
-extern "pdfetex" [
-
-	...args
-]

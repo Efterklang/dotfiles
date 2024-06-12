@@ -1,5 +1,0 @@
-# 
-extern "ifdata" [
-
-	...args
-]

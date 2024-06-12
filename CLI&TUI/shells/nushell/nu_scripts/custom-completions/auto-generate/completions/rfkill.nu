@@ -1,5 +1,0 @@
-# 
-extern "rfkill" [
-
-	...args
-]

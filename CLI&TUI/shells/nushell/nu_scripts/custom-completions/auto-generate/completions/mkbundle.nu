@@ -1,5 +1,0 @@
-# 
-extern "mkbundle" [
-
-	...args
-]

@@ -1,4 +1,0 @@
-extern "kldunload" [
-
-	...args
-]

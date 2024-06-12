@@ -1,5 +1,0 @@
-# 
-extern "busctl" [
-
-	...args
-]

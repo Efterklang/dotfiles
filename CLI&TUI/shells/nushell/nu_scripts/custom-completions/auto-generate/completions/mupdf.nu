@@ -1,5 +1,0 @@
-# Description
-extern "mupdf" [
-
-	...args
-]

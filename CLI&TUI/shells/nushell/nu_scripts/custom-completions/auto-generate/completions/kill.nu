@@ -1,4 +1,0 @@
-extern "kill" [
-
-	...args
-]

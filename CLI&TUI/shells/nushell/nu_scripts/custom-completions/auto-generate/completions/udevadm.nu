@@ -1,5 +1,0 @@
-# 
-extern "udevadm" [
-
-	...args
-]

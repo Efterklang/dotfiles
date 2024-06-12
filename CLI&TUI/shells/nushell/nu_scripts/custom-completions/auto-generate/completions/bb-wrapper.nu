@@ -1,4 +1,0 @@
-extern "bb-wrapper" [
-
-	...args
-]

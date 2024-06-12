@@ -1,5 +1,0 @@
-# 
-extern "ttx" [
-
-	...args
-]

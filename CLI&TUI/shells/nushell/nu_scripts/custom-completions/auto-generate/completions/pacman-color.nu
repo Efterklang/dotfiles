@@ -1,4 +1,0 @@
-extern "pacman-color" [
-
-	...args
-]

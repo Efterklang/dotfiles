@@ -1,5 +1,0 @@
-# Service
-extern "service" [
-
-	...args
-]

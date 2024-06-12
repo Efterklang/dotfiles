@@ -1,0 +1,6 @@
+{
+	"type": "module",
+	"devDependencies": {
+		"@catppuccin/palette": "^0.2.0"
+	}
+}

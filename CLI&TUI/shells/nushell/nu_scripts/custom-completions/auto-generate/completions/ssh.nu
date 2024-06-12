@@ -1,5 +1,0 @@
-# Remote
-extern "ssh" [
-
-	...args
-]

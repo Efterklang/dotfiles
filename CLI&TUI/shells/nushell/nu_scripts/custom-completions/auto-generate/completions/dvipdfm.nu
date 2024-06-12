@@ -1,4 +1,0 @@
-extern "dvipdfm" [
-
-	...args
-]

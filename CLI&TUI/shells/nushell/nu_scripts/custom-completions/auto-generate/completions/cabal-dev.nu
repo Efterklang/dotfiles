@@ -1,4 +1,0 @@
-extern "cabal-dev" [
-
-	...args
-]

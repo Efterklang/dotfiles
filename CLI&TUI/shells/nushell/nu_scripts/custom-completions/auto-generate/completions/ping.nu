@@ -1,4 +1,0 @@
-extern "ping" [
-
-	...args
-]

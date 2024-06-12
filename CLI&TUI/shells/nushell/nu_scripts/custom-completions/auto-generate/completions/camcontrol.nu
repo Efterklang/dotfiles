@@ -1,4 +1,0 @@
-extern "camcontrol" [
-
-	...args
-]

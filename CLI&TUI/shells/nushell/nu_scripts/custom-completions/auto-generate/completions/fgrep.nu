@@ -1,4 +1,0 @@
-extern "fgrep" [
-
-	...args
-]

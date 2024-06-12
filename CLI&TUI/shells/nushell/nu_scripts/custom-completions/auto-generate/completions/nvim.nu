@@ -1,4 +1,0 @@
-extern "nvim" [
-
-	...args
-]

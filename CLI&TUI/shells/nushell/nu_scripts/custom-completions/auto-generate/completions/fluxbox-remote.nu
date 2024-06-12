@@ -1,4 +1,0 @@
-extern "fluxbox-remote" [
-
-	...args
-]

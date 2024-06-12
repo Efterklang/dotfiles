@@ -31,22 +31,23 @@ crust: &crust "#11111b"
 bar:
   height: "27px"
   position: "top"
-  opacity: 0.9
+  opacity: 0.98
   background: *crust
   foreground: *mauve
   font_family: "Maple Mono NF CN"
   font_size: "12px"
-  padding: "4px 6px"
+  padding: "4px 8px"
   offset_x: 0
   offset_y: 0
-  border_radius: 8
+  border_radius: 10
   border_color: "#343A41"
-  border_width: 2
+  border_width: 1
 
   components_left:
     - type: "text"
       text: "󰣇 Efterklang "
-      foreground: *sapphire
+      foreground: *teal
+      # left_click_command: "exec "
     - type: "workspaces"
       focused_workspace_background: *tokyo-blue
       focused_workspace_foreground: *crust
@@ -56,15 +57,11 @@ bar:
   components_center:
     # - type: "window title"
     - type: "clock"
-      # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
-      time_formatting: " yyyy-M-d "
-      foreground: *red
-    - type: "clock"
       time_formatting: " hh:mm:ss tt "
-      foreground: *pink
+      foreground: *mauve
     - type: "clock"
       time_formatting: "ddd "
-      foreground: *yellow
+      foreground: *blue
   components_right:
     - type: "tiling direction"
       foreground: *blue
@@ -105,29 +102,37 @@ bar:
       margin: "0px 10px 0px 0px"
       refresh_interval_ms: 3000
     - type: "memory"
-      label: "<attr fs='15' fg='#89b4fa'> </attr> {percent_usage}%"
-      margin: "0px 10px 0px 0px"
+      label: "<attr fs='15' fg='#89b4fa'> </attr>{percent_usage}% "
+      margin: "0px 0px 0px 0px"
       refresh_interval_ms: 2000
     - type: "volume"
-      margin: "0px 10px 0px 0px"
-      foreground: *yellow
-      label_low: "<attr fs='15'> </attr>{volume_level}%"
-      label_medium: "<attr fs='15'>󰕾 </attr>{volume_level}%"
-      label_high: "<attr fs='15'> </attr>{volume_level}%"
-      label_mute: "<attr fs='15'>󰝟 </attr>{volume_level}%"
+      label_low: "<attr fs='15'>🔊</attr>{volume_level}"
+      label_medium: "<attr fs='15'>🔊</attr>{volume_level}"
+      label_high: "<attr fs='15'>🔊</attr>{volume_level}"
+      label_mute: "<attr fs='15'>🔕</attr>{volume_level}"
+      foreground: *flamingo
+      margin: "0px 0px 0px 0px"
+    - type: text
+      text: "% " 
+      foreground: *flamingo
+      left_click_command: "exec 'C:/Users/24138/.glaze-wm/scripts/toggleMute.exe'"
     - type: "battery"
       # background: *surface0
       margin: "0px 10px 0px 0px"
       label_draining: "<attr fs='15' fg='#fab387'>󰂄 </attr>{battery_level}%"
       label_power_saver: "<attr fs='15' fg='#89b4fa'>󰂄 </attr>{battery_level}%"
       label_charging: "<attr fs='15' fg='#a6e3a1'>󰂄 </attr>{battery_level}%"
+    - type: "clock"
+      time_formatting: " yyyy-M-d "
+      foreground: *red
     - type: "text"
       text: "  "
+      left_click_command: "exec taskmgr"
       foreground: *red
       font_size: 14
       margin: "0px 10px 0px 0px"
-      left_click_command: "exec taskmgr"
-      # left_click_command: "exec '%userprofile%/.glaze-wm/shutdownPC'"
+      
+      # left_click_command: "exec '%userprofile%/.glaze-wm/scripts/shutdown.bat'"
       right_click_command: ""
 
 general:
@@ -137,7 +142,6 @@ general:
   show_floating_on_top: false
   floating_window_move_amount: "5%"
   center_new_floating_windows: true
-
   # window transition animations (on minimize, close, etc). Set to 'unchanged'
   # to make no setting changes.
   window_animations: "unchanged"
@@ -175,26 +179,23 @@ window_rules:
   - command: "set floating"
     match_class_name: "#32770"
 
-  - command: "set floating"
-    match_process_name: "/explorer|Taskmgr|ScreenClippingHost|SnippingTool|Clash for Windows/"
+  - command: "ignore"
+    match_process_name: "/Flow.Launcher|ScreenClippingHost/"
 
   - command: "set floating"
-    match_title: "/.*[Pp]hoto.*|.*[Cc]amera.*/"
+    match_process_name: "/Taskmgr|ScreenClippingHost|Clash for Windows/"
 
-  # Some 
-  # - command: "set floating"
-  #   match_process_name: "/^(?!(code-insiders|wezterm-gui)$)/"
+  - command: "ignore"
+    match_title: "/.*[Pp]hoto.*|图片查看器|explorer|SnippingTool|.*[Cc]amera.*|.*QQ.*|.*聊天记录.*|WeChat|Feishu/"
 
   - command: "move to workspace 2"
-    match_process_name: "/QQ|WeChat|Feishu/"
+    match_process_name: "/WeChat|Feishu/"
 
-  # - commands: ["move to workspace 3", focus workspace 3]
-  #   match_process_name: "lx-music-desktop"
   - commands: ["move to workspace 4"]
     match_process_name: "wezterm-gui"
 
-  - command: "move to workspace 6"
-    match_process_name: "steam"
+  - commands: ["move to workspace 6", resize borders 0px -7px -7px -7px]
+    match_process_name: "/[sS]team/"
 
 binding_modes:
   - name: "view"
