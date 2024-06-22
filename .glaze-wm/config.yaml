@@ -1,37 +1,37 @@
-# mocha.yaml
+# ====================================================
+# *                       Colors                     *
+# ====================================================
 rosewater: &rosewater "#f5e0dc"
 flamingo: &flamingo "#f2cdcd"
 pink: &pink "#f5c2e7"
 mauve: &mauve "#cba6f7"
-red: &red "#f38ba8"
-maroon: &maroon "#eba0ac"
-peach: &peach "#faa5e8"
-orange: &orange "#fe8638"
-yellow: &yellow "#f9e2af"
-green: &green "#a6e3a1"
 teal: &teal "#94e2d5"
 sky: &sky "#89dceb"
 sapphire: &sapphire "#74c7ec"
-blue: &blue "#89b4fa"
-tokyo-blue: &tokyo-blue "#80a7fa"
-lavender: &lavender "#b4befe"
+blue: &blue "#82aaff"
 text: &text "#cdd6f4"
-subtext1: &subtext1 "#bac2de"
-subtext0: &subtext0 "#a6adc8"
-overlay2: &overlay2 "#9399b2"
-overlay1: &overlay1 "#7f849c"
-overlay0: &overlay0 "#6c7086"
-surface2: &surface2 "#585b70"
-surface1: &surface1 "#45475a"
 surface0: &surface0 "#313244"
 base: &base "#1e1e2e"
 mantle: &mantle "#181825"
 crust: &crust "#11111b"
+# TAG top bar right component
+lavender: &lavender "#b4befe"
+light-turquoise: &turquoise "#b4cfff"
+light-blue: &light-blue "#"
+tokyo-night-blue: &tokyo-night-blue "#82aaff"
+olive-green: &olive-green "#c3d08d"
+red: &red "#f38ba8"
+# ====================================================
+# *                     Separator                    *
+# ====================================================
+Separator_color: &seperator_color "#98a4f22e"
+Separator_size: &seperator_size "25px"
+Separator: &seperator "|"
 
 bar:
   height: "27px"
   position: "top"
-  opacity: 0.98
+  opacity: 0.99
   background: *crust
   foreground: *mauve
   font_family: "Maple Mono NF CN"
@@ -41,87 +41,108 @@ bar:
   offset_y: 0
   border_radius: 10
   border_color: "#343A41"
-  border_width: 1
+  border_width: "1"
 
   components_left:
     - type: "text"
-      text: "󰣇 Efterklang "
+      text: "󰣇 "
+      foreground: *teal
+    - type: "text"
+      text: "Efterklang "
+      font_family: "Monaspace Radon Var"
       foreground: *teal
       # left_click_command: "exec "
     - type: "workspaces"
-      focused_workspace_background: *tokyo-blue
-      focused_workspace_foreground: *crust
-      displayed_workspace_background: *surface0
+      default_workspace_foreground: *mauve
+      focused_workspace_foreground: *teal
       default_workspace_background: "transparent"
-      margin: "0px 10px 0px 0px"
+      focused_workspace_background: "transparent"
+      displayed_workspace_background: "transparent"
   components_center:
     # - type: "window title"
     - type: "clock"
-      time_formatting: " hh:mm:ss tt "
+      time_formatting: " H:mm:ss "
       foreground: *mauve
     - type: "clock"
-      time_formatting: "ddd "
-      foreground: *blue
+      time_formatting: "ddd"
+      foreground: "#eed49f"
   components_right:
     - type: "tiling direction"
-      foreground: *blue
-      padding: "0 8px"
-      label_horizontal: "⮂" #⮂ 󰚉 ⬓ 󰯌
-      label_vertical: "⮁" #⮁ 󰚈 󱂪 󰯋
+      foreground: *lavender
+      label_horizontal: "<attr fs='15'>󰯌 </attr>" #⮂ 󰚉 ⬓ 󰯌
+      label_vertical: "<attr fs='15'>󰯋 </attr>" #⮁ 󰚈 󱂪 󰯋
     - type: "binding mode"
       foreground: *red
       margin: "0px 10px 0px 0px"
     - type: "music"
-      margin: "0px 10px 0px 0px"
-      label_not_playing: "<attr fs='15' fg='#89b4fa'> </attr>Music"
-      label_paused: "<attr fs='15' fg='#89b4fa'>󰝛 </attr>{song_title}"
-      label_playing: "<attr fs='15' fg='#89b4fa'>󰥠 </attr>{song_title}"
+      foreground: *lavender
+      label_not_playing: "<attr fs='15'> </attr>Music"
+      label_paused: "<attr fs='15'>󰝛 </attr>{song_title}"
+      label_playing: "<attr fs='15'>󰥠 </attr>{song_title}"
       max_title_length: 30
+    - type: "text"
+      text: *seperator
+      font_size: *seperator_size
+      foreground: *seperator_color
     - type: "weather"
       # chengdu: 30.3936N 104.0348E
       latitude: 30.3936
       longitude: 104.0348
-      margin: "0px 10px 0px 0px"
+      foreground: *turquoise
       label: "{temperature_celsius}°C"
-      label_sun: "<attr fs='15' fg='#89b4fa'>☀️</attr>{temperature_celsius}°C"
-      label_moon: "<attr fs='15' fg='#89b4fa'>🌙</attr>{temperature_celsius}°C"
-      label_cloud_moon: "🌙<attr fs='15' fg='#89b4fa'>☁️</attr>{temperature_celsius}°C"
-      label_cloud_sun: "<attr fs='15' fg='#89b4fa'>⛅</attr>{temperature_celsius}°C"
-      label_cloud_moon_rain: "🌙<attr fs='15' fg='#89b4fa'>🌧️</attr>{temperature_celsius}°C"
-      label_cloud_sun_rain: "<attr fs='15' fg='#89b4fa'>🌦️</attr>{temperature_celsius}°C"
-      label_cloud_rain: "<attr fs='15' fg='#89b4fa'>🌧️</attr>{temperature_celsius}°C"
-      label_snow_flake: "<attr fs='15' fg='#89b4fa'>❄️</attr>{temperature_celsius}°C"
-      label_thunderstorm: "<attr fs='15' fg='#89b4fa'>⚡</attr>{temperature_celsius}°C"
-      label_cloud: "<attr fs='15' fg='#89b4fa'>☁️</attr>{temperature_celsius}°C"
+      label_sun: "<attr fs='14'>☀️</attr>{temperature_celsius}°C"
+      label_moon: "<attr fs='14'>🌙</attr>{temperature_celsius}°C"
+      label_cloud_moon: "<attr fs='14'>🌙 </attr>{temperature_celsius}°C"
+      label_cloud_sun: "<attr fs='14'>⛅</attr>{temperature_celsius}°C"
+      label_cloud_moon_rain: "<attr fs='14'>🌙 </attr>{temperature_celsius}°C"
+      label_cloud_sun_rain: "<attr fs='14'>🌦️</attr>{temperature_celsius}°C"
+      label_cloud_rain: "<attr fs='14'>🌧️</attr>{temperature_celsius}°C"
+      label_snow_flake: "<attr fs='14'>❄️</attr>{temperature_celsius}°C"
+      label_thunderstorm: "<attr fs='14'>⚡</attr>{temperature_celsius}°C"
+      label_cloud: "<attr fs='14'>☁️</attr>{temperature_celsius}°C"
+    - type: "text"
+      text: *seperator
+      font_size: *seperator_size
+      foreground: *seperator_color
     - type: "cpu"
-      label: "<attr fs='15' fg='#89b4fa'> </attr>{percent_usage}%"
-      margin: "0px 10px 0px 0px"
-      refresh_interval_ms: 3000
+      foreground: *tokyo-night-blue
+      label: "<attr fs='15'> </attr>{percent_usage}󱉸"
+      margin: "0px 8px 0px 0px"
+      refresh_interval_ms: 1000
     - type: "gpu"
-      label: "<attr fs='15' fg='#89b4fa'>󰍛 </attr>{percent_usage}%"
-      margin: "0px 10px 0px 0px"
-      refresh_interval_ms: 3000
+      foreground: *tokyo-night-blue
+      label: "<attr fs='15'>󰍛 </attr>{percent_usage}󱉸"
+      margin: "0px 8px 0px 0px"
+      refresh_interval_ms: 1000
     - type: "memory"
-      label: "<attr fs='15' fg='#89b4fa'> </attr>{percent_usage}% "
-      margin: "0px 0px 0px 0px"
-      refresh_interval_ms: 2000
+      foreground: *tokyo-night-blue
+      label: "<attr fs='13'>  </attr>{percent_usage}󱉸"
+      refresh_interval_ms: 1000
+    - type: "text"
+      text: *seperator
+      font_size: *seperator_size
+      foreground: *seperator_color
     - type: "volume"
       label_low: "<attr fs='15'>🔊</attr>{volume_level}"
       label_medium: "<attr fs='15'>🔊</attr>{volume_level}"
       label_high: "<attr fs='15'>🔊</attr>{volume_level}"
       label_mute: "<attr fs='15'>🔕</attr>{volume_level}"
-      foreground: *flamingo
+      foreground: *olive-green
       margin: "0px 0px 0px 0px"
     - type: text
-      text: "% " 
-      foreground: *flamingo
+      text: "% "
+      foreground: *olive-green
       left_click_command: "exec 'C:/Users/24138/.glaze-wm/scripts/toggleMute.exe'"
     - type: "battery"
       # background: *surface0
-      margin: "0px 10px 0px 0px"
-      label_draining: "<attr fs='15' fg='#fab387'>󰂄 </attr>{battery_level}%"
-      label_power_saver: "<attr fs='15' fg='#89b4fa'>󰂄 </attr>{battery_level}%"
-      label_charging: "<attr fs='15' fg='#a6e3a1'>󰂄 </attr>{battery_level}%"
+      foreground: *olive-green
+      label_draining: "<attr fs='15'>󰂂 </attr>{battery_level}%"
+      label_power_saver: "<attr fs='15'>󰌪 </attr>{battery_level}%"
+      label_charging: "<attr fs='15'>󰂅 </attr>{battery_level}%"
+    - type: "text"
+      text: *seperator
+      font_size: *seperator_size
+      foreground: *seperator_color
     - type: "clock"
       time_formatting: " yyyy-M-d "
       foreground: *red
@@ -129,14 +150,13 @@ bar:
       text: "  "
       left_click_command: "exec taskmgr"
       foreground: *red
-      font_size: 14
+      font_size: "14px"
       margin: "0px 10px 0px 0px"
-      
       # left_click_command: "exec '%userprofile%/.glaze-wm/scripts/shutdown.bat'"
       right_click_command: ""
 
 general:
-  focus_follows_cursor: false
+  focus_follows_cursor: true
   cursor_follows_focus: false
   toggle_workspace_on_refocus: true
   show_floating_on_top: false
@@ -154,10 +174,11 @@ gaps:
 focus_borders:
   active:
     enabled: true
-    color: "#89b4fa"
+    color: "#8aadf4"
 
   inactive:
-    enabled: false
+    enabled: true
+    color: "#8087a2"
 
 workspaces:
   - name: "1"
@@ -170,7 +191,7 @@ workspaces:
   - name: "4"
     display_name: "󰨊 "
   - name: "5"
-    display_name: " "
+    display_name: "󰇩 "
   - name: "6"
     display_name: " "
 
