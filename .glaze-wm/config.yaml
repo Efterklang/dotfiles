@@ -48,24 +48,41 @@ bar:
       text: "󰣇 "
       foreground: *teal
     - type: "text"
-      text: "Efterklang "
+      text: "Efterklang"
       font_family: "Monaspace Radon Var"
       foreground: *teal
       # left_click_command: "exec "
+    - type: "text"
+      text: *seperator
+      font_size: *seperator_size
+      foreground: *seperator_color
+    - type: "music"
+      foreground: *lavender
+      label_not_playing: "<attr fs='15'> </attr>Music"
+      label_paused: "<attr fs='15'>󰝛 </attr>{song_title}"
+      label_playing: "<attr fs='15'>󰥠 </attr>{song_title}"
+      max_title_length: 30
+    - type: "text"
+      text: *seperator
+      font_size: *seperator_size
+      foreground: *seperator_color
+    - type: "text"
+      text: "󰖚 "
+      font_size: 18px
+      foreground: *mauve
+    - type: "clock"
+      time_formatting: "H:mm:ss ddd"
+      foreground: *mauve
+
+  components_center:
     - type: "workspaces"
       default_workspace_foreground: *mauve
       focused_workspace_foreground: *teal
       default_workspace_background: "transparent"
       focused_workspace_background: "transparent"
       displayed_workspace_background: "transparent"
-  components_center:
     # - type: "window title"
-    - type: "clock"
-      time_formatting: " H:mm:ss "
-      foreground: *mauve
-    - type: "clock"
-      time_formatting: "ddd"
-      foreground: "#eed49f"
+
   components_right:
     - type: "tiling direction"
       foreground: *lavender
@@ -74,12 +91,6 @@ bar:
     - type: "binding mode"
       foreground: *red
       margin: "0px 10px 0px 0px"
-    - type: "music"
-      foreground: *lavender
-      label_not_playing: "<attr fs='15'> </attr>Music"
-      label_paused: "<attr fs='15'>󰝛 </attr>{song_title}"
-      label_playing: "<attr fs='15'>󰥠 </attr>{song_title}"
-      max_title_length: 30
     - type: "text"
       text: *seperator
       font_size: *seperator_size
@@ -207,12 +218,15 @@ window_rules:
     match_process_name: "/Taskmgr|ScreenClippingHost|Clash for Windows/"
 
   - command: "ignore"
-    match_title: "/.*[Pp]hoto.*|图片查看器|explorer|SnippingTool|.*[Cc]amera.*|.*QQ.*|.*聊天记录.*|WeChat|Feishu/"
+    match_title: "/.*[Pp]hoto.*|图片查看器|[Ee]xplorer|SnippingTool|.*[Cc]amera.*|.*QQ.*|.*聊天记录.*|WeChat|Feishu/"
 
   - command: "move to workspace 2"
     match_process_name: "/WeChat|Feishu/"
 
-  - commands: ["move to workspace 4"]
+  - command: "move to workspace 3"
+    match_title: /.*[Cc]ode.*/
+
+  - command: "move to workspace 4"
     match_process_name: "wezterm-gui"
 
   - commands: ["move to workspace 6", resize borders 0px -7px -7px -7px]
