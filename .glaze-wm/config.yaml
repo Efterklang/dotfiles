@@ -8,7 +8,6 @@ mauve: &mauve "#cba6f7"
 teal: &teal "#94e2d5"
 sky: &sky "#89dceb"
 sapphire: &sapphire "#74c7ec"
-blue: &blue "#82aaff"
 text: &text "#cdd6f4"
 surface0: &surface0 "#313244"
 base: &base "#1e1e2e"
@@ -17,7 +16,6 @@ crust: &crust "#11111b"
 # TAG top bar right component
 lavender: &lavender "#b4befe"
 light-turquoise: &turquoise "#b4cfff"
-light-blue: &light-blue "#"
 tokyo-night-blue: &tokyo-night-blue "#82aaff"
 olive-green: &olive-green "#c3d08d"
 red: &red "#f38ba8"
@@ -34,7 +32,8 @@ bar:
   opacity: 0.99
   background: *crust
   foreground: *mauve
-  font_family: "Maple Mono NF CN"
+  font_family: "Monaspace Radon Var,Maple Mono NF CN"
+  # font_family: "Maple Mono NF CN"
   font_size: "12px"
   padding: "4px 8px"
   offset_x: 0
@@ -45,11 +44,7 @@ bar:
 
   components_left:
     - type: "text"
-      text: "󰣇 "
-      foreground: *teal
-    - type: "text"
-      text: "Efterklang"
-      font_family: "Monaspace Radon Var"
+      text: "󰣇 Efterklang"
       foreground: *teal
       # left_click_command: "exec "
     - type: "text"
@@ -58,6 +53,7 @@ bar:
       foreground: *seperator_color
     - type: "music"
       foreground: *lavender
+      font_family: "Monaspace Radon Var,Maple Mono NF CN"
       label_not_playing: "<attr fs='15'> </attr>Music"
       label_paused: "<attr fs='15'>󰝛 </attr>{song_title}"
       label_playing: "<attr fs='15'>󰥠 </attr>{song_title}"
@@ -76,21 +72,22 @@ bar:
 
   components_center:
     - type: "workspaces"
-      default_workspace_foreground: *mauve
+      default_workspace_foreground: *lavender
       focused_workspace_foreground: *teal
       default_workspace_background: "transparent"
       focused_workspace_background: "transparent"
       displayed_workspace_background: "transparent"
     # - type: "window title"
-
+ 
   components_right:
-    - type: "tiling direction"
-      foreground: *lavender
-      label_horizontal: "<attr fs='15'>󰯌 </attr>" #⮂ 󰚉 ⬓ 󰯌
-      label_vertical: "<attr fs='15'>󰯋 </attr>" #⮁ 󰚈 󱂪 󰯋
     - type: "binding mode"
       foreground: *red
       margin: "0px 10px 0px 0px"
+    - type: "tiling direction"
+      foreground: *lavender
+      font_size: 20px
+      label_horizontal: "󰯌" #⮂ 󰚉 ⬓ 󰯌
+      label_vertical: "󰯋" #⮁ 󰚈 󱂪 󰯋
     - type: "text"
       text: *seperator
       font_size: *seperator_size
@@ -193,7 +190,7 @@ focus_borders:
 
 workspaces:
   - name: "1"
-    display_name: " "
+    display_name: " "
     keep_alive: true
   - name: "2"
     display_name: " "
@@ -228,6 +225,9 @@ window_rules:
 
   - command: "move to workspace 4"
     match_process_name: "wezterm-gui"
+
+  - command: "move to workspace 5"
+    match_process_name: msedge
 
   - commands: ["move to workspace 6", resize borders 0px -7px -7px -7px]
     match_process_name: "/[sS]team/"
