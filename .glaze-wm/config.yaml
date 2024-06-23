@@ -78,7 +78,7 @@ bar:
       focused_workspace_background: "transparent"
       displayed_workspace_background: "transparent"
     # - type: "window title"
- 
+
   components_right:
     - type: "binding mode"
       foreground: *red
@@ -136,11 +136,22 @@ bar:
       label_high: "<attr fs='15'>🔊</attr>{volume_level}"
       label_mute: "<attr fs='15'>🔕</attr>{volume_level}"
       foreground: *olive-green
-      margin: "0px 0px 0px 0px"
+      # margin: "0px 0px 0px 0px"
     - type: text
       text: "% "
       foreground: *olive-green
       left_click_command: "exec 'C:/Users/24138/.glaze-wm/scripts/toggleMute.exe'"
+    # - type: "network"
+    #   font_size: 14px
+    #   label_no_internet: " "
+    #   label_ethernet: "󰈁"
+    #   label_wifi_strength_0: "󰤭 "
+    #   label_wifi_strength_25: "󰤟 "
+    #   label_wifi_strength_50: "󰤢 "
+    #   label_wifi_strength_75: "󰤥 "
+    #   label_wifi_strength_100: "󰤨 "
+    #   foreground: *olive-green
+    #   margin: "0px 5px 0px 0px"
     - type: "battery"
       # background: *surface0
       foreground: *olive-green
@@ -261,7 +272,7 @@ binding_modes:
   - name: "lock"
     keybindings:
       - command: "binding mode none"
-        bindings: ["Escape", "Enter"]
+        bindings: ["Alt+Z"]
 
 keybindings:
   - command: "binding mode view"

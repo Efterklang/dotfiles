@@ -22,18 +22,16 @@ local keys = {
    { key = 'f', mods = 'CTRL', action = act.Search({ CaseInSensitiveString = '' }) },
 
    -- copy/paste --
-   { key = 'c', mods = mod.SUPER, action = act.CopyTo('Clipboard') },
-   { key = 'v', mods = mod.SUPER, action = act.PasteFrom('Clipboard') },
+   -- { key = 'c', mods = 'CTRL', action = act.CopyTo('Clipboard') },
+   { key = 'v', mods = 'CTRL', action = act.PasteFrom('Clipboard') },
 
    -- tabs --
-   -- tabs: spawn+close
-   { key = 't', mods = mod.SUPER, action = act.SpawnTab('DefaultDomain') },
    { key = 'w', mods = 'CTRL', action = act.CloseCurrentTab({ confirm = false }) },
    { key = 'W', mods = 'CTRL', action = act.CloseCurrentTab({ confirm = false }) },
 
    -- tabs: navigation
-   { key = 'a', mods = mod.SUPER, action = act.ActivateTabRelative(-1) },
-   { key = 'd', mods = mod.SUPER, action = act.ActivateTabRelative(1) },
+   { key = 'a', mods = 'ALT', action = act.ActivateTabRelative(-1) },
+   { key = 'd', mods = 'ALT', action = act.ActivateTabRelative(1) },
 
    -- window --
    -- spawn windows
