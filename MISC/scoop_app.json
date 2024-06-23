@@ -2,288 +2,295 @@
     "apps": [
         {
             "Info": "",
-            "Name": "7zip",
             "Version": "24.07",
-            "Updated": "2024-06-20T09:21:24.2374231+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "7zip",
+            "Updated": "2024-06-20T09:21:24.2374231+08:00"
         },
         {
             "Info": "",
-            "Name": "aria2",
             "Version": "1.37.0-1",
-            "Updated": "2024-06-05T18:07:14.5191784+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "aria2",
+            "Updated": "2024-06-05T18:07:14.5191784+08:00"
         },
         {
             "Info": "",
-            "Name": "bat",
             "Version": "0.24.0",
-            "Updated": "2024-06-05T18:07:17.5439823+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "bat",
+            "Updated": "2024-06-05T18:07:17.5439823+08:00"
         },
         {
             "Info": "",
-            "Name": "bottom",
             "Version": "0.9.6",
-            "Updated": "2024-06-05T18:07:21.0774903+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "bottom",
+            "Updated": "2024-06-05T18:07:21.0774903+08:00"
         },
         {
             "Info": "",
-            "Name": "btop",
             "Version": "1.0.4",
-            "Updated": "2024-06-05T18:11:20.6865275+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "btop",
+            "Updated": "2024-06-05T18:11:20.6865275+08:00"
         },
         {
             "Info": "",
-            "Name": "busybox",
             "Version": "5301-gda71f7c57",
-            "Updated": "2024-06-06T16:52:40.2728525+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "busybox",
+            "Updated": "2024-06-06T16:52:40.2728525+08:00"
         },
         {
             "Info": "",
-            "Name": "cheat",
             "Version": "4.4.2",
-            "Updated": "2024-06-06T16:36:14.722644+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "cheat",
+            "Updated": "2024-06-06T16:36:14.722644+08:00"
         },
         {
             "Info": "",
-            "Name": "curlie",
             "Version": "1.7.2",
-            "Updated": "2024-06-05T18:07:30.2229743+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "curlie",
+            "Updated": "2024-06-05T18:07:30.2229743+08:00"
         },
         {
             "Info": "",
-            "Name": "cwrsync",
             "Version": "6.3.0",
-            "Updated": "2024-06-05T18:11:25.1668709+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "cwrsync",
+            "Updated": "2024-06-05T18:11:25.1668709+08:00"
         },
         {
             "Info": "",
-            "Name": "dark",
             "Version": "3.14",
-            "Updated": "2024-06-05T18:07:32.3441012+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "dark",
+            "Updated": "2024-06-05T18:07:32.3441012+08:00"
         },
         {
             "Info": "",
-            "Name": "dog",
             "Version": "0.1.0",
-            "Updated": "2024-06-05T18:07:35.4289868+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "dog",
+            "Updated": "2024-06-05T18:07:35.4289868+08:00"
         },
         {
             "Info": "",
-            "Name": "duf",
             "Version": "0.8.1",
-            "Updated": "2024-06-05T18:07:38.1968921+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "duf",
+            "Updated": "2024-06-05T18:07:38.1968921+08:00"
         },
         {
             "Info": "",
-            "Name": "dust",
             "Version": "1.0.0",
-            "Updated": "2024-06-05T18:07:41.0474205+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "dust",
+            "Updated": "2024-06-05T18:07:41.0474205+08:00"
         },
         {
             "Info": "",
-            "Name": "eza",
             "Version": "0.18.19",
-            "Updated": "2024-06-21T21:35:26.2971014+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "eza",
+            "Updated": "2024-06-21T21:35:26.2971014+08:00"
         },
         {
             "Info": "",
-            "Name": "fastfetch",
             "Version": "2.16.0",
-            "Updated": "2024-06-20T09:21:54.483988+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "fastfetch",
+            "Updated": "2024-06-20T09:21:54.483988+08:00"
         },
         {
             "Info": "",
-            "Name": "fd",
             "Version": "10.1.0",
-            "Updated": "2024-06-05T18:07:50.0511764+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "fd",
+            "Updated": "2024-06-05T18:07:50.0511764+08:00"
         },
         {
             "Info": "",
+            "Version": "1.18.0",
+            "Source": "extras",
             "Name": "flow-launcher",
-            "Version": "1.18.0",
-            "Updated": "2024-06-13T19:59:42.1683998+08:00",
-            "Source": "extras"
+            "Updated": "2024-06-13T19:59:42.1683998+08:00"
         },
         {
             "Info": "",
-            "Name": "fzf",
+            "Version": "3.22.2",
+            "Source": "extras",
+            "Name": "flutter",
+            "Updated": "2024-06-22T22:36:33.1136196+08:00"
+        },
+        {
+            "Info": "",
             "Version": "0.53.0",
-            "Updated": "2024-06-07T15:22:38.1482013+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "fzf",
+            "Updated": "2024-06-07T15:22:38.1482013+08:00"
         },
         {
             "Info": "",
-            "Name": "geekuninstaller",
             "Version": "1.5.2.165",
-            "Updated": "2024-06-06T21:01:31.7027085+08:00",
-            "Source": "extras"
+            "Source": "extras",
+            "Name": "geekuninstaller",
+            "Updated": "2024-06-06T21:01:31.7027085+08:00"
         },
         {
             "Info": "",
-            "Name": "git",
             "Version": "2.45.2",
-            "Updated": "2024-06-05T18:08:11.2626777+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "git",
+            "Updated": "2024-06-05T18:08:11.2626777+08:00"
         },
         {
             "Info": "",
-            "Name": "gitui",
             "Version": "0.26.3",
-            "Updated": "2024-06-05T18:08:14.2807983+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "gitui",
+            "Updated": "2024-06-05T18:08:14.2807983+08:00"
         },
         {
             "Info": "",
-            "Name": "go",
             "Version": "1.22.4",
-            "Updated": "2024-06-08T16:00:11.7150365+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "go",
+            "Updated": "2024-06-08T16:00:11.7150365+08:00"
         },
         {
             "Info": "",
-            "Name": "gping",
             "Version": "1.16.1",
-            "Updated": "2024-06-05T18:08:17.3561816+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "gping",
+            "Updated": "2024-06-05T18:08:17.3561816+08:00"
         },
         {
             "Info": "",
-            "Name": "hyperfine",
             "Version": "1.18.0",
-            "Updated": "2024-06-05T18:08:22.1503157+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "hyperfine",
+            "Updated": "2024-06-05T18:08:22.1503157+08:00"
         },
         {
             "Info": "",
-            "Name": "innounp",
             "Version": "0.50",
-            "Updated": "2024-06-05T18:08:24.5389139+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "innounp",
+            "Updated": "2024-06-05T18:08:24.5389139+08:00"
         },
         {
             "Info": "",
-            "Name": "kotlin",
             "Version": "2.0.0",
-            "Updated": "2024-06-05T18:08:37.9107745+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "kotlin",
+            "Updated": "2024-06-05T18:08:37.9107745+08:00"
         },
         {
             "Info": "",
-            "Name": "lazydocker",
             "Version": "0.23.3",
-            "Updated": "2024-06-06T16:19:03.7668183+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "lazydocker",
+            "Updated": "2024-06-06T16:19:03.7668183+08:00"
         },
         {
             "Info": "",
-            "Name": "lua",
             "Version": "5.4.2",
-            "Updated": "2024-06-08T16:42:13.9097136+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "lua",
+            "Updated": "2024-06-08T16:42:13.9097136+08:00"
         },
         {
             "Info": "",
-            "Name": "mc",
             "Version": "4.8.31",
-            "Updated": "2024-06-05T18:08:40.8249107+08:00",
-            "Source": "extras"
+            "Source": "extras",
+            "Name": "mc",
+            "Updated": "2024-06-05T18:08:40.8249107+08:00"
         },
         {
             "Info": "",
-            "Name": "miniconda",
             "Version": "24.4.0-0",
-            "Updated": "2024-06-05T18:19:53.5536019+08:00",
-            "Source": "dorado"
+            "Source": "dorado",
+            "Name": "miniconda",
+            "Updated": "2024-06-05T18:19:53.5536019+08:00"
         },
         {
             "Info": "",
-            "Name": "neovim",
             "Version": "0.10.0",
-            "Updated": "2024-06-05T18:08:46.7666596+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "neovim",
+            "Updated": "2024-06-05T18:08:46.7666596+08:00"
         },
         {
             "Info": "",
-            "Name": "nu",
             "Version": "0.93.0",
-            "Updated": "2024-06-05T18:08:54.8924688+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "nu",
+            "Updated": "2024-06-05T18:08:54.8924688+08:00"
         },
         {
             "Info": "",
-            "Name": "pipx",
             "Version": "1.6.0",
-            "Updated": "2024-06-05T18:08:57.4159804+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "pipx",
+            "Updated": "2024-06-05T18:08:57.4159804+08:00"
         },
         {
             "Info": "",
-            "Name": "ripgrep",
             "Version": "14.1.0",
-            "Updated": "2024-06-05T18:09:00.8259718+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "ripgrep",
+            "Updated": "2024-06-05T18:09:00.8259718+08:00"
         },
         {
             "Info": "",
-            "Name": "tldr",
             "Version": "0.6.1",
-            "Updated": "2024-06-06T16:25:10.6909924+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "tldr",
+            "Updated": "2024-06-06T16:25:10.6909924+08:00"
         },
         {
             "Info": "",
-            "Name": "tomcat",
             "Version": "10.1.25",
-            "Updated": "2024-06-20T09:32:07.1047344+08:00",
-            "Source": "extras"
+            "Source": "extras",
+            "Name": "tomcat",
+            "Updated": "2024-06-20T09:32:07.1047344+08:00"
         },
         {
             "Info": "",
-            "Name": "yazi",
             "Version": "0.2.5",
-            "Updated": "2024-06-09T14:40:58.6536219+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "yazi",
+            "Updated": "2024-06-09T14:40:58.6536219+08:00"
         },
         {
             "Info": "",
-            "Name": "zoxide",
             "Version": "0.9.4",
-            "Updated": "2024-06-05T18:09:03.497711+08:00",
-            "Source": "main"
+            "Source": "main",
+            "Name": "zoxide",
+            "Updated": "2024-06-05T18:09:03.497711+08:00"
         }
     ],
     "buckets": [
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main",
-            "Updated": "2024-06-22T12:26:56+08:00",
+            "Updated": "2024-06-23T12:26:50+08:00",
             "Manifests": 1327
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2024-06-22T12:29:35+08:00",
+            "Updated": "2024-06-23T12:29:43+08:00",
             "Manifests": 2039
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2024-06-22T12:33:43+08:00",
+            "Updated": "2024-06-23T12:35:06+08:00",
             "Manifests": 463
         },
         {
@@ -295,7 +302,7 @@
         {
             "Name": "dorado",
             "Source": "https://github.com/chawyehsu/dorado",
-            "Updated": "2024-06-22T08:13:08+08:00",
+            "Updated": "2024-06-23T08:14:07+08:00",
             "Manifests": 259
         }
     ]
