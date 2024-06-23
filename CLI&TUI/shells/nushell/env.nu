@@ -1,6 +1,6 @@
 # Nushell Environment Config File
 #
-# version = "0.92.2"
+# version = "0.94.2"
 
 oh-my-posh init nu
 def create_left_prompt [] {

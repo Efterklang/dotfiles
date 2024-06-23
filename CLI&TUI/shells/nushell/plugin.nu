@@ -1,4 +1,4 @@
-register C:\Users\24138\scoop\apps\nu\0.92.2\nu_plugin_gstat.exe  {
+register D:\envir_vars\scoop\apps\Nushell\0.94.2\nu_plugin_gstat.exe  {
   "sig": {
     "name": "gstat",
     "usage": "Get the git status of a repo",
@@ -420,4 +420,3 @@ register C:\Users\24138\scoop\apps\nu\0.92.2\nu_plugin_query.exe  {
   },
   "examples": []
 }
-

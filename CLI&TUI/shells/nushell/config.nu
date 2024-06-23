@@ -63,71 +63,6 @@ let dark_theme = {
     shape_vardecl: purple
 }
 
-let light_theme = {
-    # color for nushell primitives
-    separator: dark_gray
-    leading_trailing_space_bg: { attr: n } # no fg, no bg, attr none effectively turns this off
-    header: green_bold
-    empty: blue
-    # Closures can be used to choose colors for specific values.
-    # The value (in this case, a bool) is piped into the closure.
-    # eg) {|| if $in { 'dark_cyan' } else { 'dark_gray' } }
-    bool: dark_cyan
-    int: dark_gray
-    filesize: cyan_bold
-    duration: dark_gray
-    date: purple
-    range: dark_gray
-    float: dark_gray
-    string: dark_gray
-    nothing: dark_gray
-    binary: dark_gray
-    cell-path: dark_gray
-    row_index: green_bold
-    record: dark_gray
-    list: dark_gray
-    block: dark_gray
-    hints: dark_gray
-    search_result: { fg: white bg: red }
-    shape_and: purple_bold
-    shape_binary: purple_bold
-    shape_block: blue_bold
-    shape_bool: light_cyan
-    shape_closure: green_bold
-    shape_custom: green
-    shape_datetime: cyan_bold
-    shape_directory: cyan
-    shape_external: cyan
-    shape_externalarg: green_bold
-    shape_external_resolved: light_purple_bold
-    shape_filepath: cyan
-    shape_flag: blue_bold
-    shape_float: purple_bold
-    # shapes are used to change the cli syntax highlighting
-    shape_garbage: { fg: white bg: red attr: b}
-    shape_globpattern: cyan_bold
-    shape_int: purple_bold
-    shape_internalcall: cyan_bold
-    shape_keyword: cyan_bold
-    shape_list: cyan_bold
-    shape_literal: blue
-    shape_match_pattern: green
-    shape_matching_brackets: { attr: u }
-    shape_nothing: light_cyan
-    shape_operator: yellow
-    shape_or: purple_bold
-    shape_pipe: purple_bold
-    shape_range: yellow_bold
-    shape_record: cyan_bold
-    shape_redirection: purple_bold
-    shape_signature: green_bold
-    shape_string: green
-    shape_string_interpolation: cyan_bold
-    shape_table: blue_bold
-    shape_variable: purple
-    shape_vardecl: purple
-}
-
 $env.config = {
     show_banner: false # true or false to enable or disable the welcome banner at startup
 
@@ -217,8 +152,35 @@ $env.config = {
     use_ansi_coloring: true
     bracketed_paste: true # enable bracketed paste, currently useless on windows
     edit_mode: emacs # emacs, vi
-    shell_integration: false # enables terminal shell integration. Off by default, as some terminals have issues with this.
-    render_right_prompt_on_last_line: false # true or false to enable or disable right prompt to be rendered on last line of the prompt.
+    shell_integration: {
+        # osc2 abbreviates the path if in the home_dir, sets the tab/window title, shows the running command in the tab/window title
+        osc2: false
+        # osc7 is a way to communicate the path to the terminal, this is helpful for spawning new tabs in the same directory
+        osc7: false
+        # osc8 is also implemented as the deprecated setting ls.show_clickable_links, it shows clickable links in ls output if your terminal supports it. show_clickable_links is deprecated in favor of osc8
+        osc8: false
+        # osc9_9 is from ConEmu and is starting to get wider support. It's similar to osc7 in that it communicates the path to the terminal
+        osc9_9: false
+        # osc133 is several escapes invented by Final Term which include the supported ones below.
+        # 133;A - Mark prompt start
+        # 133;B - Mark prompt end
+        # 133;C - Mark pre-execution
+        # 133;D;exit - Mark execution finished with exit code
+        # This is used to enable terminals to know where the prompt is, the command is, where the command finishes, and where the output of the command is
+        osc133: false
+        # osc633 is closely related to osc133 but only exists in visual studio code (vscode) and supports their shell integration features
+        # 633;A - Mark prompt start
+        # 633;B - Mark prompt end
+        # 633;C - Mark pre-execution
+        # 633;D;exit - Mark execution finished with exit code
+        # 633;E - NOT IMPLEMENTED - Explicitly set the command line with an optional nonce
+        # 633;P;Cwd=<path> - Mark the current working directory and communicate it to the terminal
+        # and also helps with the run recent menu in vscode
+        osc633: false
+        # reset_application_mode is escape \x1b[?1l and was added to help ssh work better
+        reset_application_mode: false
+    }
+  render_right_prompt_on_last_line: false # true or false to enable or disable right prompt to be rendered on last line of the prompt.
     use_kitty_protocol: false # enables keyboard enhancement protocol implemented by kitty console, only if your terminal support this.
     highlight_resolved_externals: true # true enables highlighting of external commands in the repl resolved by which.
     recursion_limit: 50 # the maximum number of times nushell allows recursion before stopping it
@@ -351,27 +313,6 @@ $env.config = {
                     { edit: complete }
                 ]
             }
-        }
-        # history_menu using fzf
-        {
-            name: fzf_history_menu_fzf_ui
-            modifier: control
-            keycode: char_r
-            mode: [emacs, vi_normal, vi_insert]
-            event: { 
-                send: executehostcommand
-                cmd: "commandline edit --insert (open -r $nu.history-path | fzf --height 40% --layout reverse --border +s --tac | str trim)"
-            }
-        }
-        {
-          name: fuzzy_file
-          modifier: control
-          keycode: char_t
-          mode: emacs
-          event: {
-            send: executehostcommand
-            cmd: "commandline edit --insert (fzf --layout=reverse)"
-          }
         }
         {
             name: ide_completion_menu
@@ -833,8 +774,8 @@ def killf [] {
 }
 
 
-source ./zoxide.nu
-source ./ohmyposh.nu
+source ./plugins/zoxide.nu
+source ./plugins/ohmyposh.nu
 source ./scripts/load_scripts.nu
 
 alias lx = D:\Application\LuoxueMusic\lxmusic
@@ -858,3 +799,6 @@ alias top = btop
 alias ranger = mc
 alias lzd = lazydocker
 alias cati = wezterm imgcat
+
+use ./themes/catppuccin-mocha.nu
+$env.config = ($env.config | merge {color_config: (catppuccin-mocha)})

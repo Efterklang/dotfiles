@@ -21,4 +21,4 @@ source ./custom-completions/poetry/poetry-completions.nu
 source ./custom-completions/winget/winget-completions.nu
 source ./custom-completions/flutter/flutter-completions.nu
 source ./custom-completions/code-insider/vscode-completions.nu
-
+source ./custom_keybindings.nu
