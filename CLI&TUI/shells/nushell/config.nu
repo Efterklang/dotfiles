@@ -777,6 +777,7 @@ def killf [] {
 source ./plugins/zoxide.nu
 source ./plugins/ohmyposh.nu
 source ./scripts/load_scripts.nu
+source ./modules/mod.nu
 
 alias lx = D:\Application\LuoxueMusic\lxmusic
 alias obsidian = D:\Application\Obsidian\obsidian
@@ -799,6 +800,7 @@ alias top = btop
 alias ranger = mc
 alias lzd = lazydocker
 alias cati = wezterm imgcat
+
 
 use ./themes/catppuccin-mocha.nu
 $env.config = ($env.config | merge {color_config: (catppuccin-mocha)})
