@@ -69,6 +69,7 @@ bar:
     - type: "clock"
       time_formatting: "H:mm:ss ddd"
       foreground: *mauve
+    # - type: "window title"
 
   components_center:
     - type: "workspaces"
@@ -77,7 +78,6 @@ bar:
       default_workspace_background: "transparent"
       focused_workspace_background: "transparent"
       displayed_workspace_background: "transparent"
-    # - type: "window title"
 
   components_right:
     - type: "binding mode"
@@ -130,23 +130,7 @@ bar:
       text: *seperator
       font_size: *seperator_size
       foreground: *seperator_color
-    - type: "volume"
-      label_low: "<attr fs='15'>🔊</attr>{volume_level}"
-      label_medium: "<attr fs='15'>🔊</attr>{volume_level}"
-      label_high: "<attr fs='15'>🔊</attr>{volume_level}"
-      label_mute: "<attr fs='15'>🔕</attr>{volume_level}"
-      foreground: *olive-green
-      # margin: "0px 0px 0px 0px"
-    - type: text
-<<<<<<< HEAD
-      text: "% "
-=======
-      text: "󱉸 "
->>>>>>> 7c9e02e (rebase)
-      foreground: *olive-green
-      left_click_command: "exec 'C:/Users/24138/.glaze-wm/scripts/toggleMute.exe'"
     # - type: "network"
-    #   font_size: 14px
     #   label_no_internet: " "
     #   label_ethernet: "󰈁"
     #   label_wifi_strength_0: "󰤭 "
@@ -156,18 +140,23 @@ bar:
     #   label_wifi_strength_100: "󰤨 "
     #   foreground: *olive-green
     #   margin: "0px 5px 0px 0px"
+    - type: "volume"
+      label_low: "<attr fs='15'>🔊</attr>{volume_level}"
+      label_medium: "<attr fs='15'>🔊</attr>{volume_level}"
+      label_high: "<attr fs='15'>🔊</attr>{volume_level}"
+      label_mute: "<attr fs='15'>🔕</attr>{volume_level}"
+      foreground: *olive-green
+      # margin: "0px 0px 0px 0px"
+    - type: text
+      text: "󱉸 "
+      foreground: *olive-green
+      left_click_command: "exec 'C:/Users/24138/.glaze-wm/scripts/toggleMute.exe'"
     - type: "battery"
       # background: *surface0
       foreground: *olive-green
-<<<<<<< HEAD
-      label_draining: "<attr fs='15'>󰂂 </attr>{battery_level}%"
-      label_power_saver: "<attr fs='15'>󰌪 </attr>{battery_level}%"
-      label_charging: "<attr fs='15'>󰂅 </attr>{battery_level}%"
-=======
       label_draining: "<attr fs='15'>󰂂 </attr>{battery_level}󱉸"
       label_power_saver: "<attr fs='15'>󰌪 </attr>{battery_level}󱉸"
       label_charging: "<attr fs='15'>󰂅 </attr>{battery_level}󱉸"
->>>>>>> 7c9e02e (rebase)
     - type: "text"
       text: *seperator
       font_size: *seperator_size
@@ -185,10 +174,10 @@ bar:
       right_click_command: ""
 
 general:
-  focus_follows_cursor: true
+  focus_follows_cursor: false
   cursor_follows_focus: false
   toggle_workspace_on_refocus: true
-  show_floating_on_top: false
+  show_floating_on_top: true
   floating_window_move_amount: "5%"
   center_new_floating_windows: true
   # window transition animations (on minimize, close, etc). Set to 'unchanged'
@@ -228,15 +217,15 @@ window_rules:
   # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
   - command: "set floating"
     match_class_name: "#32770"
-
+  
   - command: "ignore"
     match_process_name: "/Flow.Launcher|ScreenClippingHost/"
-
+  
   - command: "set floating"
-    match_process_name: "/Taskmgr|ScreenClippingHost|Clash for Windows/"
+    match_process_name: "/Taskmgr|ScreenClippingHost|Clash for Windows|.*QQ.*|.*聊天记录.*|WeChat|Feishu/"
 
   - command: "ignore"
-    match_title: "/.*[Pp]hoto.*|图片查看器|[Ee]xplorer|SnippingTool|.*[Cc]amera.*|.*QQ.*|.*聊天记录.*|WeChat|Feishu/"
+    match_title: "/.*[Pp]hoto.*|图片查看器|[Ee]xplorer|[Ss]etting.*|SnippingTool|.*[Cc]amera.*/"
 
   - command: "move to workspace 2"
     match_process_name: "/WeChat|Feishu/"
@@ -247,8 +236,8 @@ window_rules:
   - command: "move to workspace 4"
     match_process_name: "wezterm-gui"
 
-  - command: "move to workspace 5"
-    match_process_name: msedge
+  - commands: ["move to workspace 5",resize borders 0px -7px -7px -7px]
+    match_process_name: "vivaldi"
 
   - commands: ["move to workspace 6", resize borders 0px -7px -7px -7px]
     match_process_name: "/[sS]team/"

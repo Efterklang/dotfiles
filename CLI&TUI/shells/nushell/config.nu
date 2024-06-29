@@ -756,12 +756,12 @@ def cpath [path?] {
 
 
 def sync-dotfiles [] {
-    cp -r -f ~/AppData/Roaming/nushell/*.nu 'e:/OneDrive - Business/Private/dotfiles/CLI&TUI/shells/nushell/'
-    cp -r -f ~/AppData/Roaming/nushell/scripts 'e:/OneDrive - Business/Private/dotfiles/CLI&TUI/shells/nushell/'
-    cp -r -f ~/Documents/Powershell/* 'e:/OneDrive - Business/Private/dotfiles/CLI&TUI/shells/Powershell/'
-    cp -r -f ~/.config/wezterm/* 'e:/OneDrive - Business/Private/dotfiles/wezterm/'
-    cp -r -f ~/.glaze-wm/* 'e:/OneDrive - Business/Private/dotfiles/.glaze-wm/'
-    scoop export > 'e:\OneDrive - Business\Private\dotfiles\MISC\scoop_app.json'
+    cp -r -f ~/AppData/Roaming/nushell/*.nu 'e:/OneDrive - 商业版/Private/dotfiles/CLI&TUI/shells/nushell/'
+    cp -r -f ~/AppData/Roaming/nushell/scripts 'e:/OneDrive - 商业版/Private/dotfiles/CLI&TUI/shells/nushell/'
+    cp -r -f ~/Documents/Powershell/* 'e:/OneDrive - 商业版/Private/dotfiles/CLI&TUI/shells/Powershell/'
+    cp -r -f ~/.config/wezterm/* 'e:/OneDrive - 商业版/Private/dotfiles/wezterm/'
+    cp -r -f ~/.glaze-wm/* 'e:/OneDrive - 商业版/Private/dotfiles/.glaze-wm/'
+    scoop export > 'e:\OneDrive - 商业版\Private\dotfiles\MISC\scoop_app.json'
 }
 
 def fzfp [] {
@@ -788,7 +788,7 @@ alias zhelp  = zoxide --help
 alias zo = zoxide
 alias vim = nvim
 alias cat = bat
-alias vpwd = vim 'E:\OneDrive - Business\Archives\markdown_notes\Markdown\Private\key.md'
+alias vpwd = vim 'E:\OneDrive - 商业版\Archives\markdown_notes\Markdown\Private\key.md'
 alias cd = z
 alias ping = gping
 alias curl = curlie
