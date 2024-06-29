@@ -1,0 +1,35 @@
+body:
+  - type: passwordBox
+    attributes:
+      name: token
+      label: "Personal access token:"
+      defaultValue: ""
+      description: Github.com Personal access token
+  - type: dropdown
+    attributes:
+      name: max_results
+      label: "Max Results:"
+      description: "Maxiumum number of results to return"
+      defaultValue: "30"
+      options:
+        - 10
+        - 20
+        - 30
+        - 40
+        - 50
+        - 100
+  - type: input
+    attributes:
+      name: title
+      label: "Title format:"
+      defaultValue: "{repo_owner}/{repo_name} {num_symbol}{number}"
+  - type: input
+    attributes:
+      name: subtitle
+      label: "Subtitle format:"
+      defaultValue: "[{reason_title}] {subject_title}"
+  - type: textBlock
+    attributes:
+      name: Formatting
+      description: >
+        Click website link below for more information on formatting.

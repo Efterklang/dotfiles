@@ -1,0 +1,8 @@
+body:
+  - type: passwordBox
+    attributes:
+      name: token
+      label: "Personal access token:"
+      defaultValue: ""
+      description: >
+        This token is not required, but will help mitigate the rate limit of the GitHub API. It is recommended to use a token with minimal scopes.

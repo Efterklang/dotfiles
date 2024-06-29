@@ -1,0 +1,14 @@
+{
+  "OpenInNewBrowserWindow": true,
+  "BrowserPath": null,
+  "LoadChromeBookmark": false,
+  "LoadFirefoxBookmark": false,
+  "LoadEdgeBookmark": false,
+  "CustomChromiumBrowsers": [
+    {
+      "Name": "Vivaldi",
+      "DataDirectoryPath": "C:\\Users\\24138\\AppData\\Local\\Vivaldi\\User Data\\",
+      "BrowserType": 0
+    }
+  ]
+}

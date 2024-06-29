@@ -1,0 +1,12 @@
+{
+  "ID": "4D5DF575E4964C6AAADCF86134F09CC0",
+  "ActionKeyword": "st",
+  "Name": "Steam Search",
+  "Description": "Search and launch your Steam Game library",
+  "Author": "Garulf",
+  "Version": "9.0.1",
+  "Language": "executable",
+  "Website": "https://github.com/Garulf/Steam-Search",
+  "IcoPath": "run.exe",
+  "ExecuteFileName": "run.exe"
+}

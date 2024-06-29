@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -40,3 +41,47 @@
 	defaultBranch = main
 [http "https://github.com"]
 	proxy = http://127.0.0.1:7890
+=======
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Efterklang
+	email = gaojiaxing2004@qq.com
+; [core]
+	; editor = 'D:/Application/Microsoft VS Code Insiders/Code - Insiders.exe' -multiInst -notabbar -nosession -noPlugin
+	; autocrlf = false
+	; pager = code-insiders --wait -
+; [diff]
+; 	tool = vscode
+; [difftool "vscode"]
+; 	cmd = code-insiders --wait --diff $LOCAL $REMOTE
+; [merge]
+; 	tool = vscode
+; [mergetool "vscode"]
+; 	cmd = code-insiders --wait $MERGED
+[http]
+	postBuffer = 524288000
+	lowSpeedLimit = 0
+	lowSpeedTime = 999999
+	version = HTTP/1.1
+[credential]
+	helper = store
+[safe]
+	directory = *
+; [alias]
+; 	dif = difftool
+; 	merg = mergetool
+[gui]
+	recentrepo = E:/UESTC/Markdown
+[core]
+	editor = nvim
+[sendpack]
+	sideband = false
+[init]
+	defaultBranch = main
+[http "https://github.com"]
+	proxy = http://127.0.0.1:7890
+>>>>>>> 7c9e02e (rebase)

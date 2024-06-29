@@ -1,0 +1,7 @@
+{
+  "subtitle": "[{reason_title}] {subject_title}",
+  "Formatting": null,
+  "title": "{repo_owner}/{repo_name} {num_symbol}{number}",
+  "max_results": "30",
+  "token": ""
+}

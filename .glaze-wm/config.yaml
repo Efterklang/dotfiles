@@ -138,7 +138,11 @@ bar:
       foreground: *olive-green
       # margin: "0px 0px 0px 0px"
     - type: text
+<<<<<<< HEAD
       text: "% "
+=======
+      text: "󱉸 "
+>>>>>>> 7c9e02e (rebase)
       foreground: *olive-green
       left_click_command: "exec 'C:/Users/24138/.glaze-wm/scripts/toggleMute.exe'"
     # - type: "network"
@@ -155,9 +159,15 @@ bar:
     - type: "battery"
       # background: *surface0
       foreground: *olive-green
+<<<<<<< HEAD
       label_draining: "<attr fs='15'>󰂂 </attr>{battery_level}%"
       label_power_saver: "<attr fs='15'>󰌪 </attr>{battery_level}%"
       label_charging: "<attr fs='15'>󰂅 </attr>{battery_level}%"
+=======
+      label_draining: "<attr fs='15'>󰂂 </attr>{battery_level}󱉸"
+      label_power_saver: "<attr fs='15'>󰌪 </attr>{battery_level}󱉸"
+      label_charging: "<attr fs='15'>󰂅 </attr>{battery_level}󱉸"
+>>>>>>> 7c9e02e (rebase)
     - type: "text"
       text: *seperator
       font_size: *seperator_size

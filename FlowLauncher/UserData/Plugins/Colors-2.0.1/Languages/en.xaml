@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:String x:Key="flowlauncher_plugin_color_plugin_name">Colors</system:String>
+    <system:String x:Key="flowlauncher_plugin_color_plugin_description">Allows to preview colors using hex values.(Try #000 in Flow Launcher)</system:String>
+    <system:String x:Key="flowlauncher_plugin_color_plugin_conversion_error">Failed to convert color code, see Flow's log for details</system:String>
+    <system:String x:Key="flowlauncher_plugin_color_plugin_multi_code_format">Hint: use ; to search multiple color codes</system:String>
+    <system:String x:Key="flowlauncher_plugin_color_plugin_multi_code_format_suggestion">Try: 99,197,34;(39,0,152)</system:String>
+
+</ResourceDictionary>
