@@ -754,10 +754,9 @@ def cpath [path?] {
       }    
   }
 
-
 def sync-dotfiles [] {
-    cp -r -f ~/AppData/Roaming/nushell/*.nu 'e:/OneDrive - 商业版/Private/dotfiles/CLI&TUI/shells/nushell/'
-    cp -r -f ~/AppData/Roaming/nushell/scripts 'e:/OneDrive - 商业版/Private/dotfiles/CLI&TUI/shells/nushell/'
+    cp -r -f ~/.config/yazi/* 'e:/OneDrive - 商业版/Private/dotfiles/CLI&TUI/yazi/'
+    cp -r -f ~/AppData/Roaming/nushell/ 'e:/OneDrive - 商业版/Private/dotfiles/CLI&TUI/shells/nushell/'
     cp -r -f ~/Documents/Powershell/* 'e:/OneDrive - 商业版/Private/dotfiles/CLI&TUI/shells/Powershell/'
     cp -r -f ~/.config/wezterm/* 'e:/OneDrive - 商业版/Private/dotfiles/wezterm/'
     cp -r -f ~/.glaze-wm/* 'e:/OneDrive - 商业版/Private/dotfiles/.glaze-wm/'

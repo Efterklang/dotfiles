@@ -74,4 +74,5 @@ $env.NU_PLUGIN_DIRS = [
 
 
 # yazi config
+$env.YAZI_FILE_ONE = 'D:/envir_vars/scoop/apps/git/current/usr/bin/file.exe'
 $env.YAZI_CONFIG_HOME = '~/.config/yazi/'
