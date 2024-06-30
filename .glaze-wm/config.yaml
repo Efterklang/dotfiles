@@ -69,7 +69,10 @@ bar:
     - type: "clock"
       time_formatting: "H:mm:ss ddd"
       foreground: *mauve
-    # - type: "window title"
+    - type: "text"
+      text: *seperator
+      font_size: *seperator_size
+      foreground: *seperator_color
 
   components_center:
     - type: "workspaces"
@@ -177,7 +180,7 @@ general:
   focus_follows_cursor: false
   cursor_follows_focus: false
   toggle_workspace_on_refocus: true
-  show_floating_on_top: true
+  show_floating_on_top: false
   floating_window_move_amount: "5%"
   center_new_floating_windows: true
   # window transition animations (on minimize, close, etc). Set to 'unchanged'
@@ -217,10 +220,10 @@ window_rules:
   # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
   - command: "set floating"
     match_class_name: "#32770"
-  
+
   - command: "ignore"
     match_process_name: "/Flow.Launcher|ScreenClippingHost/"
-  
+
   - command: "set floating"
     match_process_name: "/Taskmgr|ScreenClippingHost|Clash for Windows|.*QQ.*|.*聊天记录.*|WeChat|Feishu/"
 
@@ -234,9 +237,9 @@ window_rules:
     match_title: /.*[Cc]ode.*/
 
   - command: "move to workspace 4"
-    match_process_name: "wezterm-gui"
+    match_process_name: "/wezterm-gui|WindowsTerminal/"
 
-  - commands: ["move to workspace 5",resize borders 0px -7px -7px -7px]
+  - commands: ["move to workspace 5", resize borders 0px -7px -7px -7px]
     match_process_name: "vivaldi"
 
   - commands: ["move to workspace 6", resize borders 0px -7px -7px -7px]
@@ -286,7 +289,7 @@ keybindings:
     binding: "Alt+Shift+C"
   - command: "set minimized"
     binding: "Alt+M"
-  - commands: ["exec D:/Application/WezTerm/wezterm-gui.exe"]
+  - command: "exec D:/envir_vars/scoop/shims/wtp.exe"
     binding: "Ctrl+Enter"
   # Change focus tab
   - command: "focus left"

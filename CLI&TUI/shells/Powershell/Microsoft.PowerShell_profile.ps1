@@ -39,8 +39,4 @@ function Get-ChildItemForce {
 }
 Set-Alias -Name la -Value Get-ChildItemForce
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
-<<<<<<< HEAD
-oh-my-posh init pwsh --config 'C:/Users/24138/AppData/Local/Programs/oh-my-posh/themes/tokyo-night.omp.json' | Invoke-Expression
-=======
 oh-my-posh init pwsh --config '~/AppData/Local/Programs/oh-my-posh/themes/tokyo-night.omp.json' | Invoke-Expression
->>>>>>> 7c9e02e (rebase)

@@ -60,7 +60,7 @@ return {
 
     -- command palette
     command_palette_bg_color = '#222436',
-    command_palette_fg_color = '#86e1fc',
+    command_palette_fg_color = '#a4aee8',
     window_frame = {
         active_titlebar_bg = '#5c6bc0',
         font_size = 9,

@@ -1,0 +1,8523 @@
+cls
+ls
+clear
+cd e:
+ls
+cd UESTC\
+ls
+cd Delta\
+ls
+cls
+ls | where size > 2mb | sort-by modified
+ls
+cd public\
+cls
+ls
+ls | where size > 2mb | sort-by modified
+ls
+ls | where size > 1mb | sort-by modified
+ls | where size > 512kb | sort-by modified
+ls | where size < 512kb | sort-by modified
+cls
+ls
+ls | where name = *.py
+ls | grep *.py
+clear
+ls
+clear
+cd e:\UESTC\Home\
+ls
+cd jiutian\
+clear
+ls
+python .\export.py
+clear
+ls
+py -v
+clear
+ls
+ll
+ls -l
+cd
+ls
+cd e:\UESTC\Home\
+ls
+clear
+echo $nu.config-path
+nvim $nu.config-path
+exit
+cls
+oh-my-posh --help
+oh-my-posh prompt
+oh-my-posh --version
+nvim $nu.config-path
+exit
+oh-my-posh init nu
+source $nu.config-path
+exit
+source $nu.config-path
+nvim $nu.config-path
+exit
+oh-my-posh init nu
+source $nu.config-path
+nushell -v
+exit
+nvim $nu.env-path
+echo $nu.env-path
+ci $nu.config-path
+code-insiders $nu.config-path
+cd ~
+ls
+ls 
+ls -a
+ls -l
+echo $nu.env-path
+oh-my-posh init nu
+exit
+nvim $nu.config-path
+ls
+ll
+ls
+nvim $nu.config-path
+exit
+oh-my-posh init nu
+exit
+code-insiders $profile
+yycode-insiders $profile
+edxit
+exit
+echo $nu.env-path
+echo $nu.config-path
+cd c:\Users\24138\AppData\Roaming\nushell\
+ls
+touch .oh-my-posh.nu
+ls
+nvim .oh-my-posh.nu
+ls
+source $nu.config-path
+exit
+exit
+ls
+source 
+ls
+cls
+echo $nu.config
+exit
+nu
+ci $nu.env-path
+echo $nu.env-path
+cd c:\Users\24138\AppData\Roaming\nushell\
+ls
+ll
+ls
+ci .\env.nu
+code-insiders .\env.nu
+oh-my-posh init nu
+oh-my-posh --c
+oh-my-posh -c
+oh-my-posh init nu
+exit
+nu
+ps
+ps | where cpu
+ps
+ps | where mem > 2mb
+ps | where mem > 22mb
+ps | where mem > 122mb
+ps | where mem > 122mb | sort-by mem
+exit
+ls
+ls | where type=dor
+ls | where type=dir
+ls | where type = dir
+ls | where type == dir
+exit
+oh-my-posh init nu --print | save ./ohmyposh.nu --force
+ls
+open
+exit
+ls
+open
+ls
+ll
+ls
+ps | where mem > 122mb | sort-by mem
+ls
+cd e:\UESTC\Delta\web\Efterklang.github.io\
+ls
+echo $nu.env-path
+ls
+cd e:\UESTC\Delta\web\Efterklang.github.io\
+ls
+cls
+wezterm start --help
+wezterm start --help --print
+echo wezterm start --help
+weztermcmd.exe start --help
+weztermcmd.exe start --position 'screen:30%,30%'
+weztermcmd.exe start --position screen:30%,30%
+wezterm.exe start --position screen:30%,20%
+wezterm start --position screen:30%,30%
+ls
+open
+cd e:\UESTC\Delta\web\Efterklang.github.io\
+ls
+ll
+ls -l
+ls -a
+ll
+all
+ls
+alias
+alias ll ls-l
+help alias
+alias ll to ls -l
+alias ll = ls -l
+ll
+echo $nu.env-path
+ox
+cd e:\UESTC\Delta\web\Efterklang.github.io\
+ox
+explorer.exe ./
+explorer.exe .
+exp
+ipconfig
+ip
+getip
+getusername
+username
+ipconfig
+ci $profile
+ll
+ls
+la
+ls
+sys
+echo "Username: $(sys | get host.user)"
+echo Username: $(sys | get host.user)
+ls *.md
+cd e:\UESTC\Delta\web\Efterklang.github.io\
+ls
+ls *.py
+ls
+dasds
+sysinfo
+sys
+help sys
+(sys).host
+(sys).host.name
+(sys).host.hostname
+(sys).ip
+sys
+(sys).cpu
+help sys
+(sys).host | get name
+sys -h
+页面或页(Page)：把每个进程的逻辑地址空间分成一些大小相等的片。
+物理块或页框(Page Frame)：内存空间也分成与页相同大小的若干存储块。在为进程分配存储空间时，总是以页框为单位。
+例如：一个作业的地址空间有m页。那么，只要分配给它m个页框，每一页分别装入一个页框内即可。这里，并不要求这些页框是连续的。
+页面或页(Page)：把每个进程的逻辑地址空间分成一些大小相等的片。
+物理块或页框(Page Frame)：内存空间也分成与页相同大小的若干存储块。在为进程分配存储空间时，总是以页框为单位。
+例如：一个作业的地址空间有m页。那么，只要分配给它m个页框，每一页分别装入一个页框内即可。这里，并不要求这些页框是连续的。
+页面或页(Page)：把每个进程的逻辑地址空间分成一些大小相等的片。
+物理块或页框(Page Frame)：内存空间也分成与页相同大小的若干存储块。在为进程分配存储空间时，总是以页框为单位。
+例如：一个作业的地址空间有m页。那么，只要分配给它m个页框，每一页分别装入一个页框内即可。这里，并不要求这些页框是连续的。
+git -v
+pwd
+which .md
+reedline
+页面或页(Page)：把每个进程的逻辑地址空间分成一些大小相等的片。
+物理块或页框(Page Frame)：内存空间也分成与页相同大小的若干存储块。在为进程分配存储空间时，总是以页框为单位。
+例如：一个作业的地址空间有m页。那么，只要分配给它m个页框，每一页分别装入一个页框内即可。这里，并不要求这些页框是连续的。
+cls
+$nu.config-path
+env
+$env
+$env.PATH
+$env.Path
+$env.Path 
+$env.Path | d:*
+$env.Path | d：
+$env.Path | d:
+ls
+select 
+select help
+ls
+ls | where type == dir
+ls | where type == file
+ls | where type == file | sort-by modified
+echo $userprofile$
+echo %userprofile%
+%userprofile%
+cd %userprofile%
+gstat
+git status
+cd e:\UESTC\Delta\web\Efterklang.github.io\
+git status
+cargo
+plugin list
+version
+scoop search cargo
+scoop install rust
+cargo install nu_plugin_net
+rustup toolchain install stable-x86_64-pc-windows-gnu
+scoop install rustup
+cargo install nu_plugin_net
+rustup toolchain install stable-x86_64-pc-windows-gnu
+rustup
+scoop search cargo
+scoop search rust
+rustup
+scoop install rustup
+rustup toolchain install stable-x86_64-pc-windows-gnu
+cargo install nu_plugin_net
+scoop uninstall rust
+scoop uninstall rustup
+scoop list
+javac
+ps | where cpu > 0 | sort-by cpu | reverse
+ps | where name == Notepad2.exe
+ps
+ps | where name == *.exe
+ps | where name == .exe
+ps | where name == msedge.exe
+ps | where name == **.exe
+git log --pretty=%h»¦«%aN»¦«%s»¦«%aD | lines | split column "»¦«" sha1 committer desc merged_at | histogram committer merger | sort-by merger | reverse
+git log
+git log --pretty="%h|%s|%aN|%aE|%aD" -n 25
+git config
+git diff
+git log
+git log --pretty=%h»¦«%s»¦«%aN»¦«%aE»¦«%aD -n 5
+git log --pretty=%h»¦«%s»¦«%aN»¦«%aE»¦«%aD -n 5 | lines
+git log --pretty=%h»¦«%s»¦«%aN»¦«%aE»¦«%aD -n 5 | lines | split column "»¦«"
+git log --pretty=%h»¦«%s»¦«%aN»¦«%aE»¦«%aD -n 5 | lines | split column "»¦«" commit subject name email date
+git log --pretty=%h»¦«%s»¦«%aN»¦«%aE»¦«%aD -n 25 | lines | split column "»¦«" commit subject name email date | upsert date {|d| $d.date | into datetime} | sort-by date
+nvim
+nvim $nu.config-path
+ssh -v
+gtopcommitter
+gtopcommiter
+gtopcommitter
+glog
+gau
+gau
+gau 1
+glog
+gitlog 3
+glog 3
+glog 6
+glot 20 | where # == 6
+glot 20 | where subject == update
+glog 20 | where subject == update
+net
+netstach
+ip
+ipconfig.exe 
+sys
+(sys).host
+glog
+glog 30
+glog 30 | where subject == update
+glog 30 | where subject == update | sort-by data | reverse
+glog 30 | where subject == update | sort-by date | reverse
+glog 100 | where name == LuvSicPt6
+sys.host
+(sys).host
+cd e:\UESTC\Delta\web\Efterklang.github.io\
+glog
+cd e:\UESTC\Delta\web\Efterklang.github.io\
+glot 20 | where name == efterklang
+glog 20 | where name == efterklang
+glog 20
+glog 20 | where name == Efterklang
+glog 20 | where name == LuvSicPt6
+glog 100 | where name == LuvSicPt6
+gau
+scoop install gitui
+gitui
+cd e:\UESTC\Delta\web\Efterklang.github.io\
+gitui
+cd e:\UESTC\Delta\web\Efterklang.github.io\
+hexo d
+gitui
+cd e:\UESTC\Delta\web\Efterklang.github.io\
+hexo s
+free pory
+free port
+ps
+ps help
+help ps
+ps -l
+netstat
+sys lsof -i : 4000 
+sys netstat -i : 4000 
+sys lsof -i :8080
+hexo s
+di
+du
+du ./
+port
+netstat -ano | findstr:8080
+netstat -ano
+lsof -i
+netstat -ntp
+cd ~
+ls
+cd .config\
+ls
+cd scoop\
+ls
+la
+ll
+cd ..
+cd e:\UESTC\Delta\web\Efterklang.github.io\
+git clone https://github.com/FMotalleb/nu_plugin_port_list.git
+cd .\nu_plugin_port_list\
+nupm install
+scoop install nupm
+cd ..
+rm nu_plugin_port_list\
+rm -r nu_plugin_port_list\
+ls
+hexo s
+hexo s
+nvim
+time
+data
+date
+date humanize
+data now
+date now
+date humanized
+date
+date now humanize
+date to-table
+cd e:\UESTC\Delta\web\Efterklang.github.io\
+glog 100 | where name == LuvSicPt6
+glog 50 | where name == Efterklang
+(sys).host
+sys
+(sys).disks
+cd Markdown
+fzf
+scoop install fzf
+fzf
+htop
+scoop install htop
+neofetch
+wsl --list
+cd ~\.config\
+ls
+la
+ls
+ll
+cd c:\Users\24138\.config\
+cd ..
+ls
+ci .\.wslconfig
+rustc --version
+cargo --version
+cargo install nu_plugin_highlight
+which nu_plugin_highlight
+register C:\Users\24138\.cargo\bin\nu_plugin_highlight.exe
+help commands | where command_type == "plugin"
+cargo install nu_plugin_file
+cargo install nu_plugin_pnet
+net
+net accounts
+net computer
+cd c:\Users\24138\.cargo\
+ls
+cd bin
+ls
+git clone https://github.com/FMotalleb/nu_plugin_port_list.gitxx
+cargo install nu_plugin_port_list
+which nu_plugin_port_list
+register C:\Users\24138\.cargo\bin\nu_plugin_port_list.exe
+register ~/.cargo/bin/nu_plugin_port_list
+source 
+register ~/.cargo/bin/nu_plugin_port_list
+register C:\Users\24138\.cargo\bin\nu_plugin_port_list.exe
+register ~/.cargo/bin/nu_plugin_port_list
+register ~/.cargo/bin/nu_plugin_port_list.exe
+register C:\Users\24138\.cargo\bin\nu_plugin_port_list.exe
+weather
+scoop install zoxide
+cd e:\UESTC\Delta\web\Efterklang.github.io\
+z efterklang.github.io
+zoxide
+zoxide efterklang.github.io
+z
+zoxide add e:\UESTC\Delta\web\Efterklang.github.io\
+zoxide 
+zoxide.exe init
+zoxide.exe init nu
+zoxide.exe init nushell
+ls
+cd $nu.config-path
+$nu.config-path
+cd $nu.config-path
+cd C:\Users\24138\AppData\Roaming\nushell\
+touch zoxid.nu
+mv .\zoxid.nu ./zoxide.nu
+ls
+ci .\zoxide.nu
+z
+z efterklang.github.io
+cd C:\Users\24138\AppData\Roaming\nushell\
+z nushell
+pwd
+cd | pwd
+pwd | cd
+cd E:\UESTC\Markdown\
+z markdown
+z efterklang.github.io
+edxp
+exp
+cd D:\qq\files
+z files
+z efterklang.github.io
+https://github.com/fdncred/nu_plugin_pnet.git
+git clone https://github.com/fdncred/nu_plugin_pnet.git
+cd .\nu_plugin_pnet\
+cargo build --release
+cargo build
+cd ..
+ls
+cd ..
+rm -r rust\
+cargo install nu_plugin_regex
+cd e:uestc
+cd e:?uestc
+cd e:/uestc
+clear
+z efterklang.github.io
+z uestc
+gclone https://github.com/fdncred/nu_plugin_regex.git
+git clone https://github.com/fdncred/nu_plugin_regex.git
+cd .\nu_plugin_regex\
+cargo build --release
+cd ..
+rm -r nu_plugin_regex\
+cargo install nu_plugin_dns
+register ~/.cargo/bin/nu_plugin_dns.exe
+cd ~/.congo/bin/
+cd ~/.cargo/bin/
+z efterklang.github.io
+z bin
+ls
+rm nu_plugin_dns.exe
+gs
+cd ..
+which nu.exe
+$nu.config-path
+z nushell
+ls
+ci .\config.nu
+z efterklang.github.io
+z nushell
+ls
+z bin
+ls
+......
+.MMc               ..;l. xMN:                    KM0
+'MM.                   'NMO                      oMM
+.MM,                 .kMMl                       xMN
+neofetch
+neofetch
+z efterklang.github.io
+neofetch
+z efterklang.github.io
+z markdown
+ls
+gtop
+${c2}  ██████████████  ${c2}██████████████
+fzf
+open | fzf
+fzf | open
+gitui
+scoop install fd
+fd *.md
+fd .md
+scoop install bottom
+bottom
+btm
+fd
+fd application
+fd layer
+fd .md
+z efterklang.github.io
+fd .md
+fd layer
+scoop install bat
+ls
+bat indexnow_request.py
+z bin
+z efterklang.github.io
+btm
+ls
+bat .\indexnow_request.py
+fzf
+fd .html
+fd md
+fd html
+ls
+cd public\UESTC\ComputerNetworking\Ch5-1TransportLayer\
+ls
+z efterklang.github.io
+cd source\_posts\UESTC\ComputerNetworking\
+ls
+nvim .\Ch5-2TransportLayer.md
+echo bye
+get_weather
+get-weather
+z nushell
+l
+ls
+nvim .\config.nu
+ci .\config.nu
+which get-weather.nu
+cd c
+cd c:
+cd .
+cd
+fd get-weather
+fd get-weather.nu
+which nu
+cd ~\scoop\
+ls
+cd apps\
+ls
+cd nu
+ls
+cd 0.92.2\
+ls
+open
+exp
+inc
+gstat
+register C:\Users\24138\scoop\apps\nu\0.92.2\nu_plugin_gstat.exe
+gstat
+register C:\Users\24138\scoop\apps\nu\0.92.2\nu_plugin_query.exe
+query
+register C:\Users\24138\scoop\apps\nu\0.92.2\nu_plugin_inc.exe
+version
+which nu
+which .nu
+fzf
+cd cL
+cd C:\
+fzf
+cd d:\
+fzf
+everything
+everything.exe
+every
+z nushell
+edxp
+exp
+$nu.config-path
+$nu.plugin-path
+$nu.home-path
+ls
+cd e:
+z nushell
+git clone https://github.com/nushell/nu_scripts.git
+cd nu_scripts\
+ls
+rm -r .github\
+rm -r LICENSE
+rm .\.git\
+rm -r .\.git\
+ls
+la
+rm .gitattributes
+rm .gitignore
+la
+rm README.md
+rm before_v0.60\
+rm -r before_v0.60\
+la
+which clip.exe
+ls
+cd custom-completions\
+pwd
+pwd | clip
+C:\Users\24138\AppData\Roaming\nushell\nu_scripts\custom-completions
+source C:\Users\24138\AppData\Roaming\nushell\nu_scripts\custom-completions\scoop\scoop-completions.nu
+source C:\Users\24138\AppData\Roaming\nushell\nu_scripts\custom-completions\vscode\vscode-completions.nu
+ci
+open
+exp
+source C:\Users\24138\AppData\Roaming\nushell\nu_scripts\custom-completions\vscode\vscode-completions.nu
+z nushell
+exp
+bat C:\Users\24138\AppData\Roaming\nushell\nu_scripts\custom-completions\winget\winget-completions.nu
+input list --fuzzy
+source C:\Users\24138\AppData\Roaming\nushell\nu_scripts\custom-menus\zoxide-menu.nu
+z 
+z --help
+zi --help
+zoxide.exe --help
+zoxide edit
+z nushell
+ls
+cd nu_scripts\
+ls
+cd custom-menus\
+ls
+pwd | clip
+zhelp
+z nushell
+ls
+pwd
+pwd | clip
+source C:\Users\24138\AppData\Roaming\nushell\config.nu
+zhelp
+z query
+source C:\Users\24138\AppData\Roaming\nushell\config.nu
+$nu.env-path
+$nu.config-path
+source C:\Users\24138\AppData\Roaming\nushell\config.nu
+source $nu.config-path
+z query
+zo query
+zhelp
+ls
+zoxide --help
+ci --list-extensions 
+code-insiders --list-extensions
+source $nu.config-path
+ci --list-extensions 
+code-insiders --list-extensions
+source $nu.config-path
+ci --list-extensions 
+ci
+ci -v
+ci -list-extensions 
+ci --list-extensions 
+source $nu.config-path
+get-weather
+get_weather
+use C:/Users/24138/AppData/Roaming/nushell/nu_scripts/modules/weather/get-weather.nu
+get-weather
+get_weather
+find .nu
+fzf
+bat C:/Users/24138/AppData/Roaming/nushell/nu_scripts\modules\weather\get-weather.nu
+user C:/Users/24138/AppData/Roaming/nushell/nu_scripts\modules\weather\get-weather.nu
+use C:/Users/24138/AppData/Roaming/nushell/nu_scripts\modules\weather\get-weather.nu
+get_weather
+get-weather get_weather
+source $nu.config-path
+get-weather get_weather
+get-weather
+get_weather
+source $nu.config-path
+weather
+ls
+which gitv2.nu
+source $nu.config-path
+gl
+mod gl
+mod gs
+z efterklang.github.io
+mod gs
+mod gl
+mod gb
+mob gs
+mod gs
+mod gp
+mod gd
+fzf
+z efterklang.github.io
+gitui
+z markdown
+cd e:\UESTC\Home\jiutian\
+gitui
+scoop install dust
+dust
+scoop update neovim
+scoop install duf
+scoop install ripgrep
+fzf
+fd get-weather.nu
+fd
+fd .py
+mod gd
+mod gs
+mod gl
+mod gd
+mod gp
+gtop
+neofetch
+z efterklang.github.io
+gitui
+poetry about 
+z jiutian
+poetry show 
+git diff 
+git remote get-url 
+scoop bucket list 
+ci --list-extensions
+query db 
+query db --help
+$env.Path
+$env.config
+alias ci = code-insiders
+ci --list-extensions
+ci --v
+ci --help 
+ci -- list-extensions 
+ci --listextensions 
+ci -- list-extensions 
+ci --list-extensions 
+ci --list-extensions
+ci --status 
+ci --list-extensions 
+ls
+ll
+la
+z efterklang.github.io
+ls
+zo
+zo edit
+z efterklang.github.io
+z nushell
+ls
+exp
+ls
+z efterklang.github.io
+gitui
+ping donkey
+cd C:\Users\24138\Downloads\Compressed
+ls
+scp admin@donkey:~/. donkeycar-main.zip
+scp admin@donkey:/home/admin donkeycar-main.zip
+scp admin@donkey:/home/admin/donkey.zip donkeycar-main.zip
+scp admin@donkey:/home/admin/donkey.zip ./donkeycar-main.zip
+scp .\donkeycar-main.zip admin@donkey:/home/admin
+ssh admin@donkey
+ping donkey
+dns github.com
+dns
+ping donkey
+ls
+net
+netstat -ntp
+scp ~\.ssh\id_rsa.pub root@donkey:/root/.ssh
+scp ~\.ssh\id_rsa.pub admin@donkey:/root/.ssh
+ssh admin@donkey
+source $nu.config-path
+ssh admin@donkey
+ssh root@donkey
+ssh admin@donkey
+ssh admin@donkey
+fzf
+gitui
+neofetch
+ssh root@donkey
+scoop install midnight-commander
+scoop install mc
+ls
+mc
+ls
+ll
+la
+scoop add nerd-fonts
+scoop bucket
+scoop bucket add nerd-fonts
+scoop install Monalisa-Code
+z efterklang.github.io
+z ef
+z e:\UESTC\Home\
+ls
+z h
+z ho
+cargo new hello
+ls
+ci .
+ls
+rm -r hello
+./
+ls
+cat .\.wslconfig
+z nushell
+ls
+nvim .\config.nu
+exp
+nvim .\config.nu
+source $nu.config-path
+cat .\.wslconfig
+ls
+cat config.nu
+ls
+cat .\history.txt
+z jiutian
+ls
+cat .\export.py
+ll
+la
+vim .\export.py
+z ef
+cargo new hello
+cd  hello
+ls
+vim $nu.config-path
+z nushell
+ls
+exp
+source $nu.config-path
+ci $nu.config-path
+cat Cargo.toml
+ls
+ll
+code-insiders --list-extensions 
+ci --telemetry 
+cls
+l
+sls
+ls
+cargo build 
+ls
+ls .\target\
+exp
+.\target\debug\hello.exe
+cd ..
+rm -r hello
+z e
+ls
+rm -r hello
+z ma
+gitui
+ls
+vim .\.gitignore
+gitui
+gstatus
+mod gs
+git status
+gs
+mod gs
+cd C:\Windows\Resources\Themes\
+git clone https://github.com/niivu/Windows-11-themes.git
+sudo git clone https://github.com/niivu/Windows-11-themes.git
+exp
+ls
+ll
+z e
+z ef
+ci --version
+z ef
+git clone git@github.com:microsoft/vscode.git
+git init
+ls
+la
+rm -r .\.git\
+ls
+git branch
+z e
+z ef
+git branch
+zo
+zo home
+z home
+ls
+cd ..
+ls
+cd Chat\
+ls
+cd freechat\
+ls
+git branch
+cd FreeChatServer\
+l
+ls
+git branch
+ci .
+git help
+help git
+git -help
+ping github.ocm
+ping github.com
+ls
+cls
+ls
+gitui
+z e
+ls
+gitui
+vim %APPDATA%/gitui/key_bindings.ron
+ls %APPDATA%/gitui/key_bindings.ron
+cd %APPDATA%
+rm %APPDATA%/gitui/key_bindings.ron
+gitui
+vim $nu.config-path
+git config
+which git
+which git | get path
+which git | get path | clip\
+which git | get path | clip
+git -v
+scoop home 
+scoop home
+scoop list
+scoop uninstall git-aliases
+scoop update git
+z ef
+ls
+cd source\_posts\
+ls
+z server
+gitui
+cd ef
+z ef
+vim $nu.config-path
+source $nu.config-path
+cd ef
+cls
+cd jiutian
+gitui
+cd icarus
+cd ef
+ls
+cd themes\icarus\source\
+git clone https://github.com/stevenjoezhang/live2d-widget.git
+exp
+pwd
+git clone https://github.com/stevenjoezhang/live2d-widget.git
+vim $nu.config-path
+cls
+git clone https://github.com/stevenjoezhang/live2d-widget.git
+cd ef
+ls
+la
+vim .\_config.yml
+hexo s
+hexo clean && hexo g && hexo s
+hexo clean and hexo g and hexo s
+cd ef
+ls
+nvim package.json
+npm install --save hexo-helper-live2d
+sudo npm install --save hexo-helper-live2d
+nvim package.json
+hexo clean
+hexo g; hexo s
+hexo clean;
+ls
+hexo gen
+hexo s
+hexo s
+ls
+cd scripts\
+ls
+py .\train.py ..\datasets\train\images\well0_0002.jpg
+cd ..
+py .\train.py .\datasets\train\images\well0_0002.jpg
+.\.venv\Scripts\activate.bat
+py -v
+py .\train.py .\datasets\train\images\well0_0002.jpg
+.\.venv\Scripts\activate.ps1
+rm -r */__pycache__
+git rm -r --cached */__pycache__/
+gitui
+git push
+git remote
+git remote get-url 
+git remote get-url origin
+git remote set-url origin
+git remote set-url origin git@github.com:Efterklang/yolov8_manhole_cover.git
+git remote get-url origin
+gitui
+git push
+gitui
+source $nu.config-path
+gitui
+vim $nu.config-path
+ci $nu.config-path
+ssh-add c:/Users/24138/.ssh/win_Efterklang
+cd .ssh
+cd c:\Users\24138\.ssh\
+ls
+cat Efterklang
+ssh-add c:/Users/24138/.ssh/Efterklang
+ls
+ssh-add c:/Users/24138/.ssh/Efterklang
+l
+ls
+which Efterklang
+which Efterklang.pub
+exp
+ssh-add "C:\Users\24138\.ssh\Efterklang"
+ssh-add C:\Users\24138\.ssh\Efterklang
+ssh-add C:/Users/24138/.ssh/Efterklang
+ssh-add -K ~\.ssh\Efterklang
+ssh-add -K ~\.ssh\Efterklang.pub
+ssh-add -K ~\.ssh\id_rsa
+cd ef
+hexo d
+gitui
+cd mark
+gitui
+git push -u origin main
+cd ef
+vim .\_config.yml
+hexo d
+z mark
+cd ef
+hexo s
+vim .\_config.yml
+which wezterm.exe
+which wezterm.lua
+cd D:\Application\WezTerm\
+ls
+pwd
+pwd | clip
+cd C:\Users\24138\.config\wezterm\config
+ls
+z config
+ls
+cd ..
+ls
+cd wez
+ls
+nvim wezterm.lua
+ls
+cd config
+ls
+ll
+la
+ls
+cd home
+l
+ls
+ssh-add ~\.ssh\Efterklang
+eval
+start-ssh-agent.cmd 
+ssh-add ~\.ssh\Efterklang
+ssh-add ~/.ssh/Efterklang
+cd ma
+ls
+gs
+mod gs
+ls
+gitui
+rm .\Untitled.md
+gitui
+ssh-add ~/.ssh/Efterklang
+ssh-add ~\.ssh\id_rsa
+ssh-agent
+ssh-add ~\.ssh\Efterklang
+gitui
+ls
+nvim Private\daily\2024.md
+ci
+ci ./
+cd e
+heox s
+gitui
+nvim $nu.config-path
+hexo s
+ssh-add -K
+ssh-add -K ~\.ssh\Efterklang
+ssh-add ~\.ssh\Efterklang
+vim $nu.env-path
+vim $nu.config-path
+ssh-agent -c
+ssh-agent -c | lines | first 2
+^ssh-agent -c | lines
+ssh-agent
+source $nu.config-path
+guinit
+ssh-add ~\.ssh\Efterklang
+vim $nu.config-path
+'{"title": "jq vs Nushell", "publication_date": "2023-11-20"}' | from json | to json 
+'[{"name": "Alice", "age": 30}, {"name": "Bob", "age": 25}]' | from json | where age > 25
+ls
+hexo s
+hexo clean
+hexo s
+sudo npm install --save hexo-blog-encrypt
+hexo s
+nvim .\_config.yml
+hexo s
+hexo clean
+hexo s
+nvim .\_config.yml
+hexo clean;hexo s
+nvim .\_config.yml
+hexo clean
+hexo s
+hexo clean
+hexo gen
+hexo s
+vim .\_config.yml
+hexo clean
+hexo s
+hexo clean;hexo g;hexo s
+vim .\_config.yml
+hexo clean;hexo g;hexo s
+ci .\_config.yml
+cd node_modules\
+ls
+ls | where name = live2**
+ls | where name = live2*
+ls | where name == live2*
+ls | where name == live2**
+ls | where name == live2d
+ls | where name == live2d**
+ls
+hexo s
+hexo gen
+hexo s
+hexo clean; hexo gen
+hexo s
+hexo clean
+hexo gen
+hexo s
+hexo clean;hexo s
+hexo s
+hexo clean;hexo s
+npm uninstall --save hexo-helper-live2d
+yarn add hexo-helper-live2d
+npm install --save hexo-helper-live2d
+sudo npm install --save hexo-helper-live2d
+hexo s
+hexo clean;hexo gen;hexo d
+hexo s
+hexo d
+py .\create_post.py
+ls
+cat package.json
+cat .\_config.yml
+ci .\_config.yml
+hexo s
+cd ef
+ls
+ls ./; ls live2d_models\
+ls; ls live2d_models\
+ls
+ls live2d_models\
+typora
+typora.exe
+which typora.exe
+which typora
+vim $nu.config-path
+rm C:\Users\24138\AppData\Local\nvim-data\swap\\C%%Users%24138%AppData%Roaming%nu
+vim $nu.config-path
+rm C:\Users\24138\AppData\Local\nvim-data\swap\\C%%Users%24138%AppData%Roaming%nushell%config.nu.swp
+vim $nu.config-path
+source $nu.config-path
+lxmusic
+D:\Application\LuoxueMusic\lxmusic
+source $nu.config-path
+lx
+qq
+wx
+msedge
+edge
+which msedge
+which msedge.exe
+which edge
+ls
+cd ma
+ls
+typora
+source $nu.config-path
+typora
+obs
+source $nu.config-path
+obs
+obs .
+vim $nu.config-path
+ls
+cd ma
+source $nu.config-path
+msedge
+start msedge
+start msedge www.bilibili.com
+start msedge
+ls
+start
+start bilibili.com
+gitui
+cd ma
+ls
+cd Private\daily\
+rm -r image
+cd ef
+gitui
+vim .\.gitignore
+gitui
+cd ma
+gitui
+z ef
+zo --edit
+zo edit
+zo help
+zo --help
+zo remove efter
+zo edit
+zo remove E:\UESTC\Delta\*
+zo edit
+scoop install ranger
+scoop install ranger-fm
+pipx run --spec ranger-fm ranger
+scoop install ranger
+scoop list
+ms
+m
+gm
+mc
+scoop uninstall mc
+pipx run --spec ranger-fm ranger
+scoop update pipx
+pipx run --spec ranger-fm ranger
+pipx install ranger
+pipx install ranger-fm
+ranger
+rg
+mc
+ranger
+which ranger
+ranger
+range
+range --help
+ranger
+pipx uninstall range-fm
+pipx uninstall rangee-fm
+pipx uninstall ranger-fm
+pipx run --spec ranger-fm ranger
+pipx run --spec ranger-fm ranger.py
+pipx run --spec ranger-fm ranger
+pip install -upgrade pipx
+pip install --upgrade pipx
+pipx run --spec ranger-fm ranger
+sudo pip3 install --upgrade pipxd
+pipx --version
+pip3 install --upgrade pipx
+pipx --version
+pipx install ranger-fm
+ls
+pipx run ranger
+ranger
+cd c:\Users\24138\.local\bin
+ls
+ranger
+.\ranger
+exp
+pipx uninstall ranger-fm
+zo edit
+zo help
+zo --help
+env
+(env).path
+sys.path
+path
+cls
+zo --help
+_ZO_DATA_DIR
+$_ZO_DATA_DIR
+echo _ZO_DATA_DIR
+zo -V
+zo _ZO_DATA_DIR
+zo quert
+zo query
+zo --help
+zo remove E:\UESTC\Delta\
+zo remove E:\UESTC\Delta\Web
+zo edit
+zo edit
+$env | table -e
+config path
+cd ~/.
+ls
+cd nu
+ls
+vim .\zoxide.nu
+zo remove E:\UESTC\Delta\
+zo remove E:\UESTC\Delta
+zo edit
+zo help
+zo --help
+zo edit
+zo remove E:\UESTC\Delta
+zo edit
+zo remove E:\UESTC\Delta\Web\Efterklang.github.io
+zo edit
+zo remove E:\UESTC\Delta\web\Efterklang.github.io
+zo remove E:\UESTC\Delta\web\*
+cd web
+zo remove E:\UESTC\Delta\web
+zo edit
+zo init
+zo init nu
+zo help
+zo --help
+zo init
+cd d:\WebSite\
+cd d:\WebSite\Efterklang.github.io\
+cd ef
+scoop install nnn
+file
+ls
+cd .\.vscode\
+ls
+file tasks.json
+file
+scoop install mc
+mc
+fzf
+；x
+lx
+ls > tee ./a.txt | <\n>
+ls
+cd jiutian
+ls
+gitui
+oh-my-posh show
+oh-my-posh --help
+git rebase -i HEAD~3
+gitui
+git config --global core.editor "vim"
+git rebase -i HEAD~3
+git config --global core.editor "nvim"
+git rebase -i HEAD~3
+gitui
+guinit
+gitui
+git rebase -i HEAD~3
+gitui
+cd ef
+py .\create_post.py
+ls
+cd ef
+py .\create_post.py
+git config --global core.editor "nvim" | clip
+git rebase -i HEAD~3
+gitui
+git rebase -i HEAD~5
+gitui
+scoop install gping
+gping
+gping baidu.com
+vim $nu.config-path
+source $nu.config-path
+ping baidu.com
+ps
+curl baidu.com
+curl httpbin.org/headers
+scoop install curlie
+vim $nu.config-path
+source $nu.config-path
+curl httpbin.org/headers
+cd ef
+cd jiut
+ls
+cd datasets
+ls
+rm *.jpg
+mkdir datasets
+ls
+cd datasets
+l
+ls
+mkdir good
+mkdir broke
+mkdir lose
+l
+ls
+cd ..
+ls
+rm -r datasets\
+cd new_data\
+ls
+hexo s
+gitui
+cd ma
+gitui
+cd ef
+cd ma
+gitui
+cd ef
+gitui
+ls
+gitui
+hexo d
+cd jiut
+git rebase -i HEAD~3
+git log
+glog
+git rebase -i HEAD~3
+git merge --squash
+git status
+git pull -f
+gitui
+git rebase
+git rebase --continue
+git rebase --edit-todo
+git diff
+git rebase --continue
+git rebase --abort
+git rebase -i HEAD~3
+gitui
+cd ef
+git gc --prune=now
+ls
+ls | sort-by size
+la | sort-by size
+cd source\
+ls
+la
+cd ..
+git reflog --expire=now --all
+gitui
+cd mar
+gitui
+cd homework
+cd markdown
+ls
+cd homeworks
+ls
+exp
+curl bing.com
+nvim
+EXP
+cd c
+ls
+cd c:
+ls
+cd `Program Files\`
+ls
+which explorer
+cd ..\Windows\
+LS
+ls
+cls
+ls
+cd d:\Application\
+ls
+cd WezTerm
+wezterm
+LS
+cd c:
+ls
+cd `c:\Program Files\`
+ls
+cd powertoys
+l
+sls
+ls
+ls *.exe
+powertoys.exe
+ls
+ls *.exe
+PowerToys.exe
+./PowerToys.exe
+explorer.exe .
+./PowerToys.exe
+taskmgr
+exp
+vim $nu.config-path
+scoop install MonoLisa
+scoopRepos
+cd ~/.
+ls
+exp
+find . -name __pycache__ | xargs rm -rf
+py .\scripts\clean.py
+which nvim
+fzf
+cd | fzf
+fzf z
+z fzf
+z | fzf
+zi
+cd ../..
+ls
+cd ..
+ls
+cd nvim
+scoop install font-maple
+cd homw
+cd home
+git clone https://github.com/subframe7536/Maple-font --depth 1 -b chinese
+cd ef
+hexo d
+ls
+cd live2d_models\
+ls
+cd nipsilon\
+ls
+cd assets\
+ls
+cd ....
+cd scripts\
+ls
+py  .\data_process_utils.py
+docker pull ultralytics/ultralytics
+py  .\data_process_utils.py
+cls
+py  .\data_process_utils.py
+cls
+py  .\data_process_utils.py
+cd ef
+hexo d
+py  .\data_process_utils.py
+gitui
+cd ef
+hhexo s
+cd ef
+py .\indexnow_request.py
+pip install requests
+py .\indexnow_request.py
+hexo s
+hexo clean;hexo gen;hexo d
+py .\create_post.py
+gitui
+cd ft
+vim $nu.config-path
+ci $nu.config-path
+zi ef
+zi
+cd ft
+cd jiut
+cd mark
+cd ef
+zi
+ls
+z edit
+zo edit
+zi ef
+zi
+zo --help
+ci $nu.config-path
+weather
+cd nu
+nu c
+cd c
+cd nu
+cls
+zi foo
+zi
+__zoxide_menu 
+__zoxide_keybinding 
+__zoxide_z 
+fzf
+cd zoxide
+cd appdata
+cd local/zoxide
+ls
+bat db.zo
+mc
+cd appdata
+cd roaming
+ls
+cd .ssh
+cd 24138
+cd c:\Users\24138
+l
+sl
+sls
+ls
+cd
+z
+ls
+cls
+ls
+git-gui.exe 
+git reflog --expire=now --all
+cd ma
+gitui
+cd ef
+gitui
+cd ef
+gitui
+fzf
+fzfp
+cls
+fzf --help
+fzf --preview 'cat {}'
+fzf
+fzf --preview 'bat {}'
+cd ma
+ls
+cd Private\key.md
+cd Private\
+cat key.md
+vim
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+vim
+mvn install:install-file -Dfile=<path-to-file> -DgroupId=org.postgresql -DartifactId=postgresql -Dversion=42.7.3 -Dpackaging=jar
+mvn clean install
+;s
+ls
+mvn clean install
+cd efterklang\
+ls
+mvn clean install
+sudo mvn clean install
+scoop install maven
+scoop uninstall maven
+mvn -version
+mvn -update
+mvn -version
+cd maven_home
+cd d:\envir_vars\
+ls
+cd maven\
+ls
+cd apache-maven-3.9.6\
+cd conf
+l
+sls
+ls
+cd conf
+vim .\settings.xml
+mvn clean install
+cd ef
+cd sprin
+ls
+cd .\efterklang\
+ls
+mvn clean install
+cd ./ef
+cd .\efterklang\
+mvn clean install
+vim
+vim $nu.config-path
+exp
+ipconfig
+ip
+ipconfig /
+ipconfig /all
+cls
+ipconfig /all
+sys
+(sys).net
+cls
+gitlog
+glog
+cd ma
+glog
+cls
+plugin
+plugin list
+gstat
+plugin list
+inc
+vim $nu.config-path
+ci $nu.config-path
+cd nu
+ls
+cd roam
+ls
+cd .\nushell\
+ls
+cd nu_scripts\
+l
+sls
+ls
+exp
+ls
+register C:\Users\24138\AppData\Roaming\nushell\nu_scripts\modules\docker\registry.nu
+d
+source $nu.config-path
+d
+di
+docker
+di
+exp
+dr
+cls
+source $nu.config-path
+gh
+github
+source $nu.config-path
+curl PEM, DER ENG P12 
+ls
+curl baidu.com
+source $nu.config-path
+docker pull ultralytics/ultralytics:8.2.5-cpu
+.\.venv\Scripts\activate
+& .\.venv\Scripts\activate
+python .\expory.py
+source .venv\bin\activate
+source .venv\Scripts\activate
+python -m venv .\.venv\
+sudo python -m venv .\.venv\
+docker
+docker start ultralytics
+docker list
+docker --help
+vim $nu.config-path
+cd nu
+ls
+cd nu_scripts\
+ls
+ls custom-completions\
+cd ma
+ls
+cd ..
+ls
+cd inference\
+py .\det.py
+cd ma
+guinit
+gitui
+scoop update nushell
+scoop list
+scoop update nu
+cd ma
+ls
+gitui
+scoop bucket
+scoop bucket list
+scoop bucket add versions
+scoop bucket add dorado https://github.com/chawyehsu/dorado
+scoop update nu
+scoop bucket list
+scoop bucket known
+scoop bucket add main
+scoop update nu
+cd jt
+l
+ls
+cd inference\
+docker build -t predict
+docker build -t predict .
+pipx -r
+pip -r
+pipx install -r
+docker build -t predict .
+docker run -d 9999:8080 predict
+docker run -d -p 9999:8080 predict
+docker images
+docker exec -it predict /app/venv/python .\predict.py
+docker run -d predict
+docker ps
+docker ps -a
+docker run -d predict
+docker build -t predict .
+dokcer run -d predict.py
+docker run -d predict
+docker build -t predict .
+cd pri
+cd priv
+ls
+cat key.md
+cd jiu
+cd jt
+ls
+cd inf
+cd inference\
+docker build -t predict .
+docker run -d predict
+docker exec -it predict python .\predict.py
+docker exec -it hungry_hawking python .\predict.py
+vim
+gitui
+cd mark
+gitui
+cd ef
+gitui
+fzf
+cd .config
+cd 2413
+cd ~
+ls
+cd .config
+ls .
+ls
+cd appdata
+ls
+cd gitui
+exp
+ls
+exp
+cd ef
+gitui
+ls
+cd jt
+ls
+vim .\.gitignore
+cd jt2024\inference\
+docker build -t predict .
+lx
+vim .\.gitignore
+lx
+vim
+lx
+cd jt
+py .\export.py
+cd jt2024\
+py .\export.py
+cd jt2024\
+py .\scripts\data_process_utils.py
+gitui
+cd ef
+ls
+rename
+exp
+cd jt
+exp
+gitui
+vim .\onnx\predict.py
+gitui
+glog 4
+git rebase -i HEAD~3
+glog
+guinit
+gitui
+github
+curl github.com
+ping github.com
+open github.com
+msedge
+cd ef
+vim
+cd nu
+ls
+commandline set-cursor 
+cd scripts\
+ls
+cd ..
+ls
+cd modules\
+ls
+vim $nu.config-path
+ls
+cargo install --path ./docker
+cd nivm
+cd nvim
+ls
+cd ..docker
+cd ..\docker
+ls
+cd nu
+ls
+cd nu_scripts\
+ls
+plugin list
+gstat
+plugin uninstall gstat
+plugin
+plugin rm gstat
+plugin list
+source $nu.config-path
+plugin list
+plugin rm gstat
+plugin list
+vim
+vim $nu.config-path
+vim
+cd ef
+hexo clean;hexo gen;hexo d
+touch test.c
+vim .\test.c
+gcc .\test.c
+ls
+./a.exe
+rm test.c
+rm a.exe
+ls
+cd ma
+cd mark
+gitui
+glog
+glog 50
+ci .\Private\daily\2024.md
+git pull
+vim .\.gitignore
+ls
+vim .\.gitignore
+git config core.editor "code-insiders --wait"
+git rebase -i HEAD~10
+git add .gitignore
+git commit -m "modify git"
+git rebase -i HEAD~10
+cd ef
+vim .\.gitignore
+plugin list
+cargo
+git rm --cached BingSiteAuth.xml
+ls
+cd ef
+hexo s
+py .\create_post.py
+ci --version
+cd **
+cd pri
+cd private
+ls
+vim temp\合并2023-11-05-19-55-41.md
+gitui
+cd jt2024\
+py .\export.py
+cd priva
+vim key.md
+scoop update *
+cd
+scoop list
+scoop update 7zip
+scoop update *
+scoop install fastfetch
+fastfetch
+neofetch
+fastfetch
+neofetch
+cd ef
+fastfetch --version
+cd config
+ls
+cd .config
+ls
+exp
+fastfetch --gen-config
+fastfetch
+vim .\fastfetch\config.jsonc
+cd priv
+vim key.md
+git clone https://github.com/cassiofb-dev/fastfetch-config.git
+exp
+fastfetch --config linus
+fastfetch
+fastfetch --config linus
+fastfetch
+cd ~\.config\
+ls
+cd fastfetch\
+fastfetch --config xiangling
+fastfetch --config ganyu
+fastfetch --config btw
+fastfetch --config onepiece
+fastfetch --config xenia
+fastfetch --config paleofetch
+fastfetch --config kde
+fastfetch --config hardware
+fastfetch --config plasma
+fastfetch --config linux
+fastfetch --config linus
+fastfetch --config vasco
+fastfetch --config software
+fastfetch --config hypr
+fastfetch --config dragonball
+fastfetch
+vim .\config.jsonc
+ci .\config.jsonc
+fastfetch
+ci .\config.jsonc
+fastfetch
+touch temp.py
+vim .\temp.py
+py .\temp.py
+vim .\temp.py
+py .\temp.py
+vim .\temp.py
+py .\temp.py
+pip install json5
+py .\temp.py
+fastfetch
+vim $nu.config-path
+ff
+source $nu.config-path
+ff
+cd onnx
+docker build -t predict .
+cd onnx
+cd ../onnx2
+docker build -t predict .
+docker run -d predict
+docker build -t predict .
+docker run -d predict
+docker build -t predict .
+cd appdata
+ls
+cd local
+cd docker/wsl
+l
+sls
+ls
+exp
+cd wez
+ls
+vim .
+exp
+ls
+ll
+la
+ls
+vim .
+cd jt
+rm -r .venv
+sudo rm -r .venv
+git switch onnx
+git switch --create onnx
+vim .\.gitignore
+gitui
+vim .\.gitignore
+gitui
+git switch main
+gitui
+git push -u origin onnx
+cd jg
+cd jt
+git push -u origin onnx
+git push -u onnx onnx
+git push -u origin onnx
+git config --global sendpack.sideband
+git config --global sendpack.sideband false
+git push -u origin onnx
+git push -uf origin onnx
+git remote -v 
+git config --global http.postBuffer 524288000
+git push -uf origin onnx
+git push -uvf origin onnx
+git status
+git rm --cached models/js.onnx
+vim .\.gitignore
+clear
+git commit -m "modify git"
+git rebase -i HEAD~2
+git rebase -i HEAD~1
+git rebase --abort 
+clear
+git push -u origin onnx
+git push -uf origin onnx
+git reset 9bab
+git commit --amend 
+git add .gitignore
+git commit -m "modify gitignore"
+git reset --soft HEAD~1
+git reset HEAD js.onnx
+git commit -m "init onnx branch"
+git reset --soft HEAD~2
+git commit -m "init onnx branch"
+git push -u origin onnx
+git push -uf origin onnx
+clear
+git switch main
+git rebase --quit
+git switch main
+cd ef
+ls
+gitui
+git rebase -i HEAD~2
+git push -u origin main
+git pull
+git rebase -i HEAD~2
+git push -u origin main
+gitui
+guinit
+gitui
+cd jt
+py .\scripts\clean.py
+git switch onnx
+gitui
+git switch main
+gitui
+git add
+gitui
+ping onedrive.com
+ff
+ff --config linus
+cd c:\Windows\System32\drivers\etc\
+ls
+cd jt
+git switch onnx
+git switch main
+ls
+vim ./host
+ls
+cat host
+cat ./host
+ls
+cat ./hosts
+vim ./hosts
+ls
+vim $nu.config-path
+cd nu
+ls
+cd nu_scripts\
+ls
+cd alias
+cd ./al
+cd .\aliases\
+ls
+cd ./git
+ls
+open .\git-aliases.nu
+source $nu.config-path
+vim $nu.config-path
+ls
+ci .\git-aliases.nu
+source $nu.config-path
+gsh
+cd ef
+gsh
+cd nu_scripts\
+ls
+cd nu
+ls
+ci .\config.nu
+source $nu.config-path
+l
+cpath
+C:\Users\24138\AppData\Roaming\nushell
+git ls-files -s
+git ls-tree -r HEAD
+cd
+mkdir temp
+cd temp
+git init
+vim pwd.md
+ls
+touch main.c
+touch main.py
+rm main.c
+ls
+git add pwd.md
+git commit -m "init"
+git add main.py
+git commit -m "main.py"
+git status
+glog
+glot 2
+glog 50
+gitlog 5
+glog
+cd nu
+cd alias
+ls
+cd git
+ls
+vim .\git-aliases.nu
+source $nu.config-path
+cd temp
+ls
+glog
+git reset --soft HEAD~1
+ls
+cd ..
+ls
+rm -r temp
+ls
+cd ri
+cd priv
+ls
+mvn clean install -DskipTests 
+cat .\key.md
+vim .\key.md
+cd priv
+cpath
+source $nu.config-path
+vpwd
+vim $nu.config-path
+cd ef
+ff
+hexo s
+vim .\_config.yml
+hexo s
+hexo clean
+vim .\_config.yml
+hexo s
+ff
+cd ef
+cd a
+cd ma
+cd mark
+cd ef
+hexo s
+free port
+port 4000
+hexo s
+hexo gen; hexo s
+cd ma
+cd ef
+cd jt
+cd ef
+hexo clean
+hexo s
+hexo gen
+vim .\_config.yml
+vpwd
+hexo s
+vim .\_config.yml
+ci .\_config.yml
+hexo s
+ci .\_config.yml
+hexo s
+cd ef
+hexo clean
+hexo gen
+hexo s
+hexo clean; hexo gen; hexo s
+hexo s
+npm list
+npm uninstall --save hexo-helper-live2d
+sudo npm uninstall --save hexo-helper-live2d
+sudo npm install -g npm@10.7.0
+exp
+hexo clean
+hexo s
+wsl --list
+wsl install unbuntu
+wsl install --help
+wsl unregister Kali-Linux
+wsl unregister Kali-linux
+wsl --unregister Kali-linux
+wsl list
+wsl --list
+wsl --install -d Ubuntu
+cd ue
+cd OS\lab1\
+gcc .\lab1.c
+./a.exe
+wsl --list --online
+gcc .\lab1.c
+./a.exe
+cd wez
+ls
+cd config
+ls
+wsl --list
+vim domains.lua
+gcc .\lab1.c
+./a.exe
+gcc .\lab1.c
+./a.exe
+gcc .\lab1.c
+./a.exe
+gcc .\lab1.c; ./a.exe
+wsl restart
+vim $nu.config-path
+ci $nu.config-path
+source $nu.config-path
+ls
+ci $nu.config-path
+gcc .\lab1.c; ./a.exe
+gcc .\lab1.c;
+./a.exe
+gcc .\lab1.c -o abc
+./abc
+gcc .\lab1.c -o abc
+./abc
+gcc .\lab1.c -o abc
+./abc
+gcc .\lab1.c -o abc
+./abc
+gcc .\lab1.c -o abc
+./abc
+gcc .\lab1.c -o abc
+./abc
+gcc .\lab1.c -o abc
+./abc
+gcc .\lab1.c -o abc
+./abc
+gcc .\lab1.c -o abc; ./abc
+c
+gcc .\lab1.c -o abc; ./abc
+c
+gcc .\lab1.c -o abc; ./abc
+gcc ./lab1.c
+./a.out
+gcc ./lab1.c
+ls
+./a.exe
+gcc ./lab1.c
+./a.exe
+gcc ./lab1.c; ./a.exe
+gcc ./lab1.c;
+./a.exe
+gcc ./lab1.c;
+ls
+./a.exe
+gcc ./lab1.c
+./a.exe
+gcc ./lab1.c
+./a.exe
+gcc ./lab1.c
+./a.exe
+gcc ./lab1.c
+./a.exe
+gcc ./lab1.c
+./a.exe
+gcc ./lab1.c
+./a.exe
+gcc ./lab1.c
+./a.exe
+gcc ./lab1.c
+./a.exe
+cd ef
+hexo s
+cd lab1
+gcc ./lab1.c
+cd ef
+hexo s
+gitui
+cd desktop
+ls
+cat arm-labs-uestc-main\exp2\test.s
+cat arm-labs-uestc-main\exp2\avg.s
+cat arm-labs-uestc-main\exp2\avg.s | clip
+AREA AVG_FILTERING, CODE, READONLYENTRY startstart
+mov r10, #6ldr r2, =0x40000400mov sp, r2ldr r2, =0x40000000init_loop
+cmp r10, #0beq end_initstr r10,[r2], #4sub r10, r10, #1b init_loopend_init
+mov r0,#6ldr r2, =0x40000000; -----------------------bl bubble_sortbl get_avgbquit
+bubble_sort
+push {r0, r3, r4, r5, r6, lr}
+loop_i
+sub r0, r0, #1cmp r0,#0ble end_bubble_sort
+mov r3, #0
+loop_j
+cmp r3, r0beq loop_imov r6, #0add r6, r2, r3, lsl #2ldr r4, [r6]ldr r5,[r6, #4]cmp r4, r5strgt r4, [r6, #4]strgt r5, [r6]add r3, r3, #1b loop_j
+b loop_iend_bubble_sort
+pop {r0, r3, r4, r5, r6, lr}
+get_avg
+push {r0, r2, r3, r4, r5, lr}mov r5, r0mov r4, #0sum_loop
+cmp r0, #2ble end_sumsub r0, r0, #1ldr r3, [r2, #4]!add r4, r4, r3bsum_loopend_sum
+cmp r5, #2beq end_get_avgsub r5, r5, #2mov r1, #0division_loop
+cmp r4, r5blt end_get_avgsub r4, r4, r5add r1, r1, #1b division_loopend_get_avg
+pop {r0, r2, r3, r4, r5, lr}
+cd desktop
+cat arm-labs-uestc-main\exp2\avg.s
+wsl --shutdown
+cat arm-labs-uestc-main\exp2\avg.s
+cd ef
+ssh root@donkey
+htop
+bottom
+bot
+ff
+ff --config linus
+bottom
+btm
+ping onedrive.com
+gtop
+btop
+scoop install hyperfine
+ff
+ls
+vpwd
+ff
+cd ef
+guinit
+gitui
+history
+history | awk '{print $2}'
+history | sort
+hexo s
+cd ef
+hexo d
+gitui
+ff
+ls
+free port
+port
+port 4000
+ls
+$nu.config-path
+ci --list-extensions 
+ci --list-extensions >> vscode-extensions-list.md
+pip uninstall larkshell
+pip uninstall lark-shell
+cd ef
+git gc
+cd ma
+git gc
+vpwd
+ci -v
+scoop list
+btm
+scoop uninstall telnet
+scoop list
+fd
+fd .py
+hyperfine
+hyperfine ls
+hyperfine ll
+btm
+ff
+wsl --list
+ipconfig
+ff
+hexo s
+ff
+ff --config linus
+vim
+ls
+scoop update *
+scoop list 
+scoop uninstall neofetch
+scoop list 
+cd c:
+exp
+btm
+cd ef
+dig
+dog
+scoop install dog
+dog efterklang.github.io
+dog github.com
+cd ef
+ls
+lll
+ll
+ls
+bash ls
+ls
+gitui
+vim .\.gitignore
+gitui
+bmt
+btm
+btop
+scoop install btop
+btop
+cd ma
+gitui
+guinit
+gitui
+git pull -rebase -u origin main
+git pull --rebase -u origin main
+git pull --rebase origin main
+gitui
+cd ef
+gitui
+ls
+gitui
+ls
+cd mar
+ls
+cd priv
+l
+ls
+ci .\data\index.md
+typora ./data/index.md
+ls
+du | sort -n
+grep
+ripgrep
+scoop list
+ripgrep
+rgrep
+rg
+vim $nu.config-path
+source $nu.config-path
+grep -v user \UESTC\
+ls
+grep ipx .\data\index.md
+grep ipx .\data\
+grep -n meyd ./data
+grep -ni meyd ./data
+grep r$ .\data\
+rg May ./
+ls
+ls 5. .\daily\
+rg 5. .\daily\
+cd ef
+ls
+rg OS .\source\
+ls
+gitui
+cd ma
+ls
+gitui
+ls
+cd ef
+ls
+wsl --shutdown
+ff
+ff --config kde
+ff --config hypr
+ff --config hypr ci
+ff --config ci
+ff --config ganyu
+ff
+ff --config ganyu
+pip install asciiartist
+ff --config ganyu
+pip install asciiartist
+ff --config ganyu
+ff
+cd ef
+gitui
+git rebase -i HEAD~6
+gitui
+guinit
+gitui
+ff
+ff --config ganyu
+ff
+ll
+ls
+awk
+cd wez
+ls
+cd ef
+git push -f origin main
+gitui
+ll
+cd ef
+f
+ff
+ll
+ff
+btop
+btop --help
+btop
+cd ef
+heox s
+hexo s
+hexo gen
+hexo s
+hexo clean
+hexo gen
+cd pri
+ls
+grep -i juq ./data
+typora
+cd jt2024\
+python -m venv .\.yolo\
+ls
+pip install -r env\requirements.txt
+ls
+git switch android
+git switch --create mobile
+l
+python -v
+cd jt
+l
+.\.yolo\Scripts\activate
+.\.yolo\Scripts\activate.bat
+ls
+python -v
+.\.yolo\Scripts\activate
+which ohmyposh
+oh-my-posh --help
+oh-my-posh --config
+oh-my-posh config
+vim $nu.config-path
+ls
+cat \arm-labs-uestc-main\exp3\
+cd desktop
+cat \arm-labs-uestc-main\exp3\
+cat .\arm-labs-uestc-main\exp3\test.s
+mv .\arm-labs-uestc\exp3\oncall.c .\arm-labs-uestc\exp3\foo.c
+cat .\arm-labs-uestc-main\exp3\test.s
+cat .\arm-labs-uestc-main\exp3\oncall.c
+cat -n .\arm-labs-uestc\exp3\foo.c
+cat --help
+cat -n .\arm-labs-uestc\exp3\foo.c
+cat -p .\arm-labs-uestc\exp3\foo.c
+cat -p .\arm-labs-uestc\exp3\test.s
+bat --generate-config-file
+bat --list-themes
+vim C:\Users\24138\AppData\Roaming\bat\config
+bat --list-themes
+cat .\arm-labs-uestc-main\exp4\S3C2440.s
+cd ef
+gui
+guinit
+gitui
+cd pri
+typora
+windows
+win
+sys
+sys mem
+sys.mem
+(sys).mem
+vpwd
+cd ef
+vim .\source\_posts\UESTC\OS\Ch6-1FileSystem.md
+cd ef
+btop
+scrcpy.exe 
+scrcpy --M
+scrcpy -M
+ssh root@donkey
+ping donkey
+ip
+(sys).net
+sys
+ff
+ipconfig
+export
+env | grep -i proxy
+netstat
+ssh root@donkey
+ssh root@donkey
+ping donkey
+ssh root@donkey
+cd ef
+scoop install exa
+exa
+scoop install eza
+eza
+eza -l
+eza -a
+ll
+ls
+la
+ci $nu.config-path
+source $nu.config-path
+la
+eza -a
+eza -l
+source $nu.config-path
+ls
+la
+ll
+ls
+eza
+la
+ll
+ls
+la
+cd ~
+pwd
+ls
+la
+ll
+ls
+la
+ll
+cd ef
+git config --global init.defaultBranch main
+vpwd
+cd jt
+ls
+cd env
+touch env.yml
+vim .\env.yml
+cd net
+zi
+ls
+cd Labs\
+ls
+cd os
+cd ..\Networks\
+gitui
+mv .\server.c ./iter_tcp_srv_arith.c
+mv .\client.c ./iter_tcp_cli_arith.c
+vim .\makefile
+guinit
+gitui
+cd ef
+zi
+fzf
+which fzf
+vim $(fzf)
+vim $(fzf --height 40%)
+cd ~/.fzf
+vim $(fzf --height 40%)
+fzf
+export
+git switch onnx
+cd jt
+git switch onnx
+cd ef
+ls
+gitui
+git init
+git remote add origin https://github.com/LuvSicPt6/LuvSicPt6.github.io.git
+git add .
+git commit -m "init"
+git push -f origin main
+ls
+cd temp
+cd --
+cd -
+cd website
+ls
+rm -r ./git
+rm -r ./.git
+ls
+cd tmep
+l
+cd temp
+ls
+git init
+ls
+la
+git remote add origin https://github.com/LuvSicPt6/LuvSicPt6.github.io.git
+git add .
+git commit -m "init"
+git push -f origin main
+git commit -m "init"
+git add .
+git commit -m "init"
+git push -f origin main
+git add .
+git commit -m "init"
+git push -f origin main
+cd ne
+gitui
+cd ef
+gitui\
+gitui
+guinit\
+guinit
+gitui
+vim $nu.config-path
+cd ne
+gitui
+scoop install superfile
+powershell -ExecutionPolicy Bypass -Command "Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/yorukot/superfile/main/install.ps1'))"
+superfile
+sf
+spf
+ff
+exp
+vpwd
+exit
+cd ef
+guinit
+gitui
+cd ef
+vim
+vim .
+vim .\_config.yml
+vim .\_config.post.yml
+ci .\_config.post.yml
+hexo s
+hexo clean
+hexo d
+cd ne
+gitui
+fzf
+ci $nu.config-path
+ls | get name | str join "\n" | fzf
+ls | get name | str join "\n" | fzf .
+source $nu.config-path
+nufzf
+ls | nufzf
+ps | nufzf | kill $in.pid
+ls | nufzf | ci $in
+ls | nufzf | ci $in.name
+ls | nufzf
+fzf
+vpwd
+cat .\arm-labs-uestc-main\exp4\S3C2440.s
+cd
+cd desk
+cat .\arm-labs-uestc-main\exp4\S3C2440.s
+cat .\arm-labs-uestc-main\exp4\test.c
+cat .\arm-labs-uestc-main\exp4\fun.s
+cd ef
+gitui
+cd net
+gitui
+cd net
+gitui
+cd net
+gitui
+cd net
+gitui
+lll
+ll
+vim ./makefile
+gitui
+ls
+gitui
+make package
+gitui
+git rebase -i HEAD~2
+gitui
+cd This PC\Redmi K20 Pro Premium Edition\Internal shared storage\Android\data\com.tencent.mobileqq\Tencent\QQfile_recv
+cd ef
+gitui
+.adb
+adb
+adb devices
+adb shell sh /sdcard/Android/data/moe.shizuku.privileged.api/start.sh
+pwd
+man pwd
+cd ma
+gitui
+ping baidu.com
+cd ef
+gitui
+cd ma
+gitui
+fish
+cd ef
+gits
+gstat
+git status
+glog
+gitui
+git add .
+gitui
+ps
+ps -l
+^ls
+^ll
+^pwd
+> ^ls
+ls c:\Windows\Fonts\
+ls c:\Windows\Fonts\ | fzf
+ls c:\Windows\Fonts\ | grep maple
+ls c:\Windows\Fonts\ | grep ma
+ls c:\Windows\Fonts\ | grep Maple
+cd c:\Windows\Fonts\
+exp
+ps | where virtul > 100
+ps | where virtual > 100
+ps
+ps | where cpu > 1
+confifg
+config
+config nu
+vpwd
+ansi
+all
+ansi
+ansi aa
+cal
+commandline
+commandline set-cursor 
+compact
+dfr
+dfr ls
+dfr ll
+cd ef
+ls
+dfr ls
+python -m pip install virtualenv
+cd sc
+cd jt
+l
+ls
+cd .\scripts\
+ls
+python .\parser.py
+ls ..\test\out
+python .\parser.py
+ls ..\test\out
+python .\parser.py
+ls ..\test\out
+python .\parser.py
+gitui
+py .\temp.py
+cd jt
+gitui
+guinit
+gitui
+pip install vitrualenv
+pip install virtualenv
+virtualenv venv
+virtualenv --help
+ve
+ci $nu.config-path
+source $nu.config-path
+pyvenv .c4
+pyvenv ls
+.\.c4\Scripts\activate.nu
+source $nu.config-path
+penv --help
+penv --creator venv .c4
+.\.c4\Scripts\activate.nu
+source .\.c4\Scripts\activate.nu
+overlay use activate.nu
+overlay use ./.c4/Scripts/activate.nu
+pip install -r env\requirements.txt
+oh-my-posh config
+ci $nu.config-path
+cd themes
+ls
+cd appdata
+cd local
+cd Programs\oh-my-posh\themes\
+ls
+Get-PoshThemes
+ls
+cd themes
+ls
+cd programs
+zi
+ls
+cd oh-my-posh\
+ls
+ll
+ls
+la
+source $nu.config-path
+ll
+cd ef
+ls
+ll
+cd java
+cd ma
+ls
+cd ef
+;;
+ls
+zi
+zoxide edit
+source $nu.config-path
+cls
+ll
+ls
+ll
+ls
+cd ef
+ls
+source $nu.config-path
+ls
+cd ef
+ll
+ls
+source $nu.config-path
+ls
+ll
+ls
+source $nu.config-path
+ls
+source $nu.config-path
+ls
+ll
+ls
+cd ef
+source $nu.config-path
+cd themes
+ls
+cd local
+cd oh-my-posh\
+ls
+pwd
+cd ..\Programs\
+ls
+cd oh-my-posh\themes\
+ls
+ci .\customed-montys.omp.json
+cd ef
+ls
+cd ma
+ls
+cd ef
+ls
+ll
+ls
+ll
+ls
+cd ma
+ls
+cd ef
+ls
+cd ht
+cd jt
+ls
+ll
+cd git
+ls
+ll
+ls
+cd ma
+ls
+cd ef
+gitui
+cd ef
+ls
+ll
+ls
+ll
+cd eft
+ls
+gitui
+ls
+cd ef
+ls
+cd ef
+ls
+ll
+ls
+cd ef
+ls
+ll
+ls
+ca
+ls
+cls
+ls
+vim
+ls
+cd
+ls
+cd ef
+ls
+cd
+casd
+cd ef
+das
+ls
+lll
+ls
+llll
+ls
+llll
+ls
+ll
+ls
+lll
+ls
+lll
+ls
+ls
+lss
+ls
+lll
+ls
+cd ma
+cd ef
+ls
+ll
+lll
+ls
+ll
+ls
+cd ef
+ls
+la
+ls
+glog 1
+glog 5
+cd jt
+cd themes
+zi
+cd Programs\oh-my-posh\themes\
+edxp
+exp
+ff
+cd fastfetch\
+ls
+zi
+ls
+cd jt
+overlay use ./.c4/Scripts/activate.nu
+ls
+ll
+ls
+ll
+cls
+clear
+ls
+lc
+deactivate
+ls
+activate
+ls
+ll
+ls
+ll
+ls
+cd ef
+ls
+ff
+ls
+ll
+ls
+overlay use ./.c4/Scripts/activate.nu
+cd jt
+overlay use ./.c4/Scripts/activate.nu
+deactivate
+ls
+vim
+ping baidu.com
+gitui
+ls
+cd ef
+ll
+ls
+la
+ll
+cd fastfetch\
+fastfetch --config
+fastfetch --help
+ls
+scoop list
+oh-my-posh --version
+oh-my-posh --update
+scoop list
+scoop update oh-my-posh
+winget upgrade JanDeDobbeleer.OhMyPosh -s winget
+oh-my-posh --version
+ls
+cd jt
+overlay use ./.c4/Scripts/activate.nu
+deactivate
+ls
+echo VIRTUALENV_CONFIG_FILE
+echo $VIRTUALENV_CONFIG_FILE
+penv --help
+penv --version
+vim D:\envir_vars\python312\Lib\site-packages\virtualenv\__init__.py
+cd D:\envir_vars\python312\Lib\site-packages\virtualenv\
+exp
+pyenv --config
+penv --config
+penv --app-data
+vim C:\Users\24138\AppData\Local\pypa\virtualenv\virtualenv.ini
+ci C:\Users\24138\AppData\Local\pypa\virtualenv\virtualenv.ini
+pyenv --help
+penv --help
+pyenv c4
+penv c4
+.\c4\Scripts\activate.nu
+overlay use ./c4/Scripts/activate.nu
+deactivate
+rm -r ./c4
+cd jt
+rm -r ./c4
+ls
+ci D:\envir_vars\python312\Lib\site-packages\virtualenv\__init__.py
+overlay use ./c4/Scripts/activate.nu
+overlay use ./.c4/Scripts/activate.nu
+deactivate
+oh-my-posh --version
+oh-my-posh --config
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+cd jt
+overlay use ./.c4/Scripts/activate.nu
+ls
+cd programs
+cd local
+cd Programs\Python\
+ls
+cd Python38\Lib\venv
+cd Python38\Lib\
+ls
+ff --config windows
+ls
+ff --config windows
+ff
+ff --config windows
+ff
+deactivate
+ff
+ll
+ff
+cd wez
+ls
+ci .
+ff
+ll
+ls
+ll
+vim
+cd ef
+ls
+su
+ll
+ls
+cl
+ll
+ls
+ll
+ls
+cd ef
+gitui
+vim
+ll
+ls
+ff
+ll
+ff
+ls
+ff
+vim
+ff
+ls
+ll
+cls
+l
+cls
+cd ef
+cd ma
+cd jt
+cd wez
+ls
+vim .\config\appearance.lua
+ls
+ll
+wezterm ssh
+wezterm ssh -h
+wezterm connect raspiadmin
+vim .\config\domains.lua
+wezterm connect Raspi-admin
+poloars
+polars
+gstat
+cd nu
+ls
+exp
+ls
+git init
+git remote add origin https://github.com/nushell/nu_scripts.git
+ls
+la
+cd .\custom-completions\
+ls
+cat .\vscode\vscode-completions.nu
+mv .\vscode\ ./code-insider
+ls
+ls | grep code
+exp
+git pull
+vim $nu.config-path
+git pull origin
+git pull origin main
+git pull origin main
+gitui
+git pull
+git pull origin main
+git add .
+git pull origin main
+git commit -m "init"
+gitui
+git pull origin main
+git fetch origin main
+gitui
+ls
+git pull origin main
+git pull origin main --allow-unrelated-histories
+git status
+gitui
+exp
+zi
+zoxide edit
+gitui
+get-weather
+weather
+ls
+ls
+cd fe
+cd ef
+ls
+gitui
+vim C:\Users\24138\AppData\Roaming\nushell\nu_scripts\modules\weather\get-weather.nu
+nvim C:\Users\24138\AppData\Roaming\nushell\nu_scripts\modules\weather\get-weather.nu
+ci C:\Users\24138\AppData\Roaming\nushell\nu_scripts\modules\weather\get-weather.nu
+code-insiders C:\Users\24138\AppData\Roaming\nushell\nu_scripts\modules\weather\get-weather.nu
+source $nu.config-path
+code-insiders C:\Users\24138\AppData\Roaming\nushell\nu_scripts\modules\gitv2\mod.nu
+source $nu.config-path
+cd ef
+z ef
+source $nu.config-path
+code-insiders C:\Users\24138\AppData\Roaming\nushell\nu_scripts\modules\gitv2\mod.nu
+source $nu.config-path
+ci C:\Users\24138\AppData\Roaming\nushell\nu_scripts\custom-completions\scoop\scoop-completions.nu
+code-insiders C:\Users\24138\AppData\Roaming\nushell\nu_scripts\custom-completions\scoop\scoop-completions.nu
+source $nu.config-path
+ls
+ll
+ls
+os
+sysinfo
+ff
+cd .config
+exp
+ff
+ff
+ffff
+ff
+wezterm --v
+wezterm --version
+ff
+scoop list
+winget upgrade wez.wezterm
+winget upgrade wez.wezterm
+ff
+ls
+ff
+cd ef
+cd ma
+gitui
+guinit
+gitui
+conda
+scoop install miniconda
+cd jt
+conda create -n myenv python=3.8
+conda activate myenv
+conda init
+conda activate myenv
+初始数据集的来源是多元化的，包括由非盈利教育机构Udacity提供的开源数据集、百度AI Studio平台、Roboflow图像处理工具，以及在实际驾驶环境中拍摄的视频素材。
+针对前车速度检测任务，我们执行了一系列定制化的数据增强策略。为了提升模型在现实世界复杂环境下的性能，我们特别关注了数据增强在不同天气条件下的应用。具体而言，我们通过先进的图像处理技术，模拟了雨、雪、雾霾等极端天气对图像的影响，从而增强了模型对各种天气状况的适应能力和鲁棒性。
+此外，我们还考虑了不同光照条件下的图像效果，以模拟从清晨到夜晚不同时间段的光照变化。通过调整图像的亮度和对比度，我们能够确保模型在不同光照环境下都能保持较高的识别精度和稳定性。
+初始数据集的来源是多元化的，包括由非盈利教育机构Udacity提供的开源数据集、百度AI Studio平台、Roboflow图像处理工具，以及在实际驾驶环境中拍摄的视频素材。
+针对前车速度检测任务，我们执行了一系列定制化的数据增强策略。为了提升模型在现实世界复杂环境下的性能，我们特别关注了数据增强在不同天气条件下的应用。具体而言，我们通过先进的图像处理技术，模拟了雨、雪、雾霾等极端天气对图像的影响，从而增强了模型对各种天气状况的适应能力和鲁棒性。
+此外，我们还考虑了不同光照条件下的图像效果，以模拟从清晨到夜晚不同时间段的光照变化。通过调整图像的亮度和对比度，我们能够确保模型在不同光照环境下都能保持较高的识别精度和稳定性。
+初始数据集的来源是多元化的，包括由非盈利教育机构Udacity提供的开源数据集、百度AI Studio平台、Roboflow图像处理工具，以及在实际驾驶环境中拍摄的视频素材。
+针对前车速度检测任务，我们执行了一系列定制化的数据增强策略。为了提升模型在现实世界复杂环境下的性能，我们特别关注了数据增强在不同天气条件下的应用。具体而言，我们通过先进的图像处理技术，模拟了雨、雪、雾霾等极端天气对图像的影响，从而增强了模型对各种天气状况的适应能力和鲁棒性。
+此外，我们还考虑了不同光照条件下的图像效果，以模拟从清晨到夜晚不同时间段的光照变化。通过调整图像的亮度和对比度，我们能够确保模型在不同光照环境下都能保持较高的识别精度和稳定性。
+ls
+wezterm --version
+wezterm --help
+cd `e:\OneDrive - Business\`
+ls
+cd Pictures\
+ls
+wezterm imgcat .\WallPaper\001.jpg
+wezterm --help
+wezterm shell-completion
+wezterm shell-completion --shell nu
+wezterm shell-completion --shell bash
+wezterm shell-completion --shell 
+wezterm shell-completion --shell powershell | clip
+wezterm shell-completion --shell power-shell | clip
+using namespace System.Management.Automation
+using namespace System.Management.Automation.Language
+wt
+wez
+wt --help
+wt --version
+wez --version
+ci $nu.config-path
+nu --help
+ls
+nu config
+edit config
+config
+config nu
+ls
+source $nu.config-path
+ls
+source $nu.config-path
+ls
+source $nu.config-path
+ls
+source $nu.config-path
+ls
+source $nu.config-path
+ls
+source $nu.config-path
+ls
+source $nu.config-path
+ls
+source $nu.config-path
+ls
+source $nu.config-path
+ls
+source $nu.config-path
+ls
+source $nu.config-path
+ls
+source $nu.config-path
+ls
+source $nu.config-path
+ls
+source $nu.config-path
+q
+wq
+:wq
+ls
+source $nu.config-path
+gau
+cd ef
+gau
+cpath
+nfd
+ls | nfd
+source $nu.config-path
+ls | nfd
+source $nu.config-path
+tree | nfd
+ls | nfd | ci $in.name
+ci
+source $nu.config-path
+ciopen
+vsc
+copen
+co
+edit
+source $nu.config-path
+cim .
+ci
+cim
+weather
+cls
+weather
+git help 
+git --help
+cd wez
+exp
+ci
+ci .
+ls
+ll
+ls
+ll
+ls
+ff
+ls
+ll
+cd ef
+ls
+cd ef
+cd ma
+cd ef
+ls
+cd ef
+ls
+ff
+ls
+ff
+dl
+l
+ls
+config nu
+source $nu.config-path
+ls
+ping ping 2001:db8:FACE:39::10
+ping 2001:db8:FACE:39::10
+ls
+cd posh
+ls
+cd program
+cd local
+ls
+cd Programs\oh-my-posh\themes\
+ls
+code .
+ci .
+cd ef
+cd ma
+cd jt
+ls
+ff
+ls
+ff
+ls
+ff
+ls
+cd ef
+ls
+ff
+ls
+cd ef
+cd ma
+ls
+ll
+cd ef
+cd onedrive
+ls
+vim .\Private\dotfiles\oh-my-posh\customed-montys.omp.json
+ls
+cd Private\
+ls
+cd dotfiles\
+ls
+go --version
+golang
+cargo --version
+cd temp
+ls
+cd ..
+cd ~
+ls
+copen
+cim
+ls
+ll
+ls
+mux
+wez
+ls
+ll
+cd ~
+ls
+cd ef
+ls
+ll
+ls
+cd ef
+ls
+ssh admin@1113.54.236.75
+ssh admin@113.54.236.75
+ping efa
+ping 113.54.236.75
+ping efa
+ping gggxxx
+ping 113.54.236.75
+docker
+docker run -d predict
+cd jt
+ls
+docker build -t predict .
+ls
+docker run -d predict
+ls
+docker run -d predict
+docker exec -it 42b342dd516ba23758b2a13ca201f7b6910c65633d274fb902df8a88f5beb340
+docker exec -it pwd
+ls
+docker --v
+ci $profile
+vpwd
+ls
+cargo new hello
+ls
+cd hello
+ls
+cd ef
+pwd
+pwd | clip
+ls
+cd ma
+pwd | clip
+ls
+cd ef
+cd
+zi
+cd ef
+cd hello
+ls
+cd ef
+cd hello
+ls
+cd ma
+ls
+cd ef
+ls
+cd he
+cd ..
+ls
+rm -r hello
+ls
+cd ~
+cd config
+ls
+cd 
+ls
+la
+ll
+ls
+ll
+cd ef
+cd ma
+cd .\Courses\
+l
+ls
+ll
+ls
+ll
+ls
+ll
+ls
+ll
+ls
+ll
+ls
+ll
+ls
+d
+ls
+ls
+ll
+ls
+ll
+ls
+ll
+ls
+exp
+ll
+cd ef
+ll
+cd oh-my-posh\themes\
+cd oh-
+zi
+ci
+cim
+shell -b
+ls
+ci
+cim
+config nu
+source $nu.config-path
+cim
+ls
+ls
+cd he
+zi
+cd ef
+ls
+cd ef
+ls
+ll
+ls
+cd ef
+cd ma
+ls
+cls
+ls
+cd .\Private\
+cd ..
+cd wez
+ls
+ci .
+ff
+ls
+ff
+ls
+ff
+cd fastfetch\
+ls
+cd conf
+ls
+ci fastfetch\config.jsonc
+ls
+ff
+ff
+ll
+ls
+cd ef
+ll
+ls
+la
+cd ef
+cd posh
+ls
+zi posh
+zi
+ls
+cim
+cd ef
+ls
+ll
+la
+ls
+winget upgrade JanDeDobbeleer.OhMyPosh -s winget
+oh-my-posh --version
+ll
+la
+ff
+cd wez
+ci
+ci .
+f
+ff
+ls
+ff
+ps
+ps | fzf
+ps | grep vi
+ps | grep UV4
+kill UV4.exe
+ps
+ps | where name == UV4.exe
+ps | where name == UV4.EXE
+kill 8524
+ps | where name == UV4.EXE
+kill -9 8524
+pkill UV4.EXE
+top
+ktop]
+btop
+btm
+btop
+config nu
+ls
+cd ef
+ls
+source $nu.config-path
+ls
+source $nu.config-path
+ls
+source $nu.config-path
+ls
+source $nu.config-path
+ls
+date
+date now
+date to-table
+date now to-table
+date
+date now | to-table
+date now | date to-table
+date now | date to-record
+date now | date to-timezone
+source $nu.config-path
+gstat
+$nu.plugin-path
+plugin
+plugin list
+inc
+nushell -v
+nushell -version
+nu --version
+nu --help
+net
+cargo install nu_plugin_highlight
+plugin add path/to/the/plugin/binary
+plugin list
+plugin add ~\scoop\apps\nu\0.93.0\nu_plugin_gstat.exe
+plugin add ~\scoop\apps\nu\0.93.0\nu_plugin_polars.exe
+plugin add ~\scoop\apps\nu\0.93.0\nu_plugin_stress_internals.exe
+plugin add ~\scoop\apps\nu\0.93.0\nu_plugin_inc.exe
+plugin add ~\scoop\apps\nu\0.93.0\nu_plugin_query.exe
+rm -r ~\scoop\apps\nu\0.92.2\
+ls
+gstat
+source $nu.config-path
+gstat
+polars
+plugin
+plugin list
+plugin use polars
+polars
+plugin use gstat
+gstat
+plugin list
+inc
+plugin use inc
+inc
+top
+source $nu.config-path
+top
+ff
+fastfetch
+bat
+top
+cls
+ls
+fastfetch
+RUST_BACKTRACE=1
+fastfetch
+ll
+ls
+ff
+//12:38:56.887  ERROR  env_bootstrap > panic at library\std\src\io\stdio.rs:1021:9 - !?
+fastfetch
+cd desktop
+cat .\arm-labs-uestc\exp6\main.c
+ff
+cd wezterm
+ci .
+ff
+ff | clip
+ff 2 | clip
+ff
+conda --version
+conda --help
+conda list
+conda list | rg env
+music
+ff
+btm
+ping 113.54.236.75
+top
+ff
+nvim C:\Users\24138\AppData\Roaming\nushell\nu_scripts\modules\weather\get-weather.nu
+weather
+ff
+vpwd
+ff
+cd wezterm
+ls
+ping donkey
+vim .\config\domains.lua
+cd wezterm
+ssh admin@donkey
+ssh admin@donkey
+clear
+cd ef
+nu -v
+cd nu
+exp
+pwd
+ssh admin@donkey
+vim
+ssh admin@donkey
+cd wez
+ci .
+ff
+ssh admin@donkey
+cd ~\.config\fastfetch\
+cat .\config.jsonc | clip
+cls
+ff
+wsl --d=Ubuntu
+wsl --help
+wsl -d Ubuntu24.04
+cd wez
+ci /
+exp
+ll
+ls
+sys
+cd wez
+ci .
+lfs
+ff
+mc
+cd local
+ls
+cd mc
+ls | grep mc
+cd share
+ls | grep sh
+cd ~/.local
+cd share\
+ls
+which mc
+cd scoop
+ls
+cd shims\
+ls
+cd ..\apps\
+ls
+cd mc
+ls
+exp
+mc
+ff
+word
+ppt
+cd d:
+mkdir shortcuts
+la
+ls
+cd qq
+ls
+cd ..
+exp
+idea -v
+idea
+qq -v
+source $nu.config-path
+qq -v
+qq
+conda activate myenv
+conda init
+conda activate myenv
+conda init
+conda activate myenv
+conda --list
+conda init
+conda activate myenv
+ranger
+edit config
+config nu
+mc
+lx
+cd jt
+ls
+conda activate myenv
+conda init nu
+conda init
+cd jt
+gitui
+gstat
+gitui
+gstat
+cd ef
+cd jt
+git commit --allow-empty
+gitui
+top
+cd one
+ls
+cd jt
+gitui
+wget
+curl
+curl -v http://example.com
+scoop install mandb
+man git
+man ls
+scoop install mandb
+scoop install man-db
+wsl --list
+wsl install --help
+wsl unregister centos-stream9
+scoop update nu
+config nu
+config env 
+config nu
+cd ~\.config\nvim
+which nvim
+cd shims
+ls
+cd ..
+ls
+exp
+:LazyHealth
+ff
+zi
+cd nu
+ls
+ci .\config.nu
+ff
+wsl
+wsl -d Ubuntu24.04
+ff
+wsl -d Ubuntu24.04
+ff
+cd wez
+ci .
+cd de
+cd des
+cat .\arm-labs-uestc\exp6\main.c
+wsl -l -v
+wsl --export Ubuntu-24.04 E:\wsl\ubuntu.tar
+wsl --import --unrgister Ubuntu-24.04
+wsl --import --unregister Ubuntu-24.04
+wsl --unregister Ubuntu-24.04
+cd ef
+wsl --import --help
+wsl --import Ubuntu e:\wsl\ e:\wsl\ubuntu.tar 
+Ubuntu config --default-user efterklang
+Ubuntu config --default-user gjx
+wsl -d Ubuntu
+cd wez
+vim .\config\domains.lua
+wsl -l -v
+wsl --shutdown Arch
+wsl --export Arch E:\wsl\Arch.tar
+wsl --import Arch e:\wsl\ e:\wsl\Arch.tar
+wsl -d Arch
+wsl --unregister Arch
+wsl --import Arch e:\wsl\ e:\wsl\Arch.tar
+wsl --import Arch e:\wsl\Arch e:\wsl\Arch.tar
+wsl --unregister Ubuntu
+wsl --import Ubuntu e:\wsl\Ubuntu e:\wsl\ubuntu.tar
+Ubuntu config --default-user gjx
+Arch config --default-user efterklang
+wsl -d Arch
+wsl -l
+wsl -v
+wsl -list
+wsl --list
+wsl -lv
+wsl -l -v
+wsl -d Arch ff
+hexo s
+cd des
+cat .\arm-labs-uestc\exp6\main.c
+top
+cat .\arm-labs-uestc\exp6\main.c
+top
+wsl -d Arch ff
+ff
+cd 
+ls
+la
+adb
+cd ef
+gitui
+cd ma
+gitui
+btop
+cls]
+cls
+font
+plugin
+scoop list
+dog
+scoop list
+dark
+scoop update ripgrep
+scoop status
+scoop update fzf
+scoop bucket add raresoft https://github.com/L-Trump/scoop-raresoft
+scoop status
+scoop --help
+fzf **
+hexo s
+scoop config
+scoop update neovim
+scoop update eza 7zip aria2
+scoop status
+scoop update eza
+scoop update eza 7zip aria2
+scoop status
+scoop update fastfetch git gitui kotlin
+ff
+scoop status
+scoop cleanup
+scoop cleanup git
+scoop cleanup *
+scoop cleanup
+scoop home
+scoop home neovim
+cd scoop
+exp
+scoop cleanup 7zip
+scoop cleanup aira2 nu scoop ripgrep
+scoop cleanup aria2 nu scoop ripgrep
+scoop cleanup **
+scoop uninstall gsudo
+ls
+scoop cache rm *
+git -v
+cd ef
+gitui
+scoop list
+curl -v http://example.com
+scoop list
+scoop list | to json
+scoop list | to json | get Name
+scoop list | to json | Name
+scoop list | to xml
+scoop list | to table
+scoop list
+scoop status
+scoop cache rm *
+kotlin -v
+kt -v
+clear
+$nu.config-path
+cd nu
+ls
+exp
+scoop bucket add apps https://github.com/kkzzhizhou/scoop-apps
+scoop bucket known 
+scoop search kotlin
+scoop search neovim
+scoop update
+sudo scoop update
+scoop search neovim
+scoop search n
+scoop search vim
+scoop status
+scoop bucket rm scoop-cn
+scoop status
+scoop list
+winget ls 
+scoop cache show
+scoop search java
+clear
+scoop search python
+scoop checkup
+cd
+ls
+exp
+cd desp
+cd des
+ls
+la
+cd .config
+ls
+la
+git --config
+cd ~
+ls
+vim .\.gitconfig
+git config --global http.https://github.com.proxy http://127.0.0.1:7890
+tail -s ~\.gitconfig
+tail
+vim ~\.gitconfig
+hexo s
+top
+btop
+btm
+scoop install btop
+top
+cd ef
+vpwd
+ls
+vim .\_config.yml
+vim .\_config.icarus.yml
+ls
+vim .\_config.icarus.yml
+CD EF
+cd ef
+hexo s
+port 4000
+hexo s
+free port 4000
+port 4000
+hexo s
+ps
+ps | where port == 4000
+top
+btop
+bottom
+btm
+port -help
+port -h
+hexo 
+hexo s
+lsof -t -i 4000
+scoop install lsof
+netstat -aon|findstr "8081"
+scoop install cheat
+cheat rsync
+scoop install rsync
+cheat ssh
+vim .\_config.icarus.yml
+gitui
+guinit
+gitui
+cd ef
+scoop search rsync
+scoop install cwrsync
+cheat rsync
+rsync -v
+clear
+gitui
+cd ma
+gitui
+cat .\Private\key.md | clip
+cat .\Private\key.md
+ci .\Private\key.md
+cat .\.gitignore
+la
+cd onedri
+ls
+cd Archives\markdown_notes\
+clear
+ls
+cd Efterklang.github.io\
+ls
+la
+rm -r ./.git
+ls
+la
+cd ..\Markdown\
+ls
+rm -r ./.git
+clear
+pwd
+git init
+ls
+gitui
+ci .\.gitignore
+gitui
+cd ..\Efterklang.github.io\
+git init
+rm -r ./.git
+ls
+cd .\source\
+ls
+cd ef
+zi
+zi 
+ls
+pwd
+ls source\
+ls source\_posts\
+la
+clear
+cd ef
+git init
+gitui
+vim .\.gitignore
+ls
+gitui
+cd ~\.config\fastfetch\
+cat .\config.jsonc | clip
+exp
+ls
+clear
+cd 
+ls
+zi edit
+zoxide edit
+scoop status
+scoop update
+scoop status
+winget upgrade JanDeDobbeleer.OhMyPosh -s winget
+cd ef
+hexo s
+zi
+cd ef
+pwd | clip
+vim .\customed-montys.omp.json
+ci .\customed-montys.omp.json
+cls
+cd ef
+cd ma
+cd ef
+cd config
+ls
+conda activate myenv
+pwsh
+ci -v
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+nvim
+vim
+cd files
+ls
+cd .con
+ls
+cd 
+vim .\.wslconfig
+clear
+基于MobileNetv3骨干网络的深度可分离卷积
+vim
+bottom
+btm
+ls
+ff
+vpwd
+config nu
+cd ef
+ls
+cat _config.icarus.yml
+ls
+cd appda
+ls
+la
+pwd
+la
+cd local
+oh-my-posh --config
+oh-my-posh --font
+clear
+zi
+ci .\customed-montys.omp.json
+cd local
+pwd
+pwd | clip
+ls
+cd Microsoft\PowerToys\
+la
+cd `PowerToys Run\`
+ls
+cd Plugins\
+la
+ls
+rm -r Everything\
+sudo rm -r .\Everything\
+sudo del .\Everything\
+clear
+top
+winget install voidtools.Everything
+clear
+ff
+vpwd
+nu config
+config nu
+pwd
+key
+cd one
+ls
+pwd
+source $nu.config-path
+vpwd
+clear
+vpwd
+scoop install tmux
+scoop search tmux
+vim
+top
+winget install voidtools.Everything
+cd tools
+cd d:\Application\Tools\Beautification\MToolBox_v2.0.2\x64\MToolBox.exe
+cd d:\Application\Tools\Beautification\MToolBox_v2.0.2\x64\
+.\MToolBox.exe
+top
+cd c:\Windows\
+.\explorer.exe
+cd ma
+ls
+cd ..
+ls
+cd ma
+ls
+git remote add origin https://github.com/efterklang/Markdown
+git pull
+git remote remove origin
+git remote add origin https://github.com/Efterklang/Markdown.git
+gitui
+git pull
+git remote add origin git@github.com:Efterklang/Markdown.git
+git remote remove origin
+git remote add origin git@github.com:Efterklang/Markdown.git
+git pull
+la
+cd plugin
+exp
+ping github.com
+cd ma
+gitui
+vim .\.gitignore
+gitui
+vim .\.gitignore
+gitui
+top
+clear
+cd con
+ls
+vim .\fastfetch\config.jsonc
+ff
+vim .\fastfetch\config.jsonc
+clear
+ff
+top
+ff
+clear
+ff
+ci ~\.glaze-wm\config.yaml
+scoop update nushell
+ff
+wsl -d Arch ff
+tio
+ff
+clear
+ff
+ping efterklang.github.io
+ci ~\.glaze-wm\config.yaml
+ff
+cls
+cls
+cls
+ff
+wsl -d Arch
+wsl --shutdown Ubuntu
+cp ~\.glaze-wm\ `e:\OneDrive - Business\Private\dotfiles\`
+cp -r .glaze-wm\ `e:\OneDrive - Business\Private\dotfiles\`
+ls e:\OneDrive - Business\Private\dotfiles\
+ls `e:\OneDrive - Business\Private\dotfiles\`
+cd dot
+ls
+ls .\.config\
+ls ~\.config\
+ls
+top
+cls
+man rsync
+cheat rsync
+cheat ssh
+cls
+cd posh
+zi
+vim .\customed-montys.omp.json
+cd glaz
+cd ~\.glaze-wm\
+vim .\config.yaml
+cls
+top
+vim .\config.yaml
+cls
+vim .\config.yaml
+cd oh-my-posh\themes\
+cd themes
+vim .\customed-montys.omp.json
+open .\customed-montys.omp.json | clip
+open .\customed-montys.omp.json
+cat .\customed-montys.omp.json
+cat .\customed-montys.omp.json | clip
+cls
+cd nushell
+pwd
+scoop list
+scoop status
+cd themes
+pwd
+scoop update *
+scoop update gitui
+scoop cleanup
+scoop cleanup **
+gitui -v
+cls
+scoop update nu
+scoop bucket
+scoop bucket list 
+scoop bucket rm apps
+scoop bucket known 
+scoop update nu
+scoop update
+scoop status
+scoop update pipx
+top
+cls
+btm
+tree
+scoop list
+mc
+scoop list
+cd ef
+gitui
+vim
+cls
+neofetch
+fastfetch
+lx
+cls
+cat .\avg.s | clip
+ci .\avg.s
+vim
+cd ~
+vim
+cd gla
+ls
+cl
+scoop status
+ff
+scoop update
+scoop list
+scoop status
+oh-my-posh update
+oh-my-posh --help
+oh-my-posh --upgraed
+oh-my-posh --upgrade
+oh-my-posh upgrade
+oh-my-posh --version
+clear
+scoop search tmux
+scoop bucket add java
+cls
+vim .\config.yaml
+ff
+cls
+top
+cd ef
+cls
+hexo d
+cd one
+cd .\Private\dotfiles\
+ls
+git init
+ls
+cd dot
+ls
+cd dot
+ls
+ls .\.config\
+scoop export
+;s
+la
+cls
+scoop config
+cd ~
+ls | grep scoop
+exp
+scoop bucket list 
+scoop bucket rm raresoft
+scoop update
+scoop bucket rm extras
+scoop bucket known 
+scoop bucket add extras
+scoop bucket list 
+scoop bucket rm extras
+scoop bucket add extras https://github.com/lukesampson/scoop-extras.git
+ls
+scoop bucket list 
+scoop checkup
+cd scoop
+zi
+cd env
+ls
+cd env_var
+cd d:\envir_vars\
+cd .\scoop\apps\scoop\current\
+git reset --hard
+git pull
+clear
+scoop update
+cd scoop
+zi
+cd scoop\
+ls
+cd buckets\
+ls
+cd main
+ls
+git pull https://github.com/ScoopInstaller/Main
+cd ..
+cd .\extras\
+git pull https://github.com/lukesampson/scoop-extras
+scoop update\
+scoop update
+scoop update
+cd curr
+ls
+pwd
+scoop status
+scoop update
+scoop status
+ls
+cd ..
+cd curr
+rm -r ./*
+la
+ls
+git pull -f https://github.com/ScoopInstaller/Main
+git pull https://github.com/ScoopInstaller/Main
+rm -r ./.*
+rm -r ./*
+ls
+la
+git init
+git pull https://github.com/ScoopInstaller/Main
+git pull -f https://github.com/ScoopInstaller/Main
+scoop update
+vim ./readme.md
+scoop bucket list 
+scoop bucket known 
+scoop bucket add java
+clear
+cd d
+cd
+ls *.json
+rm .\app.json
+clear
+scoop export `e:\OneDrive - Business\Private\dotfiles\scoop_app.json`
+scoop export > `e:\OneDrive - Business\Private\dotfiles\scoop_app.json`
+clear
+onedrive
+clear
+cd dot
+ls
+scoop install miniconda
+scoop update
+scoop bucket rm dorado
+scoop bucket add dorado https://github.com/chawyehsu/dorado
+scoop install miniconda
+scoop export > `e:\OneDrive - Business\Private\dotfiles\scoop_app.json`
+echo scoop export > `e:\OneDrive - Business\Private\dotfiles\scoop_app.json`
+echo scoop export > `e:\OneDrive - Business\Private\dotfiles\scoop_app.json` | clip
+config nu
+sync-scoop
+clear
+rsync --inplace
+clear
+config nu
+ci $profile
+exec
+exec pwsh $profile
+claer
+sync-dotfiles
+clear
+sync-dotfiles
+clear
+sync-dotfiles
+cd dot
+ls
+cd %APPDATA%Roaming\
+ls
+ls nushell\
+claer
+cls
+ssh admin@donkey
+ping donkey
+ssh admin@donkey
+ping donkey
+ssh admin@donkey
+ping donkey
+ssh admin@donkey
+ping donkey
+ci ~\.glaze-wm\config.yaml
+nu config
+$nu.config-path
+ci $nu.config-path
+c dnu
+cd c:nu
+clear
+fo
+sync-dotfiles
+claer
+cls
+ci -v
+scoop install thefuck
+cls
+clear
+cat public\img\logo.png
+open .\customed-montys.omp.json
+open source\img\unused\artist.png
+clear
+wezterm --help
+cd wallpaer
+cd wallpaper
+cd e
+cd e:/
+cd OneDrive - Business\Pictures\WallPaper
+cd ./OneDrive - Business\Pictures\WallPaper
+cd './OneDrive - Business\Pictures\WallPaper'
+clear
+ls
+wezterm imgcat windows\win娘\ie.jpg
+clear
+wezterm imgcat linux\113984765_p0.png
+wezterm imgcat --help
+wezterm imgcat --height 50% --width 50% linux\penguin_00_3840x2160.png
+wezterm imgcat --height 50% --width 50% windows\win娘\win11_2.jpg
+wezterm imgcat --height 50% --width 50% --position center windows\win娘\win11_365.jpg
+wezterm imgcat --height 50% --width 50% --position 50,50 windows\win娘\win11_365.jpg
+wezterm imgcat --height 50% --width 50% --position 50 windows\win娘\win11_365.jpg
+wezterm imgcat --height 50% --width 50% --position 50,100 windows\win娘\win11_365.jpg
+clear
+wezterm imgcat --height 50% --width 50% --position 50,80 windows\win娘\win11_365.jpg
+wezterm imgcat --height 50% --width 50% windows\win娘\win11_365.jpg
+wezterm imgcat --height 50% --width 50% windows\win娘\win10_6.png
+ls
+clear
+scoop install lazydocker
+vim $nu.config-path
+clear
+ff
+scoop install tldr
+tldr git
+clear
+tldr cd
+clear
+scoop install rclone
+rclone config
+n
+clear
+rclone config
+clear
+tldr rclone
+cheat rclone
+scoop install cheat
+cheat rclone
+tldr rclone
+rclone ls
+rclone ls ./
+scoop uninstall rclone -p
+clear
+cd ~/.config
+top
+clear
+scoop status
+cargo install nu_plugin_net
+clear
+scoop update nu
+scoop update
+scoop update nu
+zi
+cp .\customed-montys.omp.json ./tokyo-night.omp.json
+ls
+ls tokyo
+ls tokyo.*
+ls tokyo*
+clear
+nu config
+ci $nu.config-path
+pkill
+clearr
+cls
+scoop install pkill
+scoop search pkill
+scoop search busybox
+scoop install busybox
+vim ~\.config\scoop\config.json
+scoop config aria2-enabled false
+scoop config aria2-enabled False
+clear
+scoop install busybox
+clear
+pkill
+clear
+vim
+nu --lsp
+clear
+vim
+cler
+clear
+which nivm
+which nvim
+which nvim | get path
+which nvim | get path | clip
+which nvim | get path | to str
+to
+which nvim | get path | to md
+which nvim | get path | to md | clip
+D:\envir_vars\scoop\shims\nvim.exe
+cd D:\envir_vars\scoop\shims\nvim.exe
+cd D:\envir_vars\scoop\shims\
+clear
+ls
+cd ~\.config\nvim\
+ls
+cd ~
+cd AppData\Local\nvim-data\lazy\nvim-lspconfig\neovim.yml
+cd AppData\Local\nvim-data\lazy\nvim-lspconfig\
+ls
+vim .\neovim.yml
+vim --help
+clear
+vim --help
+vim
+ls
+cd
+clip
+clip /？
+lazu
+lazy
+clear
+vim
+cd ~\.config\nvim\
+ls
+clear
+vim
+la
+ll
+ls
+clear
+;s
+ls
+cd lua
+ls
+cd plugins\
+ls
+touch ./nvim-treesitter/nvim-treesitter
+touch ./nvim-treesitter/nvim-treesitter.lua
+ls
+mkdir nvim-treesitter/
+ls
+rm -r .\nvim-treesitter\
+clear
+ci ./nvim-treesitter.lua
+vim
+rm .\nvim-treesitter.lua
+clear
+cd ef
+clear
+scoop list
+scoop search tomcat
+vpwd
+clear
+vpwd
+zi
+ls
+zi
+ls
+cd Private\
+ls
+cat .\key.md
+bat .\key.md
+clear
+bat --help
+clear
+git clone https://github.com/wmaurer/vscode-jumpy.git
+ls
+rm -r .\vscode-jumpy\
+claer
+zi
+git clone https://github.com/wmaurer/vscode-jumpy.git
+ci .\vscode-jumpy\
+vim .\key.md
+scoop search geek
+scoop install geekuninstaller
+ci -v
+ff
+cd ma
+gitui
+exp
+clear
+gitui
+cd ef
+gitui
+curl ascii.live/rick
+curl ascii.live
+scoop status
+scoop list
+scoop update eza
+oh-my-posh upgrade
+clear
+oh-my-posh upgrade
+cls
+oh-my-posh -v
+oh-my-posh --version
+nu --v
+nu --version
+clear
+clear
+scoop status
+scoop update
+cd ef
+scoop update fzf
+scoop list
+scoop status
+scoop update
+scoop status
+scoop update
+ff
+scoop update
+scoop status
+scoop install tomcat
+scoop uninstall tomcat
+scoop search tomcat
+scoop install tomcat
+tomcat -v
+tomcat
+catalina -v
+catalina
+scoop list
+catalina\
+tomcat
+catalina -v
+scoop install tomcat
+clear
+vim
+tldr rclone
+tldr 2t3
+clear
+tldr git
+zi
+vim .\tokyo-night.omp.json
+cls
+vim $nu.config-path
+vim $nu.env-path
+ci $nu.config-path
+ci $nu.env-path
+echo $nu.default-config-dir
+cd nushell
+la
+ls
+npm install -g neoss
+sudo npm install -g neoss
+neoss
+sudo npm uninstall neoss
+sudo npm uninstall -g neoss
+clear
+ls
+ci .\ohmyposh.nu
+ls
+zi 
+ls
+ci tokyo-night.omp.json
+source $nu.config-path
+hexo s
+scoop search
+scoop status
+scoop update
+scoop status
+scoop update fastfetch
+ff
+ls
+scoop update
+scoop status
+ff
+hibernate
+vim .\efterklang\src\main\java\com\efterklang\Main.java
+cd java
+zi
+ls
+cd src\main\java\com\efterklang\
+vim .\Main.java
+cd ef
+scoop status
+scoop update
+scoop status
+ff
+clear
+java -v
+java -version
+ll
+ls
+ll
+la
+ps
+clear
+netstat
+net
+net view
+vpwd
+cd onedri
+vim Archives\markdown_notes\Markdown\Private\key.md
+ci Archives\markdown_notes\Markdown\Private\key.md
+hexo s
+scoop install go
+tldr go
+zi
+ls
+rm -r .\vscode-jumpy\
+mkdir go
+cd go
+clear
+vim ./main.go
+go run main.go
+zi
+ci .\tokyo-night.omp.json
+cl
+clear
+ls
+clear
+ls
+cd go
+ls
+l
+clear
+ls
+cl
+clear
+claer
+ff
+clear
+claer
+cls
+clear
+wsl
+clear
+l
+clear
+cd e
+cd e:
+cd e:/
+clear
+vim OneDrive - Business\Archives\markdown_notes\Markdown\Private\key.md
+cat OneDrive - Business\Archives\markdown_notes\Markdown\Private\key.md
+vim "OneDrive - Business\Archives\markdown_notes\Markdown\Private\key.md"
+vim 'OneDrive - Business\Archives\markdown_notes\Markdown\Private\key.md'
+ci 'OneDrive - Business\Archives\markdown_notes\Markdown\Private\key.md'
+ci ~\.glaze-wm\config.yaml
+clear
+vim $nu.config-path
+vim 'OneDrive - Business\Archives\markdown_notes\Markdown\Private\key.md'
+cd one
+cd Archives\markdown_notes\Markdown\Private\
+pwd
+pwd | clip
+vim $nu.config-path
+source $nu.config-path
+vpwd
+lear
+zi
+vim .\tokyo-night.omp.json
+clear
+ll
+clear
+source $nu.config-path
+cleaar
+vim .\tokyo-night.omp.json
+zoxi
+zoxide edit
+clear
+ff
+clear
+ll
+oh-my-posh --get-themes
+oh-my-posh --theme
+oh-my-posh notice
+oh-my-posh theme
+cd ef
+hexo s
+cd scoop
+ls
+cd apps\tomcat\
+ls
+cd dir
+clear
+cd ./dir
+ls
+cd .\10.1.24\
+clear
+tree
+clear
+ls
+la
+ls
+ll
+clear
+tree ./
+clear
+ls
+exp
+cd ef
+cd tom
+./
+cd tomcat
+zi
+cd d:
+zi
+ls
+cd apps\tomcat\
+ls
+cd 10.1.24\
+clear
+ls
+ls .\conf\
+ls
+.\bin\startup.sh
+cd ef
+gitui
+scoop search yazi
+scoop install yazi
+yazi
+cd d
+cd d:
+yazi
+clear
+yazi
+clear
+ci ~\.glaze-wm\config.yaml
+clear
+cd ef
+zi
+hexo s
+ls
+wsl -d Arch
+vim .\tokyo-night.omp.json
+cd ef
+ls
+cd source\
+ls
+ls -i
+clear
+bash
+hexo s
+wsl
+cd
+exp
+tldr cargo
+cd ef
+ls
+cd ef
+ls
+cd wez
+ls
+wezterm imgcat --height 50% --width 50% ./backdrops\miku.jpg
+rm ./backdrops\cyberpunk_city_whale.jpg
+yazi
+exp
+ls
+exp
+ls -l ./
+hexo s
+hexo d
+hexo clean; 
+hexo d
+hexo clean; hexo gen; hexo d
+hexo s
+hexo d
+scoop search vue
+sudo  npm install -g @vue/cli
+vue -v
+clear
+cd ef
+ls
+cd ma
+ls
+gitui
+exp
+gitui
+bat .\Private\data\Art_CN.md
+rm -r .\Private\data\*.old
+bat --help
+bat cache
+cd ~
+ls
+cd roaming
+ls
+bat\config
+cd bat\config
+vim bat\config
+ls
+cd bat
+ls
+cat .\config
+zi 
+ls
+cat .\key.md
+vim $nu.config-path
+pwd
+vpwd
+exp
+clear
+conda activate myenv
+conda init
+conda activate myenv
+sync-dotfiles
+sudo sync-dotfiles
+sync-dotfiles
+config nu
+claer
+cls
+sync-dotfiles
+ls
+ll
+clear
+cd fe
+ls
+c def
+cd ef
+ls
+cd ma
+ls
+cd notes
+ls
+cd Java学习\JavaWeb\
+ls
+cd source\_posts\Dev\Java\Web\Tomcat.md
+cd source\_posts\Dev\Java\Web\
+clear
+ls
+cat .\1-JavaWeb开发概述.md
+cat .\10-Vue.js.md
+touch Vue.md
+ls
+eza 
+eza -l
+eza -s
+eza -a
+eza -l
+eza -i
+eza -li
+clear
+ls
+la
+ll
+ls
+ll
+clear
+ls -l
+ls -a
+ls -li
+ls -f
+ls -d
+ls -D
+ls -m
+clear
+ff
+ff
+claer
+ff
+fastfetch
+clear
+cl
+cd ma
+gitui
+gitlog 5
+glog 5
+git rebase -i HEAD~4
+cls
+ls
+cat .\Vue.md
+fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"
+vim $nu.config-path
+fzfp
+cl
+vim
+vim $nu.config-path
+vim
+vim $nu.config-path
+source $nu.config-path
+fzfp
+clear
+vim $nu.config-path
+scoop status
+scoop update
+scoop status
+scoop list
+scoop status
+config nu
+hexo s
+ff
+hexo s
+qq -v
+vim ~\.glaze-wm\config.yaml
+fzfp
+git config
+cd gla
+git clone https://github.com/ParasiteDelta/GlaAlt.git
+ls
+rm -r .\GlaAlt\
+cd glaze
+git clone https://github.com/ParasiteDelta/GlaAlt.git
+ls
+cd GlaAlt\
+cargo b -r
+ls
+cd target\
+ls
+fzfp
+clear
+cd .\release\
+ls
+cd ..
+ls
+cp .\release\glaalt.exe ~\.glaze-wm\GlaAlt\
+ls
+cd glaze
+ls
+ls .\GlaAlt\
+vim .\config.yaml
+yazi
+config nu
+source $nu.config-path
+yy
+yazi --help
+yazi
+cd appdate
+cd appdata
+ls
+cd ./yazi
+cd roaming/yazi
+ls
+cd config\
+ls
+cd flavors\
+ls
+git clone https://github.com/yazi-rs/flavors.git
+cd ~/.config
+ls
+rm -r .\clash-verge\
+ls
+cd roaming
+ls
+cd yazi
+ls
+ls
+export env
+export YAZI_CONFIG_HOME=~/.config/yazi
+export 
+export help
+export --help
+config env
+$env | table -e
+$env | table -e
+cd ~/.config
+mkdir yazi
+vim ./yazi.toml
+vim ./theme.toml
+vim ./keymap.toml
+vim ./theme.toml
+yazi
+source $nu.config-path
+yazi
+rm *.toml .\yazi\
+ls
+la
+mkdir yazi
+ls
+cd yazi
+vim ./keymap.toml
+vim ./theme.toml
+vim ./yazi.toml
+yazi
+$env.YAZI_CONFIG_HOME
+$env
+mkdir flavors
+cd flavors\
+git clone https://github.com/yazi-rs/flavors.git
+yazi
+pwd
+cd ..
+fzfp
+source $nu.config-path
+yy
+yazi
+source $nu.config-path
+yazi
+config env
+source $nu.config-path
+yazi
+cd ef
+gitui
+cd roaming
+cd Microsoft\Windows\Themes\
+ls
+exp
+cd ef
+gitui
+cd ma
+gitui
+ls
+gitui
+cd ef
+gitui
+fzfp
+gitui
+cd ma
+gitui
+cd ef
+cd ma
+vim Private\daily\2024.md
+gitui
+clear
+cd ef
+hexo s
+hedxo s
+yazi
+cd ~/.config
+cd yazi
+ls
+fd flavors\
+cd .\flavors\
+ls
+mv .\flavors\* ./
+ls
+cd flavors\
+ls
+cd ..
+rm -r .\flavors\
+yazi
+cd yazi
+ls
+pwd
+ls
+yazi
+ls
+yazi
+vim .\theme.toml
+yy
+cd ef
+gitui
+git rebase -i HEAD~6
+git rebase -i HEAD~5
+ls
+clear
+ll
+grb
+grb -i HEAD~1
+sync-dotfiles
+cd onedr
+cd Private\dotfiles\
+ls
+cat .\readme.md
+ls .\shell\
+cat .\.wslconfig
+exp
+vim
+vim .\.wslconfig
+vim .\.gitconfig
+rm .\.gitconfig
+rm .\.wslconfig
+config nu
+cp ~\.wslconfig ./
+ls
+cat .\.wslconfig
+cat ~\.gitconfig ./
+cp ~\.wslconfig ./
+cp ~\.gitconfig ./
+ls
+git remote add origin git@github.com:Efterklang/dotfiles.git
+gitui
+vim ./.gitignore
+gitui
+git add .
+exp
+vim ~/clitui
+cd .\CLI&TUI\
+ls
+hexo s
+zi
+cd .\CLI&TUI\
+cd CLI
+cd shells\
+ls
+pwd
+ls
+cd .
+cd ..
+ls
+cd ..
+ls
+exp
+vim .\readme.md
+cd ..
+ls
+fzfp
+gitui
+git add .
+gitiu
+gitui
+git add .
+got add .
+git add .
+cat .\CLI&TUI\readme.md
+cp ~\.config\
+cp -r ~\AppData\Roaming\bottom\ .\CLI&TUI\
+cp -r ~\AppData\Roaming\bat\ .\CLI&TUI\
+gitui
+git add .
+cp -r ~\AppData\Roaming\gitui\ .\CLI&TUI\
+git add .
+cat .\CLI&TUI\readme.md
+cp ~\AppData\Local\Programs\oh-my-posh\themes\tokyo-night.omp.json .\CLI&TUI\shells\oh-my-posh\
+git add .
+git ui
+gitui
+git push origin main
+cd ef
+gitui
+cd ma
+ls
+cd oned
+ls
+cd Private\dotfiles\
+ls
+ls .\.config\
+config nu
+scoop status
+oh-my-posh upgrade
+scoop update
+oh-my-posh --version
+scoop status
+cd ef
+ls
+cd source\_posts\Dev\
+ls
+cd ..\UESTC\
+ls
+fzfp
+gitui
+cd ma
+ls
+gitui
+vim Private\daily\2024.md
+gitui
+git -v
+which 7zip
+which 7
+which 7z
+cd nu
+ls
+pwd
+cl
+ls
+mkdir scripts
+ls
+cd .\scripts\
+config nu
+config env
+cd ..
+cp -r .\nu_scripts\custom-completions\scoop .\scripts\
+source $nu.config-path
+scoop status
+cp -r .\nu_scripts\custom-completions\code-insider .\scripts\
+cp -r .\nu_scripts\custom-completions\poetry\ .\scripts\
+cp -r .\nu_scripts\custom-completions\cargo\ .\scripts\
+cp -r .\nu_scripts\custom-completions\git\ .\scripts\
+cp -r .\nu_scripts\custom-completions\bat\ .\scripts\
+cp -r .\nu_scripts\custom-completions\mvn\ .\scripts\
+cp -r .\nu_scripts\custom-completions\winget\ .\scripts\
+ls
+commandline set-cursor 
+cd .\scripts\
+ls
+cp -r ./* ./custom-completions/
+mkdir custom-completions
+cp -r ./* ./custom-completions/
+ls
+mv ./bat .\custom-completions\
+cp -r ./bat .\custom-completions\
+exp
+source $nu.config-path
+cd ..\nu_scripts\
+eza --icons
+config nu
+ls
+pwd
+source $nu.config-path
+vim scripts\aliases\eza\eza-aliases.nu
+ls
+cd scripts\aliases\
+ls
+source $nu.config-path
+ls
+la
+ll
+cd ..
+la
+ll
+lst
+llt
+ls
+ll
+vim scripts\aliases\eza\eza-aliases.nu
+vim .\config.nu
+la
+ll
+lst
+llt
+lst
+ll
+eza --all --icons --tree
+vim .\aliases\eza\eza-aliases.nu
+ls
+pwd
+source $nu.config-path
+ls
+use eza-aliases.nu
+config env
+scoop status
+grb --help
+ll
+ls
+config nu
+source $nu.config-path
+ls
+ll
+config nu
+source $nu.config-path
+ls
+ll
+ls
+ls ./scripts/
+ls .\nu_scripts\custom-completions\
+ls
+ls .\scripts\custom-completions\
+vim ./load_scripts.nu
+exp
+fzfp
+ci $nu.config-path
+config nu
+vim load_scripts.nu
+nu
+sync-dotfiles
+source $nu.config-path
+zi
+ls
+ll .\shells\
+sync-dotfiles
+source $nu.config-path
+sync-dotfiles
+exo
+exp
+source $nu.config-path
+sync-dotfiles
+gitui
+grb -i HEAD~2
+grb -i HEAD~1
+ginit
+guinit
+gitui
+ssh-agent
+ssh-agent --help
+ssh-agent --h
+ssh-agent --v
+ci $nu.env-path
+gtv
+glo
+cd ef
+glo
+source $nu.config-path
+gau
+glog
+source $nu.config-path
+glog
+gau
+ls
+la
+cd ef
+lst
+lat
+llt
+cd one
+ls
+cat .\Archives\Homeworks\计算机网络\
+cdt .\Archives\Homeworks\计算机网络\
+cd .\Archives\Homeworks\计算机网络\
+ls
+cat `.\TCP单进程循环服务器与单进程客户端(五则运算)\iter_tcp_cli_arith.c`
+ls
+cd ..
+sl
+ll
+cd ..
+ll
+cd ../..
+ll
+la
+ll
+la
+scoop update
+cd home
+git clone git@github.com:Efterklang/imageBed.git
+cd .\imageBed\
+ls
+exp
+mv DataLinkLayer.* .\Network\LinkLayer\
+mv ./DataLinkLayer.* .\Network\LinkLayer\
+mv ./*DataLinkLayer* .\Network\LinkLayer\
+ls *Data*
+git push origin main
+gitui
+ls *Tran*
+ping donkey
+ssh admin@donkey
+wsl -d Arch
+cd ef
+gitui
+hexo d
+cd ef
+ls
+ll .\source\_posts\Essay\Game\
+hexo d
+hexo clean;hexo d
+fzfp
+cd ma
+fzfp
+hexo d
+vim Private\daily\2024.md
+gitui
+wsl
+cd ma
+gitui
+top
+ls
+kk
+l
+ll
+ls
+ll
+la
+cd ef
+ls
+py .\temp.py
+ls
+py .\temp.py
+py .\track.py
+pip install supervision
+py .\track.py
+cd fuc
+ls
+cd e:
+fzfp
+cd UESTC\Home\jt2024\
+cd jt
+ls
+vim .\track.py
+vim
+hexo s
+scoop update
+scoop status
+cd ef
+scoop home
+scoop home scoop
+scoop install flow-launcher
+ci ~\.glaze-wm\config.yaml
+hexo s
+cd scoop
+ls
+cd apps\flow-launcher\
+ls
+cd .\current\
+ls
+la
+cd app-1.18.0\
+ls
+ll
+exp
+cd ef
+hexo s
+cd imagebed
+ls
+git pull
+cd .\Network\LinkLayer\
+ls
+exp
+gitui
+guinit
+gitui
+cd ef
+gitui
+cd ma
+ls
+gitui
+grb -i HEAD~2
+grb -i HEAD~4
+gitui
+scoop status
+scoop update
+scoop status
+scoop update
+scoop status
+cd ma
+ls
+gitui
+cd ef
+gitui
+ci ~\.glaze-wm\config.yaml
+cd imagebed
+exp
+gitui
+git pull
+git config pull.rebase true
+git pull
+gitui
+cd ef
+gitui
+scoop install discord
+ci ~\.glaze-wm\config.yaml
+hexo s
+gitui
+hexo s
+hexo clean
+cd ef
+hexo s
+hexo clean
+cd ef
+hexo s
+hexo d
+exp
+npm install hexo-cli -g
+sudo npm install hexo-cli -g
+sudo npm install hexo-cli
+hexo d
+cd ef
+hexo s
+cd ~/.ssh
+ls
+vim .\config
+cd ef
+ci .\_config.icarus.yml
+cd ef
+gstat
+gstat .
+scoop update; scoop status
+scoop remove discord
+scoop uninstall discord
+scoop update
+scoop status
+cd ma
+gitui
+glog
+cd ef
+glog
+glog 10
+cd ef
+gitui
+cd ma
+gitui
+,s
+scoop update
+oh-my-posh --upgrade
+oh-my-posh --update
+scoop status
+oh-my-posh upgrade
+scoop update
+scoop status
+oh-my-posh upgrade
+scoop update
+cd ef
+gitui
+cd dot
+sync-dotfiles
+gitui
+git push
+vim ~\.ssh\config
+git push
+clear
+cd wez
+ls
+fzfp
+cd .\backdrops\
+exp
+cd ef
+hexo s
+wezterm --v
+wezterm --version
+wezterm --update
+wezterm --help
+wezterm --version
+scoop list
+hexo s
+winget upgrade wez.wezterm
+gitui
+cd ma
+gitui
+cat Private\daily\2024.md
+Private\daily\2024.md
+gitui
+cd ef
+hexo s
+cd ima
+git pull
+cd ima
+fzfp
+cd ef
+cd .\Network\LinkLayer\
+ls
+hexo s
+wsl -d Arch
+wsl
+cd one
+ls
+cat Private\dotfiles\CLI&TUI\shells\nushell\config.nu
+cat Private\dotfiles\CLI&TUI\shells\nushell\config.nu | clip
+exp
+clear
+hexo s
+pwsh
+cd ef
+ci .\_config.icarus.yml
+hexo s
+cd one
+ls
+cd files
+ls
+cd ,,
+cd ..
+ls
+cd ..
+ls
+cd Archives\Homeworks\计算机网络\TCP单进程循环服务器与单进程客户端(五则运算)\
+cd `Archives\Homeworks\计算机网络\TCP单进程循环服务器与单进程客户端(五则运算)\`
+ls
+cat .\iter_tcp_srv_arith.c
+gitui
+cd ma
+gitui
+cd ef
+gitui
+fzfp
+cd ef
+hexo d
+cd one
+ls
+exp .\Archives\Homeworks\数据库原理与应用\作业
+cd .\Archives\Homeworks\数据库原理与应用\作业
+cd .\Archives\Homeworks\数据库原理与应用\
+exp
+vpwd
+scoop update
+scoop status
+oh-my-posh upgrade
+cd ima
+git pull
+cd one
+ls
+cd wall
+ls
+pwd
+pwd | clip
+cd ..\CurrentWallpapers\
+ls
+cd jt
+gitui
+guinit
+gitui
+cd image
+exp
+ls *setting*
+wezterm catimg
+wezterm imgcat .\settings-2024-04-25-10-42-00.jpg
+rm .\settings-2024-04-25-10-42-00.jpg
+ocnfig nu
+config nu
+source $nu.config-path
+cati
+ls *setting*
+cato .\settings-2024-04-25-10-43-37.jpg
+cati .\settings-2024-04-25-10-43-37.jpg
+rm .\settings-2024-04-25-10-43-37.jpg
+cati .\settings-2024-04-25-13-29-43.jpg
+rm .\settings-2024-04-25-13-29-43.jpg
+exp
+ls *ARM*
+gitui
+git push
+nu -v
+cd ef
+cd img
+cd image
+ls
+cd wezterm
+ls
+fzfp
+ci .
+ls
+ks
+；s
+ll
+ls
+ci ~\.glaze-wm\config.yaml
+clear
+cd im
+ls
+cati .\latest
+ls
+ls *Network**
+ls *Network*
+ls *Ch4-1Net*
+ls *Ch4-.Net*
+ls *Ch4-[1,2]Net*
+cd im
+cd ima
+cd Network\
+ls
+mkdir NetworkLayer
+ls
+mv *Ch4-[1,2]Net* .\Network\NetworkLayer\
+ls *Ch4-[1,2]Net*
+ls .\NetworkLayer\
+pwd
+cd .\NetworkLayer\
+pwd
+gitui
+cd ef
+cd imag
+ls
+ls *Ch5-[1,2]Net*
+ls *Ch5-[1,2]T*
+exp
+mv *Ch5-[1,2]T* .\Network\TransportLayer\
+ls
+ls *ARM*
+ls .\Network\*
+gitui
+grb -i HEAD~50
+git push
+cd image
+git push -f
+cd image
+glog
+glog 50
+glog 100
+glog 500
+grb -i HEAD~450
+git push -f
+vim ~\.ssh\config
+cd ef
+cd tcp
+ls
+git push -f
+.\iter_tcp_cli_arith.c
+cat .\iter_tcp_cli_arith.c
+glog
+glog 10
+glog 100
+clear
+gitui
+cd ..
+du .\imageBed\
+ls
+cd imageBed\
+ls
+la
+ls | where type == dir
+ls -a | where type == dir
+exp
+bat --help
+which bat
+scoop which bat
+ci ~\.glaze-wm\config.yaml
+sync-dotfiles
+cd dot
+gitui
+ls
+matrix
+clear
+hexo s
+hexo clean
+cd ef
+hexo d
+cd tco
+cd tcp
+cat .\iter_tcp_srv_arith.c
+vim .\iter_tcp_srv_arith.c
+clear
+cd ~
+ls
+cat .\.viminfo
+ls *vim
+ls *vim*
+ls
+clear
+ls
+la
+cat .\BingSiteAuth.xml
+hexo d
+py .\indexnow_request.py
+la
+ls
+fzfp
+py .\indexnow_request.py
+clear
+hexo d
+ci ~\.glaze-wm\config.yaml
+clear
+cd tcp
+cat .\iter_tcp_srv_arith.c
+cat .\iter_tcp_cli_arith.c
+cd ef
+hexo d
+cd ef
+gitui
+cd ma
+cd ef
+cd ma
+hexo s
+clear
+btop
+cd ef
+gitui
+cd ma
+ls
+cd mar
+ls
+gitui
+tail ./Private\daily\2024.md
+tail -v
+nu
+scoop update
+scoop status
+scoop search tail
+cd ef
+cd wez
+cd .\backdrops\
+exp
+clear
+ls
+ci .\_config.icarus.yml
+oh-my-posh upgrade
+ci .\package.json
+hexo s
+npm install
+oh-my-posh upgrade
+sudo npm install
+npm install -g npm@10.8.1
+oh-my-posh version
+source $nu.config-path
+oh-my-posh version
+oh-my-posh upgrade
+cd ef
+hexo s
+sudo npm install -g npm@10.8.1
+hexo s
+hexo clean
+clear
+hexo s
+sudo npm install
+clear
+hexo s
+hexo clean
+npm fund
+clear
+npm uninstall hexo-component-inferno
+npm install
+sudo npm install
+hexo s
+hexo clean
+hexo s
+sudo npm install
+clear
+hexo s
+clear
+sudo npm install
+hexo s
+sudo npm install
+hexo s
+npm i bulma-stylus@0.8.0 hexo-component-inferno@^2.0.2 hexo-pagination@^2.0.0 hexo-renderer-inferno@^0.1.3 inferno@^7.3.3 inferno-create-element@^7.3.3
+sudo npm i bulma-stylus@0.8.0 hexo-component-inferno@^2.0.2 hexo-pagination@^2.0.0 hexo-renderer-inferno@^0.1.3 inferno@^7.3.3 inferno-create-element@^7.3.3
+claer
+hexo s
+sudo npm i
+clear
+hexo s
+sudo npm i
+hexo s
+hexo celan
+hexo c
+hexo clean
+hexo s
+sudo npm i
+sudo npm i bulma-stylus@0.8.0 hexo-component-inferno@^2.0.2 hexo-pagination@^2.0.0 hexo-renderer-inferno@^0.1.3 inferno@^7.3.3 inferno-create-element@^7.3.3
+hexo s
+hexo gen
+hexo s
+npm i bulma-stylus@0.8.0 hexo-component-inferno@^2.0.2 hexo-pagination@^2.0.0 hexo-renderer-inferno@^0.1.3 inferno@^7.3.3 inferno-create-element@^7.3.3
+sudo npm i bulma-stylus@0.8.0 hexo-component-inferno@^2.0.2 hexo-pagination@^2.0.0 hexo-renderer-inferno@^0.1.3 inferno@^7.3.3 inferno-create-element@^7.3.3
+npm fund
+hexo s
+gitui
+exp
+hexo clean
+hexo s
+sudo npm i
+exp
+sudo npm i
+hexo s
+clear
+sudo npm i
+hexo clean
+hexo s
+npm i -g hexo@6
+sudo npm i -g hexo@6
+npm i bulma-stylus@0.8.0 hexo-component-inferno@^2.0.2 hexo-pagination@^2.0.0 hexo-renderer-inferno@^0.1.3 inferno@^7.3.3 inferno-create-element@^7.3.3
+sudo npm i bulma-stylus@0.8.0 hexo-component-inferno@^2.0.2 hexo-pagination@^2.0.0 hexo-renderer-inferno@^0.1.3 inferno@^7.3.3 inferno-create-element@^7.3.3
+hexo s
+sudo npm i
+hexo c
+hexo clean
+hexo -v
+npm i hexo@6.3
+sudo npm i hexo@6.3
+hexo i
+sudo npm i
+hexo clean
+hexo c
+hexo s
+hexo s
+hexo clean
+npm i -g hexo@6.3.0
+sudo npm i -g hexo@6
+hexo s
+sudo npm i -g hexo@6
+ls
+hexo
+sudo npm i hexo@6
+hexo
+hexo clean
+npm i bulma-stylus@0.8.0 hexo-component-inferno@^2.0.2 hexo-pagination@^2.0.0 hexo-renderer-inferno@^0.1.3 inferno@^7.3.3 inferno-create-element@^7.3.3
+sudo npm i bulma-stylus@0.8.0 hexo-component-inferno@^2.0.2 hexo-pagination@^2.0.0 hexo-renderer-inferno@^0.1.3 inferno@^7.3.3 inferno-create-element@^7.3.3
+hexo clean
+hexo s
+exp
+git clone https://github.com/imaegoo/hexo-theme-icarus.git themes/icarus
+mv .\themes\icarus\ .\themes\icarus_bak
+hexo g
+sudo npm install --save hexo@^7.1.1 hexo-component-inferno@^3.1.0 hexo-pagination@^3.0.0 hexo-renderer-inferno@^1.0.2 hexo-renderer-stylus@^3.0.1 hexo-util@^3.2.0 inferno@^8.2.3 inferno-create-element@^8.2.3
+hexo g
+hexo s
+sudo npm i hexo-blog-encrypt
+hexo s
+hexo clean
+sudo npm install --save hexo-helper-live2d
+hexo s
+hexo s
+hexo gen
+hexo s
+sudo npm uninstall --save hexo-helper-live2d
+npm install
+sudo npm install
+hexo s
+cd ef
+hexo s
+clear
+clear
+hexo d
+ci ~\.glaze-wm\config.yaml
+hexo s
+cd ma
+cd ef
+gitui
+cd ma
+gitui
+cd ef
+hexo s
+hexo d
+cd ma
+gitui
+cd ef
+cd ma
+cd ef
+cd ma
+clear
+ls
+tail Private\daily\2024.md
+tail -f Private\daily\2024.md
+tail --help
+tail -f Private\daily\2024.md
+clear
+hexo s
+hexo clean
+hexo d
+hexo clean
+clear
+ls
+ll
+la
+git
+gstat
+gstat .
+clear
+cd tcp
+clear
+ci .
+hexo s
+oh-my-posh upgrade
+clear
+oh-my-posh upgrade
+scoop update
+scoop status
+scoop update
+scoop status
+ff
+scoop update
+scoop status
+cd ef
+cd source\_posts\UESTC\ComputerNetworking\
+exp
+hexo d
+cd ef
+hexo d
+scoop status
+gitui
+gui
+cls
+gu
+guinit
+gini
+cls
+gini
+config nu
+lzd
+clear
+cd nu
+ls
+vim scripts\aliases\git\git-aliases.nu
+gg
+vim scripts\aliases\git\git-aliases.nu
+source $nu.config-path
+gg
+vim scripts\aliases\git\git-aliases.nu
+source $nu.config-path
+gg
+gitui
+cd ef
+gg
+vim scripts\aliases\git\git-aliases.nu
+ci scripts\aliases\git\git-aliases.nu
+vim scripts\aliases\git\git-aliases.nu
+cat scripts\aliases\git\git-aliases.nu
+cd scripts\aliases\git\
+ls
+cd script
+ls
+cd .
+cd ...
+cd -
+cd nu
+exp
+vim scripts\aliases\git\git-aliases.nu
+source $nu.config-path
+gg
+ggi
+clear
+ls
+cd ef
+hexo s
+gitui
+grb -i HEAD~5
+glog
+glog 100
+gg
+cd tcp
+ci .
+gg
+ci ~/.glaze-wm/config.yaml
+cd ef
+hexo s
+cle
+cls
+clear
+exp ~
+cd one
+clear
+ls
+cd wallpa
+ls
+pwd
+pwd | clip
+ci ~/.glaze-wm/config.yaml
+oh-my-posh upgrade
+cd ef
+gg
+cd wez
+ls
+la
+ls
+la
+rm LICENSE
+ls
+config nu
+pwd
+hexo s
+cd dotfile
+ls
+cd CLI&TUI\
+ls
+mkdir wezterm
+config nu
+source $nu.config-path
+cls
+sync-dotfiles
+ls
+rm wezterm\
+la
+cd ..
+mkdir wezterm
+sync-dotfiles
+ls
+gg
+config nu
+ff
+btm
+btop
+wsl -d Arch ff
+btm
+cd dotfile
+ls
+ci .\readme.md
+tree
+la
+ls
+ll
+ls
+ls .\.config\
+config nu
+ls
+rm .\wezterm\
+rm -r .\wezterm\
+ls .\.config\
+ls
+clear
+gitui
+exp
+config nu
+ci $nu.config-path
+cd dotfile
+gitui
+grb -i HEAD~5
+gg
+scoop status
+scoop update
+scoop status
+scoop update
+scoop status
+ls
+ff
+music
+lx -v
+lx
+ls
+top
+cd ef
+gg
+cd ma
+gg
+glog 100
+scoop install cava
+lx
+ls
+ll
+llt
+cd dot
+llt
+lat
+lst
+ll
+cat .\readme.md
+la
+cd gla
+vim ./auto_tiling.py
+py .\auto_tiling.py
+pip install websockets
+py .\auto_tiling.py
+cat .\auto_tiling.py
+py .\auto_tiling.py
+clear
+py clean.py ..\ultralytics\
+cd ..
+mv .\scripts\ ./utils
+ls
+ls .\scripts\
+ls .\utils\
+cd ef
+;s
+hello
+nu -help
+greet
+ff
+local ip
+ff
+pp
+lyy
+yy
+hexo s
+hexo d
+cd ef
+cd -
+hexo s
+ff
+hexo s
+gg
+grb -i HEAD~5
+cd ma
+ls
+glog 100
+grb -i HEAD~5
+cd ef
+cd dot
+ls
+glog 100
+cd ef
+cd home
+ls
+mkdir go
+cd go
+ls
+vim ./volume_setter.go
+clear
+vim ./volume_setter.go
+go run volume_setter.go
+go build volume_setter.go
+go help modules
+vim ./volume_setter.go
+go mod init main
+ls
+go build volume_setter.go
+go get golang.org/x/sys/windows
+go build volume_setter.go
+vim ./volume_setter.go
+vim ./main.go
+rm .\volume_setter.go
+ls
+rm ./go.*
+ls
+go build main.go
+go mod init main
+go build main.go
+go get github.com/go-ole/go-ole
+go get github.com/x/sys/windows
+clear
+go build main.go
+vim ./main.go
+go build main.go
+vim ./main.go
+go build main.go
+vim ./main.go
+go build main.go
+go build main.go | clip
+cls
+go build main.go
+vim ./main.go
+go build main.go
+vim ./main.go
+go build main.go
+vim ./main.go
+clear
+hexo s
+ci ~/.glaze-wm/config.yaml
+gg
+cd ma
+cd ef
+ls
+gg
+glog 100
+grb -i HEAD~6
+grb -i HEAD~5
+glog
+cd ef
+hexo d
+wsl -d Arch ff
+hexo s
+ff
+scoop update
+scoop status
+scoop update *
+scoop update 7zip
+scoop update fastfetch
+ff
+scoop status
+scoop update tomcat
+catalina -v
+cd go
+ls
+rm ./*
+cd ..
+rm go
+rm -r go
+mkdir go
+go init
+go help
+cd go
+ls
+la
+ci .
+go install -v golang.org/x/tools/gopls@latest
+go build main.go
+ls
+./main.exe
+sudo ./main.exe
+go build main.go
+./main.exe
+sudo ./main.exe
+go build main.go
+./main.exe
+go build main.go
+cd go
+ls
+pwd
+ci .
+go build main.go
+./main.exe
+ls
+go build main.go
+go get github.com/go-ole/go-ole
+go mod init
+go mod init main
+go get github.com/go-ole/go-ole
+cd ..
+cd home
+ls
+rm -r go
+cd go
+ls
+pwd
+cd ,,
+cd ..
+rm ./go
+rm -r ./go
+ls
+rm -r ./go
+rm -rf ./go
+exp
+cd home
+ls
+mkdir go
+cd go
+go init main
+go mod init mute
+ls
+go get github.com/go-ole/go-ole
+ci ./main.go
+go build main.go
+ci .
+go build main.go
+hexo s
+gg
+./main.exe
+go build main.go
+./main.exe
+go build main.go
+./main.exe
+go build main.go
+./main.exe
+sudo ./main.exe
+go build main.go
+./main.exe
+go build main.go
+ls
+cd ..
+rm -rf ./go
+cd goo
+cd go
+rm -rf ./go
+cd ..
+rm -rf ./go
+cd ef
+cd home
+ls
+rm *.zip
+ls
+cat .\temp.md
+ci ./mute.py
+python .\mute.py
+py .\mute.py
+pip install sound
+py .\mute.py
+pip uninstall sound
+pip install windows-sound-manager
+py .\mute.py
+pip install win32api
+mv .\mute.py mute.cs
+ci .\mute.cs
+csc
+py .\temp.py
+pip install pycaw
+py .\temp.py
+clear
+ls
+mv .\temp.py ~\.glaze-wm\triggerMute.py
+cd glaze
+ls
+mkdir
+mkdi sciprts
+mkdi scripts
+mkdir scripts
+ls
+cp *.py .\scripts\
+ci ~/.glaze-wm/config.yaml
+pwd
+cd .\scripts\
+ls
+pwd
+ls
+pip install pyinstaller
+pyinstaller -F -w triggerMute.py
+ls
+cd build\
+ls
+cd .\triggerMute\
+ls
+exp
+cd ..
+ls
+cd ..
+ls
+.\triggerMute.exe
+mv .\triggerMute.exe .\triggerMute.spec
+.\triggerMute.spec
+ls
+dist\triggerMute.exe
+mv dist\triggerMute.exe ./
+ls
+exec C:/Users/24138/.glaze-wm/scripts/trigger.exe
+cd C:/Users/24138/.glaze-wm/scripts/
+ls
+pwd
+pwd | clip
+C:\Users\24138\.glaze-wm\scripts\triggerMute.exe
+~\.glaze-wm\scripts\triggerMute.exe
+ci ./toggleMute.bat
+ci ./shutdown.bat
+mv .\triggerMute.py toggleMute.py
+mv .\triggerMute.exe ./toggleMute.exe
+ci ./shutdown.bat
+ci ~/.glaze-wm/config.yaml
+ls
+pwd
+cd gla
+cd scripts\
+pwd
+gg
+cd ef
+gg
+cd ma
+gg
+cd ef
+sync-dotfiles
+gg
+hexo d
+cls
+ls
+cd dot
+ls
+gg
+cd .glaze-wm\scripts\build\triggerMute\EXE-00.toc
+cd .glaze-wm\scripts\build\triggerMute\
+ls
+cd ..
+ls
+cd ..
+ls
+exp
+cd glaze
+exp
+cd dot
+ls
+gg
+cd dot
+cd ef
+cd ma
+ping donkey
+ssh admin@donkey
+nu
+gg
+cd ef
+glos
+glog
+grb -i HEAD~3
+grb -i HEAD~4
+grb -i HEAD~3
+ssh admin@donkey
+git clone https://github.com/autorope/donkeycar.git
+ci ~/.glaze-wm/config.yaml
+glog
+gg
+ping donkey
+ssh admin@donkey
+py .\hsv_picker.py
+conda create -n donkey python=3.8
+conda activate donkey
+cd ef
+ls
+glog
+cd ef
+ls
+glog
+cd ma
+ls
+glog
+git push -f
+git push -f origin main
+glog
+scoop update *
+scoop update
+clear
+scoop update
+scoop status
+scoop update
+cd wez
+cd ba
+ls
+cati .\100163098_p0.jpg
+cati Arch-Linux-Debian-Ubuntu-os-tan-2297200-wallhere.com.jpg
+clear
+ls
+ll
+cd ef
+ls
+glog
+cd ma
+glog
+git checkout eca8ee1
+git checkout 05e4794
+git checkout
+git switch -
+glog
+git checkout main
+top
+cd ma
+cd ef
+cd roam
+ls
+cd `Microsoft\Windows\Start Menu\`
+exp
+scoop update
+scoop status
+eza
+scoop update
+scoop update eza
+scoop update
+scoop status
+cd nu
+ls
+cd scripts\
+ls
+cd aliases\
+ls
+cat .\eza\eza-aliases.nu
+mkdir scoop
+cd scoop
+vim ./scoop-aliases.nu
+ls
+cd ..
+ls
+vim ./load_scripts.nu
+ss
+su
+sync-dotfiles
+cd dot
+gg
+git push
+glog
+clear
+grb -i HEAD~4
+grb -i HEAD~3
+git push -f
+cd ma
+glog
+ff
+btop
+ff
+ping donkey
+curl donkey
+cd scirpt
+ls
+zi
+ls
+config nu
+su
+ss
+su
+oh-my-posh upgrade
+cd backd
+yy
+ci $nu.config-path
+source $nu.config-path
+open -r $nu.history-path | fzf +s --tac | str trim
+su
+ss
+cd nu
+ls
+ff
+clear
+open -r $nu.history-path | fzf +s --tac | str trim
+top
+cd tcp
+cat ./cli
+cat .\iter_tcp_cli_arith.c
+cat iter_tcp_srv_arith.c
+zi
+gitui
+gg
+cd dot
+cpath
+ggi
+cd nushell
+ls
+vim scripts\aliases\git\git-aliases.nu
+gl
+cd ef
+gl
+clear
+g
+gg
+cd ma
+gg
+tail -f Private\daily\2024.md
+ci Private\daily\2024.md
+gg
+glog
+grb -i HEAD~3
+nfd
+ls | nfd | ci $in.name
+cls
+cim
+cd nu
+cd back
+fzfp
+ps
+ps -ef
+ps --help
+ps -l
+clear
+ps
+open ps
+ps | fzf
+ps | tojson
+ps --help
+nu --version
+nu --help
+no --update
+ps --no-fancy
+ps
+ps | to json
+ps | each {|i| $i | to json --raw} | str join "\n" | fzf  | from json
+ps | each {|i| $i | to json --raw}
+ps | each {|i| $i | to json --raw} | str join "\n" 
+ps | each {|i| $i | to json --raw} | str join "\n" | fzf  | from json
+ps
+killf
+grep
+rg
+rg | ps
+ps | rg
+ps | rg nu
+ls
+zo
+cd yazi
+ls
+ci .\yazi.toml
+yy
+yazi
+la
+lst
+yy
+cd wez
+ls
+ci config\appearance.lua
+yy
+cd tcp
+cat iter_tcp_srv_arith.c
+cat iter_tcp_srv_arith.c | wc -l
+cat iter_tcp_cli_arith.c | wc -l
+yy
+ff
+yy
+git clone https://github.com/BennyOe/tokyo-night.yazi.git ~/.config/yazi/flavors/tokyo-night.yazi
+cd yazi
+ls
+lsa
+lst
+lst .\flavors\
+yy
+ci .
+yy
+cd wez
+yazi
+yy
+cd ef
+yy
+y
+yy
+qq
+yy
+C:\Users\24138\.config\fastfetch\config.jsonc
+sync-dotfiles
+cd dot
+gg
+grb -i HEAD~3
+grb -i HEAD~2
+glog
+grb -i HEAD~1
+glog
+gg
+github
+yy
+cd ef
+hexo s
+heox s
+hexo s
+cd home
+ls
+mkdir learn-git
+ls
+cd learn-git\
+git init
+ls
+vim ./test.md
+gg
+glog
+git reset 9cbba
+git reset --mixed 9cbba
+ls
+gg
+git reset --hard 9cbba
+gg
+grb -i HEAD~0
+glog
+gg
+grb --continue
+grb --edit-todo
+grb --continue
+ls
+glog
+gg
+rm -r .\.git\
+ls
+git init
+ls
+mvn clean install -DskipTests 
+cat .\test.md
+gg
+vim ./test.md
+gg
+grb -i HEAD~1
+grb -i HEAD~0
+grb -i HEAD~2
+grb -i HEAD~1
+git commit --amend
+git rebase --continue
+gg
+vim ./fix.md
+gg
+vim .\test.md
+gg
+grb -i HEAD~3
+git commit --amend
+ls
+gg
+git restore .\fix.md
+ls
+gg
+git vim .\fix.md
+vim ./fix.md
+git commit --amend
+gg
+git commit --amend
+grb --continue
+gg
+cat .\test.md
+cat .\fix.md
+ls
+glog
+grb -i HEAD~2
+grb -i HEAD~4
+grb -i HEAD~3
+grb -i HEAD~1
+grb -i HEAD~2
+gg
+git commit --amend
+grb --continue
+glog
+cat .\fix.md
+glog
+grb -i HEAD~2
+gca
+cd alias
+cd git-ali
+cd .\git\git-aliases.nu
+cat .\git\git-aliases.nu
+gc!
+gg
+grbc
+glog
+cat .\fix.md
+grb -i HEAD~2
+vim ./fix.md
+gg
+grbc
+glog
+git reset --hard 819
+ls
+glog
+grb
+grb -i HEAD~2
+glog
+grb -i HEAD~2
+cat .\fix.md
+vim ./fix.md
+gc!
+cat .\fix.md
+vim ./fix.md
+gc!
+grbc
+gs
+gstat
+git status
+git add fix.md
+gc!
+grbc
+glog
+cat .\fix.md
+glog | get commit subject
+glog | get commit subject | to json
+glog | get commit subject | to table
+glog | get commit subject name
+glog | get commit subject name | from json
+glog | get commit subject name 
+glog | get commit subject name | to json | from json
+glog | get commit subject name | to json 
+glog | get commit subject name 
+glog 
+gloga
+glo
+glola
+glols
+gl
+glg
+glgp
+glgd
+glol
+glod
+glo
+glod
+glols
+glola
+gg
+cd lean
+cd lea
+ls
+glog
+grb -i HEAD~2
+grb --edit-todo
+gg
+grb --edit-todo
+vim ./fix.md
+grb --abort
+ls
+glog
+grb -i HEAD~2
+vim ./fix.md
+git add fix.md
+git commit --amend
+gc!
+grbc
+glog
+gloga
+ci ~/.glaze-wm/config.yaml
+cd ~/
+ls
+cd ~\.glaze-wm\
+cd ..
+exp
+gg
+cd ~
+git clone https://github.com/warden7383/glazeConfig.git
+exp
+pwd
+ls
+mv .\glazeConfig\ .\.glaze-wm
+ls
+ci ~/.glaze-wm/config.yaml
+ci ~\.glaze-wm_bak\config.yaml
+mv .\.glaze-wm\ .\.glaze-wm_bak
+exp
+ci ~\.glaze-wm_bak\config.yaml
+cd dot
+cd d
+cd d:
+ls
+cd ~
+ls
+rm -r .\.glaze-wm1\
+lw
+cd dot
+ls
+glog
+grb -i HEAD~2
+grb -i HEAD~1
+glog
+grb -i HEAD~1
+grb --abort
+grb -i HEAD~2
+git rebase 6e544cd2573419f16b93e727548b57e1490f5564
+git rebase 4d151e2aa8e72e47a7b828e7ebeaf83da6803d0e
+grb -i HEAD~1
+glog
+sync-dotfiles
+gg
+git diff
+gg
+glog
+gg
+ls
+glog
+gg
+git push
+su
+ss
+vim
+cd dot
+cd ma
+gg
+cd ef
+gg
+clear
+ci ~\.glaze-wm\config.yaml
+sync-dotfiles
+cd dot
+gg
+cd dot
+ls
+cd assets\
+exp
+ls
+cd dot
+ls
+la
+ls .\CLI&TUI\
+ls
+ls misc
+gg
+ks
+cd ma
+ci Private\daily\2024.md
+clear
+scoop serach flutter
+scoop search flutter
+si
+cd alias
+ls
+vim scoop\scoop-aliases.nu
+source $nu.config-path
+si flutter
+flutter doctor
+ci ~\.glaze-wm\config.yaml
+cls
+su
+ss
+sst
+ci ~\.glaze-wm\config.yaml
+cd c:
+cd roaming
+ls
+zi
+ls
+vim tokyo-night.omp.json
+ls
+cd go
+ls
+cd pkg
+ls
+sync-dotfiles
+cd dot
+ls
+gg
+cd ma
+gg
+ci Private\daily\2024.md
+ff
+wm
+gg
+vpwd
+flutter doctor
+which android
+ipconfig
+ssh --help
+tldr ssh
+tldr ssh -6
+tldr ssh
+cheat ssh
+ff
+ipconfig
+ping6
+ssh -6
+ssh -6 admin@localhost
+curl ifcfg.me
+ff
+ipconfig
+curl ifcfg.me
+ff
+cd e:\UESTC\Flutter\
+ls
+ff
+curl ifcfg.me
+ff
+wsl -d Arch ff
+cd e:\UESTC\
+ls
+git clone https://github.com/liukanshan1/Gitlet.git
+ls
+cd ef
+ff
+ls
+la
+ls
+ll
+source $nu.config-path
+ll
+ff
+neofetch
+cls
+ls
+cd
+ls
+cat .\.oh-my-posh.nu
+cls
+ls
+ll
+ls
+ll
+ls
+cd wez
+ls
+ci .
+ls
+ff
+cd ef
+hexo s
+sd
+hexo s
+ls
+clear
+ls
+ll
+ls
+oh-my-posh upgrade
+ls
+flutter doctor
+cd env_var
+zi
+ls
+cd .\AndroidSDK\
+ls
+flutter doctor
+sse android
+scoop home android-clt
+si android-clt
+flutter doctor
+scoop uninstall android-clt
+clear
+ls
+pwd
+cpath
+flutter config --android-sdk D:\envir_vars\AndroidSDK
+flutter
+ls
+flutter config --android-sdk D:\envir_vars\AndroidSDK
+flutter config --android-sdk D:\envir_vars\AndroidSDK
+flutter doctor
+flutter doctor --android-licenses
+path/to/sdkmanager --install "cmdline-tools;latest"
+sdkmanager 
+si android-clt
+flutter doctor 
+clear
+cd 
+ls
+cd env
+ls
+flutter doctor 
+sdkmanager 
+sdkmanager --install "cmdlines-tools;latest"
+sdkmanager --install "cmdline-tools;latest"
+flutter doctor 
+flutter doctor --android-licenses
+flutter doctor 
+flutter doctor -v
+sdkmanager --install "cmdline-tools;latest"
+flutter doctor -v
+ci ~\.glaze-wm\config.yaml
+scoop bucket
+scoop bucket list
+scoop bucket rm java
+scoop bucket rm versions
+scoop app list
+scoop list
+scoop rm dorado
+scoop bucket rm dorado
+clear
+scoop bucket list
+sbl
+cd alias
+ls
+cd scoop\
+scoop bucket add apps https://github.com/kkzzhizhou/scoop-apps
+su
+ss
+sst
+scoop update
+scoop search nu
+scoop search nushell
+scoop update nushell
+scoop list
+clear
+cd nu
+exp
+sync-dotfiles
+cd dot
+ff
+vim .\scoop-aliases.nu
+sync-dotfiles
+gg
+scoop install Nushell
+nu --v
+nu -version
+nu -V
+nu --version
+clear
+ls
+ll
+nu --version
+scoop list
+scoop uninstall nu
+ci $nu.config-path
+vim $nu.config-path
+config nu --default
+vim $nu.config-path
+ci -v
+cd nu
+ls
+ci .
+ls
+cd ~\.ssh\
+ls
+overlay new
+overlay
+gb
+cd ef
+gb
+cd dot
+ls
+gg
+$env.NU_LIB_DIRS
+which Nushell
+scoop list
+scoop uninstall nu
+ls
+nu --version
+cd apps
+ls
+zi
+cd ..
+ls
+cd Nushell\0.94.2\
+la
+ls *.exe
+pwd
+ff
+ll
+ff
+cls
+ls
+la
+ls
+ll
+gstat
+clear
+ls
+ll
+la
+ll
+ls
+ff
+ls
+ll
+la
+ls
+ff
+sync-dotfiles
+cd dot
+gg
+su
+sst
+sse conda
+scoop uninstall miniconda
+scoop install miniconda
+conda -v
+si miniconda
+scoop uninstall miniconda
+scoop install miniconda
+scoop install miniconda3
+conda -v
+miniconda
+conda -v
+conda activate donkey
+conda init
+conda activate donkey
+zi
+ls
+ff
+ls
+exp
+vim .\modules\conda.nu
+use .\modules\conda.nu
+conda activate donkey
+clear
+conda list
+conda activate python
+conda env list
+conda activate base
+clear
+vim .\modules\conda.nu
+ls
+conda deactivate base
+conda deactivate 
+use .\modules\conda.nu
+conda activate base
+ls
+conda list
+clear
+conda deactivate 
+vim .\modules\conda.nu
+use .\modules\conda.nu
+conda activate base
+conda deactivate 
+ls
+ll
+claer
+cls
+ls
+la
+ll
+lla
+ls
+la
+ll
+ls
+eza -l
+eza -ls
+eza -s
+eza -a
+eza -l
+eza -ll
+eza -help
+eza --help
+eza --g
+eza --G
+eza -G
+eza --git
+cd ef
+eza --git
+eza --git --icons
+cdma
+cd ma
+eza --git --icons
+cd dot
+cd modules\
+zi
+vim .\modules\venv.nu
+vim .\modules\mod.nu
+vim .\config.nu
+ls
+la
+ll
+sync-dotfiles
+cd dot
+gg
+exp
+cd roaming
+exp
+cd nushell
+exp
+cd dot
+exp
+gg
+cd ma
+gg
+ff
+ll
+su
+sst
+cd ef
+hexo d
+cls
+gg
+ff
+ls
+conda deactivate 
+clear
+ll
+clear
+ls
+clear
+ll
+hexo s
+cd tcp
+ls
+cat .\iter_tcp_cli_arith.c
+cd ef
+hexo s
+cd tcp
+ci .
+gg
+cd ef
+gg
+ci ~\.glaze-wm\config.yaml
+cd tcp
+ci .
+ff
+fastfetch
+ff
+fastfetch
+fastfetch --config software
+fastfetch --config fastfetch --config linus
+fastfetch --config linus
+zi
+ls
+zi
+ls
+cd fastfetch\
+ls
+exp
+fastfetch --config ganyu
+ff
+clear
+fastfetch 
+ff
+fastfetch --help
+ff
+ff --config windows
+ff --config nyarch
+ff --config arch
+clear
+sync-dotfiles
+cd dot
+gg
+cd pro
+cd home
+ls
+git clone https://github.com/Berkeley-CS61B/skeleton-sp21.git
+ls
+la
+ls
+la
+ls
+git clone https://github.com/dwyl/flutter-todo-list-tutorial.git
+cd .\flutter-todo-list-tutorial\
+ls
+cd ..
+cd -
+ci .
+flutter pub get
+flutter devices
+flutter pub get
+flutter run
+l
+flutter run
+sdkmanager --v
+flutter doctor -v
+clear
+ls
+ll
+gg
+flutter run
+flutter run --stacktrace
+cd ..
+git clone https://github.com/asjqkkkk/flutter-todos.git
+cd flutter-todos\
+flutter run 
+cd ..
+rm .\flutter-todo-list-tutorial\
+rm -r .\flutter-todo-list-tutorial\
+git clone https://github.com/LiveLikeCounter/Flutter-Todolist.git
+cd Flutter-Todolist\
+flutter run 
+sse dart
+si dart 3.0.0
+si dart=3.0.0
+oh-my-posh upgrade
+dart migrate
+dart --v
+dart --version
+dart migrate
+flutter dart migrate
+flutter pub upgrade
+co .
+ci .
+dart migrate
+cd ..\flutter-todo-list-tutorial\
+flutter run
+cd ..
+git clone https://github.com/FabianVarela/crud_todo_app.git
+cd crud_todo_app\
+ci ~\.glaze-wm\config.yaml
+flutter run
+ci .
+cd ..
+git clone https://github.com/Merrit/adventure_list.git
+cd adventure_list\
+flutter run
+flutter run
+flutter pub add intl:^0.19.0
+flutter run
+ci .
+flutter run
+cd ..
+ls
+cd flutter-todos\
+flutter run
+ci .
+cd ..
+ls
+rm ./.*flutter*
+rm ./*flutter*
+rm -r ./*flutter*
+clear
+ls
+exp
+cd ..
+scoop list
+scoop uninstall flutter
+cd uest
+ls
+rm Flutter\
+rm -r Flutter\
+ls
+git clone https://github.com/serbelga/Todometer-KMP.git
+cd Todometer-KMP\
+ls
+ci .
+zi
+vim tokyo-night.omp.json
+ci tokyo-night.omp.json
+cd ef
+ls
+cd ma
+ls
+ll
+ls
+cd ue
+ls
+cd home
+ls
+cd skeleton-sp21\
+ls
+ci .
+wsl --shutdown Ubuntu
+wsl --shutdown Arch
+cd ef
+cd ma
+ll
+cd ef
+gg
+cd dot
+gg
+su
+ss
+sst
+cd ma
+gg
+tail Private\daily\2024.md
+ff
+cd home
+ls
+cd skeleton-sp21\
+ls
+ci .
+ping donkey
+cd tcp
+cat iter_tcp_srv_arith.c
+cd ef
+hexo d
+cd dot
+gg
+sync-dotfiles
+gg
+sync-dotfiles
+gg
+cd ma
+tail Private\daily\2024.md
+vim Private\daily\2024.md
+cls
+vim Private\daily\2024.md
+cd ef
+ls
+g
+cd dot
+gg
+cd tcp
+glog
+gg
+su
+sst
+su busybox
+cd ma
+tail Private\daily\2024.md
+vim Private\daily\2024.md
+gg
+su nushell
+cd ef
+cd dot
+gg
+oh-my-posh upgrade
+gg
+ls
+su
+flutter --ver
+s list
+scoop list
+scoop uninstall flutter
+cd apps
+ls
+rm flutter\3.22.2\
+rm -r flutter\3.22.2\
+rm -rf flutter\3.22.2\
+exp
+scoop uninstall flutter
+scoop list
+scoop uninstall miniconda
+scoop list
+cd ues
+ls
+cd Todometer-KMP\
+git pull
+ls
+cd tcp
+vim .\iter_tcp_srv_arith.c
+su
+sst
+su eza
+ls
+la
+ll
+ls
+ll
+la
+ls
+cd ma
+ls
+tail Private\daily\2024.md
+more ./Private\daily\2024.md
+less Private\daily\2024.md
+less --help
+tail -f Private\daily\2024.md
+make busybox-menuconfig
+busybox-menuconfig
+su
+komorebi start
+komorebi
+komorebic start
+Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name 'LongPathsEnabled' -Value 1
+ls
+cd whkdrc
+ls
+cd .\whkdrc
+ls
+cd .\whkdrc
+cd .\scoop\
+cd ../
+cd ./whkdrc
+cd .\whkdrc
+ls
+vim .\whkdrc
+cd profile
+ls
+cd apps
+ls
+cd .\komorebi\
+ls
+cd 0.1.27\
+ls
+cd config
+ls
+komorebic quickstart
+vim ~\komorebi.json
+ls
+cd ..
+which zebar
+komorebe shutdown
+ls
+cd ~
+zi
+ls
+cd zebar
+ls
+zebar.exe
+zebar help
+cd .\resources\
+ls
+cat .\sample-config.yaml
+ls
+.\start.sh
+top
+cd ~
+ls
+cd .\.glzr\
+ls
+cd zebar
+ls
+ci .\config.yaml
+ci ~\.glaze-wm\config.yaml
+cd zebar
+ls
+zi
+ls
+.\Zebar.exe
+cd .\resources\
+.\start.bat
+top
+ls
+zi
+cd zebar
+ls
+cd ..
+ls
+rm -r Zebar\
+ls
+rm -r Zebar\
+sudo rm -r zebar
+rm -rf zebar
+exp
+pwsh
+scoop uninstall komorebi
+ls
+cd ~
+ls
+rm .\komorebi.json
+ls
+rm .\.glzr\
+exp
+ci ~\.glaze-wm\config.yaml
+ci --v
+ff
+cd kome
+ls
+scoop install komorebi
+komorebi start
+komorebi quickstart
+komorebi start
+komorebic quickstart
+komorebic start --whkd
+top
+komorebic stop
+code
+ci .
+scoop uninstall komorebi
+nu
+sse v
+sse viva
+sse vivaldi
+si vivaldi
+vpwd
+ci ~\.glaze-wm\config.yaml
+hexo clean
+hexo d
+ci ~\.glaze-wm\config.yaml
+cd apps
+exp
+scoop uninstall vivaldi
+cd tcp
+cat .\iter_tcp_srv_arith.c
+cat .\iter_tcp_cli_arith.c
+iwr -useb https://padsalatushal.github.io/edge.bat | iex
+scoop install edge
+scoop search edge
+ci ~\.glaze-wm\config.yaml
+clear
+ls
+clear
+ls
+ll
+cd ma
+cat Private\daily\2024.md
+tail -f Private\daily\2024.md
+cat Private\daily\2024.md
+ls
+cd C:\Users\24138\AppData\Local\Vivaldi\User Data\Default
+cd `C:\Users\24138\AppData\Local\Vivaldi\User Data\Default`
+ls
+cd Bookmarks
+cat .\Bookmarks
+vpwd
+scoop serach buttery
+scoop search buttery
+su
+clear
+ls
+gg
+cd ef
+gg
+cd dot
+gg
+sync-dotfiles
+gg
+su
+sst
+scoop home cyberduck
+scoop uninstall edge
+su miniconda
+su miniconda3
+cd ma
+tail -f Private\daily\2024.md
+su
+sst
+su
+sl
+scoop list
+cd alias
+ls
+vim scoop\scoop-aliases.nu
+ls
+sl
+su
+cd ma
+gg
+top
+su
+su fastfetch
+ff
+ls
+cd .gnupg\
+ls
+ll
+oh-my-posh upgrade
+py .\driving_situation_track.py
+.\venv\Scripts\activate
+ls
+.\venv\Scripts\activate
+.\venv\Scripts\activate.bat
+clear
+py =v
+rm -r .\venv\
+D:/envir_vars/scoop/apps/miniconda3/current/Scripts/activate
+conda activate base
+conda init
+conda activate base
+conda create -n .c4 python=3.9
+cd .\jt2024\
+conda create -n .c4 python=3.9
+conda activate .c4
+ci $nu.config-path
+conda activate .c4
+conda init
+conda init nu
+conda init nushell
+miniconda 
+miniconda3
+conda activate .c4
+cd nushell
+use .\modules\conda.nu
+conda activate .c4
+D:/envir_vars/scoop/apps/miniconda3/current/Scripts/activate
+conda activate base
+conda activate .c4
+source $nu.config-path
+conda activate .c4
+su
+sst
+sl
+vim $nu.config-path
+cd ma
+ll
+gg
+vpwd
+cd ma
+cd `e:\OneDrive - 商业版\`
+ls
+cd .\Archives\markdown_notes\Efterklang.github.io\
+cd ..\Markdown\
+nu
+clear
+cd local
+cd Microsoft\OneDrive\
+cd .\settings\
+ls
+exp
+zi
+ls
+gg
+tail -f Private\daily\2024.md
+tail Private\daily\2024.md
+cat Private\daily\2024.md
+zi ef
+nu
+scoop install Jetbrains Mono Nerd Font
+scoop search jetbrains
+scoop install Jetbrainsmono-NF-Mono
+ls
+clear
+ls
+cd `e:\OneDrive - 商业版\`
+ls
+cat Archives\markdown_notes\Markdown\Private\daily\2024.md
+clear
+ls
+vim $nu.config-path
+ci $nu.config-path
+sync-dotfiles
+su
+sst
+sse radon
+scoop install monaspaceradon
+su
+zoxide edit
+cd ef
+gg
+cd ma
+gg
+cd mar
+clear
+ls
+gg
+tail Private\daily\2024.md
+cd
+su
+oh-my-posh upgrade
+ls
+sl
+ci ~\.glaze-wm\config.yaml
+gg
+git push
+git push origin main
+git pull
+git pull origin main
+cls
+git push -f origin main
+cd dot
+cd `e:\OneDrive - 商业版\`
+cd Private\dotfiles\
+exp
+ls
+gg
+clear
+glog
+ls
+cd .git
+ls
+cd ..
+git pull origin main
+git init
+rm ./.git
+rm -r ./.git
+ls
+git init
+git remote add origin git@github.com:Efterklang/dotfiles.git
+glog
+git pull origin main
+gg
+exp
+ls
+git pull origin main
+git pull --rebase origin main
+gg
+cd Home
+ls
+cd ..
+ls
+mkdir cs61b-sp18
+cd cs61b-sp18\
+ls
+git init
+ls
+git clone https://github.com/PKUFlyingPig/CS61B.git --depth=1
+ls
+cd CS61B\
+ls
+cd ef
+gg
+cd ef
+gg
+cd dot
+ls
+git init
+git remote add origin git@github.com:Efterklang/dotfiles.git
+git pull
+gg
+git-pull(1)
+git pull origin main
+cat CLI&TUI\shells\oh-my-posh\tokyo-night.omp.json
+git pull --rebase origin main
+gg
+git pull origin main
+git config pull.rebase true
+git pull origin main
+gg
+ci .
+gg
+git push origin main
+gg
+grb -i HEAD~1
+grb -i HEAD~2
+gg
+grb -i HEAD~2
+gg
+claer
+cls
+ff
+ll
+cd ef
+clear
+cd dot
+ci .
+gg
+sync-dotfiles
+gg
+ls
+.\.glaze-wm\
+ci .\config.yaml
+gg
+guinit
+gi
+ggi
+gg
+glog
+gg
+fzf
+cd ~
+ls
+cd .config
+ls
+which fzf
+btop
+top
+ls
+cd whkdrc
+ls
+rm whkdrc
+ls
+ls .\fastfetch\
+cd appdata
+ls
+cd local
+ls
+$XDG_CONFIG_HOME
+cd dot
+ls
+ls CLI&TUI\
+cd CLI&TUI\bottom\
+ls
+bottom
+btm
+cd ~
+ls
+cd config
+ls
+top --help
+top --config
+top --v
+cd share
+ls
+top
+cd config
+ls
+mkdir btop
+cd btop
+top
+mkdir themes
+top
+git clone https://github.com/catppuccin/btop.git
+ls
+mv .\btop\themes\ ./
+ls
+ls themes\
+cd themes\
+ls
+pwd
+cd ..
+ls
+rm -r btop
+ls
+cd themes\
+ls
+top
+pwd
+top
+pwd
+ls
+btop
+top
+cd btop
+ls
+cd ..
+ls
+zi
+ls
+cd .\btop\
+ls
+cd .\1.0.4\
+ls
+ci .\btop.conf
+top
+top
+cd ..
+cd bat
+ls
+cd 0.24.0\
+ls
+cat --h
+cat --help
+cd appdata
+ls
+cd Roaming\bat\
+ls
+cd config
+ls
+cd -
+ls
+vim .\config
+bat --list-themes
+mkdir -p "$(bat --config-dir)/themes"
+bat cache --build
+bat --list-themes
+ls
+cat `.\Catppuccin Frappe.tmTheme`
+su
+clear
+cd ef
+ls
+gg
+cd wez
+ls
+pwd
+vim .\config\appearance.lua
+vim config\fonts.lua
+ls
+cd backdrops\
+ls
+rm GreenHairGirl.png
+yy
+cd nushell
+ls
+cd git
+cd app
+ls
+zi
+ls
+cd git
+ls
+cd .\2.45.2\
+ls
+cd bin
+ls
+which file.exe
+which file
+ls
+cd ..
+ls
+cd current\
+ls
+cd bin
+ls
+git -v
+ls
+la
+ll
+scoop install unar jq poppler fd
+which file
+ls
+pwd
+cd C:\Program Files
+ls
+ls *git*
+cd git
+cd -
+su git
+sst
+yy
+cd bacl
+cd back
+yy
+cd git
+cd bin
+ls
+exp
+cd ..
+ls
+cd usr\bin\
+pwd | clip
+vim env.nu
+cd back
+yy
+ci .\keymap.toml
+yy
+ci .\yazi.toml
+yy
+sync-dotfiles
+cd dot
+gg
+cd config
+ls
+cd dot
+ls
+ls .\CLI&TUI\
+cd nushell
+ls
+la
+ls modules\
+la modules\
+la scripts\
+la themes
+cd dot
+ls
+ls CLI&TUI\
+sync-dotfiles
+gg
+sync-dotfiles
+gg
+sync-dotfiles
+gg
+ci $nu.config-path
+sync-dotfiles
+cd dot
+ff
+gg
+cd ~\.config\yazi\
+ls
+rm .\theme.toml_bak
+ls
+ls flavors\
+cd flavors\
+ls
+rm README.md .gitignore
+ls
+rm LICENSE
+rm *.json *.yaml
+ls
+gg
+la
+rm -r ./.git
+ls
+la
+clear
+lat
+lt
+lst
+exp
+sync-dotfiles
+gg
+ls
+ci ~\.glaze-wm\config.yaml
+clear
+ls
+ff
+clear
+ls
+clear
+ff
+clear
+ll
+cd ef
+zi
+which window
+which windowterminal
+windows terminal
+terminal
+which wt
+ll
+cd ef
+ll
+cd ef
+which nu
+zi
+exp
+ls
+ci ~\.glaze-wm\config.yaml
+sse windows terminal
+ci $nu.config-path
+sse windows-terminal
+sse windows-terminal-preview
+si windows-terminal-preview
+clear
+ci ~\.glaze-wm\config.yaml
+clear
+ff
+clear
+ff
+clear
+clear
+ff
+clear
+ff
+fastfetch
+ff
+ll
+clear
+ll
+ff
+clear
+cd ef
+cd dot
+gg
+glog
+clear
+ggi
+gg
+yy
+su
+sst
+clear
+ff
+ci ~\.glaze-wm\config.yaml
+cd ef
+cd e:
+exp 
+ff
+clear
+ff
+curl -N http://127.0.0.1:23330/subscribe-player-status
+curl http://127.0.0.1:23330/status
+cd ~\Documents\
+ls
+cd `Custom Office Templates\`
+ls
+git clone https://github.com/catppuccin/powerpoint-slides.git
+ls
+mv .\powerpoint-slides\Catppuccin\ ./
+ls
+rm powerpoint-slides\
+rm -r powerpoint-slides\
+git clone https://github.com/mininet/mininet.git
+ls
+py .\__main__.py
+..\bin\mn
+wsl
+./mn
+exec ./mn
+cd wez
+ci .
+clear
+ff
+clear
+ll
+clear
+ff
+wezterm -v
+icat
+cati
+icat
+cd back
+cati 100163098_p0.jpg
+clear
+ll
+cl
+cls
+clear
+cl
+cls
+clear
+ll
+ff
+sse files
+su
+sst
+su
+irm "https://christitus.com/win" | iex
+sse github
+si github-cli
+gh --help
+gh repo
+gh auth
+gh auth login
+gh repo 
+gh repo view
+cd ef
+gh repo view
+cd ma
+gh repo view
+cd dot
+gh repo view
+gh --help
+tldr gh
+wsl -d Ubuntu24.04
+wsl --list
+clear
+py .\demo.py
+wsl
+wsl -d Ubuntu24.04
+sse pwsh
+si powershell-preview
+sync-dotfiles
+edit config
+config nu
+sync-dotfiles
+cd dot
+gg
+yy
+config nu
