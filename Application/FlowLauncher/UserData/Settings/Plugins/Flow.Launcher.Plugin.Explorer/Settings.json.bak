@@ -1,0 +1,43 @@
+{
+  "MaxResult": 100,
+  "QuickAccessLinks": [],
+  "IndexSearchExcludedSubdirectoryPaths": [
+    {
+      "Path": "C:\\Program Files (x86)",
+      "Type": 1
+    },
+    {
+      "Path": "C:\\Program Files",
+      "Type": 1
+    },
+    {
+      "Path": "C:\\Users\\24138\\node_modules",
+      "Type": 1
+    }
+  ],
+  "EditorPath": "",
+  "FolderEditorPath": "",
+  "ShellPath": "cmd",
+  "UseLocationAsWorkingDir": false,
+  "ShowWindowsContextMenu": true,
+  "DefaultOpenFolderInFileManager": false,
+  "SearchActionKeyword": "*",
+  "SearchActionKeywordEnabled": true,
+  "FileContentSearchActionKeyword": "doc:",
+  "FileContentSearchKeywordEnabled": true,
+  "PathSearchActionKeyword": "*",
+  "PathSearchKeywordEnabled": false,
+  "IndexSearchActionKeyword": "*",
+  "IndexSearchKeywordEnabled": false,
+  "QuickAccessActionKeyword": "*",
+  "QuickAccessKeywordEnabled": false,
+  "WarnWindowsSearchServiceOff": true,
+  "IndexSearchEngine": 1,
+  "PathEnumerationEngine": 1,
+  "ContentSearchEngine": 1,
+  "EverythingInstalledPath": null,
+  "SortOption": 1,
+  "EnableEverythingContentSearch": false,
+  "EverythingEnabled": true,
+  "EverythingSearchFullPath": false
+}

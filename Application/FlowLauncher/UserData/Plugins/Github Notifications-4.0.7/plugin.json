@@ -1,0 +1,12 @@
+{
+  "ID": "9B66F9CD1BF54CBBADCF1ACB378E33BB",
+  "ActionKeyword": "gn",
+  "Name": "Github Notifications",
+  "Description": "View your github notifications",
+  "Author": "Garulf",
+  "Version": "4.0.7",
+  "Language": "python",
+  "Website": "https://github.com/Garulf/github-notifications",
+  "IcoPath": "./icon.png",
+  "ExecuteFileName": "run.py"
+}

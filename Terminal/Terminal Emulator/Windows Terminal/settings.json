@@ -1,0 +1,186 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema-preview",
+    "actions": [
+        {
+            "command": {
+                "action": "copy",
+                "singleLine": false
+            },
+            "id": "User.copy.644BA8F2",
+            "keys": "ctrl+c"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+w"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+tab"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+t"
+        },
+        {
+            "command": "paste",
+            "id": "User.paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "id": "User.splitPane.A6751878",
+            "keys": "ctrl+/"
+        },
+        {
+            "command": {
+                "action": "commandPalette"
+            },
+            "id": "User.commandPalette.D3F0B923",
+            "keys": "ctrl+p"
+        },
+        {
+            "command": "find",
+            "id": "User.find",
+            "keys": "ctrl+f"
+        },
+        {
+            "command": "closePane",
+            "id": "User.closePane",
+            "keys": "alt+w"
+        },
+        {
+            "command": {
+                "action": "nextTab"
+            },
+            "id": "User.nextTab.0",
+            "keys": "alt+d"
+        },
+        {
+            "command": "openNewTabDropdown",
+            "id": "User.openNewTabDropdown",
+            "keys": "ctrl+n"
+        },
+        {
+            "command": {
+                "action": "closeTab"
+            },
+            "id": "User.closeTab.0",
+            "keys": "ctrl+w"
+        },
+        {
+            "command": {
+                "action": "newTab"
+            },
+            "id": "User.newTab.5DEADB41",
+            "keys": "ctrl+t"
+        }
+    ],
+    "centerOnLaunch": true,
+    "copyFormatting": "none",
+    "copyOnSelect": true,
+    "defaultProfile": "{7800db3a-723c-4039-8829-89875f7cf460}",
+    "initialPosition": ",",
+    "launchMode": "focus",
+    "newTabMenu": [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles": {
+        "defaults": {
+            "backgroundImage": "C:\\Users\\24138\\Pictures\\WallPaper\\gallery.jpg",
+            "backgroundImageOpacity": 0.9,
+            "colorScheme": "Tokyo Night",
+            "cursorShape": "filledBox",
+            "font": {
+                "face": "Maple Mono NF CN",
+                "size": 10
+            },
+            "opacity": 80,
+            "startingDirectory": "%USERPROFILE%",
+            "useAcrylic": true
+        },
+        "list": [
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": true,
+                "name": "\u547d\u4ee4\u63d0\u793a\u7b26"
+            },
+            {
+                "adjustIndistinguishableColors": "indexed",
+                "backgroundImage": "C:\\Users\\24138\\Pictures\\WallPaper\\gallery.jpg",
+                "backgroundImageOpacity": 0.4,
+                "backgroundImageStretchMode": "uniformToFill",
+                "elevate": false,
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "hidden": false,
+                "intenseTextStyle": "bright",
+                "name": "PowerShell",
+                "padding": "2",
+                "source": "Windows.Terminal.PowershellCore",
+                "startingDirectory": null
+            },
+            {
+                "guid": "{acbafd15-cbbb-5bb3-8a61-bed446ff4b83}",
+                "hidden": false,
+                "name": "Ubuntu 24.04 LTS",
+                "source": "CanonicalGroupLimited.Ubuntu24.04LTS_79rhkp1fndgsc"
+            },
+            {
+                "guid": "{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
+                "hidden": false,
+                "name": "Arch",
+                "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "commandline": "nu.exe",
+                "font": {
+                    "face": "Maple Mono NF CN",
+                    "size": 10
+                },
+                "guid": "{7800db3a-723c-4039-8829-89875f7cf460}",
+                "hidden": false,
+                "name": "Nushell"
+            },
+            {
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell"
+            }
+        ]
+    },
+    "schemes": [
+        {
+            "background": "#1A1B2C",
+            "black": "#414868",
+            "blue": "#7AA2F7",
+            "brightBlack": "#414868",
+            "brightBlue": "#7AA2F7",
+            "brightCyan": "#7DCFFF",
+            "brightGreen": "#73DACA",
+            "brightPurple": "#BB9AF7",
+            "brightRed": "#F7768E",
+            "brightWhite": "#C0CAF5",
+            "brightYellow": "#E0AF68",
+            "cursorColor": "#C0CAF5",
+            "cyan": "#7DCFFF",
+            "foreground": "#A9B1DC",
+            "green": "#73DACA",
+            "name": "Tokyo Night",
+            "purple": "#BB9AF7",
+            "red": "#F7768E",
+            "selectionBackground": "#28344A",
+            "white": "#C0CAF5",
+            "yellow": "#E0AF68"
+        }
+    ],
+    "theme": "dark",
+    "themes": [],
+    "useAcrylicInTabRow": true
+}

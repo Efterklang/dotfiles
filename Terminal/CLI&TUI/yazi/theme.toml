@@ -1,0 +1,156 @@
+[flavor]
+# use = "tokyo-night"
+use = "catppuccin-mocha"
+
+[icon]
+
+rules = [
+	# Programming
+	{ name = "*.c"    , text = "", fg = "#599eff" },
+	{ name = "*.cpp"  , text = "", fg = "#519aba" },
+	{ name = "*.class", text = "", fg = "#cc3e44" },
+	{ name = "*.cs"   , text = "󰌛", fg = "#596706" },
+	{ name = "*.css"  , text = "", fg = "#42a5f5" },
+	{ name = "*.elm"  , text = "", fg = "#4391d2" },
+	{ name = "*.fish" , text = "", fg = "#4d5a5e" },
+	{ name = "*.go"   , text = "", fg = "#519aba" },
+	{ name = "*.h"    , text = "", fg = "#a074c4" },
+	{ name = "*.hpp"  , text = "", fg = "#a074c4" },
+	{ name = "*.html" , text = "", fg = "#e44d26" },
+	{ name = "*.jar"  , text = "", fg = "#cc3e44" },
+	{ name = "*.java" , text = "", fg = "#cc3e44" },
+	{ name = "*.js"   , text = "", fg = "#F1F134" },
+	{ name = "*.jsx"  , text = "", fg = "#20c2e3" },
+	{ name = "*.lua"  , text = "", fg = "#51a0cf" },
+	{ name = "*.nix"  , text = "", fg = "#7ebae4" },
+	{ name = "*.nu"   , text = ">", fg = "#3aa675" },
+	{ name = "*.php"  , text = "", fg = "#a074c4" },
+	{ name = "*.py"   , text = "", fg = "#ffbc03" },
+	{ name = "*.rb"   , text = "", fg = "#701516" },
+	{ name = "*.rs"   , text = "", fg = "#dea584" },
+	{ name = "*.sbt"  , text = "", fg = "#4d5a5e" },
+	{ name = "*.scala", text = "", fg = "#cc463e" },
+	{ name = "*.scss" , text = "", fg = "#f55385" },
+	{ name = "*.sh"   , text = "", fg = "#4d5a5e" },
+	{ name = "*.swift", text = "", fg = "#e37933" },
+	{ name = "*.ts"   , text = "", fg = "#519aba" },
+	{ name = "*.tsx"  , text = "", fg = "#1354bf" },
+	{ name = "*.vim"  , text = "", fg = "#019833" },
+	{ name = "*.vue"  , text = "󰡄", fg = "#8dc149" },
+
+	# Text
+	{ name = "*.conf", text = "", fg = "#6d8086" },
+	{ name = "*.ini" , text = "", fg = "#6d8086" },
+	{ name = "*.json", text = "", fg = "#cbcb41" },
+	{ name = "*.kdl" , text = "", fg = "#6d8086" },
+	{ name = "*.md"  , text = "", fg = "#ffffff" },
+	{ name = "*.toml", text = "", fg = "#ffffff" },
+	{ name = "*.txt" , text = "", fg = "#89e051" },
+	{ name = "*.yaml", text = "", fg = "#6d8086" },
+	{ name = "*.yml" , text = "", fg = "#6d8086" },
+
+	# Archives
+	{ name = "*.7z" , text = "" },
+	{ name = "*.bz2", text = "" },
+	{ name = "*.gz" , text = "" },
+	{ name = "*.rar", text = "" },
+	{ name = "*.tar", text = "" },
+	{ name = "*.xz" , text = "" },
+	{ name = "*.zip", text = "" },
+
+	# Images
+	{ name = "*.HEIC", text = "", fg = "#a074c4" },
+	{ name = "*.avif", text = "", fg = "#a074c4" },
+	{ name = "*.bmp" , text = "", fg = "#a074c4" },
+	{ name = "*.gif" , text = "", fg = "#a074c4" },
+	{ name = "*.ico" , text = "", fg = "#cbcb41" },
+	{ name = "*.jpeg", text = "", fg = "#a074c4" },
+	{ name = "*.jpg" , text = "", fg = "#a074c4" },
+	{ name = "*.png" , text = "", fg = "#a074c4" },
+	{ name = "*.svg" , text = "", fg = "#FFB13B" },
+	{ name = "*.webp", text = "", fg = "#a074c4" },
+
+	# Movies
+	{ name = "*.avi" , text = "", fg = "#FD971F" },
+	{ name = "*.mkv" , text = "", fg = "#FD971F" },
+	{ name = "*.mov" , text = "", fg = "#FD971F" },
+	{ name = "*.mp4" , text = "", fg = "#FD971F" },
+	{ name = "*.webm", text = "", fg = "#FD971F" },
+
+	# Audio
+	{ name = "*.aac" , text = "", fg = "#66D8EF" },
+	{ name = "*.flac", text = "", fg = "#66D8EF" },
+	{ name = "*.m4a" , text = "", fg = "#66D8EF" },
+	{ name = "*.mp3" , text = "", fg = "#66D8EF" },
+	{ name = "*.ogg" , text = "", fg = "#66D8EF" },
+	{ name = "*.wav" , text = "", fg = "#66D8EF" },
+
+	# Documents
+	{ name = "*.csv" , text = "", fg = "#89e051" },
+	{ name = "*.doc" , text = "", fg = "#185abd" },
+	{ name = "*.doct", text = "", fg = "#185abd" },
+	{ name = "*.docx", text = "", fg = "#185abd" },
+	{ name = "*.dot" , text = "", fg = "#185abd" },
+	{ name = "*.ods" , text = "", fg = "#207245" },
+	{ name = "*.ots" , text = "", fg = "#207245" },
+	{ name = "*.pdf" , text = "", fg = "#b30b00" },
+	{ name = "*.pom" , text = "", fg = "#cc3e44" },
+	{ name = "*.pot" , text = "", fg = "#cb4a32" },
+	{ name = "*.potx", text = "", fg = "#cb4a32" },
+	{ name = "*.ppm" , text = "", fg = "#a074c4" },
+	{ name = "*.ppmx", text = "", fg = "#cb4a32" },
+	{ name = "*.pps" , text = "", fg = "#cb4a32" },
+	{ name = "*.ppsx", text = "", fg = "#cb4a32" },
+	{ name = "*.ppt" , text = "", fg = "#cb4a32" },
+	{ name = "*.pptx", text = "", fg = "#cb4a32" },
+	{ name = "*.xlc" , text = "", fg = "#207245" },
+	{ name = "*.xlm" , text = "", fg = "#207245" },
+	{ name = "*.xls" , text = "", fg = "#207245" },
+	{ name = "*.xlsm", text = "", fg = "#207245" },
+	{ name = "*.xlsx", text = "", fg = "#207245" },
+	{ name = "*.xlt" , text = "", fg = "#207245" },
+
+	# Lockfiles
+	{ name = "*.lock", text = "", fg = "#bbbbbb" },
+
+	# Misc
+	{ name = "*.bin", text = "", fg = "#9F0500" },
+	{ name = "*.exe", text = "", fg = "#9F0500" },
+	{ name = "*.pkg", text = "", fg = "#9F0500" },
+
+	# Dotfiles
+	{ name = ".DS_Store"     , text = "", fg = "#41535b" },
+	{ name = ".bashprofile"  , text = "", fg = "#89e051" },
+	{ name = ".bashrc"       , text = "", fg = "#89e051" },
+	{ name = ".gitattributes", text = "", fg = "#41535b" },
+	{ name = ".gitignore"    , text = "", fg = "#41535b" },
+	{ name = ".gitmodules"   , text = "", fg = "#41535b" },
+	{ name = ".vimrc"        , text = "", fg = "#019833" },
+	{ name = ".zprofile"     , text = "", fg = "#89e051" },
+	{ name = ".zshenv"       , text = "", fg = "#89e051" },
+	{ name = ".zshrc"        , text = "", fg = "#89e051" },
+
+	# Named files
+	{ name = "COPYING"      , text = "󰿃", fg = "#cbcb41" },
+	{ name = "Containerfile", text = "󰡨", fg = "#458ee6" },
+	{ name = "Dockerfile"   , text = "󰡨", fg = "#458ee6" },
+	{ name = "LICENSE"      , text = "󰿃", fg = "#d0bf41" },
+
+	# Directories
+	{ name = ".config/"    , text = "" },
+	{ name = ".git/"       , text = "" },
+	{ name = "Desktop/"    , text = "" },
+	{ name = "Development/", text = "" },
+	{ name = "Documents/"  , text = "" },
+	{ name = "Downloads/"  , text = "" },
+	{ name = "Library/"    , text = "" },
+	{ name = "Movies/"     , text = "" },
+	{ name = "Music/"      , text = "" },
+	{ name = "Pictures/"   , text = "" },
+	{ name = "Public/"     , text = "" },
+	{ name = "Videos/"     , text = "" },
+
+	# Default
+	{ name = "*" , text = "" },
+	{ name = "*/", text = "" },
+]

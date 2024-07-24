@@ -1,0 +1,12 @@
+﻿{
+  "ID": "915f45f7747440f7828621bd8ec0f298",
+  "ActionKeyword": "*",
+  "Name": "DuckDuckGo !bang",
+  "Description": "Search on thousands of sites directly, with DuckDuckGo bangs",
+  "Author": "Ioannis G. (@JohnTheGr8)",
+  "Version": "1.3.3",
+  "Language": "fsharp",
+  "Website": "https://github.com/JohnTheGr8/Flow.Plugin.Bang",
+  "IcoPath": "icon.png",
+  "ExecuteFileName": "Flow.Plugin.Bang.dll"
+}

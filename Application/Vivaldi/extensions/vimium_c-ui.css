@@ -1,0 +1,196 @@
+/* #ui */ /* do not delete this line */
+
+.R {
+  --bg-color: #11111b;
+  --select-color: #7e83a8;
+
+  --input-bg-color: #222222;
+  --input-text-color: #f38ba8;
+
+  --li-source-color: #bfbfbf;
+  --li-title-color: #ffffff;
+  --li-url-color: #67a3f3;
+
+  --match-text-color: inherit;
+
+  --font-family: "Maple Hand";
+}
+
+.R.HM .LH,
+.HUD,
+.HUD.D,
+.HUD:after,
+.HUD.D:after {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  text-shadow: none;
+  color: var(--input-text-color);
+  border: 0;
+  border-radius: 5px;
+  box-shadow: none;
+  font-size: 14px;
+  font-weight: var(--hint-font-weight);
+  background-image: none;
+}
+
+.HUD,
+.HUD.D,
+.HUD:after,
+.HUD.D:after {
+  border-radius: 5px 5px 0px 0px;
+  font-weight: var(--hud-font-weight);
+}
+
+.R.HM .LH .MC  {
+  font-weight: bold;
+  color: var(--input-text-color);
+  display: none;
+}
+
+/* #find */ /* do not delete this line */
+
+.r {
+  /* PLACE DESIRED THEME HERE (2) */
+}
+
+.r,
+.r.D {
+  background-color: var(--bg-color);
+  color: var(--input-text-color);
+  margin: 0;
+  padding-left: 10px;
+  font-size: 14px;
+  height: 30px;
+  box-shadow: none;
+  border: 0px;
+}
+
+.r #s,
+.r #i {
+  font-weight: bold;
+}
+
+/* #omni */ /* do not delete this line */
+
+:root {
+  --bg-color: #11111b;
+  --select-color: #7e83a8;
+
+  --input-bg-color: #1a1b26;
+  --input-text-color: #9ba3db;
+
+  --li-source-color: #bfbfbf;
+  --li-title-color: #9ba3db;
+  --li-url-color: #67a3f3;
+
+  --match-text-color: inherit;
+
+  --font-family: "Maple Hand";
+}
+
+body,
+body:after  {
+  color: var(--bg-color);
+  border-radius: 5px;
+  border: none;
+  z-index: 1;
+  box-shadow: none;
+  text-align: left;
+  font-family: "Maple Hand";
+  margin: 0;
+  opacity: 1 !important;
+}
+
+#toolbar {
+  position: relative;
+  margin: auto 0;
+}
+
+#bar  {
+  padding: 5px;
+  padding-bottom: none;
+  background-color: var(--bg-color);
+  border-radius: 5px 5px 0px 0px;
+  border: none;
+  box-shadow: 0;
+}
+
+#bar input  {
+  color: var(--input-text-color);
+  padding-left: 10px;
+  font-size: 14px;
+  height: 30px;
+  box-shadow: none;
+  background-color: var(--input-bg-color);
+  border: 0px;
+}
+
+#list  {
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+}
+
+#list .item  {
+  padding: 0px 15px 0px 15px;
+  border-bottom: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  height: 38px;
+}
+
+.bottom a  {
+  font-family: var(--font-family);
+  white-space: nowrap;
+  color: var(--li-url-color);
+}
+
+.title  {
+  font-family: var(--font-family);
+  font-size: 10pt;
+  color: var(--li-title-color);
+  margin-left: 10px;
+  font-weight: normal;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  overflow: visible;
+}
+
+.top match  {
+  color: var(--li-title-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.top .label {
+  padding-left: 10px;
+}
+
+.top .icon {
+  overflow: visible;
+  display: block;
+  padding-right: 28px;
+  margin: auto;
+}
+
+.bottom {
+  margin-left: 20px;
+}
+
+.bottom match  {
+  color: var(--li-url-color) !important;
+  font-weight: bold;
+}
+
+.item:hover {
+  background-color: var(--hover-color) !important;
+}
+.item.s,
+.item:first-of-type  {
+  background-color: var(--select-color);
+}

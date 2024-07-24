@@ -1,0 +1,25 @@
+{
+  "LastIndexTime": "2024-06-29T14:08:21.128984+08:00",
+  "ProgramSources": [],
+  "DisabledProgramSources": [],
+  "CustomSuffixes": [],
+  "CustomProtocols": [],
+  "BuiltinSuffixesStatus": {
+    "exe": true,
+    "appref-ms": true,
+    "lnk": true
+  },
+  "BuiltinProtocolsStatus": {
+    "steam": true,
+    "epic": true,
+    "http": false
+  },
+  "UseCustomSuffixes": false,
+  "UseCustomProtocols": false,
+  "EnableStartMenuSource": true,
+  "EnableDescription": false,
+  "HideAppsPath": true,
+  "EnableRegistrySource": true,
+  "EnablePathSource": false,
+  "EnableUWP": true
+}

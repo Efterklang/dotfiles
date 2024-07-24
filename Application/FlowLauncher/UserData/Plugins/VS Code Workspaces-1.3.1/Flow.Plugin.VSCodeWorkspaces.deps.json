@@ -1,0 +1,271 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0/win-x64",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {},
+    ".NETCoreApp,Version=v7.0/win-x64": {
+      "Flow.Plugin.VSCodeWorkspaces/1.0": {
+        "dependencies": {
+          "Flow.Launcher.Plugin": "4.0.1",
+          "JetBrains.Annotations": "2022.3.1",
+          "Microsoft.Data.Sqlite": "7.0.1",
+          "System.Drawing.Common": "7.0.0"
+        },
+        "runtime": {
+          "Flow.Plugin.VSCodeWorkspaces.dll": {}
+        },
+        "resources": {
+          "cs-CZ/Flow.Plugin.VSCodeWorkspaces.resources.dll": {
+            "locale": "cs-CZ"
+          },
+          "de-DE/Flow.Plugin.VSCodeWorkspaces.resources.dll": {
+            "locale": "de-DE"
+          },
+          "es-ES/Flow.Plugin.VSCodeWorkspaces.resources.dll": {
+            "locale": "es-ES"
+          },
+          "fr-FR/Flow.Plugin.VSCodeWorkspaces.resources.dll": {
+            "locale": "fr-FR"
+          },
+          "hu-HU/Flow.Plugin.VSCodeWorkspaces.resources.dll": {
+            "locale": "hu-HU"
+          },
+          "it-IT/Flow.Plugin.VSCodeWorkspaces.resources.dll": {
+            "locale": "it-IT"
+          },
+          "ja-JP/Flow.Plugin.VSCodeWorkspaces.resources.dll": {
+            "locale": "ja-JP"
+          },
+          "ko-KR/Flow.Plugin.VSCodeWorkspaces.resources.dll": {
+            "locale": "ko-KR"
+          },
+          "nl-NL/Flow.Plugin.VSCodeWorkspaces.resources.dll": {
+            "locale": "nl-NL"
+          },
+          "pl-PL/Flow.Plugin.VSCodeWorkspaces.resources.dll": {
+            "locale": "pl-PL"
+          },
+          "pt-BR/Flow.Plugin.VSCodeWorkspaces.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "pt-PT/Flow.Plugin.VSCodeWorkspaces.resources.dll": {
+            "locale": "pt-PT"
+          },
+          "ru-RU/Flow.Plugin.VSCodeWorkspaces.resources.dll": {
+            "locale": "ru-RU"
+          },
+          "sv-SE/Flow.Plugin.VSCodeWorkspaces.resources.dll": {
+            "locale": "sv-SE"
+          },
+          "tr-TR/Flow.Plugin.VSCodeWorkspaces.resources.dll": {
+            "locale": "tr-TR"
+          },
+          "zh-CN/Flow.Plugin.VSCodeWorkspaces.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "zh-TW/Flow.Plugin.VSCodeWorkspaces.resources.dll": {
+            "locale": "zh-TW"
+          }
+        }
+      },
+      "Flow.Launcher.Plugin/4.0.1": {
+        "dependencies": {
+          "JetBrains.Annotations": "2022.3.1",
+          "PropertyChanged.Fody": "3.4.0"
+        },
+        "runtime": {
+          "lib/net7.0-windows7.0/Flow.Launcher.Plugin.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Fody/6.5.1": {},
+      "JetBrains.Annotations/2022.3.1": {
+        "runtime": {
+          "lib/netstandard2.0/JetBrains.Annotations.dll": {
+            "assemblyVersion": "4242.42.42.42",
+            "fileVersion": "2022.3.1.0"
+          }
+        }
+      },
+      "Microsoft.Data.Sqlite/7.0.1": {
+        "dependencies": {
+          "Microsoft.Data.Sqlite.Core": "7.0.1",
+          "SQLitePCLRaw.bundle_e_sqlite3": "2.1.2"
+        }
+      },
+      "Microsoft.Data.Sqlite.Core/7.0.1": {
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.2"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Data.Sqlite.dll": {
+            "assemblyVersion": "7.0.1.0",
+            "fileVersion": "7.0.122.55819"
+          }
+        }
+      },
+      "Microsoft.Win32.SystemEvents/7.0.0": {},
+      "PropertyChanged.Fody/3.4.0": {
+        "dependencies": {
+          "Fody": "6.5.1"
+        },
+        "runtime": {
+          "lib/netstandard2.1/PropertyChanged.dll": {
+            "assemblyVersion": "3.4.0.0",
+            "fileVersion": "3.4.0.0"
+          }
+        }
+      },
+      "SQLitePCLRaw.bundle_e_sqlite3/2.1.2": {
+        "dependencies": {
+          "SQLitePCLRaw.lib.e_sqlite3": "2.1.2",
+          "SQLitePCLRaw.provider.e_sqlite3": "2.1.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {
+            "assemblyVersion": "2.1.2.1721",
+            "fileVersion": "2.1.2.1721"
+          }
+        }
+      },
+      "SQLitePCLRaw.core/2.1.2": {
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {
+            "assemblyVersion": "2.1.2.1721",
+            "fileVersion": "2.1.2.1721"
+          }
+        }
+      },
+      "SQLitePCLRaw.lib.e_sqlite3/2.1.2": {
+        "native": {
+          "runtimes/win-x64/native/e_sqlite3.dll": {
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "SQLitePCLRaw.provider.e_sqlite3/2.1.2": {
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.2"
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/SQLitePCLRaw.provider.e_sqlite3.dll": {
+            "assemblyVersion": "2.1.2.1721",
+            "fileVersion": "2.1.2.1721"
+          }
+        }
+      },
+      "System.Drawing.Common/7.0.0": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "7.0.0"
+        }
+      },
+      "System.Memory/4.5.3": {}
+    }
+  },
+  "libraries": {
+    "Flow.Plugin.VSCodeWorkspaces/1.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Flow.Launcher.Plugin/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-H1o+3+pBulMkanC/esmjnJ+o/8bKHqb0KqAMQaVMnazosaFSHXH8W3OI1J4yjQjvrWMtn+F9DdyjtjuaU8js0g==",
+      "path": "flow.launcher.plugin/4.0.1",
+      "hashPath": "flow.launcher.plugin.4.0.1.nupkg.sha512"
+    },
+    "Fody/6.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DEw9rPG5vrpaK4vPPze0f4q6Zd0mfzjGNKy49nrmINkftIHpkyf8KH+uC/qF8y6v1askPWu9NbJS9bkmN5wXaA==",
+      "path": "fody/6.5.1",
+      "hashPath": "fody.6.5.1.nupkg.sha512"
+    },
+    "JetBrains.Annotations/2022.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-11nsS3+lFICGkztVs9PP2NRItxf9fF+qD6xEW/T0YGto52zj07wseUeBdMAU1ah9HNVTDZyRC1u4NWdtJScwhw==",
+      "path": "jetbrains.annotations/2022.3.1",
+      "hashPath": "jetbrains.annotations.2022.3.1.nupkg.sha512"
+    },
+    "Microsoft.Data.Sqlite/7.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pw1G6cLHmmRuM5BRBNN+g6dpwoZvuzxQWJUAaa+Z5NrRUn7FhV9BCzT8H8s/3VYGmeYJRimBcNyd2J8J/fQtkw==",
+      "path": "microsoft.data.sqlite/7.0.1",
+      "hashPath": "microsoft.data.sqlite.7.0.1.nupkg.sha512"
+    },
+    "Microsoft.Data.Sqlite.Core/7.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-g7wJrpQXJFtmT8CaKFyd9rqG/M4TfwnAka8HwdNLeR2TxhsCAm13IO7rln5NkIpFlkNR5YZw0uEDY03lmnFJEQ==",
+      "path": "microsoft.data.sqlite.core/7.0.1",
+      "hashPath": "microsoft.data.sqlite.core.7.0.1.nupkg.sha512"
+    },
+    "Microsoft.Win32.SystemEvents/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2nXPrhdAyAzir0gLl8Yy8S5Mnm/uBSQQA7jEsILOS1MTyS7DbmV1NgViMtvV1sfCD1ebITpNwb1NIinKeJgUVQ==",
+      "path": "microsoft.win32.systemevents/7.0.0",
+      "hashPath": "microsoft.win32.systemevents.7.0.0.nupkg.sha512"
+    },
+    "PropertyChanged.Fody/3.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IAZyq0uolKo2WYm4mjx+q7A8fSGFT0x2e1s3y+ODn4JI0kqTDoo9GF2tdaypUzRFJZfdMxfC5HZW9QzdJLtOnA==",
+      "path": "propertychanged.fody/3.4.0",
+      "hashPath": "propertychanged.fody.3.4.0.nupkg.sha512"
+    },
+    "SQLitePCLRaw.bundle_e_sqlite3/2.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ilkvNhrTersLmIVAcDwwPqfhUFCg19Z1GVMvCSi3xk6Akq94f4qadLORQCq/T8+9JgMiPs+F/NECw5uauviaNw==",
+      "path": "sqlitepclraw.bundle_e_sqlite3/2.1.2",
+      "hashPath": "sqlitepclraw.bundle_e_sqlite3.2.1.2.nupkg.sha512"
+    },
+    "SQLitePCLRaw.core/2.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-A8EBepVqY2lnAp3a8jnhbgzF2tlj2S3HcJQGANTYg/TbYbKa8Z5cM1h74An/vy0svhfzT7tVY0sFmUglLgv+2g==",
+      "path": "sqlitepclraw.core/2.1.2",
+      "hashPath": "sqlitepclraw.core.2.1.2.nupkg.sha512"
+    },
+    "SQLitePCLRaw.lib.e_sqlite3/2.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zibGtku8M4Eea1R3ZCAxc86QbNvyEN17mAcQkvWKBuHvRpMiK2g5anG4R5Be7cWKSd1i6baYz8y4dMMAKcXKPg==",
+      "path": "sqlitepclraw.lib.e_sqlite3/2.1.2",
+      "hashPath": "sqlitepclraw.lib.e_sqlite3.2.1.2.nupkg.sha512"
+    },
+    "SQLitePCLRaw.provider.e_sqlite3/2.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lxCZarZdvAsMl2zw9bXHrXK6RxVhB4b23iTFhCOdHFhxfbsxLxWf+ocvswJwR/9Wh/E//ddMi+wJGqUKV7VwoA==",
+      "path": "sqlitepclraw.provider.e_sqlite3/2.1.2",
+      "hashPath": "sqlitepclraw.provider.e_sqlite3.2.1.2.nupkg.sha512"
+    },
+    "System.Drawing.Common/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KIX+oBU38pxkKPxvLcLfIkOV5Ien8ReN78wro7OF5/erwcmortzeFx+iBswlh2Vz6gVne0khocQudGwaO1Ey6A==",
+      "path": "system.drawing.common/7.0.0",
+      "hashPath": "system.drawing.common.7.0.0.nupkg.sha512"
+    },
+    "System.Memory/4.5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
+      "path": "system.memory/4.5.3",
+      "hashPath": "system.memory.4.5.3.nupkg.sha512"
+    }
+  }
+}

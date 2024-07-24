@@ -1,0 +1,8 @@
+{
+  "name": "flow-launcher-translate-plugin",
+  "dependencies": {
+    "@vitalets/google-translate-api": "^8.0.0",
+    "clipboardy": "^3.0.0"
+  },
+  "type": "module"
+}

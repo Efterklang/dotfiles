@@ -1,0 +1,346 @@
+# ====================================================
+# *                       Colors                     *
+# ====================================================
+rosewater: &rosewater "#f5e0dc"
+flamingo: &flamingo "#f2cdcd"
+pink: &pink "#f5c2e7"
+mauve: &mauve "#cba6f7"
+teal: &teal "#94e2d5"
+sky: &sky "#89dceb"
+sapphire: &sapphire "#74c7ec"
+text: &text "#cdd6f4"
+surface0: &surface0 "#313244"
+base: &base "#1e1e2e"
+mantle: &mantle "#181825"
+crust: &crust "#11111b"
+# TAG top bar right component
+lavender: &lavender "#b4befe"
+light-turquoise: &turquoise "#b4cfff"
+tokyo-night-blue: &tokyo-night-blue "#82aaff"
+olive-green: &olive-green "#c3d08d"
+red: &red "#f38ba8"
+# ====================================================
+# *                     Separator                    *
+# ====================================================
+Separator_color: &seperator_color "#98a4f22e"
+Separator_size: &seperator_size "25px"
+Separator: &seperator "|"
+ign_pname:
+  &ig_pname "/Flow.Launcher|ScreenClippingHost|Clash for Windows|[Ss]amsung.*|.*Phone.*|.*QQ.*|.*聊天记录.*|WeChat|
+  .*[Pp]hoto.*|图片查看器|[Ee]xplorer|Files|[Ss]etting.*|SnippingTool|.*[Cc]amera.*|.*.jpg|.*.png|idea64/"
+flt_pname: &flt_pname "/Todo|Taskmgr|ScreenClippingHost|Feishu/"
+
+bar:
+  height: "28px"
+  position: "top"
+  opacity: 1.00
+  background: *crust
+  foreground: *mauve
+  font_family: "Monaspace Radon Var,Maple Mono NF CN"
+  font_size: "12px"
+  padding: "4px 8px"
+  offset_x: 0
+  offset_y: 0
+  border_radius: 10
+  border_color: "#11111b2e"
+  border_width: "1"
+
+  components_left:
+    - type: "text"
+      text: "󰣇 Efterklang"
+      foreground: *teal
+      # left_click_command: "exec "
+    - type: "text"
+      text: *seperator
+      font_size: *seperator_size
+      foreground: *seperator_color
+    - type: "music"
+      foreground: *lavender
+      label_not_playing: "  Music"
+      label_paused: "󰝛 {song_title}"
+      label_playing: "󰥠 {song_title}"
+      max_title_length: 30
+    - type: "text"
+      text: *seperator
+      font_size: *seperator_size
+      foreground: *seperator_color
+    - type: "text"
+      text: "󰖚 "
+      font_size: 18px
+      foreground: *mauve
+    - type: "clock"
+      time_formatting: "H:mm:ss ddd"
+      foreground: *mauve
+    - type: "text"
+      text: *seperator
+      font_size: *seperator_size
+      foreground: *seperator_color
+    # - type: "window title"
+
+  components_center:
+    - type: "workspaces"
+      default_workspace_foreground: *lavender
+      focused_workspace_foreground: *teal
+      default_workspace_background: "transparent"
+      focused_workspace_background: "transparent"
+      displayed_workspace_background: "transparent"
+
+  components_right:
+    - type: "binding mode"
+      foreground: *red
+      # NOTE margin top right down left
+      margin: "0px 10px 0px 0px"
+    - type: "tiling direction"
+      foreground: *lavender
+      font_size: 20px
+      label_horizontal: "󰯌" #⮂ 󰚉 ⬓ 󰯌
+      label_vertical: "󰯋" #⮁ 󰚈 󱂪 󰯋
+    - type: "text"
+      text: *seperator
+      font_size: *seperator_size
+      foreground: *seperator_color
+    - type: "weather"
+      # chengdu: 30.3936N 104.0348E
+      latitude: 30.3936
+      longitude: 104.0348
+      foreground: *turquoise
+      label: "{temperature_celsius}°C"
+      label_sun: "<attr fs='14'>☀️</attr>{temperature_celsius}°C"
+      label_moon: "<attr fs='14'>🌙</attr>{temperature_celsius}°C"
+      label_cloud_moon: "<attr fs='14'>🌙 </attr>{temperature_celsius}°C"
+      label_cloud_sun: "<attr fs='14'>⛅</attr>{temperature_celsius}°C"
+      label_cloud_moon_rain: "<attr fs='14'>🌙 </attr>{temperature_celsius}°C"
+      label_cloud_sun_rain: "<attr fs='14'>🌦️</attr>{temperature_celsius}°C"
+      label_cloud_rain: "<attr fs='14'>🌧️</attr>{temperature_celsius}°C"
+      label_snow_flake: "<attr fs='14'>❄️</attr>{temperature_celsius}°C"
+      label_thunderstorm: "<attr fs='14'>⚡</attr>{temperature_celsius}°C"
+      label_cloud: "<attr fs='14'>☁️</attr>{temperature_celsius}°C"
+    - type: "text"
+      text: *seperator
+      font_size: *seperator_size
+      foreground: *seperator_color
+    - type: "cpu"
+      foreground: *tokyo-night-blue
+      label: "<attr fs='15'> </attr>{percent_usage}󱉸"
+      margin: "0px 8px 0px 0px"
+      refresh_interval_ms: 1000
+    - type: "gpu"
+      foreground: *tokyo-night-blue
+      label: "<attr fs='15'>󰍛 </attr>{percent_usage}󱉸"
+      margin: "0px 8px 0px 0px"
+      refresh_interval_ms: 1000
+    - type: "memory"
+      foreground: *tokyo-night-blue
+      label: "<attr fs='13'>  </attr>{percent_usage}󱉸"
+      refresh_interval_ms: 1000
+    - type: "text"
+      text: *seperator
+      font_size: *seperator_size
+      foreground: *seperator_color
+    - type: "network"
+      label_no_internet: " "
+      label_ethernet: "󰈁"
+      label_wifi_strength_0: "󰤭 "
+      label_wifi_strength_25: "󰤟 "
+      label_wifi_strength_50: "󰤢 "
+      label_wifi_strength_75: "󰤥 "
+      label_wifi_strength_100: "󰤨 "
+      margin: "0 7px 3px 0"
+      font_size: 18px
+      foreground: *olive-green
+    - type: "volume"
+      label_low: "<attr fs='15'>🔊</attr>{volume_level}"
+      label_medium: "<attr fs='15'>🔊</attr>{volume_level}"
+      label_high: "<attr fs='15'>🔊</attr>{volume_level}"
+      label_mute: "<attr fs='15'>🔕</attr>{volume_level}"
+      foreground: *olive-green
+      # margin: "0px 0px 0px 0px"
+    - type: text
+      text: "󱉸 "
+      foreground: *olive-green
+      left_click_command: "exec 'C:/Users/24138/.glaze-wm/scripts/toggleMute.exe'"
+    - type: "battery"
+      # background: *surface0
+      foreground: *olive-green
+      label_draining: "<attr fs='15'>󰂂 </attr>{battery_level}󱉸"
+      label_power_saver: "<attr fs='15'>󰌪 </attr>{battery_level}󱉸"
+      label_charging: "<attr fs='15'>󰂅 </attr>{battery_level}󱉸"
+    - type: "text"
+      text: *seperator
+      font_size: *seperator_size
+      foreground: *seperator_color
+    - type: "clock"
+      time_formatting: " yyyy-M-d "
+      foreground: *red
+    - type: "text"
+      text: "  "
+      foreground: *red
+      font_size: "14px"
+      margin: "0px 10px 0px 0px"
+      left_click_command: "exec taskmgr"
+      # left_click_command: "exec '%userprofile%/.glaze-wm/scripts/shutdown.bat'"
+      right_click_command: ""
+
+general:
+  focus_follows_cursor: false
+  cursor_follows_focus: false
+  toggle_workspace_on_refocus: true
+  show_floating_on_top: false
+  floating_window_move_amount: "5%"
+  center_new_floating_windows: true
+  # window transition animations (on minimize, close, etc). Set to 'unchanged'
+  # to make no setting changes.
+  window_animations: "unchanged"
+
+gaps:
+  inner_gap: "2"
+  outer_gap: "1"
+
+# Highlight active/inactive windows with a colored border.
+focus_borders:
+  active:
+    enabled: true
+    color: *tokyo-night-blue
+
+  inactive:
+    enabled: false
+    color: "#8087a2"
+
+workspaces:
+  - name: "1"
+    display_name: " "
+    keep_alive: true
+  - name: "2"
+    display_name: " "
+  - name: "3"
+    display_name: "󰨞 "
+  - name: "4"
+    display_name: "󰨊 "
+  - name: "5"
+    display_name: "󰇩 "
+  - name: "6"
+    display_name: " "
+  - name: "7"
+    display_name: " "
+
+window_rules:
+  # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
+  - command: "set floating"
+    match_class_name: "#32770"
+
+  - command: "ignore"
+    match_process_name: *ig_pname
+
+  - command: "set floating"
+    match_process_name: *flt_pname
+
+  - command: "move to workspace 2"
+    match_process_name: "/WeChat|Feishu/"
+
+  - command: "move to workspace 3"
+    match_title: /.*[Cc]ode.*/
+
+  - command: "move to workspace 4"
+    match_process_name: "/wezterm-gui|WindowsTerminal/"
+
+  - commands: ["move to workspace 5", resize borders 0px -7px -7px -7px]
+    match_process_name: "vivaldi"
+
+  - commands: ["move to workspace 6", resize borders 0px -7px -7px -7px]
+    match_process_name: "/[sS]team/"
+
+  - commands: ["move to workspace 7"]
+    match_process_name: "/lx-music-desktop/"
+
+binding_modes:
+  - name: "view"
+    keybindings:
+      # Resize focused window by a percentage or pixel amount.
+      - command: "resize width -2%"
+        bindings: ["H", "Left"]
+      - command: "resize width +2%"
+        bindings: ["L", "Right"]
+      - command: "resize height +2%"
+        bindings: ["K", "Up"]
+      - command: "resize height -2%"
+        bindings: ["J", "Down"]
+      # Move focused window in a given direction.
+      - command: "move left"
+        binding: "Alt+A"
+      - command: "move right"
+        binding: "Alt+D"
+      - command: "move up"
+        binding: "Alt+W"
+      - command: "move down"
+        binding: "Alt+D"
+      - command: "tiling direction toggle"
+        binding: "Alt+V"
+      # Press enter/escape to return to default keybindings.
+      - command: "binding mode none"
+        bindings: ["Escape", "Enter"]
+  - name: "lock"
+    keybindings:
+      - command: "binding mode none"
+        bindings: ["Alt+Z"]
+
+keybindings:
+  - command: "binding mode view"
+    binding: "Alt+C"
+  - command: "binding mode lock"
+    binding: "Alt+Z"
+  - command: "toggle floating"
+    binding: "Alt+Space"
+  - command: "tiling direction toggle"
+    binding: "Alt+V"
+  - command: "reload config"
+    binding: "Alt+Shift+C"
+  - command: "set minimized"
+    binding: "Alt+M"
+  - command: "exec D:/envir_vars/scoop/shims/wtp.exe"
+    binding: "Ctrl+Enter"
+  # Change focus tab
+  - command: "focus left"
+    binding: "Alt+H"
+  - command: "focus right"
+    binding: "Alt+L"
+  - command: "focus up"
+    binding: "Alt+K"
+  - command: "focus down"
+    binding: "Alt+J"
+  # Change focus to a workspace defined in `workspaces` config.
+  - command: "focus workspace 1"
+    binding: "Alt+1"
+  - command: "focus workspace 2"
+    binding: "Alt+2"
+  - command: "focus workspace 3"
+    binding: "Alt+3"
+  - command: "focus workspace 4"
+    binding: "Alt+4"
+  - command: "focus workspace 5"
+    binding: "Alt+5"
+  - command: "focus workspace 6"
+    binding: "Alt+6"
+  - command: "focus workspace next"
+    binding: "Alt+0"
+  - command: "focus workspace prev"
+    binding: "Alt+9"
+
+    # Focus the next/previous workspace defined in `workspaces` config.
+  - command: "focus workspace next"
+    binding: "Alt+Shift+H"
+  - command: "focus workspace prev"
+    binding: "Alt+Shift+L"
+
+  # Move focused window to a workspace defined in `workspaces` config.
+  - commands: ["move to workspace 1", focus workspace 1]
+    binding: "Alt+Shift+1"
+  - commands: ["move to workspace 2", focus workspace 2]
+    binding: "Alt+Shift+2"
+  - commands: ["move to workspace 3", focus workspace 3]
+    binding: "Alt+Shift+3"
+  - commands: ["move to workspace 4", focus workspace 4]
+    binding: "Alt+Shift+4"
+  - commands: ["move to workspace 5", focus workspace 5]
+    binding: "Alt+Shift+5"
+  - commands: ["move to workspace 6", focus workspace 6]
+    binding: "Alt+Shift+6"

@@ -1,0 +1,23 @@
+body:
+  - type: textBlock
+    attributes:
+      name: description
+      description: >
+        Search and launch you Steam games library!
+  - type: input
+    attributes:
+      name: steam_path
+      label: "Steam Executable Directory:"
+      description: Location of steam.exe
+  - type: checkbox
+    attributes:
+      name: show_on_empty_search
+      label: "Show all games with empty search"
+      defaultValue: "true"
+      description: "Shows all games when search Query is empty and the Action Keyword is used"
+  - type: checkbox
+    attributes:
+      name: Debug
+      label: "Debug"
+      defaultValue: "false"
+      description: "Enable Debug logging"
