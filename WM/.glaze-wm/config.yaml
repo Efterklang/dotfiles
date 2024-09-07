@@ -1,6 +1,10 @@
-# ====================================================
-# *                       Colors                     *
-# ====================================================
+# ██╗   ██╗ █████╗ ██████╗ ██╗ █████╗ ██████╗ ██╗     ███████╗███████╗
+# ██║   ██║██╔══██╗██╔══██╗██║██╔══██╗██╔══██╗██║     ██╔════╝██╔════╝
+# ██║   ██║███████║██████╔╝██║███████║██████╔╝██║     █████╗  ███████╗
+# ╚██╗ ██╔╝██╔══██║██╔══██╗██║██╔══██║██╔══██╗██║     ██╔══╝  ╚════██║
+#  ╚████╔╝ ██║  ██║██║  ██║██║██║  ██║██████╔╝███████╗███████╗███████║
+#   ╚═══╝  ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚══════╝╚══════╝
+
 rosewater: &rosewater "#f5e0dc"
 flamingo: &flamingo "#f2cdcd"
 pink: &pink "#f5c2e7"
@@ -13,25 +17,31 @@ surface0: &surface0 "#313244"
 base: &base "#1e1e2e"
 mantle: &mantle "#181825"
 crust: &crust "#11111b"
-# TAG top bar right component
 lavender: &lavender "#b4befe"
 light-turquoise: &turquoise "#b4cfff"
 tokyo-night-blue: &tokyo-night-blue "#82aaff"
 olive-green: &olive-green "#c3d08d"
 red: &red "#f38ba8"
-# ====================================================
-# *                     Separator                    *
-# ====================================================
+
 Separator_color: &seperator_color "#98a4f22e"
 Separator_size: &seperator_size "25px"
 Separator: &seperator "|"
+
 ign_pname:
-  &ig_pname "/Flow.Launcher|ScreenClippingHost|Clash for Windows|[Ss]amsung.*|.*Phone.*|.*QQ.*|.*聊天记录.*|WeChat|
-  .*[Pp]hoto.*|图片查看器|[Ee]xplorer|Files|[Ss]etting.*|SnippingTool|.*[Cc]amera.*|.*.jpg|.*.png|idea64/"
+  &ig_pname "Flow.Launcher|ScreenClippingHost|Clash.*|[Ss]amsung.*|.*Phone.*|.*QQ.*|.*聊天记录.*|WeChat|
+  .*[Pp]hoto.*|Photos|图片查看器|[Ee]xplorer|Files|[Ss]etting.*|SnippingTool|
+  .*[Cc]amera.*|idea64|lx-music-desktop"
+ign_title: &ign_title "/.*jpg|.*.png|.*.webp|.*[Ss]etting.*/"
 flt_pname: &flt_pname "/Todo|Taskmgr|ScreenClippingHost|Feishu/"
 
+# ███████╗███████╗████████╗████████╗██╗███╗   ██╗ ██████╗ ███████╗
+# ██╔════╝██╔════╝╚══██╔══╝╚══██╔══╝██║████╗  ██║██╔════╝ ██╔════╝
+# ███████╗█████╗     ██║      ██║   ██║██╔██╗ ██║██║  ███╗███████╗
+# ╚════██║██╔══╝     ██║      ██║   ██║██║╚██╗██║██║   ██║╚════██║
+# ███████║███████╗   ██║      ██║   ██║██║ ╚████║╚██████╔╝███████║
+# ╚══════╝╚══════╝   ╚═╝      ╚═╝   ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝
+
 bar:
-  height: "28px"
   position: "top"
   opacity: 1.00
   background: *crust
@@ -137,17 +147,6 @@ bar:
       text: *seperator
       font_size: *seperator_size
       foreground: *seperator_color
-    - type: "network"
-      label_no_internet: " "
-      label_ethernet: "󰈁"
-      label_wifi_strength_0: "󰤭 "
-      label_wifi_strength_25: "󰤟 "
-      label_wifi_strength_50: "󰤢 "
-      label_wifi_strength_75: "󰤥 "
-      label_wifi_strength_100: "󰤨 "
-      margin: "0 7px 3px 0"
-      font_size: 18px
-      foreground: *olive-green
     - type: "volume"
       label_low: "<attr fs='15'>🔊</attr>{volume_level}"
       label_medium: "<attr fs='15'>🔊</attr>{volume_level}"
@@ -228,11 +227,14 @@ window_rules:
   - command: "set floating"
     match_class_name: "#32770"
 
+  - command: "set floating"
+    match_process_name: *flt_pname
+
   - command: "ignore"
     match_process_name: *ig_pname
 
-  - command: "set floating"
-    match_process_name: *flt_pname
+  - command: "ignore"
+    match_title: *ign_title
 
   - command: "move to workspace 2"
     match_process_name: "/WeChat|Feishu/"
@@ -249,8 +251,12 @@ window_rules:
   - commands: ["move to workspace 6", resize borders 0px -7px -7px -7px]
     match_process_name: "/[sS]team/"
 
-  - commands: ["move to workspace 7"]
-    match_process_name: "/lx-music-desktop/"
+# ██╗  ██╗███████╗██╗   ██╗██████╗ ██╗███╗   ██╗██████╗ ███████╗
+# ██║ ██╔╝██╔════╝╚██╗ ██╔╝██╔══██╗██║████╗  ██║██╔══██╗██╔════╝
+# █████╔╝ █████╗   ╚████╔╝ ██████╔╝██║██╔██╗ ██║██║  ██║███████╗
+# ██╔═██╗ ██╔══╝    ╚██╔╝  ██╔══██╗██║██║╚██╗██║██║  ██║╚════██║
+# ██║  ██╗███████╗   ██║   ██████╔╝██║██║ ╚████║██████╔╝███████║
+# ╚═╝  ╚═╝╚══════╝   ╚═╝   ╚═════╝ ╚═╝╚═╝  ╚═══╝╚═════╝ ╚══════╝
 
 binding_modes:
   - name: "view"
