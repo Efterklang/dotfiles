@@ -1,0 +1,176 @@
+# A TOML linter such as https://taplo.tamasfe.dev/ can use this schema to validate your config.
+# If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
+"$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
+
+[manager]
+linemode = "none"
+ratio = [1, 4, 3]
+scrolloff = 5
+show_hidden = true
+show_symlink = true
+sort_by = "alphabetical"
+sort_dir_first = true
+sort_reverse = false
+sort_sensitive = false
+
+[preview]
+cache_dir = ""
+image_filter = "triangle"
+image_quality = 75
+max_height = 900
+max_width = 600
+sixel_fraction = 15
+tab_size = 2
+ueberzug_offset = [0, 0, 0, 0]
+ueberzug_scale = 1
+
+[opener]
+edit = [
+	{ run = '${EDITOR:=vi} "$@"', desc = "$EDITOR", block = true, for = "unix" },
+	{ run = 'nvim "%*"', block = true, desc = "nvim", for = "windows" },
+	{ run = 'code-insiders "%*"', orphan = true, desc = "ci", for = "windows" },
+]
+extract = [
+	{ run = 'unar "$1"', desc = "Extract here", for = "unix" },
+	{ run = 'unar "%1"', desc = "Extract here", for = "windows" },
+]
+open = [
+	{ run = 'xdg-open "$@"', desc = "Open", for = "linux" },
+	{ run = 'open "$@"', desc = "Open", for = "macos" },
+	{ run = 'start "" "%1"', orphan = true, desc = "Open", for = "windows" },
+]
+play = [
+	{ run = 'mpv "$@"', orphan = true, for = "unix" },
+	{ run = 'mpv "%1"', orphan = true, for = "windows" },
+	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
+]
+reveal = [
+	{ run = 'xdg-open "$(dirname "$0")"', desc = "Reveal", for = "linux" },
+	{ run = 'open -R "$1"', desc = "Reveal", for = "macos" },
+	{ run = 'explorer /select, "%1"', orphan = true, desc = "Reveal", for = "windows" },
+	{ run = '''exiftool "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show EXIF", for = "unix" },
+]
+
+[open]
+rules = [
+	{ name = "*/", use = [
+		"edit",
+		"open",
+		"reveal",
+	] },
+	{ mime = "text/*", use = [
+		"edit",
+		"reveal",
+	] },
+	{ mime = "image/*", use = [
+		"open",
+		"reveal",
+	] },
+	{ mime = "{audio,video}/*", use = [
+		"play",
+		"reveal",
+	] },
+	{ mime = "inode/x-empty", use = [
+		"edit",
+		"reveal",
+	] },
+	{ mime = "application/*zip", use = [
+		"extract",
+		"reveal",
+	] },
+	{ mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", use = [
+		"extract",
+		"reveal",
+	] },
+	{ mime = "application/json", use = [
+		"edit",
+		"reveal",
+	] },
+	{ mime = "*/javascript", use = [
+		"edit",
+		"reveal",
+	] },
+	{ mime = "*", use = [
+		"open",
+		"reveal",
+	] },
+]
+
+[tasks]
+bizarre_retry = 5
+image_alloc = 536870912  # 512MB
+image_bound = [0, 0]
+macro_workers = 25
+micro_workers = 10
+suppress_preload = false
+
+[input]
+# cd
+cd_offset = [0, 2, 50, 3]
+cd_origin = "top-center"
+cd_title = "Change directory:"
+
+# create
+create_offset = [0, 2, 50, 3]
+create_origin = "top-center"
+create_title = ["Create:", "Create (dir):"]
+
+# rename
+rename_offset = [0, 1, 50, 3]
+rename_origin = "hovered"
+rename_title = "Rename:"
+
+# trash
+trash_offset = [0, 2, 50, 3]
+trash_origin = "top-center"
+trash_title = "Move {n} selected file{s} to trash? (y/N)"
+
+# delete
+delete_offset = [0, 2, 50, 3]
+delete_origin = "top-center"
+delete_title = "Delete {n} selected file{s} permanently? (y/N)"
+
+# filter
+filter_offset = [0, 2, 50, 3]
+filter_origin = "top-center"
+filter_title = "Filter:"
+
+# find
+find_offset = [0, 2, 50, 3]
+find_origin = "top-center"
+find_title = ["Find next:", "Find previous:"]
+
+# search
+search_offset = [0, 2, 50, 3]
+search_origin = "top-center"
+search_title = "Search via {n}:"
+
+# shell
+shell_offset = [0, 2, 50, 3]
+shell_origin = "top-center"
+shell_title = ["Shell:", "Shell (block):"]
+
+# overwrite
+overwrite_offset = [0, 2, 50, 3]
+overwrite_origin = "top-center"
+overwrite_title = "Overwrite an existing file? (y/N)"
+
+# quit
+quit_offset = [0, 2, 50, 3]
+quit_origin = "top-center"
+quit_title = "{n} task{s} running, sure to quit? (y/N)"
+
+[which]
+sort_by = "none"
+sort_reverse = false
+sort_sensitive = false
+
+[[plugin.prepend_fetchers]]
+id = "git"
+name = "*"
+run = "git"
+
+[[plugin.prepend_fetchers]]
+id = "git"
+name = "*/"
+run = "git"

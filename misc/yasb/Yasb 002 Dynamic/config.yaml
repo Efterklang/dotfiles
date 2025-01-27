@@ -1,0 +1,281 @@
+watch_stylesheet: true
+watch_config: true
+debug: false
+komorebi:
+  start_command: "komorebic start --whkd"
+  stop_command: "komorebic stop --whkd"
+  reload_command: "komorebic stop --whkd && komorebic start --whkd"
+bars:
+  primary-bar:
+    enabled: true
+    screens: ["*"]
+    class_name: "yasb-bar"
+    alignment:
+      position: "top"
+      center: false
+    blur_effect:
+      enabled: false
+      acrylic: false
+      dark_mode: false
+      round_corners: false
+      border_color: None
+    window_flags:
+      always_on_top: false
+      windows_app_bar: true
+    dimensions:
+      width: "100%"
+      height: 24
+    padding:
+      top: 4
+      left: 4
+      bottom: 0
+      right: 4
+    widgets:
+      left: ["win", "apps", "media"]
+      center: ["clock"]
+      right: [
+          "traffic",
+          # "ip_info",
+          "volume",
+          "cpu",
+          "memory",
+          "battery",
+          "power_menu",
+        ]
+widgets:
+  active_window:
+    type: "yasb.active_window.ActiveWindowWidget"
+    options:
+      label: "{win[title]}"
+      label_alt: "[class_name='{win[class_name]}' exe='{win[process][name]}' hwnd={win[hwnd]}]"
+      label_no_window: ""
+      label_icon: true
+      label_icon_size: 14
+      max_length: 36
+      max_length_ellipsis: "..."
+      monitor_exclusive: true
+  clock:
+    type: "yasb.clock.ClockWidget"
+    options:
+      label: "{%b %d - %H:%M:%S %a}"
+      label_alt: "{%a, %B %d %H:%M}"
+      timezones: []
+  komorebi_workspaces:
+    type: "komorebi.workspaces.WorkspaceWidget"
+    options:
+      label_offline: "\u26a1 Offline"
+      label_workspace_btn: "{index}"
+      label_workspace_active_btn: "{index}"
+      label_workspace_populated_btn: "{index}"
+      label_default_name: "{index}"
+      label_zero_index: false
+      hide_empty_workspaces: false
+      hide_if_offline: false
+      animation: true
+      container_padding:
+        top: 0
+        left: 1
+        bottom: 0
+        right: 1
+  traffic:
+    type: "yasb.traffic.TrafficWidget"
+    options:
+      label: "<span>\udb86\uddb3</span>{download_speed} | <span>\udb86\uddb2</span>{upload_speed}"
+      label_alt: "<span>\udb84\udc87</span>Traffic"
+      update_interval: 1000 # Update interval should be a multiple of 1000
+      callbacks:
+        on_left: "toggle_label"
+        on_right: "exec cmd /c Taskmgr"
+  weather:
+    type: "yasb.weather.WeatherWidget"
+    options:
+      label: "<span>{icon}</span> {temp_c}"
+      label_alt: "{location}: Min {min_temp_c}, Max {max_temp_c}, Humidity {humidity}"
+      api_key: "3bf4cf9a7c3f40d6b31174128242807"
+      update_interval: 1200 # Seconds
+      hide_decimal: true
+      location: "Chengdu"
+      callbacks:
+        on_left: "toggle_label"
+  volume:
+    type: "yasb.volume.VolumeWidget"
+    options:
+      label: "<span>{icon}</span> {level}"
+      label_alt: "{volume}"
+      volume_icons:
+        - "\ueee8" # Icon for muted
+        - "\uf026" # Icon for 0-10% volume
+        - "\uf027" # Icon for 11-30% volume
+        - "\uf027" # Icon for 31-60% volume
+        - "\uf028" # Icon for 61-100% volume
+      callbacks:
+        on_right: "exec cmd.exe /c start ms-settings:sound"
+  power_menu:
+    type: "yasb.power_menu.PowerMenuWidget"
+    options:
+      label: "\uf011"
+      uptime: True
+      blur: False
+      blur_background: True
+      animation_duration: 300 # Milisecond
+      button_row: 3 # Number of buttons in row, min 1 max 5
+      buttons:
+        lock: ["\uea75", "Lock"]
+        signout: ["\udb80\udf43", "Sign out"]
+        #sleep: ["\u23fe","Sleep"]
+        shutdown: ["\uf011", "Shut Down"]
+        restart: ["\uead2", "Restart"]
+        hibernate: ["\uf28e", "Hibernate"]
+        cancel: ["\udb81\udf3a", "Cancel"]
+  apps:
+    type: "yasb.applications.ApplicationsWidget"
+    options:
+      container_padding:
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+      label: "{data}"
+      app_list:
+        - { icon: "\udb84\udf55", launch: "widget" }
+        - { icon: "\ueb03", launch: "cmd /c Taskmgr" }
+        - {
+            icon: "\uf1b6",
+            launch: "C:\\Program Files (x86)\\Steam\\steam.exe",
+          }
+        - { icon: "\uf489", launch: "wt" }
+        - {
+            icon: "\udb82\ude1e",
+            launch: "D:\\Application\\Microsoft VS Code\\Code.exe",
+          }
+        - { icon: "\uf268", launch: "D:\\VIVALDI\\Application\\vivaldi.exe" }
+        - {
+            icon: "\udb82\udd60",
+            launch: "D:\\Application\\LuoxueMusic\\lxmusic.exe",
+          }
+
+  whkd:
+    type: "yasb.whkd.WhkdWidget"
+    options:
+      label: "<span>\uf11c</span>"
+  win:
+    type: "yasb.custom.CustomWidget"
+    options:
+      label: "Efterklang"
+      label_alt: "Win"
+      class_name: "custom-menu-widget"
+      callbacks:
+        on_left: "exec start_menu"
+  taskbar:
+    type: "yasb.taskbar.TaskbarWidget"
+    options:
+      animation: true
+      icon_size: 16
+      ignore_apps:
+        processes: []
+        titles: []
+        classes: []
+
+  battery:
+    type: "yasb.battery.BatteryWidget"
+    options:
+      label: "<span>{icon}</span>{percent}%"
+      label_alt: "{icon} {percent}% | time: {time_remaining}"
+      charging_options:
+        icon_format: "{charging_icon}"
+  cpu:
+    type: "yasb.cpu.CpuWidget"
+    options:
+      label: "<span>\uf4bc</span>{info[percent][total]}%"
+      label_alt: "<span>\uf437</span> {info[histograms][cpu_percent]}"
+      update_interval: 10000
+      histogram_icons:
+        - '\u2581' # 0%
+        - '\u2581' # 10%
+        - '\u2582' # 20%
+        - '\u2583' # 30%
+        - '\u2584' # 40%
+        - '\u2585' # 50%
+        - '\u2586' # 60%
+        - '\u2587' # 70%
+        - '\u2588' # 80%+
+      histogram_num_columns: 8
+      callbacks:
+        on_right: "exec cmd /c Taskmgr"
+
+  memory:
+    type: "yasb.memory.MemoryWidget"
+    options:
+      label: "<span>\uefc5</span> {virtual_mem_free}"
+      label_alt: "<span>\uefc5</span> {virtual_mem_percent}%"
+      update_interval: 2000
+      callbacks:
+        on_right: "exec cmd /c Taskmgr"
+
+  media:
+    type: "yasb.media.MediaWidget"
+    options:
+      label: "{title} - {artist}"
+      label_alt: "{title}"
+      max_field_size:
+        label: 15
+        label_alt: 15
+      show_thumbnail: false
+      controls_only: false
+      controls_left: false
+      hide_empty: true
+      thumbnail_alpha: 80
+      thumbnail_padding: 8
+      thumbnail_corner_radius: 16 # Set to 0 for square corners
+      icons:
+        prev_track: "\ue892"
+        next_track: "\ue893"
+        play: "\ue768"
+        pause: "\ue769"
+
+  nvidia_temp:
+    type: "yasb.custom.CustomWidget"
+    options:
+      label: "{data}<span>\udb81\udd04</span>"
+      label_alt: "{data}"
+      class_name: "system-widget"
+      exec_options:
+        run_cmd: "powershell nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader"
+        run_interval: 10000 # run every 10 sec
+        return_format: "string"
+
+  ip_info:
+    type: "yasb.custom.CustomWidget"
+    options:
+      label: "IP: {data[ip]}"
+      label_alt: "IP: {data[region]}, {data[country]}"
+      class_name: "ip-info-widget"
+      exec_options:
+        run_cmd: "curl.exe https://ipinfo.io"
+        run_interval: 120000 # every 5 minutes
+        return_format: "json"
+      callbacks:
+        on_left: "toggle_label"
+        on_middle: "exec cmd /c ncpa.cpl" # open network settings
+        on_right: "exec cmd /c start https://ipinfo.io/{data[ip]} " # open ipinfo in browser
+  wifi:
+    type: "yasb.wifi.WifiWidget"
+    options:
+      label: "<span>{wifi_icon}</span>"
+      label_alt: "{wifi_name} {wifi_strength}%"
+      update_interval: 5000
+      callbacks:
+        on_left: "exec cmd.exe /c start ms-settings:network"
+        on_middle: "do_nothing"
+        on_right: "toggle_label"
+
+  disk:
+    type: "yasb.disk.DiskWidget"
+    options:
+      label: "{volume_label} {space[used][percent]}"
+      label_alt: "{volume_label} {space[used][gb]} / {space[total][gb]}"
+      volume_label: "C"
+      update_interval: 60 # Update interval in seconds
+      callbacks:
+        on_middle: "do_nothing"
+        on_right: "exec explorer C:\\" # Open disk C in file explorer

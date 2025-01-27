@@ -1,0 +1,63 @@
+notARepository: "skip" # one of: 'prompt' | 'create' | 'skip'
+promptToReturnFromSubprocess: false
+gui:
+  nerdFontsVersion: "3"
+  showIcons: true
+  showFileTree: true
+  scrollHeight: 10
+  scrollPastBottom: true
+  mouseEvents: true
+  skipDiscardChangeWarning: false
+  skipStashWarning: true
+  sidePanelWidth: 0.3333
+  expandFocusedSidePanel: false
+  enlargedSideViewLocation: top
+  mainPanelSplitMode: flexible
+  theme:
+    activeBorderColor:
+      - "#b4befe"
+      - bold
+    inactiveBorderColor:
+      - "#a6adc8"
+    optionsTextColor:
+      - "#89b4fa"
+    selectedLineBgColor:
+      - "#313244"
+    cherryPickedCommitBgColor:
+      - "#45475a"
+    cherryPickedCommitFgColor:
+      - "#b4befe"
+    unstagedChangesColor:
+      - "#f38ba8"
+    defaultFgColor:
+      - "#cdd6f4"
+    searchingActiveBorderColor:
+      - "#f9e2af"
+
+  authorColors:
+    "*": "#b4befe"
+  commitLength:
+    show: true
+  skipNoStagedFilesWarning: false
+
+  spinner:
+    # The frames of the spinner animation.
+    frames:
+      - "⣷ "
+      - "⣯ "
+      - "⣟ "
+      - "⡿ "
+      - "⢿ "
+      - "⣻ "
+      - "⣽ "
+      - "⣾ "
+    rate: 100
+  # portraitMode: always
+  # windowSize: half
+  statusPanelView: allBranchesLog
+  commandLogSize: 2
+  showRandomTip: false
+git:
+  log:
+    showGraph: always
+    showWholeGraph: false

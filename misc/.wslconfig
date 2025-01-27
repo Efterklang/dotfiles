@@ -1,0 +1,10 @@
+# Settings apply across all Linux distros running on WSL 2
+[wsl2]
+memory=5GB
+networkingMode=mirrored
+dnsTunneling=true
+firewall=true
+autoProxy=true
+
+[experimental]
+autoMemoryReclaim=gradual
