@@ -10,6 +10,7 @@
     ~/.config/scoop: misc/scoop
     ~/.config/wezterm: terminal/wezterm
     ~/.config/yasb: misc/yasb
+    ~/.config/ohmyposh: shells/ohmyposh
     ~/.gitconfig: misc/.gitconfig
     ~/.wslconfig: misc/.wslconfig
     ~/AppData/Local/lazygit: tui_cli/lazygit

@@ -249,6 +249,11 @@ def cprv [input_file: string] {
   ffmpeg -i $input_file -vcodec libvpx-vp9 $output_file
 }
 
+def trim_history [] {
+	let history = $nu.history-path
+	open $history | lines | uniq | save -f $history
+}
+
 source ./plugins/zoxide.nu
 source ./plugins/omp.nu
 source ./scripts/load_scripts.nu
