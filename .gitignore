@@ -1,2 +1,4 @@
 *.log
 history.txt
+**/state.yml
+**/state.json
