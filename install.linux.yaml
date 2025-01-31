@@ -1,0 +1,21 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+- clean: ['~','~/.config']
+- link:
+    ~/.config/btop: tui_cli/btop
+    ~/.config/fastfetch: tui_cli/fastfetch
+    ~/.config/procs: tui_cli/procs
+    ~/.config/wezterm: terminal/wezterm
+    ~/.config/ohmyposh: shells/ohmyposh
+    ~/.config/lazygit: tui_cli/lazygit
+    ~/.config/nvim: tui_cli/nvim
+    ~/.config/bat: tui_cli/bat
+    ~/.config/bottom: tui_cli/bottom
+    ~/.config/gitui: tui_cli/gitui
+    ~/.config/nushell: shells/nushell
+    ~/.config/yazi: tui_cli/yazi
+    ~/.config/vscode/custom.css: vscode/custom.css
+    ~/.config/vscode/markdown-preview-enhanced: vscode/markdown-preview-enhanced
+- shell: []
