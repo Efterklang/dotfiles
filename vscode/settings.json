@@ -202,7 +202,7 @@
 		"Tabs": 200
 	},
 	"vscode_custom_css.imports": [
-		"file:///D:/envir_vars/scoop/apps/vscode/current/data/user-data/User/custom.css",
+		"file:///c://Users/24138/.config/.vscode/custom.css",
 		"file:///d:/envir_vars/scoop/apps/vscode/1.96.4/data/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
 	],
 	"background.enabled": false,
@@ -234,7 +234,7 @@
 	"diffEditor.ignoreTrimWhitespace": false,
 	"diffEditor.hideUnchangedRegions.enabled": true,
 	"diffEditor.experimental.useTrueInlineView": true,
-		"github.copilot.enable": {
+	"github.copilot.enable": {
 		"*": true,
 		"markdown": true
 	},
@@ -431,6 +431,7 @@
 	"markdown-preview-enhanced.alwaysShowBacklinksInPreview": true,
 	"markdown-preview-enhanced.codeBlockTheme": "none",
 	"markdown-preview-enhanced.enablePreviewZenMode": true,
+	"markdown-preview-enhanced.enableWikiLinkSyntax": true,
 	"foam.files.attachmentExtensions": "pdf mp3 webm avi mov rtf txt doc docx",
 	"foam.graph.titleMaxLength": 15,
 	"foam.completion.label": "title",
@@ -445,6 +446,7 @@
 	"markdown.preview.fontFamily": "Monaspace Radon,Maple Mono",
 	"markdown.preview.scrollEditorWithPreview": false,
 	"markdown-preview-enhanced.previewTheme": "atom-dark.css",
+	"markdown-preview-enhanced.configPath": "C:/Users/24138/.config/vscode/markdown-preview-enhanced",
 	"markdown.extension.completion.enabled": true,
 	"markdown.copyFiles.destination": {
 		"**/*": "./${documentBaseName}/${documentBaseName}.${fileExtName}"
@@ -517,5 +519,6 @@
 	"code-runner.executorMapByGlob": {
 		"*.java": "cd $dir && java $fileName",
 		"python": "cd $dir && python $fileName"
-	}
+	},
+	"files.autoSave": "afterDelay"
 }

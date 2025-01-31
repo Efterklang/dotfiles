@@ -563,5 +563,20 @@
 		"key": "ctrl+w",
 		"command": "workbench.action.terminal.kill",
 		"when": "terminalFocus"
+	},
+	{
+		"key": "alt+up",
+		"command": "-markdown.extension.onMoveLineUp",
+		"when": "editorTextFocus && !editorReadonly && !suggestWidgetVisible && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+	},
+	{
+		"key": "shift+alt+up",
+		"command": "-markdown.extension.onCopyLineUp",
+		"when": "editorTextFocus && !editorReadonly && !suggestWidgetVisible && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+	},
+	{
+		"key": "shift+alt+down",
+		"command": "-markdown.extension.onCopyLineDown",
+		"when": "editorTextFocus && !editorReadonly && !suggestWidgetVisible && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
 	}
 ]

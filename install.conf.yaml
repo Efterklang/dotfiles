@@ -11,6 +11,8 @@
     ~/.config/wezterm: terminal/wezterm
     ~/.config/yasb: misc/yasb
     ~/.config/ohmyposh: shells/ohmyposh
+    ~/.config/vscode/custom.css: vscode/custom.css
+    ~/.config/vscode/markdown-preview-enhanced: vscode/markdown-preview-enhanced
     ~/.gitconfig: misc/.gitconfig
     ~/.wslconfig: misc/.wslconfig
     ~/AppData/Local/lazygit: tui_cli/lazygit
@@ -21,7 +23,6 @@
     ~/AppData/Roaming/nushell: shells/nushell
     ~/AppData/Roaming/yazi/config: tui_cli/yazi
     ~/Documents/PowerShell: shells/pwsh7
-    D://envir_vars/scoop/apps/vscode/current/data/user-data/User/custom.css: vscode/custom.css
     D://envir_vars/scoop/apps/vscode/current/data/user-data/User/keybindings.json: vscode/keybindings.json
     D://envir_vars/scoop/apps/vscode/current/data/user-data/User/settings.json: vscode/settings.json
     D://envir_vars/scoop/apps/vscode/current/data/user-data/User/snippets: vscode/snippets
