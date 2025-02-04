@@ -1,9 +1,13 @@
 local Config = require('config')
+local wezterm = require('wezterm')
 
-require('events.right-status').setup()
-require('events.left-status').setup()
-require('events.tab-title').setup()
-require('events.new-tab-button').setup()
+local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
+
+tabline.setup({
+	options = {
+		theme = 'catppuccin-mocha'
+	},
+})
 
 return Config:init()
 	:append(require('config.appearance'))

@@ -2,3 +2,5 @@
 history.txt
 **/state.yml
 **/state.json
+misc/yasb/*.py
+elevated-state.json
