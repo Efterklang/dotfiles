@@ -226,8 +226,7 @@
 *.dark .apps-widget .label {
   color: #cad3f5;
 }
-*.dark .power-menu-widget .label,
-*.dark .whkd-widget .icon {
+*.dark .power-menu-widget .label {
   color: #f38ba8;
   font-size: 15px;
 }

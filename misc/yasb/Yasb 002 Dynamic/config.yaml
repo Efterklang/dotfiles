@@ -91,7 +91,7 @@ widgets:
     options:
       label: "<span>{icon}</span> {temp_c}"
       label_alt: "{location}: Min {min_temp_c}, Max {max_temp_c}, Humidity {humidity}"
-      api_key: "3bf4cf9a7c3f40d6b31174128242807"
+      api_key: "f74f07e6635041ed80982100250402"
       update_interval: 1200 # Seconds
       hide_decimal: true
       location: "Chengdu"

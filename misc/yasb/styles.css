@@ -1,286 +1,374 @@
 :root {
-	--rosewater: #f5e0dc;
-	--flamingo: #f2cdcd;
-	--pink: #f5c2e7;
-	--mauve: #cba6f7;
-	--red: #f38ba8;
-	--maroon: #eba0ac;
-	--peach: #fab387;
-	--yellow: #f9e2af;
-	--green: #a6e3a1;
-	--teal: #94e2d5;
-	--sky: #89dceb;
-	--sapphire: #74c7ec;
-	--blue: #89b4fa;
-	--lavender: #b4befe;
-	--text: #cdd6f4;
-	--subtext1: #bac2de;
-	--subtext0: #a6adc8;
-	--overlay2: #9399b2;
-	--overlay1: #7f849c;
-	--overlay0: #6c7086;
-	--surface2: #585b70;
-	--surface1: #45475a;
-	--surface0: #282936;
-	--base: #1e1e2e;
-	--mantle: rgba(24, 24, 37, 0.5);
-	--crust: rgba(17, 17, 27, 0.5);
+  --rosewater: #f5e0dc;
+  --flamingo: #f2cdcd;
+  --pink: #f5c2e7;
+  --mauve: #cba6f7;
+  --red: #f38ba8;
+  --maroon: #eba0ac;
+  --peach: #fab387;
+  --yellow: #f9e2af;
+  --green: #a6e3a1;
+  --teal: #94e2d5;
+  --sky: #89dceb;
+  --sapphire: #74c7ec;
+  --blue: #89b4fa;
+  --lavender: #b4befe;
+  --text: #cdd6f4;
+  --subtext1: #bac2de;
+  --subtext0: #a6adc8;
+  --overlay2: #9399b2;
+  --overlay1: #7f849c;
+  --overlay0: #6c7086;
+  --surface2: #585b70;
+  --surface1: #45475a;
+  --surface0: #282936;
+  --base: #1e1e2e;
+  --mantle: rgba(24, 24, 37, 0.5);
+  --crust: rgba(17, 17, 27, 0.5);
 }
 
 * {
-	font-size: 12px;
-	font-weight: 600;
-	font-family: "Maple Mono NF CN";
-	font-style: italic;
-	font-variant-ligatures: additional-ligatures;
-	margin: 0;
-	padding: 0;
-	color: #a6abcc;
+  font-size: 12px;
+  font-weight: 800;
+  font-family: "Maple Mono NF CN";
+  font-style: italic;
+  font-variant-ligatures: additional-ligatures;
+  margin: 0;
+  padding: 0;
 }
 
 .yasb-bar {
-	padding: 0 6px;
-	margin: 0;
-	background-color: var(--mantle);
-	border-radius: 12px;
+  padding: 0;
+  margin: 0;
 }
+
 .widget {
-	background-color: #24273a;
-	padding: 0 4px;
-	margin: 0 4px;
-	border-radius: 12px;
+  padding: 0 8px;
+  margin: 0 4px;
+  border-radius: 11px;
 }
-.dark .widget {
-	background-color: #b4befe;
-	/* background-color: #313244; */
+
+.label {
+  border-radius: 10px;
 }
-.widget .label {
-	padding: 0px 2px;
+
+.widget .icon {
+  font-size: 18px;
 }
-.widget .label.alt {
-	padding: 0px 8px;
+
+/* 
+ * ╭───────────────────────────────────────────────────────╮
+ * │                    Home Widget                        │
+ * ╰───────────────────────────────────────────────────────╯
+*/
+
+.home-widget {
+  background-color: var(--lavender);
+  padding: 0;
 }
-.icon {
-	font-size: 16px;
+
+.home-widget .icon {
+  color: var(--base);
+  padding-right: 6px;
+  padding-left: 6px;
 }
-.komorebi-workspaces {
-	margin: 0;
-	padding: 0;
+
+.home-widget .label {
+  background-color: #221f2e;
+  margin: 1px;
+  padding: 0 6px;
+  color: var(--lavender);
 }
-.komorebi-workspaces .offline-status {
-	color: #627199;
-	font-size: 12px;
-	padding: 0 4px;
-	font-weight: 600;
+
+.home-menu {
+  background-color: var(--crust);
 }
-.komorebi-workspaces .ws-btn {
-	border: none;
-	background-color: #b8c0e0;
-	margin: 0 2px;
-	font-size: 12px;
-	color: #3a3e4d;
-	width: 20px;
-	height: 20px;
-	border-radius: 10px;
+
+.home-menu .menu-item {
+  padding: 8px 48px 9px 16px;
+  font-size: 12px;
+  font-family: "Maple Mono NF CN", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  font-weight: 600;
 }
-.komorebi-workspaces .ws-btn:hover {
-	background-color: #a5adcb;
+
+.home-menu .menu-item:hover {
+  background-color: var(--base);
+  color: var(--text);
 }
-.komorebi-workspaces .ws-btn.populated {
-	background-color: #a5adcb;
+
+.home-menu:separator {
+  height: 1px;
+  background-color: var(--text);
 }
-.komorebi-workspaces .ws-btn.active {
-	color: #181926;
-	background-color: #8087a2;
-	width: 48px;
+
+/* 
+ * ╭───────────────────────────────────────────────────────╮
+ * │                    Application                        │
+ * ╰───────────────────────────────────────────────────────╯
+*/
+
+.apps-widget {
+  margin: 0;
+  padding: 0 2px;
 }
-.apps-widget,
-.dark .apps-widget {
-	padding: 0;
-	background-color: transparent;
-}
+
 .apps-widget .label {
-	font-size: 15px;
-	padding: 0 2px;
-	color: #cad3f5;
-}
-.dark .apps-widget .label:hover {
-	color: #6ba5e6 !important;
-}
-.uptime {
-	font-size: 14px;
-	margin-bottom: 10px;
-	color: rgba(191, 202, 219, 0.726);
-	font-weight: 600;
-}
-.power-menu-widget,
-.dark .power-menu-widget {
-	background-color: transparent;
-}
-.power-menu-popup {
-	background-color: rgba(24, 24, 37, 0.9);
-	border-radius: 12px;
-	border: 4px solid rgb(41, 42, 58);
+  font-size: 14px;
+  padding: 0 2px;
+  color: var(--lavender);
 }
 
-.power-menu-popup .button {
-	padding: 0;
-	width: 240px;
-	height: 120px;
-	border-radius: 8px;
-	background-color: rgb(41, 42, 58);
-	font-family: "SegoeUI";
-	color: white;
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	margin: 8px;
-}
-.power-menu-popup .button.hover {
-	background-color: rgb(55, 56, 75);
-	border: 1px solid rgb(55, 56, 75);
+.apps-widget .label:hover {
+  color: var(--blue);
 }
 
-.power-menu-popup .button .label {
-	margin-bottom: 8px;
-	font-size: 16px;
-	font-weight: 600;
-	color: rgba(255, 255, 255, 0.95);
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+/* 
+ * ╭───────────────────────────────────────────────────────╮
+ * │                   Clock Widget                        │
+ * ╰───────────────────────────────────────────────────────╯
+*/
+
+.clock-widget {
+  background-color: var(--mauve);
+  padding: 0;
+  border-radius: 12px;
 }
 
-.power-menu-popup .button .icon {
-	font-size: 48px;
-	padding-top: 8px;
-	color: rgba(255, 255, 255, 0.25);
+.clock-widget .label {
+  background-color: var(--base);
+  color: var(--mauve);
+  padding: 0 6px;
+  margin: 1px;
+  border-radius: 11px;
 }
 
-.power-menu-popup .button.cancel .icon {
-	color: rgba(243, 139, 168, 0.55);
+.calendar {
+    background-color: var(--base);
+}
+.calendar .calendar-table,
+.calendar .calendar-table::item {
+    background-color: var(--mantle);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;  
+}
+.calendar .calendar-table::item:selected {
+    color: var(--blue);
+}
+.calendar .day-label {
+    margin-top: 20px;
 }
 
-.power-menu-popup .button.cancel .label {
-	color: rgba(243, 139, 168, 0.95);
-}
-
-.power-menu-popup .button.shutdown .icon {
-	color: rgba(137, 180, 250, 0.55);
-}
-
-.power-menu-popup .button.shutdown .label {
-	color: rgba(137, 180, 250, 0.95);
-}
-.volume-widget .icon {
-	margin: 1px 2px 0 0;
-}
-.wifi-widget .icon {
-	padding: 0 6px;
-	margin: 0;
-}
-.weather-widget,
-.volume-widget {
-	padding: 0 6px;
+.weather-widget {
+    background-color: var(--mauve);
+    padding: 0;
 }
 .weather-widget .icon {
-	font-size: 16px;
-	margin: 0 2px 0px 0;
+    color: #142123;
+    padding: 0 6px;
 }
-.custom-menu-widget {
-	padding: 0 8px 0 8px;
-	border-radius: 12px;
-}
-.custom-menu-widget .label {
-	font-weight: bold;
-}
-.taskbar-widget,
-.dark .taskbar-widget {
-	padding: 0;
-	margin: 0;
-	border: none;
-	background-color: transparent;
-}
-.taskbar-widget .app-icon {
-	padding: 0 6px;
-	border: none;
-	margin: 0;
-}
-.whkd-widget,
-*.dark .whkd-widget {
-	background-color: transparent;
-	padding: 0 6px 0 6px;
-}
-.whkd-widget .icon {
-	font-size: 15px;
-}
-.label,
-.icon {
-	color: #cad3f5;
-}
-*.dark .label,
-*.dark .icon {
-	color: #292c3c;
-}
-.apps-widget .label,
-.power-menu-widget .label,
-.whkd-widget .icon {
-	color: #292c3c;
-}
-*.dark .apps-widget .label {
-	color: #cad3f5;
-}
-*.dark .power-menu-widget .label,
-*.dark .whkd-widget .icon {
-	color: #f38ba8;
-	font-size: 15px;
+.weather-widget .label {
+    background-color: #221f2e;
+    color: var(--mauve);
+    padding: 0 6px;
+    margin: 1px;
 }
 
-.cpu-widget .icon {
-	font-size: 14px;
-	padding-right: 4px;
+.weather-card {
+    background-color: var(--base);
+}
+.weather-card-today {
+    border: 1px solid var(--surface1);
+    border-radius: 8px;
+    background-color:  var(--crust);
+}
+.weather-card-day {
+    border: 1px solid var(--surface1);
+    border-radius: 8px;
+    background-color:  var(--crust);
+}
+
+/* 
+ * ╭───────────────────────────────────────────────────────╮
+ * │                 Traffic Widget                        │
+ * ╰───────────────────────────────────────────────────────╯
+*/
+
+.traffic-widget {
+  background-color: var(--green);
+  padding: 0;
+}
+
+.traffic-widget .icon {
+  color: #142123;
+  padding-right: 6px;
+  padding-left: 6px;
+}
+
+.traffic-widget .label {
+  background-color: #221f2e;
+  margin: 1px;
+  padding: 0 6px;
+  color: var(--green);
+}
+
+/* 
+ * ╭───────────────────────────────────────────────────────╮
+ * │                  Memory Widget                        │
+ * ╰───────────────────────────────────────────────────────╯
+*/
+
+.memory-widget {
+  background-color: var(--lavender);
+  padding: 0;
 }
 
 .memory-widget .icon {
-	font-size: 14px;
-	margin: 0 6px 1px 0px;
+  color: #142123;
+  padding-right: 6px;
+  padding-left: 6px;
+}
+
+.memory-widget .label {
+  background-color: #221f2e;
+  margin: 1px;
+  padding: 0 6px;
+  color: var(--lavender);
+}
+
+
+/* 
+ * ╭───────────────────────────────────────────────────────╮
+ * │                  Volume Widget                        │
+ * ╰───────────────────────────────────────────────────────╯
+*/
+
+.volume-widget {
+  background-color: var(--red);
+  padding: 0;
+}
+
+.volume-widget .icon {
+  color: #142123;
+  padding: 0 6px;
+}
+
+.volume-widget .label {
+  background-color: #221f2e;
+  color: var(--red);
+  padding: 0 8px;
+  margin: 1px;
+}
+
+/* 
+ * ╭───────────────────────────────────────────────────────╮
+ * │                 Language Widget                       │
+ * ╰───────────────────────────────────────────────────────╯
+*/
+
+.language-widget {
+  background-color: var(--peach);
+  padding: 0;
+}
+
+.language-widget .icon {
+  color: #142123;
+  padding: 0 6px;
+}
+
+.language-widget .label {
+  background-color: #221f2e;
+  color: var(--peach);
+  padding: 0 8px;
+  margin: 1px;
+}
+
+
+/*POWER MENU POPUP*/
+.uptime {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.power-menu-widget {
+  background-color: transparent;
+}
+
+.power-menu-popup {
+  background-color: var(--base);
+  border-radius: 12px;
+  border: 4px solid var(--surface1);
+}
+
+.power-menu-popup .button {
+  padding: 0;
+  width: 240px;
+  height: 120px;
+  border-radius: 8px;
+  background-color: var(--surface1);
+  font-family: "SegoeUI";
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 8px;
+}
+
+.power-menu-popup .button.hover {
+  background-color: rgb(55, 56, 75);
+  border: 1px solid rgb(55, 56, 75);
+}
+
+.power-menu-popup .button .label {
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.power-menu-popup .button .icon {
+  font-size: 48px;
+  padding-top: 8px;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.power-menu-popup .button.cancel .icon {
+  color: rgba(243, 139, 168, 0.55);
+}
+
+.power-menu-popup .button.cancel .label {
+  color: rgba(243, 139, 168, 0.95);
+}
+
+.power-menu-popup .button.shutdown .icon {
+  color: rgba(137, 180, 250, 0.55);
+}
+
+.power-menu-popup .button.shutdown .label {
+  color: rgba(137, 180, 250, 0.95);
+}
+
+
+.power-menu-widget .label {
+  color: var(--red);
+  font-size: 15px;
+  padding-right: 8px;
 }
 
 .media-widget {
-	background-color: #1e1e2e;
+  background-color: #1e1e2e;
 }
 
 .media-widget .btn {
-	padding: 0 3px;
-	margin: 4px 0;
-	font-family: Segoe Fluent Icons;
-	color: #181926;
+  padding: 0 3px;
+  margin: 4px 0;
+  font-family: Segoe Fluent Icons;
 }
 
 .media-widget .btn:hover {
-	color: rgba(243, 139, 168, 0.95);
-}
-
-.home-widget {
-	padding: 0 4px 0 12px;
-}
-.home-widget .icon {
-	color: var(--lavender);
-}
-.home-widget .icon:hover {
-	color: var(--text);
-}
-.home-menu {
-	background-color: var(--crust);
-}
-.home-menu .menu-item {
-	padding: 8px 48px 9px 16px;
-	font-size: 12px;
-	font-family: "Maple Mono NF CN", Tahoma, Geneva, Verdana, sans-serif;
-	color: var(--text);
-	font-weight: 600;
-}
-.home-menu .menu-item:hover {
-	background-color: var(--base);
-	color: var(--text);
-}
-.home-menu:separator {
-	height: 1px;
-	background-color: var(--text);
+  color: rgba(243, 139, 168, 0.95);
 }
