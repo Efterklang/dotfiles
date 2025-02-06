@@ -18,4 +18,4 @@ function Get-ChildItemForce {
 }
 
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
-Invoke-Expression (&starship init powershell)
+oh-my-posh init pwsh --config ~/.config/ohmyposh/catppuccin.omp.json | Invoke-Expression

@@ -1949,30 +1949,165 @@ git reset ~2 --soft
 open history.txt | lines | uniq | save dedup.txt
 trim_history 
 $nu.history-path
-cd con
-vim
-clear
-vim
-cd config
 scp -r ./shells/fish/ root@ubuntu:/root/.config/fish
 scp -r ./shells/fish/ root@momenta:/root/.config/fish
-pwd
 ls ./shells/fish/
 man scp
 scp -r root@momenta:/root/.config/fish ./shells/fish
 ssh momenta 
-cd con
-vim
-ls
-cd ef
-cd vl
-ls
-ll
 sync
-yy
-clear
-cd con
 scp -r root@momenta:/root/.config/fish ./shells/
 ls ~/.config/
-ls
 echo lang
+gd
+gd shells\fish\config.fish
+diff
+diff README.md ./README.md
+diff ./install.conf.yaml ./install.linux.yaml
+delta ./install.conf.yaml ./install.linux.yaml
+busybox
+si less
+delta --help
+less --config
+less --help
+git status
+git status 
+glpg
+git remote list
+git remote prune
+git remote remove origin master
+git branch -vv
+git branch -u origin/main
+git branch --unset-upstream
+git remote remove origin
+git remote add origin git@github.com:Efterklang/config.git
+git reset --soft 2b67278
+git reset --soft 1a0a
+git stash drop 1514
+git stash drop
+git diff
+python ./main.py
+npm install hexo-filter-titlebased-link --save
+bun install hexo-filter-titlebased-link --save
+code ./_config.yml
+bun  un hexo-renderer-marked --save
+bun uninstall hexo-renderer-marked --save
+bun i hexo-renderer-markdown-it-plus --save
+bun i hexo-markdown-it-task-lists
+bun i markdown-it-task-lists
+bun i mdit-plugin-callouts
+bun i mdit-plugin-callouts --save
+bun i markdown-it-task-lists --save
+wt.exe
+terminal.exe
+which wt
+cd =
+su uv gh obsidian
+scoop export | save a.json
+scoop config
+sui yarn
+git push --set-upstream origin main
+git commit
+code vscode\markdown-preview-enhanced\style.less
+cargo install cargo-update
+su bun gh obsidian
+bat --help
+cat ./_config.icarus.yml
+man bat
+bat -A ./_config.yml
+scoop home bat
+xclip
+si xclip
+cat --line-numbers ./_config.icarus.yml | clip
+cd shims
+cd ../persist/
+vim bat\config
+cat ./7zip/
+cat ./wsl.conf | clip
+cheat man
+man ssh
+cwebp ./SmartSelect_20250106_005342.png -o a.webp
+si tig
+sse everything
+si everything
+cd everything\current\
+./everything.exe
+tig
+btm\
+btm --help
+btm --show_table_scroll_position
+wezterm --help
+cd ~/.glaze-wm/
+cd ../.glzr/
+innounp
+sui pipx
+cat ~/.config/ohmyposh/
+cat ~/.config/ohmyposh/catppuccin.omp.json
+vim shells\pwsh7\Microsoft.PowerShell_profile.ps1
+pws
+scoop home innounp
+innounp ./LICENSE.md
+ps -ef
+fd
+fd ls
+fd vim
+uvx
+p
+sui nmap
+7zip
+cd donw
+unzip ./字节一面1080P.mov.zip
+7z x ./字节一面1080P.mov.zip
+rm ./字节一面1080P.mov
+jq
+sui jq
+gzip
+zip -d name_of_zipfile.zip __MACOSX
+7z -d name_of_zipfile.zip __MACOSX
+echo $env.YASB_WEATHER_API_KEY
+sui oh-my-posh
+si dbeaver
+curl 10.21.163.7:8000/vehicle/wms/erp/?erp=A290201&lang=en-US&subsystem=路由器&module=路由器
+curl 10.21.163.77:8000/vehicle/wms/erp/?erp=A290201&lang=en-US&subsystem=路由器&module=路由器
+curl 127.0.0.1:8000/vehicle/wms/erp/?erp=A290201&lang=en-US&subsystem=路由器&module=路由器
+curl 127.0.0.1:8000/vehicle/wms/erp/?erp=A290201&lang=en-US&subsystem=路由器&module=路由器 --header={"api-key":sdawTXEzwxz98s6F9eKMP}
+curl --help
+curl 127.0.0.1:8000/vehicle/wms/erp/?erp=A290201&lang=en-US&subsystem=路由器&module=路由器 -H "api-key:sdawTXEzwxz98s6F9eKMP"
+curl -LO --output-dir ~/.config/alacritty https://github.com/catppuccin/alacritty/raw/main/catppuccin-mocha.toml
+si atop
+helix
+si helix
+lx
+hx
+cd pro
+hx config\dotbot\lib\pyyaml\lib\yaml\error.py
+cd ./.config/
+hx --help
+hx -c
+helix ./helix/languages.toml
+helix ./helix/config.toml
+cd ./helix/
+hx ./config.toml
+cd $env.HOME
+cd he
+cd helix
+which helix
+cd roam
+vim ./helix/config.toml
+mv ~/.config/helix/languages.toml ./
+rm ~/.config/helix/
+rm -r ~/.config/helix/
+hx ./languages.toml
+hx config\dotbot\src\dotbot\cli.py
+hx --config
+mv ./languages.toml ./helix/
+ls ./helix/
+$env.USERDOMAIN_ROAMINGPROFILE
+vim ./helix/languages.toml
+hx --health
+pip install pyright
+czg --help
+su uv go
+scoop home nu
+which code
+trim_history
