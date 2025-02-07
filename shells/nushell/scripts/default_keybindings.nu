@@ -60,13 +60,6 @@ $env.config.keybindings = (
         event: [{ send: clearscreen },{ send: clearscrollback }]
     }
     | append {
-        name: open_command_editor
-        modifier: control
-        keycode: char_o
-        mode: [emacs, vi_normal, vi_insert]
-        event: { send: openeditor }
-    }
-    | append {
         name: move_up
         modifier: none
         keycode: up
@@ -213,13 +206,6 @@ $env.config.keybindings = (
         keycode: enter
         mode: emacs
         event: { send: enter }
-    }
-    | append {
-        name: redo_change
-        modifier: control
-        keycode: char_g
-        mode: emacs
-        event: { edit: redo }
     }
     | append {
         name: undo_change
