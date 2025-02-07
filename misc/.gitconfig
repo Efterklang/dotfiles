@@ -1,15 +1,48 @@
-[filter "lfs"]
-clean = git-lfs clean -- %f
-smudge = git-lfs smudge -- %f
-process = git-lfs filter-process
-required = true
+# User Configuration
 [user]
 name = Efterklang
 email = gaojiaxing2004@qq.com
 useConfigOnly = true
 
-[interaactive]
+# Core Settings
+[core]
+editor = nvim
+autocrlf = input
+whitespace = cr-at-eol
+pager = delta
+rebase = true
+quotepath = false
+longpaths = true
+trustctime = false
+excludesfile = ~/.gitignore_global
+attributesfile = ~/.attributes_global
+ignorecase = true
+untrackedcache = true
+
+# Network and Protocol Settings
+[http]
+postBuffer = 655360000
+lowSpeedLimit = 0
+lowSpeedTime = 999999
+version = HTTP/1.1
+sslbackend = schannel
+proxy = http://127.0.0.1:7890
+
+[https]
+proxy = http://127.0.0.1:7890
+
+[protocol]
+version = 1
+
+# Delta Configuration
+[interactive]
 diffFilter = delta --color-only
+
+[delta]
+side-by-side = true
+navigate = true
+dark = true
+features = catppuccin-mocha
 
 [delta "catppuccin-mocha"]
 blame-palette = "#1e1e2e #181825 #11111b #313244 #45475a"
@@ -26,93 +59,77 @@ line-numbers-minus-style = bold "#f38ba8"
 line-numbers-plus-style = bold "#a6e3a1"
 line-numbers-right-style = "#6c7086"
 line-numbers-zero-style = "#6c7086"
-# 25% red 75% base
 minus-emph-style = bold syntax "#53394c"
-# 10% red 90% base
 minus-style = syntax "#34293a"
-# 25% green 75% base
 plus-emph-style = bold syntax "#404f4a"
-# 10% green 90% base
 plus-style = syntax "#2c3239"
 map-styles = \
-	bold purple = "#494060", \
-	bold blue = "#384361", \
-	bold cyan = "#384d5d", \
-	bold yellow = "#544f4e" >syntax >syntax >syntax >syntax
-# Should match the name of the bat theme
+bold purple = "#494060", \
+bold blue = "#384361", \
+bold cyan = "#384d5d", \
+bold yellow = "#544f4e" >syntax >syntax >syntax >syntax
 syntax-theme = Catppuccin Mocha
 
-[delta]
-navigate = true
-dark = true
-features = catppuccin-mocha
+# Merge and Diff Settings
 [merge]
 tool = vscode
 conflictStyle = zdiff3
+
 [mergetool "vscode"]
 cmd = code --wait $MERGED
-[http]
-postBuffer = 655360000
-lowSpeedLimit = 0
-lowSpeedTime = 999999
-version = HTTP/1.1
-sslcainfo = C:\\Users\\24138\\AppData\\Local\\UGit\\ssl\\certs\\ca-bundle.trust.crt
-sslbackend = schannel
-proxy = http://127.0.0.1:7890
-[credential]
-helper = store
-[safe]
-directory = *
-[gui]
-[core]
-editor = nvim
-autocrlf = input
-whitespace = cr-at-eol
-pager = delta
-rebase = true
-quotepath = false
-longpaths = true
-trustctime = false
-excludesfile = ~/.gitignore_global
-attributesfile = ~/.attributes_global
-ignorecase = true
-untrackedcache = true
-[sendpack]
-sideband = false
-[init]
-defaultBranch = main
-[http "https://github.com"]
-proxy = http://127.0.0.1:7890
-[credential "helperselector"]
-selected = wincred
-[credential "https://gitee.com"]
-provider = generic
-[diff "text"]
-textconv = cat
+
 [mergetool]
 keepBackup = false
+
+[mergetool "*.*_VisualStudioCode"]
+cmd = 'Code.exe' -n --wait \"$MERGED\"
+trustexitcode = false
+
+[diff "text"]
+textconv = cat
+
+# Git LFS Settings
+[filter "lfs"]
+clean = git-lfs clean -- %f
+smudge = git-lfs smudge -- %f
+process = git-lfs filter-process
+required = true
+
 [lfs]
 concurrenttransfers = 16
 fetchrecentrefsdays = 0
 pruneoffsetdays = 0
 dialtimeout = 3
 tlstimeout = 3
+
 [merge "lfs-text"]
 driver = git lfs merge-driver --ancestor %O --current %A --other %B --marker-size %L --output %A --program 'git merge-file --stdout --marker-size=%%L %%A %%O %%B >%%D'
+
+# Credential Settings
+[credential]
+helper = store
+
+[credential "helperselector"]
+selected = wincred
+
+[credential "https://gitee.com"]
+provider = generic
+
+# Miscellaneous Settings
+[init]
+defaultBranch = main
+
+[safe]
+directory = *
+
+[sendpack]
+sideband = false
+
 [rebase]
 backend = merge
-[protocol]
-version = 1
+
 [pull]
 rebase = true
-[mergetool "*.*_VisualStudioCode"]
-cmd = 'Code.exe' -n --wait \"$MERGED\"
-trustexitcode = false
-[commit]
-template =
+
 [gc]
 auto = 0
-[https]
-proxy = http://127.0.0.1:7890
-[interactive]
-diffFilter = delta --color-only
