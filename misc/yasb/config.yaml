@@ -31,9 +31,9 @@ bars:
       bottom: 1
       right: 0
     widgets:
-      left: ["home", "language","apps", "media"]
-      center: ["clock"]
-      right: ["traffic", "weather", "memory", "volume", "power_menu"]
+      left: ["home",  "language","volume","apps", "media"]
+      center: ["windows_workspaces",]
+      right: ["traffic", "memory", "weather", "clock", "power_menu"]
 widgets:
   home:
     type: "yasb.home.HomeWidget"
@@ -61,8 +61,7 @@ widgets:
   clock:
     type: "yasb.clock.ClockWidget"
     options:
-      label: "{%a %b.%d %H:%M:%S}"
-      label_alt: "{%a, %B %d %H:%M}"
+      label: "<span>\udb83\ude17</span>{%b.%d %H:%M}"
       timezones: []
   language:
     type: "yasb.language.LanguageWidget"
@@ -83,7 +82,16 @@ widgets:
       callbacks:
         on_left: "toggle_label"
         on_right: "exec cmd /c Taskmgr"
-
+  windows_workspaces:
+    type: "yasb.windows_desktops.WorkspaceWidget"
+    options:
+      label_workspace_btn: "\udb81\udc3d"
+      label_workspace_active_btn: "\udb81\udc3e"
+      container_padding: 
+        top: 0
+        left: 8
+        bottom: 0
+        right: 8
   volume:
     type: "yasb.volume.VolumeWidget"
     options:
@@ -129,9 +137,9 @@ widgets:
         - { icon: "\uf489", launch: "wtp" }
         - {
             icon: "\udb82\ude1e",
-            launch: "D:\\Application\\Microsoft VS Code\\Code.exe",
+            launch: "code",
           }
-        - { icon: "\uf268", launch: "D:\\VIVALDI\\Application\\vivaldi.exe" }
+        - { icon: "\uf268", launch: "C:\\Program Files\\Google\\Chrome Beta\\Application\\chrome.exe" }
         - {
             icon: "\udb82\udd60",
             launch: "D:\\Application\\LuoxueMusic\\lxmusic.exe",

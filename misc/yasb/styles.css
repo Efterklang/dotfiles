@@ -74,7 +74,7 @@
 }
 
 .home-widget .label {
-  background-color: #221f2e;
+  background-color: var(--base);
   margin: 1px;
   padding: 0 6px;
   color: var(--lavender);
@@ -123,6 +123,27 @@
   color: var(--blue);
 }
 
+
+.media-widget {
+  background-color: var(--base);
+}
+/* 
+.media-widget .label {
+  background-color: var(--surface0);
+} */
+
+.media-widget .btn {
+  padding: 0 3px;
+  margin: 4px 0;
+  font-family: Segoe Fluent Icons;
+  font-style: normal;
+}
+
+.media-widget .btn:hover {
+  color: var(--red);
+}
+
+
 /* 
  * ╭───────────────────────────────────────────────────────╮
  * │                   Clock Widget                        │
@@ -130,17 +151,18 @@
 */
 
 .clock-widget {
-  background-color: var(--mauve);
-  padding: 0;
-  border-radius: 12px;
+    background-color: var(--peach);
+    padding: 0;
 }
-
+.clock-widget .icon {
+    color: var(--base);
+    padding: 0 6px;
+}
 .clock-widget .label {
-  background-color: var(--base);
-  color: var(--mauve);
-  padding: 0 6px;
-  margin: 1px;
-  border-radius: 11px;
+    background-color: var(--base);
+    color: var(--peach);
+    padding: 0 6px;
+    margin: 1px;
 }
 
 .calendar {
@@ -162,6 +184,46 @@
     margin-top: 20px;
 }
 
+
+/* windows */
+
+.windows-desktops {
+    background-color: #221f2e;
+    border: 1px solid var(--surface1);
+}
+.windows-desktops .offline-status {
+    color: #627199;
+    font-size: 12px;
+    padding: 0 4px;
+    font-weight: 600;
+}
+.windows-desktops .ws-btn {
+    border: none;
+    background-color: var(--lavender);
+    margin: 0px 4px;
+    padding: 0;
+    color: rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    height: 10px;
+    width: 10px;
+}
+.windows-desktops .ws-btn:hover {
+    background-color: var(--peach);
+}
+.windows-desktops .ws-btn.populated {
+    background-color: var(--red);
+}
+
+.windows-desktops .ws-btn.active {
+    color: rgba(149, 177, 255, 0);
+    background-color: #c0aae8;
+    width: 36px;
+    height: 10px;
+    border-radius: 5px;
+}
+
+/* weather */
+
 .weather-widget {
     background-color: var(--mauve);
     padding: 0;
@@ -171,7 +233,7 @@
     padding: 0 6px;
 }
 .weather-widget .label {
-    background-color: #221f2e;
+    background-color: var(--base);
     color: var(--mauve);
     padding: 0 6px;
     margin: 1px;
@@ -209,7 +271,7 @@
 }
 
 .traffic-widget .label {
-  background-color: #221f2e;
+  background-color: var(--base);
   margin: 1px;
   padding: 0 6px;
   color: var(--green);
@@ -228,12 +290,13 @@
 
 .memory-widget .icon {
   color: #142123;
+  font-size: 17px;
   padding-right: 6px;
   padding-left: 6px;
 }
 
 .memory-widget .label {
-  background-color: #221f2e;
+  background-color: var(--base);
   margin: 1px;
   padding: 0 6px;
   color: var(--lavender);
@@ -257,10 +320,27 @@
 }
 
 .volume-widget .label {
-  background-color: #221f2e;
+  background-color: var(--base);
   color: var(--red);
   padding: 0 8px;
   margin: 1px;
+}
+.audio-menu {
+    background-color:rgba(17, 17, 27, 0.4); 
+}
+.audio-container .device {
+    background-color:transparent;
+    border: none;
+    padding:6px 8px 6px 4px;
+    margin: 2px 0;
+    font-size: 12px;
+    border-radius: 4px;
+}
+.audio-container .device.selected {
+    background-color: var(--base);
+}
+.audio-container .device:hover {
+    background-color: var(--surface0);
 }
 
 /* 
@@ -280,7 +360,7 @@
 }
 
 .language-widget .label {
-  background-color: #221f2e;
+  background-color: var(--base);
   color: var(--peach);
   padding: 0 8px;
   margin: 1px;
@@ -296,7 +376,14 @@
 }
 
 .power-menu-widget {
-  background-color: transparent;
+    padding: 0;
+}
+
+.power-menu-widget .label {
+    color: var(--red);
+    padding-right: 7px;
+    font-weight: 1000;
+    font-size: 17px;
 }
 
 .power-menu-popup {
@@ -350,25 +437,4 @@
 
 .power-menu-popup .button.shutdown .label {
   color: rgba(137, 180, 250, 0.95);
-}
-
-
-.power-menu-widget .label {
-  color: var(--red);
-  font-size: 15px;
-  padding-right: 8px;
-}
-
-.media-widget {
-  background-color: #1e1e2e;
-}
-
-.media-widget .btn {
-  padding: 0 3px;
-  margin: 4px 0;
-  font-family: Segoe Fluent Icons;
-}
-
-.media-widget .btn:hover {
-  color: rgba(243, 139, 168, 0.95);
 }
