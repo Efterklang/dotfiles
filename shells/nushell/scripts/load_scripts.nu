@@ -1,8 +1,4 @@
-# Aliases
-source ./aliases/eza/eza-aliases.nu
-source ./aliases/git/git-aliases.nu
-source ./aliases/scoop/scoop-aliases.nu
-
+source ./aliases/alias.nu
 # Menus
 
 # source ./custom-menus/zoxide-menu.nu

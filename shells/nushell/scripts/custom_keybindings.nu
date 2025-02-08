@@ -20,4 +20,14 @@ $env.config.keybindings = (
         cmd: "commandline edit --insert (fzf --layout=reverse --preview 'bat --color=always --style=numbers --line-range=:500 {}')"
         }
     }
+    | append {
+        name: fuzzy_command
+        modifier: control
+        keycode: char_h
+        mode: emacs
+        event: {
+        send: executehostcommand
+        cmd: "fuzzy-command-search"
+        }
+    }
 )

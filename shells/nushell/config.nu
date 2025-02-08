@@ -7,7 +7,7 @@ $env.config = {
     }
 
     rm: {
-        always_trash: false # always act as if -t was given. Can be overridden with -p
+        always_trash: true # always act as if -t was given. Can be overridden with -p
     }
 
     table: {
@@ -76,37 +76,18 @@ $env.config = {
 
     footer_mode: "auto" # always, never, number_of_rows, auto
     float_precision: 2 # the precision for displaying floats in tables
-    buffer_editor: "nvim" # command that will be used to edit the current line buffer with ctrl+o, if unset fallback to $env.EDITOR and $env.VISUAL
+    buffer_editor: "helix" # command that will be used to edit the current line buffer with ctrl+o, if unset fallback to $env.EDITOR and $env.VISUAL
     use_ansi_coloring: true
     bracketed_paste: true # enable bracketed paste, currently useless on windows
     edit_mode: emacs # emacs, vi
     shell_integration: {
-        # osc2 abbreviates the path if in the home_dir, sets the tab/window title, shows the running command in the tab/window title
-        osc2: false
-        # osc7 is a way to communicate the path to the terminal, this is helpful for spawning new tabs in the same directory
-        osc7: false
-        # osc8 is also implemented as the deprecated setting ls.show_clickable_links, it shows clickable links in ls output if your terminal supports it. show_clickable_links is deprecated in favor of osc8
+        osc2: true
+        osc7: true
         osc8: false
-        # osc9_9 is from ConEmu and is starting to get wider support. It's similar to osc7 in that it communicates the path to the terminal
-        osc9_9: false
-        # osc133 is several escapes invented by Final Term which include the supported ones below.
-        # 133;A - Mark prompt start
-        # 133;B - Mark prompt end
-        # 133;C - Mark pre-execution
-        # 133;D;exit - Mark execution finished with exit code
-        # This is used to enable terminals to know where the prompt is, the command is, where the command finishes, and where the output of the command is
-        osc133: false
-        # osc633 is closely related to osc133 but only exists in visual studio code (vscode) and supports their shell integration features
-        # 633;A - Mark prompt start
-        # 633;B - Mark prompt end
-        # 633;C - Mark pre-execution
-        # 633;D;exit - Mark execution finished with exit code
-        # 633;E - NOT IMPLEMENTED - Explicitly set the command line with an optional nonce
-        # 633;P;Cwd=<path> - Mark the current working directory and communicate it to the terminal
-        # and also helps with the run recent menu in vscode
-        osc633: false
-        # reset_application_mode is escape \x1b[?1l and was added to help ssh work better
-        reset_application_mode: false
+        osc9_9: true
+        osc133: true
+        osc633: true
+        reset_application_mode: true
     }
   render_right_prompt_on_last_line: false # true or false to enable or disable right prompt to be rendered on last line of the prompt.
     use_kitty_protocol: true # enables keyboard enhancement protocol implemented by kitty console, only if your terminal support this.
@@ -212,20 +193,11 @@ $env.config = {
     keybindings: []
 }
 
-def --env pwd [] {
-    $env.PWD | str replace --all '\' '/'
-}
-
-def --env yy [...args] {
-	let tmp = (mktemp -t "yazi-cwd.XXXXXX")
-	yazi ...$args --cwd-file $tmp
-	let cwd = (open $tmp)
-	if $cwd != "" and $cwd != $env.PWD {
-		cd $cwd
-	}
-	rm -fp $tmp
-}
-
+source ./plugins/zoxide.nu
+source ./plugins/omp.nu
+source ./scripts/load_scripts.nu
+source ./modules/mod.nu
+source ./themes/catppuccin-mocha.nu
 
 let carapace_completer = {|spans|
     carapace $spans.0 nushell ...$spans | from json
@@ -242,46 +214,6 @@ let multiple_completers = {|spans|
     } | do $in $spans
 }
 
-source ./plugins/zoxide.nu
-source ./plugins/omp.nu
-source ./scripts/load_scripts.nu
-source ./modules/mod.nu
-
-alias ci = code
-alias exp = explorer.exe .
-alias zhelp = zoxide --help
-alias zo = zoxide
-alias vim = nvim
-alias cat = bat
-alias vpwd = vim "E:\\OneDrive - 商业版\\home\\markdown\\notes\\Private\\key.md"
-alias cd = z
-alias curl = curlie
-alias grep = rg
-alias ff = fastfetch
-alias wez = wezterm
-alias top = btop
-alias lzd = lazydocker
-alias cati = wezterm imgcat
-alias gg = gitui
-alias yy = yazi
-alias dig = doggo
-alias c2p = code2prompt
-alias cdc = cd c://
-alias cdd = cd d://
-alias cde = cd e://
-alias ps = procs
-alias msql = mysqld --standalone
-alias psql = pg_ctl start
-alias man = cheat
-alias czg = bun run czg
-alias hexo = bun run hexo
-alias shizuku = adb shell sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.sh 
-alias scene = adb shell sh /storage/emulated/0/Android/data/com.omarea.vtools/up.sh
-alias lg = lazygit
-alias sync = pwsh -File E://projects/config/install.ps1
-
-use ./themes/catppuccin-mocha.nu
-$env.config = ($env.config | merge {color_config: (catppuccin-mocha)})
 $env.config.completions.external = {
     enable: true
     max_results: 100
