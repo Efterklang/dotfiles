@@ -56,10 +56,10 @@ $env.config = {
     }
 
     completions: {
-        case_sensitive: false # set to true to enable case-sensitive completions
+        case_sensitive: true # set to true to enable case-sensitive completions
         quick: true    # set this to false to prevent auto-selecting completions when only one remains
         partial: true    # set this to false to prevent partial filling of the prompt
-        algorithm: "fuzzy"    # prefix or fuzzy
+        algorithm: "prefix"    # prefix or fuzzy
         external: {
             enable: true # set to false to prevent nushell looking into $env.PATH to find more suggestions, `false` recommended for WSL users as this look up may be very slow
             max_results: 100 # setting it lower can improve completion performance at the cost of omitting some options
@@ -226,27 +226,20 @@ def --env yy [...args] {
 	rm -fp $tmp
 }
 
-# cp -r -f ~/.glaze-wm/* 'e:/OneDrive - 商业版/Private/dotfiles/.glaze-wm/'
-# scoop export > 'e:\OneDrive - 商业版\Private\dotfiles\MISC\scoop_app.json'
 
-def fzfp [] {
- fzf --preview "bat --color=always --style=numbers --line-range=:500 {}" 
-} 
-
-
-def killf [] {
-    kill -f (ps | each {|i| $i | to json --raw} | str join "\n" | fzf --height 60% --layout reverse --border +s --tac | str trim | from json | get pid)
+let carapace_completer = {|spans|
+    carapace $spans.0 nushell ...$spans | from json
 }
 
-def cprv [input_file: string] {
-  let base = ($input_file | path parse | get stem)
-  let output_file = $"($base).webm"
-  ffmpeg -i $input_file -vcodec libvpx-vp9 $output_file
+let zoxide_completer = {|spans|
+    $spans | skip 1 | zoxide query -l ...$in | lines | where {|x| $x != $env.PWD}
 }
 
-def trim_history [] {
-	let history = $nu.history-path
-	open $history | lines | uniq | save -f $history
+let multiple_completers = {|spans|
+    match $spans.0 {
+        cd => $zoxide_completer
+        _ => $carapace_completer
+    } | do $in $spans
 }
 
 source ./plugins/zoxide.nu
@@ -289,3 +282,8 @@ alias sync = pwsh -File E://projects/config/install.ps1
 
 use ./themes/catppuccin-mocha.nu
 $env.config = ($env.config | merge {color_config: (catppuccin-mocha)})
+$env.config.completions.external = {
+    enable: true
+    max_results: 100
+    completer: $multiple_completers
+}
