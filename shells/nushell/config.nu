@@ -117,10 +117,10 @@ $env.config = {
             name: completion_menu
             only_buffer_difference: false
             marker: "> "
-                type: {
-                    layout: columnar
-                    columns: 4
-                    col_padding: 2
+            type: {
+                layout: columnar
+                columns: 4
+                col_padding: 2
             }
             style: {
                 text: "#a7b0eb"

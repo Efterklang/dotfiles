@@ -2,8 +2,8 @@ $env.config.keybindings = (
     $env.config.keybindings
     | append {
         name: completion_menu
-        modifier: none
-        keycode: tab
+        modifier: control
+        keycode: char_i
         mode: [emacs vi_normal vi_insert]
         event: {
             until: [
@@ -15,8 +15,8 @@ $env.config.keybindings = (
     }
     | append {
         name: ide_completion_menu
-        modifier: control
-        keycode: char_i
+        modifier: none
+        keycode: tab
         mode: [emacs vi_normal vi_insert]
         event: {
             until: [

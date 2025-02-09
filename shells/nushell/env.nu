@@ -1,5 +1,3 @@
-oh-my-posh init nu
-
 def create_left_prompt [] {
     let dir = match (do { $env.PWD | path relative-to $nu.home-path }) {
         null => $env.PWD
