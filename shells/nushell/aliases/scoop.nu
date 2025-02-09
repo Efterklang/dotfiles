@@ -8,4 +8,3 @@ export alias sbl = scoop bucket list
 export alias sba = scoop bucket add
 export alias sbr = scoop bucket rm
 export alias sui = scoop uninstall
-

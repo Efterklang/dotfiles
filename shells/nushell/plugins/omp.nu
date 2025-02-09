@@ -6,8 +6,13 @@ if ($env.config? | is-not-empty) {
 $env.POWERLINE_COMMAND = 'oh-my-posh'
 $env.POSH_THEME = (echo "C:\\Users\\24138\\.config\\ohmyposh\\omp.json")
 $env.PROMPT_INDICATOR = ""
-$env.POSH_PID = (random uuid)
+$env.POSH_SESSION_ID = (echo "b13f43ae-8d83-4ac5-9013-77e520ce6d7d")
+$env.POSH_SHELL = "nu"
 $env.POSH_SHELL_VERSION = (version | get version)
+
+# disable all known python virtual environment prompts
+$env.VIRTUAL_ENV_DISABLE_PROMPT = 1
+$env.PYENV_VIRTUALENV_DISABLE_PROMPT = 1
 
 let _omp_executable: string = (echo "C:/Users/24138/AppData/Local/Programs/oh-my-posh/bin/oh-my-posh.exe")
 
@@ -61,5 +66,3 @@ $env.PROMPT_COMMAND = {||
 }
 
 $env.PROMPT_COMMAND_RIGHT = {|| _omp_get_prompt right }
-
-^$_omp_executable notice

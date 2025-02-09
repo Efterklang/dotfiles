@@ -1,3 +1,708 @@
+;s
+:happy:
+./everything.exe
+./ExplorerBlurMica/register.cmd
+./install.ps1
+./license-gen.exe
+./MToolBox_v2.0.2/MToolBox.exe
+./node_inject.exe
+(new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com/dotnet-script/dotnet-script/master/install/install.ps1") | iex
+[warn]
+& e:/projects/donkeycar/.venv/Scripts/Activate.ps1
+#ffmpeg -i --progress `./Amateur Quick Morning Fuck.mp4` `./Amateur Quick Morning Fuck.webm`
+<\n>    carapace $spans.0 nushell ...$spans | from json
+<\n>  fzf --delimiter : --preview "bat --color=always {1} --highlight-line {2}" --preview-window ~8,+{2}-5
+<\n>-WebSession $session `
+<\n>}
+| bash
+$env
+$env:APPDATA
+$env.APPDATA
+$env.config
+$env.LOCALAPPDATA
+$env.os
+$env.USERDOMAIN_ROAMINGPROFILE
+$env.USERPROFILE
+$env.YASB_WEATHER_API_KEY
+$nu
+$nu.config-path
+$nu.default-config-dir
+$nu.history-path
+$nu.os-info
+$nu.os-info.name
+$nu.platform
+$nu.platform.system
+$session = New-Object Microsoft.PowerShell.Commands.WebRequestSession
+$session.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36"
+4
+7z -d name_of_zipfile.zip __MACOSX
+7z x ./字节一面1080P.mov.zip
+7zip
+activate
+adb devices
+adb shell pm grant li.songe.gkd android.permission.WRITE_SECURE_SETTINGS
+adb shell sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.sh
+avif
+avif --verbose
+avif ./pexels-sevenstormphotography-1436697.jpg ./成都上海苏州.avif
+bash
+bash <(curl -L -s check.unlock.media)
+bat --help
+bat -A ./_config.yml
+bat cache --build
+benchmark
+bottom
+btm
+btm --help
+btm --show_table_scroll_position
+btm\
+btop
+btop --help
+bun
+bun  un hexo-renderer-marked --save
+bun -v
+bun add hexo-cli
+bun avif --verbose
+bun czg
+bun i
+bun i avif-cli -g
+bun i czg
+bun i czg --global
+bun i hexo
+bun i hexo --save
+bun i hexo-markdown-it-task-lists
+bun i hexo-renderer-markdown-it-plus --save
+bun i markdown-it-task-lists
+bun i markdown-it-task-lists --save
+bun i mdit-plugin-callouts
+bun i mdit-plugin-callouts --save
+bun i medium-zoom
+bun i medium-zoom --save
+bun i prettier --global
+bun install
+bun install -g @microsoft/inshellisense
+bun install -g wrangler
+bun install avif-cli -g
+bun install hexo-filter-titlebased-link --save
+bun remove hexo-image-link
+bun remove hexo-image-link --save
+bun remove medium-zoom
+bun run czg
+bun run hexo
+bun run is
+bun uninstall -g @microsoft/inshellisense
+bun uninstall hexo-renderer-marked --save
+bun x avif
+bun x avif --input="**/*.*" --keep-metadata --overwrite --lossless
+bun x avif --input="**/*.*" --overwrite=true --keep-metadata=true
+bun x avif --verbose
+bun x avif ./202412282149394.png ./202412282149394.avif
+bun x avif ./pexels-sevenstormphotography-1436697.jpg ./成都上海苏州.avif
+busybox
+c2p --config
+c2p --exclude *.json
+c2p ./
+cargo install cargo-update
+cat --line-numbers ./_config.icarus.yml | clip
+cat f
+cd
+cd 
+cd _posts\Tools\VSCode\
+cd -
+cd ..
+cd ../
+cd ../.glzr/
+cd ../current/
+cd ../download/
+cd ../persist/
+cd ../艺人-EU/
+cd ./
+cd ./.config/
+cd ./big_screen-master/
+cd ./bin/
+cd ./buckets/
+cd ./Bunny.Colby/
+cd ./config/
+cd ./Configs/
+cd ./current/
+cd ./data/
+cd ./data/user-data/User/
+cd ./Dev/Others/
+cd ./donkeycar
+cd ./donkeycar-console/
+cd ./dot-files/
+cd ./EldenRing/
+cd ./Essay/
+cd ./extensions/
+cd ./firefox/
+cd ./Games/
+cd ./git/
+cd ./helix/
+cd ./home
+cd ./labs
+cd ./LolitasStar/
+cd ./Movie/
+cd ./music_player/
+cd ./Music/
+cd ./nu
+cd ./onedrive_temp/Configs/
+cd ./onedrive_temp\home\markdown\vluv\
+cd ./Pictures/
+cd ./postman/
+cd ./projects/config/
+cd ./rclone/
+cd ./repos/
+cd ./RuoYi-Vue/
+cd ./shells/nu
+cd ./shells/nushell/
+cd ./source/
+cd ./source/img/
+cd ./startpage-master/startpage-master/
+cd ./startup-page/
+cd ./themes/
+cd ./thumbnails/
+cd ./thumbnails/Essay/
+cd ./typora/current/
+cd ./un
+cd ./user-data/
+cd ./User/
+cd ./Videos/JP/
+cd ./vscode
+cd ./vscode/
+cd ./数据
+cd ./数电/
+cd ./艺人-EU/
+cd ./视频-EU/
+cd ./视频-JP/
+cd .C4
+cd .onedrive_temp\home\markdown\vluv\
+cd 'Program Files\Google\Chrome Beta\Application\134.0.6998.3\'
+cd /C:\Users\24138\.config
+cd /D:\envir_vars\scoop\apps
+cd `../OneDrive - 商业版/`
+cd `./Adult Videos/`
+cd `./OneDrive - 商业版/`
+cd `./混沌武士 Samurai Champloo/`
+cd `c:\Program Files (x86)\`
+cd =
+cd ~
+cd ~/
+cd ~/.bun
+cd ~/.config
+cd ~/.config/
+cd ~/.config/scoop/
+cd ~/.config/vscode/
+cd ~/.config/yazi/
+cd ~/.glaze-wm/
+cd ~/.ssh
+cd ~/.ssh/
+cd ~/AppData/
+cd ~/bun
+cd $env.HOME
+cd $nu.config-path
+cd ad
+cd adu
+cd app
+cd Application\Tools\ViVeTool\
+cd Application\Typora\
+cd apps
+cd Archives\竞赛\
+cd au
+cd Baby.Kxtten\
+cd Beautification
+cd Beautification\
+cd bed
+cd buc
+cd buck
+cd bucket
+cd buckets\
+cd c
+cd C4
+cd cf
+cd co
+cd code
+cd con
+cd conf
+cd confg
+cd confi
+cd config
+cd current
+cd d:
+cd data
+cd donkey
+cd donw
+cd dot-files\
+cd down
+cd downl
+cd download
+cd e
+cd E:\OneDrive - 商业版\home\markdown\vluv
+cd ef
+cd everything\current\
+cd exp
+cd exten
+cd git\2.47.1\mingw64\bin\
+cd he
+cd helix
+cd image
+cd img
+cd ja
+cd japan
+cd Java\
+cd labs
+cd lg
+cd ls
+cd mark
+cd memoirs\24-12-21\
+cd module
+cd Movie\
+cd MSBuild\
+cd music
+cd NS
+cd nsf
+cd nsff
+cd nsfw
+cd NSFW\
+cd nu
+cd one
+cd oned
+cd page
+cd post
+cd pri
+cd prij
+cd priv
+cd Private\
+cd pro
+cd Program Files\Google\Chrome Beta\Application\134.0.6998.3\
+cd proj
+cd projects\
+cd roam
+cd sam
+cd scoop
+cd shims
+cd sma
+cd sour
+cd source
+cd source\img\
+cd source\img\thumbnails\Dev\Others\
+cd source\img\thumbnails\Tools\VSCode
+cd ss
+cd terminal\nvim\
+cd thumb
+cd thumbnails\Tools\VSCode\
+cd tools
+cd Tools\
+cd Tools\VSCode\
+cd Typora
+cd ues
+cd un
+cd used
+cd User
+cd User\
+cd ve
+cd vl
+cd vluv
+cd vnet
+cd vsco
+cd vscode
+cd vscode\
+cd vscode\1.96.0\
+cd webp
+cd wez
+cd wezterm\
+cd work
+cd workspace
+cd wsl
+cd yasb
+cd yazi
+cd 数据
+cd 数电
+cd 数电\
+cdc
+cdd
+cde
+cdvl
+cheat --h
+cheat --help
+cheat -l | fzf
+cheat | fzf
+cheat dart
+cheat man
+cheat rclone
+cheat scoop
+cheat ssh | fzf
+chsrc bun
+chsrc help
+chsrc npm
+chsrc reset bun
+chsrc set bun
+cldar
+clear
+clear 
+clip
+clip /?
+clip | save a.yaml
+cls
+cmprev `./09 魑魅魍魎 Beatbox Bandits.mp4`
+cmprev `09 魑魅魍魎 Beatbox Bandits.mp4`
+code
+code --disable-extension 
+code --disable-extension  ./
+code --disable-extension brandonkirbyson.vscode-animations
+code --disable-extensions 
+code --extensions-dir
+code --help
+code --list-extensions 
+code --list-extensions > a.txt
+code --list-extensions > extensions.txt
+code --list-extensions >> a.txt
+code --list-extensions | a.txt
+code --list-extensions | save extensions.txt
+code -v
+code .
+code ./
+code ./_config.yml
+code ./keymap.toml
+code ./package.json
+code tui_cli\lazygit\config.yml
+code vscode\markdown-preview-enhanced\style.less
+compress_video
+compress_video `./03 以心伝心 其之壱 Hellhounds for Hire (PART.1).mp4`
+compress_video `./05 馬耳東風 Artistic Anarchy.mp4`
+compress_video `./07 四面楚歌 A Risky Racket.mp4`
+config
+config nu
+connect
+connect.exe
+connect.exx
+cp ./id_rsa.pub `E:\OneDrive - 商业版\Configs\.config\`
+cp ./source/img/avatar.webp e:/buckets/
+cp ./terminal/lazygit/config.yml C:\Users\24138\AppData\Local\lazygit\
+cprv
+cprv `./01 疾風怒涛 Tempestuous Temperaments.mp4`
+cprv `./05 馬耳東風 Artistic Anarchy.mp4`
+cprv `./07 四面楚歌 A Risky Racket.mp4`
+cprv `./12 温故知新 The Disorder Diaries.mp4`
+cprv `./13 暗夜行路 其之壱 Misguided Miscreants (PART.1).mp4`
+cprv `./14 暗夜行路 其之弐 Misguided Miscreants (PART.2).mp4`
+cprv `./16 酔生夢死 ひと夢 Lullabies of the Lost (VERSE.1).mp4`
+cprv `./18 文武両道 War of the Words.mp4`
+cprv `./20 悲歌慷慨 其之壱 Elegy of Entrapment (VERSE.1).mp4`
+cprv `./23 一球入魂 Baseball Blues.mp4`
+cprv `./Big load of cum on cute teen face.mp4`
+cprv `./Never take Uber Again.mp4`
+cprv `./Oni the Doggy - Episode 1 Sucking and Gagging in my Onesie.mp4`
+cprv `09 魑魅魍魎 Beatbox Bandits.mp4`
+cprv `21 悲歌慷慨 其之弐 Elegy of Entrapment (VERSE.2).mp4`
+cprv 0.20
+csi
+curl --help
+curl -L -s check.unlock.media
+curl -L -s check.unlock.media | bash
+curl -L https://gitlab.com/spiritysdx/za/-/raw/main/ecs.sh -o ecs.sh && chmod +x ecs.sh && bash ecs.sh -m 4 3
+curl -LO --output-dir ~/.config/alacritty https://github.com/catppuccin/alacritty/raw/main/catppuccin-mocha.toml
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+curl -x http://127.0.0.1:7890 https://ipinfo.io
+curl -x http://127.0.0.1:7890 ip-api.com
+curl 10.21.163.7:8000/vehicle/wms/erp/?erp=A290201&lang=en-US&subsystem=路由器&module=路由器
+curl 10.21.163.77:8000/vehicle/wms/erp/?erp=A290201&lang=en-US&subsystem=路由器&module=路由器
+curl 127.0.0.1:8000/docs
+curl 127.0.0.1:8000/vehicle/wms/erp/?erp=A290201&lang=en-US&subsystem=路由器&module=路由器
+curl 127.0.0.1:8000/vehicle/wms/erp/?erp=A290201&lang=en-US&subsystem=路由器&module=路由器 --header={"api-key":sdawTXEzwxz98s6F9eKMP}
+curl 127.0.0.1:8000/vehicle/wms/erp/?erp=A290201&lang=en-US&subsystem=路由器&module=路由器 -H "api-key:sdawTXEzwxz98s6F9eKMP"
+curl http://127.0.0.1:51126
+curl ip-api.com
+curl twikoo.vluv.space
+cwd
+cwebp ./1731656339092.png -o start_settings.webp
+cwebp ./1731656721519.png -o start_menu_widget.webp
+cwebp ./2024下-1.jpg -o ./cd_taxi.webp
+cwebp ./2024下-1.png -o ./sh2.webp
+cwebp ./41d83c00-ae23-11ea-8613-bf3d0c82856d.png -o ./custom_vscode_style.webp
+cwebp ./amap1.png -o ./amap1.webp
+cwebp ./angeles-photo-courtesy-angeles-126016.jpg -o ./devcontainer.webp
+cwebp ./Arctic-shipping-c-iStock-e1585925976736.jpg -o ./devcontainer.webp
+cwebp ./devcontainer.jpg -o ./devcontainer.webp
+cwebp ./kfc.jpg -o ./kfc.webp
+cwebp ./logo.jpg -o ./logo.webp
+cwebp ./macchiato.png -o ./macchiato.webp
+cwebp ./page_biaoqing.jpg -o ./page_biaoqing.webp
+cwebp ./page_biaoqing.jpg ./page_biaoqing.webp
+cwebp ./pexels-sevenstormphotography-1436697.jpg -o ./成都上海苏州.webp
+cwebp ./sh2.png -o ./sh2.webp
+cwebp ./SmartSelect_20250106_005342.png -o a.webp
+cwebp ./source\img\cat-line.svg -o ./source\img\cat-line.webp
+cwebp ./thumbnails/Essay/
+cwebp ./unused/计网拾遗1.jpg -o ./thumbnails/Networks/计网拾遗1.webp
+cwebp ./上海站.jpg -o ./上海站.webp
+cwebp ./成都上海苏州.png -o ./成都上海苏州.webp
+cwebp ./成都上海苏州.png ./成都上海苏州.webp
+cwebp ./灰原哀.jpg -o avatar.webp
+cwebp ./苏州北站.jpg -o ./苏州北站.webp
+cwebp `./Screenshot_20241115_221528_One UI Home.png` -o homepage.webp
+cwebp source\img\cat-line.svg -o ./source\img\cat-line.webp
+cwebp source\img\thumbnails\Tools\119596099_p1.png -o source\img\thumbnails\Tools\Entertainment\music_player.webp
+cwebp thumbnails\Dev\Java\thread_pool.jpg -o thumbnails\Dev\Java\thread_pool.webp
+cwebp Tools\music_player\salt_player1.png -o Tools\music_player\salt_player1.webp
+cwebp Tools\music_player\salt_player2.png -o Tools\music_player\salt_player2.webp
+cwebp Tools\music_player\salt_player3.png -o Tools\music_player\salt_player3.webp
+cwebp type_erasure1.png -o ./Java/generic_theories/type_erasure.webp
+czg
+czg --api-key="sk-"
+czg --api-key="sk-0d4f5aa8edf740fc875e93befefe38de"
+czg --help
+czg ai
+dasd
+dd bs=64k count=4k if=/dev/zero of=test oflag=dsync
+deactivate
+delta
+delta 
+delta --help
+delta ./_config.icarus.yml
+delta ./_config.icarus.yml ./_config.post.yml
+delta ./.wakatime.cfg
+delta ./install.conf.yaml ./install.linux.yaml
+delta install.conf.yaml  install.linux.yaml 
+delta vscode\settings.json
+diff
+diff ./install.conf.yaml ./install.linux.yaml
+diff README.md ./README.md
+diff vscode\settings.json
+dig https://self.uestc.edu.cn/home
+dig self.uestc.edu.cn/home
+dig vluv.space
+dist
+doggo
+doggo vluv.space
+dotnet
+dotnet --v
+dotnet --version
+dotnet -v
+dotnet tool install -g dotnet-script
+du
+du ./
+dust
+dust --config
+dust --help
+dust ./
+dust ./*.mp4
+dust ./*.webm
+dust ./ipx*
+dust ./PRED
+dust ./PRED*
+echo [info]
+echo [INFO]
+echo [warn]
+echo $env.YASB_WEATHER_API_KEY
+echo lang
+edxp
+exp
+eza
+eza --help
+fastfetch
+fastfetch vscode/
+fd
+fd --type f --strip-cwd-prefix | fzf
+fd ls
+fd vim
+ff
+ffmpeg --enable-cuda-llvm `./Amateur Quick Morning Fuck.mp4` `./Amateur Quick Morning Fuck.webm`
+ffmpeg --hwaccel cuda -i `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).mp4` `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).webm`
+ffmpeg --hwaccel cuvid -i `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).mp4` `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).webm`
+ffmpeg --hwaccels
+ffmpeg --hwaccels -i `./25 生死流轉 其之貳 Evanescent Encounter(PART.2).mp4` -vcodec libvpx-vp9 `./25 生死流轉 其之貳 Evanescent Encounter(PART.2).webm`
+ffmpeg -codecs | findstr cuvid
+ffmpeg -enable-cuda-llvm `./Amateur Quick Morning Fuck.mp4` `./Amateur Quick Morning Fuck.webm`
+ffmpeg -hwaccel cuda -i `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).mp4` `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).webm`
+ffmpeg -hwaccel cuda -i `./06 赤毛異人 Stranger Searching.mp4` `./06 赤毛異人 Stranger Searching.webm`
+ffmpeg -hwaccel cuda -i `./08 唯我独尊 A Problematic Past.mp4` `./08 唯我独尊 A Problematic Past.webm`
+ffmpeg -hwaccel cuda -i `./25 生死流轉 其之貳 Evanescent Encounter(PART.2).mp4` `./25 生死流轉 其之貳 Evanescent Encounter(PART.2).webm`
+ffmpeg -hwaccel cuda -i `./Amateur Quick Morning Fuck.mp4` output.webm
+ffmpeg -hwaccel cuda -i `./Amateur Teen with Tight Ass Learning Rough Anal Sex.mp4` `./Amateur Teen with Tight Ass Learning Rough Anal Sex.webm`
+ffmpeg -hwaccel cuda -i input.mp4 output.mp4
+ffmpeg -hwaccel cuda `./Amateur Quick Morning Fuck.mp4` `./Amateur Quick Morning Fuck.webm`
+ffmpeg -hwaccel cuvid -i `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).mp4` `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).webm`
+ffmpeg -hwaccels
+ffmpeg -i ./21n.16.10.23.crystal.greenvelle.luscious.fruit.mp4 ./21n.16.10.23.crystal.greenvelle.luscious.fruit.webm
+ffmpeg -i ./ipx-620-C.mp4
+ffmpeg -i ./MIAA-794.mp4
+ffmpeg -i ./miku-hatsune.gif -b:v 0 -crf 25 -f mp4 -vcodec libx264 -pix_fmt yuv420p miku-welcome.mp4
+ffmpeg -i `./02 百鬼夜行 Redeye Reprisal.mp4` -vcodec libvpx-vp9 `./02 百鬼夜行 Redeye Reprisal.webm`
+ffmpeg -i `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).mp4` -c:a copy -process  -c:v h264_nvenc `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).webm`
+ffmpeg -i `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).mp4` -c:a copy -progress  -c:v h264_nvenc `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).webm`
+ffmpeg -i `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).mp4` -progress  -c:v h264_nvenc `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).webm`
+ffmpeg -i `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).mp4` ./0
+ffmpeg -i `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).mp4` `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).webm`
+ffmpeg -i `./10 以毒制毒 Lethal Lunacy.mp4` -vcodec libvpx-vp9 `./10 以毒制毒 Lethal Lunacy.webm`
+ffmpeg -i `./11 堕落天使 Gamblers and Gallantry.mp4` -vcodec 
+ffmpeg -i `./11 堕落天使 Gamblers and Gallantry.mp4` -vcodec libvpx-vp9 `./11 堕落天使 Gamblers and Gallantry.webm`
+ffmpeg -i `./15 徹頭徹尾 Bogus Booty.mp4` -vcodec libvpx-vp9 `./15 徹頭徹尾 Bogus Booty.webm`
+ffmpeg -i `./17 酔生夢死 ふた夢 Lullabies of the Lost (VERSE.2).mp4` -vcodec libvpx-vp9 `./17 酔生夢死 ふた夢 Lullabies of the Lost (VERSE.2).webm`
+ffmpeg -i `./19 因果応報 Unholy Union.mp4` -vcodec libvpx-vp9 `./19 因果応報 Unholy Union.webm`
+ffmpeg -i `./22 怒髪衝天 The Cosmic Collisions.mp4` -vcodec libvpx-vp9 `./22 怒髪衝天 The Cosmic Collisions.webm`
+ffmpeg -i `./24 生死流轉 其之壹 Evanescent Encounter(PART.1).mp4` -vcodec libvpx-vp9 `./24 生死流轉 其之壹 Evanescent Encounter(PART.1).webm`
+ffmpeg -i `./25 生死流轉 其之貳 Evanescent Encounter(PART.2).mp4` -vcodec libvpx-vp9 `./25 生死流轉 其之貳 Evanescent Encounter(PART.2).webm`
+ffmpeg -i `./26 生死流転 其之参 Evanescent Encounter (PART.3).mp4` -vcodec libvpx-vp9 `./26 生死流転 其之参 Evanescent Encounter (PART.3).webm`
+ffmpeg -i `./Ambitious Businesswoman Baby Kxtten Secures new BBC Clients by taking DP Pounding.mp4` `./Ambitious Businesswoman Baby Kxtten Secures new BBC Clients by taking DP Pounding.webm`
+ffmpeg -i `./Bunny Colby - Busty Roughed Up For A Creampie (05.30.19).mp4` `./Bunny Colby - Busty Roughed Up For A Creampie (05.30.19).webm`
+ffmpeg -i cat-herd.gif -b:v 0 -crf 25 -f mp4 -vcodec libx264 -pix_fmt yuv420p cat-herd.mp4
+ffmpeg -i miku-hatsune.gif -b:v 0 -crf 25 -f mp4 -vcodec libx264 -pix_fmt yuv420p cat-herd.mp4
+ffmpeg -i miku-hatsune.gif -b:v 0 -crf 25 -f mp4 -vcodec libx264 -pix_fmt yuv420p miku-welcome.mp4
+ffmpeg -i miku-hatsune.gif -c vp9 -b:v 0 -crf 41 cat-herd.webm
+ffmpeg -v
+ffmpeg `./Ambitious Businesswoman Baby Kxtten Secures new BBC Clients by taking DP Pounding.mp4` `./Ambitious Businesswoman Baby Kxtten Secures new BBC Clients by taking DP Pounding.webm`
+ffmpeg hwaccel cuda `./Amateur Quick Morning Fuck.mp4` `./Amateur Quick Morning Fuck.webm`
+ffprobe -v quiet -print_format json -show_format ./MIAA-794.mp4
+ffprobe -v quiet -print_format json -show_format `./01 疾風怒涛 Tempestuous Temperaments.webm`
+ffprobe -v quiet -print_format json -show_format `05 馬耳東風 Artistic Anarchy.mp4`
+ffprobe -v quiet -print_format json -show_format `05 馬耳東風 Artistic Anarchy.webm`
+find -v
+find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf
+flightless bird
+fuzzy-command-search
+fzf
+fzf --help
+fzf --preview "rg --color=always {}"
+fzfp
+g
+g
+gc
+gcc
+gcc -o test test.c -lcurl
+gcc ./lab0/commit.c
+gd
+gd _config.icarus.yml
+gd shells\fish\config.fish
+gd vscode\settings.json
+Get-Content a.txt | ForEach-Object { code --install-extension $_ }
+gg
+ggi
+gh
+gig
+git
+git --amend
+git -v
+git add source\BingSiteAuth.xml
+git amend
+git bash
+git branch
+git branch --unset-upstream
+git branch -u origin/main
+git branch -vv
+git branch | fzf | xargs git checkout
+git branch dev
+git clone --help
+git clone git@github.com:Efterklang/config.git
+git clone https://github.com/alaricsp/chicken-scheme.git
+git clone https://github.com/BennyOe/tokyo-night.yazi.git ~/.config/yazi/flavors/tokyo-night.yazi
+git clone https://github.com/imsi32/yatline-catppuccin.yazi.git ~/.config/yazi/plugins/yatline-catppuccin.yazi
+git clone https://github.com/KevinSilvester/wezterm-config.git
+git clone https://github.com/LeeSF03/dot-files.git
+git clone https://github.com/robocarstore/donkeycar-console
+git commit
+git config --global core.pager delta
+git config --global delta.navigate true
+git config --global interactive.diffFilter 'delta --color-only'
+git config --global merge.conflictStyle zdiff3
+git diff
+git diff 
+git diff HEAD
+git fetch
+git fetch origin main
+git init
+git log
+git merge
+git pull
+git pull --abort
+git push
+git push --set-upstream origin main
+git push -f
+git push -f origin main
+git push -f\
+git push origin main
+git rebase --abort
+git remote add origin git@github.com:Efterklang/config.git
+git remote add origin git@github.com:Efterklang/dotfiles.git
+git remote list
+git remote prune
+git remote remove origin
+git remote remove origin master
+git remote set origin main git@github.com:Efterklang/dotfiles.git
+git remote set-url add origin git@github.com:Efterklang/dotfiles.git
+git remote set-url git@github.com:Efterklang/Efterklang.github.io.git
+git remote set-url origin git@github.com:Efterklang/Efterklang.github.io.git
+git remote set-url origingit@github.com:Efterklang/dotfiles.git
+git reset --soft 1a0a
+git reset --soft 2b67278
+git reset --soft HEAD~
+git reset ~1 --soft
+git reset ~2 --soft
+git show
+git stach
+git stash
+git stash drop
+git stash drop 1514
+git stash pop
+git status
+git status 
+git switch
+git switch dev
+git switch dev -f
+git switch readme
+git switch readme -f
+git\2.47.1\git-bash.exe -c ls
+gkd
+glog
+glpg
+gping vluv.space
+grb --abort
+grb -i HEAD~10
+grb -i HEAD~2
+grb -i HEAD~3
+gsw
+gulp
+gzip
+hc
+heif-conv
+helix
+helix ./helix/config.toml
+helix ./helix/languages.toml
+help command
+heox s
+hexo
+hexo clean
+hexo gen
+hexo s
+hexo s -p 5000
+hexo s -p 6333
+hexo s -p 6334
+hexo x
+hexo-cli
+hf
+hh
+hi
+htop
+http get https://phoronix.com | query webpage-info
+http get https://vluv.space
+http get https://vluv.space | query webpage-info
+hx
+hx --config
+hx --health
+hx --help
+hx -c
+hx ./config.toml
+hx ./languages.toml
+hx config\dotbot\lib\pyyaml\lib\yaml\error.py
+hx config\dotbot\src\dotbot\cli.py
+hx misc\yasb\config.yaml
+hyperfine cd
+hyperfine ls
+ifconfig
+innounp
+innounp ./LICENSE.md
+Invoke-WebRequest -UseBasicParsing -Uri "https://vebackend.momenta.works/approval/statistics/allCount/?project=IMDevcar&approval_type=production" `
+ipconfig
+is
 is -c
 is init nu
 is init nu | save $nu.env-path --append
@@ -6,42 +711,104 @@ java -c
 java -v
 java -V
 javac
+javac -g:none -XD:-inline source\_posts\Lang\Java\temp\GenericsInheritanceExample.java
+javac ./Main.java
+javac source\_posts\Lang\Java\temp\GenericsInheritanceExample.java
+javap -c -synthetic Child
+javap -c Child
+javap -c Parent
+javap source\_posts\Lang\Java\temp\GenericsInheritanceExample.java
 jc
 jc ping google.com
 jdk
+jq
 js
 kevinrose.vsc-python-indent
+kill -p 28928
+kill -pid 28928
 killf
 komorebic
 krysenlo.vscode-wordcount-cjk
 ks
+l
 la
+la -L 3
+lat -L 2
+lazydocker
+lazygit
+lazygit --config
+lazygit --help
+lda
 leetcode.vscode-leetcode
+less --config
+less --help
+let carapace_completer = {|spans|
+lg
+lg --cd
+lg --config
+lg --help
+lg -c
+lg -cd
+lg\
 ll
+ll -L 2
+ll -L 3
+ll ./dkconsole/
 lla
+lla -L 3
 lls
+lls -L 3
+llt
+llt --depth=3
+llt -depth=3
+llt -L 2
+llt -L 3
 localhost:21
 ls
+ls 
 ls --help
 ls -a
 ls ...(glob **/*.{jpg})
 ls ...(glob **/*.{png})
 ls ...(glob **/*.{webp})
+ls ./
+ls ./15.0/
+ls ./AppData/Local/
+ls ./bak/
+ls ./Beautification/
+ls ./buckets/
 ls ./config.nu
 ls ./custom-completions/
 ls ./custom-menus/
+ls ./dkconsole/
+ls ./ExplorerBlurMica/
+ls ./helix/
 ls ./home
+ls ./img/gallery/Essay/
+ls ./index/
 ls ./Java_Web/
+ls ./mingw64/bin/
 ls ./modules/
+ls ./plugins/
 ls ./Private/
+ls ./profiles/
 ls ./public/
 ls ./scripts/
+ls ./shells/fish/
+ls ./user-data/
+ls ./vscode/
+ls ./wezterm/
+ls ./windows/
 ls *.html
+ls *.webm
 ls **/* | where type == dir | get name | input list --fuzzy
+ls | git bash
+ls | git\2.47.1\git-bash.exe 
 ls | sort
 ls | sort size
 ls | where type == dir
 ls | where type=dir
+ls ~/.config/
 ls $(pwd | get path)
 ls $(pwd)
 ls $pwd
@@ -49,24 +816,43 @@ ls bulma-stylus\
 ls plugins\
 ls public\
 ls shiki*
+lsa
 lsd
+lsdas
+lsl
+lsof
+lsof -i
 lst
 lstd
+lx
 make
 man --help
+man -l apt
+man bat
+man ffmpeg
 man git
+man git | fzf
+man git clone
+man rclone
 man rsync
+man scoop
+man scp
+man ssh
+man zoxide
 mark-wiemer.vscode-autohotkey-plus-plus
 marscode.marscode-extension
 maven
 maven -v
 mi
 miguelsolorio.fluent-icons
+mkdir ./Java/generic_theories
+mkdir buckets
 mkdir dev
 mkdir inshellisense
 mkdir procs
 mkdir projects
 mkdir ref
+mkdir vscode
 mkdoc s
 mkdocs serve
 mklink /D data "E:\\OneDrive - 商业版\\home\\NSFW\\data"
@@ -84,9 +870,21 @@ ms-vscode.remote-explorer
 ms-vscode.remote-repositories
 ms-vscode.remote-server
 ms-vsliveshare.vsliveshare
+mv _posts\Tools\entertainment\music_player\ e:\buckets\Tools\music_player\
+mv -r ./node_modules/ ../
+mv ./1.95.3/ C:\$Recycle.Bin\
 mv ./75.颜色分类.go ./go/
+mv ./buckets/Ch2-PhysicalLayer/ ./buckets/Network/
+mv ./cat-herd.webm miku_welcome.webm
+mv ./languages.toml ./helix/
+mv ./node_modules/ ../
 mv ./onedrive_proxy.webp ./dev/onedrive_proxy.webp
 mv ./procs_config.toml config.toml
+mv ./wezterm-config/ ./wezterm
+mv ./wezterm/ ./wezterm-bak
+mv ~/.config/helix/languages.toml ./
+mv source\_posts\Dev\Python\pydevlog2.md source\_drafts\pydevlog2.md
+mv source\_posts\Lang\Java\java_generic\ E:\buckets\Java\
 mvn
 mvn -v
 mysql
@@ -97,6 +895,12 @@ mysqld --console
 mysqld --standalone
 mysqld --stop
 naumovs.color-highlight
+netstat
+netstat -ano | find :4000
+netstat -ano | findstr :4000
+netstat -ano | findstr :8000
+netstat -b 4000
+netstat -bno 4000
 nmap 192.168.35.128
 node
 node --help
@@ -109,6 +913,7 @@ node -V
 node s
 nodejs
 nodejs 
+nodejs -v
 npm
 npm -g update hexo-cli
 npm -i hexo
@@ -117,6 +922,7 @@ npm audit
 npm audit fix
 npm cache clean
 npm cache clean --force
+npm config edit
 npm config get prefix
 npm config list
 npm config set cache D:\envir_vars\nodejs\node_cache\
@@ -134,59 +940,9 @@ npm i -g blowfish-tools
 npm i -S hexo-prism-plugin
 npm i hexo-highlight-shiki --save
 npm install
-npm install     "shiki-nova1751": "^0.0.0",
-npm install --global gulp-cli
-npm install --save hexo
-npm install --save hexo-filter-kroki
-npm install --save hexo-renderer-marked
-npm install --save moment
-npm install -D shiki
 npm install -g @microsoft/inshellisense
-npm install -g hexo
-npm install -g hexo-cli
-npm install -g npm
-npm install -g npm@10.9.0
-npm install -g ttf2woff2
-npm install bulma-stylus
-npm install bulma-stylus@0.8.0 --save
-npm install bulma-stylus@0.9.1 --save
-npm install gulp gulp-clean-css gulp-uglify-es gulp-html-minifier-terser
-npm install hexo-cli -g
-npm install hexo-highlight-shiki
-npm install hexo-image-link --save
-npm install hexo-lazyload-image --save
-npm install hexo-log
-npm install hexo-native-lazy-load --save
-npm install hexo-renderer-markdown-it-plus
-npm install hexo-shiki-plugin --save
-npm install shiki --save
-npm install shiki-nova1751
-npm install strip-indent
-npm install yarn
-npm instlal hexo
-npm ls --depth 0
-npm run build
-npm uninstall --save hexo
-npm uninstall --save hexo-asset-img
-npm uninstall --save hexo-filter-mermaid-diagrams
-npm uninstall --save hexo-renderer-marked
-npm uninstall -D shiki
+npm install hexo-filter-titlebased-link --save
 npm uninstall -g @microsoft/inshellisense
-npm uninstall -g ttf2woff2
-npm uninstall -S hexo-prism-plugin
-npm uninstall bulma-stylus@0.9.1 --save
-npm uninstall hexo-highlight-shiki
-npm uninstall hexo-highlight-shiki --save
-npm uninstall hexo-image-link --save
-npm uninstall hexo-lazy-load --save
-npm uninstall hexo-lazyload-image --save
-npm uninstall hexo-native-lazy-load --save
-npm uninstall hexo-renderer-markdown-it-plus
-npm uninstall hexo-shiki-plugin --save
-npm uninstall shiki --save
-npm uninstall shiki-nova1751
-npm uninstall strip-indent
-npm uninstall yarn
 npm update
 npm update --save bulma-stylus
 npm update --save bulma-stylus@0.9.1
@@ -194,7 +950,10 @@ npm update --save hexo-renderer-marked
 npm update bulma-stylus
 npm update bulma-stylus --save
 npm update hexo-cli
+npx avif --input="**/*.*" --keep-metadata --overwrite --lossless
+npx avif --verbose
 npx bulma
+npx czg
 npx heox s
 npx hexo
 npx hexo build
@@ -205,12 +964,17 @@ npx rehype public -o
 npx rehype-cli public -o
 npx yarn add hexo-shiki-plugin
 nu
+nu --config
+nu --help
 nu -v
 nu neovim
 nu-complete eza color-scale 
 nu-complete eza time-style 
+nu.platform.system
 nun
 nupm install --path nu_plugin_clipboard -f
+nvim
+nvim -v
 oh-my-posh
 oh-my-posh --help
 oh-my-posh --version
@@ -222,25 +986,43 @@ oh-my-posh init nu --config ./themes/tokyo-night.omp.json
 oh-my-posh init nu --config ./themes/tokyo-night.omp.json --print | save ./myscript.nu --force
 oh-my-posh init nu --config ./themes/tokyo-night.omp.json --print | save ./myscript.nu --forceff
 oh-my-posh init nu --config `e:\OneDrive - 商业版\Attachments\dotfiles\Terminal\Shells\oh-my-posh\tokyo-night.omp.json`
+oh-my-posh init nu --print
+oh-my-posh init nu --print | clip
 oh-my-posh init nu --print | save ./myscript.nu --force
 oh-my-posh init nushell
 oh-my-posh themes
+oh-my-posh upgrade
 ohmy[posh
 ohmyposh
 omp
+open a.txt | lines | each { |ext| code --install-extension $ext }
+open a.txt | lines | each { |ext| code --uninstall-extension $ext }
+open a.txt | lines | each { |ext| echo %ext}
+open b.txt | lines | each { |ext| nu -c $"code --install-extension ($ext)" }
+open history.txt | lines | uniq | save dedup.txt
 over use .venv/Scripts/activate.nu
+overlay use ./.venv/Scripts/activate.nu
+overlay use ./venv/Scripts/activate.nu
 overlay use .venv/Scripts/activate.nu
+overlay use .venv\Scripts\activate.nu
 overlay use e:/projects/donkeycar/.venv/Scripts/activate.nu
 overlay use E:/projects/donkeycar/.venv/Scripts/activate.nu
+overlay use venv/Scripts/activate.nu
+p
 pad-tabs
 parse-paths
+paste
+paste > meta.yaml
+paste | meta.yaml
 path
+pdw
 pg_ctl start
 pin install mkdocs-redirects
 ping
 ping --help
 ping -4
 ping 192.168.35.128
+ping baidu.com
 ping donkey
 ping efterklang-github-io.pages.dev
 ping efterklang-github-io.pages.dev efterklang.github.io
@@ -248,6 +1030,7 @@ ping github.com
 ping google.com
 ping https://efterklang-github-io.pages.dev
 ping https://ltvf-my.sharepoint.com/personal/gjx_ltvf_onmicrosoft_com/_layouts/15/download.aspx?UniqueId=880b4796%2Dafa9%2D4487%2Db666%2Deb5b810507fe
+ping https://self.uestc.edu.cn/home
 ping ltvf-my.sharepoint.com
 ping ltvf-my.sharepoint.com -4
 ping ltvf-mysharepoint.com
@@ -261,16 +1044,19 @@ pip --help
 pip install -r ./env/requirements_dev.txt
 pip install -r ./requirements.txt
 pip install -r ./virtual-network/env/requirements_dev.txt
+pip install flask
 pip install mkdocs
 pip install mkdocs-redirects
 pip install PIL
 pip install pillow
+pip install pyright
 pip install pytest
 pip install tldr
 pip uninstall tldr
 pip update *
 pip update **
 pkief.material-icon-theme
+pkill 28928
 plugin
 plugin list
 plugin rm **
@@ -278,6 +1064,7 @@ plugin rm inc
 plugin stop
 pomdtr.excalidraw-editor
 port
+port 4000
 prcos
 procs
 procs --gen-config
@@ -293,6 +1080,8 @@ procs -o 4000 6000 6666
 procs -o 4000 6000 6666 443
 procs zsh
 ps
+ps --help
+ps -ef
 pwd
 pwd > echo
 pwd | 
@@ -305,7 +1094,9 @@ pwd | str
 pwd | str replace --all '\' '/'
 pwd | str replace \ //
 pwd | str replace \\ //
+pws
 pwsh
+pwsh -File install.ps1
 pwsh -help
 pwsh -v
 PyTCP\tests__legacy\unreliable\config.py
@@ -316,12 +1107,32 @@ python -m venv ./venve
 python -v
 python ./a.py
 python ./a.py ./se/ ./output
-python ./cwebp.py ../source/img/unused/ ./temp
 python ./temp.py
 python ./test.py
 python ./utils/indexnow_request.py
 python ./webp.py ./Japan/ ./Japorn
+python app.py
+python astar\Solver.py
+python3 -Bc "import pathlib; [p.rmdir() for p in pathlib.Path('.').rglob('__pycache__')]"
 rangav.vscode-thunder-client
+rclone --help
+rclone completion nushell
+rclone config
+rclone config file
+rclone copy cf:blog-image ./buckets/
+rclone copy cf:blog-image ./buckets/ --progress
+rclone copy cf:blog-image E:/buckets/ --progress
+rclone lsd cf
+rclone lsd cf:
+rclone lsd r3
+rclone rclone tree cf:bucket
+rclone sync ./buckets/ cf:blog-image --progress
+rclone sync ./buckets/ cf:blog-image --progress --transfers 10
+rclone sync E:/buckets/ cf:blog-image --progress --transfers 10
+rclone sync E:/buckets/ cf:blog-image --progress --transfers 16
+rclone tree cf:bucket
+rclone tree r3:bucket
+rclone tree s3:bucket
 redhat.java
 redhat.vscode-xml
 redhat.vscode-yaml
@@ -329,109 +1140,73 @@ reg query "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v
 registry query --hkcu environment | parse-paths | append (registry query --hklm 'SYSTEM\CurrentControlSet\Control\Session Manager\Environment'| parse-paths)
 rehtype
 rehype
+rg --color=always --line-number --no-heading --smart-case
+rg --color=always --line-number --no-heading --smart-case .
+rg --color=always --line-number --no-heading --smart-case "${*:-}"
+rg --color=always --line-number --no-heading --smart-case "${*:-}" ...
+rg --color=always --line-number --no-heading --smart-case "${*}"
+rg --color=always --line-number --no-heading --smart-case | fzf
+rg --color=always --line-number --no-heading --smart-case abc
+rg --color=always --line-number --no-heading --smart-case tcp
+rg --files --hidden --follow --glob '!.git'
+rg --line-number --with-filename . --color=always |
 rg fuck
 rg lov
 rg temp
 rg vluv | fzf
 rg 数字
 rg 数字 | fzf
+rg 确保首部长度
 ritwickdey.liveserver
-rm  assets\image-20230825142406156.png
-rm -r ./.git
-rm -r ./.git/
-rm -r ./.git/rebase-merge/
-rm -r ./.venv/
-rm -r ./1/
-rm -r ./assets/
-rm -r ./assets/Ch6-1FileSystem/
-rm -r ./chsrc/
-rm -r ./computer_network/
-rm -r ./donkeycar-console/
-rm -r ./donkeycar/
-rm -r ./Efterklang.github.io/
-rm -r ./imageBed/
-rm -r ./Japan/
-rm -r ./jiejaitt.github.io/
-rm -r ./live2d_Asoul/
-rm -r ./node_modules/
-rm -r ./node_modules/ package-lock.json
-rm -r ./nu_plugin_clipboard/
-rm -r ./public/
-rm -r ./ref
-rm -r ./reflection/
-rm -r ./s
-rm -r ./temp
-rm -r ./terminal/
-rm -r ./数电/
-rm -r **cache
-rm -r lazy\nvim-lint\
-rm ./.git
-rm ./a.c
-rm ./a.py
-rm ./DisableShortcuts-2024-01-28-13-17-12.png
-rm ./onedrive_proxy-2024-09-26-18-16-46.png
-rm ./package-lock.json
-rm ./sysproxy.png
-rm ./TaskScheduler.java
-rm ./temp.java
-rm ./tun1.png
-rm ./zoxide.nu
-rm ./博客性能优化-2024-09-28-15-18-54.png
-rm *.gz
-rm 2024-2024-02-02-23-29-30.webp
-rm 2024-2024-04-19-11-29-13.webp
-rm blog-2024-1-19.webp
-rm daily-font-20240118.webp
-rm foamgraph1-20.webp
-rm gallery-20240118225919882.webp
-rm JavaⅠ-2024-09-18-14-56-51.png
-rm JavaⅠ-2024-09-18-14-59-55.png
-rm Live2d-2024-04-26-19-17-08.webp
-rm Live2d-2024-04-26-19-20-25.webp
-rm Live2d-2024-04-26-19-20-25.webp-2024-04-26-19-20-25.webp
-rm Network\NetworkLayer\Ch4-1NetworkLayer-2024-06-07-15-17-12.webp
-rm Network\Overview\ComputerNetwork01-2024-01-31-23-38-14.webp
-rm source\_posts\Dev\FrontEnd\Live2d.md
-rm source\_posts\UESTC\ComputerNetworking\Ch5-2TransportLayer\Ch5-2TransportLayer-2024-04-23-15-50-58.webp
-rm source\img\thumbnails\FrontEnd\live2d.webp
+rsync
+rsync -avz -e "ssh -i ~/.ssh/azure_ubuntu.pem vluv@20.2.13.142" ./big_screen-master/ /home/vluv/workspace
 rust
 rustc
 s
+scene
+scheme
 scln
+scoop
 scoop -v
+scoop add alias si scoop install
+scoop alias
+scoop alias add si "scoop install"
+scoop alias add si "scoop install" "install package"
+scoop alias add si scoop install
+scoop alias install i
+scoop alias rm si
 scoop bucket
 scoop bucket add java
 scoop bucket add nerd-fonts
+scoop bucket add nonportable
 scoop bucket add versions
 scoop bucket list
 scoop buckets
 scoop cache rm *
 scoop cleanup *
 scoop cleanup **
+scoop cleanup **; 
+scoop config
 scoop config aria2-warning-enabled False
+scoop export > ./applist.json
+scoop export > applist.json
+scoop export | save a.json
+scoop heif-conv
 scoop help
+scoop home bat
 scoop home eza
 scoop home fastfetch
+scoop home fzf
+scoop home innounp
+scoop home nu
 scoop home oh-my-posh
 scoop home poppler
-scoop install code2prompt
-scoop install find
-scoop install fish
-scoop install github-cli
-scoop install gitui
-scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json
-scoop install localsend
-scoop install maven
-scoop install miniconda
-scoop install miniconda3
-scoop install monaspaceradon
-scoop install mysql
-scoop install nodejs
-scoop install npm
-scoop install pikpak
-scoop install procs
-scoop install ssh-agent
-scoop install yazi
+scoop home windows-terminal-preview
+scoop install csi
+scoop install extras/carapace-bin
+scoop install extras/yesplaymusic
+scoop install vivetools
+scoop install vscode
 scoop list
 scoop listssh
 scoop remove nu
@@ -440,13 +1215,18 @@ scoop reset node20
 scoop reset nodejs-lts
 scoop reset nodejs20
 scoop rm oh-my-posh
+scoop rm yesplaymusic
+scoop search csi
 scoop search everything
 scoop search files
 scoop search glaze
 scoop search jdk8
 scoop search nodejs
 scoop search radon
+scoop search scheme
+scoop search wezterm
 scoop search yazi
+scoop unhold oh-my-posh
 scoop unhold steam
 scoop uninstall go
 scoop uninstall nu
@@ -458,7 +1238,21 @@ scoop unsintall nu
 scoop unsintall oh-my-posh
 scoop update gitui
 scoop update monaspaceradon
+scoop update vscode uv yazi monaspace eza
+scoop update windows-terminal-preview
+scoop which connect
+scoop which git
+scoopAliases
+scp -r ./big_screen-master/ vluv@20.2.13.142:/home/vluv/workspace
+scp -r ./big_screen-master/ vluv@azure:/home/vluv/workspace
+scp -r ./shells/fish/ root@momenta:/root/.config/fish
+scp -r ./shells/fish/ root@ubuntu:/root/.config/fish
 scp -r admin@donkey:/home/admin/mycar ./
+scp -r root@momenta:/root/.config/fish ./shells/
+scp -r root@momenta:/root/.config/fish ./shells/fish
+scp ./big_screen-master/ vluv@20.2.13.142 /home/vluv/
+scp ./big_screen-master/ vluv@20.2.13.142 /home/vluv/workspace
+scp ./big_screen-master/ vluv@20.2.13.142:/home/vluv/workspace
 scp admin@donkey:/home/admin/mycar ./
 scp d:/omp.json vluv@20.2.13.142:/home/
 se glaze
@@ -475,28 +1269,54 @@ shalldie.background
 sharzyl.cjk-word-handler
 shd101wyy.markdown-preview-enhanced
 shiki
+shizuku
 shubhsharma.lazyvim-theme
+shutdown -s -t 7200
+si
 si alacritty
+si apifox
+si atop
+si autohotkey
+si bemenu
 si bit
+si bottom
+si bun
 si cargo
+si ChezScheme
 si chsrc
+si czg
+si dbeaver
+si delta
 si doggo
+si dotnet
+si dotnet-sdk
+si dotnet8-sdk
+si everything
 si fd
+si feishu
 si files
 si fish
+si fluent-terminal-np
+si fuck
 si gcc
+si gh
 si git
 si github-cli
 si github0cli
 si gitui
 si go
 si gzip
+si heif-conv
+si helix
 si hugo
+si hyperfine
 si inshellisense
 si jdj
 si jetbrains nf
 si jetbrainsmono-nf
 si kitty
+si lazygit
+si less
 si maven
 si miniconda3
 si monaspace
@@ -504,6 +1324,7 @@ si monaspace-var
 si monaspacevar
 si mysql
 si namp
+si ncdu
 si nmap
 si nodejs
 si nodejs-lts
@@ -517,19 +1338,41 @@ si obsidian
 si openjdk22
 si openjdk23
 si OracleJDK8
+si picgo
 si postgresql
+si postman
 si procs
 si python
+si rclone
+si rsync
 si sing-box
 si steam
+si thefuck
+si tig
 si tldr
 si tokei
+si typora
 si typst
+si unigram
 si uv
+si vivetool
+si vivetool-gui
+si vmware
+si vmware-ws-pro
+si vscode
+si vscode uv yazi monaspace eza
+si vscode-insider
+si wechat
+si wezterm
+si wezterm-nightly
 si windows-terminal-preview
 si wingetui
+si xclip
 si yazi
+si zed
 si zellij
+si zen
+si Zen-Browser
 sing-box
 sl
 souche.vscode-mindmap
@@ -541,12 +1384,19 @@ source\_posts\UESTC\ComputerNetworking\Ch4-1NetworkLayer.md
 spades.vs-picgo
 ss
 sse ascii
+sse dotnet
+sse everything
 sse jdk
 sse jetbrains
 sse monaspace
+sse vive
+sse vm
+sse vmware
+sse zen
 ssh -i ~/.ssh/azure_ubuntu.pem vluv@20.2.13.142
 ssh -i ~/.ssh/id_rsa u0_a486@113.54.238.186 -p 8022
 ssh -i ~/.ssh/id_rsa.pub u0_a486@113.54.238.186 -p 8022
+ssh -i azure
 ssh -p 8022 -i ./id_rsa u0_a486@192.168.200.99
 ssh -p 8022 192.168.200.99
 ssh -p 8022 192.168.200.99/24
@@ -557,12 +1407,31 @@ ssh -T git@github.com
 ssh -T git@ssh.github.com
 ssh -v admin@donkey
 ssh -vT git@github.com
+ssh 10.9.61.180
 ssh 172.19.0.1 -p 8022
 ssh admin@donkey
 ssh admin@donkey\
 ssh azure
 ssh donkey_admin
 ssh github.com
+ssh hubangsheng@127.0.0.1
+ssh hubangsheng@127.0.0.1 -p 22
+ssh hubangsheng@127.0.0.1:22
+ssh hubangsheng@ubuntu
+ssh key-gen
+ssh momenta
+ssh momenta 
+ssh momenta -i ./id_rsa
+ssh momenta -v
+ssh root@10.9.61.180
+ssh root@10.9.61.180 -i ~/.ssh/id_ed25519
+ssh root@10.9.61.180 -i ~/.ssh/id_ed25519 -v
+ssh root@10.9.61.180 -i ~/.ssh/id_ed25519.pub
+ssh root@10.9.61.180 -i ~/.ssh/id_rsa
+ssh root@10.9.61.180 -i ~/.ssh/id_rsa -v
+ssh root@10.9.61.180 -i ~/.ssh/id_rsa.pub -v
+ssh root@10.9.61.180 -v
+ssh root@10.9.68.7 -i ~/.ssh/id_ed25519
 ssh ssh -i ~/.ssh/azure_ubuntu.pem vluv@20.2.13.142
 ssh ssh vluv@azure
 ssh u0_a{user_id}@172.19.0.1
@@ -574,6 +1443,8 @@ ssh u0_a486@192.168.35.128 -p 22
 ssh u0_a486@192.168.35.128 -p 8022
 ssh u0_a486@210.41.103.162 -p 22
 ssh u0_a486@210.41.103.162 -p 8022
+ssh ubuntu
+ssh ubuntu -i ./id_rsa
 ssh vluv@20.2.13.142
 ssh vluv@azure
 ssh vluv@ubuntu
@@ -581,21 +1452,36 @@ ssh-add
 ssh-add ~/.ssh/id_rsa
 ssh-add ~/.ssh/id_rsa.pub
 ssh-agent -s
+ssh-keygen
+ssh-keygen -t rsa -b 4096 -C "mmt"
+sshkeygen
+ssi
 sst
+sst; su
 ssu
 st
 steam
 su
+su 7zip hugo
+su bun
+su bun eza go postman procs uv
+su bun gh obsidian
+su bun git
+su bun uv windows-terminal-preview
 su busybox
 su chsrc eza tomcat
 su eza
 su eza oh-my-posh
+su eza uv vscode
 su eza,oh-my-posh
 su fastfetch
 su fastfetch github-cli oh-my-posh
 su fastfetch oh-my-posh
+su feishu uv
 su flow-launcher
 su fzf
+su fzf hyperfine oh-my-posh tomcat
+su gh go nodejs-lts python uv
 su git
 su git oh-my-posh
 su github-cli
@@ -604,6 +1490,9 @@ su hugo
 su hugo innounp
 su hugo mysql
 su innounp
+su jetbrainsmono-nf
+su jetbrainsmono-nf obsidian
+su libwebp
 su miniconda
 su miniconda3
 su monaspace
@@ -612,39 +1501,85 @@ su neovim
 su nodejs-lts
 su nu
 su nushell
+su obsidian
 su oh-my-posh
 su oh-my-posh ffmpeg
+su oh-my-posh gping
+su oh-my-posh uv nodejs20
 su openjdk
 su openjdk22
 su poppler
+su postgresql
+su postman
+su postman uv gh fastfetch eza bun
+su postman uv nodejs-lts bat
 su powershell-preview
+su rclone
+su scoop-search powershell-preview rclone
+su uv
+su uv gh
+su uv gh obsidian
+su uv go
+su uv nu hugo fastfetch eza
 su uv oh-my-posh
+su uv postman
+su uv vscode
+su vscode
+su vscode uv hugo feishu fastfetch eza bun
+su vscode uv nodejs-lts nodejs20 mysql fzf eza bun
+su vscode uv starship git gitui fastfetch
+su wezterm
+su yazi
+su yazi bun libwebp gh
+su yazi fastfetch hugo
 su zoxide
+su;
 su; sst
 su;sst
 sudo
+sudo ./node_inject.exe
 sudo DISM.exe /Online /Cleanup-image /Restorehealth
 sudo git gc
 sudo git gc --aggressive --prune=now
 sudo hexo clean
 sudo hexo gen
+sudo mv ./1.95.3/ C:\$Recycle.Bin\
+sudo netstat -bno 4000
 sudo npm install -g @microsoft/inshellisense
 sudo npm install bulma-stylus@0.8.0 --save
 sudo npm install hexo-cli -g
+sudo npm uninstall hexo-image-link --save
 sudo npm uninstall hexo-shiki-plugin --save
+sudo python3 -Bc "import pathlib; [p.rmdir() for p in pathlib.Path('.').rglob('__pycache__')]"
+sudo rm -r ./SDKDNS/
+sudo rm -r ./ViVeTool/
+sudo rm -rf /opt/nvim
+sudo scoop install fluent-terminal-np
+sudo scoop uninstall fluent-terminal-np
+sudo scp ./big_screen-master/ vluv@20.2.13.142:/home/vluv/workspace
+sudo si fluent-terminal-np
+sudo sui fluent-terminal-np
+sudo vivetool /enable /id:48697323,48433719
 sudo wsl
 sui alacritty
 sui android-clt
 sui bit
 sui bottom
+sui ChezScheme
 sui dog
+sui doggo
+sui dotnet-sdk
 sui duf
 sui files
+sui fluent-terminal-np
 sui git
 sui github-cli
 sui gitui
+sui gping
 sui gradle6
 sui helix
+sui hugo
+sui jq
 sui kitty
 sui kotlin
 sui localsend
@@ -654,29 +1589,59 @@ sui miniconda3
 sui monaspace
 sui monaspaceradon
 sui mysql
+sui nmap
 sui nodejs
+sui nodejs20
 sui nushell
+sui oh-my-posh
 sui openjdk22
 sui OracleJDK8
+sui picgo
 sui pikpak
+sui pipx
 sui poppler
+sui postgresql
+sui postman
 sui powershell-preview
 sui procs
 sui sing-box
 sui tldr
+sui tomcat
 sui typst
+sui vivetool-gui
+sui vmware-ws-pro
+sui vscode-insider
+sui wezterm
+sui wezterm-nightly
 sui windows-terminal-preview
 sui wingetui
+sui yarn
 sui yazi
+sui yesplaymusic
+sui zed
+sui Zen-Browser
 sumneko.lua
+sync
+sys
+sys | get host.long_os_version
+sys | get host.long_os_version | str downcase
 sys host 
 sysoev.language-stylus
 systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
 tamasfe.even-better-toml
+tar --help
+tasklist /FI "PID eq 1234"
+tasklist /FI "PID eq 28928"
+tasklist /FI "PID eq 4000"
+tastlist /FI "PID eq 28928"
+tcpdump
+tcpvcon
 telnet cip.cc
 terminal
 terminal -v
+terminal.exe
 thenuprojectcontributors.vscode-nushell-lang
+tig
 tldr
 tldr --help
 tldr --l
@@ -704,6 +1669,10 @@ tokei -help
 tokei ./
 tokei ./config.nu
 tokei ./dev/
+tokei ./dkconsole/
+tokei ./donkeycar-console/
+tokei ./sky-take-out/
+tokei ./source/
 tokei ./source/_posts/
 tokei ./themes/
 tokei backend\
@@ -711,7 +1680,11 @@ tokei dev
 tokei dev\topology\
 top
 TOP
+touch ./custom.css
 tree
+trim_history
+trim_history
+trim_history 
 ttf2woff2 --help
 ttf2woff2 ./MapleMono-NF-CN-Regular.ttf
 ttf2woff2 ./MapleMono-NF-CN-Regular.ttf -v
@@ -725,6 +1698,7 @@ uname -h
 uname -machine
 uname -v
 unar
+unzip ./字节一面1080P.mov.zip
 upath
 update
 update --help
@@ -740,13 +1714,17 @@ uv --help
 uv add -help
 uv add -r ./requirements.txt
 uv add kivy
+uv add numpy
 uv add tldr
 uv export
 uv export --help
 uv export requirements.txt
 uv init
 uv init ./
+uv init .venv
 uv init test
+uv init venv
+uv init vnet
 uv install
 uv install -r requirements.txt
 uv lock --upgrade-package django
@@ -763,81 +1741,139 @@ uv pip compile ./pyproject.toml | append ./a.txt
 uv pip compile ./uv.lock
 uv pip freeze
 uv pip freeze > requirements-3.in
+uv pip install -r ./pyproject.toml
+uv pip install -r pyproject.toml --extra dev
 uv pip install -r requirements.txt
+uv pip install ./pyproject.toml
+uv pip install flask
+uv pip install numpy
 uv sync
 uv venv
 uv venv --help
+uv venv ./.venv
+uv venv ./venv
+uvicorn dev.main:app
+uvx
 vadimcn.vscode-lldb
 ver
 vim
 vim ./_config.post.yml
+vim ./_config.yml
 vim ./.gitignore
+vim ./.wslconfig
 vim ./a.c
 vim ./config
 vim ./config.toml
+vim ./config.yaml
+vim ./custom.css
+vim ./env.nu
+vim ./helix/config.toml
+vim ./helix/languages.toml
 vim ./Hello.c
+vim ./init.lua
+vim ./install.conf.yaml
 vim ./key.md
+vim ./keymap.toml
+vim ./known_hosts
 vim ./Main.java
+vim ./main.py
+vim ./plugins/yatline.yazi/
 vim ./procs_config.toml
+vim ./pyproject.toml
 vim ./rc.toml
 vim ./TaskScheduler.java
 vim ./temp.java
 vim ./test.py
+vim ./theme.toml
 vim ./utils\backdrops.lua
 vim ./webp.py
+vim ./wezterm.lua
+vim ./yazi.toml
 vim .wslconfig
 vim ~/.config/fastfetch/config.jsonc
 vim ~/.config/inshellisense/rc.toml
+vim ~/.config/scoop/config.json
 vim ~/.gitconfig
 vim ~/.ssh/config
 vim ~/.ssh/known_hosts
 vim ~/.wslconfig
 vim ~/wsl.conf
+vim $profile
+vim applications\vivaldi\ui_mod\vivalarc.css
+vim autohotkey\caps2crtl.ahk
+vim bat\config
 vim btop\themes\catppuccin_mocha.theme
+vim C:\Users\24138\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
 vim cheat\conf.yml
+vim current\rclone.conf
 vim env.nu
 vim home\markdown\notes\Private\key.md
+vim install.linux.yaml
 vim java\222.完全二叉树的节点个数.java
 vim keymap.toml
+vim misc\.gitconfig
 vim plugins\zoxide.nu
 vim Roaming\gitui\theme.ron
 vim scripts\aliases\scoop\scoop-aliases.nu
 vim scripts\default_keybindings.nu
+vim shells\nushell\scripts\default_keybindings.nu
+vim shells\pwsh7\Microsoft.PowerShell_profile.ps1
 vim source\_posts\UESTC\ComputerNetworking\Ch4-1NetworkLayer.md
+vim source\_posts\UESTC\ComputerNetworking\Ch5-2TransportLayer.md
 visualstudioexptteam.intellicode-api-usage-examples
 visualstudioexptteam.vscodeintellicode
+vivetool /enable /id:48697323,48433719
+vivetool-gui
 vpw
 vpwd
 vscjava.vscode-java-debug
 vscjava.vscode-java-pack
 vscjava.vscode-java-test
 vscjava.vscode-maven
+vscode -v
 w88975.code-translate
 wakatime.vscode-wakatime
+warn
 wenfangdu.jump
+wez
+wezcat
+wezimg
 wezterm
+wezterm --help
 wezterm -v
+where code
 where maven
 where terminal
+which bash
+which chrome
+which chrsc
+which code
 which code2prompt
 which connect
 which donkey
 which explorer
+which ffmpeg
 which fish
 which git
+which gitbash
 which gopls
+which helix
 which maven
 which mvn
+which nu
 which procs
 which python
 which terminal
 which uname
+which wt
+which zoxide
 windows terminal
 winget install --exact --id MartiCliment.UniGetUI --source winget
 winget install --id Adoptium.OpenJDK
 winget install --id Anaconda.Miniconda3
 winget install --id OpenJS.NodeJS
 winget install JanDeDobbeleer.OhMyPosh -s winget
+winget install mit-scheme
 winget install oh-my-posh
 winget install openjdk
 winget install openjdk22
@@ -851,29 +1887,49 @@ wmic
 wmic cpu get Architecture
 wsk
 wsl
+wsl --help
 wsl --import Arch e:\wsl\Arch e:\wsl\Arch.tar
 wsl --install
 wsl --install -d Arch
 wsl --list
+wsl --list --verbose
 wsl --shutdown
 wsl --update
+wsl --user root
 wsl --v
 wsl -l -v
 wsl -v
+wsl update
 wsl.exe --install --no-distribution
 wsl\
+wt
 wt --update
 wt -v
+wt.exe
+wto
+wtp
+wtp -v
+xclip
+ya pack -a imsi32/yatline
+ya pack -a yazi-rs/flavors:catppuccin-mocha
+ya pack -a yazi-rs/plugins:git
+ya pack -a yazi-rs/plugins:max-preview
 yarn add hexo-shiki-plugin
 yazi
 yazi --help
 yazi --v
+yazi --version
+yazi -v
+yazi -version
 yutengjing.open-in-external-app
 yy
+yy -v
 yzhang.dictionary-completion
 yzhang.markdown-all-in-one
 z
 z ./miniconda3/current/envs/dk/Scripts/
+z `./OneDrive - Business/`
+z `./OneDrive - 商业版/`
 z don
 z edit
 z ef
@@ -883,1231 +1939,18 @@ z lee
 z nu
 z scoop
 z vl
+zed
 zellij
 zi
+zip -d name_of_zipfile.zip __MACOSX
 zip ./Ava.model3.json
 zip ./Ava.model32.json ./Ava.model3.json
 zoxide
 zoxide --help
 zoxide edit
 zoxide eidt
+zoxide help
+zoxide init nu
+zoxide init nushell
+zoxide query -l
 zoxide_menu
-clear
-fzf --preview "rg --color=always {}"
-cd 数据
-cd ..
-cd ./数据
-cd ef
-cd vl
-git branch | fzf | xargs git checkout
-git switch
-gsw
-git branch
-cd vnet
-cd proj
-cd ./donkeycar
-cd ./RuoYi-Vue/
-rg --files --hidden --follow --glob '!.git'
-rg --color=always --line-number --no-heading --smart-case "${*:-}" ...
-rg --color=always --line-number --no-heading --smart-case "${*:-}"
-rg --color=always --line-number --no-heading --smart-case "${*}"
-rg --color=always --line-number --no-heading --smart-case
-rg --color=always --line-number --no-heading --smart-case .
-rg --color=always --line-number --no-heading --smart-case abc
-rg --color=always --line-number --no-heading --smart-case tcp
-rg --color=always --line-number --no-heading --smart-case | fzf
-rg --line-number --with-filename . --color=always |
-<\n>  fzf --delimiter : --preview "bat --color=always {1} --highlight-line {2}" --preview-window ~8,+{2}-5
-cd ues
-exp
-scoop home fzf
-cheat | fzf
-cheat ssh | fzf
-cheat --h
-cheat --help
-cheat -l | fzf
-man -l apt
-cheat dart
-man git | fzf
-gg
-l
-ff
-wez
-wezimg
-su wezterm
-si wezterm
-scoop search wezterm
-si wezterm-nightly
-rg 确保首部长度
-vim source\_posts\UESTC\ComputerNetworking\Ch5-2TransportLayer.md
-ci source\_posts\UESTC\ComputerNetworking\Ch5-2TransportLayer.md
-sui wezterm-nightly
-scoop
-su fzf hyperfine oh-my-posh tomcat
-sui wezterm
-ls ./img/gallery/Essay/
-hexo s
-su obsidian
-cd down
-ci `./1. args.md`
-rm `./1. args.md`
-cat f
-cd yasb
-vim ./config.yaml
-flightless bird
-vim ./_config.yml
-adb shell pm grant li.songe.gkd android.permission.WRITE_SECURE_SETTINGS
-adb shell sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.sh
-csi
-winget install mit-scheme
-scoop search scheme
-si ChezScheme
-scheme
-sui ChezScheme
-dotnet --version
-dotnet tool install -g dotnet-script
-(new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com/dotnet-script/dotnet-script/master/install/install.ps1") | iex
-cd `c:\Program Files (x86)\`
-cd MSBuild\
-ls ./15.0/
-scoop install csi
-scoop search csi
-si dotnet
-sse dotnet
-si dotnet8-sdk
-si dotnet-sdk
-sui dotnet-sdk
-dotnet
-dotnet -v
-dotnet --v
-git clone https://github.com/alaricsp/chicken-scheme.git
-rm -r ./chicken-scheme/
-ci ./_config.yml
-overlay use .venv\Scripts\activate.nu
-uv add numpy
-uv pip install numpy
-python astar\Solver.py
-& e:/projects/donkeycar/.venv/Scripts/Activate.ps1
-cd oned
-cd Archives\竞赛\
-python3 -Bc "import pathlib; [p.rmdir() for p in pathlib.Path('.').rglob('__pycache__')]"
-sudo python3 -Bc "import pathlib; [p.rmdir() for p in pathlib.Path('.').rglob('__pycache__')]"
-cd .C4
-cd C4
-find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf
-cd tools
-cd e
-cd ./Configs/
-cd ./home
-ls ./windows/
-cd d:
-cdd
-cd Application\Tools\ViVeTool\
-scoop install vivetools
-sse vive
-si vivetool
-si vivetool-gui
-vivetool-gui
-rm -r ./ViVeTool/
-sudo rm -r ./ViVeTool/
-rm -r ./SDKDNS/
-sudo rm -r ./SDKDNS/
-ls ./Beautification/
-sui vivetool-gui
-vivetool /enable /id:48697323,48433719
-sudo vivetool /enable /id:48697323,48433719
-cd Beautification\
-ls ./ExplorerBlurMica/
-./ExplorerBlurMica/register.cmd
-cd Beautification
-cd -
-./MToolBox_v2.0.2/MToolBox.exe
-cat ./MToolBox_v2.0.2/ReadMe.txt
-cd thumb
-cd ./Dev/Others/
-cwebp ./1731656721519.png -o start_menu_widget.webp
-cwebp ./1731656339092.png -o start_settings.webp
-code --disable-extension 
-code --disable-extension  ./
-code --list-extensions 
-code --disable-extension brandonkirbyson.vscode-animations
-code --disable-extensions 
-code -v
-code
-scoop install vscode
-si vscode
-cd apps
-cd ./vscode/
-cd ./current/
-cd vluv
-sudo npm uninstall hexo-image-link --save
-hexo clean
-cat ./package.json
-vim $profile
-vim C:\Users\24138\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
-ci ./package.json
-code ./package.json
-si bun
-bun
-bun remove hexo-image-link
-bun remove hexo-image-link --save
-mv -r ./node_modules/ ../
-mv ./node_modules/ ../
-gig
-bun install
-hexo gen
-gulp
-rm -r source\_posts\Dev\Algorithm\bit_manipulation\
-rm -r source\_posts\Dev\Algorithm\hash_table\
-rm -r source\_posts\Dev\DataBase\DataBase01\
-rm -r source\_posts\Dev\DataBase\DataBase03\
-cd download
-cwebp `./Screenshot_20241115_221528_One UI Home.png` -o homepage.webp
-rm -r ./java_se2/
-si rclone
-rclone config file
-cd ./rclone/
-vim current\rclone.conf
-rclone lsd r3
-rclone tree s3:bucket
-rclone tree r3:bucket
-rclone tree cf:bucket
-rclone lsd cf
-rclone lsd cf:
-rclone --help
-mv source\_posts\Dev\Python\pydevlog2.md source\_drafts\pydevlog2.md
-cde
-mkdir buckets
-rclone config
-rclone rclone tree cf:bucket
-rclone copy cf:blog-image ./buckets/
-ls ./buckets/
-rclone sync ./buckets/ cf:blog-image --progress
-mv ./buckets/Ch2-PhysicalLayer/ ./buckets/Network/
-cd ./buckets/
-rclone sync ./buckets/ cf:blog-image --progress --transfers 10
-cd buckets\
-rclone sync E:/buckets/ cf:blog-image --progress --transfers 10
-cd img
-cwebp thumbnails\Dev\Java\thread_pool.jpg -o thumbnails\Dev\Java\thread_pool.webp
-rclone sync E:/buckets/ cf:blog-image --progress --transfers 16
-si picgo
-sui picgo
-su rclone
-dust ./
-du ./
-du
-hexo s -p 6333
-hexo s -p 6334
-rm source\img\page\OIP.jpg
-su oh-my-posh gping
-cd buck
-man rclone
-cheat rclone
-rclone copy cf:blog-image ./buckets/ --progress
-cls
-rclone completion nushell
-cd ~/.config
-mkdir vscode
-cd ./vscode
-touch ./custom.css
-vim ./custom.css
-rm Java\java_se4\1730962912348.png
-rm ./chicken-scheme/
-glog
-git log
-si ncdu
-su jetbrainsmono-nf
-dust
-dust --config
-dust --help
-rsync
-cd Application\Typora\
-./node_inject.exe
-sudo ./node_inject.exe
-cd Typora
-./license-gen.exe
-si typora
-cd ./typora/current/
-su bun uv windows-terminal-preview
-su jetbrainsmono-nf obsidian
-wt
-wto
-wtp
-wtp -v
-cd nu
-fzf
-fzf --help
-fd --type f --strip-cwd-prefix | fzf
-vim ./env.nu
-bun -v
-cd
-config nu
-su oh-my-posh uv nodejs20
-sui tomcat
-cd config
-vim applications\vivaldi\ui_mod\vivalarc.css
-ci applications\vivaldi\ui_mod\vivalarc.css
-si feishu
-eza
-lsa
-cd ./themes/
-javac source\_posts\Lang\Java\temp\GenericsInheritanceExample.java
-javac -g:none -XD:-inline source\_posts\Lang\Java\temp\GenericsInheritanceExample.java
-javap source\_posts\Lang\Java\temp\GenericsInheritanceExample.java
-su postgresql
-sui postgresql
-sse vmware
-sse vm
-si vmware-ws-pro
-si vmware
-cd ./数电/
-tar --help
-ssh hubangsheng@127.0.0.1:22
-ssh hubangsheng@127.0.0.1
-ssh hubangsheng@ubuntu
-ssh hubangsheng@127.0.0.1 -p 22
-sui vmware-ws-pro
-cd wez
-vim ./wezterm.lua
-ci ./
-mv ./wezterm/ ./wezterm-bak
-git clone https://github.com/KevinSilvester/wezterm-config.git
-mv ./wezterm-config/ ./wezterm
-ls ./wezterm/
-claer
-lsdas
-code --help
-code --extensions-dir
-cd source\img\
-cd page
-ffmpeg -i miku-hatsune.gif -b:v 0 -crf 25 -f mp4 -vcodec libx264 -pix_fmt yuv420p miku-welcome.mp4
-ffmpeg -i ./miku-hatsune.gif -b:v 0 -crf 25 -f mp4 -vcodec libx264 -pix_fmt yuv420p miku-welcome.mp4
-which ffmpeg
-ffmpeg -i cat-herd.gif -b:v 0 -crf 25 -f mp4 -vcodec libx264 -pix_fmt yuv420p cat-herd.mp4
-ffmpeg -i miku-hatsune.gif -c vp9 -b:v 0 -crf 41 cat-herd.webm
-rm ./miku-welcome.mp4
-mv ./cat-herd.webm miku_welcome.webm
-ffmpeg -i miku-hatsune.gif -b:v 0 -crf 25 -f mp4 -vcodec libx264 -pix_fmt yuv420p cat-herd.mp4
-rm ./cat-herd.mp4
-rm ./miku-hatsune.gif
-cwebp ./page_biaoqing.jpg ./page_biaoqing.webp
-cwebp ./page_biaoqing.jpg -o ./page_biaoqing.webp
-rm ./page_biaoqing.jpg
-rm icons\json.svg
-ci ./_config.icarus.yml
-heox s
-mv source\_posts\Lang\Java\java_generic\ E:\buckets\Java\
-cd buc
-cd Java\
-vim ./main.py
-python ./main.py Java\ ./Java_1
-python ./main.py Java/ ./Java_1
-python ./main.py ./Java/ ./Java_1
-python ./main.py ./Java/java_generic/ ./Java_1
-bash
-ci ./config.yaml
-cd ~/.ssh
-scene
-cd mark
-cat ./Private/key.md
-hexo s -p 5000
-javac ./Main.java
-javap -c Child
-javap -c Parent
-javap -c -synthetic Child
-cwebp type_erasure1.png -o ./Java/generic_theories/type_erasure.webp
-mkdir ./Java/generic_theories
-rm type_erasure1.png
-si vscode-insider
-sui vscode-insider
-cat ./wsl.conf
-echo [info]
-echo [warn]
-warn
-[warn]
-si gh
-gh
-cat ~/.ssh/config
-cd ~
-cat ./.ssh/config
-connect
-connect.exx
-connect.exe
-ci .ssh\config
-cldar
-cd scoop
-cd ./git/
-cd current
-ls ./mingw64/bin/
-cd wsl
-cd labs
-wsl update
-su bun git
-cd ./labs
-overlay use ./.venv/Scripts/activate.nu
-deactivate
-uv init vnet
-rm ./vnet
-rm -r ./vnet
-uv init .venv
-uv init venv
-uv venv ./venv
-overlay use venv/Scripts/activate.nu
-rm -r ./venv
-uv pip install -r pyproject.toml --extra dev
-uvicorn dev.main:app
-gcc
-gcc ./lab0/commit.c
-gcc -o test test.c -lcurl
-vim ./.wslconfig
-bun i hexo
-bun i hexo --save
-hexo
-bun i
-bun add hexo-cli
-hexo-cli
-bun run hexo
-config
-cd ./source/img/
-cwebp ./macchiato.png -o ./macchiato.webp
-rm ./macchiato.png
-tokei ./sky-take-out/
-cd bucket
-;s
-cwebp ./灰原哀.jpg -o avatar.webp
-cp ./source/img/avatar.webp e:/buckets/
-curl -L https://gitlab.com/spiritysdx/za/-/raw/main/ecs.sh -o ecs.sh && chmod +x ecs.sh && bash ecs.sh -m 4 3
-cd 
-cdvl
-curl 127.0.0.1:8000/docs
-cd prij
-cd 数电\
-uv venv ./.venv
-vim ./pyproject.toml
-uv pip install ./pyproject.toml
-uv pip install -r ./pyproject.toml
-grb -i HEAD~2
-git stach
-git stash
-git push
-cd 数电
-oh-my-posh upgrade
-git remote set-url git@github.com:Efterklang/Efterklang.github.io.git
-git remote set-url origin git@github.com:Efterklang/Efterklang.github.io.git
-git stash pop
-su uv gh
-cd source
-mv _posts\Tools\entertainment\music_player\ e:\buckets\Tools\music_player\
-cd Tools\
-cd ./music_player/
-python ./cwebp.py Tools\music_player\ ./Tools
-cwebp Tools\music_player\salt_player1.png -o Tools\music_player\salt_player1.webp
-cwebp Tools\music_player\salt_player2.png -o Tools\music_player\salt_player2.webp
-cwebp Tools\music_player\salt_player3.png -o Tools\music_player\salt_player3.webp
-cwebp source\img\thumbnails\Tools\119596099_p1.png -o source\img\thumbnails\Tools\Entertainment\music_player.webp
-git push -f
-cwebp source\img\cat-line.svg -o ./source\img\cat-line.webp
-cwebp ./source\img\cat-line.svg -o ./source\img\cat-line.webp
-scoop install extras/yesplaymusic
-netstat
-netstat -b 4000
-netstat -bno 4000
-sudo netstat -bno 4000
-tcpvcon
-lsof
-lsof -i
-ps --help
-netstat -ano | findstr :8000
-netstat -ano | findstr :4000
-tastlist /FI "PID eq 28928"
-tasklist /FI "PID eq 28928"
-ci ./config.nu
-ci ./modules/network.nu
-port 4000
-cd module
-rm ./network.nu
-http get https://vluv.space | query webpage-info
-http get https://vluv.space
-http get https://phoronix.com | query webpage-info
-ci scripts\default_keybindings.nu
-cd /C:\Users\24138\.config
-cd /D:\envir_vars\scoop\apps
-netstat -ano | find :4000
-find -v
-tasklist /FI "PID eq 1234"
-tasklist /FI "PID eq 4000"
-kill -pid 28928
-kill -p 28928
-pkill 28928
-cd priv
-cd `./OneDrive - 商业版/`
-cd Private\
-cat ./key.md
-su bun
-ping https://self.uestc.edu.cn/home
-dig vluv.space
-dig https://self.uestc.edu.cn/home
-dig self.uestc.edu.cn/home
-c2p ./
-c2p --config
-c2p --exclude *.json
-c2p ./source/
-tokei ./source/
-c2p ./source/js
-bun i medium-zoom
-bun remove medium-zoom
-si unigram
-ssi
-cwebp ./logo.jpg -o ./logo.webp
-grb -i HEAD~3
-grb --abort
-su 7zip hugo
-bun install -g wrangler
-scoop unhold oh-my-posh
-cheat scoop
-man scoop
-gping vluv.space
-sui gping
-doggo vluv.space
-scoop rm yesplaymusic
-sui yesplaymusic
-su gh go nodejs-lts python uv
-ifconfig
-ipconfig
-wsl --user root
-bun i medium-zoom --save
-ls | git bash
-git bash
-| bash
-which gitbash
-which bash
-ls | git\2.47.1\git-bash.exe 
-git\2.47.1\git-bash.exe -c ls
-rm -r ./index/
-ls ./index/
-npm config edit
-wsl --help
-cd un
-cd used
-cwebp ./unused/计网拾遗1.jpg -o ./thumbnails/Networks/计网拾遗1.webp
-ggi
-rm UESTC\Network\Ch5-2TransportLayer\Ch5-2TransportLayer-2024-04-30-16-01-48.webp
-rm -r ./buckets/
-su yazi fastfetch hugo
-shizuku
-su yazi
-wsl --list --verbose
-curl http://127.0.0.1:51126
-htop
-benchmark
-si hyperfine
-hyperfine ls
-hyperfine cd
-$env
-curl ip-api.com
-curl -x http://127.0.0.1:7890 https://ipinfo.io
-curl -x http://127.0.0.1:7890 ip-api.com
-su eza uv vscode
-su vscode
-git clone https://github.com/LeeSF03/dot-files.git
-cd ./dot-files/
-echo [INFO]
-cd ./firefox/
-cd ./startup-page/
-code .
-cd ~/
-ci .config\yasb\styles.css
-ci .config\yasb\config.yaml
-ci ./yasb/styles.css
-ci dot-files\.vscode\css\style.css
-cd vscode\
-mv ./1.95.3/ C:\$Recycle.Bin\
-sudo mv ./1.95.3/ C:\$Recycle.Bin\
-cd NSFW\
-cd ./视频-EU/
-ffmpeg -i ./21n.16.10.23.crystal.greenvelle.luscious.fruit.mp4 ./21n.16.10.23.crystal.greenvelle.luscious.fruit.webm
-cd ../艺人-EU/
-cd ./Bunny.Colby/
-man ffmpeg
-cd ./Movie/
-cd `./混沌武士 Samurai Champloo/`
-ffmpeg -i `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).mp4` ./0
-ffmpeg -i `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).mp4` -c:a copy -process  -c:v h264_nvenc `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).webm`
-ffmpeg -i `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).mp4` -c:a copy -progress  -c:v h264_nvenc `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).webm`
-ffmpeg -i `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).mp4` -progress  -c:v h264_nvenc `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).webm`
-ffmpeg -i `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).mp4` `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).webm`
-ffmpeg -hwaccels
-ffmpeg --hwaccel cuvid -i `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).mp4` `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).webm`
-ffmpeg --hwaccel cuda -i `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).mp4` `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).webm`
-ffmpeg -hwaccel cuvid -i `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).mp4` `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).webm`
-ffmpeg -i `./Bunny Colby - Busty Roughed Up For A Creampie (05.30.19).mp4` `./Bunny Colby - Busty Roughed Up For A Creampie (05.30.19).webm`
-cd NS
-cd ./艺人-EU/
-cd ./LolitasStar/
-#ffmpeg -i --progress `./Amateur Quick Morning Fuck.mp4` `./Amateur Quick Morning Fuck.webm`
-ffmpeg -hwaccel cuda `./Amateur Quick Morning Fuck.mp4` `./Amateur Quick Morning Fuck.webm`
-ffmpeg --enable-cuda-llvm `./Amateur Quick Morning Fuck.mp4` `./Amateur Quick Morning Fuck.webm`
-ffmpeg -enable-cuda-llvm `./Amateur Quick Morning Fuck.mp4` `./Amateur Quick Morning Fuck.webm`
-ffmpeg hwaccel cuda `./Amateur Quick Morning Fuck.mp4` `./Amateur Quick Morning Fuck.webm`
-ffmpeg -v
-ffmpeg -hwaccel cuda -i input.mp4 output.mp4
-ffmpeg -hwaccel cuda -i `./Amateur Quick Morning Fuck.mp4` output.webm
-cd one
-cd Movie\
-cd image
-cd bed
-cd ~/.config/vscode/
-ci ./custom.css
-ffmpeg -hwaccel cuda -i `./Amateur Teen with Tight Ass Learning Rough Anal Sex.mp4` `./Amateur Teen with Tight Ass Learning Rough Anal Sex.webm`
-ffmpeg -hwaccel cuda -i `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).mp4` `./04 以心伝心 其之弐 Hellhounds for Hire (PART.2).webm`
-cd Baby.Kxtten\
-ffmpeg `./Ambitious Businesswoman Baby Kxtten Secures new BBC Clients by taking DP Pounding.mp4` `./Ambitious Businesswoman Baby Kxtten Secures new BBC Clients by taking DP Pounding.webm`
-ci .
-si czg
-bun i czg --global
-czg
-bun czg
-npx czg
-bun i czg
-bun run czg
-git amend
-git --amend
-git reset ~1 --soft
-czg ai
-gc
-czg --api-key="sk-0d4f5aa8edf740fc875e93befefe38de"
-czg --api-key="sk-"
-grb -i HEAD~10
-si wechat
-ffmpeg -hwaccel cuda -i `./06 赤毛異人 Stranger Searching.mp4` `./06 赤毛異人 Stranger Searching.webm`
-ya pack -a yazi-rs/flavors:catppuccin-mocha
-cd vscode\1.96.0\
-cd ../current/
-vscode -v
-cd exten
-cd data
-cd ./data/
-cd ./extensions/
-ls ./user-data/
-bun i prettier --global
-cd ~/bun
-cd ~/.bun
-cd ./bin/
-cd sam
-ffmpeg -i `./Ambitious Businesswoman Baby Kxtten Secures new BBC Clients by taking DP Pounding.mp4` `./Ambitious Businesswoman Baby Kxtten Secures new BBC Clients by taking DP Pounding.webm`
-ffmpeg -hwaccel cuda -i `./08 唯我独尊 A Problematic Past.mp4` `./08 唯我独尊 A Problematic Past.webm`
-ci ./key.md
-fastfetch
-hh
-ffmpeg -hwaccel cuda -i `./25 生死流轉 其之貳 Evanescent Encounter(PART.2).mp4` `./25 生死流轉 其之貳 Evanescent Encounter(PART.2).webm`
-scoop bucket add nonportable
-si fluent-terminal-np
-sudo si fluent-terminal-np
-sudo scoop install fluent-terminal-np
-sui fluent-terminal-np
-sudo sui fluent-terminal-np
-sudo scoop uninstall fluent-terminal-np
-ffmpeg -codecs | findstr cuvid
-ffmpeg -i `./11 堕落天使 Gamblers and Gallantry.mp4` -vcodec 
-ffmpeg --hwaccels
-ffmpeg -i `./11 堕落天使 Gamblers and Gallantry.mp4` -vcodec libvpx-vp9 `./11 堕落天使 Gamblers and Gallantry.webm`
-ffmpeg --hwaccels -i `./25 生死流轉 其之貳 Evanescent Encounter(PART.2).mp4` -vcodec libvpx-vp9 `./25 生死流轉 其之貳 Evanescent Encounter(PART.2).webm`
-ffmpeg -i `./26 生死流転 其之参 Evanescent Encounter (PART.3).mp4` -vcodec libvpx-vp9 `./26 生死流転 其之参 Evanescent Encounter (PART.3).webm`
-python ./source/_posts/Lang/Python/a.py
-ffmpeg -i `./10 以毒制毒 Lethal Lunacy.mp4` -vcodec libvpx-vp9 `./10 以毒制毒 Lethal Lunacy.webm`
-rm `./10 以毒制毒 Lethal Lunacy.mp4`
-ffmpeg -i `./25 生死流轉 其之貳 Evanescent Encounter(PART.2).mp4` -vcodec libvpx-vp9 `./25 生死流轉 其之貳 Evanescent Encounter(PART.2).webm`
-ls *.webm
-dust ./*.mp4
-dust ./*.webm
-su vscode uv hugo feishu fastfetch eza bun
-ffmpeg -i `./24 生死流轉 其之壹 Evanescent Encounter(PART.1).mp4` -vcodec libvpx-vp9 `./24 生死流轉 其之壹 Evanescent Encounter(PART.1).webm`
-rm `./24 生死流轉 其之壹 Evanescent Encounter(PART.1).mp4`
-ffmpeg -i `./19 因果応報 Unholy Union.mp4` -vcodec libvpx-vp9 `./19 因果応報 Unholy Union.webm`
-ffmpeg -i `./02 百鬼夜行 Redeye Reprisal.mp4` -vcodec libvpx-vp9 `./02 百鬼夜行 Redeye Reprisal.webm`
-git add source\BingSiteAuth.xml
-rm source\BingSiteAuth.xml
-shutdown -s -t 7200
-su uv vscode
-vim ~/.config/scoop/config.json
-ffmpeg -i `./22 怒髪衝天 The Cosmic Collisions.mp4` -vcodec libvpx-vp9 `./22 怒髪衝天 The Cosmic Collisions.webm`
-dist
-cd nsfw
-su libwebp
-ffmpeg -i `./17 酔生夢死 ふた夢 Lullabies of the Lost (VERSE.2).mp4` -vcodec libvpx-vp9 `./17 酔生夢死 ふた夢 Lullabies of the Lost (VERSE.2).webm`
-su yazi bun libwebp gh
-cd webp
-cd ./Essay/
-cwebp ./成都上海苏州.png ./成都上海苏州.webp
-cwebp ./成都上海苏州.png -o ./成都上海苏州.webp
-rm ./成都上海苏州.png
-cd memoirs\24-12-21\
-cwebp ./2024下-1.jpg -o ./cd_taxi.webp
-cwebp ./2024下-1.png -o ./sh2.webp
-cwebp ./amap1.png -o ./amap1.webp
-cwebp ./sh2.png -o ./sh2.webp
-cwebp ./kfc.jpg -o ./kfc.webp
-cwebp ./上海站.jpg -o ./上海站.webp
-cwebp ./苏州北站.jpg -o ./苏州北站.webp
-rm ./amap1.webp
-rm ./amap2.webp
-cd downl
-ci ./big_screen-master/
-python ./big_screen-master/app.py
-cd ./big_screen-master/
-overlay use ./venv/Scripts/activate.nu
-uv pip install flask
-pip install flask
-ssh -i azure
-rsync -avz -e "ssh -i ~/.ssh/azure_ubuntu.pem vluv@20.2.13.142" ./big_screen-master/ /home/vluv/workspace
-si rsync
-scp ./big_screen-master/ vluv@20.2.13.142 /home/vluv/workspace
-scp ./big_screen-master/ vluv@20.2.13.142 /home/vluv/
-scp ./big_screen-master/ vluv@20.2.13.142:/home/vluv/workspace
-sudo scp ./big_screen-master/ vluv@20.2.13.142:/home/vluv/workspace
-scp -r ./big_screen-master/ vluv@20.2.13.142:/home/vluv/workspace
-scp -r ./big_screen-master/ vluv@azure:/home/vluv/workspace
-python app.py
-cd ./user-data/
-cd ./User/
-cd User\
-ping baidu.com
-cd source\img\thumbnails\Dev\Others\
-cd source\img\thumbnails\Tools\VSCode
-cd post
-cd sour
-cd _posts\Tools\VSCode\
-Get-Content a.txt | ForEach-Object { code --install-extension $_ }
-code --list-extensions > a.txt
-code --list-extensions | a.txt
-code --list-extensions >> a.txt
-code --list-extensions > extensions.txt
-open b.txt | lines | each { |ext| nu -c $"code --install-extension ($ext)" }
-code --list-extensions | save extensions.txt
-open a.txt | lines | each { |ext| echo %ext}
-open a.txt | lines | each { |ext| code --install-extension $ext }
-open a.txt | lines | each { |ext| code --uninstall-extension $ext }
-$env:APPDATA
-cd vscode
-cd code
-cd ./data/user-data/User/
-cat ~/.config/scoop/
-cat ~/.config/scoop/config.json
-cd ~/.config/scoop/
-cat ./config.json
-cd User
-ls ./profiles/
-cd ~/.ssh/
-ls ./bak/
-cp ./id_rsa.pub `E:\OneDrive - 商业版\Configs\.config\`
-ssh 10.9.61.180
-ssh root@10.9.61.180
-ssh root@10.9.61.180 -v
-ffmpeg -i `./15 徹頭徹尾 Bogus Booty.mp4` -vcodec libvpx-vp9 `./15 徹頭徹尾 Bogus Booty.webm`
-compress_video `./03 以心伝心 其之壱 Hellhounds for Hire (PART.1).mp4`
-compress_video `./05 馬耳東風 Artistic Anarchy.mp4`
-compress_video
-compress_video `./07 四面楚歌 A Risky Racket.mp4`
-cmprev `./09 魑魅魍魎 Beatbox Bandits.mp4`
-ssh root@10.9.61.180 -i ~/.ssh/id_rsa
-ssh root@10.9.61.180 -i ~/.ssh/id_rsa -v
-cd work
-cd workspace
-git clone https://github.com/robocarstore/donkeycar-console
-tokei ./donkeycar-console/
-cd ./donkeycar-console/
-git switch readme
-git branch dev
-git switch dev
-c2p ./dkconsole/
-tokei ./dkconsole/
-si autohotkey
-c2p ./dkconsole/data/
-ll ./dkconsole/
-ls ./dkconsole/
-su uv nu hugo fastfetch eza
-cprv
-cprv `./01 疾風怒涛 Tempestuous Temperaments.mp4`
-c2p ./dkconsole
-cprv `./23 一球入魂 Baseball Blues.mp4`
-git switch readme -f
-rm `./23 一球入魂 Baseball Blues.mp4`
-edxp
-git switch dev -f
-su uv
-c2p ./data_test/
-cprv `./12 温故知新 The Disorder Diaries.mp4`
-rm `./12 温故知新 The Disorder Diaries.mp4`
-hexo x
-cmprev `09 魑魅魍魎 Beatbox Bandits.mp4`
-cd thumbnails\Tools\VSCode\
-cwebp ./devcontainer.jpg -o ./devcontainer.webp
-rm ./devcontainer.jpg
-cat ./devcontainer.webp
-cd vsco
-cwebp ./angeles-photo-courtesy-angeles-126016.jpg -o ./devcontainer.webp
-rm ./angeles-photo-courtesy-angeles-126016.jpg
-cwebp ./Arctic-shipping-c-iStock-e1585925976736.jpg -o ./devcontainer.webp
-rm ./Arctic-shipping-c-iStock-e1585925976736.jpg
-cprv `21 悲歌慷慨 其之弐 Elegy of Entrapment (VERSE.2).mp4`
-rm `./21 悲歌慷慨 其之弐 Elegy of Entrapment (VERSE.2).mp4`
-cd ./视频-JP/
-cd `./Adult Videos/`
-cprv ./MIAA-794.mp4
-ffmpeg -i ./MIAA-794.mp4
-ffprobe -v quiet -print_format json -show_format ./MIAA-794.mp4
-ffprobe -v quiet -print_format json -show_format `./01 疾風怒涛 Tempestuous Temperaments.webm`
-ffprobe -v quiet -print_format json -show_format `05 馬耳東風 Artistic Anarchy.mp4`
-ffprobe -v quiet -print_format json -show_format `05 馬耳東風 Artistic Anarchy.webm`
-cd adu
-cprv `09 魑魅魍魎 Beatbox Bandits.mp4`
-cprv `./05 馬耳東風 Artistic Anarchy.mp4`
-cd sma
-rclone copy cf:blog-image E:/buckets/ --progress
-cprv `./16 酔生夢死 ひと夢 Lullabies of the Lost (VERSE.1).mp4`
-cprv `./13 暗夜行路 其之壱 Misguided Miscreants (PART.1).mp4`
-rm `16 酔生夢死 ひと夢 Lullabies of the Lost (VERSE.1).mp4`
-rm `13 暗夜行路 其之壱 Misguided Miscreants (PART.1).mp4`
-cprv `./18 文武両道 War of the Words.mp4`
-rm `18 文武両道 War of the Words.mp4`
-cprv `./14 暗夜行路 其之弐 Misguided Miscreants (PART.2).mp4`
-cprv `./20 悲歌慷慨 其之壱 Elegy of Entrapment (VERSE.1).mp4`
-cprv `./07 四面楚歌 A Risky Racket.mp4`
-rm `14 暗夜行路 其之弐 Misguided Miscreants (PART.2).mp4`
-rm `07 四面楚歌 A Risky Racket.mp4`
-cprv 0.20
-rm `./20 悲歌慷慨 其之壱 Elegy of Entrapment (VERSE.1).mp4`
-cd ./startpage-master/startpage-master/
-code ./
-cd confg
-cd conf
-vim autohotkey\caps2crtl.ahk
-tcpdump
-wezcat
-lsl
-lda
-cd nsff
-cd nsf
-cprv `./Big load of cum on cute teen face.mp4`
-cprv `./Never take Uber Again.mp4`
-cprv `./Oni the Doggy - Episode 1 Sucking and Gagging in my Onesie.mp4`
-sui hugo
-cprv ./IPX-118-C.mp4
-cd ad
-si zen
-sse zen
-si Zen-Browser
-sui Zen-Browser
-lazydocker
-cd music
-cd ./Music/
-cat ~/.ssh/id_rsa.pub
-cat ./id_rsa.pub | clip
-sshkeygen
-clear 
-ssh root@10.9.61.180 -i ~/.ssh/id_rsa.pub -v
-ssh key-gen
-ssh-keygen
-cat ./id_ed25519.pub | clip
-ssh root@10.9.61.180 -i ~/.ssh/id_ed25519 -v
-ssh root@10.9.61.180 -i ~/.ssh/id_ed25519.pub
-ssh root@10.9.61.180 -i ~/.ssh/id_ed25519
-ssh root@10.9.68.7 -i ~/.ssh/id_ed25519
-cd ss
-cat ./id_rsa | clip
-ssh ubuntu
-ssh ubuntu -i ./id_rsa
-cat ./momenta.pub | clip
-ssh momenta
-ssh momenta -i ./id_rsa
-cd pri
-btop
-nvim -v
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
-sudo rm -rf /opt/nvim
-ssh momenta -v
-dd bs=64k count=4k if=/dev/zero of=test oflag=dsync
-bash <(curl -L -s check.unlock.media)
-curl -L -s check.unlock.media
-curl -L -s check.unlock.media | bash
-cprv ./PRED-099-c.mp4
-dust ./PRED
-dust ./PRED*
-cprv ./ipx-620-C.mp4
-dust ./ipx*
-ffmpeg -i ./ipx-620-C.mp4
-cprv ./IPZZ-003-C.mp4
-cprv ./SSNI-424-C.mp4
-rm ./IPZZ-003-C.mp4
-rm ./SSNI-424-C.mp4
-su feishu uv
-si postman
-gkd
-adb devices
-si apifox
-cd au
-$session = New-Object Microsoft.PowerShell.Commands.WebRequestSession
-$session.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36"
-Invoke-WebRequest -UseBasicParsing -Uri "https://vebackend.momenta.works/approval/statistics/allCount/?project=IMDevcar&approval_type=production" `
-<\n>-WebSession $session `
-su;
-su postman uv nodejs-lts bat
-su postman
-cd ja
-cd japan
-cd exp
-cd donkey
-cprv ./juq-075ch.mp4
-cprv ./ipx-557-C.mp4
-rm ./juq-075ch.mp4
-rm ./ipx-557-C.mp4
-su postman uv gh fastfetch eza bun
-paste
-paste > meta.yaml
-paste | meta.yaml
-clip | save a.yaml
-cat ./a.yaml
-clip
-clip /?
-scoop which connect
-scoop which git
-cd git\2.47.1\mingw64\bin\
-git -v
-heif-conv
-scoop heif-conv
-si heif-conv
-bun i avif-cli -g
-chsrc bun
-chsrc npm
-chsrc help
-chsrc set bun
-chsrc reset bun
-bun install avif-cli -g
-bun x avif
-avif
-avif --verbose
-bun avif --verbose
-npx avif --verbose
-bun x avif --verbose
-cd cf
-bun x avif ./202412282149394.png ./202412282149394.avif
-cd ../download/
-npx avif --input="**/*.*" --keep-metadata --overwrite --lossless
-bun x avif --input="**/*.*" --keep-metadata --overwrite --lossless
-bun x avif --input="**/*.*" --overwrite=true --keep-metadata=true
-sst; su
-su vscode uv starship git gitui fastfetch
-cd `../OneDrive - 商业版/`
-cd ./Videos/JP/
-cd ./Pictures/
-cd ./Games/
-cd ./EldenRing/
-ls ./
-rm *.jxr
-rm *(1).png
-su scoop-search powershell-preview rclone
-cprv ./jul-207-C.mp4
-cprv ./PJAM-016.mp4
-cprv ./MSFH-021.mp4
-su bun eza go postman procs uv
-cd ve
-bat cache --build
-vim ./known_hosts
-ssh-keygen -t rsa -b 4096 -C "mmt"
-cat ./mmt.pub | clip
-si lazygit
-su vscode uv nodejs-lts nodejs20 mysql fzf eza bun
-cd .onedrive_temp\home\markdown\vluv\
-cd ./onedrive_temp\home\markdown\vluv\
-sui nodejs20
-cd ./onedrive_temp/Configs/
-lg
-lazygit
-cd terminal\nvim\
-git remote set-url origingit@github.com:Efterklang/dotfiles.git
-git remote set origin main git@github.com:Efterklang/dotfiles.git
-git remote set-url add origin git@github.com:Efterklang/dotfiles.git
-git remote add origin git@github.com:Efterklang/dotfiles.git
-git push -f origin main
-git init
-ls ./vscode/
-lazygit --config
-lazygit --help
-lg -cd
-cp ./terminal/lazygit/config.yml C:\Users\24138\AppData\Local\lazygit\
-git pull --abort
-cd con
-git push origin main
-cd ~/.config/
-cd wezterm\
-si zed
-zed
-sui zed
-dasd
-cd ~/.config/yazi/
-vim ./theme.toml
-git clone https://github.com/BennyOe/tokyo-night.yazi.git ~/.config/yazi/flavors/tokyo-night.yazi
-rm ./flavors/tokyo-night.yazi/
-rm -r ./flavors/tokyo-night.yazi/
-ya pack -a imsi32/yatline
-vim ./yazi.toml
-ls ./plugins/
-vim ./plugins/yatline.yazi/
-vim ./init.lua
-git clone https://github.com/imsi32/yatline-catppuccin.yazi.git ~/.config/yazi/plugins/yatline-catppuccin.yazi
-yy -v
-yazi -v
-yazi -version
-yazi --version
-ya pack -a yazi-rs/plugins:git
-ya pack -a yazi-rs/plugins:max-preview
-cd yazi
-vim ./keymap.toml
-cwebp ./thumbnails/Essay/
-cd ./thumbnails/Essay/
-cwebp ./pexels-sevenstormphotography-1436697.jpg -o ./成都上海苏州.webp
-avif ./pexels-sevenstormphotography-1436697.jpg ./成都上海苏州.avif
-bun x avif ./pexels-sevenstormphotography-1436697.jpg ./成都上海苏州.avif
-code ./keymap.toml
-cd ./thumbnails/
-cd Tools\VSCode\
-cwebp ./41d83c00-ae23-11ea-8613-bf3d0c82856d.png -o ./custom_vscode_style.webp
-rm ./41d83c00-ae23-11ea-8613-bf3d0c82856d.png
-su uv postman
-curl twikoo.vluv.space
-si bemenu
-cd app
-cd ./postman/
-bottom
-btm
-si bottom
-si delta
-delta ./.wakatime.cfg
-delta ./_config.icarus.yml
-delta 
-git diff 
-git config --global core.pager delta
-git config --global interactive.diffFilter 'delta --color-only'
-git config --global delta.navigate true
-git config --global merge.conflictStyle zdiff3
-git show
-delta
-delta ./_config.icarus.yml ./_config.post.yml
-git diff HEAD
-git
-gd _config.icarus.yml
-git rebase --abort
-git push -f\
-cd projects\
-git clone git@github.com:Efterklang/config.git
-cd ./config/
-which nu
-nu --config
-nu --help
-$nu.config-path
-$nu.default-config-dir
-cd $nu.config-path
-which zoxide
-lg --help
-lg -c
-nvim
-$env.LOCALAPPDATA
-pwsh -File install.ps1
-sui postman
-btop --help
-eza --help
-$env.APPDATA
-cd ~/AppData/
-ls ./AppData/Local/
-$env.USERPROFILE
-$env.config
-cat .config\scoop\config.json
-cd ./projects/config/
-llt
-llt -depth=3
-llt --depth=3
-llt -L 3
-llt -L 2
-la -L 3
-lla -L 3
-lls -L 3
-ll -L 2
-ll -L 3
-lat -L 2
-lg --config
-lg --cd
-man git clone
-git clone --help
-cd dot-files\
-cd ../
-fzfp
-scoop export > applist.json
-scoop export > ./applist.json
-4
-git reset ~2 --soft
-open history.txt | lines | uniq | save dedup.txt
-trim_history 
-$nu.history-path
-scp -r ./shells/fish/ root@ubuntu:/root/.config/fish
-scp -r ./shells/fish/ root@momenta:/root/.config/fish
-ls ./shells/fish/
-man scp
-scp -r root@momenta:/root/.config/fish ./shells/fish
-ssh momenta 
-sync
-scp -r root@momenta:/root/.config/fish ./shells/
-ls ~/.config/
-echo lang
-gd
-gd shells\fish\config.fish
-diff
-diff README.md ./README.md
-diff ./install.conf.yaml ./install.linux.yaml
-delta ./install.conf.yaml ./install.linux.yaml
-busybox
-si less
-delta --help
-less --config
-less --help
-git status
-git status 
-glpg
-git remote list
-git remote prune
-git remote remove origin master
-git branch -vv
-git branch -u origin/main
-git branch --unset-upstream
-git remote remove origin
-git remote add origin git@github.com:Efterklang/config.git
-git reset --soft 2b67278
-git reset --soft 1a0a
-git stash drop 1514
-git stash drop
-git diff
-python ./main.py
-npm install hexo-filter-titlebased-link --save
-bun install hexo-filter-titlebased-link --save
-code ./_config.yml
-bun  un hexo-renderer-marked --save
-bun uninstall hexo-renderer-marked --save
-bun i hexo-renderer-markdown-it-plus --save
-bun i hexo-markdown-it-task-lists
-bun i markdown-it-task-lists
-bun i mdit-plugin-callouts
-bun i mdit-plugin-callouts --save
-bun i markdown-it-task-lists --save
-wt.exe
-terminal.exe
-which wt
-cd =
-su uv gh obsidian
-scoop export | save a.json
-scoop config
-sui yarn
-git push --set-upstream origin main
-git commit
-code vscode\markdown-preview-enhanced\style.less
-cargo install cargo-update
-su bun gh obsidian
-bat --help
-cat ./_config.icarus.yml
-man bat
-bat -A ./_config.yml
-scoop home bat
-xclip
-si xclip
-cat --line-numbers ./_config.icarus.yml | clip
-cd shims
-cd ../persist/
-vim bat\config
-cat ./7zip/
-cat ./wsl.conf | clip
-cheat man
-man ssh
-cwebp ./SmartSelect_20250106_005342.png -o a.webp
-si tig
-sse everything
-si everything
-cd everything\current\
-./everything.exe
-tig
-btm\
-btm --help
-btm --show_table_scroll_position
-wezterm --help
-cd ~/.glaze-wm/
-cd ../.glzr/
-innounp
-sui pipx
-cat ~/.config/ohmyposh/
-cat ~/.config/ohmyposh/catppuccin.omp.json
-vim shells\pwsh7\Microsoft.PowerShell_profile.ps1
-pws
-scoop home innounp
-innounp ./LICENSE.md
-ps -ef
-fd
-fd ls
-fd vim
-uvx
-p
-sui nmap
-7zip
-cd donw
-unzip ./字节一面1080P.mov.zip
-7z x ./字节一面1080P.mov.zip
-rm ./字节一面1080P.mov
-jq
-sui jq
-gzip
-zip -d name_of_zipfile.zip __MACOSX
-7z -d name_of_zipfile.zip __MACOSX
-echo $env.YASB_WEATHER_API_KEY
-sui oh-my-posh
-si dbeaver
-curl 10.21.163.7:8000/vehicle/wms/erp/?erp=A290201&lang=en-US&subsystem=路由器&module=路由器
-curl 10.21.163.77:8000/vehicle/wms/erp/?erp=A290201&lang=en-US&subsystem=路由器&module=路由器
-curl 127.0.0.1:8000/vehicle/wms/erp/?erp=A290201&lang=en-US&subsystem=路由器&module=路由器
-curl 127.0.0.1:8000/vehicle/wms/erp/?erp=A290201&lang=en-US&subsystem=路由器&module=路由器 --header={"api-key":sdawTXEzwxz98s6F9eKMP}
-curl --help
-curl 127.0.0.1:8000/vehicle/wms/erp/?erp=A290201&lang=en-US&subsystem=路由器&module=路由器 -H "api-key:sdawTXEzwxz98s6F9eKMP"
-curl -LO --output-dir ~/.config/alacritty https://github.com/catppuccin/alacritty/raw/main/catppuccin-mocha.toml
-si atop
-helix
-si helix
-lx
-hx
-cd pro
-hx config\dotbot\lib\pyyaml\lib\yaml\error.py
-cd ./.config/
-hx --help
-hx -c
-helix ./helix/languages.toml
-helix ./helix/config.toml
-cd ./helix/
-hx ./config.toml
-cd $env.HOME
-cd he
-cd helix
-which helix
-cd roam
-vim ./helix/config.toml
-mv ~/.config/helix/languages.toml ./
-rm ~/.config/helix/
-rm -r ~/.config/helix/
-hx ./languages.toml
-hx config\dotbot\src\dotbot\cli.py
-hx --config
-mv ./languages.toml ./helix/
-ls ./helix/
-$env.USERDOMAIN_ROAMINGPROFILE
-vim ./helix/languages.toml
-hx --health
-pip install pyright
-czg --help
-su uv go
-scoop home nu
-which code
-trim_history

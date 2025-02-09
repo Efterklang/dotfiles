@@ -1,13 +1,13 @@
 $env.config = {
-    show_banner: false # true or false to enable or disable the welcome banner at startup
+    show_banner: false 
 
     ls: {
-        use_ls_colors: true # use the LS_COLORS environment variable to colorize output
-        clickable_links: true # enable or disable clickable links. Your terminal has to support links.
+        use_ls_colors: true 
+        clickable_links: true 
     }
 
     rm: {
-        always_trash: true # always act as if -t was given. Can be overridden with -p
+        always_trash: true 
     }
 
     table: {
@@ -55,18 +55,7 @@ $env.config = {
         isolation: false # only available with sqlite file_format. true enables history isolation, false disables it. true will allow the history to be isolated to the current session using up/down arrows. false will allow the history to be shared across all sessions.
     }
 
-    completions: {
-        case_sensitive: true # set to true to enable case-sensitive completions
-        quick: true    # set this to false to prevent auto-selecting completions when only one remains
-        partial: true    # set this to false to prevent partial filling of the prompt
-        algorithm: "prefix"    # prefix or fuzzy
-        external: {
-            enable: true # set to false to prevent nushell looking into $env.PATH to find more suggestions, `false` recommended for WSL users as this look up may be very slow
-            max_results: 100 # setting it lower can improve completion performance at the cost of omitting some options
-            completer: null # check 'carapace_completer' above as an example
-        }
-        use_ls_colors: true # set this to true to enable file/path/directory completions using LS_COLORS
-    }
+    completions: {}
 
     cursor_shape: {
         emacs: block # block, underscore, line, blink_block, blink_underscore, blink_line, inherit to skip setting cursor shape (line is the default)
@@ -89,7 +78,7 @@ $env.config = {
         osc633: true
         reset_application_mode: true
     }
-  render_right_prompt_on_last_line: false # true or false to enable or disable right prompt to be rendered on last line of the prompt.
+    render_right_prompt_on_last_line: false # true or false to enable or disable right prompt to be rendered on last line of the prompt.
     use_kitty_protocol: true # enables keyboard enhancement protocol implemented by kitty console, only if your terminal support this.
     highlight_resolved_externals: true # true enables highlighting of external commands in the repl resolved by which.
     recursion_limit: 50 # the maximum number of times nushell allows recursion before stopping it
@@ -130,7 +119,7 @@ $env.config = {
             marker: "> "
                 type: {
                     layout: columnar
-                    columns: 2
+                    columns: 4
                     col_padding: 2
             }
             style: {
@@ -148,8 +137,8 @@ $env.config = {
             type: {
                 layout: ide
                 min_completion_width: 0,
-                max_completion_width: 50,
-                max_completion_height: 10, # will be limited by the available lines in the terminal
+                max_completion_width: 70,
+                max_completion_height: 20, # will be limited by the available lines in the terminal
                 padding: 0,
                 border: true,
                 cursor_offset: 0,
@@ -193,29 +182,12 @@ $env.config = {
     keybindings: []
 }
 
-source ./plugins/zoxide.nu
-source ./plugins/omp.nu
-source ./scripts/load_scripts.nu
-source ./modules/mod.nu
+source ./plugins/plugins.nu
+source ./aliases/aliases.nu
+source ./completions/completions.nu
+source ./keybindings/keybindings.nu
 source ./themes/catppuccin-mocha.nu
 
-let carapace_completer = {|spans|
-    carapace $spans.0 nushell ...$spans | from json
-}
 
-let zoxide_completer = {|spans|
-    $spans | skip 1 | zoxide query -l ...$in | lines | where {|x| $x != $env.PWD}
-}
-
-let multiple_completers = {|spans|
-    match $spans.0 {
-        cd => $zoxide_completer
-        _ => $carapace_completer
-    } | do $in $spans
-}
-
-$env.config.completions.external = {
-    enable: true
-    max_results: 100
-    completer: $multiple_completers
-}
+# let is_windows = $nu.os-info.name == "windows"
+# let is_linux = $nu.os-info.name == "linux"

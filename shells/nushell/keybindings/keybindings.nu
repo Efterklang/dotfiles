@@ -1,3 +1,5 @@
+source ./default.nu
+
 $env.config.keybindings = (
     $env.config.keybindings
     | append {  # history_menu using fzf

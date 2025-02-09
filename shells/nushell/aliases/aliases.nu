@@ -1,6 +1,6 @@
-source ./eza/eza-aliases.nu
-source ./git/git-aliases.nu
-source ./scoop/scoop-aliases.nu
+source ./eza.nu
+source ./git.nu
+source ./scoop.nu
 
 def --env pwd [] {
     $env.PWD | str replace --all '\' '/'
@@ -35,7 +35,7 @@ def fuzzy-command-search [] {
     let command = ((help commands | each {|it|
         let name = ($it.name | str trim | ansi strip)
         $"($name)(pad-tabs $name $max_indent)($it.description)"
-    }) | str join (char nl) | fzf --layout reverse --style full | split column (char tab) | get column1.0)
+    }) | str join (char nl) | fzf --layout reverse --style full -e | split column (char tab) | get column1.0)
     if ($command | is-not-empty) {
         help $command
     }
@@ -85,6 +85,6 @@ alias czg = bun run czg
 alias hexo = bun run hexo
 alias shizuku = adb shell sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.sh 
 alias scene = adb shell sh /storage/emulated/0/Android/data/com.omarea.vtools/up.sh
-alias lg = lazygit
+alias g = lazygit
 alias sync = pwsh -File E://projects/config/install.ps1
 alias hf = fuzzy-command-search
