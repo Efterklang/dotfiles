@@ -10,7 +10,7 @@ gui:
   skipDiscardChangeWarning: false
   skipStashWarning: true
   sidePanelWidth: 0.3333
-  expandFocusedSidePanel: false
+  expandFocusedSidePanel: true
   enlargedSideViewLocation: top
   mainPanelSplitMode: flexible
   theme:
@@ -33,7 +33,6 @@ gui:
       - "#cdd6f4"
     searchingActiveBorderColor:
       - "#f9e2af"
-
   authorColors:
     "*": "#b4befe"
   commitLength:
@@ -61,3 +60,7 @@ git:
   log:
     showGraph: always
     showWholeGraph: false
+
+keybinding:
+  universal:
+    confirmInEditor: <c-d>
