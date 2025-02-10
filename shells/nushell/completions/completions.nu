@@ -17,7 +17,7 @@ let multiple_completers = {|spans|
 }
 
 $env.config.completions = {
-    case_sensitive: true # set to true to enable case-sensitive completions
+    case_sensitive: false
     quick: true    # set this to false to prevent auto-selecting completions when only one remains
     partial: true    # set this to false to prevent partial filling of the prompt
     algorithm: "prefix"    # prefix or fuzzy

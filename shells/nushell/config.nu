@@ -187,7 +187,4 @@ source ./aliases/aliases.nu
 source ./completions/completions.nu
 source ./keybindings/keybindings.nu
 source ./themes/catppuccin-mocha.nu
-
-
-# let is_windows = $nu.os-info.name == "windows"
-# let is_linux = $nu.os-info.name == "linux"
+source ./platform/win.nu

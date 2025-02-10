@@ -1,6 +1,5 @@
 source ./eza.nu
 source ./git.nu
-source ./scoop.nu
 
 def --env pwd [] {
     $env.PWD | str replace --all '\' '/'
@@ -57,12 +56,10 @@ def trim_history [] {
 }
 
 alias ci = code
-alias exp = explorer.exe .
 alias zhelp = zoxide --help
 alias zo = zoxide
 alias vim = helix
 alias cat = bat
-alias vpwd = vim "E:\\OneDrive - 商业版\\home\\markdown\\notes\\Private\\key.md"
 alias cd = z
 alias curl = curlie
 alias grep = rg
@@ -74,17 +71,12 @@ alias gg = gitui
 alias yy = yazi
 alias dig = doggo
 alias c2p = code2prompt
-alias cdc = cd c://
-alias cdd = cd d://
-alias cde = cd e://
 alias ps = procs
 alias msql = mysqld --standalone
 alias psql = pg_ctl start
-alias man = cheat
 alias czg = bun run czg
 alias hexo = bun run hexo
 alias shizuku = adb shell sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.sh 
 alias scene = adb shell sh /storage/emulated/0/Android/data/com.omarea.vtools/up.sh
 alias g = lazygit
-alias sync = pwsh -File E://projects/config/install.ps1
 alias hf = fuzzy-command-search
