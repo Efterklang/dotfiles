@@ -14,7 +14,7 @@ $ cd ~/.dotfiles
 # For Windows，Run This👇
 $ pwsh -File ./install.ps1
 # For Linux，Run This👇
-$ ./install
+$ ./install.sh
 ```
 
 ## Packages
@@ -32,7 +32,7 @@ $ scoop import ./scoop-packages.json
 针对Nushell个人有一套Workflow，推荐下载以下依赖。对于Windows平台，以下依赖均在`scoop-package.json`中，直接import即可。
 
 - Shell Prompt Theme
-    - [oh-my-posh]()
+    - [oh-my-posh](https://ohmyposh.dev/)
 - Completion
     - [Carapace](https://carapace.sh/)
 - CLI Tools
@@ -56,7 +56,7 @@ $ scoop import ./scoop-packages.json
 
 - Nushell
     1. `oh-my-posh init nu --print | save -f ./shells/nushell/plugins/omp.nu`
-    2. 修改`omp.nu`的`POSH_THEME`为`/root/.config/ohmyposh/omp.json"`或其他主题
+    2. 修改`omp.nu`的`POSH_THEME`为`~/.config/ohmyposh/omp.json`或其他主题
 - To be continued...
 
 ### Carapace
@@ -64,4 +64,6 @@ $ scoop import ./scoop-packages.json
 **Installation**
 
 - Windows: `scoop install extras/carapace-bin`
-- Linux: check (carapace-sh.github.io/carapace-bin/install.html)[https://carapace-sh.github.io/carapace-bin/install.html]
+- Linux: 
+    - Arch: `yay -S carapace-bin`
+    - Others: check [carapace-sh.github.io/carapace-bin/install.html](https://carapace-sh.github.io/carapace-bin/install.html)
