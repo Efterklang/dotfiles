@@ -1,9 +1,22 @@
-[plugin]
-deps = [
-	{ use = "yazi-rs/plugins:git", rev = "8ed2537" },
-	{ use = "yazi-rs/plugins:max-preview", rev = "8ed2537" },
-	{ use = "yazi-rs/plugins:smart-enter", rev = "8ed2537" }, { use = "imsi32/yatline", rev = "9328205" },
-]
+[[plugin.deps]]
+use = "yazi-rs/plugins:git"
+rev = "8ed2537"
+hash = "e9cf1bfc03de7fee0f1d4260da0d1dfd"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:max-preview"
+rev = "8ed2537"
+hash = "9bc26d10d2f6e2aa93b10905b1b76979"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-enter"
+rev = "8ed2537"
+hash = "c1a2739e9ef2d837030ccb4267be3ed1"
+
+[[plugin.deps]]
+use = "imsi32/yatline"
+rev = "9328205"
+hash = "3e51d1fd8a2e481fcfa8eab1251d1c5f"
 
 [flavor]
 deps = []
