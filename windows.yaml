@@ -2,7 +2,8 @@
     link:
       create: true
       relink: true
-- clean: ['~','~/.config','~/AppData/Roaming','~/AppData/Local','~/Documents']
+- clean:
+    ["~", "~/.config", "~/AppData/Roaming", "~/AppData/Local", "~/Documents"]
 - link:
     ~/.config/fastfetch: tui_cli/fastfetch
     ~/.config/procs: tui_cli/procs
@@ -19,7 +20,9 @@
     ~/AppData/Roaming/bat: tui_cli/bat
     ~/AppData/Roaming/helix: tui_cli/helix
     ~/AppData/Roaming/gitui: tui_cli/gitui
-    ~/AppData/Roaming/nushell: shells/nushell
+    ~/AppData/Roaming/nushell:
+      path: shells/nushell
+      exclude: shells/nushell/plugins/omp.nu
     ~/AppData/Roaming/yazi/config: tui_cli/yazi
     ~/Documents/PowerShell: shells/pwsh7
     D://envir_vars/scoop/persist/btop: tui_cli/btop

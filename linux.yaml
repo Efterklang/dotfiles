@@ -2,7 +2,7 @@
     link:
       create: true
       relink: true
-- clean: ['~','~/.config']
+- clean: ["~", "~/.config"]
 - link:
     ~/.config/btop: tui_cli/btop
     ~/.config/fastfetch: tui_cli/fastfetch
@@ -12,9 +12,11 @@
     ~/.config/bat: tui_cli/bat
     ~/.config/gitui: tui_cli/gitui
     ~/.config/helix:
-        force: true
-        path: tui_cli/helix
-    ~/.config/nushell: shells/nushell
+      force: true
+      path: tui_cli/helix
+    ~/.config/nushell:
+      path: shells/nushell
+      exclude: shells/nushell/plugins/omp.nu
     ~/.config/yazi: tui_cli/yazi
     ~/.config/vscode/custom.css: vscode/custom.css
     ~/.config/vscode/markdown-preview-enhanced: vscode/markdown-preview-enhanced
