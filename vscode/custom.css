@@ -310,3 +310,8 @@
 	background: var(--red) !important;
 	color: var(--base) !important;
 }
+
+/* debug console font;新版本vscode可以在settings.json中配置字体 */
+.mtk1 {
+	font-family: var(--font-jb);
+}
