@@ -11,6 +11,7 @@
     ~/.config/lazygit: tui_cli/lazygit
     ~/.config/bat: tui_cli/bat
     ~/.config/gitui: tui_cli/gitui
+    ~/.config/nvim: tui_cli/nvim
     ~/.config/helix:
       force: true
       path: tui_cli/helix

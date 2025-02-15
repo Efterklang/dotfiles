@@ -245,9 +245,9 @@
         "when": "!editorFocus"
     },
     {
-        "key": "j",
+        "key": "a",
         "command": "explorer.newFile",
-        "when": "!inputFocus && listFocus"
+        "when": "listFocus && !inputFocus"
     },
     {
         "key": "ctrl+e",
@@ -336,9 +336,9 @@
         "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
     },
     {
-        "key": "k",
+        "key": "shift+a",
         "command": "explorer.newFolder",
-        "when": "!inputFocus && listFocus"
+        "when": "listFocus && !inputFocus"
     },
     {
         "key": "t",
