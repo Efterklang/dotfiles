@@ -70,7 +70,7 @@ $env.NU_PLUGIN_DIRS = [
 
 # yazi config
 $env.YAZI_FILE_ONE = 'D:/envir_vars/scoop/apps/git/current/usr/bin/file.exe'
-$env.EDITOR = 'helix'
+$env.EDITOR = 'nvim'
 
 
 # fzf

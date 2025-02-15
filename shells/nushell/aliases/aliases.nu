@@ -58,7 +58,7 @@ def trim_history [] {
 alias ci = code
 alias zhelp = zoxide --help
 alias zo = zoxide
-alias vim = helix
+alias vim = nvim
 alias cat = bat
 alias cd = z
 alias curl = curlie
