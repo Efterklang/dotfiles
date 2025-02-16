@@ -203,7 +203,7 @@
     },
     "vscode_custom_css.imports": [
         "file:///c:/Users/24138/.config/vscode/custom.css",
-        "file:///d:/envir_vars/scoop/apps/vscode/1.97.0/data/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
+        "file:///d:/envir_vars/scoop/apps/vscode/1.97.2/data/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
     ],
     "background.enabled": false,
     "background.fullscreen": {
@@ -259,6 +259,11 @@
     // * ╭───────────────────────────────────────────────────────╮
     // * │                    extensions                         │
     // * ╰───────────────────────────────────────────────────────╯
+    "findJump.matchBackground": "#B4BEFE",
+    "findJump.letterForeground": "#1e1e2e",
+    "findJump.letterBackground": "#A1DC9C",
+    "findJump.matchForeground": "#1e1e2e",
+    "findJump.dimWhenActive": true,
     "better-comments.tags": [
         {
             "tag": "*",

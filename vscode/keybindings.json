@@ -283,18 +283,8 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "alt+q",
-        "command": "jump-extension.jump-to-the-start-of-a-word",
-        "when": "editorTextFocus"
-    },
-    {
         "key": "alt+q alt+q",
         "command": "-jump-extension.jump-to-the-start-of-a-word",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+k alt+q",
-        "command": "jump-extension.jump-to-the-end-of-a-word",
         "when": "editorTextFocus"
     },
     {
@@ -588,5 +578,13 @@
         "key": "ctrl+shift+`",
         "command": "-workbench.action.terminal.new",
         "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+    },
+    {
+        "key": "alt+q",
+        "command": "findJump.activate"
+    },
+    {
+        "key": "ctrl+;",
+        "command": "-findJump.activate"
     }
 ]
