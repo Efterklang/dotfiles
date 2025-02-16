@@ -2,6 +2,7 @@
     link:
       create: true
       relink: true
+      force: true
 - clean: ["~", "~/.config"]
 - link:
     ~/.config/btop: tui_cli/btop
@@ -13,7 +14,6 @@
     ~/.config/gitui: tui_cli/gitui
     ~/.config/nvim: tui_cli/nvim
     ~/.config/helix:
-      force: true
       path: tui_cli/helix
     ~/.config/nushell:
       path: shells/nushell

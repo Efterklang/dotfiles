@@ -54,10 +54,8 @@ $ scoop import ./scoop-packages.json
 
 **Configuration**
 
-- Nushell
-    1. `oh-my-posh init nu --print | save -f ./shells/nushell/plugins/omp.nu`
-    2. 修改`omp.nu`的`POSH_THEME`为`~/.config/ohmyposh/omp.json`或其他主题
-- To be continued...
+- Nushell: `oh-my-posh init nu --config ~/.config/ohmyposh/omp.json --print | save ./shells/nushell/plugins/omp.nu --force`
+- 针对Nushell个人有一套Workflow To be continued...
 
 ### Carapace
 
