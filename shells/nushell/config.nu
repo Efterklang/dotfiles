@@ -187,4 +187,9 @@ source ./aliases/aliases.nu
 source ./completions/completions.nu
 source ./keybindings/keybindings.nu
 source ./themes/catppuccin-mocha.nu
-source ./platform/win.nu
+
+# platform-releated configuration
+const linux_module = if $nu.os-info.name == linux { "./platform/ubuntu.nu" } else { null }
+const window_module = if $nu.os-info.name == windows { "./platform/win.nu" } else { null }
+source $linux_module
+source $window_module
