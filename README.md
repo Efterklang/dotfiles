@@ -40,6 +40,7 @@ $ scoop import ./scoop-packages.json
     - [fzf>=0.59.0](https://github.com/junegunn/fzf)
     - [bat](https://github.com/sharkdp/bat)
     - [zoxide](https://github.com/ajeetdsouza/zoxide)
+    - [delta](https://dandavison.github.io/delta/installation.html)
 - TUI Tools
     - [helix](https://github.com/helix-editor/helix)
     - [lazygit](https://github.com/jesseduffield/lazygit)

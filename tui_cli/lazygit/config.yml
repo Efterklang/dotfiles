@@ -57,9 +57,12 @@ gui:
   commandLogSize: 2
   showRandomTip: false
 git:
+  paging:
+    pager: "delta --dark --paging=never" 
   log:
     showGraph: always
     showWholeGraph: false
+  parseEmoji: true
 
 keybinding:
   universal:
