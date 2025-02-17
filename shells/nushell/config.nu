@@ -21,7 +21,6 @@ $env.config = {
             truncating_suffix: "..." # A suffix used by the 'truncating' methodology
         }
         header_on_separator: false # show header text on separator/border line
-        # abbreviated_row_count: 10 # limit data rows from top and bottom after reaching a set point
     }
 
     error_style: "fancy" # "fancy" or "plain" for screen reader-friendly error messages
@@ -91,13 +90,7 @@ $env.config = {
             enabled: true # true to enable stopping of inactive plugins
             stop_after: 10sec # how long to wait after a plugin is inactive to stop it
         }
-        plugins: {
-            # alternate configuration for specific plugins, by name, for example:
-            #
-            # gstat: {
-            #     enabled: true
-            # }
-        }
+        plugins: {}
     }
 
     hooks: {
@@ -111,8 +104,6 @@ $env.config = {
     }
 
     menus: [
-        # Configuration for default nushell menus
-        # Note the lack of source parameter
         {
             name: completion_menu
             only_buffer_difference: false
