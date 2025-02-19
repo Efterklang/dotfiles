@@ -79,4 +79,5 @@ alias hexo = bun run hexo
 alias shizuku = adb shell sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.sh 
 alias scene = adb shell sh /storage/emulated/0/Android/data/com.omarea.vtools/up.sh
 alias g = lazygit
+alias pyenv = overlay use .venv/bin/activate.nu
 alias hf = fuzzy-command-search

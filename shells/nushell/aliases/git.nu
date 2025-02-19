@@ -19,12 +19,8 @@ export def glog [num?] {
     }  
 }
 
-export def gau [num?] {
-    if $num == null {
-        git log --pretty=%h»¦«%s»¦«%aN»¦«%aE»¦«%aD | lines | split column "»¦«" commit subject name email date | upsert date {|d| $d.date | into datetime} | group-by name | transpose | upsert column1 {|c| $c.column1 | length} | sort-by column1 | rename name commits | reverse | first 5
-    } else {
-        git log --pretty=%h»¦«%s»¦«%aN»¦«%aE»¦«%aD | lines | split column "»¦«" commit subject name email date | upsert date {|d| $d.date | into datetime} | group-by name | transpose | upsert column1 {|c| $c.column1 | length} | sort-by column1 | rename name commits | reverse | first $num
-    }
+export def git_rank [] {
+  git log --pretty=%h»¦«%aN»¦«%s»¦«%aD | lines | split column "»¦«" sha1 committer desc merged_at | histogram committer merger | sort-by merger | reverse
 }
 
 # edit .gitignore

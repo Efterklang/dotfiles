@@ -6,7 +6,7 @@
         "statusBar.foreground": "#b2bcfb",
         // "editorCursor.background": "#fbed85",
         "editorCursor.foreground": "#87a1ff",
-        "editorIndentGuide.activeBackground1": "#b4befe"
+        "editorIndentGuide.activeBackground1": "#F5C2E7"
     },
     "workbench.colorTheme": "Catppuccin Mocha",
     "workbench.iconTheme": "material-icon-theme",

@@ -56,8 +56,8 @@ $ scoop import ./scoop-packages.json
 **Configuration**
 
 - Nushell: `oh-my-posh init nu --config ~/.config/ohmyposh/omp.json --print | save ./shells/nushell/plugins/omp.nu --force`
-- Fish: `oh-my-posh init fish --config ~/.config/fish/omp.json | source`
-- Bash: `oh-my-posh init fish --config ~/.config/fish/omp.json | source`
+- Fish: `oh-my-posh init fish --config ~/.config/ohmyposh/omp.json | source`
+- Bash: `oh-my-posh init fish --config ~/.config/ohmyposh/omp.json | source`
 
 ### Carapace
 
