@@ -19,7 +19,7 @@ export def glog [num?] {
     }  
 }
 
-export def git_rank [] {
+export def grank [] {
   git log --pretty=%h»¦«%aN»¦«%s»¦«%aD | lines | split column "»¦«" sha1 committer desc merged_at | histogram committer merger | sort-by merger | reverse
 }
 
