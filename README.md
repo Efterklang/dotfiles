@@ -1,6 +1,7 @@
 1. [Usage](#usage)
-2. [Packages](#packages)
-3. [🐚Shells](#shells)
+2. [📦Packages](#packages)
+3. [🔣Fonts](#fonts)
+4. [🐚Shells](#shells)
    1. [Nushell](#nushell)
    2. [Oh My Posh](#oh-my-posh)
    3. [Carapace](#carapace)
@@ -17,13 +18,20 @@ $ pwsh -File ./install.ps1
 $ ./install.sh
 ```
 
-## Packages
+## 📦Packages
 
 ```shell
 $ mkdir D:\\envir_vars\\scoop
 $ cd ~/.dotfiles/misc/scoop
 $ scoop import ./scoop-packages.json
 ```
+
+## 🔣Fonts
+
+- Maple Mono NF CN
+- Maple Hand
+- Jetbrains Mono
+- Monaspace Radon
 
 ## 🐚Shells
 
