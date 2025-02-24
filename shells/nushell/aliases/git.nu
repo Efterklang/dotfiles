@@ -209,13 +209,6 @@ export alias gf = git fetch
 export alias gfa = git fetch --all --prune
 export alias gfo = git fetch origin
 
-# Note gitui alias
-export alias gg = gitui
-def ggi [] {
-    ssh-agent;
-    ssh-add ~/.ssh/id_rsa
-}
-
 export alias gignore = git update-index --assume-unchanged
 
 export alias gl = git log

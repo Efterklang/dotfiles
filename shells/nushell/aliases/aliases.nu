@@ -1,5 +1,6 @@
 source ./eza.nu
 source ./git.nu
+source ./replace.nu
 
 def --env pwd [] {
     $env.PWD | str replace --all '\' '/'
@@ -56,29 +57,18 @@ def trim_history [] {
 }
 
 alias c2p = code2prompt
-alias cat = bat
-alias cd = z
 alias ci = code
 alias cls = clear
-alias curl = curlie
 alias czg = bun run czg
-alias dig = doggo
 alias ff = fastfetch
 alias g = lazygit
 alias gg = gitui
-alias grep = rg
 alias hexo = bun run hexo
 alias hf = fuzzy-command-search
 alias lzd = lazydocker
-alias msql = mysqld --standalone
-alias ps = procs
-alias psql = pg_ctl start
 alias pyenv = overlay use .venv/bin/activate.nu
 alias scene = adb shell sh /storage/emulated/0/Android/data/com.omarea.vtools/up.sh
 alias shizuku = adb shell sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.sh 
-alias top = btop
-alias vim = nvim
-alias wez = wezterm
 alias y = yazi
 alias zhelp = zoxide --help
 alias zo = zoxide
