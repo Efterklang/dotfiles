@@ -1,5 +1,9 @@
 $env.YAZI_FILE_ONE = 'D:/envir_vars/scoop/apps/git/current/usr/bin/file.exe'
 
+source ../aliases/scoop.nu
+source ../completions/scoop.nu
+source ../completions/winget.nu
+
 alias su = scoop update
 alias si = scoop install
 alias sui = scoop uninstall

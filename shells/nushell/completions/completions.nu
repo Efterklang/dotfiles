@@ -1,4 +1,3 @@
-source ./scoop.nu
 source ./vscode.nu
 
 let carapace_completer = {|spans|
