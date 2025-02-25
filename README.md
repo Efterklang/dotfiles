@@ -33,26 +33,40 @@ $ scoop import ./scoop-packages.json
 - Jetbrains Mono
 - Monaspace Radon
 
-## 🐚Shells
+## 💻Terminal
+
+- Windows Terminal
+- Wezterm
+
+### Workflow
+
+- Completion
+    - [Carapace](https://carapace.sh/): A multi-shell completion library and binary.
+- CLI Tools
+    - [fd](https://github.com/sharkdp/fd): A simple, fast and user-friendly alternative to 'find'
+    - [fzf>=0.59.0](https://github.com/junegunn/fzf): 🌸 A command-line fuzzy finder
+    - [bat](https://github.com/sharkdp/bat): A cat(1) clone with wings.
+    - [zoxide](https://github.com/ajeetdsouza/zoxide): A smarter cd command. Supports all major shells.
+    - [delta](https://dandavison.github.io/delta/installation.html): A syntax-highlighting pager for git, diff, and grep output
+    - [tailspin](https://github.com/bensadeh/tailspin): 🌀 A log file highlighter
+- TUI Tools
+    - [helix](https://github.com/helix-eiditor/helix): A post-modern modal text editor.
+    - [lazygit](https://github.com/jesseduffield/lazygit): simple terminal UI for git commands
+    - [yazi](https://github.com/sxyazi/yazi): 💥 Blazing fast terminal file manager written in Rust, based on async I/O.
+
+
+## 🐚Shell
+
+- Shell Prompt Theme
+    - [oh-my-posh](https://ohmyposh.dev/): A prompt theme engine for any shell.
+- Shells
+    - Nushell
+    - Fish
+    - Powershell7
 
 ### Nushell
 
-针对Nushell个人有一套Workflow，推荐下载以下依赖。对于Windows平台，以下依赖均在`scoop-package.json`中，直接import即可。
-
-- Shell Prompt Theme
-    - [oh-my-posh](https://ohmyposh.dev/)
-- Completion
-    - [Carapace](https://carapace.sh/)
-- CLI Tools
-    - [fd](https://github.com/sharkdp/fd#installation)
-    - [fzf>=0.59.0](https://github.com/junegunn/fzf)
-    - [bat](https://github.com/sharkdp/bat)
-    - [zoxide](https://github.com/ajeetdsouza/zoxide)
-    - [delta](https://dandavison.github.io/delta/installation.html)
-- TUI Tools
-    - [helix](https://github.com/helix-editor/helix)
-    - [lazygit](https://github.com/jesseduffield/lazygit)
-    - [yazi](https://github.com/sxyazi/yazi)
+Check `./shells/nushell` for more infomation
 
 ### Oh My Posh
 
