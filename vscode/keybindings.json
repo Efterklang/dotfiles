@@ -587,4 +587,14 @@
         "key": "ctrl+;",
         "command": "-findJump.activate"
     }
+    {
+        "key": "alt+oem_3",
+        "command": "workbench.debug.action.toggleRepl",
+        "when": "workbench.panel.repl.view.active"
+    },
+    {
+        "key": "ctrl+shift+y",
+        "command": "-workbench.debug.action.toggleRepl",
+        "when": "workbench.panel.repl.view.active"
+    }
 ]
