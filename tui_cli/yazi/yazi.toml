@@ -165,12 +165,3 @@ sort_by = "none"
 sort_reverse = false
 sort_sensitive = false
 
-[[plugin.prepend_fetchers]]
-id = "git"
-name = "*"
-run = "git"
-
-[[plugin.prepend_fetchers]]
-id = "git"
-name = "*/"
-run = "git"
