@@ -1,15 +1,15 @@
 ({
   katexConfig: {
-  "macros": {}
-},
-  
+    "macros": {}
+  },
+
   mathjaxConfig: {
-  "tex": {},
-  "options": {},
-  "loader": {}
-},
-  
+    "tex": {},
+    "options": {},
+    "loader": {}
+  },
+
   mermaidConfig: {
-  "startOnLoad": false
-},
+    "startOnLoad": false
+  },
 })

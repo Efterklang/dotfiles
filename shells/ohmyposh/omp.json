@@ -42,10 +42,10 @@
           "powerline_symbol": "\ue0b0",
           "background": "#8891e0",
           "type": "path"
-        },
+        }, 
         {
           "properties": {
-            "branch_max_length": 25,
+            "branch_max_length": 10,
             "fetch_stash_count": true,
             "fetch_status": true,
             "fetch_upstream_icon": true
@@ -67,9 +67,9 @@
         {
           "style": "powerline",
           "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
-          "foreground": "#ffffff",
+          "foreground": "#1E1E2E",
           "powerline_symbol": "\ue0b0",
-          "background": "#9ece6a",
+          "background": "#A6E3A1",
           "type": "node"
         },
         {
@@ -130,7 +130,7 @@
         },
         {
           "style": "diamond",
-          "template": "\uf489  {{ .Name }} ",
+          "template": "{{ .Name }} ",
           "foreground": "#bb9fee",
           "type": "shell"
         }
@@ -151,10 +151,10 @@
           },
           "style": "plain",
           "template": "\ue6ac </>",
-          "foreground": "#86e1fc",
+          "foreground": "#b4befe",
           "type": "status",
           "foreground_templates": [
-            "{{ if gt .Code 0 }}#ef5350{{ end }}"
+            "{{ if gt .Code 0 }}#F38BA8{{ end }}"
           ]
         }
       ],

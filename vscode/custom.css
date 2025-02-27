@@ -318,8 +318,3 @@
 .mtk1 {
 	font-family: var(--font-maple);
 }
-
-/* git graph commmit message font */
-span.text {
-  font-family: Maple Mono NF CN;
-}
