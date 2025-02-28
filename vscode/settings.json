@@ -9,7 +9,7 @@
         "editorIndentGuide.activeBackground1": "#F5C2E7"
     },
     "workbench.colorTheme": "Catppuccin Mocha",
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "catppuccin noctis icons",
     "workbench.editor.editorActionsLocation": "hidden",
     "workbench.editor.pinnedTabSizing": "shrink",
     "workbench.editor.tabSizing": "shrink",
@@ -40,6 +40,7 @@
     // * ╭───────────────────────────────────────────────────────╮
     // * │                VSCode Editor                          │
     // * ╰───────────────────────────────────────────────────────╯
+    "editor.cursorSmoothCaretAnimation": "on",
     "editor.detectIndentation": true,
     "workbench.list.defaultFindMode": "filter",
     "editor.scrollbar.verticalScrollbarSize": 13,
@@ -48,7 +49,7 @@
     "editor.unicodeHighlight.ambiguousCharacters": false,
     "editor.cursorBlinking": "smooth",
     "editor.cursorStyle": "block",
-    "editor.fontFamily": "Maple Mono NF CN, JetbrainsMono Nerd Font, Monaspace Argon, Monaspace Radon, MonoLisa, Segoe UI Variable, Noto Sans SC, Microsoft Jhenghei, Microsoft Jhenghei UI, Monaspace Xenon, Franklin Gothic, Cascadia Code, Vladimir Script, Kristen ITC, Monaspace Neon, DejaVu Sans Mono, Inconsolata, Monaspace Krypton",
+    "editor.fontFamily": "Maple Mono NF CN, Monaspace Radon, JetbrainsMono Nerd Font, Monaspace Argon, MonoLisa, Segoe UI Variable, Noto Sans SC, Microsoft Jhenghei, Microsoft Jhenghei UI, Monaspace Xenon, Franklin Gothic, Cascadia Code, Vladimir Script, Kristen ITC, Monaspace Neon, DejaVu Sans Mono, Inconsolata, Monaspace Krypton",
     "editor.fontLigatures": true,
     "editor.fontVariations": true,
     "editor.fontSize": 16,
@@ -179,7 +180,6 @@
     "material-icon-theme.files.color": "#42a5f5",
     "material-icon-theme.hidesExplorerArrows": true,
     "material-icon-theme.folders.theme": "specific",
-    "materialTheme.accent": "Indigo",
     "catppuccin.extraBordersEnabled": true,
     "catppuccin.italicComments": true,
     "catppuccin.accentColor": "lavender",
@@ -203,7 +203,7 @@
         "Tabs": 200
     },
     "vscode_custom_css.imports": [
-        "file:///c:/Users/24138/.config/vscode/custom.css",
+        "file:///${userHome}/.config/vscode/custom.css",
         "file:///d:/envir_vars/scoop/apps/vscode/1.97.2/data/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
     ],
     "background.enabled": false,
@@ -214,7 +214,9 @@
             "background-size": "cover",
             "opacity": 0.95
         },
-        "images": ["file:///E:/OneDrive - 商业版/Pictures/WallPaper/Minimalist/arch-black-4k.png"],
+        "images": [
+            "file:///E:/OneDrive - 商业版/Pictures/WallPaper/Minimalist/arch-black-4k.png"
+        ],
         "position": "center",
         "interval": 100,
         "random": false
@@ -222,6 +224,7 @@
     // * ╭───────────────────────────────────────────────────────╮
     // * │                      Git                              │
     // * ╰───────────────────────────────────────────────────────╯
+    "git.mergeEditor": true,
     "git-graph.enhancedAccessibility": true,
     "git-graph.graph.colours": [
         "#89b4fa",
@@ -285,7 +288,13 @@
         }
     ],
     "todo-tree.filtering.ignoreGitSubmodules": true,
-    "todo-tree.general.tags": ["todo", "bug", "tag", "done", "note"],
+    "todo-tree.general.tags": [
+        "todo",
+        "bug",
+        "tag",
+        "done",
+        "note"
+    ],
     "todo-tree.filtering.excludeGlobs": [
         "**/node_modules/*/**",
         "**/*.yml",
@@ -358,7 +367,7 @@
     "leetcode.hint.commandShortcut": false,
     "leetcode.showDescription": "None",
     // * ╭───────────────────────────────────────────────────────╮
-    // * │                Language Specific                      │
+    // * │                         LSP                           │
     // * ╰───────────────────────────────────────────────────────╯
     "[yaml]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -381,10 +390,10 @@
         "editor.suggest.insertMode": "replace"
     },
     "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.json-language-features"
     },
     "[markdown]": {
-        "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
         "editor.quickSuggestions": {
             "comments": "on",
             "strings": "on",
@@ -404,9 +413,6 @@
     "[javascript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
-    "[dockerfile]": {
-        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-    },
     "python.analysis.aiCodeActions": {
         "implementAbstractClasses": true
     },
@@ -417,15 +423,18 @@
     "python.analysis.enableSyncServer": false,
     "python.analysis.autoIndent": true,
     "python.analysis.gotoDefinitionInStringLiteral": true,
-    "python.analysis.fixAll": ["source.unusedImports", "source.convertImportFormat"],
+    "python.analysis.fixAll": [
+        "source.unusedImports",
+        "source.convertImportFormat"
+    ],
     "python.analysis.generateWithTypeAnnotation": true,
     "python.analysis.importFormat": "relative",
     "python.analysis.inlayHints.callArgumentNames": "all",
     "python.analysis.inlayHints.functionReturnTypes": true,
     "python.analysis.inlayHints.pytestParameters": true,
     "python.analysis.inlayHints.variableTypes": true,
-    // "python.analysis.nodeExecutable": "D:\\envir_vars\\scoop\\apps\\nodejs-lts\\current\\node.exe",
-    "python.analysis.supportDocstringTemplate": true,
+    "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.typeEvaluation.strictSetInference": true,
     "python.analysis.typeCheckingMode": "standard",
     "python.analysis.typeEvaluation.deprecateTypingAliases": true,
     "python.analysis.typeEvaluation.enableExperimentalFeatures": true,
@@ -445,6 +454,10 @@
     // * ╭───────────────────────────────────────────────────────╮
     // * │                    Markdown                           │
     // * ╰───────────────────────────────────────────────────────╯
+    "markdown.extension.theming.decoration.renderCodeSpan": true,
+    "markdown.extension.theming.decoration.renderHardLineBreak": true,
+    "markdown.extension.theming.decoration.renderStrikethrough": true,
+    "markdown.extension.theming.decoration.renderTrailingSpace": true,
     "markdown.preview.typographer": true,
     "markdown.extension.theming.decoration.renderLink": true,
     "markdown-preview-enhanced.enableHTML5Embed": true,
@@ -453,7 +466,7 @@
     "markdown-preview-enhanced.mathRenderingOption": "MathJax",
     "markdown-preview-enhanced.alwaysShowBacklinksInPreview": true,
     "markdown-preview-enhanced.codeBlockTheme": "none",
-    "markdown-preview-enhanced.enablePreviewZenMode": true,
+    "markdown-preview-enhanced.enablePreviewZenMode": false,
     "markdown-preview-enhanced.enableWikiLinkSyntax": true,
     "foam.files.attachmentExtensions": "pdf mp3 webm avi mov rtf txt doc docx",
     "foam.graph.titleMaxLength": 15,
@@ -488,25 +501,27 @@
     "codeimg.containerPadding": "none",
     "codeimg.format": "webp",
     "debugpy.showPythonInlineValues": true,
+    "debugpy.debugJustMyCode": false,
     "evenBetterToml.formatter.columnWidth": 80,
     "excalidraw.language": "en",
     "excalidraw.theme": "auto",
     "extensions.autoUpdate": false,
     "file-size.position": "left",
-    "files.autoSaveDelay": 500,
+    "files.autoSaveDelay": 1000,
     "hediet.vscode-drawio.codeLinkActivated": true,
     "hediet.vscode-drawio.resizeImages": null,
     "hediet.vscode-drawio.theme": "automatic",
     "inlineChat.accessibleDiffView": "on",
-    "liveServer.settings.donotShowInfoMsg": true,
     "outline.showTypeParameters": true,
-    "prettier.endOfLine": "auto",
-    "prettier.prettierPath": "C:/Users/24138/.bun/bin/prettier.exe",
-    "prettier.printWidth": 100,
-    "prettier.tabWidth": 4,
-    "prettier.useTabs": false,
-    "projectManager.git.ignoredFolders": ["node_modules", "test", "Markdown"],
-    "projectManager.tags": ["Configs", "Work"],
+    "projectManager.git.ignoredFolders": [
+        "node_modules",
+        "test",
+        "Markdown"
+    ],
+    "projectManager.tags": [
+        "Configs",
+        "Work"
+    ],
     "remote.SSH.enableRemoteCommand": true,
     "remote.SSH.path": "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
     "remote.SSH.showLoginTerminal": true,
@@ -520,7 +535,9 @@
     "update.enableWindowsBackgroundUpdates": false,
     "update.mode": "none",
     "vscode_custom_css.statusbar": false,
-    "wordcount_cjk.activateLanguages": ["markdown"],
+    "wordcount_cjk.activateLanguages": [
+        "markdown"
+    ],
     "files.associations": {
         "*.json": "jsonc"
     },
@@ -528,16 +545,19 @@
         "20.2.13.142": "linux",
         "momenta": "linux"
     },
-    "extensions.experimental.affinity": {
-        "asvetliakov.vscode-neovim": 1
-    },
     "code-runner.executorMapByGlob": {
         "*.java": "cd $dir && java $fileName",
         "python": "cd $dir && python $fileName"
     },
-    "errorLens.excludeBySource": ["Ruff(F405)", "Pylance(reportOptionalMemberAccess)"],
+    "errorLens.excludeBySource": [
+        "Ruff(F405)",
+        "Pylance(reportOptionalMemberAccess)"
+    ],
     "files.autoSave": "afterDelay",
-    "[less]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    "terminal.integrated.fontSize": 12,
+    "catppuccin-noctis-icons.hidesExplorerArrows": false,
+    "vscode-office.editorTheme": "Auto",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
 }
