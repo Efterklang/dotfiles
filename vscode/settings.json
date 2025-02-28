@@ -41,6 +41,7 @@
     // * │                VSCode Editor                          │
     // * ╰───────────────────────────────────────────────────────╯
     "editor.detectIndentation": true,
+    "workbench.list.defaultFindMode": "filter",
     "editor.scrollbar.verticalScrollbarSize": 13,
     "editor.wrappingStrategy": "advanced",
     "editor.minimap.enabled": false,

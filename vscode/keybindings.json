@@ -35,7 +35,7 @@
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     },
     {
-        "key": "c",
+        "key": "y",
         "command": "filesExplorer.copy",
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !inputFocus"
     },
@@ -161,8 +161,8 @@
     },
     {
         "key": "q",
-        "command": "list.collapseAll",
-        "when": "listFocus && !inputFocus && !treestickyScrollFocused"
+        "command": "workbench.action.focusFirstEditorGroup",
+        "when": "listFocus && !inputFocus
     },
     {
         "key": "ctrl+left",
@@ -170,19 +170,19 @@
         "when": "listFocus && !inputFocus && !treestickyScrollFocused"
     },
     {
-        "key": "d",
-        "command": "list.expand",
-        "when": "listFocus && treeElementCanExpand && !inputFocus && !treestickyScrollFocused || listFocus && treeElementHasChild && !inputFocus && !treestickyScrollFocused"
-    },
-    {
         "key": "right",
         "command": "-list.expand",
         "when": "listFocus && treeElementCanExpand && !inputFocus && !treestickyScrollFocused || listFocus && treeElementHasChild && !inputFocus && !treestickyScrollFocused"
     },
     {
-        "key": "a",
+        "key": "h",
         "command": "list.collapse",
         "when": "listFocus && treeElementCanCollapse && !inputFocus && !treestickyScrollFocused || listFocus && treeElementHasParent && !inputFocus && !treestickyScrollFocused"
+    },
+    {
+        "key": "l",
+        "command": "list.expand",
+        "when": "listFocus && treeElementCanExpand && !inputFocus && !treestickyScrollFocused || listFocus && treeElementHasChild && !inputFocus && !treestickyScrollFocused"
     },
     {
         "key": "left",
@@ -243,12 +243,7 @@
         "key": "shift+alt+r",
         "command": "-revealFileInOS",
         "when": "!editorFocus"
-    },
-    {
-        "key": "j",
-        "command": "explorer.newFile",
-        "when": "listFocus && !inputFocus"
-    },
+    }, 
     {
         "key": "ctrl+e",
         "command": "-editor.action.toggleScreenReaderAccessibilityMode",
@@ -326,7 +321,12 @@
         "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
     },
     {
-        "key": "k",
+        "key": "a",
+        "command": "explorer.newFile",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "shift+a",
         "command": "explorer.newFolder",
         "when": "listFocus && !inputFocus"
     },
@@ -520,7 +520,7 @@
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     },
     {
-        "key": "f",
+        "key": "oem_2",
         "command": "list.find",
         "when": "listFocus && listSupportsFind && !inputFocus"
     },
@@ -596,5 +596,25 @@
         "key": "ctrl+shift+y",
         "command": "-workbench.debug.action.toggleRepl",
         "when": "workbench.panel.repl.view.active"
+    },
+    {
+        "key": "k",
+        "command": "list.focusUp",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "j",
+        "command": "list.focusDown",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "c",
+        "command": "copyFilePath",
+        "when": "!editorFocus && !inputFocus"
+    },
+    {
+        "key": "shift+c",
+        "command": "copyRelativeFilePath",
+        "when": "!editorFocus && !inputFocus"
     }
 ]
