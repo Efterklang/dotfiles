@@ -616,5 +616,15 @@
         "key": "shift+c",
         "command": "copyRelativeFilePath",
         "when": "!editorFocus && !inputFocus"
+    },
+    {
+        "key": "g",
+        "command": "list.focusFirst",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "shift+g",
+        "command": "list.focusLast",
+        "when": "listFocus && !inputFocus"
     }
 ]
