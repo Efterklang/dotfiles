@@ -16,10 +16,6 @@ return {
         {
             name = 'Arch',
             distribution = 'Arch',
-        },
-        {
-            name = 'WSL:Ubuntu',
-            distribution = 'Ubuntu',
-        },
+        }
     },
 }

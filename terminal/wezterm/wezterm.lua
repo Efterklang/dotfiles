@@ -5,7 +5,7 @@ local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabl
 
 tabline.setup({
 	options = {
-		theme = 'catppuccin-mocha'
+		theme = 'Catppuccin Mocha'
 	},
 })
 
