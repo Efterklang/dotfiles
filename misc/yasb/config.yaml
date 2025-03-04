@@ -24,11 +24,11 @@ bars:
       windows_app_bar: true
     dimensions:
       width: "100%"
-      height: 27
+      height: 32
     padding:
       top: 0
       left: 0
-      bottom: 1
+      bottom: 0
       right: 0
     widgets:
       left: ["home",  "language","volume","apps", "media"]
@@ -38,7 +38,7 @@ widgets:
   home:
     type: "yasb.home.HomeWidget"
     options:
-      label: "<span>\ue62a</span> Efterklang"
+      label: "<span> </span> GnixAij"
       menu_list:
         - { title: "User Home", path: "~" }
         - { title: "Download", path: "~\\Downloads" }
@@ -135,10 +135,7 @@ widgets:
         - { icon: "\udb84\udf55", launch: "widget" }
         - { icon: "\ueb03", launch: "cmd /c Taskmgr" }
         - { icon: "\uf489", launch: "wtp" }
-        - {
-            icon: "\udb82\ude1e",
-            launch: "code",
-          }
+        - { icon: "\udb82\ude1e", launch: "code"}
         - { icon: "\uf268", launch: "C:\\Program Files\\Google\\Chrome Beta\\Application\\chrome.exe" }
         - {
             icon: "\udb82\udd60",
