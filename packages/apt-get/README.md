@@ -1,0 +1,2 @@
+- Export: `apt-mark showmanual > apt-packages.txt`
+- Import: `cat apt-packages.txt | xargs sudo apt-get install -y`
