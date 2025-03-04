@@ -55,7 +55,7 @@ $env.config = {
         osc7: true
         osc8: false
         osc9_9: true
-        osc133: true
+        osc133: false 
         osc633: true
         reset_application_mode: true
     }
