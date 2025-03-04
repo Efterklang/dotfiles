@@ -580,7 +580,7 @@
         "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
     },
     {
-        "key": "alt+q",
+        "key": "ctrl+oem_1",
         "command": "findJump.activate"
     },
     {
