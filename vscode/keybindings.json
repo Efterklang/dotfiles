@@ -162,7 +162,7 @@
     {
         "key": "q",
         "command": "workbench.action.focusFirstEditorGroup",
-        "when": "listFocus && !inputFocus
+        "when": "listFocus && !inputFocus"
     },
     {
         "key": "ctrl+left",
@@ -586,7 +586,7 @@
     {
         "key": "ctrl+;",
         "command": "-findJump.activate"
-    }
+    },
     {
         "key": "alt+oem_3",
         "command": "workbench.debug.action.toggleRepl",
