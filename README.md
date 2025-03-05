@@ -1,42 +1,34 @@
 # 🍚Dotfiles
 
 1. [🍚Dotfiles](#dotfiles)
-   1. [✨Preview](#preview)
-   2. [📦Packages](#packages)
-   3. [🧩Applications](#applications)
+   1. [📦Packages](#packages)
+   2. [🧩Applications](#applications)
       1. [VSCode](#vscode)
       2. [Chrome](#chrome)
-   4. [🔣Fonts](#fonts)
-   5. [💻Terminal](#terminal)
+   3. [🔣Fonts](#fonts)
+   4. [💻Terminal](#terminal)
       1. [Workflow](#workflow)
          1. [Completion Tools](#completion-tools)
          2. [CLI](#cli)
          3. [TUI](#tui)
-   6. [🐚Shell](#shell)
+   5. [🐚Shell](#shell)
       1. [Nushell](#nushell)
       2. [Oh My Posh](#oh-my-posh)
 
-## ✨Preview
-
-| ![Desktop](assets/desktop.webp) | ![browser](assets/browser.webp) |
-| :-----------------------------: | :-----------------------------: |
-|  ![VSCode](assets/vscode.webp)  |    ![Nvim](assets/nvim.webp)    |
-| ![lazygit](assets/lazygit.webp) |    ![Yazi](assets/yazi.webp)    |
+![Desktop](assets/desktop.webp)
 
 ## 📦Packages
 
-Quick setup with Scoop package manager:
-
-```bash
-# Create Scoop environment directory
-mkdir D:\\envir_vars\\scoop  # replace with your own directory
-
-# Import package configuration
-cd ~/.dotfiles/misc/scoop
-scoop import ./scoop-packages.json
-```
+| File/Directory | Description               |
+| -------------- | ------------------------- |
+| `apt-get`      | Debian-based package list |
+| `cargo`        | Rust package list         |
+| `scoop`        | Windows package list      |
 
 ## 🧩Applications
+
+| ![VSCode](assets/vscode.webp) | ![browser](assets/browser.webp) |
+| :---------------------------: | :-----------------------------: |
 
 ### VSCode
 
@@ -67,6 +59,9 @@ Extension List
 - Monaspace
 
 ## 💻Terminal
+
+| ![Nvim](assets/nvim.webp) | ![Yazi](assets/yazi.webp) | ![Lazygit](assets/lazygit.webp) |
+| :-----------------------: | :-----------------------: | :-----------------------------: |
 
 Preferred terminals:
 
