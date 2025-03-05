@@ -21,12 +21,14 @@
     "workbench.view.alwaysShowHeaderActions": true,
     "workbench.tree.indent": 10,
     "workbench.list.smoothScrolling": true,
-    "workbench.layoutControl.enabled": false,
     "workbench.reduceMotion": "off",
     "workbench.startupEditor": "none",
     "workbench.editor.autoLockGroups": {
         "workbench.editors.gettingStartedInput": true
     },
+    "workbench.list.defaultFindMode": "filter",
+    "workbench.activityBar.location": "top",
+    "workbench.layoutControl.enabled": false,
     "workbench.editorAssociations": {
         "*.copilotmd": "vscode.markdown.preview.editor",
         "*.png": "imagePreview.previewEditor",
@@ -36,13 +38,12 @@
         "{git,gitlens,git-graph}:/**/*.{md,csv,svg}": "default"
     },
     "workbench.productIconTheme": "fluent-icons",
-    "workbench.activityBar.location": "top",
     // * ╭───────────────────────────────────────────────────────╮
     // * │                VSCode Editor                          │
     // * ╰───────────────────────────────────────────────────────╯
     "editor.cursorSmoothCaretAnimation": "on",
+    "editor.suggestSelection": "recentlyUsedByPrefix",
     "editor.detectIndentation": true,
-    "workbench.list.defaultFindMode": "filter",
     "editor.scrollbar.verticalScrollbarSize": 13,
     "editor.wrappingStrategy": "advanced",
     "editor.minimap.enabled": false,
@@ -82,6 +83,7 @@
         "workbench.action.focusAuxiliaryBar",
         "workbench.files.action.focusFilesExplorer"
     ],
+    "terminal.integrated.copyOnSelection": true,
     "terminal.integrated.allowMnemonics": true,
     "terminal.integrated.hideOnStartup": "always",
     "terminal.integrated.middleClickBehavior": "paste",
@@ -92,6 +94,7 @@
     "terminal.integrated.defaultProfile.windows": "Nushell",
     "terminal.integrated.smoothScrolling": true,
     "terminal.integrated.customGlyphs": true,
+    "terminal.integrated.suggest.enabled": true,
     "terminal.integrated.fontLigatures": true,
     "terminal.integrated.cursorStyleInactive": "none",
     "terminal.integrated.cursorWidth": 2,
@@ -119,8 +122,6 @@
     // * ╰───────────────────────────────────────────────────────╯
     "window.title": "${dirty}${separator}${rootName}${separator}${profileName}${separator}",
     "window.restoreWindows": "one",
-    "window.menuBarVisibility": "compact",
-    "window.commandCenter": false,
     "window.customMenuBarAltFocus": false,
     "window.newWindowDimensions": "inherit",
     "window.openFilesInNewWindow": "off",
@@ -393,7 +394,7 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "[markdown]": {
-        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one",
         "editor.quickSuggestions": {
             "comments": "on",
             "strings": "on",
@@ -454,6 +455,12 @@
     // * ╭───────────────────────────────────────────────────────╮
     // * │                    Markdown                           │
     // * ╰───────────────────────────────────────────────────────╯
+    "markless.allowDangerousHtml": true,
+    "markless.hoverImage": false,
+    "markless.inlineImage.autoPreview": false,
+    "markless.inlineImage.enabled": false,
+    "markless.html": false,
+    "markless.table": false,
     "markdown.extension.theming.decoration.renderCodeSpan": true,
     "markdown.extension.theming.decoration.renderHardLineBreak": true,
     "markdown.extension.theming.decoration.renderStrikethrough": true,
@@ -551,7 +558,8 @@
     },
     "errorLens.excludeBySource": [
         "Ruff(F405)",
-        "Pylance(reportOptionalMemberAccess)"
+        "Pylance(reportOptionalMemberAccess)",
+        "markdownlint(MD033)"
     ],
     "files.autoSave": "afterDelay",
     "terminal.integrated.fontSize": 12,
@@ -559,5 +567,5 @@
     "vscode-office.editorTheme": "Auto",
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
-    },
+    }
 }

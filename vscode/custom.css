@@ -290,11 +290,6 @@
 	color: var(--lavender);
 }
 
-/* #status\.editor\.selection {
-	background: var(--status_label_background) !important;
-	color: var(--lavender) !important;
-} */
-
 #RoscoP\.ActiveFileInStatusBar {
 	order: 999 !important;
 	/* right most */
@@ -304,14 +299,18 @@
 	display: none !important;
 }
 
-#GitHub\.copilot\.status {
-	background: var(--green) !important;
-	color: var(--base) !important;
+#status\.editor\.selection {
+	background: var(--status_label_background) !important;
+	color: var(--lavender) !important;
+	order: -998 !important;
 }
 
 #status\.notifications {
 	background: var(--red) !important;
 	color: var(--base) !important;
+	order: -999 !important;
+	margin-right: 0 !important;
+	padding-right: 2px !important;
 }
 
 /* debug console font; 新版本vscode可以在settings.json中配置字体 */
