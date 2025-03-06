@@ -8,6 +8,8 @@
         "editorCursor.foreground": "#87a1ff",
         "editorIndentGuide.activeBackground1": "#F5C2E7"
     },
+    "workbench.navigationControl.enabled": false,
+    "workbench.settings.useWeightedKeySearch": true,
     "workbench.colorTheme": "Catppuccin Mocha",
     "workbench.iconTheme": "catppuccin noctis icons",
     "workbench.editor.editorActionsLocation": "hidden",
@@ -41,6 +43,18 @@
     // * ╭───────────────────────────────────────────────────────╮
     // * │                VSCode Editor                          │
     // * ╰───────────────────────────────────────────────────────╯
+    "editor.autoClosingDelete": "always",
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingComments": "always",
+    "editor.autoClosingQuotes": "always",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.definitionLinkOpensInPeek": true,
+    "editor.experimentalEditContextEnabled": true,
+    "editor.foldingImportsByDefault": true,
+    "editor.gotoLocation.alternativeReferenceCommand": "editor.action.goToReferences",
+    "editor.gotoLocation.alternativeDefinitionCommand": "editor.action.peekTypeDefinition",
+    "editor.gotoLocation.alternativeImplementationCommand": "editor.action.goToImplementation",
+    "editor.linkedEditing": true,
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.suggestSelection": "recentlyUsedByPrefix",
     "editor.detectIndentation": true,
@@ -75,7 +89,7 @@
     "editor.inlineCompletionsAccessibilityVerbose": true,
     "editor.insertSpaces": true,
     "editor.inlayHints.fontFamily": "Monospace Radon",
-    "editor.inlayHints.enabled": "offUnlessPressed",
+    "notebook.diff.experimental.toggleInline": true,
     // * ╭───────────────────────────────────────────────────────╮
     // * │                    Terminal                           │
     // * ╰───────────────────────────────────────────────────────╯
@@ -122,12 +136,14 @@
     // * ╰───────────────────────────────────────────────────────╯
     "window.title": "${dirty}${separator}${rootName}${separator}${profileName}${separator}",
     "window.restoreWindows": "one",
+    "window.commandCenter": false,
+    "window.menuBarVisibility": "compact",
     "window.customMenuBarAltFocus": false,
     "window.newWindowDimensions": "inherit",
     "window.openFilesInNewWindow": "off",
     "window.titleBarStyle": "custom",
-    "explorer.confirmPasteNative": false,
     "explorer.incrementalNaming": "smart",
+    "explorer.confirmPasteNative": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.copyRelativePathSeparator": "/",
     "explorer.compactFolders": true,
@@ -264,6 +280,9 @@
     // * ╭───────────────────────────────────────────────────────╮
     // * │                    extensions                         │
     // * ╰───────────────────────────────────────────────────────╯
+    "chat.commandCenter.enabled": false,
+    "chat.experimental.statusIndicator.enabled": true,
+    "chat.renderRelatedFiles": true,
     "findJump.matchBackground": "#B4BEFE",
     "findJump.letterForeground": "#1e1e2e",
     "findJump.letterBackground": "#A1DC9C",
@@ -460,7 +479,6 @@
     "markless.inlineImage.autoPreview": false,
     "markless.inlineImage.enabled": false,
     "markless.html": false,
-    "markless.table": false,
     "markdown.extension.theming.decoration.renderCodeSpan": true,
     "markdown.extension.theming.decoration.renderHardLineBreak": true,
     "markdown.extension.theming.decoration.renderStrikethrough": true,
@@ -562,10 +580,7 @@
         "markdownlint(MD033)"
     ],
     "files.autoSave": "afterDelay",
-    "terminal.integrated.fontSize": 12,
     "catppuccin-noctis-icons.hidesExplorerArrows": false,
     "vscode-office.editorTheme": "Auto",
-    "extensions.experimental.affinity": {
-        "asvetliakov.vscode-neovim": 1
-    }
+    "markless.table": false,
 }
