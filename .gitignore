@@ -5,3 +5,4 @@ history.txt
 **/state.json
 misc/yasb/*.py
 elevated-state.json
+lazy-lock.json
