@@ -49,6 +49,5 @@ return {
         which_key = true,
       },
     },
-  },
-  { "wakatime/vim-wakatime", lazy = false },
+  }
 }
