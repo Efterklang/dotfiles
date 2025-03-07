@@ -23,6 +23,29 @@ export def grank [] {
   git log --pretty=%h»¦«%aN»¦«%s»¦«%aD | lines | split column "»¦«" sha1 committer desc merged_at | histogram committer merger | sort-by merger | reverse
 }
 
+export def gtime [] {
+  # 获取所有提交记录并按作者分组
+  git log --pretty=format:"%aN»¦«%aI" | 
+    lines | 
+    split column "»¦«" author date | 
+    group-by author | 
+    items {|author, records| 
+      # 获取每个作者的时间记录并排序
+      let dates = $records | get date
+      let sorted = $dates | sort
+      # 提取首次和最后提交时间
+      {
+        author: $author
+        first_commit: ($sorted | first)
+        last_commit: ($sorted | last)
+        commits: ($records | length)
+        active_days: ((($sorted | last | into datetime) - ($sorted | first | into datetime)) / 1day | into int)
+      }
+    } |
+    # 按最后提交时间倒序排列
+    sort-by last_commit -r
+}
+
 # edit .gitignore
 export def gig [--empty-dir] {
     if $empty_dir {
