@@ -6,7 +6,7 @@ def --env pwd [] {
     $env.PWD | str replace --all '\' '/'
 }
 
-def --env yy [...args] {
+def --env y [...args] {
 	let tmp = (mktemp -t "yazi-cwd.XXXXXX")
 	yazi ...$args --cwd-file $tmp
 	let cwd = (open $tmp)
@@ -60,15 +60,16 @@ alias c2p = code2prompt
 alias ci = code
 alias cls = clear
 alias czg = bun run czg
-alias ff = fastfetch
+alias f = fastfetch
+alias f = nerdfetch
 alias g = lazygit
 alias gg = gitui
 alias hexo = bun run hexo
 alias hf = fuzzy-command-search
+alias l = clear
 alias lzd = lazydocker
 alias pyenv = overlay use .venv/bin/activate.nu
 alias scene = adb shell sh /storage/emulated/0/Android/data/com.omarea.vtools/up.sh
 alias shizuku = adb shell sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.sh 
-alias y = yazi
 alias zhelp = zoxide --help
 alias zo = zoxide
