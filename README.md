@@ -43,9 +43,9 @@
 | `settings.json`             | VSCode global settings                       |
 | `snippets`                  | Code snippets (markdown, python, java, etc.) |
 
-| Foam + Markdown Preview Enhanced + Markless |   Custom CSS for VSCode   |
-| :-----------------------------------------: | :-----------------------: |
-|          [](./assets/vsc_md.webp)           | [](./assets/vsc_css.webp) |
+| Foam + Markdown Preview Enhanced + Markless |       Custom CSS for VSCode        |
+| :-----------------------------------------: | :--------------------------------: |
+|       ![Markdown](assets/vsc_md.webp)       | ![Custom CSS](assets/vsc_css.webp) |
 
 > [!NOTE]
 >
