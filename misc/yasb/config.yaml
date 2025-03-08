@@ -31,14 +31,14 @@ bars:
       bottom: 0
       right: 0
     widgets:
-      left: ["home",  "language","volume","apps", "media"]
-      center: ["windows_workspaces",]
-      right: ["traffic", "memory", "weather", "clock", "power_menu"]
+      left: ["home", "windows_workspaces", "apps", "media"]
+      center: ["clock"]
+      right: ["traffic", "memory", "language", "volume", "power_menu"]
 widgets:
   home:
     type: "yasb.home.HomeWidget"
     options:
-      label: "<span> </span> GnixAij"
+      label: "<span>\ue62a</span>"
       menu_list:
         - { title: "User Home", path: "~" }
         - { title: "Download", path: "~\\Downloads" }
@@ -61,7 +61,7 @@ widgets:
   clock:
     type: "yasb.clock.ClockWidget"
     options:
-      label: "<span>\udb83\ude17</span>{%b.%d %H:%M}"
+      label: "{%b %d %H:%M %a}"
       timezones: []
   language:
     type: "yasb.language.LanguageWidget"
@@ -87,7 +87,7 @@ widgets:
     options:
       label_workspace_btn: "\udb81\udc3d"
       label_workspace_active_btn: "\udb81\udc3e"
-      container_padding: 
+      container_padding:
         top: 0
         left: 8
         bottom: 0
@@ -135,8 +135,11 @@ widgets:
         - { icon: "\udb84\udf55", launch: "widget" }
         - { icon: "\ueb03", launch: "cmd /c Taskmgr" }
         - { icon: "\uf489", launch: "wtp" }
-        - { icon: "\udb82\ude1e", launch: "code"}
-        - { icon: "\uf268", launch: "C:\\Program Files\\Google\\Chrome Beta\\Application\\chrome.exe" }
+        - { icon: "\udb82\ude1e", launch: "code" }
+        - {
+            icon: "\uf268",
+            launch: "C:\\Program Files\\Google\\Chrome Beta\\Application\\chrome.exe",
+          }
         - {
             icon: "\udb82\udd60",
             launch: "D:\\Application\\LuoxueMusic\\lxmusic.exe",

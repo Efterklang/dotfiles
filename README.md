@@ -15,7 +15,9 @@
       1. [Nushell](#nushell)
       2. [Oh My Posh](#oh-my-posh)
 
-![Desktop](assets/desktop.webp)
+| Desktop                         |
+| ------------------------------- |
+| ![Desktop](assets/desktop.webp) |
 
 ## 📦Packages
 
@@ -27,8 +29,9 @@
 
 ## 🧩Applications
 
-| ![VSCode](assets/vscode.webp) | ![browser](assets/browser.webp) |
+|            VSCode             |             Chrome              |
 | :---------------------------: | :-----------------------------: |
+| ![VSCode](assets/vscode.webp) | ![browser](assets/browser.webp) |
 
 ### VSCode
 
@@ -39,6 +42,18 @@
 | `markdown-preview-enhanced` | Enhanced markdown preview plugin settings    |
 | `settings.json`             | VSCode global settings                       |
 | `snippets`                  | Code snippets (markdown, python, java, etc.) |
+
+| Foam + Markdown Preview Enhanced + Markless |       Custom CSS for VSCode        |
+| :-----------------------------------------: | :--------------------------------: |
+|       ![Markdown](assets/vsc_md.webp)       | ![Custom CSS](assets/vsc_css.webp) |
+
+> [!NOTE]
+>
+> VSCode Custom CSS: check 👉 [this post](https://vluv.space/Tools/VSCode/custom_vscode_css/)
+>
+> VSCode keybindings: check 👉 [this post](https://vluv.space/Tools/VSCode/vscode_shortcut/)
+>
+> VSCode Extensions: check 👉 [this post](https://vluv.space/Tools/VSCode/recommended_extensions/)
 
 ### Chrome
 
@@ -59,9 +74,6 @@ Extension List
 - Monaspace
 
 ## 💻Terminal
-
-| ![Nvim](assets/nvim.webp) | ![Yazi](assets/yazi.webp) | ![Lazygit](assets/lazygit.webp) |
-| :-----------------------: | :-----------------------: | :-----------------------------: |
 
 Preferred terminals:
 
@@ -88,22 +100,42 @@ Preferred terminals:
 
 #### CLI
 
-| Tools                                            | Description                                                |
-| ------------------------------------------------ | ---------------------------------------------------------- |
-| [fd](https://github.com/sharkdp/fd)              | A simple, fast and user-friendly alternative to 'find'     |
-| [fzf](https://github.com/junegunn/fzf)           | 🌸 A command-line fuzzy finder                              |
-| [bat](https://github.com/sharkdp/bat)            | A `cat(1)` clone with wings.                               |
-| [zoxide](https://github.com/ajeetdsouza/zoxide)  | A smarter cd command. Supports all major shells.           |
-| [delta](https://dandavison.github.io/delta/)     | A syntax-highlighting pager for git, diff, and grep output |
-| [tailspin](https://github.com/bensadeh/tailspin) | 🌀 A log file highlighter                                   |
+| Tools                                                   | Description                                                                                  |
+| ------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| [fd](https://github.com/sharkdp/fd)                     | A simple, fast and user-friendly alternative to 'find'                                       |
+| [fzf](https://github.com/junegunn/fzf)                  | 🌸 A command-line fuzzy finder                                                                |
+| [bat](https://github.com/sharkdp/bat)                   | A `cat(1)` clone with wings.                                                                 |
+| [zoxide](https://github.com/ajeetdsouza/zoxide)         | A smarter cd command. Supports all major shells.                                             |
+| [delta](https://dandavison.github.io/delta/)            | A syntax-highlighting pager for git, diff, and grep output                                   |
+| [tailspin](https://github.com/bensadeh/tailspin)        | 🌀 A log file highlighter                                                                     |
+| [fastfetch](https://github.com/fastfetch-cli/fastfetch) | A maintained, feature-rich and performance oriented, neofetch like system information tool.  |
+| [ripgrep](https://github.com/BurntSushi/ripgrep)        | ripgrep recursively searches directories for a regex pattern while respecting your gitignore |
+
+|              FastFetch              |           Bat           |
+| :---------------------------------: | :---------------------: |
+| ![FastFetch](assets/fastfetch.webp) | ![Bat](assets/bat.webp) |
+
+|           Fzf           |            Zoxide             |
+| :---------------------: | :---------------------------: |
+| ![Fzf](assets/fzf.webp) | ![Zoxide](assets/zoxide.webp) |
 
 #### TUI
 
-| Tool                                                | Description                                                               |
-| --------------------------------------------------- | ------------------------------------------------------------------------- |
-| [helix](https://github.com/helix-editor/helix)      | A post-modern modal text editor.                                          |
-| [lazygit](https://github.com/jesseduffield/lazygit) | simple terminal UI for git commands                                       |
-| [yazi](https://github.com/sxyazi/yazi)              | 💥 Blazing fast terminal file manager written in Rust, based on async I/O. |
+| Tool                                                 | Description                                                               |
+| ---------------------------------------------------- | ------------------------------------------------------------------------- |
+| [helix](https://github.com/helix-editor/helix)       | A post-modern modal text editor.                                          |
+| [lazygit](https://github.com/jesseduffield/lazygit)  | simple terminal UI for git commands                                       |
+| [yazi](https://github.com/sxyazi/yazi)               | 💥 Blazing fast terminal file manager written in Rust, based on async I/O. |
+| [lazyvim](https://github.com/LazyVim/LazyVim)        | Neovim config for the lazy                                                |
+| [btop4win](https://github.com/aristocratos/btop4win) | btop++ for windows                                                        |
+
+|           LazyVim            |             LazyGit             |
+| :--------------------------: | :-----------------------------: |
+| ![LazyVim](assets/nvim.webp) | ![LazyGit](assets/lazygit.webp) |
+
+|           Yazi            |         btop4win          |
+| :-----------------------: | :-----------------------: |
+| ![Yazi](assets/yazi.webp) | ![btop](assets/btop.webp) |
 
 ## 🐚Shell
 
