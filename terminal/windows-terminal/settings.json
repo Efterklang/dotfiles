@@ -12,6 +12,13 @@
             "id": "User.copy.644BA8F2"
         },
         {
+            "command": 
+            {
+                "action": "newTab"
+            },
+            "id": "User.newTab.5DEADB41"
+        },
+        {
             "command": "paste",
             "id": "User.paste"
         },
@@ -31,6 +38,14 @@
             "id": "User.commandPalette.D3F0B923"
         },
         {
+            "command": "find",
+            "id": "User.find"
+        },
+        {
+            "command": "toggleFocusMode",
+            "id": "User.toggleFocusMode"
+        },
+        {
             "command": 
             {
                 "action": "splitPane",
@@ -40,12 +55,11 @@
             "id": "User.splitPane.A6751878"
         },
         {
-            "command": "toggleFocusMode",
-            "id": "User.toggleFocusMode"
-        },
-        {
-            "command": "find",
-            "id": "User.find"
+            "command": 
+            {
+                "action": "setTabColor"
+            },
+            "id": "User.setTabColor.0"
         },
         {
             "command": 
@@ -53,13 +67,6 @@
                 "action": "nextTab"
             },
             "id": "User.nextTab.0"
-        },
-        {
-            "command": 
-            {
-                "action": "setTabColor"
-            },
-            "id": "User.setTabColor.0"
         },
         {
             "command": 
@@ -73,15 +80,15 @@
             "id": "User.toggleShaderEffects"
         },
         {
-            "command": "duplicateTab",
-            "id": "User.duplicateTab"
-        },
-        {
             "command": 
             {
                 "action": "prevTab"
             },
             "id": "User.prevTab.0"
+        },
+        {
+            "command": "duplicateTab",
+            "id": "User.duplicateTab"
         },
         {
             "command": "identifyWindow",
@@ -94,6 +101,10 @@
         {
             "command": "quickFix",
             "id": "User.quickFix"
+        },
+        {
+            "command": "markMode",
+            "id": "User.markMode"
         }
     ],
     "alwaysShowNotificationIcon": false,
@@ -112,28 +123,32 @@
     "keybindings": 
     [
         {
-            "id": "User.find",
-            "keys": "ctrl+f"
+            "id": "User.prevTab.0",
+            "keys": "alt+a"
         },
         {
             "id": "User.paste",
             "keys": "ctrl+v"
         },
         {
-            "id": "User.prevTab.0",
-            "keys": "alt+a"
+            "id": "User.find",
+            "keys": "ctrl+f"
         },
         {
-            "id": "User.copy.644BA8F2",
-            "keys": "ctrl+c"
+            "id": null,
+            "keys": "ctrl+shift+1"
+        },
+        {
+            "id": "Terminal.DuplicatePaneRight",
+            "keys": "ctrl+/"
         },
         {
             "id": "User.closePane",
             "keys": "alt+w"
         },
         {
-            "id": "Terminal.DuplicatePaneRight",
-            "keys": "ctrl+/"
+            "id": "User.copy.644BA8F2",
+            "keys": "ctrl+c"
         },
         {
             "id": "User.nextTab.0",
@@ -144,6 +159,10 @@
             "keys": "ctrl+w"
         },
         {
+            "id": "User.markMode",
+            "keys": "ctrl+m"
+        },
+        {
             "id": "Terminal.DuplicatePaneDown",
             "keys": "ctrl+\\"
         },
@@ -152,7 +171,7 @@
             "keys": "ctrl+period"
         },
         {
-            "id": "Terminal.ToggleCommandPalette",
+            "id": "User.nextTab.0",
             "keys": "ctrl+p"
         },
         {
@@ -164,12 +183,24 @@
             "keys": "f5"
         },
         {
-            "id": "Terminal.OpenNewTab",
+            "id": "User.newTab.5DEADB41",
             "keys": "ctrl+n"
         },
         {
             "id": null,
             "keys": "alt+enter"
+        },
+        {
+            "id": "Terminal.OpenNewTabProfile0",
+            "keys": "alt+1"
+        },
+        {
+            "id": "Terminal.OpenNewTabProfile1",
+            "keys": "alt+2"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+2"
         }
     ],
     "launchMode": "focus",
@@ -186,7 +217,7 @@
             "adjustIndistinguishableColors": "never",
             "backgroundImage": "C:\\Users\\24138\\Pictures\\WallPaper\\gallery.jpg",
             "backgroundImageOpacity": 0,
-            "colorScheme": "Tokyo Night",
+            "colorScheme": "Catppuccin Mocha",
             "cursorShape": "filledBox",
             "experimental.rainbowSuggestions": true,
             "experimental.repositionCursorWithMouse": true,
@@ -235,6 +266,11 @@
                 "tabTitle": "Nu"
             },
             {
+                "commandline": "ssh momenta",
+                "guid": "{3e8ebcf6-95fb-5992-a4ef-d5a43872771c}",
+                "name": "root@ubuntu"
+            },
+            {
                 "guid": "{9cf3bcc2-c6d8-5541-9b43-56d81641b6bd}",
                 "hidden": false,
                 "name": "Developer Command Prompt for VS 2022",
@@ -245,16 +281,6 @@
                 "hidden": false,
                 "name": "Developer PowerShell for VS 2022",
                 "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "hidden": false,
-                "name": "Windows PowerShell"
-            },
-            {
-                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-                "hidden": false,
-                "name": "Command Prompt"
             }
         ]
     },
