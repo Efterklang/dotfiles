@@ -1,0 +1,3 @@
+import os
+
+os.system(f'setx YASB_WEATHER_API_KEY f74f07e6635041ed80982100250402')

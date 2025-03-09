@@ -51,9 +51,9 @@
     "editor.definitionLinkOpensInPeek": true,
     "editor.experimentalEditContextEnabled": true,
     "editor.foldingImportsByDefault": true,
-    "editor.gotoLocation.alternativeReferenceCommand": "editor.action.goToReferences",
-    "editor.gotoLocation.alternativeDefinitionCommand": "editor.action.peekTypeDefinition",
-    "editor.gotoLocation.alternativeImplementationCommand": "editor.action.goToImplementation",
+    // "editor.gotoLocation.alternativeReferenceCommand": "editor.action.goToReferences",
+    // "editor.gotoLocation.alternativeDefinitionCommand": "editor.action.peekTypeDefinition",
+    // "editor.gotoLocation.alternativeImplementationCommand": "editor.action.goToImplementation",
     "editor.linkedEditing": true,
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.suggestSelection": "recentlyUsedByPrefix",
@@ -390,7 +390,7 @@
     // * │                         LSP                           │
     // * ╰───────────────────────────────────────────────────────╯
     "[yaml]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "redhat.vscode-yaml"
     },
     "[java]": {
         "editor.defaultFormatter": "redhat.java",

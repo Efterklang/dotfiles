@@ -8,12 +8,12 @@
     ~/.config/fastfetch: tui_cli/fastfetch
     ~/.config/yazi: tui_cli/yazi
     ~/.config/procs: tui_cli/procs
-    ~/.config/scoop: misc/scoop
+    ~/.config/scoop: packages/scoop
     ~/.config/wezterm: terminal/wezterm
-    ~/.config/yasb: misc/yasb
+    ~/.config/yasb: application/yasb
     ~/.config/ohmyposh: shells/ohmyposh
-    ~/.config/vscode/custom.css: vscode/custom.css
-    ~/.config/vscode/markdown-preview-enhanced: vscode/markdown-preview-enhanced
+    ~/.config/vscode/custom.css: application/vscode/custom.css
+    ~/.config/vscode/markdown-preview-enhanced: application/vscode/markdown-preview-enhanced
     ~/.gitconfig: misc/.gitconfig
     ~/.wslconfig: misc/.wslconfig
     ~/AppData/Local/lazygit: tui_cli/lazygit
@@ -26,8 +26,8 @@
       exclude: shells/nushell/plugins/omp.nu
     ~/Documents/PowerShell: shells/pwsh7
     D://envir_vars/scoop/persist/btop: tui_cli/btop
-    D://envir_vars/scoop/persist/vscode/data/user-data/User/keybindings.json: vscode/keybindings.json
-    D://envir_vars/scoop/persist/vscode/data/user-data/User/settings.json: vscode/settings.json
-    D://envir_vars/scoop/persist/vscode/data/user-data/User/snippets: vscode/snippets
-    D://envir_vars/scoop/apps/windows-terminal-preview/current/settings: terminal/windows-terminal
+    D://envir_vars/scoop/persist/vscode/data/user-data/User/keybindings.json: application/vscode/keybindings.json
+    D://envir_vars/scoop/persist/vscode/data/user-data/User/settings.json: application/vscode/settings.json
+    D://envir_vars/scoop/persist/vscode/data/user-data/User/snippets: application/vscode/snippets
+    D://envir_vars/scoop/apps/windows-terminal-preview/current/settings/settings.json: terminal/windows-terminal/settings.json
 - shell: []

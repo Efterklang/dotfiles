@@ -16,12 +16,12 @@
             "id": "User.paste"
         },
         {
-            "command": "closePane",
-            "id": "User.closePane"
-        },
-        {
             "command": "openNewTabDropdown",
             "id": "User.openNewTabDropdown"
+        },
+        {
+            "command": "closePane",
+            "id": "User.closePane"
         },
         {
             "command": 
@@ -31,14 +31,6 @@
             "id": "User.commandPalette.D3F0B923"
         },
         {
-            "command": "find",
-            "id": "User.find"
-        },
-        {
-            "command": "toggleFocusMode",
-            "id": "User.toggleFocusMode"
-        },
-        {
             "command": 
             {
                 "action": "splitPane",
@@ -46,6 +38,14 @@
                 "splitMode": "duplicate"
             },
             "id": "User.splitPane.A6751878"
+        },
+        {
+            "command": "toggleFocusMode",
+            "id": "User.toggleFocusMode"
+        },
+        {
+            "command": "find",
+            "id": "User.find"
         },
         {
             "command": 
@@ -112,6 +112,10 @@
     "keybindings": 
     [
         {
+            "id": "User.find",
+            "keys": "ctrl+f"
+        },
+        {
             "id": "User.paste",
             "keys": "ctrl+v"
         },
@@ -120,20 +124,16 @@
             "keys": "alt+a"
         },
         {
-            "id": "User.find",
-            "keys": "ctrl+f"
-        },
-        {
-            "id": "Terminal.DuplicatePaneRight",
-            "keys": "ctrl+/"
+            "id": "User.copy.644BA8F2",
+            "keys": "ctrl+c"
         },
         {
             "id": "User.closePane",
             "keys": "alt+w"
         },
         {
-            "id": "User.copy.644BA8F2",
-            "keys": "ctrl+c"
+            "id": "Terminal.DuplicatePaneRight",
+            "keys": "ctrl+/"
         },
         {
             "id": "User.nextTab.0",
@@ -152,12 +152,12 @@
             "keys": "ctrl+period"
         },
         {
-            "id": "User.toggleFocusMode",
-            "keys": "alt+r"
-        },
-        {
             "id": "Terminal.ToggleCommandPalette",
             "keys": "ctrl+p"
+        },
+        {
+            "id": "User.toggleFocusMode",
+            "keys": "alt+r"
         },
         {
             "id": "User.breakIntoDebugger",
@@ -245,6 +245,16 @@
                 "hidden": false,
                 "name": "Developer PowerShell for VS 2022",
                 "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell"
+            },
+            {
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "Command Prompt"
             }
         ]
     },

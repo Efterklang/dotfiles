@@ -61,7 +61,6 @@ alias ci = code
 alias cls = clear
 alias czg = bun run czg
 alias f = fastfetch
-alias f = nerdfetch
 alias g = lazygit
 alias gg = gitui
 alias hexo = bun run hexo
