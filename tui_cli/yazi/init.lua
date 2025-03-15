@@ -1,7 +1,4 @@
-local catppuccin_theme = require("yatline-catppuccin"):setup("mocha") -- or "latte" | "frappe" | "macchiato"
-
 require("yatline"):setup({
-	theme = catppuccin_theme,
 	section_separator = { open = "", close = "" },
 	part_separator = { open = "", close = "" },
 	inverse_separator = { open = "", close = "" },
