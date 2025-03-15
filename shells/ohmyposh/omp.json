@@ -83,9 +83,9 @@
         {
           "style": "powerline",
           "template": " <b>\ue66d JDK</b>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
-          "foreground": "#c31414",
+          "foreground": "#000000",
           "powerline_symbol": "\ue0b0",
-          "background": "#f7768e",
+          "background": "#F38BA8",
           "type": "java"
         },
         {
