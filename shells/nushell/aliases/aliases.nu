@@ -56,17 +56,27 @@ def trim_history [] {
 	open $history | lines | uniq | save -f $history
 }
 
+alias a = gh copilot suggest
+alias b = btop
+alias c = code
+alias d = lazydocker
+alias e = explorer .
+alias f = commandline edit --insert (fzf --layout=reverse --preview 'bat {}')
+alias g = lazygit
+alias h = fuzzy-command-search
+alias i = fastfetch
+alias l = clear
+alias r = commandline edit --insert (bat --color never --style plain $nu.history-path | fzf --height 70% --layout reverse --tac | str trim)
+alias s = D:\envir_vars\scoop\apps\flow-launcher\current\Flow.Launcher.exe
+alias v = vim
+
+
 alias c2p = code2prompt
 alias ci = code
-alias cls = clear
 alias czg = bun run czg
-alias f = fastfetch
-alias g = lazygit
 alias gg = gitui
 alias hexo = bun run hexo
 alias hf = fuzzy-command-search
-alias l = clear
-alias lzd = lazydocker
 alias pyenv = overlay use .venv/bin/activate.nu
 alias scene = adb shell sh /storage/emulated/0/Android/data/com.omarea.vtools/up.sh
 alias shizuku = adb shell sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.sh 

@@ -147,28 +147,32 @@
             "keys": "alt+a"
         },
         {
-            "id": null,
-            "keys": "ctrl+shift+d"
-        },
-        {
-            "id": "User.copy.644BA8F2",
-            "keys": "ctrl+c"
-        },
-        {
             "id": "User.closePane",
             "keys": "alt+w"
         },
         {
-            "id": "User.tabSearch",
-            "keys": "alt+p"
+            "id": null,
+            "keys": "ctrl+shift+1"
         },
         {
             "id": "Terminal.DuplicatePaneRight",
             "keys": "ctrl+/"
         },
         {
+            "id": "User.tabSearch",
+            "keys": "alt+p"
+        },
+        {
             "id": null,
-            "keys": "ctrl+shift+1"
+            "keys": "ctrl+shift+tab"
+        },
+        {
+            "id": "User.copy.644BA8F2",
+            "keys": "ctrl+c"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+d"
         },
         {
             "id": "User.closeTab.0",
@@ -229,6 +233,10 @@
         {
             "id": null,
             "keys": "ctrl+shift+3"
+        },
+        {
+            "id": "User.nextTab.0",
+            "keys": "alt+d"
         }
     ],
     "launchMode": "focus",
@@ -300,15 +308,22 @@
             },
             {
                 "guid": "{9cf3bcc2-c6d8-5541-9b43-56d81641b6bd}",
-                "hidden": false,
+                "hidden": true,
                 "name": "Developer Command Prompt for VS 2022",
                 "source": "Windows.Terminal.VisualStudio"
             },
             {
                 "guid": "{90ac2d28-0ef7-59c3-b4b1-8251be5e2697}",
-                "hidden": false,
+                "hidden": true,
                 "name": "Developer PowerShell for VS 2022",
                 "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "commandline": "C:\\WINDOWS\\system32\\wsl.exe -d Arch",
+                "guid": "{e84e7bca-f30f-4864-8a59-fb9b835be034}",
+                "hidden": false,
+                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
+                "name": "Arch"
             }
         ]
     },

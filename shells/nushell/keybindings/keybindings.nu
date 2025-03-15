@@ -35,7 +35,7 @@ $env.config.keybindings = [
         mode: [emacs, vi_normal, vi_insert]
         event: { 
             send: executehostcommand
-            cmd: "commandline edit --insert (cat $nu.history-path | fzf --height 70% --layout reverse --style full --tac | str trim)"
+            cmd: "commandline edit --insert (bat --color never --style plain $nu.history-path | fzf --height 70% --layout reverse --tac | str trim)"
         }
     }
     {
@@ -45,7 +45,7 @@ $env.config.keybindings = [
         mode: emacs
         event: {
             send: executehostcommand
-            cmd: "commandline edit --insert (fzf --layout=reverse --preview 'bat --color=always --style=numbers --line-range=:500 {}')"
+            cmd: "commandline edit --insert (fzf --layout=reverse --preview 'bat {}')"
         }    
     }
     {

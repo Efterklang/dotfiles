@@ -18,7 +18,6 @@
     ~/.wslconfig: misc/.wslconfig
     ~/AppData/Local/lazygit: tui_cli/lazygit
     ~/AppData/Local/nvim: tui_cli/nvim
-    ~/AppData/Roaming/bat: tui_cli/bat
     ~/AppData/Roaming/helix: tui_cli/helix
     ~/AppData/Roaming/gitui: tui_cli/gitui
     ~/AppData/Roaming/nushell:
@@ -29,5 +28,6 @@
     D://envir_vars/scoop/persist/vscode/data/user-data/User/keybindings.json: application/vscode/keybindings.json
     D://envir_vars/scoop/persist/vscode/data/user-data/User/settings.json: application/vscode/settings.json
     D://envir_vars/scoop/persist/vscode/data/user-data/User/snippets: application/vscode/snippets
+    D://envir_vars/scoop/apps/bat/current/config: tui_cli/bat/config
     D://envir_vars/scoop/apps/windows-terminal-preview/current/settings/settings.json: terminal/windows-terminal/settings.json
 - shell: []
