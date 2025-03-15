@@ -134,10 +134,9 @@
     // * ╭───────────────────────────────────────────────────────╮
     // * │                    VSCode MISC                        │
     // * ╰───────────────────────────────────────────────────────╯
-    "window.title": "${dirty}${separator}${rootName}${separator}${profileName}${separator}",
-    "window.restoreWindows": "one",
+    "window.title": " ",
     "window.commandCenter": false,
-    "window.menuBarVisibility": "compact",
+    "window.restoreWindows": "one",
     "window.customMenuBarAltFocus": false,
     "window.newWindowDimensions": "inherit",
     "window.openFilesInNewWindow": "off",
@@ -150,12 +149,23 @@
     "explorer.decorations.badges": true,
     "explorer.enableDragAndDrop": true,
     "explorer.confirmDelete": false,
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "*.ts": "${capture}.js",
+        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+        "*.jsx": "${capture}.js",
+        "*.tsx": "${capture}.ts",
+        "_config.yml": "_config*.yml, gulpfile.js",
+        "tsconfig.json": "tsconfig.*.json",
+        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock"
+    },
     "files.eol": "\n",
     "files.exclude": {
-        "node_modules": true,
+        "**/node_modules": true,
         "**/.idea*": true,
         "**/.venv": true,
-        "**/__pycache__": true
+        "**/__pycache__": true,
+        "bun.lockb": true
     },
     "files.hotExit": "onExitAndWindowClose",
     "files.trimFinalNewlines": true,
@@ -201,7 +211,7 @@
     "catppuccin.italicComments": true,
     "catppuccin.accentColor": "lavender",
     "catppuccin.bracketMode": "neovim",
-    "catppuccin.workbenchMode": "flat",
+    "catppuccin.workbenchMode": "minimal",
     "catppuccin.boldKeywords": true,
     "catppuccin.italicKeywords": true,
     "animations.Enabled": true,
@@ -221,7 +231,7 @@
     },
     "vscode_custom_css.imports": [
         "file:///${userHome}/.config/vscode/custom.css",
-        "file:///d:/envir_vars/scoop/apps/vscode/1.97.2/data/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
+        "file:///d:/envir_vars/scoop/apps/vscode/1.98.1/data/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
     ],
     "background.enabled": false,
     "background.fullscreen": {
@@ -463,7 +473,6 @@
     "python.languageServer": "Pylance",
     "python.terminal.activateEnvInCurrentTerminal": true,
     "python.terminal.shellIntegration.enabled": true,
-    "java.configuration.maven.userSettings": "D:\\envir_vars\\scoop\\apps\\maven\\current\\conf\\settings.xml",
     "java.debug.settings.hotCodeReplace": "auto",
     "java.debug.settings.showQualifiedNames": true,
     "java.debug.settings.showStaticVariables": true,
@@ -476,6 +485,7 @@
     // * ╰───────────────────────────────────────────────────────╯
     "markless.allowDangerousHtml": true,
     "markless.hoverImage": false,
+    "markless.table": false,
     "markless.inlineImage.autoPreview": false,
     "markless.inlineImage.enabled": false,
     "markless.html": false,
@@ -579,8 +589,7 @@
         "Pylance(reportOptionalMemberAccess)",
         "markdownlint(MD033)"
     ],
-    "files.autoSave": "afterDelay",
     "catppuccin-noctis-icons.hidesExplorerArrows": false,
     "vscode-office.editorTheme": "Auto",
-    "markless.table": false,
+    "files.autoSave": "afterDelay",
 }

@@ -152,7 +152,8 @@
     },
     {
         "key": "alt+right",
-        "command": "cursorLineEnd"
+        "command": "cursorLineEnd",
+        "when": "editorFocus"
     },
     {
         "key": "alt+left",
