@@ -24,7 +24,7 @@
       path: shells/nushell
       exclude: shells/nushell/plugins/omp.nu
     ~/Documents/PowerShell: shells/pwsh7
-    D://envir_vars/scoop/persist/btop: tui_cli/btop
+    D://envir_vars/scoop/persist/btop: tui_cli/btop4win
     D://envir_vars/scoop/persist/vscode/data/user-data/User/keybindings.json: application/vscode/keybindings.json
     D://envir_vars/scoop/persist/vscode/data/user-data/User/settings.json: application/vscode/settings.json
     D://envir_vars/scoop/persist/vscode/data/user-data/User/snippets: application/vscode/snippets
