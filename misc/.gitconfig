@@ -129,3 +129,5 @@ rebase = true
 
 [gc]
 auto = 0
+[push]
+	autoSetupRemote = true
