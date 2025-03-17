@@ -251,7 +251,7 @@
 
 .windows-desktops .ws-btn.active {
   color: rgba(149, 177, 255, 0);
-  background-color: #c0aae8;
+  background-color: var(--mauve);
   width: 20px;
   height: 10px;
   border-radius: 5px;

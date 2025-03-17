@@ -47,6 +47,12 @@ widgets:
       system_menu: true
       power_menu: false
       blur: true
+  glazewm_workspaces:
+    type: "glazewm.workspaces.GlazewmWorkspacesWidget"
+    options:
+      offline_label: "GlazeWM Offline"
+      hide_empty_workspaces: true
+      hide_if_offline: false
   active_window:
     type: "yasb.active_window.ActiveWindowWidget"
     options:
