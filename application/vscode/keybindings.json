@@ -30,29 +30,14 @@
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     },
     {
-        "key": "ctrl+x",
-        "command": "-filesExplorer.cut",
-        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-    },
-    {
         "key": "y",
         "command": "filesExplorer.copy",
-        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !inputFocus"
-    },
-    {
-        "key": "ctrl+c",
-        "command": "-filesExplorer.copy",
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !inputFocus"
     },
     {
         "key": "d",
         "command": "deleteFile",
         "when": "filesExplorerFocus && !inputFocus"
-    },
-    {
-        "key": "delete",
-        "command": "-deleteFile",
-        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceMoveableToTrash && !explorerResourceReadonly && !inputFocus"
     },
     {
         "key": "delete",
@@ -67,11 +52,6 @@
     {
         "key": "r",
         "command": "renameFile",
-        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-    },
-    {
-        "key": "f2",
-        "command": "-renameFile",
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     },
     {
@@ -149,16 +129,6 @@
     {
         "key": "ctrl+e",
         "command": "-workbench.action.quickOpen"
-    },
-    {
-        "key": "alt+right",
-        "command": "cursorLineEnd",
-        "when": "editorFocus"
-    },
-    {
-        "key": "alt+left",
-        "command": "cursorLineStart",
-        "when": "editorFocus"
     },
     {
         "key": "q",
@@ -462,11 +432,6 @@
         "when": "editorTextFocus && markdown.extension.editor.cursor.inList && !editorHasMultipleSelections && !editorReadonly && !editorTabMovesFocus && !hasOtherSuggestions && !hasSnippetCompletions && !inSnippetMode && !inlineSuggestionVisible && !markdown.extension.editor.cursor.inFencedCodeBlock && !markdown.extension.editor.cursor.inMathEnv && !suggestWidgetVisible && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
     },
     {
-        "key": "alt+left",
-        "command": "-gitlens.key.alt+left",
-        "when": "gitlens:key:alt+left"
-    },
-    {
         "key": "shift+alt+u",
         "command": "markdown-image.paste",
         "when": "editorLangId == 'markdown' || editorLangId == 'mdx' || resourceExtname == '.ipynb'"
@@ -632,5 +597,14 @@
         "key": "alt+a",
         "command": "workbench.action.previousPanelView",
         "when": "panelFocus"
-    }
+    },
+    {
+        "key": "alt+right",
+        "command": "cursorLineEnd"
+    },
+    {
+        "key": "alt+left",
+        "command": "cursorLineStart",
+        "when": "editorFocus"
+    },
 ]
