@@ -1,5 +1,74 @@
 // Place your key bindings in this file to override the defaults
 [
+    // * ╭───────────────────────────────────────────────────────╮
+    // * │               List Navigation                         │
+    // * ╰───────────────────────────────────────────────────────╯
+    {
+        "key": "k",
+        "command": "list.focusUp",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "j",
+        "command": "list.focusDown",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "c",
+        "command": "copyFilePath",
+        "when": "!editorFocus && !inputFocus"
+    },
+    {
+        "key": "v",
+        "command": "filesExplorer.paste",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "shift+c",
+        "command": "copyRelativeFilePath",
+        "when": "!editorFocus && !inputFocus"
+    },
+    {
+        "key": "g",
+        "command": "list.focusFirst",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "q",
+        "command": "workbench.action.focusFirstEditorGroup",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "x",
+        "command": "filesExplorer.cut",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "y",
+        "command": "filesExplorer.copy",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !inputFocus"
+    },
+    {
+        "key": "p",
+        "command": "filesExplorer.paste",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "d",
+        "command": "deleteFile",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "r",
+        "command": "renameFile",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    // todo
+    {
+        "key": "shift+g",
+        "command": "list.focusLast",
+        "when": "listFocus && !inputFocus"
+    },
     {
         "key": "alt+o",
         "command": "projectManager.listProjects"
@@ -23,36 +92,6 @@
     {
         "key": "ctrl+n",
         "command": "-workbench.action.files.newUntitledFile"
-    },
-    {
-        "key": "x",
-        "command": "filesExplorer.cut",
-        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-    },
-    {
-        "key": "y",
-        "command": "filesExplorer.copy",
-        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !inputFocus"
-    },
-    {
-        "key": "d",
-        "command": "deleteFile",
-        "when": "filesExplorerFocus && !inputFocus"
-    },
-    {
-        "key": "delete",
-        "command": "deleteFile",
-        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus"
-    },
-    {
-        "key": "shift+delete",
-        "command": "-deleteFile",
-        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus"
-    },
-    {
-        "key": "r",
-        "command": "renameFile",
-        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     },
     {
         "key": "shift+enter",
@@ -129,11 +168,6 @@
     {
         "key": "ctrl+e",
         "command": "-workbench.action.quickOpen"
-    },
-    {
-        "key": "q",
-        "command": "workbench.action.focusFirstEditorGroup",
-        "when": "listFocus && !inputFocus"
     },
     {
         "key": "ctrl+left",
@@ -322,11 +356,6 @@
         "when": "editorFocus"
     },
     {
-        "key": "p",
-        "command": "filesExplorer.paste",
-        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus"
-    },
-    {
         "key": "ctrl+shift+k",
         "command": "markdown.extension.editing.toggleCodeBlock"
     },
@@ -363,11 +392,6 @@
     {
         "key": "ctrl+m",
         "command": "-editor.action.toggleTabFocusMode"
-    },
-    {
-        "key": "v",
-        "command": "filesExplorer.paste",
-        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus"
     },
     {
         "key": "tab",
@@ -450,16 +474,6 @@
         "key": "ctrl+v",
         "command": "-markdown.extension.editing.paste",
         "when": "editorHasSelection && editorTextFocus && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
-    },
-    {
-        "key": "ctrl+backspace",
-        "command": "cjkWordHandler.deleteWordStartLeft",
-        "when": "editorTextFocus && !editorReadonly && editorLangId==\"markdown\""
-    },
-    {
-        "key": "ctrl+backspace",
-        "command": "-cjkWordHandler.deleteWordStartLeft",
-        "when": "editorTextFocus && !editorReadonly"
     },
     {
         "key": "ctrl+v",
@@ -559,36 +573,6 @@
         "when": "workbench.panel.repl.view.active"
     },
     {
-        "key": "k",
-        "command": "list.focusUp",
-        "when": "listFocus && !inputFocus"
-    },
-    {
-        "key": "j",
-        "command": "list.focusDown",
-        "when": "listFocus && !inputFocus"
-    },
-    {
-        "key": "c",
-        "command": "copyFilePath",
-        "when": "!editorFocus && !inputFocus"
-    },
-    {
-        "key": "shift+c",
-        "command": "copyRelativeFilePath",
-        "when": "!editorFocus && !inputFocus"
-    },
-    {
-        "key": "g",
-        "command": "list.focusFirst",
-        "when": "listFocus && !inputFocus"
-    },
-    {
-        "key": "shift+g",
-        "command": "list.focusLast",
-        "when": "listFocus && !inputFocus"
-    },
-    {
         "key": "alt+d",
         "command": "workbench.action.nextPanelView",
         "when": "panelFocus"
@@ -600,11 +584,11 @@
     },
     {
         "key": "alt+right",
-        "command": "cursorLineEnd"
+        "command": "cursorEnd"
     },
     {
         "key": "alt+left",
-        "command": "cursorLineStart",
+        "command": "cursorHome",
         "when": "editorFocus"
     },
 ]
