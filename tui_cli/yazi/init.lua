@@ -1,4 +1,7 @@
+local catppuccin_theme = require("yatline-catppuccin"):setup("mocha")
+
 require("yatline"):setup({
+	theme = catppuccin_theme,
 	section_separator = { open = "", close = "" },
 	part_separator = { open = "", close = "" },
 	inverse_separator = { open = "", close = "" },
