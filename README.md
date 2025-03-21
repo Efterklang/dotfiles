@@ -127,6 +127,7 @@ Preferred terminals:
 | [lazygit](https://github.com/jesseduffield/lazygit)  | simple terminal UI for git commands                                       |
 | [yazi](https://github.com/sxyazi/yazi)               | 💥 Blazing fast terminal file manager written in Rust, based on async I/O. |
 | [lazyvim](https://github.com/LazyVim/LazyVim)        | Neovim config for the lazy                                                |
+| [gping](https://github.com/orf/gping) | Ping, but with a graph |
 | [btop4win](https://github.com/aristocratos/btop4win) | btop++ for windows                                                        |
 
 |           LazyVim            |             LazyGit             |
