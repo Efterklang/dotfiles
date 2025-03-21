@@ -293,10 +293,10 @@
     "chat.commandCenter.enabled": false,
     "chat.experimental.statusIndicator.enabled": true,
     "chat.renderRelatedFiles": true,
-    "findJump.matchBackground": "#B4BEFE",
-    "findJump.letterForeground": "#1e1e2e",
-    "findJump.letterBackground": "#A1DC9C",
-    "findJump.matchForeground": "#1e1e2e",
+    "findJump.matchBackground": "#1e1e2e",
+    "findJump.matchForeground": "#fab387",
+    "findJump.letterBackground": "#1e1e2e",
+    "findJump.letterForeground": "#a1dc9c",
     "findJump.dimWhenActive": true,
     "better-comments.tags": [
         {
