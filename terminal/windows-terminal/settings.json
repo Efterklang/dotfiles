@@ -251,8 +251,7 @@
         "defaults": 
         {
             "adjustIndistinguishableColors": "never",
-            "backgroundImage": "C:\\Users\\24138\\Pictures\\WallPaper\\gallery.jpg",
-            "backgroundImageOpacity": 0,
+            "backgroundImageOpacity": 0.8,
             "colorScheme": "Catppuccin Mocha",
             "cursorShape": "filledBox",
             "experimental.rainbowSuggestions": true,
@@ -276,25 +275,19 @@
                 "size": 10,
                 "weight": "semi-bold"
             },
-            "opacity": 100,
+            "opacity": 80,
             "pathTranslationStyle": "wsl",
             "rightClickContextMenu": true,
             "scrollbarState": "hidden",
             "showMarksOnScrollbar": true,
             "startingDirectory": "%USERPROFILE%",
-            "useAcrylic": false
+            "useAcrylic": true
         },
         "list": 
         [
             {
                 "colorScheme": "Catppuccin Mocha",
                 "commandline": "D:\\envir_vars\\scoop\\apps\\nu\\current\\nu.exe",
-                "font": 
-                {
-                    "face": "Maple Mono NF CN",
-                    "size": 10,
-                    "weight": "medium"
-                },
                 "guid": "{7800db3a-723c-4039-8829-89875f7cf460}",
                 "hidden": false,
                 "icon": "https://th.bing.com/th/id/R.971b7806e2ca4e6ea4227970f0d75b8e?rik=8Mg%2bo6UabZDulw&riu=http%3a%2f%2fjdev.tw%2fblog%2fwp-content%2fuploads%2f2021%2f06%2fnushell-logo.png&ehk=FD4SnVJP8K%2fYBeaxMoG8WPYLL7Oqe6UYp%2fRqG3AP9FY%3d&risl=&pid=ImgRaw&r=0",
