@@ -64,16 +64,24 @@ alias e = explorer .
 alias f = commandline edit --insert (fzf --layout=reverse --preview 'bat {}')
 alias g = lazygit
 alias h = fuzzy-command-search
-alias i = fastfetch
+# i j k
 alias l = clear
+# m n o
+alias p = gping
+# q
 alias r = commandline edit --insert (bat --color never --style plain $nu.history-path | fzf --height 70% --layout reverse --tac | str trim)
-alias s = D:\envir_vars\scoop\apps\flow-launcher\current\Flow.Launcher.exe
+alias s = scoop
+alias t = tokei
+alias u = uv
 alias v = vim
-
+alias w = wsl
+alias y = yazi
+alias z = z
 
 alias c2p = code2prompt
 alias ci = code
 alias czg = bun run czg
+alias ff = fastfetch
 alias gg = gitui
 alias hexo = bun run hexo
 alias hf = fuzzy-command-search
