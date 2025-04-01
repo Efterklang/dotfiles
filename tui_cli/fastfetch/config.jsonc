@@ -1,7 +1,7 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
-    "source": "C:/Users/24138/.config/fastfetch/windows.txt",
+    "source": "./preset/windows.txt",
     "padding": {
       "right": 8,
       "left": 2,
@@ -9,7 +9,7 @@
     }
   },
   // "logo": {
-  //   "source": "C:/Users/24138/.config/fastfetch/nyarch.png",
+  //   "source": "./preset/nyarch.png",
   //   "type": "iterm",
   //   "height": 25,
   //   "width": 40
@@ -24,7 +24,7 @@
     "break",
     {
       "type": "title",
-      "format": "                                gjx{7}{8}"
+      "format": "                               GnixAij{7}{8}"
     },
     "break",
     {
@@ -77,11 +77,6 @@
       "key": "│ ├ Terminal    ",
       "keyColor": "green"
     },
-    // {
-    //   "type": "terminalfont",
-    //   "key": "│ ├ Font        ",
-    //   "keyColor": "green"
-    // },
     {
       "type": "host",
       "key": " PC             ",
