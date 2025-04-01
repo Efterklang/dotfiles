@@ -66,7 +66,8 @@ alias g = lazygit
 alias h = fuzzy-command-search
 # i j k
 alias l = clear
-# m n o
+# m n
+alias o = oh-my-posh init nu --config ~/.config/ohmyposh/omp.json --print | save ./shells/nushell/plugins/omp.nu --force
 alias p = gping
 # q
 alias r = commandline edit --insert (bat --color never --style plain $nu.history-path | fzf --height 70% --layout reverse --tac | str trim)
