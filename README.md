@@ -119,6 +119,11 @@ Preferred terminals:
 | :---------------------: | :---------------------------: |
 | ![Fzf](assets/fzf.webp) | ![Zoxide](assets/zoxide.webp) |
 
+
+> [!note] bat
+>
+> run this command to apply theme: `bat cache --build`
+
 #### TUI
 
 | Tool                                                 | Description                                                               |
