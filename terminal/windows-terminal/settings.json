@@ -1,38 +1,34 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema-preview",
-    "actions": 
-    [
+    "actions": [
         {
-            "command": 
-            {
+            "command": {
                 "action": "copy",
                 "singleLine": false
             },
             "id": "User.copy.644BA8F2"
         },
         {
-            "command": "paste",
-            "id": "User.paste"
-        },
-        {
-            "command": 
-            {
+            "command": {
                 "action": "newTab"
             },
             "id": "User.newTab.5DEADB41"
         },
         {
-            "command": "openNewTabDropdown",
-            "id": "User.openNewTabDropdown"
+            "command": "paste",
+            "id": "User.paste"
         },
         {
             "command": "closePane",
             "id": "User.closePane"
         },
         {
-            "command": 
-            {
+            "command": "openNewTabDropdown",
+            "id": "User.openNewTabDropdown"
+        },
+        {
+            "command": {
                 "action": "commandPalette"
             },
             "id": "User.commandPalette.D3F0B923"
@@ -46,8 +42,7 @@
             "id": "User.find"
         },
         {
-            "command": 
-            {
+            "command": {
                 "action": "splitPane",
                 "split": "auto",
                 "splitMode": "duplicate"
@@ -55,44 +50,40 @@
             "id": "User.splitPane.A6751878"
         },
         {
-            "command": 
-            {
-                "action": "nextTab"
-            },
-            "id": "User.nextTab.0"
-        },
-        {
-            "command": 
-            {
+            "command": {
                 "action": "setTabColor"
             },
             "id": "User.setTabColor.0"
         },
         {
-            "command": 
-            {
+            "command": {
+                "action": "nextTab"
+            },
+            "id": "User.nextTab.0"
+        },
+        {
+            "command": {
                 "action": "closeTab"
             },
             "id": "User.closeTab.0"
-        },
-        {
-            "command": "togglePaneZoom",
-            "id": "User.togglePaneZoom"
         },
         {
             "command": "toggleShaderEffects",
             "id": "User.toggleShaderEffects"
         },
         {
-            "command": "duplicateTab",
-            "id": "User.duplicateTab"
+            "command": "togglePaneZoom",
+            "id": "User.togglePaneZoom"
         },
         {
-            "command": 
-            {
+            "command": {
                 "action": "prevTab"
             },
             "id": "User.prevTab.0"
+        },
+        {
+            "command": "duplicateTab",
+            "id": "User.duplicateTab"
         },
         {
             "command": "identifyWindow",
@@ -128,43 +119,42 @@
     "initialCols": 132,
     "initialPosition": ",",
     "initialRows": 38,
-    "keybindings": 
-    [
+    "keybindings": [
         {
             "id": "User.find",
             "keys": "ctrl+f"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+shift+f"
-        },
-        {
-            "id": "User.paste",
-            "keys": "ctrl+v"
         },
         {
             "id": "User.prevTab.0",
             "keys": "alt+a"
         },
         {
-            "id": "User.closePane",
-            "keys": "alt+w"
+            "id": "User.paste",
+            "keys": "ctrl+v"
         },
         {
             "id": null,
-            "keys": "ctrl+shift+1"
+            "keys": "ctrl+shift+f"
         },
         {
-            "id": "Terminal.DuplicatePaneRight",
-            "keys": "ctrl+/"
+            "id": "User.closePane",
+            "keys": "alt+w"
         },
         {
             "id": "User.tabSearch",
             "keys": "alt+p"
         },
         {
+            "id": "Terminal.DuplicatePaneRight",
+            "keys": "ctrl+/"
+        },
+        {
             "id": null,
-            "keys": "ctrl+shift+tab"
+            "keys": "ctrl+shift+1"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+d"
         },
         {
             "id": "User.copy.644BA8F2",
@@ -172,31 +162,31 @@
         },
         {
             "id": null,
-            "keys": "ctrl+shift+d"
+            "keys": "ctrl+shift+tab"
         },
         {
             "id": "User.closeTab.0",
             "keys": "ctrl+w"
         },
         {
-            "id": "User.togglePaneZoom",
-            "keys": "ctrl+m"
-        },
-        {
             "id": "Terminal.DuplicatePaneDown",
             "keys": "ctrl+\\"
+        },
+        {
+            "id": "User.togglePaneZoom",
+            "keys": "ctrl+m"
         },
         {
             "id": "User.quickFix",
             "keys": "ctrl+period"
         },
         {
-            "id": "User.openNewTabDropdown",
-            "keys": "ctrl+p"
-        },
-        {
             "id": "User.toggleFocusMode",
             "keys": "alt+r"
+        },
+        {
+            "id": "User.openNewTabDropdown",
+            "keys": "ctrl+p"
         },
         {
             "id": "User.breakIntoDebugger",
@@ -240,16 +230,13 @@
         }
     ],
     "launchMode": "focus",
-    "newTabMenu": 
-    [
+    "newTabMenu": [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles": 
-    {
-        "defaults": 
-        {
+    "profiles": {
+        "defaults": {
             "adjustIndistinguishableColors": "never",
             "backgroundImageOpacity": 0.8,
             "colorScheme": "Catppuccin Mocha",
@@ -257,13 +244,11 @@
             "experimental.rainbowSuggestions": true,
             "experimental.repositionCursorWithMouse": true,
             "experimental.retroTerminalEffect": false,
-            "font": 
-            {
+            "font": {
                 "builtinGlyphs": true,
                 "colorGlyphs": true,
                 "face": "Maple Mono NF CN",
-                "features": 
-                {
+                "features": {
                     "calt": 1,
                     "cv01": 1,
                     "ss01": 1,
@@ -283,8 +268,7 @@
             "startingDirectory": "%USERPROFILE%",
             "useAcrylic": true
         },
-        "list": 
-        [
+        "list": [
             {
                 "colorScheme": "Catppuccin Mocha",
                 "commandline": "D:\\envir_vars\\scoop\\apps\\nu\\current\\nu.exe",
@@ -312,16 +296,15 @@
                 "source": "Windows.Terminal.VisualStudio"
             },
             {
-                "commandline": "C:\\WINDOWS\\system32\\wsl.exe -d Arch",
-                "guid": "{e84e7bca-f30f-4864-8a59-fb9b835be034}",
-                "hidden": false,
+                "guid": "{2038afbd-acab-5d2a-b263-a22d15bb7efb}",
                 "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
-                "name": "Arch"
+                "hidden": false,
+                "name": "Arch",
+                "source": "Microsoft.WSL"
             }
         ]
     },
-    "schemes": 
-    [
+    "schemes": [
         {
             "background": "#1E1E2E",
             "black": "#45475A",
