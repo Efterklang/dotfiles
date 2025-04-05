@@ -1,119 +1,15 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema-preview",
-    "actions": [
-        {
-            "command": {
-                "action": "copy",
-                "singleLine": false
-            },
-            "id": "User.copy.644BA8F2"
-        },
-        {
-            "command": {
-                "action": "newTab"
-            },
-            "id": "User.newTab.5DEADB41"
-        },
-        {
-            "command": "paste",
-            "id": "User.paste"
-        },
-        {
-            "command": "closePane",
-            "id": "User.closePane"
-        },
-        {
-            "command": "openNewTabDropdown",
-            "id": "User.openNewTabDropdown"
-        },
-        {
-            "command": {
-                "action": "commandPalette"
-            },
-            "id": "User.commandPalette.D3F0B923"
-        },
-        {
-            "command": "toggleFocusMode",
-            "id": "User.toggleFocusMode"
-        },
-        {
-            "command": "find",
-            "id": "User.find"
-        },
-        {
-            "command": {
-                "action": "splitPane",
-                "split": "auto",
-                "splitMode": "duplicate"
-            },
-            "id": "User.splitPane.A6751878"
-        },
-        {
-            "command": {
-                "action": "setTabColor"
-            },
-            "id": "User.setTabColor.0"
-        },
-        {
-            "command": {
-                "action": "nextTab"
-            },
-            "id": "User.nextTab.0"
-        },
-        {
-            "command": {
-                "action": "closeTab"
-            },
-            "id": "User.closeTab.0"
-        },
-        {
-            "command": "toggleShaderEffects",
-            "id": "User.toggleShaderEffects"
-        },
-        {
-            "command": "togglePaneZoom",
-            "id": "User.togglePaneZoom"
-        },
-        {
-            "command": {
-                "action": "prevTab"
-            },
-            "id": "User.prevTab.0"
-        },
-        {
-            "command": "duplicateTab",
-            "id": "User.duplicateTab"
-        },
-        {
-            "command": "identifyWindow",
-            "id": "User.identifyWindow"
-        },
-        {
-            "command": "breakIntoDebugger",
-            "id": "User.breakIntoDebugger"
-        },
-        {
-            "command": "quickFix",
-            "id": "User.quickFix"
-        },
-        {
-            "command": "markMode",
-            "id": "User.markMode"
-        },
-        {
-            "command": "tabSearch",
-            "id": "User.tabSearch"
-        }
-    ],
+    "actions": [],
     "alwaysShowNotificationIcon": false,
     "autoHideWindow": false,
     "centerOnLaunch": true,
     "copyFormatting": "none",
     "copyOnSelect": true,
-    "debugFeatures": true,
+    "debugFeatures": false,
     "defaultInputScope": "alphanumericHalfWidth",
-    "defaultProfile": "{7800db3a-723c-4039-8829-89875f7cf460}",
+    "defaultProfile": "{a47560c3-afc7-4281-b574-5a3ae4dd6de8}",
     "experimental.enableColorSelection": true,
     "focusFollowMouse": true,
     "initialCols": 132,
@@ -133,7 +29,6 @@
             "keys": "ctrl+v"
         },
         {
-            "id": null,
             "keys": "ctrl+shift+f"
         },
         {
@@ -149,11 +44,9 @@
             "keys": "ctrl+/"
         },
         {
-            "id": null,
             "keys": "ctrl+shift+1"
         },
         {
-            "id": null,
             "keys": "ctrl+shift+d"
         },
         {
@@ -161,7 +54,6 @@
             "keys": "ctrl+c"
         },
         {
-            "id": null,
             "keys": "ctrl+shift+tab"
         },
         {
@@ -197,7 +89,6 @@
             "keys": "ctrl+n"
         },
         {
-            "id": null,
             "keys": "alt+enter"
         },
         {
@@ -209,11 +100,9 @@
             "keys": "alt+2"
         },
         {
-            "id": null,
             "keys": "ctrl+shift+2"
         },
         {
-            "id": null,
             "keys": "ctrl+shift+t"
         },
         {
@@ -221,7 +110,6 @@
             "keys": "alt+3"
         },
         {
-            "id": null,
             "keys": "ctrl+shift+3"
         },
         {
@@ -229,7 +117,6 @@
             "keys": "alt+d"
         }
     ],
-    "launchMode": "focus",
     "newTabMenu": [
         {
             "type": "remainingProfiles"
@@ -241,7 +128,6 @@
             "backgroundImageOpacity": 0.8,
             "colorScheme": "Catppuccin Mocha",
             "cursorShape": "filledBox",
-            "experimental.rainbowSuggestions": true,
             "experimental.repositionCursorWithMouse": true,
             "experimental.retroTerminalEffect": false,
             "font": {
@@ -260,9 +146,8 @@
                 "size": 10,
                 "weight": "semi-bold"
             },
-            "opacity": 80,
+            "opacity": 100,
             "pathTranslationStyle": "wsl",
-            "rightClickContextMenu": true,
             "scrollbarState": "hidden",
             "showMarksOnScrollbar": true,
             "startingDirectory": "%USERPROFILE%",
@@ -271,11 +156,11 @@
         "list": [
             {
                 "colorScheme": "Catppuccin Mocha",
-                "commandline": "D:\\envir_vars\\scoop\\apps\\nu\\current\\nu.exe",
-                "guid": "{7800db3a-723c-4039-8829-89875f7cf460}",
+                "commandline": "nu",
+                "guid": "{a47560c3-afc7-4281-b574-5a3ae4dd6de8}",
                 "hidden": false,
                 "icon": "https://th.bing.com/th/id/R.971b7806e2ca4e6ea4227970f0d75b8e?rik=8Mg%2bo6UabZDulw&riu=http%3a%2f%2fjdev.tw%2fblog%2fwp-content%2fuploads%2f2021%2f06%2fnushell-logo.png&ehk=FD4SnVJP8K%2fYBeaxMoG8WPYLL7Oqe6UYp%2fRqG3AP9FY%3d&risl=&pid=ImgRaw&r=0",
-                "name": "Windows-Nushell",
+                "name": "Nu",
                 "tabTitle": "Nu"
             },
             {
@@ -284,28 +169,28 @@
                 "name": "root@ubuntu"
             },
             {
-                "guid": "{9cf3bcc2-c6d8-5541-9b43-56d81641b6bd}",
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": true,
-                "name": "Developer Command Prompt for VS 2022",
-                "source": "Windows.Terminal.VisualStudio"
+                "name": "Windows PowerShell"
             },
             {
-                "guid": "{90ac2d28-0ef7-59c3-b4b1-8251be5e2697}",
-                "hidden": true,
-                "name": "Developer PowerShell for VS 2022",
-                "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "guid": "{2038afbd-acab-5d2a-b263-a22d15bb7efb}",
-                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
+                "guid": "{171fc56f-cbb2-5e60-a3df-7646b376628a}",
                 "hidden": false,
+                "icon": "\ud83d\udc27",
                 "name": "Arch",
                 "source": "Microsoft.WSL"
+            },
+            {
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": true,
+                "name": "Command Prompt"
             }
         ]
     },
     "schemes": [
         {
+            "name": "Catppuccin Mocha",
             "background": "#1E1E2E",
             "black": "#45475A",
             "blue": "#89B4FA",
@@ -321,7 +206,6 @@
             "cyan": "#94E2D5",
             "foreground": "#CDD6F4",
             "green": "#A6E3A1",
-            "name": "Catppuccin Mocha",
             "purple": "#F5C2E7",
             "red": "#F38BA8",
             "selectionBackground": "#585B70",
@@ -329,6 +213,7 @@
             "yellow": "#F9E2AF"
         },
         {
+            "name": "Tokyo Night",
             "background": "#1A1B2C",
             "black": "#414868",
             "blue": "#7AA2F7",
@@ -344,7 +229,6 @@
             "cyan": "#7DCFFF",
             "foreground": "#A9B1DC",
             "green": "#73DACA",
-            "name": "Tokyo Night",
             "purple": "#BB9AF7",
             "red": "#F7768E",
             "selectionBackground": "#28344A",
