@@ -1,7 +1,34 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema-preview",
-    "actions": [],
+    "actions": [
+        {
+            "command": {
+                "action": "prevTab"
+            },
+            "id": "User.prevTab.0"
+        },
+        {
+            "command": {
+                "action": "nextTab"
+            },
+            "id": "User.nextTab.0"
+        },
+        {
+            "command": {
+                "action": "commandPalette"
+            },
+            "id": "User.commandPalette.D3F0B923"
+        },
+        {
+            "command": "closePane",
+            "id": "User.closePane"
+        },
+        {
+            "command": "openNewTabDropdown",
+            "id": "User.openNewTabDropdown"
+        }
+    ],
     "alwaysShowNotificationIcon": false,
     "autoHideWindow": false,
     "centerOnLaunch": true,
@@ -17,36 +44,39 @@
     "initialRows": 38,
     "keybindings": [
         {
-            "id": "User.find",
-            "keys": "ctrl+f"
-        },
-        {
-            "id": "User.prevTab.0",
-            "keys": "alt+a"
+            "id": null,
+            "keys": "ctrl+shift+f"
         },
         {
             "id": "User.paste",
             "keys": "ctrl+v"
         },
         {
-            "keys": "ctrl+shift+f"
+            "id": "User.prevTab.0",
+            "keys": "alt+a"
         },
         {
-            "id": "User.closePane",
-            "keys": "alt+w"
+            "id": "User.find",
+            "keys": "ctrl+f"
         },
         {
-            "id": "User.tabSearch",
-            "keys": "alt+p"
+            "id": null,
+            "keys": "ctrl+shift+1"
         },
         {
             "id": "Terminal.DuplicatePaneRight",
             "keys": "ctrl+/"
         },
         {
-            "keys": "ctrl+shift+1"
+            "id": "User.tabSearch",
+            "keys": "alt+p"
         },
         {
+            "id": "User.closePane",
+            "keys": "alt+w"
+        },
+        {
+            "id": null,
             "keys": "ctrl+shift+d"
         },
         {
@@ -54,10 +84,11 @@
             "keys": "ctrl+c"
         },
         {
+            "id": null,
             "keys": "ctrl+shift+tab"
         },
         {
-            "id": "User.closeTab.0",
+            "id": "Terminal.ClosePane",
             "keys": "ctrl+w"
         },
         {
@@ -77,7 +108,7 @@
             "keys": "alt+r"
         },
         {
-            "id": "User.openNewTabDropdown",
+            "id": "User.commandPalette.D3F0B923",
             "keys": "ctrl+p"
         },
         {
@@ -85,10 +116,11 @@
             "keys": "f5"
         },
         {
-            "id": "Terminal.DuplicateTab",
+            "id": "User.openNewTabDropdown",
             "keys": "ctrl+n"
         },
         {
+            "id": null,
             "keys": "alt+enter"
         },
         {
@@ -100,9 +132,11 @@
             "keys": "alt+2"
         },
         {
+            "id": null,
             "keys": "ctrl+shift+2"
         },
         {
+            "id": null,
             "keys": "ctrl+shift+t"
         },
         {
@@ -110,11 +144,16 @@
             "keys": "alt+3"
         },
         {
+            "id": null,
             "keys": "ctrl+shift+3"
         },
         {
             "id": "User.nextTab.0",
             "keys": "alt+d"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+w"
         }
     ],
     "newTabMenu": [
@@ -190,7 +229,6 @@
     },
     "schemes": [
         {
-            "name": "Catppuccin Mocha",
             "background": "#1E1E2E",
             "black": "#45475A",
             "blue": "#89B4FA",
@@ -206,6 +244,7 @@
             "cyan": "#94E2D5",
             "foreground": "#CDD6F4",
             "green": "#A6E3A1",
+            "name": "Catppuccin Mocha",
             "purple": "#F5C2E7",
             "red": "#F38BA8",
             "selectionBackground": "#585B70",
@@ -213,7 +252,6 @@
             "yellow": "#F9E2AF"
         },
         {
-            "name": "Tokyo Night",
             "background": "#1A1B2C",
             "black": "#414868",
             "blue": "#7AA2F7",
@@ -229,6 +267,7 @@
             "cyan": "#7DCFFF",
             "foreground": "#A9B1DC",
             "green": "#73DACA",
+            "name": "Tokyo Night",
             "purple": "#BB9AF7",
             "red": "#F7768E",
             "selectionBackground": "#28344A",
