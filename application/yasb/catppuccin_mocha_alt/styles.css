@@ -300,12 +300,12 @@
 */
 
 .traffic-widget {
-  background-color: var(--green);
+  border: 1px solid var(--surface1);
   padding: 0;
 }
 
 .traffic-widget .icon {
-  color: #142123;
+  color: var(--green);
   padding-right: 6px;
   padding-left: 6px;
 }
@@ -324,12 +324,12 @@
 */
 
 .memory-widget {
-  background-color: var(--lavender);
+  border: 1px solid var(--surface1);
   padding: 0;
 }
 
 .memory-widget .icon {
-  color: #142123;
+  color: var(--lavender);
   font-size: 15px;
   padding-right: 6px;
   padding-left: 6px;
@@ -350,12 +350,12 @@
 */
 
 .volume-widget {
-  background-color: var(--red);
+  border: 1px solid var(--surface1);
   padding: 0;
 }
 
 .volume-widget .icon {
-  color: #142123;
+  color: var(--red);
   padding: 0 6px;
 }
 
@@ -394,12 +394,12 @@
 */
 
 .language-widget {
-  background-color: var(--peach);
+  border: 1px solid var(--surface1);
   padding: 0;
 }
 
 .language-widget .icon {
-  color: #142123;
+  color: var(--peach);
   padding: 0 6px;
 }
 

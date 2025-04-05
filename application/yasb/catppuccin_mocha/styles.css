@@ -25,21 +25,23 @@
   --base: #1e1e2e;
   --mantle: rgba(24, 24, 37, 0.5);
   --crust: rgba(17, 17, 27, 0.5);
+  --icon-size: 18px;
 }
 
 * {
   font-size: 12px;
   font-weight: 800;
   font-family: "Maple Mono NF CN";
-  font-style: italic;
+  /* font-style: italic; */
   font-variant-ligatures: additional-ligatures;
-  margin: 0;
-  padding: 0;
 }
 
 .yasb-bar {
-  padding: 0;
+  padding: 2;
   margin: 0;
+  border-radius: 10px;
+  border: 1px solid var(--surface1);
+  background-color: var(--base);
 }
 
 .widget {
@@ -53,7 +55,7 @@
 }
 
 .widget .icon {
-  font-size: 18px;
+  font-size: var(--icon-size);
 }
 
 /* 
@@ -63,42 +65,41 @@
 */
 
 .home-widget {
-  background-color: var(--yellow);
-  padding: 0;
+  background-color: #24273a;
+  border: 1px solid var(--surface1);
+  border-radius: 12px;
+  padding: 0 12px;
+  margin: 0;
 }
 
 .home-widget .icon {
-  padding-right: 6px;
-  padding-left: 6px;
+  color: var(--lavender);
+  padding: 0 5px 0 0;
 }
 
-.home-widget .label {
-  background-color: #221f2e;
-  margin: 1px;
-  padding: 0 6px;
-  color: var(--yellow);
+.home-widget .icon:hover {
+  color: var(--mauve);
 }
 
 .home-menu {
-  background-color: var(--crust);
+  background-color: var(--mantle);
 }
 
 .home-menu .menu-item {
-  padding: 8px 48px 9px 16px;
-  font-size: 12px;
-  font-family: "Maple Mono NF CN", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 10px 48px 10px 16px;
+  font-size: 14px;
   color: var(--text);
   font-weight: 600;
 }
 
 .home-menu .menu-item:hover {
-  background-color: var(--base);
-  color: var(--text);
+  background-color: #24273a;
+  color: #fff;
 }
 
-.home-menu:separator {
-  height: 1px;
-  background-color: var(--text);
+.home-menu .separator {
+  max-height: 1px;
+  background-color: var(--surface1);
 }
 
 /* 
@@ -119,8 +120,41 @@
 }
 
 .apps-widget .label:hover {
-  color: var(--blue);
+  color: var(--peach);
 }
+
+/* 
+ * ╭───────────────────────────────────────────────────────╮
+ * │                    Media Player                       │
+ * ╰───────────────────────────────────────────────────────╯
+*/
+
+.media-widget {
+  margin: 0 0 0 10px;
+  border: 1px solid var(--surface1);
+}
+
+.media-widget .label {
+  padding: 0 2px;
+  color: var(--lavender);
+}
+
+.media-widget .btn.prev {
+  padding: 0 0 0 8px;
+}
+
+
+.media-widget .btn {
+  padding: 0 3px;
+  margin: 4px 0;
+  font-family: Segoe Fluent Icons;
+  color: var(--lavender);
+}
+
+.media-widget .btn:hover {
+  color: var(--text);
+}
+
 
 /* 
  * ╭───────────────────────────────────────────────────────╮
@@ -129,19 +163,135 @@
 */
 
 .clock-widget {
-  background-color: var(--mauve);
+  background-color: var(--mantle);
+  border: 1px solid var(--surface1);
   padding: 0;
-  border-radius: 12px;
 }
 
 .clock-widget .label {
+  color: var(--lavender);
+  padding: 0 6px;
+  margin: 1px;
+}
+
+.clock-widget .label:hover {
+  color: var(--mauve);
+}
+
+.calendar {
+  background-color: var(--base);
+  padding: 10px;
+  border: 1px solid var(--surface0);
+  border-radius: 10px;
+}
+
+.calendar .calendar-table::item {
+  background-color: var(--base);
+  color: var(--text);
+}
+
+.calendar .calendar-table::item:selected {
+  color: var(--blue);
+}
+
+.calendar .day-label,
+.calendar .month-label,
+.calendar .date-label {
+  font-family: 'Maple Mono NF CN', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: var(--text);
+  font-weight: 700;
+  min-width: 180px;
+  max-width: 180px;
+}
+
+.calendar .month-label {
+  font-weight: normal;
+}
+
+.calendar .date-label {
+  font-size: 88px;
+  font-weight: 900;
+  color: var(--text);
+  margin-top: -20px;
+}
+
+
+/* windows */
+
+.windows-desktops {
+  background-color: #24273a;
+  border: 1px solid var(--surface1);
+}
+
+.windows-desktops .offline-status {
+  color: #627199;
+  font-size: 12px;
+  padding: 0 2px;
+  font-weight: 600;
+}
+
+.windows-desktops .ws-btn {
+  border: none;
+  background-color: var(--lavender);
+  margin: 0px 4px;
+  padding: 0;
+  color: rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  height: 10px;
+  width: 10px;
+}
+
+.windows-desktops .ws-btn:hover {
+  background-color: var(--peach);
+}
+
+.windows-desktops .ws-btn.populated {
+  background-color: var(--red);
+}
+
+.windows-desktops .ws-btn.active {
+  color: rgba(149, 177, 255, 0);
+  background-color: var(--mauve);
+  width: 20px;
+  height: 10px;
+  border-radius: 5px;
+}
+
+/* weather */
+
+.weather-widget {
+  background-color: var(--mauve);
+  padding: 0;
+}
+
+.weather-widget .icon {
+  color: #142123;
+  padding: 0 6px;
+}
+
+.weather-widget .label {
   background-color: var(--base);
   color: var(--mauve);
   padding: 0 6px;
   margin: 1px;
-  border-radius: 11px;
 }
 
+.weather-card {
+  background-color: var(--base);
+}
+
+.weather-card-today {
+  border: 1px solid var(--surface1);
+  border-radius: 8px;
+  background-color: var(--crust);
+}
+
+.weather-card-day {
+  border: 1px solid var(--surface1);
+  border-radius: 8px;
+  background-color: var(--crust);
+}
 
 /* 
  * ╭───────────────────────────────────────────────────────╮
@@ -161,7 +311,7 @@
 }
 
 .traffic-widget .label {
-  background-color: #221f2e;
+  background-color: var(--base);
   margin: 1px;
   padding: 0 6px;
   color: var(--green);
@@ -180,12 +330,13 @@
 
 .memory-widget .icon {
   color: #142123;
+  font-size: 15px;
   padding-right: 6px;
   padding-left: 6px;
 }
 
 .memory-widget .label {
-  background-color: #221f2e;
+  background-color: var(--base);
   margin: 1px;
   padding: 0 6px;
   color: var(--lavender);
@@ -209,10 +360,31 @@
 }
 
 .volume-widget .label {
-  background-color: #221f2e;
+  background-color: var(--base);
   color: var(--red);
   padding: 0 8px;
   margin: 1px;
+}
+
+.audio-menu {
+  background-color: rgba(17, 17, 27, 0.4);
+}
+
+.audio-container .device {
+  background-color: transparent;
+  border: none;
+  padding: 6px 8px 6px 4px;
+  margin: 2px 0;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.audio-container .device.selected {
+  background-color: var(--base);
+}
+
+.audio-container .device:hover {
+  background-color: var(--surface0);
 }
 
 /* 
@@ -232,12 +404,17 @@
 }
 
 .language-widget .label {
-  background-color: #221f2e;
+  background-color: var(--base);
   color: var(--peach);
   padding: 0 8px;
   margin: 1px;
 }
 
+/* 
+ * ╭───────────────────────────────────────────────────────╮
+ * │                      Power Menu                       │
+ * ╰───────────────────────────────────────────────────────╯
+*/
 
 /*POWER MENU POPUP*/
 .uptime {
@@ -248,7 +425,14 @@
 }
 
 .power-menu-widget {
-  background-color: transparent;
+  padding: 0;
+}
+
+.power-menu-widget .label {
+  color: var(--red);
+  padding-right: 10px;
+  font-weight: 1000;
+  font-size: 17px;
 }
 
 .power-menu-popup {
@@ -302,25 +486,4 @@
 
 .power-menu-popup .button.shutdown .label {
   color: rgba(137, 180, 250, 0.95);
-}
-
-
-.power-menu-widget .label {
-  color: var(--red);
-  font-size: 15px;
-  padding-right: 8px;
-}
-
-.media-widget {
-  background-color: #1e1e2e;
-}
-
-.media-widget .btn {
-  padding: 0 3px;
-  margin: 4px 0;
-  font-family: Segoe Fluent Icons;
-}
-
-.media-widget .btn:hover {
-  color: rgba(243, 139, 168, 0.95);
 }
