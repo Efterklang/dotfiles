@@ -1,21 +1,25 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema-preview",
-    "actions": [
+    "actions": 
+    [
         {
-            "command": {
+            "command": 
+            {
                 "action": "prevTab"
             },
             "id": "User.prevTab.0"
         },
         {
-            "command": {
+            "command": 
+            {
                 "action": "nextTab"
             },
             "id": "User.nextTab.0"
         },
         {
-            "command": {
+            "command": 
+            {
                 "action": "commandPalette"
             },
             "id": "User.commandPalette.D3F0B923"
@@ -27,6 +31,10 @@
         {
             "command": "openNewTabDropdown",
             "id": "User.openNewTabDropdown"
+        },
+        {
+            "command": "find",
+            "id": "User.find"
         }
     ],
     "alwaysShowNotificationIcon": false,
@@ -42,38 +50,39 @@
     "initialCols": 132,
     "initialPosition": ",",
     "initialRows": 38,
-    "keybindings": [
+    "keybindings": 
+    [
         {
-            "id": null,
-            "keys": "ctrl+shift+f"
-        },
-        {
-            "id": "User.paste",
-            "keys": "ctrl+v"
+            "id": "User.find",
+            "keys": "ctrl+f"
         },
         {
             "id": "User.prevTab.0",
             "keys": "alt+a"
         },
         {
-            "id": "User.find",
-            "keys": "ctrl+f"
+            "id": "User.paste",
+            "keys": "ctrl+v"
         },
         {
             "id": null,
-            "keys": "ctrl+shift+1"
+            "keys": "ctrl+shift+f"
         },
         {
-            "id": "Terminal.DuplicatePaneRight",
-            "keys": "ctrl+/"
+            "id": "User.closePane",
+            "keys": "alt+w"
         },
         {
             "id": "User.tabSearch",
             "keys": "alt+p"
         },
         {
-            "id": "User.closePane",
-            "keys": "alt+w"
+            "id": "Terminal.DuplicatePaneRight",
+            "keys": "ctrl+/"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+1"
         },
         {
             "id": null,
@@ -156,24 +165,29 @@
             "keys": "ctrl+shift+w"
         }
     ],
-    "newTabMenu": [
+    "newTabMenu": 
+    [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles": {
-        "defaults": {
+    "profiles": 
+    {
+        "defaults": 
+        {
             "adjustIndistinguishableColors": "never",
             "backgroundImageOpacity": 0.8,
             "colorScheme": "Catppuccin Mocha",
             "cursorShape": "filledBox",
             "experimental.repositionCursorWithMouse": true,
             "experimental.retroTerminalEffect": false,
-            "font": {
+            "font": 
+            {
                 "builtinGlyphs": true,
                 "colorGlyphs": true,
                 "face": "Maple Mono NF CN",
-                "features": {
+                "features": 
+                {
                     "calt": 1,
                     "cv01": 1,
                     "ss01": 1,
@@ -192,7 +206,8 @@
             "startingDirectory": "%USERPROFILE%",
             "useAcrylic": true
         },
-        "list": [
+        "list": 
+        [
             {
                 "colorScheme": "Catppuccin Mocha",
                 "commandline": "nu",
@@ -227,7 +242,8 @@
             }
         ]
     },
-    "schemes": [
+    "schemes": 
+    [
         {
             "background": "#1E1E2E",
             "black": "#45475A",
