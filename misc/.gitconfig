@@ -25,10 +25,6 @@ lowSpeedLimit = 0
 lowSpeedTime = 999999
 version = HTTP/1.1
 sslbackend = schannel
-proxy = http://127.0.0.1:7890
-
-[https]
-proxy = http://127.0.0.1:7890
 
 [protocol]
 version = 1
