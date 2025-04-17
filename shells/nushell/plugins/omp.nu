@@ -4,9 +4,9 @@ if ($env.config? | is-not-empty) {
 }
 
 $env.POWERLINE_COMMAND = 'oh-my-posh'
-$env.POSH_THEME = (echo "C:\\Users\\24138\\.config\\ohmyposh\\omp.json")
+$env.POSH_THEME = $"($nu.default-config-dir)\\plugins\\omp.json"
 $env.PROMPT_INDICATOR = ""
-$env.POSH_SESSION_ID = (echo "b13f43ae-8d83-4ac5-9013-77e520ce6d7d")
+$env.POSH_SESSION_ID = (random uuid)
 $env.POSH_SHELL = "nu"
 $env.POSH_SHELL_VERSION = (version | get version)
 
@@ -14,7 +14,7 @@ $env.POSH_SHELL_VERSION = (version | get version)
 $env.VIRTUAL_ENV_DISABLE_PROMPT = 1
 $env.PYENV_VIRTUALENV_DISABLE_PROMPT = 1
 
-let _omp_executable: string = (echo "C:/Users/24138/AppData/Local/Programs/oh-my-posh/bin/oh-my-posh.exe")
+let _omp_executable: string = "oh-my-posh"
 
 # PROMPTS
 

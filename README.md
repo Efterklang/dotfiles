@@ -165,13 +165,10 @@ Installation
 
 Configuration
 
-```bash
-# Nushell configuration
-oh-my-posh init nu --config ~/.config/ohmyposh/omp.json --print | save ./shells/nushell/plugins/omp.nu --force
-
-# Fish configuration
+```shell
 oh-my-posh init fish --config ~/.config/ohmyposh/omp.json | source
+```
 
-# Bash configuration
+```shell
 oh-my-posh init bash --config ~/.config/ohmyposh/omp.json | source
 ```
