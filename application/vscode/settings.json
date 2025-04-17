@@ -36,8 +36,7 @@
         "*.png": "imagePreview.previewEditor",
         "*.md": "default",
         "*.svg": "hediet.vscode-drawio-text",
-        "{git,git-graph}:/**/*.{md,csv,svg}": "default",
-        "{git,gitlens,git-graph}:/**/*.{md,csv,svg}": "default"
+        "{git,git-graph}:/**/*.{md,csv,svg}": "default"
     },
     "workbench.productIconTheme": "fluent-icons",
     // * ╭───────────────────────────────────────────────────────╮
@@ -97,6 +96,7 @@
         "workbench.action.focusAuxiliaryBar",
         "workbench.files.action.focusFilesExplorer"
     ],
+    "terminal.integrated.fontSize": 13,
     "terminal.integrated.copyOnSelection": true,
     "terminal.integrated.allowMnemonics": true,
     "terminal.integrated.hideOnStartup": "always",
@@ -165,6 +165,7 @@
         "**/.idea*": true,
         "**/.venv": true,
         "**/__pycache__": true,
+        "**/build": true,
         "bun.lockb": true
     },
     "files.hotExit": "onExitAndWindowClose",
@@ -231,7 +232,7 @@
     },
     "vscode_custom_css.imports": [
         "file:///${userHome}/.config/vscode/custom.css",
-        "file:///d:/envir_vars/scoop/apps/vscode/1.98.1/data/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
+        "file:///d:/envir_vars/scoop/apps/vscode/1.99.2/data/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
     ],
     "background.enabled": false,
     "background.fullscreen": {
@@ -249,7 +250,7 @@
         "random": false
     },
     // * ╭───────────────────────────────────────────────────────╮
-    // * │                      Git                              │
+    // * │                 Source Control                        │
     // * ╰───────────────────────────────────────────────────────╯
     "git.mergeEditor": true,
     "git-graph.enhancedAccessibility": true,
@@ -282,11 +283,19 @@
     "diffEditor.experimental.useTrueInlineView": true,
     "github.copilot.enable": {
         "*": true,
-        "markdown": true
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false,
+        "java": true
     },
     "github.copilot.advanced": {
         "authProvider": "github"
     },
+    "scm.alwaysShowActions": true,
+    "scm.alwaysShowRepositories": true,
+    "scm.countBadge": "off",
+    "scm.autoReveal": true,
+    "scm.inputFontFamily": "Maple Mono NF CN",
     // * ╭───────────────────────────────────────────────────────╮
     // * │                    extensions                         │
     // * ╰───────────────────────────────────────────────────────╯
@@ -430,6 +439,9 @@
             "other": "on"
         }
     },
+    "markdownlint.config": {
+        "no-inline-html": false
+    },
     "[css]": {
         "editor.defaultFormatter": "vscode.css-language-features"
     },
@@ -446,6 +458,8 @@
     "python.analysis.aiCodeActions": {
         "implementAbstractClasses": true
     },
+    "python.analysis.usePullDiagnostics": true,
+    "python.analysis.enableEditableInstalls": true,
     "python.analysis.autoFormatStrings": true,
     "python.analysis.autoImportCompletions": true,
     "python.analysis.cacheLSPData": true,
@@ -459,7 +473,7 @@
     ],
     "python.analysis.generateWithTypeAnnotation": true,
     "python.analysis.importFormat": "relative",
-    "python.analysis.inlayHints.callArgumentNames": "all",
+    "python.analysis.inlayHints.callArgumentNames": "partial",
     "python.analysis.inlayHints.functionReturnTypes": true,
     "python.analysis.inlayHints.pytestParameters": true,
     "python.analysis.inlayHints.variableTypes": true,
@@ -473,13 +487,22 @@
     "python.languageServer": "Pylance",
     "python.terminal.activateEnvInCurrentTerminal": true,
     "python.terminal.shellIntegration.enabled": true,
+    // "java.jdt.ls.javac.enabled": "on",
+    "java.completion.chain.enabled": true,
+    "java.completion.guessMethodArguments": "insertBestGuessedArguments",
     "java.debug.settings.hotCodeReplace": "auto",
     "java.debug.settings.showQualifiedNames": true,
     "java.debug.settings.showStaticVariables": true,
     "java.format.settings.profile": "GoogleStyle",
     "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
-    "java.server.launchMode": "LightWeight",
     "java.typeHierarchy.lazyLoad": true,
+    "java.project.resourceFilters": [
+        "node_modules",
+        "\\.git",
+        "logs",
+        ".*\\\\.txt$",
+        ".*\\\\.log$"
+    ],
     // * ╭───────────────────────────────────────────────────────╮
     // * │                    Markdown                           │
     // * ╰───────────────────────────────────────────────────────╯
@@ -577,7 +600,6 @@
         "*.json": "jsonc"
     },
     "remote.SSH.remotePlatform": {
-        "20.2.13.142": "linux",
         "momenta": "linux"
     },
     "code-runner.executorMapByGlob": {
@@ -590,6 +612,24 @@
         "markdownlint(MD033)"
     ],
     "catppuccin-noctis-icons.hidesExplorerArrows": false,
-    "vscode-office.editorTheme": "Auto",
     "files.autoSave": "afterDelay",
+    "window.menuBarVisibility": "compact",
+    "editor.largeFileOptimizations": false,
+    "roo-cline.allowedCommands": [
+        "npm test",
+        "npm install",
+        "tsc",
+        "git log",
+        "git diff",
+        "git show"
+    ],
+    "database-client.autoSync": true,
+    "debug.showVariableTypes": true,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "remote.defaultExtensionsIfInstalledLocally": [
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "GitHub.vscode-pull-request-github"
+    ],
+    "chat.agent.enabled": true
 }
