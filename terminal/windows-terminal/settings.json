@@ -25,6 +25,14 @@
             "id": "User.commandPalette.D3F0B923"
         },
         {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "id": "User.copy.224984B4"
+        },
+        {
             "command": "closePane",
             "id": "User.closePane"
         },
@@ -35,6 +43,10 @@
         {
             "command": "find",
             "id": "User.find"
+        },
+        {
+            "command": "paste",
+            "id": "User.paste"
         }
     ],
     "alwaysShowNotificationIcon": false,
@@ -89,7 +101,7 @@
             "keys": "ctrl+shift+d"
         },
         {
-            "id": "User.copy.644BA8F2",
+            "id": "User.copy.224984B4",
             "keys": "ctrl+c"
         },
         {
