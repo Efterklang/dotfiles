@@ -4,7 +4,7 @@ if ($env.config? | is-not-empty) {
 }
 
 $env.POWERLINE_COMMAND = 'oh-my-posh'
-$env.POSH_THEME = $"($nu.default-config-dir)\\plugins\\omp.json"
+$env.POSH_THEME = $"($nu.default-config-dir)/plugins/omp.json"
 $env.PROMPT_INDICATOR = ""
 $env.POSH_SESSION_ID = (random uuid)
 $env.POSH_SHELL = "nu"
