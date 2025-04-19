@@ -155,14 +155,18 @@ $env.config = {
     keybindings: []
 }
 
+
+# platform-releated configuration
+const linux_module = if $nu.os-info.name == linux { "./platform/ubuntu.nu" } else { null }
+const window_module = if $nu.os-info.name == windows { "./platform/win.nu" } else { null }
+const mac_module = if $nu.os-info.name == macos { "./platform/mac.nu" } else { null }
+
+source $linux_module
+source $window_module
+source $mac_module
+
 source ./plugins/plugins.nu
 source ./aliases/aliases.nu
 source ./completions/completions.nu
 source ./keybindings/keybindings.nu
 source ./themes/catppuccin-mocha.nu
-
-# platform-releated configuration
-const linux_module = if $nu.os-info.name == linux { "./platform/ubuntu.nu" } else { null }
-const window_module = if $nu.os-info.name == windows { "./platform/win.nu" } else { null }
-source $linux_module
-source $window_module
