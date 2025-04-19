@@ -2,7 +2,15 @@
 
 set -e
 
-CONFIG="linux.yaml"
+# Detect OS and set the appropriate config file
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  echo "Detected macOS"
+  CONFIG="mac.yaml"
+else
+  echo "Detected Linux"
+  CONFIG="linux.yaml"
+fi
+
 DOTBOT_DIR="dotbot"
 
 DOTBOT_BIN="bin/dotbot"
