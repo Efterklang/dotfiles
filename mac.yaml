@@ -10,13 +10,12 @@
     ~/.config/fastfetch: tui_cli/fastfetch
     ~/.config/procs: tui_cli/procs
     ~/.config/ohmyposh: shells/ohmyposh
-    ~/.config/lazygit: tui_cli/lazygit
     ~/.config/bat: tui_cli/bat
-    ~/.config/gitui: tui_cli/gitui
     ~/.config/nvim: tui_cli/nvim
     ~/.config/helix: tui_cli/helix
     ~/Library/Application Support/nushell: shells/nushell
     # VSCode configuration - Mac specific paths
+    "~/Library/Application Support/lazygit": tui_cli/lazygit
     "~/Library/Application Support/Code/User/settings.json": application/vscode/settings.json
     "~/Library/Application Support/Code/User/keybindings.json": application/vscode/keybindings.json
     "~/Library/Application Support/Code/User/snippets": application/vscode/snippets
