@@ -24,7 +24,7 @@ postBuffer = 655360000
 lowSpeedLimit = 0
 lowSpeedTime = 999999
 version = HTTP/1.1
-sslbackend = schannel
+	sslBackend = openssl
 
 [protocol]
 version = 1
