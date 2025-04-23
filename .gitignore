@@ -7,3 +7,5 @@ misc/yasb/*.py
 elevated-state.json
 lazy-lock.json
 *.bak
+# mac
+.DS_Store
