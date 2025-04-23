@@ -78,6 +78,7 @@
     "editor.suggest.insertMode": "replace",
     "editor.bracketPairColorization.enabled": true,
     "editor.lineHeight": 1.4,
+    "editor.lineNumbers": "relative",
     "editor.unicodeHighlight.nonBasicASCII": false,
     "editor.quickSuggestions": {
         "other": true,
@@ -209,7 +210,7 @@
     "material-icon-theme.hidesExplorerArrows": true,
     "material-icon-theme.folders.theme": "specific",
     "catppuccin.extraBordersEnabled": true,
-    "catppuccin.italicComments": true,
+    "catppuccin.italicComments": false,
     "catppuccin.accentColor": "lavender",
     "catppuccin.bracketMode": "neovim",
     "catppuccin.workbenchMode": "minimal",
@@ -314,7 +315,7 @@
             "strikethrough": false,
             "underline": false,
             "backgroundColor": "transparent",
-            "italic": true,
+            "italic": false,
             "bold": true
         },
         {
@@ -503,6 +504,141 @@
         ".*\\\\.txt$",
         ".*\\\\.log$"
     ],
+    // * ╭───────────────────────────────────────────────────────╮
+    // * │                    VSCode Vim                         │
+    // * ╰───────────────────────────────────────────────────────╯
+    "vim.leader": "<space>",
+    "vim.easymotion": true,
+    "vim.easymotionDimBackground": true,
+    "vim.sneak": true,
+    "vim.useSystemClipboard": true,
+    "vim.normalModeKeyBindings": [
+        // view navigation
+        {
+            "before": [
+                "<leader>",
+                "g"
+            ], // focus git
+            "commands": [
+                "workbench.view.scm"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "x"
+            ], // focus extensions
+            "commands": [
+                "workbench.view.extensions"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "e"
+            ], // focus explorer, cmd-e to hide
+            "commands": [
+                "workbench.view.explorer"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "E"
+            ], // focus secondary sidebar, cmd-k + cmd-e to hide
+            "commands": [
+                "workbench.action.focusAuxiliaryBar"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "f"
+            ], // focus search
+            "commands": [
+                "workbench.view.search"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "t"
+            ], // focus terminal
+            "commands": [
+                "workbench.action.terminal.toggleTerminal"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "d"
+            ], // focus debug
+            "commands": [
+                "workbench.debug.action.toggleRepl"
+            ]
+        },
+        // Editor Operation
+        {
+            "before": [
+                "x"
+            ],
+            "commands": [
+                "workbench.action.closeActiveEditor"
+            ]
+        },
+        {
+            "before": [
+                "X"
+            ],
+            "commands": [
+                "workbench.action.closeAllEditors"
+            ]
+        },
+    ],
+    "vim.visualModeKeyBindings": [
+        // format selection
+        {
+            "before": [
+                "f"
+            ],
+            "commands": ["editor.action.formatSelection"]
+        },
+        // expand seletion
+        {
+            "before": [
+                "l"
+            ],
+            "commands": ["editor.action.smartSelect.grow"]
+        },
+        // shrink selection
+        {
+            "before": [
+                "h"
+            ],
+            "commands": ["editor.action.smartSelect.shrink"]
+        },
+        // stage selection
+        {
+            "before": [
+                "s"
+            ],
+            "commands": ["git.stageSelectedRanges"]
+        },
+        // revert selection
+        {
+            "before": [
+                "r"
+            ],
+            "commands": ["git.revertSelectedRanges"]
+        },
+    ],
+    // "vim.enableNeovim": true,
+    // "vim.neovimPath": "/opt/homebrew/bin/nvim",
+    // "vim.neovimUseConfigFile": true,
+    // "vim.neovimConfigPath": "~/.config/nvim",
+    "vim.cursorStylePerMode.normal": "block",
+    "vim.cursorStylePerMode.insert": "block",
+    "vim.highlightedyank.enable": true,
     // * ╭───────────────────────────────────────────────────────╮
     // * │                    Markdown                           │
     // * ╰───────────────────────────────────────────────────────╯
