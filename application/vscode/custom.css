@@ -104,7 +104,6 @@
 .tabs-container {
 	height: auto !important;
 	padding: 3px !important;
-	padding-bottom: 5px !important;
 }
 
 /* Sidebar title */
@@ -282,10 +281,16 @@
 	font-family: var(--font-mh) !important;
 }
 
+
+#status\.host {
+	order: -999 !important;
+}
+
 #status\.scm\.0,
 #status\.scm\.1 {
 	background: var(--status_label_background) !important;
 	color: var(--lavender);
+	order: -998 !important;
 }
 
 /* .codicon-error:before {
@@ -296,6 +301,37 @@
 	color: var(--yellow);
 } */
 
+#vscodevim\.vim\.primary {
+	/* order: -997 !important; */
+	background: #89b4fa !important;
+	color: #1e1e2e !important;
+	font-weight: 600 !important;
+}
+
+#vscodevim\.vim\.primary[aria-label="-- INSERT --"] {
+	background: #a6e3a1 !important;
+}
+
+#vscodevim\.vim\.primary[aria-label="-- VISUAL --"] {
+	background: #cba6f7 !important;
+}
+
+#vscodevim\.vim\.primary[aria-label="-- VISUAL LINE --"] {
+	background: #cba6f7 !important;
+}
+
+#vscodevim\.vim\.primary[aria-label="-- VISUAL BLOCK --"] {
+	background: #cba6f7 !important;
+}
+
+#vscodevim\.vim\.primary[aria-label="-- VIM: DISABLED --"] {
+	background: #f38ba8 !important;
+}
+
+#vscodevim\.vim\.showcmd[aria-label="<ExtensionDisable>"] {
+	display: none !important;
+}
+
 #RoscoP\.ActiveFileInStatusBar {
 	order: 999 !important;
 	/* right most */
@@ -304,6 +340,8 @@
 .statusbar-item.right.__CUSTOM_CSS_JS_INDICATOR_CLS {
 	display: none !important;
 }
+
+/* right */
 
 #status\.editor\.selection {
 	background: var(--status_label_background) !important;
