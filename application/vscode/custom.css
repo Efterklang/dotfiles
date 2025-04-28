@@ -168,10 +168,10 @@
 .monaco-editor-hover,
 .monaco-hover {
 	z-index: 100;
-	border: solid 1px var(--blue) !important;
+	border: solid 1px var(--lavender) !important;
 	border-radius: 3px !important;
 	box-shadow: 0px 8px 16px var(--crust) !important;
-	padding: 8px !important;
+	/* padding: 8px !important; */
 }
 
 .monaco-tokenized-source {
