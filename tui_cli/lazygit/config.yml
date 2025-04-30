@@ -64,7 +64,17 @@ git:
     showGraph: always
     showWholeGraph: false
   parseEmoji: true
-
+customCommands:
+  - key: t
+    command: tig {{.SelectedSubCommit.Sha}} -- {{.SelectedCommitFile.Name}}
+    context: commitFiles
+    description: tig file (history of commits affecting file)
+    subprocess: true
+  - key: t
+    command: tig -- {{.SelectedFile.Name}}
+    context: files
+    description: tig file (history of commits affecting file)
+    subprocess: true
 keybinding:
   universal:
     confirmInEditor: <c-d>
