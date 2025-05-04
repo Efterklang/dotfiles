@@ -41,10 +41,6 @@ def fuzzy-command-search [] {
     }
 }
 
-def killf [] {
-    kill -f (ps | each {|i| $i | to json --raw} | str join "\n" | fzf --height 60% --layout reverse --border +s --tac | str trim | from json | get pid)
-}
-
 def cprv [input_file: string] {
   let base = ($input_file | path parse | get stem)
   let output_file = $"($base).webm"

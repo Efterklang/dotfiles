@@ -3,3 +3,5 @@ $env.PATH = ($env.PATH
     | uniq 
     | prepend ["/opt/homebrew/bin", "/opt/homebrew/sbin"]
 )
+
+alias kill = /bin/kill
