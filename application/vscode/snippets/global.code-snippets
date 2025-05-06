@@ -7,13 +7,6 @@
 		],
 		"description": "Inserts a timestamp"
 	},
-	"TODO Comment (//)": {
-		"prefix": "todo",
-		"body": [
-			"// TODO: ${1:Your task here}"
-		],
-		"description": "Insert a TODO comment in JavaScript, TypeScript, C, C++, Java, etc."
-	},
 	"TODO Comment (#)": {
 		"prefix": "todo",
 		"body": [
@@ -21,11 +14,4 @@
 		],
 		"description": "Insert a TODO comment in Python"
 	},
-	"TODO Comment (<!-- -->)": {
-		"prefix": "todo",
-		"body": [
-			"<!-- TODO: ${1:Your task here} -->"
-		],
-		"description": "Insert a TODO comment in HTML"
-	}
 }

@@ -78,7 +78,8 @@
 
 .tab.active {
 	font-weight: 600 !important;
-	border: 1px solid var(--lavender) !important;
+	font-style: italic !important;
+	/* border-left: 1px solid var(--lavender) !important; */
 }
 
 .tab {
@@ -87,8 +88,6 @@
 	margin-right: 2px !important;
 	padding-top: 2px !important;
 	height: 30px !important;
-	border: 1px solid #313244 !important;
-	background-color: var(--base) !important;
 	align-items: center !important;
 }
 
@@ -293,13 +292,13 @@
 	order: -998 !important;
 }
 
-/* .codicon-error:before {
+.codicon-error:before {
 	color: var(--red);
 }
 
 .codicon-warning:before {
 	color: var(--yellow);
-} */
+}
 
 #vscodevim\.vim\.primary {
 	/* order: -997 !important; */
@@ -361,9 +360,4 @@ div#chat\.statusBarEntry {
 	order: -999 !important;
 	margin-right: 0 !important;
 	padding-right: 2px !important;
-}
-
-/* debug console font; 新版本vscode可以在settings.json中配置字体 */
-.mtk1 {
-	font-family: var(--font-maple);
 }
