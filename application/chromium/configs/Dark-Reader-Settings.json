@@ -1,0 +1,226 @@
+{
+    "schemeVersion": 2,
+    "enabled": true,
+    "fetchNews": true,
+    "theme": {
+        "mode": 1,
+        "brightness": 100,
+        "contrast": 100,
+        "grayscale": 0,
+        "sepia": 0,
+        "useFont": true,
+        "fontFamily": "Maple Hand",
+        "textStroke": 0,
+        "engine": "dynamicTheme",
+        "stylesheet": "",
+        "darkSchemeBackgroundColor": "#1a1b26",
+        "darkSchemeTextColor": "#a9b1d6",
+        "lightSchemeBackgroundColor": "#dcdad7",
+        "lightSchemeTextColor": "#181a1b",
+        "scrollbarColor": "auto",
+        "selectionColor": "#89b4fa",
+        "styleSystemControls": true,
+        "lightColorScheme": "Default",
+        "darkColorScheme": "Tokyo Night",
+        "immediateModify": false
+    },
+    "presets": [],
+    "customThemes": [
+        {
+            "builtIn": true,
+            "theme": {
+                "mode": 1,
+                "brightness": 100,
+                "contrast": 100,
+                "grayscale": 0,
+                "sepia": 0,
+                "useFont": false,
+                "fontFamily": "Segoe UI",
+                "textStroke": 0,
+                "engine": "svgFilter",
+                "stylesheet": "",
+                "darkSchemeBackgroundColor": "#181a1b",
+                "darkSchemeTextColor": "#e8e6e3",
+                "lightSchemeBackgroundColor": "#dcdad7",
+                "lightSchemeTextColor": "#181a1b",
+                "scrollbarColor": "",
+                "selectionColor": "auto",
+                "styleSystemControls": false,
+                "lightColorScheme": "Default",
+                "darkColorScheme": "Default",
+                "immediateModify": false
+            },
+            "url": [
+                "*.officeapps.live.com"
+            ]
+        },
+        {
+            "builtIn": true,
+            "theme": {
+                "mode": 1,
+                "brightness": 100,
+                "contrast": 100,
+                "grayscale": 0,
+                "sepia": 0,
+                "useFont": false,
+                "fontFamily": "Segoe UI",
+                "textStroke": 0,
+                "engine": "svgFilter",
+                "stylesheet": "",
+                "darkSchemeBackgroundColor": "#181a1b",
+                "darkSchemeTextColor": "#e8e6e3",
+                "lightSchemeBackgroundColor": "#dcdad7",
+                "lightSchemeTextColor": "#181a1b",
+                "scrollbarColor": "",
+                "selectionColor": "auto",
+                "styleSystemControls": false,
+                "lightColorScheme": "Default",
+                "darkColorScheme": "Default",
+                "immediateModify": false
+            },
+            "url": [
+                "*.sharepoint.com"
+            ]
+        },
+        {
+            "builtIn": true,
+            "theme": {
+                "mode": 1,
+                "brightness": 100,
+                "contrast": 100,
+                "grayscale": 0,
+                "sepia": 0,
+                "useFont": false,
+                "fontFamily": "Segoe UI",
+                "textStroke": 0,
+                "engine": "svgFilter",
+                "stylesheet": "",
+                "darkSchemeBackgroundColor": "#181a1b",
+                "darkSchemeTextColor": "#e8e6e3",
+                "lightSchemeBackgroundColor": "#dcdad7",
+                "lightSchemeTextColor": "#181a1b",
+                "scrollbarColor": "",
+                "selectionColor": "auto",
+                "styleSystemControls": false,
+                "lightColorScheme": "Default",
+                "darkColorScheme": "Default",
+                "immediateModify": false
+            },
+            "url": [
+                "docs.google.com"
+            ]
+        },
+        {
+            "builtIn": true,
+            "theme": {
+                "mode": 1,
+                "brightness": 100,
+                "contrast": 100,
+                "grayscale": 0,
+                "sepia": 0,
+                "useFont": false,
+                "fontFamily": "Segoe UI",
+                "textStroke": 0,
+                "engine": "svgFilter",
+                "stylesheet": "",
+                "darkSchemeBackgroundColor": "#181a1b",
+                "darkSchemeTextColor": "#e8e6e3",
+                "lightSchemeBackgroundColor": "#dcdad7",
+                "lightSchemeTextColor": "#181a1b",
+                "scrollbarColor": "",
+                "selectionColor": "auto",
+                "styleSystemControls": false,
+                "lightColorScheme": "Default",
+                "darkColorScheme": "Default",
+                "immediateModify": false
+            },
+            "url": [
+                "onedrive.live.com"
+            ]
+        }
+    ],
+    "enabledByDefault": true,
+    "enabledFor": [],
+    "disabledFor": [
+        "efterklang.github.io",
+        "127.0.0.1:8000",
+        "onedrive.live.com",
+        "www2.tkn.tu-berlin.de",
+        "localhost:5000",
+        "www.imaegoo.com",
+        "localhost:4000",
+        "karobben.github.io",
+        "efterklang.vercel.app",
+        "drhig.github.io",
+        "www.pygame.org",
+        "apolloscape.auto",
+        "www.figma.com",
+        "m3.material.io",
+        "funnnny.fun",
+        "apc.delve.office.com",
+        "accounts.google.com",
+        "bbs.uestc.edu.cn",
+        "datatracker.ietf.org",
+        "wangyurui.com",
+        "docs.qq.com",
+        "cloud.mongodb.com",
+        "blog.tangwudi.com",
+        "www.lincol29.cn",
+        "www.stylus-lang.cn",
+        "uynad.github.io",
+        "arthals.ink",
+        "blog.lyh543.cn",
+        "3c9ab17a.efterklang-github-io.pages.dev",
+        "efterklang-github-io.pages.dev",
+        "gemini.google.com",
+        "www.ol4three.com",
+        "neumorphism.io",
+        "getcssscan.com",
+        "baike.baidu.com",
+        "nic.eu.org",
+        "www.material-tailwind.com",
+        "www.redblobgames.com",
+        "blog.pj568.sbs",
+        "www.foundertype.com",
+        "yscoder.github.io",
+        "roadmap.sh",
+        "labs.google",
+        "vluv.space",
+        "github.com",
+        "mail.google.com",
+        "stackoverflow.com"
+    ],
+    "changeBrowserTheme": false,
+    "syncSettings": true,
+    "syncSitesFixes": true,
+    "automation": {
+        "behavior": "OnOff",
+        "enabled": false,
+        "mode": "system"
+    },
+    "time": {
+        "activation": "18:00",
+        "deactivation": "9:00"
+    },
+    "location": {
+        "latitude": null,
+        "longitude": null
+    },
+    "previewNewDesign": true,
+    "previewNewestDesign": false,
+    "enableForPDF": false,
+    "enableForProtectedPages": true,
+    "enableContextMenus": true,
+    "detectDarkTheme": false,
+    "displayedNews": [
+        "thanks-2023"
+    ],
+    "installation": {
+        "date": 1726134228423,
+        "reason": "update",
+        "version": "4.9.90"
+    },
+    "readNews": [
+        "thanks-2023"
+    ]
+}
