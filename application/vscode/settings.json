@@ -505,141 +505,6 @@
         ".*\\\\.log$"
     ],
     // * ╭───────────────────────────────────────────────────────╮
-    // * │                    VSCode Vim                         │
-    // * ╰───────────────────────────────────────────────────────╯
-    "vim.leader": "<space>",
-    "vim.easymotion": true,
-    "vim.easymotionDimBackground": true,
-    "vim.sneak": true,
-    "vim.useSystemClipboard": true,
-    "vim.normalModeKeyBindings": [
-        // view navigation
-        {
-            "before": [
-                "<leader>",
-                "g"
-            ], // focus git
-            "commands": [
-                "workbench.view.scm"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "x"
-            ], // focus extensions
-            "commands": [
-                "workbench.view.extensions"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "e"
-            ], // focus explorer, cmd-e to hide
-            "commands": [
-                "workbench.view.explorer"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "E"
-            ], // focus secondary sidebar, cmd-k + cmd-e to hide
-            "commands": [
-                "workbench.action.focusAuxiliaryBar"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "f"
-            ], // focus search
-            "commands": [
-                "workbench.view.search"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "t"
-            ], // focus terminal
-            "commands": [
-                "workbench.action.terminal.toggleTerminal"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "d"
-            ], // focus debug
-            "commands": [
-                "workbench.debug.action.toggleRepl"
-            ]
-        },
-        // Editor Operation
-        {
-            "before": [
-                "x"
-            ],
-            "commands": [
-                "workbench.action.closeActiveEditor"
-            ]
-        },
-        {
-            "before": [
-                "X"
-            ],
-            "commands": [
-                "workbench.action.closeAllEditors"
-            ]
-        },
-    ],
-    "vim.visualModeKeyBindings": [
-        // format selection
-        {
-            "before": [
-                "f"
-            ],
-            "commands": ["editor.action.formatSelection"]
-        },
-        // expand seletion
-        {
-            "before": [
-                "l"
-            ],
-            "commands": ["editor.action.smartSelect.grow"]
-        },
-        // shrink selection
-        {
-            "before": [
-                "h"
-            ],
-            "commands": ["editor.action.smartSelect.shrink"]
-        },
-        // stage selection
-        {
-            "before": [
-                "s"
-            ],
-            "commands": ["git.stageSelectedRanges"]
-        },
-        // revert selection
-        {
-            "before": [
-                "r"
-            ],
-            "commands": ["git.revertSelectedRanges"]
-        },
-    ],
-    // "vim.enableNeovim": true,
-    // "vim.neovimPath": "/opt/homebrew/bin/nvim",
-    // "vim.neovimUseConfigFile": true,
-    // "vim.neovimConfigPath": "~/.config/nvim",
-    "vim.cursorStylePerMode.normal": "block",
-    "vim.cursorStylePerMode.insert": "block",
-    "vim.highlightedyank.enable": true,
-    // * ╭───────────────────────────────────────────────────────╮
     // * │                    Markdown                           │
     // * ╰───────────────────────────────────────────────────────╯
     "markless.allowDangerousHtml": true,
@@ -653,7 +518,6 @@
     "markdown.extension.theming.decoration.renderStrikethrough": true,
     "markdown.extension.theming.decoration.renderTrailingSpace": true,
     "markdown.preview.typographer": true,
-    "markdown.extension.theming.decoration.renderLink": true,
     "markdown-preview-enhanced.enableHTML5Embed": true,
     "markdown-preview-enhanced.enableTypographer": true,
     "markdown-preview-enhanced.frontMatterRenderingOption": "table",
@@ -662,6 +526,15 @@
     "markdown-preview-enhanced.codeBlockTheme": "none",
     "markdown-preview-enhanced.enablePreviewZenMode": false,
     "markdown-preview-enhanced.enableWikiLinkSyntax": true,
+    "markdown.extension.toc.orderedList": true,
+    "markdown.preview.fontFamily": "Monaspace Radon,Maple Mono",
+    "markdown.preview.scrollEditorWithPreview": false,
+    "markdown-preview-enhanced.previewTheme": "atom-dark.css",
+    "markdown-preview-enhanced.configPath": "/Users/gjx/.config/vscode/markdown-preview-enhanced",
+    "markdown.extension.completion.enabled": true,
+    "markdown.copyFiles.destination": {
+        "*": "./assets/${documentBaseName}/${documentBaseName}.${fileExtName}"
+    },
     "foam.files.attachmentExtensions": "pdf mp3 webm avi mov rtf txt doc docx",
     "foam.graph.titleMaxLength": 15,
     "foam.completion.label": "title",
@@ -672,15 +545,201 @@
             "attachment": "#cba6f7"
         }
     },
-    "markdown.extension.toc.orderedList": true,
-    "markdown.preview.fontFamily": "Monaspace Radon,Maple Mono",
-    "markdown.preview.scrollEditorWithPreview": false,
-    "markdown-preview-enhanced.previewTheme": "atom-dark.css",
-    "markdown-preview-enhanced.configPath": "C:/Users/24138/.config/vscode/markdown-preview-enhanced",
-    "markdown.extension.completion.enabled": true,
-    "markdown.copyFiles.destination": {
-        "**/*": "./${documentBaseName}/${documentBaseName}.${fileExtName}"
-    },
+    // * ╭───────────────────────────────────────────────────────╮
+    // * │                    VSCode Vim                         │
+    // * ╰───────────────────────────────────────────────────────╯
+    "vim.leader": "<space>",
+    "vim.easymotion": true,
+    "vim.easymotionDimBackground": true,
+    "vim.sneak": true,
+    "vim.showMarksInGutter": true,
+    "vim.shell": "/opt/homebrew/bin/nu",
+    "vim.smartRelativeLine": true,
+    "vim.sneakReplacesF": true,
+    "vim.useSystemClipboard": true,
+    "vim.autoSwitchInputMethod.enable": true,
+    "vim.visualstar": true,
+    "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.UnicodeHexInput",
+    "vim.autoSwitchInputMethod.obtainIMCmd": "/opt/homebrew/bin/im-select",
+    "vim.autoSwitchInputMethod.switchIMCmd": "/opt/homebrew/bin/im-select {im}",
+    "vim.normalModeKeyBindings": [
+        // view navigation
+        {
+            "before": [ ":" ],
+            "commands": [ "workbench.action.showCommands" ],
+            "silent": true
+        },
+        {
+            "before": [ "/" ],
+            "commands": [ "actions.find" ]
+        },
+        {
+            "before": [ "<leader>", "m" ],
+            "commands": [ "bookmarks.toggle" ]
+        },
+        {
+            "before": [ "<leader>", "b" ],
+            "commands": [ "bookmarks.list" ]
+        },
+        {
+            "before": [ "enter" ],
+            "commands": [ "lineBreakInsert" ]
+        },
+        {
+            "before": [ "<leader>", "g", "g" ],
+            "commands": [ "lazygit-vscode.toggle" ]
+        },
+        {
+            "before": [ "<leader>", "g", "c" ],
+            "commands": [ "git-graph.view" ]
+        },
+        {
+            "before": [ "<leader>", "x" ], // focus extensions
+            "commands": [ "workbench.view.extensions" ]
+        },
+        {
+            "before": [ "<leader>", "e" ], // focus explorer, cmd-e to hide
+            "commands": [ "workbench.view.explorer" ]
+        },
+        {
+            "before": [ "K" ],
+            "commands": [ "editor.action.showHover" ]
+        },
+        // 转到定义
+        {
+            "before": [ "g", "d" ],
+            "commands": [ "editor.action.revealDefinition" ]
+        },
+        // 转到引用
+        {
+            "before": [ "g", "r" ],
+            "commands": [ "editor.action.goToReferences" ]
+        },
+        // 转到实现
+        {
+            "before": [ "g", "i" ],
+            "commands": [ "editor.action.goToImplementation" ]
+        },
+        // 回退到上一个位置
+        {
+            "before": [ "g", "b" ],
+            "commands": [ "workbench.action.navigateBack" ]
+        },
+        {
+            "before": [ "<leader>", "E" ], // focus secondary sidebar, cmd-k + cmd-e to hide
+            "commands": [ "workbench.action.focusAuxiliaryBar" ]
+        },
+        // 全局搜索文件名
+        {
+            "before": [ "<leader>", "f", "f" ],
+            "commands": [ "workbench.action.quickOpen" ]
+        },
+        // 全局搜索文字
+        {
+            "before": [ "<leader>", "f", "w" ],
+            "commands": [ "workbench.action.quickTextSearch" ]
+        },
+        // search symbol(current)
+        {
+            "before": [ "<leader>", "f", "s" ],
+            "commands": [ "workbench.action.gotoSymbol" ]
+        },
+        // search symbol(global)
+        {
+            "before": [ "<leader>", "f", "S" ],
+            "commands": [ "workbench.action.showAllSymbols" ]
+        },
+        // 退出 vscode
+        {
+            "before": [ "<leader>", "q" ],
+            "commands": [ "workbench.action.closeWindow" ]
+        },
+        {
+            "before": [ "<leader>", "t" ], // focus terminal
+            "commands": [ "workbench.action.terminal.toggleTerminal" ]
+        },
+        {
+            "before": [ "<leader>", "d" ], // focus debug
+            "commands": [ "workbench.debug.action.toggleRepl" ]
+        },
+        {
+            "before": [ "<leader>", "f" ],
+            "commands": [ "workbench.action.quickOpen" ]
+        },
+        // Editor Operation
+        {
+            "before": [ "x" ],
+            "commands": [ "workbench.action.closeActiveEditor" ]
+        },
+        {
+            "before": [ "X" ],
+            "commands": [ "workbench.action.closeAllEditors" ]
+        },
+        {
+            "before": [ "H" ],
+            "commands": [ "workbench.action.navigateBack" ]
+        },
+        {
+            "before": [ "L" ],
+            "commands": [ "workbench.action.navigateForward" ]
+        }, // gh 到行头
+        {
+            "before": [ "g", "h" ],
+            "commands": [ "cursorHome" ]
+        },
+        // gl 到行尾
+        {
+            "before": [ "g", "l" ],
+            "commands": [ "cursorEnd" ]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        // format selection
+        {
+            "before": [ "/" ],
+            "commands": [ "actions.findWithSelection" ]
+        },
+        {
+            "before": [ "f" ],
+            "commands": [ "editor.action.formatSelection" ]
+        },
+        // expand seletion
+        {
+            "before": [ "l" ],
+            "commands": [ "editor.action.smartSelect.grow" ]
+        },
+        // shrink selection
+        {
+            "before": [ "h" ],
+            "commands": [ "editor.action.smartSelect.shrink" ]
+        },
+        // stage selection
+        {
+            "before": [ "s" ],
+            "commands": [ "git.stageSelectedRanges" ]
+        },
+        // revert selection
+        {
+            "before": [ "r" ],
+            "commands": [ "git.revertSelectedRanges" ]
+        },
+        // Bind > and < in visual mode to indent/outdent lines (repeatable):
+        {
+            "before": [ ">" ],
+            "commands": [ "editor.action.indentLines" ]
+        },
+        {
+            "before": [ "<" ],
+            "commands": [ "editor.action.outdentLines" ]
+        }
+    ],
+    // "vim.enableNeovim": true,
+    // "vim.neovimPath": "/opt/homebrew/bin/nvim",
+    // "vim.neovimUseConfigFile": true,
+    // "vim.neovimConfigPath": "~/.config/nvim",
+    "vim.cursorStylePerMode.normal": "block",
+    "vim.cursorStylePerMode.insert": "block",
+    "vim.highlightedyank.enable": true,
     // * ╭───────────────────────────────────────────────────────╮
     // * │                    MISC                               │
     // * ╰───────────────────────────────────────────────────────╯
