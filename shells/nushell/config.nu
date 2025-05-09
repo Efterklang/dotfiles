@@ -169,4 +169,21 @@ source ./plugins/plugins.nu
 source ./aliases/aliases.nu
 source ./completions/completions.nu
 source ./keybindings/keybindings.nu
-source ./themes/catppuccin-mocha.nu
+
+# Check system appearance (dark/light mode) and load appropriate theme
+def get_macos_appearance [] {
+    let result = (do -i { run-external "defaults" "read" "-g" "AppleInterfaceStyle" } | complete)
+    if $result.exit_code == 0 and ($result.stdout | str trim) == "Dark" {
+        "dark"
+    } else {
+        "light"
+    }
+}
+
+let appearance = if $nu.os-info.name == "macos" { get_macos_appearance } else { "dark" }
+if $appearance == "dark" {
+    source "./themes/catppuccin-mocha.nu"
+} else {
+    # You can change this to a light theme of your choice
+    source "./themes/catppuccin-latte.nu"
+}
