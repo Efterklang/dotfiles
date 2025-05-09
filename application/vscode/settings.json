@@ -219,7 +219,7 @@
     "animations.Enabled": true,
     "animations.Active": "Indent",
     "animations.CursorAnimation": true,
-    "animations.Install-Method": "Custom CSS and JS",
+    "animations.Install-Method": "Custom UI Style",
     "animations.CursorAnimationOptions": {
         "Color": "#6d8be0",
         "TrailLength": 8,
@@ -231,10 +231,13 @@
         "Scrolling": 200,
         "Tabs": 200
     },
-    "vscode_custom_css.imports": [
-        "file:///${userHome}/.config/vscode/custom.css",
-        "file:///d:/envir_vars/scoop/apps/vscode/1.99.3/data/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
+    "custom-ui-style.external.imports": [
+        {
+            "type": "css",
+            "url": "https://raw.githubusercontent.com/Efterklang/config/refs/heads/main/application/vscode/custom.css"
+        }
     ],
+    "custom-ui-style.external.loadStrategy": "cache",
     "background.enabled": false,
     "background.fullscreen": {
         "useFront": false,
