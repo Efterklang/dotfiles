@@ -60,6 +60,9 @@
     "editor.scrollbar.verticalScrollbarSize": 13,
     "editor.wrappingStrategy": "advanced",
     "editor.minimap.enabled": false,
+    "editor.maxTokenizationLineLength": 10000,
+    "editor.largeFileOptimizations": true,
+    "editor.wordBasedSuggestions": "matchingDocument",
     "editor.unicodeHighlight.ambiguousCharacters": false,
     "editor.cursorBlinking": "smooth",
     "editor.cursorStyle": "block",
@@ -115,13 +118,13 @@
     "terminal.integrated.cursorWidth": 2,
     "terminal.integrated.gpuAcceleration": "auto",
     "terminal.integrated.enableImages": true,
-    "terminal.integrated.env.windows": {},
+    "terminal.integrated.env.windows": { },
     "terminal.integrated.shellIntegration.decorationsEnabled": "overviewRuler",
     "terminal.integrated.enableVisualBell": true,
     "terminal.integrated.fastScrollSensitivity": 8,
     "terminal.integrated.accessibleViewFocusOnCommandExecution": true,
     "terminal.integrated.rightClickBehavior": "default",
-    "terminal.external.windowsExec": "D:\\envir_vars\\scoop\\apps\\Nushell\\current\\nu.exe",
+    "terminal.external.windowsExec": "/opt/homebrew/bin/nu",
     "terminal.integrated.profiles.windows": {
         "PowerShell": {
             "source": "PowerShell",
@@ -161,6 +164,14 @@
         "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock"
     },
     "files.eol": "\n",
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/*/**": true,
+        "**/.hg/store/**": true,
+        "**/dist/**": true,
+        "**/build/**": true
+    },
     "files.exclude": {
         "**/node_modules": true,
         "**/.idea*": true,
@@ -177,11 +188,12 @@
     "search.quickOpen.includeHistory": false,
     "search.quickOpen.history.filterSortOrder": "recency",
     "search.sortOrder": "modified",
-    "search.useIgnoreFiles": false,
-    "search.useGlobalIgnoreFiles": false,
-    "search.useParentIgnoreFiles": false,
+    "search.useIgnoreFiles": true,
+    "search.useGlobalIgnoreFiles": true,
+    "search.useParentIgnoreFiles": true,
     "search.followSymlinks": true,
     "search.mode": "view",
+    "search.searchOnType": false,
     "search.exclude": {
         "**/node_modules": true,
         "**/public": true,
@@ -238,25 +250,11 @@
         }
     ],
     "custom-ui-style.external.loadStrategy": "cache",
-    "background.enabled": false,
-    "background.fullscreen": {
-        "useFront": false,
-        "style": {
-            "background-position": "100% 100%",
-            "background-size": "cover",
-            "opacity": 0.95
-        },
-        "images": [
-            "file:///E:/OneDrive - 商业版/Pictures/WallPaper/Minimalist/arch-black-4k.png"
-        ],
-        "position": "center",
-        "interval": 100,
-        "random": false
-    },
     // * ╭───────────────────────────────────────────────────────╮
     // * │                 Source Control                        │
     // * ╰───────────────────────────────────────────────────────╯
     "git.mergeEditor": true,
+    "git.autofetch": true,
     "git-graph.enhancedAccessibility": true,
     "git-graph.graph.colours": [
         "#89b4fa",
@@ -285,16 +283,6 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.hideUnchangedRegions.enabled": true,
     "diffEditor.experimental.useTrueInlineView": true,
-    "github.copilot.enable": {
-        "*": true,
-        "plaintext": false,
-        "markdown": true,
-        "scminput": false,
-        "java": true
-    },
-    "github.copilot.advanced": {
-        "authProvider": "github"
-    },
     "scm.alwaysShowActions": true,
     "scm.alwaysShowRepositories": true,
     "scm.countBadge": "off",
@@ -303,9 +291,6 @@
     // * ╭───────────────────────────────────────────────────────╮
     // * │                    extensions                         │
     // * ╰───────────────────────────────────────────────────────╯
-    "chat.commandCenter.enabled": false,
-    "chat.experimental.statusIndicator.enabled": true,
-    "chat.renderRelatedFiles": true,
     "findJump.matchBackground": "#1e1e2e",
     "findJump.matchForeground": "#fab387",
     "findJump.letterBackground": "#1e1e2e",
@@ -331,13 +316,7 @@
         }
     ],
     "todo-tree.filtering.ignoreGitSubmodules": true,
-    "todo-tree.general.tags": [
-        "todo",
-        "bug",
-        "tag",
-        "done",
-        "note"
-    ],
+    "todo-tree.general.tags": [ "todo", "bug", "tag", "done", "note" ],
     "todo-tree.filtering.excludeGlobs": [
         "**/node_modules/*/**",
         "**/*.yml",
@@ -385,10 +364,10 @@
         "buttonsEnabled": true
     },
     "errorLens.gutterIconsEnabled": true,
-    "errorLens.fontFamily": "Monaspace Radon",
+    "errorLens.fontFamily": "Maple Mono NF CN",
     "errorLens.fontWeight": "100",
     "leetcode.endpoint": "leetcode-cn",
-    "leetcode.nodePath": "D:\\envir_vars\\scoop\\apps\\nodejs-lts\\current\\node.exe",
+    "leetcode.nodePath": "/opt/homebrew/bin/node",
     "leetcode.defaultLanguage": "mysql",
     "leetcode.workspaceFolder": "E:\\UESTC\\LeetCode\\",
     "leetcode.filePath": {
@@ -426,7 +405,6 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.quickSuggestions": {
             "strings": true
         },
@@ -435,6 +413,7 @@
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
+    "json.format.keepLines": true,
     "[markdown]": {
         "editor.defaultFormatter": "yzhang.markdown-all-in-one",
         "editor.quickSuggestions": {
@@ -446,6 +425,9 @@
     "markdownlint.config": {
         "no-inline-html": false
     },
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
     "[css]": {
         "editor.defaultFormatter": "vscode.css-language-features"
     },
@@ -456,13 +438,9 @@
         },
         "editor.defaultFormatter": "charliermarsh.ruff"
     },
-    "[javascript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
     "python.analysis.aiCodeActions": {
         "implementAbstractClasses": true
     },
-    "python.analysis.usePullDiagnostics": true,
     "python.analysis.enableEditableInstalls": true,
     "python.analysis.autoFormatStrings": true,
     "python.analysis.autoImportCompletions": true,
@@ -477,20 +455,17 @@
     ],
     "python.analysis.generateWithTypeAnnotation": true,
     "python.analysis.importFormat": "relative",
-    "python.analysis.inlayHints.callArgumentNames": "partial",
     "python.analysis.inlayHints.functionReturnTypes": true,
-    "python.analysis.inlayHints.pytestParameters": true,
-    "python.analysis.inlayHints.variableTypes": true,
-    "python.analysis.diagnosticMode": "workspace",
     "python.analysis.typeEvaluation.strictSetInference": true,
     "python.analysis.typeCheckingMode": "standard",
     "python.analysis.typeEvaluation.deprecateTypingAliases": true,
     "python.analysis.typeEvaluation.enableExperimentalFeatures": true,
     "python.analysis.typeEvaluation.enableReachabilityAnalysis": true,
-    "python.defaultInterpreterPath": "D:\\envir_vars\\python312\\python.exe",
     "python.languageServer": "Pylance",
     "python.terminal.activateEnvInCurrentTerminal": true,
     "python.terminal.shellIntegration.enabled": true,
+    "debugpy.showPythonInlineValues": true,
+    "debugpy.debugJustMyCode": false,
     // "java.jdt.ls.javac.enabled": "on",
     "java.completion.chain.enabled": true,
     "java.completion.guessMethodArguments": "insertBestGuessedArguments",
@@ -548,6 +523,37 @@
             "attachment": "#cba6f7"
         }
     },
+    // * ╭───────────────────────────────────────────────────────╮
+    // * │                    AI Configs                         │
+    // * ╰───────────────────────────────────────────────────────╯   
+    "chat.agent.enabled": true,
+    "chat.commandCenter.enabled": false,
+    "chat.experimental.statusIndicator.enabled": true,
+    "chat.renderRelatedFiles": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false
+    },
+    "github.copilot.advanced": {
+        "authProvider": "github"
+    },
+    "github.copilot.selectedCompletionModel": "",
+    "github.copilot.chat.codesearch.enabled": true,
+    "github.copilot.chat.agent.thinkingTool": true,
+    "github.copilot.chat.editor.temporalContext.enabled": true,
+    "github.copilot.chat.edits.temporalContext.enabled": true,
+    "github.copilot.chat.search.keywordSuggestions": true,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "roo-cline.allowedCommands": [
+        "npm test",
+        "npm install",
+        "tsc",
+        "git log",
+        "git diff",
+        "git show"
+    ],
     // * ╭───────────────────────────────────────────────────────╮
     // * │                    VSCode Vim                         │
     // * ╰───────────────────────────────────────────────────────╯
@@ -751,13 +757,10 @@
     "ActiveFileInStatusBar.fullpath": false,
     "ActiveFileInStatusBar.revealFile": true,
     "application.experimental.rendererProfiling": true,
-    "AutoHotkey2.InterpreterPath": "d:\\envir_vars\\scoop\\apps\\autohotkey\\current\\v2\\AutoHotkey64.exe",
     "breadcrumbs.showTypeParameters": true,
     "chat.editor.wordWrap": "on",
     "codeimg.containerPadding": "none",
     "codeimg.format": "webp",
-    "debugpy.showPythonInlineValues": true,
-    "debugpy.debugJustMyCode": false,
     "evenBetterToml.formatter.columnWidth": 80,
     "excalidraw.language": "en",
     "excalidraw.theme": "auto",
@@ -769,19 +772,10 @@
     "hediet.vscode-drawio.theme": "automatic",
     "inlineChat.accessibleDiffView": "on",
     "outline.showTypeParameters": true,
-    "projectManager.git.ignoredFolders": [
-        "node_modules",
-        "test",
-        "Markdown"
-    ],
-    "projectManager.tags": [
-        "Configs",
-        "Work"
-    ],
+    "projectManager.git.ignoredFolders": [ "node_modules", "test", "Markdown" ],
+    "projectManager.tags": [ "Configs", "Work" ],
     "remote.SSH.enableRemoteCommand": true,
-    "remote.SSH.path": "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
     "remote.SSH.showLoginTerminal": true,
-    "remoteHub.commitDirectlyWarning": "off",
     "remoteHub.gitProtocol": "ssh",
     "remoteHub.richNavigation.enabled": true,
     "resmon.disk.format": "PercentUsed",
@@ -789,11 +783,8 @@
     "security.workspace.trust.untrustedFiles": "open",
     "telemetry.telemetryLevel": "off",
     "update.enableWindowsBackgroundUpdates": false,
-    "update.mode": "none",
-    "vscode_custom_css.statusbar": false,
-    "wordcount_cjk.activateLanguages": [
-        "markdown"
-    ],
+    "update.mode": "manual",
+    "wordcount_cjk.activateLanguages": [ "markdown" ],
     "files.associations": {
         "*.json": "jsonc"
     },
@@ -812,22 +803,30 @@
     "catppuccin-noctis-icons.hidesExplorerArrows": false,
     "files.autoSave": "afterDelay",
     "window.menuBarVisibility": "compact",
-    "editor.largeFileOptimizations": false,
-    "roo-cline.allowedCommands": [
-        "npm test",
-        "npm install",
-        "tsc",
-        "git log",
-        "git diff",
-        "git show"
-    ],
     "database-client.autoSync": true,
     "debug.showVariableTypes": true,
-    "github.copilot.nextEditSuggestions.enabled": true,
     "remote.defaultExtensionsIfInstalledLocally": [
         "GitHub.copilot",
         "GitHub.copilot-chat",
         "GitHub.vscode-pull-request-github"
     ],
-    "chat.agent.enabled": true
+    "editor.accessibilitySupport": "off",
+    "vscode-office.editorTheme": "Auto",
+    "extensions.verifySignature": false,
+    "remote.downloadExtensionsLocally": true,
+    "remote.SSH.localServerDownload": "always",
+    "accessibility.signalOptions.volume": 0,
+    "resmon.show.battery": false,
+    "python.analysis.typeEvaluation.strictParameterNoneValue": false,
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    },
+    "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
+    "workbench.preferredLightColorTheme": "Catppuccin Macchiato",
+    "vscode-office.pasterImgPath": "assets/${fileName}/${now}.png",
+    "markless.link": false,
+    "markdown.preview.linkify": false,
+    "markdown.extension.theming.decoration.renderLink": true,
+    "window.autoDetectColorScheme": true,
+    "custom-ui-style.font.monospace": "Maple Mono NF CN"
 }
