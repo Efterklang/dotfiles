@@ -1,129 +1,129 @@
 # User Configuration
 [user]
-name = Efterklang
-email = gaojiaxing2004@qq.com
-useConfigOnly = true
+	name = Efterklang
+	email = gaojiaxing2004@qq.com
+	useConfigOnly = true
 
 # Core Settings
 [core]
-editor = nvim
-autocrlf = input
-whitespace = cr-at-eol
-pager = delta
-rebase = true
-quotepath = false
-longpaths = true
-trustctime = false
-excludesfile = ~/.gitignore_global
-ignorecase = true
-untrackedcache = true
+	editor = nvim
+	autocrlf = input
+	whitespace = cr-at-eol
+	pager = delta
+	rebase = true
+	quotepath = false
+	longpaths = true
+	trustctime = false
+	excludesfile = ~/.gitignore_global
+	ignorecase = true
+	untrackedcache = true
 
 # Network and Protocol Settings
 [http]
-postBuffer = 655360000
-lowSpeedLimit = 0
-lowSpeedTime = 999999
-version = HTTP/1.1
+	postBuffer = 655360000
+	lowSpeedLimit = 0
+	lowSpeedTime = 999999
+	version = HTTP/1.1
 	sslBackend = openssl
 
 [protocol]
-version = 1
+	version = 1
 
 # Delta Configuration
 [interactive]
-diffFilter = delta --color-only
+	diffFilter = delta --color-only
 
 [delta]
-side-by-side = false 
-navigate = true
-dark = true
-features = catppuccin-mocha
+	side-by-side = false
+	navigate = true
+	dark = true
+	features = catppuccin-mocha
 
 [delta "catppuccin-mocha"]
-blame-palette = "#1e1e2e #181825 #11111b #313244 #45475a"
-commit-decoration-style = "#6c7086" bold box ul
-dark = true
-file-decoration-style = "#6c7086"
-file-style = "#cdd6f4"
-hunk-header-decoration-style = "#6c7086" box ul
-hunk-header-file-style = bold
-hunk-header-line-number-style = bold "#a6adc8"
-hunk-header-style = file line-number syntax
-line-numbers-left-style = "#6c7086"
-line-numbers-minus-style = bold "#f38ba8"
-line-numbers-plus-style = bold "#a6e3a1"
-line-numbers-right-style = "#6c7086"
-line-numbers-zero-style = "#6c7086"
-minus-emph-style = bold syntax "#53394c"
-minus-style = syntax "#34293a"
-plus-emph-style = bold syntax "#404f4a"
-plus-style = syntax "#2c3239"
-map-styles = \
-bold purple = "#494060", \
-bold blue = "#384361", \
-bold cyan = "#384d5d", \
-bold yellow = "#544f4e" >syntax >syntax >syntax >syntax
-syntax-theme = Catppuccin Mocha
+	blame-palette = "#1e1e2e #181825 #11111b #313244 #45475a"
+	commit-decoration-style = "#6c7086" bold box ul
+	dark = true
+	file-decoration-style = "#6c7086"
+	file-style = "#cdd6f4"
+	hunk-header-decoration-style = "#6c7086" box ul
+	hunk-header-file-style = bold
+	hunk-header-line-number-style = bold "#a6adc8"
+	hunk-header-style = file line-number syntax
+	line-numbers-left-style = "#6c7086"
+	line-numbers-minus-style = bold "#f38ba8"
+	line-numbers-plus-style = bold "#a6e3a1"
+	line-numbers-right-style = "#6c7086"
+	line-numbers-zero-style = "#6c7086"
+	minus-emph-style = bold syntax "#53394c"
+	minus-style = syntax "#34293a"
+	plus-emph-style = bold syntax "#404f4a"
+	plus-style = syntax "#2c3239"
+	map-styles = \
+	bold purple = "#494060", \
+	bold blue = "#384361", \
+	bold cyan = "#384d5d", \
+	bold yellow = "#544f4e" >syntax >syntax >syntax >syntax
+	syntax-theme = Catppuccin Mocha
 
 # Merge and Diff Settings
 [merge]
-tool = vscode
-conflictStyle = zdiff3
+	tool = vscode
+	conflictStyle = zdiff3
 
 [mergetool "vscode"]
-cmd = code --wait $MERGED
+	cmd = code --wait $MERGED
 
 [mergetool]
-keepBackup = false
+	keepBackup = false
 
 [mergetool "*.*_VisualStudioCode"]
-cmd = 'Code.exe' -n --wait \"$MERGED\"
-trustexitcode = false
+	cmd = 'Code.exe' -n --wait \"$MERGED\"
+	trustexitcode = false
 
 [diff "text"]
-textconv = bat
+	textconv = bat
 
 # Git LFS Settings
 [filter "lfs"]
-clean = git-lfs clean -- %f
-smudge = git-lfs smudge -- %f
-process = git-lfs filter-process
-required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 
 [lfs]
-concurrenttransfers = 16
-fetchrecentrefsdays = 0
-pruneoffsetdays = 0
-dialtimeout = 3
-tlstimeout = 3
+	concurrenttransfers = 16
+	fetchrecentrefsdays = 0
+	pruneoffsetdays = 0
+	dialtimeout = 3
+	tlstimeout = 3
 
 [merge "lfs-text"]
-driver = git lfs merge-driver --ancestor %O --current %A --other %B --marker-size %L --output %A --program 'git merge-file --stdout --marker-size=%%L %%A %%O %%B >%%D'
+	driver = git lfs merge-driver --ancestor %O --current %A --other %B --marker-size %L --output %A --program 'git merge-file --stdout --marker-size=%%L %%A %%O %%B >%%D'
 
 # Credential Settings
 [credential]
-helper = store
+	helper = store
 
 [credential "helperselector"]
-selected = wincred
+	selected = wincred
 
 # Miscellaneous Settings
 [init]
-defaultBranch = main
+	defaultBranch = main
 
 [safe]
-directory = *
+	directory = *
 
 [sendpack]
-sideband = false
+	sideband = false
 
 [rebase]
-backend = merge
+	backend = merge
 
 [pull]
-rebase = true
+	rebase = true
 
 [gc]
-auto = 0
+	auto = 0
 [push]
 	autoSetupRemote = true
