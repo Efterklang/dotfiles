@@ -277,7 +277,6 @@
     "git.openRepositoryInParentFolders": "always",
     "git.terminalAuthentication": true,
     "git.terminalGitEditor": true,
-    "git.blame.editorDecoration.enabled": true,
     "git.blame.editorDecoration.template": "${subject}, ${authorName} (${authorDateAgo})",
     "diffEditor.wordWrap": "off",
     "diffEditor.ignoreTrimWhitespace": false,
@@ -638,6 +637,21 @@
             "before": [ "<leader>", "E" ], // focus secondary sidebar, cmd-k + cmd-e to hide
             "commands": [ "workbench.action.focusAuxiliaryBar" ]
         },
+        // edit settings.json
+        {
+            "before": [ "<leader>", "s", "s" ],
+            "commands": [ "workbench.action.openSettingsJson" ]
+        },
+        // open command palette
+        {
+            "before": [ "<leader>", "p" ],
+            "commands": [ "workbench.action.showCommands" ]
+        },
+        // go to opened tab
+        {
+            "before": [ "<leader>", "f", "o" ],
+            "commands": [ "workbench.action.showAllEditors" ]
+        },
         // 全局搜索文件名
         {
             "before": [ "<leader>", "f", "f" ],
@@ -670,10 +684,6 @@
         {
             "before": [ "<leader>", "d" ], // focus debug
             "commands": [ "workbench.debug.action.toggleRepl" ]
-        },
-        {
-            "before": [ "<leader>", "f" ],
-            "commands": [ "workbench.action.quickOpen" ]
         },
         // Editor Operation
         {
