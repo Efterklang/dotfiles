@@ -9,3 +9,5 @@ lazy-lock.json
 *.bak
 # mac
 .DS_Store
+# chrome extension
+*.pak
