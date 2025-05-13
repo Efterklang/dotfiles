@@ -581,6 +581,16 @@
             "before": [ "/" ],
             "commands": [ "actions.find" ]
         },
+        // spilit horizontally
+        {
+            "before": [ "<leader>", "-" ],
+            "commands": [ "workbench.action.splitEditorDown" ]
+        },
+        // spilit vertically
+        {
+            "before": [ "<leader>", "|" ],
+            "commands": [ "workbench.action.splitEditorRight" ]
+        },
         {
             "before": [ "<leader>", "m" ],
             "commands": [ "bookmarks.toggle" ]
