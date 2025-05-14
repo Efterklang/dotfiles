@@ -161,6 +161,7 @@ return {
 	["Nachrichten"] = ":messages:",
 	["Messenger"] = ":messenger:",
 	["Microsoft Edge"] = ":microsoft_edge:",
+	["Microsoft Edge Dev"] = ":microsoft_edge:",
 	["Microsoft Excel"] = ":microsoft_excel:",
 	["Microsoft Outlook"] = ":microsoft_outlook:",
 	["Microsoft PowerPoint"] = ":microsoft_power_point:",
