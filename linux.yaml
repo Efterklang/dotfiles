@@ -17,8 +17,6 @@
       path: tui_cli/helix
     ~/.config/nushell:
       path: shells/nushell
-      exclude: shells/nushell/plugins/omp.nu
     ~/.config/yazi: tui_cli/yazi
-    ~/.config/vscode/custom.css: application/vscode/custom.css
     ~/.config/vscode/markdown-preview-enhanced: application/vscode/markdown-preview-enhanced
 - shell: []

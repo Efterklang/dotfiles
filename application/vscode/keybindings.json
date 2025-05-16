@@ -4,16 +4,6 @@
     // * │               List Navigation                         │
     // * ╰───────────────────────────────────────────────────────╯
     {
-        "key": "k",
-        "command": "list.focusUp",
-        "when": "listFocus && !inputFocus"
-    },
-    {
-        "key": "j",
-        "command": "list.focusDown",
-        "when": "listFocus && !inputFocus"
-    },
-    {
         "key": "c",
         "command": "copyFilePath",
         "when": "!editorFocus && !inputFocus"
@@ -166,26 +156,6 @@
         "key": "ctrl+left",
         "command": "-list.collapseAll",
         "when": "listFocus && !inputFocus && !treestickyScrollFocused"
-    },
-    {
-        "key": "right",
-        "command": "-list.expand",
-        "when": "listFocus && treeElementCanExpand && !inputFocus && !treestickyScrollFocused || listFocus && treeElementHasChild && !inputFocus && !treestickyScrollFocused"
-    },
-    {
-        "key": "h",
-        "command": "list.collapse",
-        "when": "listFocus && treeElementCanCollapse && !inputFocus && !treestickyScrollFocused || listFocus && treeElementHasParent && !inputFocus && !treestickyScrollFocused"
-    },
-    {
-        "key": "l",
-        "command": "list.expand",
-        "when": "listFocus && treeElementCanExpand && !inputFocus && !treestickyScrollFocused || listFocus && treeElementHasChild && !inputFocus && !treestickyScrollFocused"
-    },
-    {
-        "key": "left",
-        "command": "-list.collapse",
-        "when": "listFocus && treeElementCanCollapse && !inputFocus && !treestickyScrollFocused || listFocus && treeElementHasParent && !inputFocus && !treestickyScrollFocused"
     },
     {
         "key": "ctrl+tab",
@@ -667,27 +637,6 @@
         "key": "cmd+w",
         "command": "-workbench.action.closeWindow",
         "when": "!editorIsOpen && !multipleEditorGroups"
-    },
-    // Make vim plugin compatible with github copilot next edit
-    {
-        "key": "escape",
-        "command": "-extension.vim_escape",
-        "when": "editorTextFocus && vim.active && !inDebugRepl"
-    },
-    {
-        "key": "Escape",
-        "command": "extension.vim_escape",
-        "when": "editorTextFocus && vim.active && !inDebugRepl && !inlineSuggestionVisible && !inlineEditIsVisible && !testing.isPeekVisible && !testing.isInPeek && !suggestWidgetVisible && !findWidgetVisible && !dirtyDiffVisible && (vim.mode == 'Insert' || !notebookEditorFocused)"
-    },
-    {
-        "key": "tab",
-        "command": "-extension.vim_tab",
-        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
-    },
-    {
-        "key": "tab",
-        "command": "extension.vim_tab",
-        "when": "editorTextFocus && vim.active && vim.mode != 'Insert' && !inDebugRepl && !inlineEditIsVisible"
     },
     {
         "key": "shift+cmd+[",

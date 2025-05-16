@@ -15,7 +15,6 @@
     ~/.config/zellij: tui_cli/zellij
     ~/.config/kitty: ./application/kitty/kitty_hrtowii
     ~/.config/sketchybar: ./application/sketchybar/sketchybar_felix_lua
-    ~/.config/vscode/custom.css: application/vscode/custom.css
     ~/.config/vscode/markdown-preview-enhanced: application/vscode/markdown-preview-enhanced
     ~/Library/Application Support/nushell: shells/nushell
     ~/Library/Application Support/lazygit: tui_cli/lazygit
