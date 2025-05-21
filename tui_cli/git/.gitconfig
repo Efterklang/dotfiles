@@ -14,7 +14,7 @@
 	quotepath = false
 	longpaths = true
 	trustctime = false
-	excludesfile = ~/.gitignore_global
+	excludesfile = ~/.gitignore
 	ignorecase = true
 	untrackedcache = true
 
@@ -75,10 +75,6 @@
 
 [mergetool]
 	keepBackup = false
-
-[mergetool "*.*_VisualStudioCode"]
-	cmd = 'Code.exe' -n --wait \"$MERGED\"
-	trustexitcode = false
 
 [diff "text"]
 	textconv = bat
