@@ -691,5 +691,10 @@
     {
         "key": "cmd+e",
         "command": "workbench.files.action.focusFilesExplorer"
+    },
+    {
+        "key": "cmd+i",
+        "command": "-markdown.extension.editing.toggleItalic",
+        "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
     }
 ]

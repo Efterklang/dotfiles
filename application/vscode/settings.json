@@ -243,6 +243,7 @@
         "Scrolling": 200,
         "Tabs": 200
     },
+    // "custom-ui-style.background.url": "/Users/gjx/dotfiles/application/vscode/custom.css",
     "custom-ui-style.external.imports": [
         {
             "type": "css",
@@ -720,7 +721,12 @@
         {
             "before": [ "g", "l" ],
             "commands": [ "cursorEnd" ]
-        }
+        },
+        // open in external application
+        {
+            "before": [ "<leader>", "O" ],
+            "commands": [ "openInExternalApp.open" ]
+        },
     ],
     "vim.visualModeKeyBindings": [
         // format selection
@@ -849,5 +855,6 @@
     "markdown.extension.theming.decoration.renderLink": true,
     "window.autoDetectColorScheme": true,
     "custom-ui-style.font.monospace": "Maple Mono NF CN",
-    "color-highlight.useARGB": true
+    "color-highlight.useARGB": true,
+    "github.copilot.chat.agent.runTasks": false
 }
