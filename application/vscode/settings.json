@@ -572,6 +572,10 @@
     "vim.autoSwitchInputMethod.obtainIMCmd": "/opt/homebrew/bin/im-select",
     "vim.autoSwitchInputMethod.switchIMCmd": "/opt/homebrew/bin/im-select {im}",
     "vim.normalModeKeyBindings": [
+        {
+            "before": [ "<space>" ],
+            "commands": [ "whichkey.show" ]
+        },
         // view navigation
         {
             "before": [ ":" ],
@@ -582,43 +586,9 @@
             "before": [ "/" ],
             "commands": [ "actions.find" ]
         },
-        // spilit horizontally
-        {
-            "before": [ "<leader>", "-" ],
-            "commands": [ "workbench.action.splitEditorDown" ]
-        },
-        // spilit vertically
-        {
-            "before": [ "<leader>", "|" ],
-            "commands": [ "workbench.action.splitEditorRight" ]
-        },
-        {
-            "before": [ "<leader>", "m" ],
-            "commands": [ "bookmarks.toggle" ]
-        },
-        {
-            "before": [ "<leader>", "b" ],
-            "commands": [ "bookmarks.list" ]
-        },
         {
             "before": [ "enter" ],
             "commands": [ "lineBreakInsert" ]
-        },
-        {
-            "before": [ "<leader>", "g", "g" ],
-            "commands": [ "lazygit-vscode.toggle" ]
-        },
-        {
-            "before": [ "<leader>", "g", "c" ],
-            "commands": [ "git-graph.view" ]
-        },
-        {
-            "before": [ "<leader>", "x" ], // focus extensions
-            "commands": [ "workbench.view.extensions" ]
-        },
-        {
-            "before": [ "<leader>", "e" ], // focus explorer, cmd-e to hide
-            "commands": [ "workbench.view.explorer" ]
         },
         {
             "before": [ "K" ],
@@ -644,59 +614,7 @@
             "before": [ "g", "b" ],
             "commands": [ "workbench.action.navigateBack" ]
         },
-        {
-            "before": [ "<leader>", "E" ], // focus secondary sidebar, cmd-k + cmd-e to hide
-            "commands": [ "workbench.action.focusAuxiliaryBar" ]
-        },
-        // edit settings.json
-        {
-            "before": [ "<leader>", "s", "s" ],
-            "commands": [ "workbench.action.openSettingsJson" ]
-        },
-        // open command palette
-        {
-            "before": [ "<leader>", "p" ],
-            "commands": [ "workbench.action.showCommands" ]
-        },
-        // go to opened tab
-        {
-            "before": [ "<leader>", "f", "o" ],
-            "commands": [ "workbench.action.showAllEditors" ]
-        },
-        // 全局搜索文件名
-        {
-            "before": [ "<leader>", "f", "f" ],
-            "commands": [ "workbench.action.quickOpen" ]
-        },
-        // 全局搜索文字
-        {
-            "before": [ "<leader>", "f", "w" ],
-            "commands": [ "workbench.action.quickTextSearch" ]
-        },
-        // search symbol(current)
-        {
-            "before": [ "<leader>", "f", "s" ],
-            "commands": [ "workbench.action.gotoSymbol" ]
-        },
-        // search symbol(global)
-        {
-            "before": [ "<leader>", "f", "S" ],
-            "commands": [ "workbench.action.showAllSymbols" ]
-        },
         // 退出 vscode
-        {
-            "before": [ "<leader>", "q" ],
-            "commands": [ "workbench.action.closeWindow" ]
-        },
-        {
-            "before": [ "<leader>", "t" ], // focus terminal
-            "commands": [ "workbench.action.terminal.toggleTerminal" ]
-        },
-        {
-            "before": [ "<leader>", "d" ], // focus debug
-            "commands": [ "workbench.debug.action.toggleRepl" ]
-        },
-        // Editor Operation
         {
             "before": [ "x" ],
             "commands": [ "workbench.action.closeActiveEditor" ]
@@ -721,14 +639,19 @@
         {
             "before": [ "g", "l" ],
             "commands": [ "cursorEnd" ]
-        },
-        // open in external application
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
         {
-            "before": [ "<leader>", "O" ],
-            "commands": [ "openInExternalApp.open" ]
-        },
+            "before": [ "<space>" ],
+            "commands": [ "whichkey.show" ]
+        }
     ],
     "vim.visualModeKeyBindings": [
+        {
+            "before": [ "<space>" ],
+            "commands": [ "whichkey.show" ]
+        },
         // format selection
         {
             "before": [ "/" ],
@@ -856,5 +779,148 @@
     "window.autoDetectColorScheme": true,
     "custom-ui-style.font.monospace": "Maple Mono NF CN",
     "color-highlight.useARGB": true,
-    "github.copilot.chat.agent.runTasks": false
+    "github.copilot.chat.agent.runTasks": false,
+    "whichKey.bindings": [
+        {
+            "key": "-",
+            "name": "Split Editor Down",
+            "type": "command",
+            "command": "workbench.action.splitEditorDown"
+        },
+        {
+            "key": "|",
+            "name": "Split Editor Right",
+            "type": "command",
+            "command": "workbench.action.splitEditorRight"
+        },
+        {
+            "key": "m",
+            "name": "Toggle Bookmark",
+            "type": "command",
+            "command": "bookmarks.toggle"
+        },
+        {
+            "key": "b",
+            "name": "List Bookmarks",
+            "type": "command",
+            "command": "bookmarks.list"
+        },
+        {
+            "key": "g",
+            "name": "Git...",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "g",
+                    "name": "Toggle LazyGit",
+                    "type": "command",
+                    "command": "lazygit-vscode.toggle"
+                },
+                {
+                    "key": "c",
+                    "name": "View Git Graph",
+                    "type": "command",
+                    "command": "git-graph.view"
+                }
+            ]
+        },
+        {
+            "key": "x",
+            "name": "Focus Extensions",
+            "type": "command",
+            "command": "workbench.view.extensions"
+        },
+        {
+            "key": "e",
+            "name": "Focus Explorer",
+            "type": "command",
+            "command": "workbench.view.explorer"
+        },
+        {
+            "key": "E",
+            "name": "Focus Auxiliary Sidebar",
+            "type": "command",
+            "command": "workbench.action.focusAuxiliaryBar"
+        },
+        {
+            "key": "s",
+            "name": "Settings...",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "s",
+                    "name": "Open Settings JSON",
+                    "type": "command",
+                    "command": "workbench.action.openSettingsJson"
+                }
+            ]
+        },
+        {
+            "key": "p",
+            "name": "Command Palette",
+            "type": "command",
+            "command": "workbench.action.showCommands"
+        },
+        {
+            "key": "f",
+            "name": "Find/File...",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "o",
+                    "name": "Show Open Editors",
+                    "type": "command",
+                    "command": "workbench.action.showAllEditors"
+                },
+                {
+                    "key": "f",
+                    "name": "Find File",
+                    "type": "command",
+                    "command": "workbench.action.quickOpen"
+                },
+                {
+                    "key": "w",
+                    "name": "Find Text",
+                    "type": "command",
+                    "command": "workbench.action.quickTextSearch"
+                },
+                {
+                    "key": "s",
+                    "name": "Find Symbol (Current File)",
+                    "type": "command",
+                    "command": "workbench.action.gotoSymbol"
+                },
+                {
+                    "key": "S",
+                    "name": "Find Symbol (Workspace)",
+                    "type": "command",
+                    "command": "workbench.action.showAllSymbols"
+                }
+            ]
+        },
+        {
+            "key": "q",
+            "name": "Quit VSCode",
+            "type": "command",
+            "command": "workbench.action.closeWindow"
+        },
+        {
+            "key": "t",
+            "name": "Toggle Terminal",
+            "type": "command",
+            "command": "workbench.action.terminal.toggleTerminal"
+        },
+        {
+            "key": "d",
+            "name": "Debug Console",
+            "type": "command",
+            "command": "workbench.debug.action.toggleRepl"
+        },
+        {
+            "key": "O",
+            "name": "Open in External App",
+            "type": "command",
+            "command": "openInExternalApp.open"
+        }
+    ]
 }

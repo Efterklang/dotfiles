@@ -66,6 +66,7 @@ usernamehw.find-jump
 visualstudioexptteam.vscodeintellicode
 vscjava.vscode-java-debug
 vscjava.vscode-java-pack
+vspacecode.whichkey
 w88975.code-translate
 wakatime.vscode-wakatime
 yzhang.dictionary-completion
