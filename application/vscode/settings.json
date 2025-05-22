@@ -780,7 +780,7 @@
     "custom-ui-style.font.monospace": "Maple Mono NF CN",
     "color-highlight.useARGB": true,
     "github.copilot.chat.agent.runTasks": false,
-    "whichKey.bindings": [
+    "whichkey.bindings": [
         {
             "key": "-",
             "name": "Split Editor Down",
