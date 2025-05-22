@@ -800,6 +800,12 @@
                     "command": "git.commit"
                 },
                 {
+                    "key": "d",
+                    "name": "Diff",
+                    "type": "command",
+                    "command": "git.openChange"
+                },
+                {
                     "key": "s",
                     "name": "Stage",
                     "type": "command",
@@ -815,7 +821,7 @@
         },
         {
             "key": "e",
-            "name": "+Errors",
+            "name": "❌ Errors",
             "type": "bindings",
             "bindings": [
                 {
@@ -853,7 +859,7 @@
         },
         {
             "key": "f",
-            "name": "🔭 Focus...",
+            "name": "🌙 Focus...",
             "type": "bindings",
             "bindings": [
                 {
