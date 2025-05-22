@@ -4,4 +4,5 @@ $env.PATH = ($env.PATH
     | prepend ["/opt/homebrew/bin", "/opt/homebrew/sbin", "/Applications/Docker.app/Contents/Resources/bin/", "/Users/gjx/.spicetify"]
 )
 
-alias kill = /bin/kill
+alias open = ^open
+alias kill = ^kill
