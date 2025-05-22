@@ -696,5 +696,24 @@
         "key": "cmd+i",
         "command": "-markdown.extension.editing.toggleItalic",
         "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+    },
+    {
+        "key": "cmd+l",
+        "command": "-expandLineSelection",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "cmd+l",
+        "command": "whichkey.show"
+    },
+    {
+        "key": "shift+/",
+        "command": "whichkey.searchBindings",
+        "when": "whichkeyVisible"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "-whichkey.searchBindings",
+        "when": "whichkeyVisible"
     }
 ]

@@ -243,13 +243,16 @@
         "Scrolling": 200,
         "Tabs": 200
     },
-    // "custom-ui-style.background.url": "/Users/gjx/dotfiles/application/vscode/custom.css",
     "custom-ui-style.external.imports": [
-        {
-            "type": "css",
-            "url": "https://raw.githubusercontent.com/Efterklang/config/refs/heads/main/application/vscode/custom.css"
-        }
+        "file:///Users/gjx/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js",
+        "file:///Users/gjx/dotfiles/application/vscode/custom.css"
     ],
+    // "custom-ui-style.external.imports": [
+    //     {
+    //         "type": "css",
+    //         "url": "https://raw.githubusercontent.com/Efterklang/config/refs/heads/main/application/vscode/custom.css"
+    //     }
+    // ],
     "custom-ui-style.external.loadStrategy": "cache",
     // * ╭───────────────────────────────────────────────────────╮
     // * │                 Source Control                        │
@@ -574,7 +577,8 @@
     "vim.normalModeKeyBindings": [
         {
             "before": [ "<space>" ],
-            "commands": [ "whichkey.show" ]
+            "commands": [ "whichkey.show" ],
+            "silent": true
         },
         // view navigation
         {
@@ -644,13 +648,15 @@
     "vim.visualModeKeyBindingsNonRecursive": [
         {
             "before": [ "<space>" ],
-            "commands": [ "whichkey.show" ]
+            "commands": [ "whichkey.show" ],
+            "silent": true
         }
     ],
     "vim.visualModeKeyBindings": [
         {
             "before": [ "<space>" ],
-            "commands": [ "whichkey.show" ]
+            "commands": [ "whichkey.show" ],
+            "silent": true
         },
         // format selection
         {
@@ -698,6 +704,285 @@
     "vim.cursorStylePerMode.normal": "block",
     "vim.cursorStylePerMode.insert": "block",
     "vim.highlightedyank.enable": true,
+    // * ╭───────────────────────────────────────────────────────╮
+    // * │                     WhichKey                          │
+    // * ╰───────────────────────────────────────────────────────╯
+    "whichkey.bindings": [
+        {
+            "key": "m",
+            "name": "📌 Toggle Bookmark",
+            "type": "command",
+            "command": "bookmarks.toggle"
+        },
+        {
+            "key": "b",
+            "name": "📑 Buffers...",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "t",
+                    "name": "Show Open Tabs",
+                    "type": "command",
+                    "command": "workbench.action.showAllEditors"
+                },
+                {
+                    "key": "h",
+                    "name": "Move editor into left group",
+                    "type": "command",
+                    "command": "workbench.action.moveEditorToLeftGroup"
+                },
+                {
+                    "key": "j",
+                    "name": "Move editor into below group",
+                    "type": "command",
+                    "command": "workbench.action.moveEditorToBelowGroup"
+                },
+                {
+                    "key": "k",
+                    "name": "Move editor into above group",
+                    "type": "command",
+                    "command": "workbench.action.moveEditorToAboveGroup"
+                },
+                {
+                    "key": "l",
+                    "name": "Move editor into right group",
+                    "type": "command",
+                    "command": "workbench.action.moveEditorToRightGroup"
+                },
+                {
+                    "key": "x",
+                    "name": "Close other editors",
+                    "type": "command",
+                    "command": "workbench.action.closeOtherEditors"
+                },
+                {
+                    "key": "p",
+                    "name": "Paste clipboard to buffer",
+                    "type": "commands",
+                    "commands": [
+                        "editor.action.selectAll",
+                        "editor.action.clipboardPasteAction"
+                    ]
+                },
+                {
+                    "key": "y",
+                    "name": "Copy buffer to clipboard",
+                    "type": "commands",
+                    "commands": [
+                        "editor.action.selectAll",
+                        "editor.action.clipboardCopyAction",
+                        "cancelSelection"
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "g",
+            "name": "🎋 Git...",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "l",
+                    "name": "Toggle LazyGit",
+                    "type": "command",
+                    "command": "lazygit-vscode.toggle"
+                },
+                {
+                    "key": "g",
+                    "name": "View Git Graph",
+                    "type": "command",
+                    "command": "git-graph.view"
+                },
+                {
+                    "key": "c",
+                    "name": "Commit",
+                    "type": "command",
+                    "command": "git.commit"
+                },
+                {
+                    "key": "s",
+                    "name": "Stage",
+                    "type": "command",
+                    "command": "git.stage"
+                },
+                {
+                    "key": "u",
+                    "name": "Unstage",
+                    "type": "command",
+                    "command": "git.unstage"
+                }
+            ]
+        },
+        {
+            "key": "e",
+            "name": "+Errors",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": ".",
+                    "name": "Error transient",
+                    "type": "command",
+                    "command": "whichkey.showTransient",
+                    "args": "whichkey.transient.error"
+                },
+                {
+                    "key": "l",
+                    "name": "List errors",
+                    "type": "command",
+                    "command": "workbench.actions.view.problems"
+                },
+                {
+                    "key": "N",
+                    "name": "Previous error",
+                    "type": "command",
+                    "command": "editor.action.marker.prev"
+                },
+                {
+                    "key": "n",
+                    "name": "Next error",
+                    "type": "command",
+                    "command": "editor.action.marker.next"
+                },
+                {
+                    "key": "p",
+                    "name": "Previous error",
+                    "type": "command",
+                    "command": "editor.action.marker.prev"
+                }
+            ]
+        },
+        {
+            "key": "f",
+            "name": "🔭 Focus...",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "a",
+                    "name": "Focus Auxiliary Sidebar",
+                    "type": "command",
+                    "command": "workbench.action.focusAuxiliaryBar"
+                },
+                {
+                    "key": "e",
+                    "name": "Explorer",
+                    "type": "command",
+                    "command": "workbench.view.explorer"
+                },
+                {
+                    "key": "t",
+                    "name": "Terminal",
+                    "type": "command",
+                    "command": "workbench.action.terminal.toggleTerminal"
+                },
+                {
+                    "key": "d",
+                    "name": "Debug Console",
+                    "type": "command",
+                    "command": "workbench.debug.action.toggleRepl"
+                }
+            ]
+        },
+        {
+            "key": "x",
+            "name": "⚙️ Settings",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "s",
+                    "name": "Open Settings JSON",
+                    "type": "command",
+                    "command": "workbench.action.openSettingsJson"
+                }
+            ]
+        },
+        {
+            "key": "p",
+            "name": "🎬 Command Palette",
+            "type": "command",
+            "command": "workbench.action.showCommands"
+        },
+        {
+            "key": "s",
+            "name": "🗺️ Search...",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "f",
+                    "name": "Find File",
+                    "type": "command",
+                    "command": "workbench.action.quickOpen"
+                },
+                {
+                    "key": "w",
+                    "name": "Find Text",
+                    "type": "command",
+                    "command": "workbench.action.quickTextSearch"
+                },
+                // Symbol
+                {
+                    "key": "s",
+                    "name": "Jump to symbol in file",
+                    "type": "command",
+                    "command": "workbench.action.gotoSymbol"
+                },
+                {
+                    "key": "S",
+                    "name": "Jump to symbol in workspace",
+                    "type": "command",
+                    "command": "workbench.action.showAllSymbols"
+                },
+                // References
+                {
+                    "key": "r",
+                    "name": "Search all references",
+                    "type": "command",
+                    "command": "editor.action.referenceSearch.trigger"
+                },
+                {
+                    "key": "R",
+                    "name": "Search all references in side bar",
+                    "type": "command",
+                    "command": "references-view.find"
+                },
+            ]
+        },
+        {
+            "key": "q",
+            "name": "💨 Quit VSCode",
+            "type": "command",
+            "command": "workbench.action.closeWindow"
+        },
+        {
+            "key": "t",
+            "name": "🐚 Toggle Terminal",
+            "type": "command",
+            "command": "workbench.action.terminal.toggleTerminal"
+        },
+        {
+            "key": "d",
+            "name": "🎮 Debug Console",
+            "type": "command",
+            "command": "workbench.debug.action.toggleRepl"
+        },
+        {
+            "key": "O",
+            "name": "📱 Open in External App",
+            "type": "command",
+            "command": "openInExternalApp.open"
+        },
+        {
+            "key": "-",
+            "name": "↔️ Split Editor Down",
+            "type": "command",
+            "command": "workbench.action.splitEditorDown"
+        },
+        {
+            "key": "|",
+            "name": "↕️ Split Editor Right",
+            "type": "command",
+            "command": "workbench.action.splitEditorRight"
+        },
+    ],
     // * ╭───────────────────────────────────────────────────────╮
     // * │                    MISC                               │
     // * ╰───────────────────────────────────────────────────────╯
@@ -780,147 +1065,6 @@
     "custom-ui-style.font.monospace": "Maple Mono NF CN",
     "color-highlight.useARGB": true,
     "github.copilot.chat.agent.runTasks": false,
-    "whichkey.bindings": [
-        {
-            "key": "-",
-            "name": "Split Editor Down",
-            "type": "command",
-            "command": "workbench.action.splitEditorDown"
-        },
-        {
-            "key": "|",
-            "name": "Split Editor Right",
-            "type": "command",
-            "command": "workbench.action.splitEditorRight"
-        },
-        {
-            "key": "m",
-            "name": "Toggle Bookmark",
-            "type": "command",
-            "command": "bookmarks.toggle"
-        },
-        {
-            "key": "b",
-            "name": "List Bookmarks",
-            "type": "command",
-            "command": "bookmarks.list"
-        },
-        {
-            "key": "g",
-            "name": "Git...",
-            "type": "bindings",
-            "bindings": [
-                {
-                    "key": "g",
-                    "name": "Toggle LazyGit",
-                    "type": "command",
-                    "command": "lazygit-vscode.toggle"
-                },
-                {
-                    "key": "c",
-                    "name": "View Git Graph",
-                    "type": "command",
-                    "command": "git-graph.view"
-                }
-            ]
-        },
-        {
-            "key": "x",
-            "name": "Focus Extensions",
-            "type": "command",
-            "command": "workbench.view.extensions"
-        },
-        {
-            "key": "e",
-            "name": "Focus Explorer",
-            "type": "command",
-            "command": "workbench.view.explorer"
-        },
-        {
-            "key": "E",
-            "name": "Focus Auxiliary Sidebar",
-            "type": "command",
-            "command": "workbench.action.focusAuxiliaryBar"
-        },
-        {
-            "key": "s",
-            "name": "Settings...",
-            "type": "bindings",
-            "bindings": [
-                {
-                    "key": "s",
-                    "name": "Open Settings JSON",
-                    "type": "command",
-                    "command": "workbench.action.openSettingsJson"
-                }
-            ]
-        },
-        {
-            "key": "p",
-            "name": "Command Palette",
-            "type": "command",
-            "command": "workbench.action.showCommands"
-        },
-        {
-            "key": "f",
-            "name": "Find/File...",
-            "type": "bindings",
-            "bindings": [
-                {
-                    "key": "o",
-                    "name": "Show Open Editors",
-                    "type": "command",
-                    "command": "workbench.action.showAllEditors"
-                },
-                {
-                    "key": "f",
-                    "name": "Find File",
-                    "type": "command",
-                    "command": "workbench.action.quickOpen"
-                },
-                {
-                    "key": "w",
-                    "name": "Find Text",
-                    "type": "command",
-                    "command": "workbench.action.quickTextSearch"
-                },
-                {
-                    "key": "s",
-                    "name": "Find Symbol (Current File)",
-                    "type": "command",
-                    "command": "workbench.action.gotoSymbol"
-                },
-                {
-                    "key": "S",
-                    "name": "Find Symbol (Workspace)",
-                    "type": "command",
-                    "command": "workbench.action.showAllSymbols"
-                }
-            ]
-        },
-        {
-            "key": "q",
-            "name": "Quit VSCode",
-            "type": "command",
-            "command": "workbench.action.closeWindow"
-        },
-        {
-            "key": "t",
-            "name": "Toggle Terminal",
-            "type": "command",
-            "command": "workbench.action.terminal.toggleTerminal"
-        },
-        {
-            "key": "d",
-            "name": "Debug Console",
-            "type": "command",
-            "command": "workbench.debug.action.toggleRepl"
-        },
-        {
-            "key": "O",
-            "name": "Open in External App",
-            "type": "command",
-            "command": "openInExternalApp.open"
-        }
-    ]
+    "window.customTitleBarVisibility": "never",
+    "workbench.editor.showTabs": "none"
 }

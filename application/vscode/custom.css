@@ -44,7 +44,7 @@
 	border-radius: 6px !important;
 	box-shadow: 0px 8px 32px var(--crust) !important;
 	padding: 8px !important;
-	font-family: var(--font-maple);
+	font-family: var(--font-maple), var(--font-jb);
 }
 
 .quick-input-widget .monaco-inputbox {
@@ -276,9 +276,6 @@
 
 /* status bar */
 
-.statusbar {
-	font-family: var(--font-mh) !important;
-}
 
 
 #status\.host {
@@ -301,8 +298,8 @@
 }
 
 #vscodevim\.vim\.primary {
-	/* order: -997 !important; */
-	background: #89b4fa !important;
+	order: -997 !important;
+	background: #b4befe !important;
 	color: #1e1e2e !important;
 	font-weight: 600 !important;
 }
@@ -361,3 +358,19 @@ div#chat\.statusBarEntry {
 	margin-right: 0 !important;
 	padding-right: 2px !important;
 }
+
+/* .statusbar-item.left {
+	/* position: relative; */
+margin-right: 1px !important;
+background-color: var(--blue) !important;
+padding-right: 10px !important;
+position: relative !important;
+}
+
+.statusbar-item.left::after {
+	border-top: 12px solid transparent !important;
+	border-bottom: 12px solid transparent !important;
+	border-left: 10px solid var(--blue) !important;
+}
+
+*/
