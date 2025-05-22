@@ -11,7 +11,7 @@ traffic_graph: true
 enable_memory_usage: true
 enable_group_icon: true
 common_tray_icon: false
-tray_icon: colorful
+tray_icon: monochrome
 menu_icon: monochrome
 sysproxy_tray_icon: false
 tun_tray_icon: false
@@ -82,4 +82,9 @@ enable_tray_speed: false
 enable_tray_icon: true
 enable_auto_light_weight_mode: true
 auto_light_weight_minutes: 10
-service_state: null
+service_state:
+  last_install_time: 1747751708
+  install_count: 1
+  last_check_time: 0
+  last_error: '通过服务启动核心失败: 服务版本不匹配且无法重装，启动失败'
+  prefer_sidecar: true
