@@ -62,7 +62,7 @@
     "editor.minimap.enabled": false,
     "editor.maxTokenizationLineLength": 10000,
     "editor.largeFileOptimizations": true,
-    "editor.wordBasedSuggestions": "matchingDocument",
+    "editor.wordBasedSuggestions": "matchingDocuments",
     "editor.unicodeHighlight.ambiguousCharacters": false,
     "editor.cursorBlinking": "smooth",
     "editor.cursorStyle": "block",
@@ -580,15 +580,10 @@
             "commands": [ "whichkey.show" ],
             "silent": true
         },
-        // view navigation
-        {
-            "before": [ ":" ],
-            "commands": [ "workbench.action.showCommands" ],
-            "silent": true
-        },
         {
             "before": [ "/" ],
-            "commands": [ "actions.find" ]
+            "commands": [ "actions.find" ],
+            "silent": true
         },
         {
             "before": [ "enter" ],
@@ -661,11 +656,13 @@
         // format selection
         {
             "before": [ "/" ],
-            "commands": [ "actions.findWithSelection" ]
+            "commands": [ "actions.findWithSelection", "workbench.action.focusFindWidget" ],
+            "silent": true
         },
         {
             "before": [ "f" ],
-            "commands": [ "editor.action.formatSelection" ]
+            "commands": [ "editor.action.formatSelection" ],
+            "silent": true
         },
         // expand seletion
         {
@@ -702,6 +699,9 @@
     // "vim.neovimUseConfigFile": true,
     // "vim.neovimConfigPath": "~/.config/nvim",
     "vim.cursorStylePerMode.normal": "block",
+    "vim.foldfix": true,
+    "vim.startInInsertMode": true,
+    "vim.useCtrlKeys": false,
     "vim.cursorStylePerMode.insert": "block",
     "vim.highlightedyank.enable": true,
     // * ╭───────────────────────────────────────────────────────╮
@@ -773,6 +773,37 @@
                         "editor.action.clipboardCopyAction",
                         "cancelSelection"
                     ]
+                }
+            ]
+        },
+        {
+            "key": "c",
+            "name": "🧬 Code...",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "a",
+                    "name": "Code Action",
+                    "type": "command",
+                    "command": "editor.action.codeAction"
+                },
+                {
+                    "key": "A",
+                    "name": "Source Action",
+                    "type": "command",
+                    "command": "editor.action.sourceAction"
+                },
+                {
+                    "key": "i",
+                    "name": "Insert Snippet",
+                    "type": "command",
+                    "command": "editor.action.insertSnippet"
+                },
+                {
+                    "key": "x",
+                    "name": "Refactor",
+                    "type": "command",
+                    "command": "editor.action.refactor"
                 }
             ]
         },
@@ -875,6 +906,18 @@
                     "command": "workbench.view.explorer"
                 },
                 {
+                    "key": "x",
+                    "name": "Extensions",
+                    "type": "command",
+                    "command": "workbench.view.extensions"
+                },
+                {
+                    "key": "g",
+                    "name": "Git",
+                    "type": "command",
+                    "command": "workbench.view.scm"
+                },
+                {
                     "key": "t",
                     "name": "Terminal",
                     "type": "command",
@@ -909,7 +952,7 @@
         },
         {
             "key": "s",
-            "name": "🗺️ Search...",
+            "name": "🔎 Search...",
             "type": "bindings",
             "bindings": [
                 {
@@ -949,7 +992,7 @@
                     "name": "Search all references in side bar",
                     "type": "command",
                     "command": "references-view.find"
-                },
+                }
             ]
         },
         {
@@ -987,7 +1030,7 @@
             "name": "↕️ Split Editor Right",
             "type": "command",
             "command": "workbench.action.splitEditorRight"
-        },
+        }
     ],
     // * ╭───────────────────────────────────────────────────────╮
     // * │                    MISC                               │
@@ -1009,7 +1052,7 @@
     "files.autoSaveDelay": 1000,
     "hediet.vscode-drawio.codeLinkActivated": true,
     "hediet.vscode-drawio.resizeImages": null,
-    "hediet.vscode-drawio.theme": "automatic",
+    "hediet.vscode-drawio.theme": "min",
     "inlineChat.accessibleDiffView": "on",
     "outline.showTypeParameters": true,
     "projectManager.git.ignoredFolders": [ "node_modules", "test", "Markdown" ],
@@ -1072,5 +1115,6 @@
     "color-highlight.useARGB": true,
     "github.copilot.chat.agent.runTasks": false,
     "window.customTitleBarVisibility": "never",
-    "workbench.editor.showTabs": "none"
+    "workbench.editor.showTabs": "none",
+    "python.defaultInterpreterPath": "/usr/bin/python3"
 }
