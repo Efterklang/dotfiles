@@ -1,130 +1,108 @@
-*.DS_Store
+# --------------------------
+# 操作系统生成文件
+# --------------------------
+# macOS
 .DS_Store
-*.sw[nop]
-.bundle
-.env
-db/*.sqlite3
-log/*.log
-rerun.txt
-tmp/**/*
-!tmp/cache/.keep
-zeus.json
-.svn
-*.swp
-*.rbc
-**/plugged
-**/.init.vim*
-.tern-project
-.tern-port
-Procfile
-node_modules
-.nyc_output
-**/db/structure.sql
-bin/rails
-bin/rake
-bin/rspec
-deps
-_build
-.elixir_ls
-**/.elixir_ls
-.lexical
-**/.lexical
-.elixir-tools
-**/.elixir-tools
-**/.nix-hex
-**/priv/etc/**/*.sql
-credo_extra
-elm-stuff
-rel
-**/stderr_log
-**/output.txt
-**/repl*.elm
-.ccls-cache
-.git
-**/.git
-*.dot
-Brewfile.lock.json
-
-node_modules
-[._]*.s[a-w][a-z]
-[._]s[a-w][a-z]
-*~
-tags
-tags.lock
-tags.temp
-.tags
-vim-markdown-preview.html
-*.un~
-Session.vim
-.xmark.README.md.html
-# Compiled source #
-###################
-*.com
-*.class
-*.dll
-*.o
-*.so
-.lvimrc
-.idea
-
-# Logs and databases #
-######################
-*.log
-*.sqlite
-
-# OS generated files #
-######################
-.DS_Store
-.DS_Store?
-._*
+.AppleDouble
 .Spotlight-V100
 .Trashes
-ehthumbs.db
+
+# Windows
 Thumbs.db
-gin-bin
-.tern-port
+Desktop.ini
+ehthumbs.db
+[Tt]humbs.db
 
-# Oni Config Dir #
-.oni
+# Linux
+*.swp
+*.swo
+*~
+.~lock.*
 
-# VSCode workspaces
-*.code-workspace
-.vscode
-:merlin-log:
-*.doc#
+# --------------------------
+# 编辑器/IDE 文件
+# --------------------------
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
-CMakeLists.txt.user
+# IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Vim
+*.swp
+*.swo
+*.un~
+
+# --------------------------
+# 语言通用配置
+# --------------------------
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+venv/
+env/
+.python-version
+
+# JavaScript/Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.pnp.*
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+.gradle/
+build/
+
+# --------------------------
+# 构建工具
+# --------------------------
+# Maven
+target/
+dist/
+
+# Gradle
+.gradle/
+build/
+
+# CMake
 CMakeCache.txt
-CMakeFiles
-CMakeScripts
-Testing
+CMakeFiles/
 cmake_install.cmake
-install_manifest.txt
-compile_commands.json
-CTestTestfile.cmake
-_deps
-.vim/
-*.add.spl
-.vim-spell-en.utf-8.add.spl
-.nvimrc
-.projections.json
-.classpath
-.factorypath
-.settings/
 
-# Vim Wiki tag files
-.vimwiki_tags
+# --------------------------
+# 日志与本地配置
+# --------------------------
+*.log
+logs/
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-.localrc.lua
-.exrc
-.ignore
-.yarn
-
-.envrc
-.worktrees
-
-**/erl_crash.dump
-obsidian/.obsidian
-**/.marksman.toml
-
-# vim:ft=gitignore:tw=0
+# --------------------------
+# 通用开发文件
+# --------------------------
+*.bak
+*.tmp
+*.cache
+.cache/
+.tmp/
+temp/
