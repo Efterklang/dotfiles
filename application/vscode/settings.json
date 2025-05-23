@@ -941,6 +941,12 @@
                     "name": "Open Settings JSON",
                     "type": "command",
                     "command": "workbench.action.openSettingsJson"
+                },
+                {
+                    "key": "k",
+                    "name": "Open Keyboard Shortcuts",
+                    "type": "command",
+                    "command": "workbench.action.openGlobalKeybindings"
                 }
             ]
         },
