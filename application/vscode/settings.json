@@ -1026,6 +1026,68 @@
             "command": "openInExternalApp.open"
         },
         {
+            "key": "[",
+            "name": "◀️ prev",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "c",
+                    "name": "Previous change",
+                    "type": "command",
+                    "command": "workbench.action.editor.previousChange"
+                },
+                {
+                    "key": "t",
+                    "name": "Previous todo comment",
+                    "type": "command",
+                    "command": "todo-tree.goToPrevious"
+                },
+                {
+                    "key": "e",
+                    "name": "Previous error",
+                    "type": "command",
+                    "command": "editor.action.marker.prev"
+                },
+                {
+                    "key": "f",
+                    "name": "Previous Fold",
+                    "type": "command",
+                    "command": "editor.gotoPreviousFold"
+                }
+            ]
+        },
+        {
+            "key": "]",
+            "name": "︎️▶️ next",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "c",
+                    "name": "Next change",
+                    "type": "command",
+                    "command": "workbench.action.editor.nextChange"
+                },
+                {
+                    "key": "t",
+                    "name": "Next todo comment",
+                    "type": "command",
+                    "command": "todo-tree.goToNext"
+                },
+                {
+                    "key": "e",
+                    "name": "Next error",
+                    "type": "command",
+                    "command": "editor.action.marker.next"
+                },
+                {
+                    "key": "f",
+                    "name": "Next Fold",
+                    "type": "command",
+                    "command": "editor.gotoNextFold"
+                }
+            ]
+        },
+        {
             "key": "-",
             "name": "↔️ Split Editor Down",
             "type": "command",
