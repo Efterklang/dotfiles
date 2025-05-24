@@ -260,6 +260,7 @@
     "git.mergeEditor": true,
     "git.autofetch": true,
     "git-graph.enhancedAccessibility": true,
+    "git-graph.sourceCodeProviderIntegrationLocation": "More Actions",
     "git-graph.graph.colours": [
         "#89b4fa",
         "#a6e3a1",
@@ -274,7 +275,6 @@
         "#f2cdcd",
         "#cdd6f4"
     ],
-    "git-graph.repository.commits.fetchAvatars": true,
     "github.copilot.chat.generateTests.codeLens": true,
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
@@ -700,7 +700,7 @@
     // "vim.neovimConfigPath": "~/.config/nvim",
     "vim.cursorStylePerMode.normal": "block",
     "vim.foldfix": true,
-    "vim.startInInsertMode": true,
+    "vim.startInInsertMode": false,
     "vim.useCtrlKeys": false,
     "vim.cursorStylePerMode.insert": "block",
     "vim.highlightedyank.enable": true,
