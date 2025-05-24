@@ -30,10 +30,10 @@ https://github.com/Dhanush-777x/vimium-c-catppuccin.git
 
 /* link hints */
 .LH {
-    border: 2px var(--hint-border-color) solid;
+    border: 1px var(--hint-border-color) solid;
     background: unset;
-    margin-top: -2px;
-    margin-left: -2px;
+    margin-top: -1px;
+    margin-left: -1px;
     color: var(--hint-text-color);
     z-index: 0;
     box-shadow: 0px 2px 11px rgb(0, 0, 0, 0.12);
@@ -221,7 +221,7 @@ body:after {
     width: 24px;
     padding: 5px;
     cursor: pointer;
-    border: 3px transparent solid;
+    border: 1px transparent solid;
     position: relative;
     opacity: 0.5;
     transition: 100ms ease-in-out opacity;
@@ -286,7 +286,7 @@ body:after {
     margin-top: -2px;
     border-radius: 6px;
     border: unset;
-    border: 3px transparent solid;
+    border: 1px transparent solid;
     height: 46px;
 }
 
@@ -304,12 +304,12 @@ body:after {
 .item.s,
 .item:hover {
     background-color: unset;
-    border: 3px var(--item-border-color) solid;
+    border: 1px var(--item-border-color) solid;
 }
 
 .has-dark .item.s,
 .has-dark .item:hover {
-    border: 3px var(--dark-item-border-color) solid;
+    border: 1px var(--dark-item-border-color) solid;
 }
 
 .item.s::before {
