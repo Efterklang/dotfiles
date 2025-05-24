@@ -1,0 +1,450 @@
+/*
+vimium-snow theme
+(c) 2025 Dhanush S M 
+https://github.com/Dhanush-777x/vimium-c-catppuccin.git
+*/
+
+/* #ui */
+/* ^ do not touch this line ^ */
+
+:root {
+    /* UI Component Color Variables */
+    --hint-border-color: rgba(228, 202, 87, 0.5);
+    --hint-bg-color: #b4befe;
+    --hint-text-color: #1f2731;
+    --dark-hint-border-color: rgba(0, 0, 0, 0.3);
+    --dark-hint-text-color: #43474d;
+    --matching-char-color: #cc5200;
+    --dark-matching-char-color: #e92626;
+    --hud-text-color: #838686;
+    --dark-border-color: rgba(80, 83, 84, 0.14);
+}
+
+* {
+    font-family: "JetBrains Mono", "Maple Mono NF CN", monospace !important;
+}
+
+/* .R,.DHM,.HM,.IHS,.IH,.BH,.MH {
+      color: #F0F;
+  } */
+
+/* link hints */
+.LH {
+    border: 2px var(--hint-border-color) solid;
+    background: unset;
+    margin-top: -2px;
+    margin-left: -2px;
+    color: var(--hint-text-color);
+    z-index: 0;
+    box-shadow: 0px 2px 11px rgb(0, 0, 0, 0.12);
+    overflow: hidden !important;
+}
+
+.LH:before {
+    position: absolute;
+    background: var(--hint-bg-color);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    z-index: -1;
+}
+
+.D .LH {
+    border-color: var(--dark-hint-border-color);
+    color: var(--dark-hint-text-color);
+}
+
+/* hints matching chars */
+.MC {
+    color: var(--matching-char-color);
+}
+
+.D .MC {
+    color: var(--dark-matching-char-color);
+}
+
+/* bottom hud */
+.HUD {
+    bottom: 1rem;
+    left: 1rem;
+    right: unset;
+    border-radius: 6px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1rem;
+    height: 1.5rem !important;
+    line-height: unset;
+    text-transform: lowercase;
+    color: var(--hud-text-color);
+    max-width: 420px;
+    min-width: unset;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+}
+
+.HUD.UI {
+    min-width: 180px;
+    align-items: unset;
+    overflow-y: hidden !important;
+}
+
+.Omnibar {
+    padding-bottom: 20px;
+    overflow-y: hidden !important;
+
+}
+
+.HUD:after {
+    border-radius: unset;
+    border: none;
+    background: var(--hint-bg-color);
+}
+
+.HUD.D {
+    border-color: var(--dark-border-color);
+}
+
+.HUD.D:after {
+    background: var(--hint-bg-color);
+}
+
+/* #omni */
+/* ^ do not touch this line ^ */
+
+:root {
+    /* Omni Component Color Variables */
+    --hint-bg-color: #b4befe;
+    --dark-border-color: rgba(80, 83, 84, 0.14);
+    --omni-bg-color: rgba(247, 246, 246, 0.99);
+    --dark-omni-bg-color: rgba(30, 30, 46, 0.8);
+    --input-text-color: #1f2731;
+    --dark-input-text-color: #b4befe;
+    --dark-find-text-color: #d4d4d4;
+    --toolbar-icon-color: #ddd8cd;
+    --item-border-color: rgba(0, 0, 0, 0.02);
+    --dark-item-border-color: rgba(80, 83, 84, 0.14);
+    --item-selected-bg: rgba(255, 255, 255, 0.836);
+    --item-hover-bg: #fff;
+    --dark-item-selected-bg: rgba(80, 83, 84, 0.411);
+    --dark-item-hover-bg: rgba(80, 83, 84, 0.555);
+    --item-title-color: #838686;
+    --dark-item-title-color: #b4befe;
+    --item-title-match-color: #505354;
+    --dark-item-title-match-color: #ffffff;
+    --item-url-color: #b6b8b8;
+    --dark-item-url-color: rgb(180, 190, 254, 0.60);
+    --item-url-match-color: #686c6d;
+    --dark-item-url-match-color: #76808a;
+}
+
+* {
+    font-family: "JetBrains Mono", "Maple Mono NF CN", monospace !important;
+}
+
+.transparent {
+    opacity: 1;
+}
+
+body {
+    width: 1000px;
+    margin: 10px auto;
+    border-radius: 15px;
+    box-shadow: 0 0px 12px 4px rgba(180, 191, 254, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(30px);
+}
+
+body.has-dark {
+    border-color: var(--dark-border-color);
+}
+
+body:after {
+    border: unset;
+}
+
+#bar {
+    background: rgba(247, 246, 246, 0.15);
+    border-radius: unset;
+    border-bottom: unset;
+    height: 23px;
+    padding: 9px 10px;
+    padding-bottom: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.has-dark #bar {
+    background: var(--dark-omni-bg-color);
+}
+
+#bar::before {
+    content: "❯";
+    display: inline-block;
+    width: 1rem;
+    height: 24px;
+    position: absolute;
+    left: 1rem;
+    z-index: 300;
+    font-size: 1.5rem;
+    padding: 4px 0;
+    line-height: 1.6em;
+    text-align: right;
+    color: var(--hint-bg-color);
+    font-weight: bold;
+}
+
+.has-dark #bar::before {
+    color: var(--dark-find-text-color);
+}
+
+#input {
+    border: none;
+    background: none;
+    box-shadow: unset;
+    font-size: 1rem;
+    color: var(--input-text-color);
+    padding-left: 2rem;
+}
+
+.has-dark #input {
+    color: var(--dark-input-text-color);
+}
+
+#toolbar {
+    top: 7px;
+    right: 14px;
+}
+
+#toolbar .button {
+    height: 24px;
+    width: 24px;
+    padding: 5px;
+    cursor: pointer;
+    border: 3px transparent solid;
+    position: relative;
+    opacity: 0.5;
+    transition: 100ms ease-in-out opacity;
+}
+
+#toolbar .button:hover {
+    background: unset;
+    opacity: 1;
+}
+
+#toolbar .button>svg {
+    opacity: 0.5;
+}
+
+#toolbar .button#toggle-dark>svg {
+    transform: translateY(1px) rotate(45deg);
+}
+
+#toolbar .button#close>svg {
+    transform: scale(1.4);
+}
+
+#toolbar .button#toggle-dark .i-moon {
+    fill: unset;
+    stroke-width: 1.4;
+}
+
+#toolbar .button#toggle-dark .i-sun {
+    stroke-width: 2.1;
+}
+
+.has-dark #toolbar .button#toggle-dark .i-moon {
+    fill: var(--toolbar-icon-color);
+    stroke: var(--toolbar-icon-color);
+}
+
+.has-dark #toolbar .button#toggle-dark .i-sun {
+    fill: var(--toolbar-icon-color);
+    stroke: var(--toolbar-icon-color);
+}
+
+.has-dark #toolbar .button#close>svg {
+    fill: var(--toolbar-icon-color);
+    stroke: var(--toolbar-icon-color);
+}
+
+#list {
+    background: var(--omni-bg-color);
+    border-radius: unset;
+    padding: 5px;
+    padding-bottom: 10px;
+}
+
+.has-dark #list {
+    background: var(--dark-omni-bg-color);
+}
+
+.item {
+    padding: 6px 10px;
+    padding-top: 3px;
+    margin: 0 5px;
+    margin-top: -2px;
+    border-radius: 6px;
+    border: unset;
+    border: 3px transparent solid;
+    height: 46px;
+}
+
+.item::before {
+    position: absolute;
+    background: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    z-index: -1;
+}
+
+.item.s,
+.item:hover {
+    background-color: unset;
+    border: 3px var(--item-border-color) solid;
+}
+
+.has-dark .item.s,
+.has-dark .item:hover {
+    border: 3px var(--dark-item-border-color) solid;
+}
+
+.item.s::before {
+    background-color: var(--item-selected-bg);
+}
+
+.item:hover::before {
+    background-color: var(--item-hover-bg);
+}
+
+.has-dark .item.s::before {
+    background-color: var(--dark-item-selected-bg);
+}
+
+.has-dark .item:hover::before {
+    background-color: var(--dark-item-hover-bg);
+}
+
+.item .icon {
+    width: 24px;
+    height: 24px;
+    padding-right: unset;
+    margin-right: 10px;
+    margin-top: 5px;
+    background-position: bottom right;
+}
+
+.has-dark .item .icon {
+    fill: var(--toolbar-icon-color);
+    stroke: var(--toolbar-icon-color);
+}
+
+.item .icon path {
+    opacity: 0.25;
+    position: absolute;
+    z-index: -1;
+    transform-origin: 0px 0px;
+    transform: scale(0.75);
+}
+
+.item .top {
+    color: var(--item-title-color);
+    position: relative;
+    height: 30px;
+}
+
+.has-dark .item .top {
+    color: var(--dark-item-title-color);
+}
+
+.item .top .title {
+    font-size: 0.85rem;
+    line-height: 0.8em;
+    margin-top: 2px;
+}
+
+.item .top .title match {
+    color: var(--item-title-match-color);
+}
+
+.has-dark .item .top .title match {
+    color: var(--dark-item-title-match-color);
+}
+
+.item .top .title:empty::after {
+    content: "<blank>";
+}
+
+.item .bottom {
+    margin-top: -14px;
+    padding-left: 14px;
+}
+
+.item .bottom a {
+    color: var(--item-url-color);
+    font-size: 0.6rem;
+}
+
+.has-dark .item .bottom a {
+    color: var(--dark-item-url-color);
+}
+
+.item .bottom a match {
+    color: var(--item-url-match-color);
+}
+
+.has-dark .item .bottom a match {
+    color: var(--dark-item-url-match-color);
+}
+
+/* #find */
+/* ^ do not touch this line ^ */
+
+:root {
+    /* Find Component Color Variables */
+    --find-text-color: #838686;
+    --dark-find-text-color: #d4d4d4;
+    --find-input-color: #1f2731;
+    --dark-find-input-color: #ffffff;
+}
+
+* {
+    font-family: "JetBrains Mono", "Maple Mono NF CN", monospace !important;
+    background: unset;
+}
+
+:host,
+body {
+    background-color: unset !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+:host(.D),
+body.D {
+    background-color: unset !important;
+}
+
+.r {
+    color: var(--find-text-color);
+    border: none;
+    border-radius: unset;
+    box-shadow: unset;
+    background: unset;
+}
+
+.r.D {
+    background: unset;
+    color: var(--dark-find-text-color);
+}
+
+#i {
+    color: var(--find-input-color);
+}
+
+.D #i {
+    color: var(--dark-find-input-color);
+}
