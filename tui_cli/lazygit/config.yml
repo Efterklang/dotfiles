@@ -38,7 +38,6 @@ gui:
   commitLength:
     show: true
   skipNoStagedFilesWarning: false
-
   spinner:
     # The frames of the spinner animation.
     frames:
@@ -134,12 +133,12 @@ customCommands:
     command: tig {{.SelectedSubCommit.Sha}} -- {{.SelectedCommitFile.Name}}
     context: commitFiles
     description: tig file (history of commits affecting file)
-    subprocess: true
+    output: terminal
   - key: t
     command: tig -- {{.SelectedFile.Name}}
     context: files
     description: tig file (history of commits affecting file)
-    subprocess: true
+    output: terminal
 keybinding:
   universal:
     confirmInEditor: <c-d>
