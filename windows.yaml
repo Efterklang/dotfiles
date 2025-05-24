@@ -14,7 +14,6 @@
     ~/.config/ohmyposh: shells/ohmyposh
     ~/.config/vscode/custom.css: application/vscode/custom.css
     ~/.config/vscode/markdown-preview-enhanced: application/vscode/markdown-preview-enhanced
-    ~/.gitconfig: misc/.gitconfig
     ~/.wslconfig: misc/.wslconfig
     ~/AppData/Local/lazygit: tui_cli/lazygit
     ~/AppData/Local/nvim: tui_cli/nvim
@@ -30,4 +29,8 @@
     D://envir_vars/scoop/persist/vscode/data/user-data/User/snippets: application/vscode/snippets
     D://envir_vars/scoop/apps/bat/current/config: tui_cli/bat/config
     D://envir_vars/scoop/apps/windows-terminal-preview/current/settings/settings.json: terminal/windows-terminal/settings.json
+    # Git configuration
+    ~/.delta.gitconfig: ./tui_cli/git/.delta.gitconfig
+    ~/.gitconfig: ./tui_cli/git/.gitconfig
+    ~/.gitignore: ./tui_cli/git/.gitignore
 - shell: []
