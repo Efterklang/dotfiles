@@ -21,7 +21,7 @@ https://github.com/Dhanush-777x/vimium-c-catppuccin.git
 }
 
 * {
-    font-family: "JetBrains Mono", "Maple Mono NF CN", monospace !important;
+    font-family: "Maple Mono NF CN", monospace !important;
 }
 
 /* .R,.DHM,.HM,.IHS,.IH,.BH,.MH {
@@ -36,7 +36,6 @@ https://github.com/Dhanush-777x/vimium-c-catppuccin.git
     margin-left: -1px;
     color: var(--hint-text-color);
     z-index: 0;
-    box-shadow: 0px 2px 11px rgb(0, 0, 0, 0.12);
     overflow: hidden !important;
 }
 
@@ -71,7 +70,6 @@ https://github.com/Dhanush-777x/vimium-c-catppuccin.git
     left: 1rem;
     right: unset;
     border-radius: 6px;
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
     padding: 0.5rem 1rem;
     height: 1.5rem !important;
     line-height: unset;
@@ -93,7 +91,6 @@ https://github.com/Dhanush-777x/vimium-c-catppuccin.git
 .Omnibar {
     padding-bottom: 20px;
     overflow-y: hidden !important;
-
 }
 
 .HUD:after {
@@ -134,13 +131,13 @@ https://github.com/Dhanush-777x/vimium-c-catppuccin.git
     --item-title-match-color: #505354;
     --dark-item-title-match-color: #ffffff;
     --item-url-color: #b6b8b8;
-    --dark-item-url-color: rgb(180, 190, 254, 0.60);
+    --dark-item-url-color: rgb(180, 190, 254, 0.85);
     --item-url-match-color: #686c6d;
     --dark-item-url-match-color: #76808a;
 }
 
 * {
-    font-family: "JetBrains Mono", "Maple Mono NF CN", monospace !important;
+    font-family: "Maple Mono NF CN", monospace !important;
 }
 
 .transparent {
@@ -151,7 +148,6 @@ body {
     width: 1000px;
     margin: 10px auto;
     border-radius: 15px;
-    box-shadow: 0 0px 12px 4px rgba(180, 191, 254, 0.4);
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(30px);
 }
@@ -166,7 +162,7 @@ body:after {
 
 #bar {
     background: rgba(247, 246, 246, 0.15);
-    border-radius: unset;
+    border-radius: 6px;
     border-bottom: unset;
     height: 23px;
     padding: 9px 10px;
@@ -201,10 +197,22 @@ body:after {
 #input {
     border: none;
     background: none;
-    box-shadow: unset;
     font-size: 1rem;
     color: var(--input-text-color);
     padding-left: 2rem;
+}
+
+#input:focus,
+#i:focus {
+    outline: 2px solid #b4befe;
+    outline-offset: 2px;
+    background: #f5f6fa;
+}
+
+.has-dark #input:focus,
+.has-dark #i:focus {
+    outline: 2px solid #b4befe;
+    background: #232634;
 }
 
 .has-dark #input {
@@ -227,9 +235,11 @@ body:after {
     transition: 100ms ease-in-out opacity;
 }
 
-#toolbar .button:hover {
-    background: unset;
+#toolbar .button:hover,
+#toolbar .button:focus {
+    background: rgba(180, 190, 254, 0.10);
     opacity: 1;
+    outline: none;
 }
 
 #toolbar .button>svg {
@@ -268,6 +278,11 @@ body:after {
     stroke: var(--toolbar-icon-color);
 }
 
+#toolbar .button:focus {
+    outline: 2px solid #b4befe;
+    outline-offset: 2px;
+}
+
 #list {
     background: var(--omni-bg-color);
     border-radius: unset;
@@ -302,13 +317,15 @@ body:after {
 }
 
 .item.s,
-.item:hover {
+.item:hover,
+.item:focus {
     background-color: unset;
     border: 1px var(--item-border-color) solid;
 }
 
 .has-dark .item.s,
-.has-dark .item:hover {
+.has-dark .item:hover,
+.has-dark .item:focus {
     border: 1px var(--dark-item-border-color) solid;
 }
 
@@ -316,16 +333,28 @@ body:after {
     background-color: var(--item-selected-bg);
 }
 
-.item:hover::before {
+.item:hover::before,
+.item:focus::before {
     background-color: var(--item-hover-bg);
+    outline: none;
 }
 
 .has-dark .item.s::before {
     background-color: var(--dark-item-selected-bg);
 }
 
-.has-dark .item:hover::before {
+.has-dark .item:hover::before,
+.has-dark .item:focus::before {
     background-color: var(--dark-item-hover-bg);
+}
+
+.item:focus {
+    outline: 2px solid #b4befe;
+    outline-offset: 2px;
+}
+
+.has-dark .item:focus {
+    outline: 2px solid #b4befe;
 }
 
 .item .icon {
@@ -412,7 +441,7 @@ body:after {
 }
 
 * {
-    font-family: "JetBrains Mono", "Maple Mono NF CN", monospace !important;
+    font-family: "Maple Mono NF CN", monospace !important;
     background: unset;
 }
 
@@ -432,7 +461,6 @@ body.D {
     color: var(--find-text-color);
     border: none;
     border-radius: unset;
-    box-shadow: unset;
     background: unset;
 }
 
