@@ -25,6 +25,7 @@
     ~/Library/Application Support/io.github.clash-verge-rev.clash-verge-rev/dns_config.yaml: application/clash-verge-rev/dns_config.yaml
     ~/Library/Application Support/io.github.clash-verge-rev.clash-verge-rev/verge.yaml: application/clash-verge-rev/verge.yaml
     # Git configuration
+    ~/.delta.gitconfig: ./tui_cli/git/.delta.gitconfig
     ~/.gitconfig: ./tui_cli/git/.gitconfig
     ~/.gitignore: ./tui_cli/git/.gitignore
 - shell: []

@@ -29,42 +29,6 @@
 [protocol]
 	version = 1
 
-# Delta Configuration
-[interactive]
-	diffFilter = delta --color-only
-
-[delta]
-	side-by-side = false
-	navigate = true
-	dark = true
-	features = catppuccin-mocha
-
-[delta "catppuccin-mocha"]
-	blame-palette = "#1e1e2e #181825 #11111b #313244 #45475a"
-	commit-decoration-style = "#6c7086" bold box ul
-	dark = true
-	file-decoration-style = "#6c7086"
-	file-style = "#cdd6f4"
-	hunk-header-decoration-style = "#6c7086" box ul
-	hunk-header-file-style = bold
-	hunk-header-line-number-style = bold "#a6adc8"
-	hunk-header-style = file line-number syntax
-	line-numbers-left-style = "#6c7086"
-	line-numbers-minus-style = bold "#f38ba8"
-	line-numbers-plus-style = bold "#a6e3a1"
-	line-numbers-right-style = "#6c7086"
-	line-numbers-zero-style = "#6c7086"
-	minus-emph-style = bold syntax "#53394c"
-	minus-style = syntax "#34293a"
-	plus-emph-style = bold syntax "#404f4a"
-	plus-style = syntax "#2c3239"
-	map-styles = \
-	bold purple = "#494060", \
-	bold blue = "#384361", \
-	bold cyan = "#384d5d", \
-	bold yellow = "#544f4e" >syntax >syntax >syntax >syntax
-	syntax-theme = Catppuccin Mocha
-
 # Merge and Diff Settings
 [merge]
 	tool = vscode
@@ -123,3 +87,7 @@
 	auto = 0
 [push]
 	autoSetupRemote = true
+
+# Delta Settings 
+[include]
+    path = .delta.gitconfig
