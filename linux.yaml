@@ -14,10 +14,8 @@
     ~/.config/gitui: tui_cli/gitui
     ~/.config/nvim: tui_cli/nvim
     ~/.config/zellij: ./tui_cli/zellij
-    ~/.config/helix:
-      path: tui_cli/helix
-    ~/.config/nushell:
-      path: shells/nushell
+    ~/.config/helix: tui_cli/helix
+    ~/.config/nushell: shells/nushell
     ~/.config/yazi: tui_cli/yazi
     ~/.config/vscode/markdown-preview-enhanced: application/vscode/markdown-preview-enhanced
     # Git configuration
