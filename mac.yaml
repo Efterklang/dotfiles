@@ -24,6 +24,8 @@
     ~/Library/Application Support/io.github.clash-verge-rev.clash-verge-rev/profiles/Script.js: application/clash-verge-rev/profiles/Script.js
     ~/Library/Application Support/io.github.clash-verge-rev.clash-verge-rev/dns_config.yaml: application/clash-verge-rev/dns_config.yaml
     ~/Library/Application Support/io.github.clash-verge-rev.clash-verge-rev/verge.yaml: application/clash-verge-rev/verge.yaml
+    # MacOS specific configurations
+    ~/.config/karabiner: application/karabiner
     # Git configuration
     ~/.delta.gitconfig: ./tui_cli/git/.delta.gitconfig
     ~/.gitconfig: ./tui_cli/git/.gitconfig
