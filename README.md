@@ -1,23 +1,36 @@
 # 🍚Dotfiles
 
+## 📋目录
+
 1. [🍚Dotfiles](#dotfiles)
-   1. [📦Packages](#packages)
-   2. [🧩Applications](#applications)
+   1. [📋目录](#目录)
+   2. [🚀 Quick Start](#-quick-start)
+   3. [📦Packages](#packages)
+   4. [🧩Applications](#applications)
       1. [VSCode](#vscode)
       2. [Chrome](#chrome)
-   3. [🔣Fonts](#fonts)
-   4. [💻Terminal](#terminal)
+   5. [🔣Fonts](#fonts)
+   6. [💻Terminal](#terminal)
       1. [Workflow](#workflow)
          1. [Completion Tools](#completion-tools)
          2. [CLI](#cli)
          3. [TUI](#tui)
-   5. [🐚Shell](#shell)
+   7. [🐚Shell](#shell)
       1. [Nushell](#nushell)
       2. [Oh My Posh](#oh-my-posh)
 
 | Desktop                         |
 | ------------------------------- |
 | ![Desktop](assets/desktop.webp) |
+
+## 🚀 Quick Start
+
+Use the unified Python installation script, which automatically detects the operating system and performs the corresponding installation:
+
+```shell
+chmod +x ./install.py
+./install.py
+```
 
 ## 📦Packages
 
@@ -119,7 +132,6 @@ Preferred terminals:
 | :---------------------: | :---------------------------: |
 | ![Fzf](assets/fzf.webp) | ![Zoxide](assets/zoxide.webp) |
 
-
 > [!note] bat
 >
 > run this command to apply theme: `bat cache --build`
@@ -132,7 +144,7 @@ Preferred terminals:
 | [lazygit](https://github.com/jesseduffield/lazygit)  | simple terminal UI for git commands                                       |
 | [yazi](https://github.com/sxyazi/yazi)               | 💥 Blazing fast terminal file manager written in Rust, based on async I/O. |
 | [lazyvim](https://github.com/LazyVim/LazyVim)        | Neovim config for the lazy                                                |
-| [gping](https://github.com/orf/gping) | Ping, but with a graph |
+| [gping](https://github.com/orf/gping)                | Ping, but with a graph                                                    |
 | [btop4win](https://github.com/aristocratos/btop4win) | btop++ for windows                                                        |
 
 |           LazyVim            |             LazyGit             |
