@@ -15,8 +15,6 @@
     ~/.config/vscode/markdown-preview-enhanced: application/vscode/markdown-preview-enhanced
     ~/.wslconfig: misc/.wslconfig
     ~/AppData/Local/lazygit: tui_cli/lazygit
-    ~/AppData/Local/nvim: tui_cli/nvim
-    ~/AppData/Roaming/helix: tui_cli/helix
     ~/AppData/Roaming/gitui: tui_cli/gitui
     ~/AppData/Roaming/nushell: shells/nushell
     ~/Documents/PowerShell: shells/pwsh7
@@ -26,6 +24,10 @@
     D://envir_vars/scoop/persist/vscode/data/user-data/User/snippets: application/vscode/snippets
     D://envir_vars/scoop/apps/bat/current/config: tui_cli/bat/config
     D://envir_vars/scoop/apps/windows-terminal-preview/current/settings/settings.json: terminal/windows-terminal/settings.json
+    # Editors
+    ~/.config/.markdownlint-cli2.yaml: ./misc/.markdownlint-cli2.yaml
+    ~/AppData/Local/nvim: tui_cli/nvim
+    ~/AppData/Roaming/helix: tui_cli/helix
     # Git configuration
     ~/.delta.gitconfig: ./tui_cli/git/.delta.gitconfig
     ~/.gitconfig: ./tui_cli/git/.gitconfig

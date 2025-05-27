@@ -12,12 +12,14 @@
     ~/.config/lazygit: tui_cli/lazygit
     ~/.config/bat: tui_cli/bat
     ~/.config/gitui: tui_cli/gitui
-    ~/.config/nvim: tui_cli/nvim
     ~/.config/zellij: ./tui_cli/zellij
-    ~/.config/helix: tui_cli/helix
     ~/.config/nushell: shells/nushell
     ~/.config/yazi: tui_cli/yazi
     ~/.config/vscode/markdown-preview-enhanced: application/vscode/markdown-preview-enhanced
+    # Editors
+    ~/.config/.markdownlint-cli2.yaml: ./misc/.markdownlint-cli2.yaml
+    ~/.config/nvim: tui_cli/nvim
+    ~/.config/helix: tui_cli/helix
     # Git configuration
     ~/.delta.gitconfig: ./tui_cli/git/.delta.gitconfig
     ~/.gitconfig: ./tui_cli/git/.gitconfig
