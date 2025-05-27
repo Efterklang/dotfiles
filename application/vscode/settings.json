@@ -951,10 +951,23 @@
             ]
         },
         {
-            "key": "p",
-            "name": "🎬 Command Palette",
-            "type": "command",
-            "command": "workbench.action.showCommands"
+            "key": "o",
+            "name": "🎬 Open...",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "p",
+                    "name": "Open Project",
+                    "type": "command",
+                    "command": "projectManager.listProjects"
+                },
+                {
+                    "key": "f",
+                    "name": "Open Folder",
+                    "type": "command",
+                    "command": "workbench.action.files.openFolderViaWorkspace"
+                }
+            ]
         },
         {
             "key": "s",

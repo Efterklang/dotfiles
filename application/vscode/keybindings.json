@@ -19,11 +19,6 @@
         "when": "!editorFocus && !inputFocus"
     },
     {
-        "key": "g",
-        "command": "list.focusFirst",
-        "when": "listFocus && !inputFocus"
-    },
-    {
         "key": "q",
         "command": "workbench.action.focusFirstEditorGroup",
         "when": "listFocus && !inputFocus"
@@ -52,20 +47,6 @@
         "key": "r",
         "command": "renameFile",
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-    },
-    // todo
-    {
-        "key": "shift+g",
-        "command": "list.focusLast",
-        "when": "listFocus && !inputFocus"
-    },
-    {
-        "key": "alt+o",
-        "command": "projectManager.listProjects"
-    },
-    {
-        "key": "shift+alt+p",
-        "command": "-projectManager.listProjects"
     },
     {
         // todo
@@ -595,11 +576,6 @@
         "when": "textInputFocus"
     },
     {
-        "key": "ctrl+`",
-        "command": "-workbench.action.terminal.toggleTerminal",
-        "when": "terminal.active"
-    },
-    {
         "key": "alt+`",
         "command": "workbench.action.closePanel"
     },
@@ -681,14 +657,6 @@
         "command": "workbench.action.gotoLine"
     },
     {
-        "key": "ctrl+g",
-        "command": "-workbench.action.gotoLine"
-    },
-    {
-        "key": "cmd+g g",
-        "command": "-lazygit.openLazygit"
-    },
-    {
         "key": "cmd+e",
         "command": "workbench.files.action.focusFilesExplorer"
     },
@@ -709,11 +677,6 @@
     {
         "key": "shift+/",
         "command": "whichkey.searchBindings",
-        "when": "whichkeyVisible"
-    },
-    {
-        "key": "ctrl+h",
-        "command": "-whichkey.searchBindings",
         "when": "whichkeyVisible"
     }
 ]
