@@ -1,4 +1,6 @@
 source ./vscode.nu
+source ./uv.nu
+source ./zellij.nu
 
 let carapace_completer = {|spans|
     carapace $spans.0 nushell ...$spans | from json
