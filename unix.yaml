@@ -23,11 +23,18 @@
     ~/.config/vscode/markdown-preview-enhanced: application/vscode/markdown-preview-enhanced
     ~/.config/lazygit: tui_cli/lazygit
     ~/.config/nushell: shells/nushell
+    ~/.config/zsh: shells/zsh
     # Editors
     ~/.config/.markdownlint-cli2.yaml: ./misc/.markdownlint-cli2.yaml
     ~/.config/nvim: tui_cli/nvim
     ~/.config/helix: tui_cli/helix
     # MacOS specific configurations
+    ~/.config/xdg.env:
+      path: ./misc/xdg.env
+      if: "[ `uname` = Darwin ]"
+    ~/Library/LaunchAgents/env.xdg.plist:
+      path: ./misc/env.xdg.plist
+      if: "[ `uname` = Darwin ]"
     ~/.config/karabiner:
       path: application/karabiner
       if: "[ `uname` = Darwin ]"
