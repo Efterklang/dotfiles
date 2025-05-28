@@ -14,7 +14,7 @@
 	quotepath = false
 	longpaths = true
 	trustctime = false
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.config/git/.gitignore
 	ignorecase = true
 	untrackedcache = true
 
