@@ -6,6 +6,7 @@
 
 # Core Settings
 [core]
+  compression = 9
 	editor = nvim
 	autocrlf = input
 	whitespace = cr-at-eol
@@ -24,7 +25,6 @@
 	lowSpeedLimit = 0
 	lowSpeedTime = 999999
 	version = HTTP/1.1
-	sslBackend = openssl
 
 [protocol]
 	version = 1
