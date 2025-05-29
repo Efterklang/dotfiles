@@ -11,7 +11,6 @@
       stdin: true
 - clean: ["~", "~/.config", "~/Library/Application Support"]
 - link:
-    ~/.local/bin: ./bin
     ~/.config/bat: tui_cli/bat
     ~/.config/btop: tui_cli/btop
     ~/.config/fastfetch: tui_cli/fastfetch
