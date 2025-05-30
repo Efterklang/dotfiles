@@ -2,7 +2,7 @@
 # If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
 "$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
 
-[manager]
+[mgr]
 
 keymap = [
 	{ on = [
@@ -708,12 +708,12 @@ keymap = [
 	], run = "filter", desc = "Apply a filter for the help items" },
 ]
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = "T"
 run = "plugin max-preview"
 desc = "Maximize or restore preview"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = "<Enter>"
 run = "plugin smart-enter"
 desc = "Enter the child directory, or open the file"
