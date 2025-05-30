@@ -8,6 +8,34 @@
         "editorCursor.foreground": "#87a1ff",
         "editorIndentGuide.activeBackground1": "#F5C2E7"
     },
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "markup.list",
+                "settings": {
+                    "foreground": "#b2bcfb",
+                },
+            },
+            {
+                "scope": "markup.bold",
+                "settings": {
+                    "fontStyle": "bold",
+                },
+            },
+            {
+                "scope": "markup.heading",
+                "settings": {
+                    "fontStyle": "bold",
+                },
+            },
+            {
+                "scope": "string.other.link.title.markdown",
+                "settings": {
+                    "fontStyle": "underline",
+                },
+            },
+        ],
+    },
     "workbench.navigationControl.enabled": false,
     "workbench.settings.useWeightedKeySearch": true,
     "workbench.colorTheme": "Catppuccin Mocha",
@@ -418,6 +446,7 @@
     },
     "json.format.keepLines": true,
     "[markdown]": {
+        "editor.stickyScroll.enabled": false,
         "editor.defaultFormatter": "yzhang.markdown-all-in-one",
         "editor.quickSuggestions": {
             "comments": "on",
