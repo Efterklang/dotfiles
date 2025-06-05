@@ -1,0 +1,18 @@
+set git-colors = no
+
+# Override the default terminal colors to white on black.
+# color default         white   black
+color   cursor          black   green
+color   search-result   black   yellow
+# color author          green   black
+# color status          green   black
+color   line-number     red     black
+color   title-focus     black   yellow
+color   title-blur      black   magenta
+# Diff colors
+color diff-header       yellow  default
+color diff-index        blue    default
+color diff-chunk        magenta default
+color "Reported-by:"    green   default
+# View-specific color
+color tree.date         black   cyan    bold

@@ -23,6 +23,7 @@
     ~/.config/ohmyposh: shells/ohmyposh
     ~/.config/procs: tui_cli/procs
     ~/.config/sketchybar: ./application/sketchybar/sketchybar_felix_lua
+    ~/.config/tig: ./tui_cli/tig
     ~/.config/vscode/markdown-preview-enhanced: application/vscode/markdown-preview-enhanced
     ~/.config/yazi: tui_cli/yazi
     ~/.config/zellij: tui_cli/zellij

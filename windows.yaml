@@ -13,6 +13,7 @@
     ~/.config/yasb: application/yasb
     ~/.config/ohmyposh: shells/ohmyposh
     ~/.config/vscode/markdown-preview-enhanced: application/vscode/markdown-preview-enhanced
+    ~/.config/tig/: tui_cli/tig
     ~/.wslconfig: misc/.wslconfig
     ~/AppData/Local/lazygit: tui_cli/lazygit
     ~/AppData/Roaming/gitui: tui_cli/gitui
