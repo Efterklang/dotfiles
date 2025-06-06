@@ -42,7 +42,7 @@
           "powerline_symbol": "\ue0b0",
           "background": "#8891e0",
           "type": "path"
-        }, 
+        },
         {
           "properties": {
             "branch_max_length": 10,
@@ -124,17 +124,11 @@
             "threshold": 0
           },
           "style": "diamond",
-          "template": "\uebca {{ .FormattedMs }}s in ",
+          "template": "\uebca {{ .FormattedMs }}s",
           "foreground": "#8aadf4",
           "type": "executiontime"
-        },
-        {
-          "style": "diamond",
-          "template": "{{ .Name }} ",
-          "foreground": "#bb9fee",
-          "type": "shell"
         }
-     ]
+      ]
     },
     {
       "type": "prompt",
