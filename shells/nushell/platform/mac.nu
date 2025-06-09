@@ -8,3 +8,5 @@ $env.XDG_CONFIG_HOME = "/Users/gjx/.config"
 alias rm = ^rm
 alias open = ^open
 alias kill = ^kill
+alias clip = pbcopy
+
