@@ -469,10 +469,6 @@
         "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
     },
     {
-        "key": "cmd+;",
-        "command": "findJump.activate"
-    },
-    {
         "key": "ctrl+;",
         "command": "-findJump.activate"
     },

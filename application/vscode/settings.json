@@ -592,6 +592,13 @@
     "vim.leader": "=",
     "vim.easymotion": true,
     "vim.easymotionDimBackground": true,
+    "vim.easymotionMarkerBackgroundColor": "#1e1e2e",
+    "vim.easymotionMarkerForegroundColorOneChar": "#f38ba8",
+    "vim.easymotionMarkerForegroundColorTwoCharFirst": "#fab387",
+    "vim.easymotionMarkerForegroundColorTwoCharSecond": "#f9e2af",
+    "vim.easymotionIncSearchForegroundColor": "#a6e3a1",
+    "vim.easymotionDimColor": "#6c7086",
+    "vim.easymotionMarkerFontWeight": "bold",
     "vim.sneak": true,
     "vim.showMarksInGutter": true,
     "vim.shell": "/opt/homebrew/bin/nu",
@@ -605,8 +612,8 @@
     "vim.autoSwitchInputMethod.switchIMCmd": "/opt/homebrew/bin/im-select {im}",
     "vim.normalModeKeyBindings": [
         {
-            "before": [";"],
-            "after": ["<leader>", "<leader>", "/"]
+            "before": [ ";" ],
+            "after": [ "<leader>", "<leader>", "/" ]
         },
         {
             "before": [ "<space>" ],
@@ -621,7 +628,6 @@
         {
             "before": [ "enter" ],
             "commands": [ "lineBreakInsert" ]
-            
         },
         {
             "before": [ "K" ],
