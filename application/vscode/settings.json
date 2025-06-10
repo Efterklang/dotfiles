@@ -589,7 +589,7 @@
     // * ╭───────────────────────────────────────────────────────╮
     // * │                    VSCode Vim                         │
     // * ╰───────────────────────────────────────────────────────╯
-    "vim.leader": "<space>",
+    "vim.leader": "=",
     "vim.easymotion": true,
     "vim.easymotionDimBackground": true,
     "vim.sneak": true,
@@ -604,6 +604,10 @@
     "vim.autoSwitchInputMethod.obtainIMCmd": "/opt/homebrew/bin/im-select",
     "vim.autoSwitchInputMethod.switchIMCmd": "/opt/homebrew/bin/im-select {im}",
     "vim.normalModeKeyBindings": [
+        {
+            "before": [";"],
+            "after": ["<leader>", "<leader>", "/"]
+        },
         {
             "before": [ "<space>" ],
             "commands": [ "whichkey.show" ],
