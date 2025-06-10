@@ -617,6 +617,7 @@
         {
             "before": [ "enter" ],
             "commands": [ "lineBreakInsert" ]
+            
         },
         {
             "before": [ "K" ],
@@ -870,6 +871,12 @@
                     "name": "Diff",
                     "type": "command",
                     "command": "git.openChange"
+                },
+                {
+                    "key": "f",
+                    "name": "File History",
+                    "type": "command",
+                    "command": "git.viewFileHistory"
                 },
                 {
                     "key": "s",
@@ -1232,5 +1239,7 @@
     "github.copilot.chat.agent.runTasks": false,
     "window.customTitleBarVisibility": "never",
     "workbench.editor.showTabs": "none",
-    "python.defaultInterpreterPath": "/usr/bin/python3"
+    "python.defaultInterpreterPath": "/usr/bin/python3",
+    "yazi-vscode.autoMaximizeWindow": true,
+    "yazi-vscode.yaziPath": "/opt/homebrew/bin/yazi"
 }
