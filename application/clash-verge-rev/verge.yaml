@@ -1,7 +1,7 @@
 # Clash Verge Config
 
 app_log_level: null
-language: en
+language: zh
 theme_mode: system
 tray_event: null
 env_type: nushell
@@ -81,7 +81,7 @@ verge_http_enabled: false
 enable_tray_speed: false
 enable_tray_icon: true
 enable_auto_light_weight_mode: true
-auto_light_weight_minutes: 10
+auto_light_weight_minutes: 5
 service_state:
   last_install_time: 1747751708
   install_count: 1
