@@ -276,7 +276,9 @@
 
 /* status bar */
 
-
+.statusbar {
+	font-family: var(--font-jb) !important;
+}
 
 #status\.host {
 	order: -999 !important;
@@ -285,6 +287,7 @@
 #status\.scm\.0,
 #status\.scm\.1 {
 	background: var(--status_label_background) !important;
+	font-family: var(--font-mh) !important;
 	color: var(--lavender);
 	order: -998 !important;
 }
@@ -299,54 +302,65 @@
 
 #vscodevim\.vim\.primary {
 	order: -997 !important;
-	background: #b4befe !important;
-	color: #1e1e2e !important;
+	background: var(--blue) !important;
+	color: var(--base) !important;
 	font-weight: 600 !important;
 }
 
 
 .statusbar-item-label[aria-label="-- NORMAL --"],
 .statusbar-item-label[aria-label="-- INSERT --"],
-.statusbar-item-label[aria-label="-- VISUAL --"] {
-  font-size: 0; /* 隐藏原始文本 */
+.statusbar-item-label[aria-label="-- VISUAL --"],
+.statusbar-item-label[aria-label="-- VISUAL LINE --"],
+.statusbar-item-label[aria-label="-- VISUAL BLOCK --"],
+.statusbar-item-label[aria-label="-- VIM: DISABLED --"]{
+	font-size: 0;
 }
 
 .statusbar-item-label[aria-label="-- NORMAL --"]::before {
-  content: "NORMAL";
-  font-size: 13px;
-  font-weight: bold; /* 粗体 */
+	content: "NORMAL";
+	font-size: 13px;
+	font-weight: bold;
 }
 
 .statusbar-item-label[aria-label="-- INSERT --"]::before {
-  content: "INSERT";
-  font-size: 13px;
-  font-weight: bold; /* 粗体 */
+	content: "INSERT";
+	font-size: 13px;
+	font-weight: bold;
 }
 
-.statusbar-item-label[aria-label="-- VISUAL --"]::before {
-  content: "VISUAL";
-  font-size: 13px;
-  font-weight: bold; /* 粗体 */
+.statusbar-item-label[aria-label="-- VISUAL --"]::before,
+.statusbar-item-label[aria-label="-- VISUAL LINE --"]::before,
+.statusbar-item-label[aria-label="-- VISUAL BLOCK --"]::before {
+	content: "VISUAL";
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.statusbar-item-label[aria-label="-- VIM: DISABLED --"]::before {
+	content: "DISABLED";
+	font-size: 13px;
+	font-weight: bold;
 }
 
 #vscodevim\.vim\.primary[aria-label="-- INSERT --"] {
-	background: #a6e3a1 !important;
+	background: var(--green) !important;
 }
 
 #vscodevim\.vim\.primary[aria-label="-- VISUAL --"] {
-	background: #cba6f7 !important;
+	background: var(--mauve) !important;
 }
 
 #vscodevim\.vim\.primary[aria-label="-- VISUAL LINE --"] {
-	background: #cba6f7 !important;
+	background: var(--mauve) !important;
 }
 
 #vscodevim\.vim\.primary[aria-label="-- VISUAL BLOCK --"] {
-	background: #cba6f7 !important;
+	background: var(--mauve) !important;
 }
 
 #vscodevim\.vim\.primary[aria-label="-- VIM: DISABLED --"] {
-	background: #f38ba8 !important;
+	background: var(--red) !important;
 }
 
 #vscodevim\.vim\.showcmd[aria-label="<ExtensionDisable>"] {
@@ -365,6 +379,7 @@
 /* right */
 
 #status\.editor\.selection {
+	font-family: var(--font-mh) !important;
 	background: var(--status_label_background) !important;
 	color: var(--lavender) !important;
 	order: -997 !important;
@@ -384,18 +399,17 @@ div#chat\.statusBarEntry {
 	padding-right: 2px !important;
 }
 
-/* .statusbar-item.left {
-	/* position: relative; */
-margin-right: 1px !important;
-background-color: var(--blue) !important;
-padding-right: 10px !important;
-position: relative !important;
+/* 
+.statusbar-item.left {
+	position: relative;
+	margin-right: 1px !important;
+	background-color: var(--blue) !important;
+	padding-right: 10px !important;
+	position: relative !important;
 }
 
 .statusbar-item.left::after {
 	border-top: 12px solid transparent !important;
 	border-bottom: 12px solid transparent !important;
 	border-left: 10px solid var(--blue) !important;
-}
-
-*/
+} */
