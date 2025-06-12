@@ -304,6 +304,31 @@
 	font-weight: 600 !important;
 }
 
+
+.statusbar-item-label[aria-label="-- NORMAL --"],
+.statusbar-item-label[aria-label="-- INSERT --"],
+.statusbar-item-label[aria-label="-- VISUAL --"] {
+  font-size: 0; /* 隐藏原始文本 */
+}
+
+.statusbar-item-label[aria-label="-- NORMAL --"]::before {
+  content: "NORMAL";
+  font-size: 13px;
+  font-weight: bold; /* 粗体 */
+}
+
+.statusbar-item-label[aria-label="-- INSERT --"]::before {
+  content: "INSERT";
+  font-size: 13px;
+  font-weight: bold; /* 粗体 */
+}
+
+.statusbar-item-label[aria-label="-- VISUAL --"]::before {
+  content: "VISUAL";
+  font-size: 13px;
+  font-weight: bold; /* 粗体 */
+}
+
 #vscodevim\.vim\.primary[aria-label="-- INSERT --"] {
 	background: #a6e3a1 !important;
 }
