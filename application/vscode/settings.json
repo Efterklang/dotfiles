@@ -13,28 +13,28 @@
             {
                 "scope": "markup.list",
                 "settings": {
-                    "foreground": "#b2bcfb",
-                },
+                    "foreground": "#b2bcfb"
+                }
             },
             {
                 "scope": "markup.bold",
                 "settings": {
-                    "fontStyle": "bold",
-                },
+                    "fontStyle": "bold"
+                }
             },
             {
                 "scope": "markup.heading",
                 "settings": {
-                    "fontStyle": "bold",
-                },
+                    "fontStyle": "bold"
+                }
             },
             {
                 "scope": "string.other.link.title.markdown",
                 "settings": {
-                    "fontStyle": "underline",
-                },
-            },
-        ],
+                    "fontStyle": "underline"
+                }
+            }
+        ]
     },
     "workbench.navigationControl.enabled": false,
     "workbench.settings.useWeightedKeySearch": true,
@@ -853,6 +853,12 @@
             "name": "🎋 Git...",
             "type": "bindings",
             "bindings": [
+                {
+                    "key": "b",
+                    "name": "Git Branches",
+                    "type": "command",
+                    "command": "git.checkout"
+                },
                 {
                     "key": "l",
                     "name": "Toggle LazyGit",
