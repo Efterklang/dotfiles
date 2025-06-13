@@ -829,6 +829,12 @@
                     "command": "editor.action.codeAction"
                 },
                 {
+                    "key": "s",
+                    "name": "Open SQL Notebook",
+                    "type": "command",
+                    "command": "mysql.notebook.new"
+                },
+                {
                     "key": "A",
                     "name": "Source Action",
                     "type": "command",
