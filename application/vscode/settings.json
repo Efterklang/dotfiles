@@ -750,6 +750,32 @@
             "command": "workbench.action.showCommands"
         },
         {
+            "key": "a",
+            "name": "✨ AI",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "a",
+                    "name": "Add to Context",
+                    "type": "command",
+                    "command": "cline.addToChat",
+                    // "command": "roo-cline.addToContext"
+                },
+                {
+                    "key": "e",
+                    "name": "Explain Code",
+                    "type": "command",
+                    "command": "cline.explainCode"
+                },
+                {
+                    "key": "i",
+                    "name": "Improve Code",
+                    "type": "command",
+                    "command": "cline.improveCode"
+                }
+            ] 
+        },
+        {
             "key": "m",
             "name": "📌 Toggle Bookmark",
             "type": "command",
