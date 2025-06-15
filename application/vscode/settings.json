@@ -3,7 +3,6 @@
     // * │               VSCode Workbench                        │
     // * ╰───────────────────────────────────────────────────────╯
     "workbench.colorCustomizations": {
-        "statusBar.foreground": "#b2bcfb",
         // "editorCursor.background": "#fbed85",
         "editorCursor.foreground": "#87a1ff",
         "editorIndentGuide.activeBackground1": "#F5C2E7"
@@ -652,11 +651,6 @@
             "before": [ "g", "b" ],
             "commands": [ "workbench.action.navigateBack" ]
         },
-        // 退出 vscode
-        {
-            "before": [ "x" ],
-            "commands": [ "workbench.action.closeActiveEditor" ]
-        },
         {
             "before": [ "X" ],
             "commands": [ "workbench.action.closeAllEditors" ]
@@ -753,7 +747,7 @@
                     "key": "a",
                     "name": "Add to Context",
                     "type": "command",
-                    "command": "cline.addToChat",
+                    "command": "cline.addToChat"
                     // "command": "roo-cline.addToContext"
                 },
                 {
@@ -768,7 +762,7 @@
                     "type": "command",
                     "command": "cline.improveCode"
                 }
-            ] 
+            ]
         },
         {
             "key": "m",
@@ -881,22 +875,16 @@
             "type": "bindings",
             "bindings": [
                 {
+                    "key": "v",
+                    "name": "Git View",
+                    "type": "command",
+                    "command": "workbench.view.scm"
+                },
+                {
                     "key": "b",
                     "name": "Git Branches",
                     "type": "command",
                     "command": "git.checkout"
-                },
-                {
-                    "key": "l",
-                    "name": "Toggle LazyGit",
-                    "type": "command",
-                    "command": "lazygit-vscode.toggle"
-                },
-                {
-                    "key": "g",
-                    "name": "View Git Graph",
-                    "type": "command",
-                    "command": "git-graph.view"
                 },
                 {
                     "key": "c",
@@ -917,16 +905,34 @@
                     "command": "git.viewFileHistory"
                 },
                 {
+                    "key": "g",
+                    "name": "View Git Graph",
+                    "type": "command",
+                    "command": "git-graph.view"
+                },
+                {
+                    "key": "l",
+                    "name": "Toggle LazyGit",
+                    "type": "command",
+                    "command": "lazygit-vscode.toggle"
+                },
+                {
                     "key": "s",
                     "name": "Stage",
                     "type": "command",
                     "command": "git.stage"
                 },
                 {
-                    "key": "u",
-                    "name": "Unstage",
+                    "key": "P",
+                    "name": "Push",
                     "type": "command",
-                    "command": "git.unstage"
+                    "command": "git.push"
+                },
+                {
+                    "key": "p",
+                    "name": "Pull",
+                    "type": "command",
+                    "command": "git.pull"
                 }
             ]
         },
