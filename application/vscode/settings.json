@@ -154,10 +154,6 @@
     "terminal.integrated.rightClickBehavior": "default",
     "terminal.external.windowsExec": "/opt/homebrew/bin/nu",
     "terminal.integrated.profiles.windows": {
-        "PowerShell": {
-            "source": "PowerShell",
-            "path": "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
-        },
         "Nushell": {
             "source": "Nushell",
             "path": "D:/envir_vars/scoop/apps/Nushell/current/nu.exe"
@@ -607,8 +603,16 @@
     "vim.autoSwitchInputMethod.switchIMCmd": "/opt/homebrew/bin/im-select {im}",
     "vim.normalModeKeyBindings": [
         {
-            "before": [ ";" ],
+            "before": [ "s" ],
             "after": [ "<leader>", "<leader>", "/" ]
+        },
+        {
+            "before": [ "f" ],
+            "after": [ "<leader>", "<leader>", "f" ]
+        },
+        {
+            "before": [ "F" ],
+            "after": [ "<leader>", "<leader>", "F" ]
         },
         {
             "before": [ "<space>" ],
@@ -664,15 +668,6 @@
         {
             "before": [ "L" ],
             "commands": [ "workbench.action.navigateForward" ]
-        }, // gh 到行头
-        {
-            "before": [ "g", "h" ],
-            "commands": [ "cursorHome" ]
-        },
-        // gl 到行尾
-        {
-            "before": [ "g", "l" ],
-            "commands": [ "cursorEnd" ]
         }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
@@ -1236,9 +1231,6 @@
     "wordcount_cjk.activateLanguages": [ "markdown" ],
     "files.associations": {
         "*.json": "jsonc"
-    },
-    "remote.SSH.remotePlatform": {
-        "momenta": "linux"
     },
     "code-runner.executorMapByGlob": {
         "*.java": "cd $dir && java $fileName",
