@@ -151,7 +151,7 @@
     "terminal.integrated.fastScrollSensitivity": 8,
     "terminal.integrated.accessibleViewFocusOnCommandExecution": true,
     "terminal.integrated.rightClickBehavior": "default",
-    "terminal.external.windowsExec": "/opt/homebrew/bin/nu",
+    "terminal.external.windowsExec": "nu",
     "terminal.integrated.profiles.windows": {
         "Nushell": {
             "source": "Nushell",
@@ -268,14 +268,12 @@
     },
     "custom-ui-style.external.imports": [
         "file:///Users/gjx/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js",
-        "file:///Users/gjx/dotfiles/application/vscode/custom.css"
+        "file:///Users/gjx/Projects/dotfiles/application/vscode/custom.css"
+        // {
+        //     "type": "css",
+        //     "url": "https://raw.githubusercontent.com/Efterklang/config/refs/heads/main/application/vscode/custom.css"
+        // }
     ],
-    // "custom-ui-style.external.imports": [
-    //     {
-    //         "type": "css",
-    //         "url": "https://raw.githubusercontent.com/Efterklang/config/refs/heads/main/application/vscode/custom.css"
-    //     }
-    // ],
     "custom-ui-style.external.loadStrategy": "cache",
     // * ╭───────────────────────────────────────────────────────╮
     // * │                 Source Control                        │
@@ -437,7 +435,7 @@
     "json.format.keepLines": true,
     "[markdown]": {
         "editor.stickyScroll.enabled": false,
-        "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
         "editor.quickSuggestions": {
             "comments": "on",
             "strings": "on",
@@ -734,6 +732,7 @@
     // * │                     WhichKey                          │
     // * ╰───────────────────────────────────────────────────────╯
     // #region WhichKey
+    "whichkey.sortOrder": "alphabetically",
     "whichkey.bindings": [
         {
             "key": " ",
@@ -783,6 +782,12 @@
                     "name": "Show Open Tabs",
                     "type": "command",
                     "command": "workbench.action.showAllEditors"
+                },
+                {
+                    "key": "s",
+                    "name": "Open SQL Notebook",
+                    "type": "command",
+                    "command": "mysql.notebook.new"
                 },
                 {
                     "key": "h",
@@ -847,10 +852,16 @@
                     "command": "editor.action.codeAction"
                 },
                 {
-                    "key": "s",
-                    "name": "Open SQL Notebook",
+                    "key": "f",
+                    "name": "Format Document",
                     "type": "command",
-                    "command": "mysql.notebook.new"
+                    "command": "editor.action.formatDocument"
+                },
+                {
+                    "key": "F",
+                    "name": "Format With",
+                    "type": "command",
+                    "command": "editor.action.formatDocument.multiple"
                 },
                 {
                     "key": "A",
@@ -874,7 +885,7 @@
         },
         {
             "key": "g",
-            "name": "🎋 Git...",
+            "name": "🌿 Git...",
             "type": "bindings",
             "bindings": [
                 {
@@ -1285,6 +1296,8 @@
     "window.customTitleBarVisibility": "never",
     "workbench.editor.showTabs": "none",
     "python.defaultInterpreterPath": "/usr/bin/python3",
-    "yazi-vscode.autoMaximizeWindow": true,
-    "yazi-vscode.yaziPath": "/opt/homebrew/bin/yazi"
+    "yazi-vscode.yaziPath": "/opt/homebrew/bin/yazi",
+    "inlineChat.enableV2": true,
+    "inlineChat.hideOnRequest": true,
+    "code-runner.runInTerminal": true
 }

@@ -2,7 +2,7 @@
     "Info Callout": {
         "prefix": "callout",
         "body": [
-            "> [!${1|NOTE,TLDR,IMPORTANT,WARNING,CAUTION|}] ${2:message}"
+            "> [!${1|NOTE,TLDR,IMPORTANT,WARNING,DANGER,CAUTION|}] ${2:message}"
         ],
         "description": "Create a callout block with different types: NOTE, TLDR, IMPORTANT, WARNING, CAUTION"
     },
