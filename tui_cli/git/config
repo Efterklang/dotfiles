@@ -36,8 +36,6 @@
 
 [mergetool "vscode"]
 	cmd = code --wait $MERGED
-
-[mergetool]
 	keepBackup = false
 
 [diff "text"]
@@ -77,11 +75,8 @@
 [sendpack]
 	sideband = false
 
-[rebase]
-	backend = merge
-
 [pull]
-	rebase = true
+	rebase = false
 
 [gc]
 	auto = 0
