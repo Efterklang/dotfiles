@@ -129,6 +129,10 @@ customCommands:
         body: "Are you sure you want to commit?"
     command: "git commit --message '{{.Form.Type}}{{ if .Form.Scope }}({{ .Form.Scope }}){{ end }}{{.Form.Breaking}}: {{.Form.Message}}'"
     loadingText: "Creating conventional commit..."
+  - key: "<c-r>"
+    command: "gh pr create --fill --web"
+    context: "global"
+    loadingText: "Creating pull request on GitHub"
   - key: t
     command: tig {{.SelectedSubCommit.Sha}} -- {{.SelectedCommitFile.Name}}
     context: commitFiles
