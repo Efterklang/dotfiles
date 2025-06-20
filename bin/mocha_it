@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# Ref: [installation | Gowall Docs](https://achno.github.io/gowall-docs/installation)
+
+# 检查参数数量
+if [ $# -ne 1 ]; then
+  echo "用法: $0 <图片文件路径>"
+  echo "示例: $0 ./img/a.jpg"
+  exit 1
+fi
+
+# 获取输入文件路径
+input_file="$1"
+
+# 检查文件是否存在
+if [ ! -f "$input_file" ]; then
+  echo "错误: 文件 '$input_file' 不存在"
+  exit 1
+fi
+
+# 获取文件名（不含路径和扩展名）
+filename=$(basename "$input_file")
+filename_no_ext="${filename%.*}"
+
+# 构建输出文件路径（当前工作目录 + 文件名 + .webp）
+output_file="$(pwd)/${filename_no_ext}.webp"
+
+# 执行gowall命令
+echo "正在转换: $input_file -> $output_file"
+gowall convert "$input_file" -t catppuccin --output "$output_file"
+
+# 检查命令执行结果
+if [ $? -eq 0 ]; then
+  echo "✅ 转换成功: $output_file"
+else
+  echo "❌ 转换失败"
+  exit 1
+fi
