@@ -1,0 +1,14 @@
+{
+    "recommendations": [
+        "mikestead.dotenv",
+        "vspacecode.whichkey",
+        "thenuprojectcontributors.vscode-nushell-lang",
+        "vscodevim.vim",
+        "subframe7536.custom-ui-style",
+        "catppuccin.catppuccin-vsc",
+        "alexdauenhauer.catppuccin-noctis-icons",
+        "gxl.git-graph-3",
+        "tompollak.lazygit-vscode",
+        "dautroc.yazi-vscode"
+    ]
+}
