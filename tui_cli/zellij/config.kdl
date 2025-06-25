@@ -4,7 +4,7 @@
 
 keybinds clear-defaults=true {
     locked {
-        bind "Alt `" { SwitchToMode "normal"; }
+        bind "Ctrl g" { SwitchToMode "normal"; }
     }
     pane {
         bind "left" { MoveFocus "left"; }
@@ -257,9 +257,6 @@ load_plugins {
 // 
 // simplified_ui true
  
-// Choose the theme that is specified in the themes section.
-// Default: default
-// 
 theme "catppuccin-mocha"
  
 // Choose the base input mode of zellij.
@@ -432,10 +429,7 @@ default_mode "locked"
 // 
 // stacked_resize false
  
-// Whether to show tips on startup
-// Default: true
-// 
-// show_startup_tips false
+show_startup_tips false
  
 // Whether to show release notes on first version run
 // Default: true
