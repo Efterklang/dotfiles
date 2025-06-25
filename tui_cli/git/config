@@ -86,3 +86,11 @@
 # Delta Settings 
 [include]
     path = .delta.gitconfig
+
+# remote alias
+[url "git@github.com:"]
+	insteadOf = gh:
+[url "https://github.com/"]
+    insteadOf = ghh:
+[url "git@github.com:Efterklang/"]
+	insteadOf = my:
