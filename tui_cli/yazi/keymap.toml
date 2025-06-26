@@ -256,9 +256,9 @@ keymap = [
 	{ on = [
 		"/",
 	], run = "find --smart", desc = "Find next file" },
-	{ on = [
-		"?",
-	], run = "find --previous --smart", desc = "Find previous file" },
+	# { on = [
+	# 	"?",
+	# ], run = "find --previous --smart", desc = "Find previous file" },
 	{ on = [
 		"n",
 	], run = "find_arrow", desc = "Go to next found file" },
@@ -392,7 +392,7 @@ keymap = [
 
 	# Help
 	{ on = [
-		"~",
+		"?",
 	], run = "help", desc = "Open help" },
 ]
 
