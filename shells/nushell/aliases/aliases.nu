@@ -60,7 +60,9 @@ alias e = explorer .
 alias f = commandline edit --insert (fzf --layout=reverse --preview 'bat {}')
 alias g = lazygit
 alias h = fuzzy-command-search
-# i j k
+# i
+alias j = commandline edit --insert (fd --type directory | fzf --preview 'eza --all --git --long --no-time --color=always --icons {}')
+# k
 alias l = clear
 # m n
 alias o = oh-my-posh init nu --config ~/.config/ohmyposh/omp.json --print | save ./shells/nushell/plugins/omp.nu --force

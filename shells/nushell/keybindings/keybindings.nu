@@ -49,6 +49,16 @@ $env.config.keybindings = [
         }
     }
     {
+        name: fuzzy_folder
+        modifier: control
+        keycode: char_f
+        mode: [emacs, vi_normal, vi_insert]
+        event: {
+            send: executehostcommand
+            cmd: "commandline edit --insert (fd --type directory | fzf --preview 'eza --all --git --long --no-time --color=always --icons {}')"
+        }
+    }
+    {
         name: fuzzy_command
         modifier: control
         keycode: char_h
