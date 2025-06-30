@@ -40,6 +40,14 @@ chmod +x ./install.py
 | `cargo`        | Rust package list         |
 | `scoop`        | Windows package list      |
 
+## 🛠️ Custom Scripts
+
+| Script | Description |
+| ------ | ----------- |
+| `bin/gline` | Git repository statistics tool with colorful output |
+| `bin/mocha_it` | Convert image to catppuccin color scheme with webp format |
+| `bin/reload_xdg` | XDG desktop environment reload utility |
+
 ## 🧩Applications
 
 |            VSCode             |             Chrome              |
@@ -143,6 +151,7 @@ Preferred terminals:
 | [helix](https://github.com/helix-editor/helix)       | A post-modern modal text editor.                                          |
 | [lazygit](https://github.com/jesseduffield/lazygit)  | simple terminal UI for git commands                                       |
 | [yazi](https://github.com/sxyazi/yazi)               | 💥 Blazing fast terminal file manager written in Rust, based on async I/O. |
+| [zellij](https://github.com/zellij-org/zellij)       | A terminal workspace with batteries included                               |
 | [lazyvim](https://github.com/LazyVim/LazyVim)        | Neovim config for the lazy                                                |
 | [gping](https://github.com/orf/gping)                | Ping, but with a graph                                                    |
 | [btop4win](https://github.com/aristocratos/btop4win) | btop++ for windows                                                        |
@@ -166,7 +175,15 @@ Preferred terminals:
 
 ### Nushell
 
-Check `./shells/nushell` for more infomation
+Features:
+- Cross-platform support (Windows, macOS, Ubuntu)
+- Fuzzy folder navigation support
+- Vi editing mode by default
+- Comprehensive completions (Scoop, VSCode, Winget, Zellij, UV)
+- Custom aliases and keybindings
+- Catppuccin and Tokyo Night themes
+
+Check `./shells/nushell` for more information
 
 ### Oh My Posh
 
