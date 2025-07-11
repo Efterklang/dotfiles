@@ -674,5 +674,13 @@
         "key": "shift+/",
         "command": "whichkey.searchBindings",
         "when": "whichkeyVisible"
+    },
+    {
+        "key": "alt+u",
+        "command": "piclist.uploadFromClipboard"
+    },
+    {
+        "key": "alt+cmd+u",
+        "command": "-piclist.uploadFromClipboard"
     }
 ]

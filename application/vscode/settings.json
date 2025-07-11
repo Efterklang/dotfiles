@@ -216,7 +216,6 @@
     "search.useParentIgnoreFiles": true,
     "search.followSymlinks": true,
     "search.mode": "view",
-    "search.searchOnType": false,
     "search.exclude": {
         "**/node_modules": true,
         "**/public": true,
@@ -302,6 +301,7 @@
     "git.openRepositoryInParentFolders": "always",
     "git.terminalAuthentication": true,
     "git.terminalGitEditor": true,
+    "git.blame.editorDecoration.enabled": true,
     "git.blame.editorDecoration.template": "${subject}, ${authorName} (${authorDateAgo})",
     "diffEditor.wordWrap": "off",
     "diffEditor.ignoreTrimWhitespace": false,
@@ -442,15 +442,14 @@
             "other": "on"
         }
     },
-    "markdownlint.config": {
-        "no-inline-html": false
-    },
+    "markdownlint.configFile": "~/.config/.markdownlint-cli2.yaml",
     "[javascript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "[css]": {
         "editor.defaultFormatter": "vscode.css-language-features"
     },
+    // #region Python LSP
     "[python]": {
         "editor.codeActionsOnSave": {
             "source.organizeImports.ruff": "always",
@@ -486,7 +485,8 @@
     "python.terminal.shellIntegration.enabled": true,
     "debugpy.showPythonInlineValues": true,
     "debugpy.debugJustMyCode": false,
-    // "java.jdt.ls.javac.enabled": "on",
+    "ruff.lint.preview": true,
+    // #endregion
     "java.completion.chain.enabled": true,
     "java.completion.guessMethodArguments": "insertBestGuessedArguments",
     "java.debug.settings.hotCodeReplace": "auto",
@@ -594,12 +594,12 @@
     "vim.smartRelativeLine": true,
     "vim.sneakReplacesF": true,
     "vim.useSystemClipboard": true,
-    "vim.autoSwitchInputMethod.enable": true,
     "vim.visualstar": true,
-    "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.UnicodeHexInput",
-    "vim.autoSwitchInputMethod.obtainIMCmd": "/opt/homebrew/bin/im-select",
-    "vim.autoSwitchInputMethod.switchIMCmd": "/opt/homebrew/bin/im-select {im}",
     "vim.normalModeKeyBindings": [
+        {
+            "before": [ "x" ],
+            "commands": [ "workbench.action.closeActiveEditor" ]
+        },
         {
             "before": [ "s" ],
             "after": [ "<leader>", "<leader>", "/" ]
@@ -916,7 +916,13 @@
                     "key": "f",
                     "name": "File History",
                     "type": "command",
-                    "command": "git.viewFileHistory"
+                    "command": "gitHistory.diffFileAtCommit"
+                },
+                {
+                    "key": "F",
+                    "name": "File History Against Current",
+                    "type": "command",
+                    "command": "gitHistory.diffFileAtCommitAgainstCurrent"
                 },
                 {
                     "key": "g",
@@ -1124,7 +1130,7 @@
             "key": "t",
             "name": "🐚 Toggle Terminal",
             "type": "command",
-            "command": "workbench.action.terminal.toggleTerminal"
+            "command": "workbench.action.createTerminalEditor"
         },
         {
             "key": "d",
@@ -1244,9 +1250,7 @@
     "remoteHub.gitProtocol": "ssh",
     "remoteHub.richNavigation.enabled": true,
     "resmon.disk.format": "PercentUsed",
-    "ruff.lint.preview": true,
     "security.workspace.trust.untrustedFiles": "open",
-    "telemetry.telemetryLevel": "off",
     "update.enableWindowsBackgroundUpdates": false,
     "update.mode": "manual",
     "wordcount_cjk.activateLanguages": [ "markdown" ],
@@ -1259,8 +1263,7 @@
     },
     "errorLens.excludeBySource": [
         "Ruff(F405)",
-        "Pylance(reportOptionalMemberAccess)",
-        "markdownlint(MD033)"
+        "Pylance(reportOptionalMemberAccess)"
     ],
     "catppuccin-noctis-icons.hidesExplorerArrows": false,
     "files.autoSave": "afterDelay",
@@ -1299,5 +1302,7 @@
     "yazi-vscode.yaziPath": "/opt/homebrew/bin/yazi",
     "inlineChat.enableV2": true,
     "inlineChat.hideOnRequest": true,
-    "code-runner.runInTerminal": true
+    "code-runner.runInTerminal": true,
+    "piclist.copyType": "custom",
+    "piclist.customType": "<img src=\"$url\" alt=\"$fileName\"/>",
 }
