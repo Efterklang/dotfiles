@@ -76,7 +76,7 @@ alias v = vim
 alias w = wsl
 alias y = yazi
 alias z = z
-
+alias ze = zellij attach gnix
 alias c2p = code2prompt
 alias ci = code
 alias czg = bun run czg
