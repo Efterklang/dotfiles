@@ -1,0 +1,87 @@
+#!/usr/bin/env python3
+#
+# This script automates the process of removing a file or directory from Git tracking
+# and adding it to the .gitignore file. It performs the following steps:
+# 1. Removes the specified path from the Git index (`git rm --cached <path>`).
+# 2. Appends the path to the .gitignore file in the repository root.
+# 3. Commits the changes to .gitignore with a standardized message.
+#
+# Usage:
+#   grmcc <path-to-file-or-directory>
+#
+# Example:
+#   grmcc node_modules/
+#   grmcc .env
+#
+
+import subprocess
+import sys
+from pathlib import Path
+
+
+def get_git_root():
+    try:
+        root = subprocess.check_output(
+            ["git", "rev-parse", "--show-toplevel"], text=True
+        ).strip()
+        return Path(root)
+    except subprocess.CalledProcessError:
+        print("Error: Not inside a git repository.")
+        sys.exit(1)
+
+
+def normalize_path(path_str, git_root):
+    abs_path = Path(path_str).resolve()
+    try:
+        rel_path = abs_path.relative_to(git_root)
+        return rel_path
+    except ValueError:
+        print(f"Error: {abs_path} is not inside the Git repository root.")
+        sys.exit(1)
+
+
+def remove_from_git_index(rel_path):
+    try:
+        subprocess.run(["git", "rm", "--cached", str(rel_path)], check=True)
+    except subprocess.CalledProcessError:
+        print(f"Error: Failed to remove {rel_path} from Git index.")
+        sys.exit(1)
+
+
+def append_to_gitignore(rel_path, git_root):
+    gitignore_path = git_root / ".gitignore"
+    if not gitignore_path.exists():
+        gitignore_path.touch()
+
+    lines = gitignore_path.read_text().splitlines()
+    if str(rel_path) not in lines:
+        with gitignore_path.open("a") as f:
+            f.write(f"{rel_path}\n")
+
+
+def commit_changes(rel_path):
+    try:
+        subprocess.run(["git", "add", ".gitignore"], check=True)
+        msg = f"chore: remove {rel_path} from Git's index"
+        subprocess.run(["git", "commit", "-m", msg], check=True)
+    except subprocess.CalledProcessError:
+        print("Error: Git commit failed.")
+        sys.exit(1)
+
+
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: grmcc <path-to-file>")
+        sys.exit(1)
+
+    input_path = sys.argv[1]
+    git_root = get_git_root()
+    rel_path = normalize_path(input_path, git_root)
+
+    remove_from_git_index(rel_path)
+    append_to_gitignore(rel_path, git_root)
+    commit_changes(rel_path)
+
+
+if __name__ == "__main__":
+    main()
