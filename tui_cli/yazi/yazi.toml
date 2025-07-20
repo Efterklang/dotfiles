@@ -19,7 +19,6 @@ image_filter = "triangle"
 image_quality = 75
 max_height = 900
 max_width = 600
-sixel_fraction = 15
 tab_size = 2
 ueberzug_offset = [0, 0, 0, 0]
 ueberzug_scale = 1
@@ -28,7 +27,10 @@ ueberzug_scale = 1
 edit = [
 	{ run = '${EDITOR:=vi} "$@"', desc = "$EDITOR", block = true, for = "unix" },
 	{ run = 'nvim "%*"', block = true, desc = "nvim", for = "windows" },
-	{ run = 'code-insiders "%*"', orphan = true, desc = "ci", for = "windows" },
+]
+code = [
+	{ run = 'code "%*"', orphan = true, desc = "VSCode", for = "unix" },
+	{ run = 'code "%1"', orphan = true, desc = "VSCode", for = "windows" },
 ]
 extract = [
 	{ run = 'unar "$1"', desc = "Extract here", for = "unix" },
@@ -93,6 +95,7 @@ rules = [
 	{ mime = "*", use = [
 		"open",
 		"reveal",
+		"code",
 	] },
 ]
 
@@ -164,4 +167,3 @@ quit_title = "{n} task{s} running, sure to quit? (y/N)"
 sort_by = "none"
 sort_reverse = false
 sort_sensitive = false
-
