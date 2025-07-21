@@ -185,7 +185,7 @@ const ruleProviders = {
 const rules = [
   // 额外自定义规则       //在此添加你想要的规则
   "PROCESS-NAME,steam.exe,🐬 自定义直连",
-  "PROCESS-NAME,OneDrive,🐬 自定义直连",
+  // "PROCESS-NAME,OneDrive,🐬 自定义直连",
   "PROCESS-NAME,linux.do,🐬 自定义直连",
   "DOMAIN-SUFFIX,cursor.sh,🐳 自定义代理",
   "DOMAIN-SUFFIX,cursor-cdn.com,🐳 自定义代理",
