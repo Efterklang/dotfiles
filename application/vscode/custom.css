@@ -71,40 +71,6 @@
 	top: -6px !important;
 }
 
-/* Tabs */
-.monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab.selected.tab-border-top>.tab-border-top-container {
-	display: none;
-}
-
-.tab.active {
-	font-weight: 600 !important;
-	font-style: italic !important;
-	/* border-left: 1px solid var(--lavender) !important; */
-}
-
-.tab {
-	border-radius: 3px !important;
-	margin-left: 2px !important;
-	margin-right: 2px !important;
-	padding-top: 2px !important;
-	height: 30px !important;
-	align-items: center !important;
-}
-
-.tab .monaco-icon-label {
-	height: 100% !important;
-	align-items: center;
-}
-
-.tab .tab-label {
-	line-height: 27px !important;
-}
-
-.tabs-container {
-	height: auto !important;
-	padding: 3px !important;
-}
-
 /* Sidebar title */
 .composite.title {
 	display: flex !important;
@@ -313,7 +279,7 @@
 .statusbar-item-label[aria-label="-- VISUAL --"],
 .statusbar-item-label[aria-label="-- VISUAL LINE --"],
 .statusbar-item-label[aria-label="-- VISUAL BLOCK --"],
-.statusbar-item-label[aria-label="-- VIM: DISABLED --"]{
+.statusbar-item-label[aria-label="-- VIM: DISABLED --"] {
 	font-size: 0;
 }
 
@@ -399,7 +365,7 @@ div#chat\.statusBarEntry {
 	padding-right: 2px !important;
 }
 
-/* 
+/*
 .statusbar-item.left {
 	position: relative;
 	margin-right: 1px !important;
