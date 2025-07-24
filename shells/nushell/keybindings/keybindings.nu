@@ -28,34 +28,14 @@ $env.config.keybindings = [
     #  ╭───────────────────────────────────────────────────────╮
     #  │               Custom keybindings                      │
     #  ╰───────────────────────────────────────────────────────╯
-    {  # history_menu using fzf
-        name: fzf_history_menu_fzf_ui
-        modifier: control
-        keycode: char_r
-        mode: [emacs, vi_normal, vi_insert]
-        event: {
-            send: executehostcommand
-            cmd: "commandline edit --insert (bat --color never --style plain $nu.history-path | fzf --height 70% --layout reverse --tac | str trim)"
-        }
-    }
     {
-        name: fuzzy_file
-        modifier: control
-        keycode: char_t
-        mode: [emacs, vi_normal, vi_insert]
-        event: {
-            send: executehostcommand
-            cmd: "commandline edit --insert (fzf --layout=reverse --preview 'bat {}')"
-        }
-    }
-    {
-        name: fuzzy_folder
+        name: fuzzy_command
         modifier: control
         keycode: char_f
         mode: [emacs, vi_normal, vi_insert]
         event: {
             send: executehostcommand
-            cmd: "commandline edit --insert (fd --type directory | fzf --preview 'eza --all --git --long --no-time --color=always --icons {}')"
+            cmd: "tv_smart_autocomplete"
         }
     }
     {

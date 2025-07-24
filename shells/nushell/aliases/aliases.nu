@@ -55,7 +55,7 @@ def trim_history [] {
 alias a = gh copilot suggest
 alias b = btop
 alias c = code
-alias d = lazydocker
+alias d = dust 
 alias e = explorer .
 alias f = commandline edit --insert (fzf --layout=reverse --preview 'bat {}')
 alias g = lazygit
@@ -76,7 +76,7 @@ alias v = vim
 alias w = wsl
 alias y = yazi
 alias z = z
-alias ze = zellij attach gnix
+alias ze = zellij attach --create gnix
 alias c2p = code2prompt
 alias ci = code
 alias czg = bun run czg
