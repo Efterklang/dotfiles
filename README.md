@@ -1,28 +1,5 @@
 # 🍚Dotfiles
 
-## 📋目录
-
-1. [🍚Dotfiles](#dotfiles)
-   1. [📋目录](#目录)
-   2. [🚀 Quick Start](#-quick-start)
-   3. [📦Packages](#packages)
-   4. [🧩Applications](#applications)
-      1. [VSCode](#vscode)
-      2. [Chrome](#chrome)
-   5. [🔣Fonts](#fonts)
-   6. [💻Terminal](#terminal)
-      1. [Workflow](#workflow)
-         1. [Completion Tools](#completion-tools)
-         2. [CLI](#cli)
-         3. [TUI](#tui)
-   7. [🐚Shell](#shell)
-      1. [Nushell](#nushell)
-      2. [Oh My Posh](#oh-my-posh)
-
-| Desktop                         |
-| ------------------------------- |
-| ![Desktop](assets/desktop.webp) |
-
 ## 🚀 Quick Start
 
 Use the unified Python installation script, which automatically detects the operating system and performs the corresponding installation:
@@ -32,69 +9,8 @@ chmod +x ./install.py
 ./install.py
 ```
 
-## 📦Packages
 
-| File/Directory | Description               |
-| -------------- | ------------------------- |
-| `apt-get`      | Debian-based package list |
-| `cargo`        | Rust package list         |
-| `scoop`        | Windows package list      |
-
-## 🛠️ Custom Scripts
-
-| Script | Description |
-| ------ | ----------- |
-| `bin/gline` | Git repository statistics tool with colorful output |
-| `bin/mocha_it` | Convert image to catppuccin color scheme with webp format |
-| `bin/reload_xdg` | XDG desktop environment reload utility |
-
-## 🧩Applications
-
-|            VSCode             |             Chrome              |
-| :---------------------------: | :-----------------------------: |
-| ![VSCode](assets/vscode.webp) | ![browser](assets/browser.webp) |
-
-### VSCode
-
-| File/Directory              | Description                                  |
-| --------------------------- | -------------------------------------------- |
-| `custom.css`                | Custom CSS styling for VSCode                |
-| `keybindings.json`          | Keyboard shortcuts configuration             |
-| `markdown-preview-enhanced` | Enhanced markdown preview plugin settings    |
-| `settings.json`             | VSCode global settings                       |
-| `snippets`                  | Code snippets (markdown, python, java, etc.) |
-
-| Foam + Markdown Preview Enhanced + Markless |       Custom CSS for VSCode        |
-| :-----------------------------------------: | :--------------------------------: |
-|       ![Markdown](assets/vsc_md.webp)       | ![Custom CSS](assets/vsc_css.webp) |
-
-> [!NOTE]
->
-> VSCode Custom CSS: check 👉 [this post](https://vluv.space/Tools/VSCode/custom_vscode_css/)
->
-> VSCode keybindings: check 👉 [this post](https://vluv.space/Tools/VSCode/vscode_shortcut/)
->
-> VSCode Extensions: check 👉 [this post](https://vluv.space/Tools/VSCode/recommended_extensions/)
-
-### Chrome
-
-Extension List
-
-- [**Stylus**](https://add0n.com/stylus.html)
-  - User styles manager for customizing website appearance
-- [**Vimium C**](https://github.com/gdh1995/vimium-c)
-  - Keyboard-based navigation and tab operations
-  - Features advanced omnibar functionality
-
-## 🔣Fonts
-
-- LXGW WenKai
-- Maple Mono NF CN
-- Maple Hand
-- Jetbrains Mono
-- Monaspace
-
-## 💻Terminal
+## 💻 Terminal
 
 Preferred terminals:
 
@@ -140,31 +56,39 @@ Preferred terminals:
 | :---------------------: | :---------------------------: |
 | ![Fzf](assets/fzf.webp) | ![Zoxide](assets/zoxide.webp) |
 
+|            Delta            |              Television               |
+| :-------------------------: | :-----------------------------------: |
+| ![Delta](assets/delta.webp) | ![Television](assets/television.webp) |
+
 > [!note] bat
 >
 > run this command to apply theme: `bat cache --build`
 
 #### TUI
 
-| Tool                                                 | Description                                                               |
-| ---------------------------------------------------- | ------------------------------------------------------------------------- |
-| [helix](https://github.com/helix-editor/helix)       | A post-modern modal text editor.                                          |
-| [lazygit](https://github.com/jesseduffield/lazygit)  | simple terminal UI for git commands                                       |
-| [yazi](https://github.com/sxyazi/yazi)               | 💥 Blazing fast terminal file manager written in Rust, based on async I/O. |
-| [zellij](https://github.com/zellij-org/zellij)       | A terminal workspace with batteries included                               |
-| [lazyvim](https://github.com/LazyVim/LazyVim)        | Neovim config for the lazy                                                |
-| [gping](https://github.com/orf/gping)                | Ping, but with a graph                                                    |
-| [btop4win](https://github.com/aristocratos/btop4win) | btop++ for windows                                                        |
+| Tool                                                   | Description                                                               |
+| ------------------------------------------------------ | ------------------------------------------------------------------------- |
+| [helix](https://github.com/helix-editor/helix)         | A post-modern modal text editor.                                          |
+| [lazygit](https://github.com/jesseduffield/lazygit)    | simple terminal UI for git commands                                       |
+| [yazi](https://github.com/sxyazi/yazi)                 | 💥 Blazing fast terminal file manager written in Rust, based on async I/O. |
+| [zellij](https://github.com/zellij-org/zellij)         | A terminal workspace with batteries included                              |
+| [lazyvim](https://github.com/LazyVim/LazyVim)          | Neovim config for the lazy                                                |
+| [gping](https://github.com/orf/gping)                  | Ping, but with a graph                                                    |
+| [btop4win](https://github.com/aristocratos/btop4win)   | btop++ for windows                                                        |
+| [gitui](https://github.com/extrawurst/gitui)           | Blazing fast terminal-ui for git written in rust.                         |
+| [procs](https://github.com/dalance/procs)              | A modern replacement for ps written in Rust.                              |
+| [television](https://github.com/alexhallam/television) | A TUI for viewing images in the terminal.                                 |
+| [tig](https://github.com/jonas/tig)                    | Text-mode interface for git.                                              |
 
 |           LazyVim            |             LazyGit             |
 | :--------------------------: | :-----------------------------: |
 | ![LazyVim](assets/nvim.webp) | ![LazyGit](assets/lazygit.webp) |
 
-|           Yazi            |         btop4win          |
+|           Yazi            |           btop            |
 | :-----------------------: | :-----------------------: |
 | ![Yazi](assets/yazi.webp) | ![btop](assets/btop.webp) |
 
-## 🐚Shell
+## 🐚 Shell
 
 - Shell Prompt Theme
   - [oh-my-posh](https://ohmyposh.dev): A prompt theme engine for any shell.
@@ -172,12 +96,13 @@ Preferred terminals:
   - Nushell
   - Fish
   - Powershell7
+  - Zsh
 
 ### Nushell
 
 Features:
+
 - Cross-platform support (Windows, macOS, Ubuntu)
-- Fuzzy folder navigation support
 - Vi editing mode by default
 - Comprehensive completions (Scoop, VSCode, Winget, Zellij, UV)
 - Custom aliases and keybindings
@@ -201,3 +126,67 @@ oh-my-posh init fish --config ~/.config/ohmyposh/omp.json | source
 ```shell
 oh-my-posh init bash --config ~/.config/ohmyposh/omp.json | source
 ```
+
+## 🧩 Applications
+
+| Application                                                       | Description                                  |
+| ----------------------------------------------------------------- | -------------------------------------------- |
+| [AutoHotkey](https://www.autohotkey.com/)                         | Windows automation scripts                   |
+| [Clash Verge](https://github.com/clash-verge-rev/clash-verge-rev) | A Clash GUI based on Tauri                   |
+| [Karabiner-Elements](https://karabiner-elements.pqrs.org/)        | Keyboard customizer for macOS                |
+| [Kitty](https://sw.kovidgoyal.net/kitty/)                         | GPU-based terminal emulator                  |
+| [SketchyBar](https://github.com/FelixKratz/SketchyBar)            | A flexible macOS status bar                  |
+| [Yasb](https://github.com/denBot/yasb)                            | A highly customizable status bar for Windows |
+| [VSCode](https://code.visualstudio.com/)                          | Code editor settings and snippets            |
+| [Chrome](https://www.google.com/chrome/)                          | Browser extensions and settings              |
+
+### YASB
+
+| Desktop                         |
+| ------------------------------- |
+| ![Desktop](assets/desktop.webp) |
+
+### VSCode
+
+| File/Directory              | Description                                  |
+| --------------------------- | -------------------------------------------- |
+| `custom.css`                | Custom CSS styling for VSCode                |
+| `keybindings.json`          | Keyboard shortcuts configuration             |
+| `markdown-preview-enhanced` | Enhanced markdown preview plugin settings    |
+| `settings.json`             | VSCode global settings                       |
+| `snippets`                  | Code snippets (markdown, python, java, etc.) |
+
+| Foam + Markdown Preview Enhanced + Markless |      Custom CSS + Vim + WhichKey       |
+| :-----------------------------------------: | :------------------------------------: |
+|       ![Markdown](assets/vsc_md.webp)       | ![1753362161588](assets/which_key.png) |
+
+> [!NOTE]
+>
+> VSCode Custom CSS: check 👉 [this post](https://vluv.space/custom_vscode_css/)
+>
+> VSCode keybindings: check 👉 [this post](https://vluv.space/vscode_shortcut/)
+>
+> VSCode Extensions: check 👉 [this post](https://vluv.space/recommended_extensions/)
+
+### Edge/Chrome
+
+Extension List
+
+- [**Stylus**](https://add0n.com/stylus.html)
+  - User styles manager for customizing website appearance
+- [**Vimium C**](https://github.com/gdh1995/vimium-c)
+  - Keyboard-based navigation and tab operations
+  - Features advanced omnibar functionality
+
+|               Stylus                |               Vimium C                |
+| :---------------------------------: | :-----------------------------------: |
+| ![1753361797073](assets/stylus.png) | ![1753361760841](assets/vimium_c.png) |
+
+## 📦 Packages
+
+| File/Directory | Description               |
+| -------------- | ------------------------- |
+| `apt-get`      | Debian-based package list |
+| `cargo`        | Rust package list         |
+| `pacman`       | Arch Linux package list   |
+| `scoop`        | Windows package list      |
