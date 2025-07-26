@@ -22,7 +22,6 @@
     ~/.config/nvim: tui_cli/nvim
     ~/.config/ohmyposh: shells/ohmyposh
     ~/.config/procs: tui_cli/procs
-    ~/.config/sketchybar: ./application/sketchybar/sketchybar_felix_lua
     ~/.config/television: ./tui_cli/television
     ~/.config/tig: ./tui_cli/tig
     ~/.config/vscode/markdown-preview-enhanced: application/vscode/markdown-preview-enhanced
@@ -39,6 +38,9 @@
       if: "[ `uname` = Darwin ]"
     ~/.config/karabiner:
       path: application/karabiner
+      if: "[ `uname` = Darwin ]"
+    ~/.config/sketchybar:
+      path: ./application/sketchybar/sketchybar_felix_sh
       if: "[ `uname` = Darwin ]"
     ~/Library/Application Support/Code/User/settings.json:
       path: application/vscode/settings.json
@@ -58,4 +60,5 @@
     ~/Library/Application Support/io.github.clash-verge-rev.clash-verge-rev/verge.yaml:
       path: application/clash-verge-rev/verge.yaml
       if: "[ `uname` = Darwin ]"
-- shell: []
+- shell:
+    - [bat cache --build]

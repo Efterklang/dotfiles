@@ -9,6 +9,9 @@ chmod +x ./install.py
 ./install.py
 ```
 
+> [!danger]
+>
+> back up the folder before installation, or run the `dotbot --dry-run` command to confirm the changes that will be applied. 
 
 ## 💻 Terminal
 
