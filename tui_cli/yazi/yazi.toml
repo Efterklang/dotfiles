@@ -29,7 +29,7 @@ edit = [
 	{ run = 'nvim "%*"', block = true, desc = "nvim", for = "windows" },
 ]
 code = [
-	{ run = 'code "%*"', orphan = true, desc = "VSCode", for = "unix" },
+	{ run = 'code "$@"', orphan = true, desc = "VSCode", for = "unix" },
 	{ run = 'code "%1"', orphan = true, desc = "VSCode", for = "windows" },
 ]
 extract = [
