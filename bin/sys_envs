@@ -41,6 +41,9 @@ set_env XDG_PICTURES_DIR "$HOME/Pictures"
 set_env XDG_PUBLICSHARE_DIR "$HOME/Public"
 set_env XDG_VIDEOS_DIR "$HOME/Movies"
 
+# Make sure the XDG directories exist
+mkdir -p "$XDG_CACHE_HOME" "$XDG_CONFIG_HOME" "$XDG_DATA_HOME" "$XDG_RUNTIME_DIR" "$XDG_STATE_HOME"
+
 # Define paths for common programs with partial XDG support
 # https://wiki.archlinux.org/title/XDG_Base_Directory#Partial
 set_env CARGO_HOME "$XDG_DATA_HOME/cargo"
