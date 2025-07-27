@@ -188,7 +188,7 @@
     },
     // #region Files
     "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 5000,
+    "files.autoSaveDelay": 500,
     "files.associations": {
         "*.json": "jsonc"
     },
@@ -242,10 +242,6 @@
     // * ╭───────────────────────────────────────────────────────╮
     // * │                    VSCode UI                          │
     // * ╰───────────────────────────────────────────────────────╯
-    "material-icon-theme.folders.associations": {
-        "LeetCode": "expo",
-        "project": "windows"
-    },
     "material-icon-theme.activeIconPack": "angular_ngrx",
     "material-icon-theme.saturation": 1,
     "material-icon-theme.opacity": 1,
@@ -397,7 +393,8 @@
     "errorLens.fontWeight": "100",
     "leetcode.endpoint": "leetcode-cn",
     "leetcode.nodePath": "/opt/homebrew/bin/node",
-    "leetcode.defaultLanguage": "java",
+    "leetcode.workspaceFolder": "/Users/gjx/Projects/leetcode/",
+    "leetcode.defaultLanguage": "python3",
     "leetcode.filePath": {
         "python3": {
             "folder": "python",
@@ -413,7 +410,7 @@
         }
     },
     "leetcode.hint.configWebviewMarkdown": false,
-    "leetcode.hint.commentDescription": false,
+    "leetcode.hint.commentDescription": true,
     "leetcode.hint.commandShortcut": false,
     "leetcode.showDescription": "None",
     // * ╭───────────────────────────────────────────────────────╮
@@ -546,7 +543,7 @@
         }
     },
     "[markdown]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one",
         "editor.quickSuggestions": {
             "comments": "on",
             "strings": "on",
@@ -672,6 +669,14 @@
         {
             "before": [ "L" ],
             "commands": [ "workbench.action.navigateForward" ]
+        },
+        {
+            "before": [ ">" ],
+            "commands": [ "editor.action.indentLines" ]
+        },
+        {
+            "before": [ "<" ],
+            "commands": [ "editor.action.outdentLines" ]
         }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
@@ -701,12 +706,14 @@
         // expand seletion
         {
             "before": [ "l" ],
-            "commands": [ "editor.action.smartSelect.grow" ]
+            "commands": [ "editor.action.smartSelect.grow" ],
+            "silent": true
         },
         // shrink selection
         {
             "before": [ "h" ],
-            "commands": [ "editor.action.smartSelect.shrink" ]
+            "commands": [ "editor.action.smartSelect.shrink" ],
+            "silent": true
         },
         // stage selection
         {
@@ -937,15 +944,15 @@
                 },
                 {
                     "key": "g",
-                    "name": "View Git Graph",
-                    "type": "command",
-                    "command": "git-graph.view"
-                },
-                {
-                    "key": "l",
                     "name": "Toggle LazyGit",
                     "type": "command",
                     "command": "lazygit-vscode.toggle"
+                },
+                {
+                    "key": "l",
+                    "name": "View Git Graph",
+                    "type": "command",
+                    "command": "git-graph.view"
                 },
                 {
                     "key": "s",
@@ -1138,12 +1145,6 @@
             "command": "workbench.action.closeWindow"
         },
         {
-            "key": "t",
-            "name": "🐚 Toggle Terminal",
-            "type": "command",
-            "command": "workbench.action.createTerminalEditor"
-        },
-        {
             "key": "d",
             "name": "🎮 Debug Console",
             "type": "command",
@@ -1273,7 +1274,6 @@
         "Pylance(reportOptionalMemberAccess)"
     ],
     "catppuccin-noctis-icons.hidesExplorerArrows": false,
-    "window.menuBarVisibility": "compact",
     "database-client.autoSync": true,
     "debug.showVariableTypes": true,
     "remote.defaultExtensionsIfInstalledLocally": [
@@ -1304,7 +1304,7 @@
     "inlineChat.enableV2": true,
     "inlineChat.hideOnRequest": true,
     "code-runner.runInTerminal": true,
-    "leetcode.workspaceFolder": "/Users/gjx/.leetcode",
     "notebook.cellToolbarVisibility": "hover",
     "notebook.formatOnSave.enabled": true,
+    "roo-cline.deniedCommands": [ ],
 }

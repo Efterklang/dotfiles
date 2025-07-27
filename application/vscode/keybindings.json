@@ -682,5 +682,9 @@
     {
         "key": "alt+cmd+u",
         "command": "-piclist.uploadFromClipboard"
+    },
+    {
+        "key": "cmd+;",
+        "command": "workbench.action.createTerminalEditor"
     }
 ]
