@@ -1,6 +1,5 @@
 $env.EDITOR = 'nvim'
 $env.MANPAGER = 'nvim +Man!'
-$env.YAZI_CONFIG_HOME = '~/.config/yazi/'
 # nushell vi mode
 $env.PROMPT_INDICATOR_VI_INSERT = ""
 $env.PROMPT_INDICATOR_VI_NORMAL = ""
@@ -21,3 +20,5 @@ $env.FZF_DEFAULT_OPTS = '
     --layout reverse
 '
 $env.FZF_DEFAULT_COMMAND = 'fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
+$env.GOOGLE_CLOUD_PROJECT = 'gen-lang-client-0006538526'
+

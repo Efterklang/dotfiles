@@ -1,0 +1,67 @@
+#! /bin/bash
+
+# Define a macro function for setting environment variables
+set_env() {
+    os_name=$(uname -s)
+
+    case "$os_name" in
+        Darwin)
+            # For macOS, use launchctl to set environment variables
+            launchctl setenv "$1" "$2"
+            ;;
+        Linux)
+            export "$1=$2"
+            ;;
+        *)
+            echo "Unsupported OS: $os_name"
+            exit 1
+            ;;
+    esac
+}
+
+set_env XDG_BIN_HOME "${XDG_BIN_HOME:=$HOME/.local/bin}"
+if [[ ":$PATH:" != *":$XDG_BIN_HOME:"* ]]; then
+  PATH="$XDG_BIN_HOME:$PATH"
+fi
+
+set_env XDG_CACHE_HOME "$HOME/Library/Caches"
+set_env XDG_CONFIG_HOME "$HOME/.config"
+set_env XDG_CONFIG_DIRS "/etc/xdg"
+set_env XDG_DATA_HOME "$HOME/.local/share"
+set_env XDG_DATA_DIRS "/usr/local/share/:/usr/share/"
+set_env XDG_RUNTIME_DIR "$TMPDIR/runtime-$UID"
+set_env XDG_STATE_HOME "$HOME/.local/state"
+
+# https://wiki.archlinux.org/title/XDG_user_directories
+set_env XDG_DESKTOP_DIR "$HOME/Desktop"
+set_env XDG_DOCUMENTS_DIR "$HOME/Documents"
+set_env XDG_DOWNLOAD_DIR "$HOME/Downloads"
+set_env XDG_MUSIC_DIR "$HOME/Music"
+set_env XDG_PICTURES_DIR "$HOME/Pictures"
+set_env XDG_PUBLICSHARE_DIR "$HOME/Public"
+set_env XDG_VIDEOS_DIR "$HOME/Movies"
+
+# Define paths for common programs with partial XDG support
+# https://wiki.archlinux.org/title/XDG_Base_Directory#Partial
+set_env CARGO_HOME "$XDG_DATA_HOME/cargo"
+set_env FFMPEG_DATADIR "$XDG_CONFIG_HOME/ffmpeg"
+set_env LESSHISTFILE "$XDG_STATE_HOME/less_history"
+set_env MYPY_CACHE_DIR "$XDG_CACHE_HOME/mypy"
+set_env NODE_REPL_HISTORY "$XDG_STATE_HOME/node_repl_history"
+set_env PYENV_ROOT "$XDG_DATA_HOME/pyenv"
+set_env PYTHONPYCACHEPREFIX "$XDG_CACHE_HOME/python"
+set_env PYTHONUSERBASE "$XDG_DATA_HOME/python"
+set_env PYTHON_HISTORY "$XDG_STATE_HOME/python_history"
+set_env RIPGREP_CONFIG_PATH "$XDG_CONFIG_HOME/ripgrep/config"
+set_env RUSTUP_HOME "$XDG_DATA_HOME/rustup"
+set_env WORKON_HOME "$XDG_DATA_HOME/virtualenvs"
+# docker
+set_env DOCKER_CONFIG "$XDG_CONFIG_HOME/docker"
+set_env MACHINE_STORAGE_PATH "$XDG_DATA_HOME/docker_machine"
+# npm
+set_env NPM_CONFIG_USERCONFIG "$XDG_CONFIG_HOME/npm/npmrc"
+# zsh
+set_env ZDOTDIR "$XDG_CONFIG_HOME/zsh"
+set_env ZSH_PROFILE "$XDG_CONFIG_HOME/zsh/profile"
+# yazi
+set_env YAZI_CONFIG_HOME "$XDG_CONFIG_HOME/yazi"

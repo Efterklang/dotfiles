@@ -29,10 +29,10 @@
     ~/.config/zellij: tui_cli/zellij
     ~/.config/zsh: shells/zsh
     ~/.config/.markdownlint-cli2.yaml: ./misc/.markdownlint-cli2.yaml
+    ~/.local/bin/:
+      glob: true
+      path: bin/**
     # MacOS specific configurations
-    ~/.config/xdg.env:
-      path: ./misc/xdg.env
-      if: "[ `uname` = Darwin ]"
     ~/Library/LaunchAgents/env.xdg.plist:
       path: ./misc/env.xdg.plist
       if: "[ `uname` = Darwin ]"
