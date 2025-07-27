@@ -17,14 +17,14 @@ def --env y [...args] {
 }
 
 def fzfp [] {
-    fzf --preview "bat --color=always --style=numbers --line-range=:500 {}" 
-} 
+    fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"
+}
 
 const tablen = 8
 
 # calculate required tabs/spaces to get a nicely aligned table
 def pad-tabs [input_name max_indent] {
-    let input_length = ($input_name | str length) 
+    let input_length = ($input_name | str length)
     let required_tabs = $max_indent - ($input_length / $tablen | into int)
     seq 0 $required_tabs | reduce -f "" {|it, acc| $acc + (char tab)}
 }
@@ -55,21 +55,21 @@ def trim_history [] {
 alias a = gh copilot suggest
 alias b = btop
 alias c = code
-alias d = dust 
+alias d = dust
 alias e = explorer .
 alias f = commandline edit --insert (fzf --layout=reverse --preview 'bat {}')
 alias g = lazygit
 alias h = fuzzy-command-search
-# i
+alias i = gemini
 alias j = commandline edit --insert (fd --type directory | fzf --preview 'eza --all --git --long --no-time --color=always --icons {}')
 # k
 alias l = clear
 # m n
-alias o = oh-my-posh init nu --config ~/.config/ohmyposh/omp.json --print | save ./shells/nushell/plugins/omp.nu --force
+alias o = open
 alias p = gping
 # q
 alias r = commandline edit --insert (bat --color never --style plain $nu.history-path | fzf --height 70% --layout reverse --tac | str trim)
-alias s = scoop
+alias s = somo
 alias t = tokei
 alias u = uv
 alias v = vim
@@ -86,6 +86,6 @@ alias hexo = bun run hexo
 alias hf = fuzzy-command-search
 alias pyenv = overlay use .venv/bin/activate.nu
 alias scene = adb shell sh /storage/emulated/0/Android/data/com.omarea.vtools/up.sh
-alias shizuku = adb shell sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.sh 
+alias shizuku = adb shell sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.sh
 alias zhelp = zoxide --help
 alias zo = zoxide

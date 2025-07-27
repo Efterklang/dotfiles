@@ -12,23 +12,6 @@ $env.config = {
 
     error_style: "fancy" # "fancy" or "plain" for screen reader-friendly error messages
 
-    explore: {
-        status_bar_background: { fg: "#11111b", bg: "#a4bce8" },
-        command_bar_text: { fg: "#C4C9C6" },
-        highlight: { fg: "black", bg: "yellow" },
-        status: {
-            error: { fg: "white", bg: "red" },
-            warn: {}
-            info: {}
-        },
-        table: {
-            split_line: { fg: "#1e1e2e" },
-            selected_cell: { bg: light_blue },
-            selected_row: {},
-            selected_column: {},
-        },
-    }
-
     history: {
         max_size: 5000 # Session has to be reloaded for this to take effect
         sync_on_enter: true # Enable to share history between multiple sessions, else you have to close the session to write history to file
@@ -134,20 +117,6 @@ $env.config = {
                 description_text: red
                 match_text: { attr: u }
                 selected_match_text: { attr: ur }
-            }
-        }
-        {
-            name: history_menu
-            only_buffer_difference: true
-            marker: "? "
-            type: {
-                layout: list
-                page_size: 10
-            }
-            style: {
-                text: green
-                selected_text: green_reverse
-                description_text: yellow
             }
         }
     ]
