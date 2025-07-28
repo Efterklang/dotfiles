@@ -201,19 +201,6 @@ fallback_channel = "files"
 [shell_integration.channel_triggers]
 # Add your channel triggers here. Each key is a channel that will be triggered
 # by the corresponding commands.
-# Example: say you want the following commands to trigger the following channels
-# when pressing <CTRL-T>:
-#          `git checkout`  should trigger the `git-branches` channel
-#          `ls`            should trigger the `dirs` channel
-#          `cat` and `cp`  should trigger the `files` channel
-#
-# You would add the following to your configuration file:
-# ```
-# [shell_integration.channel_triggers]
-# "git-branches" = ["git checkout"]
-# "dirs" = ["ls"]
-# "files" = ["cat", "cp"]
-# ```
 "alias" = ["alias", "unalias"]
 "env" = ["export", "unset"]
 "dirs" = ["cd", "ls", "rmdir"]
@@ -251,7 +238,7 @@ fallback_channel = "files"
 "git-log" = ["git log", "git show"]
 "docker-images" = ["docker run"]
 "git-repos" = ["nvim", "code", "hx", "git clone"]
-
+"procs" = ["kill", "procs"]
 
 [shell_integration.keybindings]
 # controls which key binding should trigger tv

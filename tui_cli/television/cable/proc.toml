@@ -1,0 +1,11 @@
+[metadata]
+name = "procs"
+description = "A channel to select from processes"
+requirements = ["ps"]
+
+[source]
+command = ["ps -A -o pid,ppid,user,comm"]
+output = "{split: :0}"
+
+[keybindings]
+shortcut = "f2"
