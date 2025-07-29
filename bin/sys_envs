@@ -8,6 +8,9 @@ env() {
         Darwin)
             # For macOS, use launchctl to set environment variables
             launchctl setenv "$1" "$2"
+            # launchctl setenv does not work for current shell session(which executes this script),
+            # for example, when set `XDG_CONFIG_HOME/bat`, the XDG_CONFIG_HOME will be expanded as empty string.
+            export "$1=$2"
             ;;
         Linux)
             export "$1=$2"
@@ -62,5 +65,6 @@ env NPM_CONFIG_USERCONFIG "$XDG_CONFIG_HOME/npm/npmrc"
 # zsh
 env ZDOTDIR "$XDG_CONFIG_HOME/zsh"
 env ZSH_PROFILE "$XDG_CONFIG_HOME/zsh/profile"
+env HISTFILE "~/.cache/zshhistory"
 # yazi
 env YAZI_CONFIG_HOME "$XDG_CONFIG_HOME/yazi"

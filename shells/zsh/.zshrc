@@ -5,7 +5,6 @@ PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magent
 # History in cache directory:
 HISTSIZE=10000
 SAVEHIST=10000
-HISTFILE=~/.cache/zshhistory
 setopt appendhistory
 
 # Autocomplete
@@ -36,3 +35,4 @@ bindkey -e
 
 # Prompt theme
 eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/catppuccin.omp.json)"
+eval "$(tv init zsh)"
