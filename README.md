@@ -11,7 +11,7 @@ chmod +x ./install.py
 
 > [!danger]
 >
-> back up the folder before installation, or run the `dotbot --dry-run` command to confirm the changes that will be applied. 
+> back up the folder before installation, or run the `dotbot --dry-run` command to confirm the changes that will be applied.
 
 ## 💻 Terminal
 
@@ -20,9 +20,7 @@ Preferred terminals:
 - **Windows Terminal**: For Windows systems
 - **Wezterm**: Cross-platform terminal emulator
 
-### Workflow
-
-#### Completion Tools
+### Command Completions
 
 - [Carapace](https://carapace.sh/): A multi-shell completion library and binary.
 - [Inshellisense](https://github.com/microsoft/inshellisense): IDE style command line auto complete
@@ -38,7 +36,7 @@ Preferred terminals:
 >
 > Set Up Tutorial 👉 [NuShell命令补全 —— Carapace e.g](https://vluv.space/Tools/Terminal/nu_completion/)
 
-#### CLI
+### CLI ToolSet
 
 | Tools                                                   | Description                                                                                  |
 | ------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
@@ -67,7 +65,7 @@ Preferred terminals:
 >
 > run this command to apply theme: `bat cache --build`
 
-#### TUI
+### TUI ToolSet
 
 | Tool                                                   | Description                                                               |
 | ------------------------------------------------------ | ------------------------------------------------------------------------- |
@@ -142,6 +140,12 @@ oh-my-posh init bash --config ~/.config/ohmyposh/omp.json | source
 | [Yasb](https://github.com/denBot/yasb)                            | A highly customizable status bar for Windows |
 | [VSCode](https://code.visualstudio.com/)                          | Code editor settings and snippets            |
 | [Chrome](https://www.google.com/chrome/)                          | Browser extensions and settings              |
+
+### Tauno
+
+|       Music List And Gallery       |
+| :--------------------------------: |
+| ![1753796173018](assets/tauno.png) |
 
 ### YASB
 

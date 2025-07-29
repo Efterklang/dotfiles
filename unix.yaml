@@ -32,6 +32,9 @@
     ~/.local/bin/:
       glob: true
       path: bin/**
+    ~/.local/share/TauonMusicBox/:
+      glob: true
+      path: application/tauon/**
     # MacOS specific configurations
     ~/Library/LaunchAgents/env.xdg.plist:
       path: ./misc/env.xdg.plist
