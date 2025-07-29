@@ -62,7 +62,7 @@ alias g = lazygit
 alias h = fuzzy-command-search
 alias i = gemini
 alias j = commandline edit --insert (fd --type directory | fzf --preview 'eza --all --git --long --no-time --color=always --icons {}')
-# k
+alias k = commandline edit --insert (zellij delete-all-sessions -y; zellij kill-all-sessions -y)
 alias l = clear
 # m n
 alias o = open

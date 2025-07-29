@@ -32,9 +32,9 @@ default_tab_template {
 
             format_left   "#[bg=$surface0,fg=$lavender]#[bg=$lavender,fg=$crust,bold] {session} #[bg=$surface0] {mode}#[bg=$surface0] {tabs}"
             format_center "{notifications}"
-            // format_right  "#[bg=$surface0,fg=$flamingo]#[fg=$crust,bg=$flamingo] #[bg=$surface1,fg=$flamingo,bold] {command_user}@{command_host}#[bg=$surface0,fg=$surface1]#[bg=$surface0,fg=$maroon]#[bg=$maroon,fg=$crust]󰃭 #[bg=$surface1,fg=$maroon,bold] {datetime}#[bg=$surface0,fg=$surface1]"
-            format_right "#[bg=$lavender,fg=$base,bold] {pipe_zjstatus_hints}"
-            pipe_zjstatus_hints_format "#[bg=$lavender,fg=$base,bold]{output}"
+            format_right  "#[bg=$surface0,fg=$flamingo]#[fg=$crust,bg=$flamingo] #[bg=$surface1,fg=$flamingo,bold] {command_user}@{command_host}#[bg=$surface0,fg=$surface1]#[bg=$surface0,fg=$maroon]#[bg=$maroon,fg=$crust]󰃭 #[bg=$surface1,fg=$maroon,bold] {datetime}#[bg=$surface0,fg=$surface1]"
+            // format_right "{pipe_zjstatus_hints}"
+            pipe_zjstatus_hints_format "#[bg=$red,fg=$base,italic]{output}"
 
             format_space  "#[bg=$surface0]"
             format_hide_on_overlength "true"
@@ -70,9 +70,9 @@ default_tab_template {
             tab_active_sync         "#[bg=$surface0,fg=$peach]#[bg=$peach,fg=$crust,bold]{index} #[bg=$surface1,fg=$peach,bold] {name}{sync_indicator}#[bg=$surface0,fg=$surface1]"
             tab_separator           "#[bg=$surface0] "
 
-            tab_sync_indicator       " "
-            tab_fullscreen_indicator " 󰊓"
-            tab_floating_indicator   " 󰹙"
+            tab_sync_indicator       "  "
+            tab_fullscreen_indicator " 󰊓 "
+            tab_floating_indicator   " 󰹙 "
 
             notification_format_unread "#[bg=surface0,fg=$yellow]#[bg=$yellow,fg=$crust] #[bg=$surface1,fg=$yellow] {message}#[bg=$surface0,fg=$yellow]"
             notification_format_no_notifications ""
