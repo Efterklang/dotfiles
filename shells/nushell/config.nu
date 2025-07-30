@@ -126,11 +126,9 @@ $env.config = {
 
 
 # platform-releated configuration
-const linux_module = if $nu.os-info.name == linux { "./platform/ubuntu.nu" } else { null }
 const window_module = if $nu.os-info.name == windows { "./platform/win.nu" } else { null }
 const mac_module = if $nu.os-info.name == macos { "./platform/mac.nu" } else { null }
 
-source $linux_module
 source $window_module
 source $mac_module
 

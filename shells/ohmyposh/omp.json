@@ -144,7 +144,7 @@
             "always_enabled": true
           },
           "style": "plain",
-          "template": "\ue6ac </>",
+          "template": " </>",
           "foreground": "#b4befe",
           "type": "status",
           "foreground_templates": [

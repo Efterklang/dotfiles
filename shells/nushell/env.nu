@@ -1,3 +1,8 @@
+$env.PATH = ($env.PATH
+    | split row (char esep)
+    | uniq
+    | prepend ["~/.local/bin"]
+)
 $env.EDITOR = 'nvim'
 $env.MANPAGER = 'nvim +Man!'
 # nushell vi mode
@@ -10,7 +15,7 @@ $env.FZF_DEFAULT_OPTS = '
     --pointer ">"
     --marker "󰄲"
     --border "rounded"
-    --border-label=" 󱉭 FZF " 
+    --border-label=" 󱉭 FZF "
     --border-label-pos center
     --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8
     --color=fg:#cdd6f4,header:#f38ba8,info:#b4befe,pointer:#f38ba8
@@ -21,4 +26,3 @@ $env.FZF_DEFAULT_OPTS = '
 '
 $env.FZF_DEFAULT_COMMAND = 'fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
 $env.GOOGLE_CLOUD_PROJECT = 'gen-lang-client-0006538526'
-

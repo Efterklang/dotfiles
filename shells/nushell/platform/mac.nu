@@ -1,9 +1,10 @@
-$env.PATH = ($env.PATH 
-    | split row (char esep) 
-    | uniq 
-    | prepend ["/opt/homebrew/bin", "/opt/homebrew/sbin", "/Applications/Docker.app/Contents/Resources/bin/", "/Users/gjx/.spicetify", "/Users/gjx/dotfiles/bin", "/opt/homebrew/opt/openjdk/bin", "~/.local/share/cargo/bin"]
+$env.PATH = ($env.PATH
+    | split row (char esep)
+    | uniq
+    | prepend ["/opt/homebrew/bin", "/opt/homebrew/sbin", "/Applications/Docker.app/Contents/Resources/bin/", "/Users/gjx/.spicetify", "/opt/homebrew/opt/openjdk/bin", "~/.local/share/cargo/bin"]
 )
-$env.XDG_CONFIG_HOME = "/Users/gjx/.config"
+$env.HOMEBREW_BAT = 1
+
 
 alias rm = ^rm
 alias open = ^open
@@ -12,4 +13,3 @@ alias clip = pbcopy
 alias python = python3
 alias bi = brew install
 alias bu = brew upgrade
-

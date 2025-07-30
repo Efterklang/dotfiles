@@ -14,6 +14,10 @@ env() {
             ;;
         Linux)
             export "$1=$2"
+            # Replace $HOME with ~ for /etc/environment
+            env_value="${2//$HOME/~}"
+            # Append to /etc/environment with sudo
+            echo "$1=$env_value" | sudo tee -a /etc/environment > /dev/null
             ;;
         *)
             echo "Unsupported OS: $os_name"
@@ -28,7 +32,6 @@ env XDG_CONFIG_HOME "$HOME/.config"
 env XDG_CONFIG_DIRS "/etc/xdg"
 env XDG_DATA_HOME "$HOME/.local/share"
 env XDG_DATA_DIRS "/usr/local/share/:/usr/share/"
-env XDG_RUNTIME_DIR "$TMPDIR/runtime-$UID"
 env XDG_STATE_HOME "$HOME/.local/state"
 
 # https://wiki.archlinux.org/title/XDG_user_directories
@@ -41,7 +44,7 @@ env XDG_PUBLICSHARE_DIR "$HOME/Public"
 env XDG_VIDEOS_DIR "$HOME/Movies"
 
 # Make sure the XDG directories exist
-mkdir -p "$XDG_CACHE_HOME" "$XDG_CONFIG_HOME" "$XDG_DATA_HOME" "$XDG_RUNTIME_DIR" "$XDG_STATE_HOME"
+mkdir -p "$XDG_CACHE_HOME" "$XDG_CONFIG_HOME" "$XDG_DATA_HOME" "$XDG_STATE_HOME"
 
 # Define paths for common programs with partial XDG support
 # https://wiki.archlinux.org/title/XDG_Base_Directory#Partial
