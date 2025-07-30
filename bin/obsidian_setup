@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+
+import json
+import shutil
+import subprocess
+from pathlib import Path
+
+global_vault = Path("~/Projects/dotfiles/application/obsidian").expanduser()
+plugins_path = global_vault / "plugins"
+local_vault = Path.cwd() / ".obsidian"
+
+# cp -r ~/Projects/dotfiles/application/obsidian/* ./.obsidian/
+subprocess.run(["cp", "-r", str(global_vault / "*"), str(local_vault)])
+
+for item in global_vault.iterdir():
+    dest_item = local_vault / item.name
+    if item.is_dir():
+        print(f"Copying directory {item} to {dest_item}")
+        shutil.copytree(item, dest_item, dirs_exist_ok=True)
+    else:
+        print(f"Copying file {item} to {dest_item}")
+        shutil.copy2(item, dest_item)
+
+plugins_file = local_vault / "community-plugins.json"
+print(f"Setting up {plugins_file}...")
+
+existing_plugins: list[str] = json.loads(plugins_file.read_text())
+all_plugins = list(
+    set(existing_plugins + [p.name for p in plugins_path.iterdir() if p.is_dir()])
+)
+plugins_file.write_text(json.dumps(all_plugins, indent=2))

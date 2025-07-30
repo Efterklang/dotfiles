@@ -1,0 +1,14 @@
+{
+  "cssTheme": "AnuPpuccin",
+  "accentColor": "#89a2d7",
+  "textFontFamily": "",
+  "interfaceFontFamily": "",
+  "baseFontSize": 18,
+  "enabledCssSnippets": [
+    "obsidian"
+  ],
+  "monospaceFontFamily": "",
+  "baseFontSizeAction": true,
+  "theme": "system",
+  "translucency": false
+}
