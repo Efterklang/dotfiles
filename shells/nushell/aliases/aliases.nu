@@ -56,10 +56,10 @@ alias a = gh copilot suggest
 alias b = btop
 alias c = code
 alias d = dust
-alias e = explorer .
+alias e = exit 0 
 alias f = commandline edit --insert (fzf --layout=reverse --preview 'bat {}')
 alias g = lazygit
-alias h = fuzzy-command-search
+alias h = bun run hexo s
 alias i = gemini
 alias j = commandline edit --insert (fd --type directory | fzf --preview 'eza --all --git --long --no-time --color=always --icons {}')
 alias k = commandline edit --insert (zellij delete-all-sessions -y; zellij kill-all-sessions -y)
