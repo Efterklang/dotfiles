@@ -3,10 +3,10 @@
 ## 🚀 Quick Start
 
 1. Run `./bin/sys_envs`, use XDG-Base Directory Specification (Optional)
-2. Install packages [[packages/README]]
+2. [Install packages ](packages/README)
 3. Run `install.py` to set up your environment.
 
-> [!danger]
+> [!WARNING]
 >
 > back up the folder before installation, or run the `dotbot --dry-run` command to confirm the changes that will be applied.
 
@@ -23,22 +23,16 @@ Preferred terminals:
 - [Inshellisense](https://github.com/microsoft/inshellisense): IDE style command line auto complete
 
 > [!NOTE]
->
-> Install
->
-> - Windows: `scoop install extras/carapace-bin`
-> - Linux:
->   - Arch: `yay -S carapace-bin`
->   - Others: check [carapace-sh.github.io/carapace-bin/install.html](https://carapace-sh.github.io/carapace-bin/install.html)
->
-> Set Up Tutorial 👉 [NuShell命令补全 —— Carapace e.g](https://vluv.space/Tools/Terminal/nu_completion/)
+> 
+> Carapace Install Guide 👉 [carapace-sh.github.io/carapace-bin/install.html](https://carapace-sh.github.io/carapace-bin/install.html)
+> 
+> Set Up Nushell Completion Tutorial 👉 [NuShell命令补全 —— Carapace e.g](https://vluv.space/nu_completion/)
 
-### CLI ToolSet
+### CLI & TUI ToolSet
 
 | Tools                                                   | Description                                                                                  |
 | ------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | [fd](https://github.com/sharkdp/fd)                     | A simple, fast and user-friendly alternative to 'find'                                       |
-| [fzf](https://github.com/junegunn/fzf)                  | 🌸 A command-line fuzzy finder                                                                |
 | [bat](https://github.com/sharkdp/bat)                   | A `cat(1)` clone with wings.                                                                 |
 | [zoxide](https://github.com/ajeetdsouza/zoxide)         | A smarter cd command. Supports all major shells.                                             |
 | [delta](https://dandavison.github.io/delta/)            | A syntax-highlighting pager for git, diff, and grep output                                   |
@@ -58,11 +52,7 @@ Preferred terminals:
 | :-------------------------: | :-----------------------------------: |
 | ![Delta](assets/delta.webp) | ![Television](assets/television.webp) |
 
-> [!note] bat
->
-> run this command to apply theme: `bat cache --build`
-
-### TUI ToolSet
+---
 
 | Tool                                                   | Description                                                               |
 | ------------------------------------------------------ | ------------------------------------------------------------------------- |
@@ -75,8 +65,10 @@ Preferred terminals:
 | [btop4win](https://github.com/aristocratos/btop4win)   | btop++ for windows                                                        |
 | [gitui](https://github.com/extrawurst/gitui)           | Blazing fast terminal-ui for git written in rust.                         |
 | [procs](https://github.com/dalance/procs)              | A modern replacement for ps written in Rust.                              |
-| [television](https://github.com/alexhallam/television) | A TUI for viewing images in the terminal.                                 |
+| [fzf](https://github.com/junegunn/fzf)                  | 🌸 A command-line fuzzy finder                                                                |
+| [television](https://github.com/alexhallam/television) | A cross-platform, fast and extensible general purpose fuzzy finder 📺     |
 | [tig](https://github.com/jonas/tig)                    | Text-mode interface for git.                                              |
+
 
 |           LazyVim            |             LazyGit             |
 | :--------------------------: | :-----------------------------: |
@@ -96,34 +88,12 @@ Preferred terminals:
   - Powershell7
   - Zsh
 
-### Nushell
-
-Features:
-
-- Cross-platform support (Windows, macOS, Ubuntu)
-- Vi editing mode by default
-- Comprehensive completions (Scoop, VSCode, Winget, Zellij, UV)
-- Custom aliases and keybindings
-- Catppuccin and Tokyo Night themes
-
-Check `./shells/nushell` for more information
-
-### Oh My Posh
-
-Installation
-
-- Windows: `winget install JanDeDobbeleer.OhMyPosh -s winget`
-- Linux: `curl -s https://ohmyposh.dev/install.sh | bash -s`
-
-Configuration
-
-```shell
-oh-my-posh init fish --config ~/.config/ohmyposh/omp.json | source
-```
-
-```shell
-oh-my-posh init bash --config ~/.config/ohmyposh/omp.json | source
-```
+> [!NOTE]
+>
+> Installation
+>
+> - Windows: `winget install JanDeDobbeleer.OhMyPosh -s winget`
+> - Linux: `curl -s https://ohmyposh.dev/install.sh | bash -s`
 
 ## 🧩 Applications
 
@@ -185,12 +155,3 @@ Extension List
 |               Stylus                |               Vimium C                |
 | :---------------------------------: | :-----------------------------------: |
 | ![1753361797073](assets/stylus.png) | ![1753361760841](assets/vimium_c.png) |
-
-## 📦 Packages
-
-| File/Directory | Description               |
-| -------------- | ------------------------- |
-| `apt-get`      | Debian-based package list |
-| `cargo`        | Rust package list         |
-| `pacman`       | Arch Linux package list   |
-| `scoop`        | Windows package list      |
