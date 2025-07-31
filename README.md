@@ -2,12 +2,9 @@
 
 ## 🚀 Quick Start
 
-Use the unified Python installation script, which automatically detects the operating system and performs the corresponding installation:
-
-```shell
-chmod +x ./install.py
-./install.py
-```
+1. Run `./bin/sys_envs`, use XDG-Base Directory Specification (Optional)
+2. Install packages [[packages/README]]
+3. Run `install.py` to set up your environment.
 
 > [!danger]
 >

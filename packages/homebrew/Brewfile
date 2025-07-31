@@ -1,0 +1,285 @@
+tap "buo/cask-upgrade"
+tap "daipeihust/tap"
+tap "felixkratz/formulae"
+tap "koekeishiya/formulae"
+tap "nikitabobko/tap"
+tap "oven-sh/bun"
+# Generic-purpose lossless compression algorithm by Google
+brew "brotli"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# Resource monitor. C++ version and continuation of bashtop and bpytop
+brew "btop"
+# Multi-shell multi-command argument completer
+brew "carapace"
+# Console-based Audio Visualizer for ALSA
+brew "cava"
+# Manage your dotfiles across multiple diverse machines, securely
+brew "chezmoi"
+# Console Matrix
+brew "cmatrix"
+# Power of curl, ease of use of httpie
+brew "curlie"
+# Pack, ship and run any application as a lightweight container
+brew "docker", link: false
+# Command-line DNS Client for Humans
+brew "doggo"
+# More intuitive version of du in rust
+brew "dust"
+# Modern, maintained replacement for ls
+brew "eza"
+# Like neofetch, but much faster because written mostly in C
+brew "fastfetch"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# User-friendly command-line shell for UNIX-like operating systems
+brew "fish"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.13"
+# Library for manipulating fonts
+brew "fonttools"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# Platform built on V8 to build network applications
+brew "node"
+# Interact with Google Gemini AI models from the command-line
+brew "gemini-cli"
+# GitHub command-line tool
+brew "gh"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
+# Blazing fast terminal-ui for git written in rust
+brew "gitui"
+# Tool to convert a Wallpaper's color scheme / palette
+brew "gowall"
+# System monitoring dashboard for terminal
+brew "gtop"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Lazier way to manage everything docker
+brew "lazydocker"
+# Simple terminal UI for git commands
+brew "lazygit"
+# High-performance, extensible alternative to ls
+brew "lla"
+# Powerful, lightweight programming language
+brew "lua"
+# Music Player Daemon
+brew "mpd"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Retrieves currently playing media, and simulates media actions
+brew "nowplaying-cli"
+# Modern shell for the GitHub era
+brew "nushell"
+# Prompt theme engine for any shell
+brew "oh-my-posh"
+# Development kit for the Java programming language
+brew "openjdk"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
+# Modern replacement for ps written in Rust
+brew "procs"
+# Rsync for cloud storage
+brew "rclone"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Safe, concurrent, practical language
+brew "rust"
+# 7-Zip is a file archiver with a high compression ratio
+brew "sevenzip"
+# Human-friendly alternative to netstat for socket and port monitoring
+brew "somo"
+# Change macOS audio source from the command-line
+brew "switchaudio-osx"
+# Very fast implementation of tldr in Rust
+brew "tealdeer"
+# General purpose fuzzy finder TUI
+brew "television"
+# Text interface for Git repositories
+brew "tig"
+# Terminal multiplexer
+brew "tmux"
+# Program that allows you to count code, quickly
+brew "tokei"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Command-line unarchiving tools supporting multiple formats
+brew "unar"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
+# Image processing library
+brew "vips"
+# Utilities to create and convert Web Open Font File (WOFF) files
+brew "woff2"
+# Blazing fast terminal file manager written in Rust, based on async I/O
+brew "yazi"
+# Pluggable terminal workspace, with terminal multiplexer as the base feature
+brew "zellij"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
+# Fish-like fast/unobtrusive autosuggestions for zsh
+brew "zsh-autosuggestions"
+# Feature-rich syntax highlighting for Zsh
+brew "zsh-fast-syntax-highlighting"
+# Switch your input method through terminal
+brew "daipeihust/tap/im-select"
+# Custom macOS statusbar with shell plugin, interaction and graph support
+brew "felixkratz/formulae/sketchybar"
+# Simple hotkey-daemon for macOS.
+brew "koekeishiya/formulae/skhd"
+# A tiling window manager for macOS based on binary space partitioning.
+brew "koekeishiya/formulae/yabai"
+# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
+brew "oven-sh/bun/bun"
+# AeroSpace is an i3-like tiling window manager for macOS
+cask "aerospace"
+# Enable Windows-like alt-tab
+cask "alt-tab"
+# Android SDK component
+cask "android-platform-tools"
+# Platform for API documentation, debugging, and testing
+cask "apifox"
+# Chromium based browser
+cask "arc"
+# App for managing battery charging. (Also installs a CLI on first use.)
+cask "battery"
+# Create and run Linux containers using lightweight virtual machines
+cask "container"
+# Voice and text chat software
+cask "discord"
+# App to build and share containerised applications and microservices
+cask "docker-desktop"
+cask "font-maple-mono-nf-cn"
+cask "font-sf-mono"
+cask "font-sf-pro"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
+# Web browser
+cask "google-chrome"
+# Menu bar manager
+cask "jordanbaird-ice"
+# Pie menu
+cask "kando"
+# Window manager
+cask "loop"
+# Music app base on Electron & Vue
+cask "lx-music"
+# Multi-platform web browser
+cask "microsoft-edge@dev"
+# Smooths scrolling and set mouse scroll directions independently
+cask "mos"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
+# Cloud storage manager tool
+cask "piclist"
+# Screenshot tool
+cask "pixpin"
+# Instant messaging tool
+cask "qq"
+# Tool that provides consistent, highly configurable symbols for apps
+cask "sf-symbols"
+# Video game digital distribution service
+cask "steam"
+# Messaging app with a focus on speed and security
+cask "telegram"
+# Open-source code editor
+cask "visual-studio-code"
+# Web browser with built-in email client focusing on customization and control
+cask "vivaldi"
+# Rust-based terminal
+cask "warp"
+# Free messaging and calling application
+cask "wechat"
+# REST, GraphQL and gRPC client
+cask "yaak"
+vscode "aaron-bond.better-comments"
+vscode "alefragnani.bookmarks"
+vscode "alefragnani.project-manager"
+vscode "alexdauenhauer.catppuccin-noctis-icons"
+vscode "alexpasmantier.television"
+vscode "brandonkirbyson.vscode-animations"
+vscode "catppuccin.catppuccin-vsc"
+vscode "catppuccin.catppuccin-vsc-icons"
+vscode "charliermarsh.ruff"
+vscode "cweijan.dbclient-jdbc"
+vscode "cweijan.vscode-mysql-client2"
+vscode "cweijan.vscode-typora"
+vscode "dautroc.yazi-vscode"
+vscode "davidanson.vscode-markdownlint"
+vscode "enkia.tokyo-night"
+vscode "esbenp.prettier-vscode"
+vscode "evan-buss.font-switcher"
+vscode "fabiospampinato.vscode-git-history"
+vscode "filwaline.vscode-postfix-python"
+vscode "foam.foam-vscode"
+vscode "formulahendry.code-runner"
+vscode "foxundermoon.shell-format"
+vscode "fr43nk.seito-openfile"
+vscode "gera2ld.markmap-vscode"
+vscode "github.copilot"
+vscode "github.copilot-chat"
+vscode "github.vscode-github-actions"
+vscode "goessner.mdmath"
+vscode "gruntfuggly.todo-tree"
+vscode "gxl.git-graph-3"
+vscode "hediet.vscode-drawio"
+vscode "huizhou.githd"
+vscode "ionutvmi.path-autocomplete"
+vscode "kdl-org.kdl"
+vscode "krysenlo.vscode-wordcount-cjk"
+vscode "kuingsmile.vs-piclist"
+vscode "leetcode.vscode-leetcode"
+vscode "mads-hartmann.bash-ide-vscode"
+vscode "miguelsolorio.fluent-icons"
+vscode "mikestead.dotenv"
+vscode "ms-azuretools.vscode-containers"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-python.debugpy"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
+vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode-remote.remote-ssh"
+vscode "ms-vscode-remote.remote-ssh-edit"
+vscode "ms-vscode.cpptools"
+vscode "ms-vscode.live-server"
+vscode "ms-vscode.remote-explorer"
+vscode "ms-vscode.vscode-markdown-notebook"
+vscode "ms-vscode.vscode-speech"
+vscode "ms-vscode.vscode-websearchforcopilot"
+vscode "mutantdino.resourcemonitor"
+vscode "naumovs.color-highlight"
+vscode "pkief.material-icon-theme"
+vscode "pomdtr.excalidraw-editor"
+vscode "redhat.java"
+vscode "redhat.vscode-xml"
+vscode "redhat.vscode-yaml"
+vscode "redis.redis-for-vscode"
+vscode "rooveterinaryinc.roo-cline"
+vscode "roscop.activefileinstatusbar"
+vscode "ryanraposo.codeui"
+vscode "saoudrizwan.claude-dev"
+vscode "seepine.md-editor"
+vscode "shalldie.background"
+vscode "sharzyl.cjk-word-handler"
+vscode "shd101wyy.markdown-preview-enhanced"
+vscode "subframe7536.custom-ui-style"
+vscode "sumneko.lua"
+vscode "sysoev.language-stylus"
+vscode "tamasfe.even-better-toml"
+vscode "thenuprojectcontributors.vscode-nushell-lang"
+vscode "tompollak.lazygit-vscode"
+vscode "usernamehw.errorlens"
+vscode "visualstudioexptteam.intellicode-api-usage-examples"
+vscode "visualstudioexptteam.vscodeintellicode"
+vscode "vscjava.vscode-java-debug"
+vscode "vscjava.vscode-java-dependency"
+vscode "vscjava.vscode-java-pack"
+vscode "vscjava.vscode-java-test"
+vscode "vscjava.vscode-maven"
+vscode "vscodevim.vim"
+vscode "vspacecode.whichkey"
+vscode "yutengjing.open-in-external-app"
+vscode "yy0931.gitconfig-lsp"
+vscode "yzhang.markdown-all-in-one"
