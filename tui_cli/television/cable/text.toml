@@ -10,7 +10,6 @@ output = "{split:\\::..2}"
 
 [preview]
 command = "bat -n --color=always '{split:\\::0}'"
-env = { BAT_THEME = "ansi" }
 offset = '{split:\::1}'
 
 [ui]
