@@ -25,8 +25,8 @@ ueberzug_scale = 1
 
 [opener]
 edit = [
-	{ run = '${EDITOR:=vi} "$@"', desc = "$EDITOR", block = true, for = "unix" },
-	{ run = 'nvim "%*"', block = true, desc = "nvim", for = "windows" },
+  { run = '${EDITOR:=vi} "$@"', desc = "$EDITOR", block = true, for = "unix" },
+  { run = 'nvim "%*"', block = true, desc = "nvim", for = "windows" },
 ]
 code = [
 	{ run = 'code "$@"', orphan = true, desc = "VSCode", for = "unix" },
@@ -167,3 +167,13 @@ quit_title = "{n} task{s} running, sure to quit? (y/N)"
 sort_by = "none"
 sort_reverse = false
 sort_sensitive = false
+
+[[plugin.prepend_fetchers]]
+id = "git"
+name = "*"
+run = "git"
+
+[[plugin.prepend_fetchers]]
+id = "git"
+name = "*/"
+run = "git"
