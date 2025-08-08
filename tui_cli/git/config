@@ -24,15 +24,17 @@
 	postBuffer = 655360000
 	lowSpeedLimit = 0
 	lowSpeedTime = 999999
-	version = HTTP/1.1
 
 [protocol]
 	version = 1
 
 # Merge and Diff Settings
 [merge]
-	tool = vscode
+	tool = nvim
 	conflictStyle = zdiff3
+
+[mergetool "nvim"]
+    cmd = nvim -d $LOCAL $REMOTE -c '$wincmd w' -c 'wincmd L'
 
 [mergetool "vscode"]
 	cmd = code --wait $MERGED
@@ -83,7 +85,7 @@
 [push]
 	autoSetupRemote = true
 
-# Delta Settings 
+# Delta Settings
 [include]
     path = .delta.gitconfig
 

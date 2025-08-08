@@ -3,8 +3,7 @@ if status is-interactive
 end
 
 # envirment variables
-set -gx XDG_CONFIG_HOME $HOME/.config
-set -gx VISUAL helix  # or nvim
+set -gx VISUAL helix # or nvim
 # cli tools
 zoxide init fish | source
 oh-my-posh init fish --config ~/.config/ohmyposh/omp.json | source
@@ -17,3 +16,4 @@ alias lg="lazygit"
 alias vim="nvim"
 alias cd="z"
 alias cat="bat"
+

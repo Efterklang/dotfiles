@@ -1,6 +1,6 @@
 # Clash Verge Config
 
-app_log_level: null
+app_log_level: warn
 language: zh
 theme_mode: system
 tray_event: null
@@ -10,11 +10,11 @@ startup_script: null
 traffic_graph: true
 enable_memory_usage: true
 enable_group_icon: true
-common_tray_icon: false
+common_tray_icon: true
 tray_icon: monochrome
 menu_icon: monochrome
-sysproxy_tray_icon: false
-tun_tray_icon: false
+sysproxy_tray_icon: true
+tun_tray_icon: true
 enable_tun_mode: true
 enable_auto_launch: true
 enable_silent_start: true
@@ -48,10 +48,10 @@ enable_global_hotkey: true
 home_cards: null
 auto_close_connection: true
 auto_check_update: true
-default_latency_test: null
-default_latency_timeout: null
+default_latency_test: ''
+default_latency_timeout: 10000
 enable_builtin_enhanced: true
-proxy_layout_column: null
+proxy_layout_column: 6
 test_list:
 - uid: u5qzeJV-KOKJTx2wrwY0q
   name: Apple
@@ -83,6 +83,7 @@ enable_tray_icon: true
 enable_auto_light_weight_mode: true
 auto_light_weight_minutes: 5
 enable_hover_jump_navigator: null
+enable_external_controller: null
 service_state:
   last_install_time: 1747751708
   install_count: 1
