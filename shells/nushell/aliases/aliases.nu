@@ -74,6 +74,7 @@ alias t = tokei
 alias u = uv
 alias v = vim
 alias w = wsl
+alias x = ~/.local/bin/extract
 alias y = yazi
 alias z = z
 alias ze = zellij attach --create gnix

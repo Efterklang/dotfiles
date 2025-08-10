@@ -3,8 +3,7 @@ $env.PATH = ($env.PATH
     | uniq
     | prepend ["~/.local/bin"]
 )
-$env.EDITOR = 'nvim'
-$env.MANPAGER = 'nvim +Man!'
+
 # nushell vi mode
 $env.PROMPT_INDICATOR_VI_INSERT = ""
 $env.PROMPT_INDICATOR_VI_NORMAL = ""
