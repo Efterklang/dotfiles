@@ -158,9 +158,11 @@ fallback_channel = "files"
   "gzip",
   "gunzip",
   "xz",
+  "extract",
 ]
 "git-diff" = ["git add", "git restore"]
 "git-branch" = [
+  "gsw",
   "git checkout",
   "git branch",
   "git merge",
