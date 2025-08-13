@@ -136,7 +136,8 @@
     "terminal.integrated.fontFamily": "Maple Mono NF CN, Monaspace Radon Var, JetBrainsMono Nerd Font Mono,Segoe UI Variable",
     "terminal.integrated.lineHeight": 1.0,
     "terminal.integrated.fontWeight": "650",
-    "terminal.integrated.defaultProfile.windows": "Nushell",
+    "terminal.integrated.defaultProfile.osx": "nu",
+    "terminal.integrated.defaultProfile.windows": "nu",
     "terminal.integrated.smoothScrolling": true,
     "terminal.integrated.customGlyphs": true,
     "terminal.integrated.suggest.enabled": true,
@@ -152,12 +153,6 @@
     "terminal.integrated.accessibleViewFocusOnCommandExecution": true,
     "terminal.integrated.rightClickBehavior": "default",
     "terminal.external.windowsExec": "nu",
-    "terminal.integrated.profiles.windows": {
-        "Nushell": {
-            "source": "Nushell",
-            "path": "D:/envir_vars/scoop/apps/Nushell/current/nu.exe"
-        }
-    },
     // * ╭───────────────────────────────────────────────────────╮
     // * │                    VSCode MISC                        │
     // * ╰───────────────────────────────────────────────────────╯
