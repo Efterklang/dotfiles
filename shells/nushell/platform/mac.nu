@@ -1,3 +1,5 @@
+source ../aliases/lla.nu
+
 $env.PATH = ($env.PATH
     | split row (char esep)
     | uniq

@@ -1,4 +1,3 @@
-source ./eza.nu
 source ./git.nu
 source ./replace.nu
 
@@ -53,7 +52,7 @@ def trim_history [] {
 }
 
 alias a = gh copilot suggest
-alias b = btop
+alias b = bun run
 alias c = code
 alias d = dust
 alias e = exit 0 

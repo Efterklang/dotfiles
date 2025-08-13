@@ -25,3 +25,6 @@ $env.FZF_DEFAULT_OPTS = '
 '
 $env.FZF_DEFAULT_COMMAND = 'fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
 $env.GOOGLE_CLOUD_PROJECT = 'gen-lang-client-0006538526'
+# fd respect this env var, ref: https://github.com/sharkdp/fd#colorized-output
+$env.LS_COLORS = (vivid generate catppuccin-mocha)
+
