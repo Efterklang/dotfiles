@@ -18,6 +18,7 @@
     ~/.config/helix: tui_cli/helix
     ~/.config/kitty: ./application/kitty/kitty_hrtowii
     ~/.config/lazygit: tui_cli/lazygit
+    ~/.config/lla: tui_cli/lla
     ~/.config/nushell: shells/nushell
     ~/.config/nvim: tui_cli/nvim
     ~/.config/ohmyposh: shells/ohmyposh

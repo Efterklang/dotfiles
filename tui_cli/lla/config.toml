@@ -1,0 +1,43 @@
+default_sort = "name"
+
+default_format = "default"
+
+show_icons = true
+
+include_dirs = true
+
+permission_format = "symbolic"
+
+theme = "catppuccin"
+
+enabled_plugins = []
+plugins_dir = "~/.config/lla/plugins"
+
+default_depth = 3
+
+# Sorting configuration
+[sort]
+dirs_first = false
+case_sensitive = false
+natural = true
+
+[filter]
+case_sensitive = false
+no_dotfiles = false
+
+[formatters.long]
+hide_group = true
+relative_dates = true
+
+[formatters.tree]
+max_lines = 20000
+
+[formatters.grid]
+ignore_width = false
+max_width = 200
+
+[listers.recursive]
+max_entries = 20000
+
+[listers.fuzzy]
+ignore_patterns = ["node_modules", "target", ".git", ".idea", ".vscode"]
