@@ -68,6 +68,9 @@ env NPM_CONFIG_USERCONFIG "$XDG_CONFIG_HOME/npm/npmrc"
 # zsh
 env ZDOTDIR "$XDG_CONFIG_HOME/zsh"
 env ZSH_PROFILE "$XDG_CONFIG_HOME/zsh/profile"
-env HISTFILE "~/.cache/zshhistory"
+env HISTFILE "$HOME/.cache/zshhistory"
 # yazi
 env YAZI_CONFIG_HOME "$XDG_CONFIG_HOME/yazi"
+# editor
+env EDITOR nvim
+env MANPAGER 'nvim +Man!'

@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# Colors for logging
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+BLUE='\033[0;34m'
+CYAN='\033[0;36m'
+NC='\033[0m' # No Color
+
+font_path="$1"
+
+if ! command -v pyftsubset &> /dev/null; then
+    echo -e "${RED}✖ 未找到 pyftsubset 命令。${NC}请使用 'pip install fonttools' 命令安装。"
+    exit 1
+fi
+
+echo -e "${BLUE}🌐 正在下载 Unicode 字符集...${NC}"
+curl -s -o "$HOME/.cache/sc_unicode.txt" https://gist.githubusercontent.com/Efterklang/52df37f3daba9a2d0f193d69e5181d37/raw/7ca17bb7c29b3eb72b5c4094904b3b4f06d61829/sc_unicode.txt
+
+echo -e "${BLUE}🚀 正在使用 pyftsubset 拆分字体...${NC}"
+pyftsubset "$font_path" --unicodes-file="$HOME/.cache/sc_unicode.txt" --flavor=woff2
+
+output_file="${font_path%.*}.subset.woff2"
+
+echo -e "${GREEN}✅ 字体压缩完成！${NC}"
+echo -e "  - 源文件: ${CYAN}$font_path${NC} ($(du -h "$font_path" | cut -f1))"
+echo -e "  - 输出文件: ${CYAN}$output_file${NC} ($(du -h "$output_file" | cut -f1))"

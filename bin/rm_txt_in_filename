@@ -1,0 +1,46 @@
+#! /usr/bin/env python3
+
+"""
+Batch rename files by removing a specific substring from their names.
+
+Usage:
+    python rm_txt_in_filename.py <directory> <target_string>
+
+Arguments:
+    directory      Path to the folder containing files to rename.
+    target_string  The exact substring to remove from file names.
+
+Description:
+    This script scans the specified directory and renames all files whose
+    names contain the given target substring, removing that substring.
+    The operation is non-recursive by default—it processes only files
+    directly inside the given directory.
+
+Example:
+    python rm_txt_in_filename.py ./ "【耗时整理‖免费分享 cunlove.cn】"
+
+Note:
+    - Test with a copy of your files before running on important data.
+"""
+
+import os
+import sys
+
+if len(sys.argv) != 3:
+    print(f"Usage: {sys.argv[0]} <directory> <target_string>")
+    sys.exit(1)
+
+directory = sys.argv[1]
+target = sys.argv[2]
+
+if not os.path.isdir(directory):
+    print(f"Error: '{directory}' is not a directory.")
+    sys.exit(1)
+
+for f in os.listdir(directory):
+    old_path = os.path.join(directory, f)
+    if os.path.isfile(old_path) and target in f:
+        new_name = f.replace(target, "")
+        new_path = os.path.join(directory, new_name)
+        os.rename(old_path, new_path)
+        print(f"Renamed: {f} -> {new_name}")
