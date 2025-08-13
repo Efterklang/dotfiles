@@ -6,7 +6,7 @@
 
 # Core Settings
 [core]
-  compression = 9
+	compression = 9
 	editor = nvim
 	autocrlf = input
 	whitespace = cr-at-eol
