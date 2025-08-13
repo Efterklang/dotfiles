@@ -1,124 +1,131 @@
 {
-    "Markdown Callout": {
-        "prefix": "callout",
-        "body": [
-            "> [!${1|info,todo,success,check,done,warning,caution,attention,question,help,faq,danger,error,bug,failure,fail,missing,tip,hint,important,example,abstract,summary,tldr,quote,cite|}] ${2:message}"
-        ],
-        "description": "Create a callout block with different types: NOTE, TIP etc."
-    },
-    "Message Box": {
-        "prefix": "msg",
-        "body": [
-            "{% message color:primary \"title:\"%}",
-            "",
-            "{% endmessage %}"
-        ],
-        "description": "Message Box"
-    },
-    "anchor": {
-        "prefix": "anchor",
-        "body": [
-            "<a href=\"#$1\">$2</a>"
-        ]
-    },
-    "quote": {
-        "prefix": "hexo-quote",
-        "body": [
-            "{% blockquote $1 $2%}",
-            "$3",
-            "{% endblockquote %}"
-        ]
-    },
-    "img": {
-        "prefix": "img",
-        "body": [
-            "<img src=\"$1\" alt=\"$2\" style=\"zoom: 80%\"/>"
-        ]
-    },
-    "raw": {
-        "prefix": "raw",
-        "body": [
-            "{% raw %}",
-            "",
-            "$1",
-            "",
-            "{% endraw %}"
-        ]
-    },
-    "style": {
-        "prefix": "style",
-        "body": [
-            "<style>",
-            "$1 {",
-            "",
-            "}",
-            "</style>"
-        ]
-    },
-    "div tag": {
-        "prefix": "div",
-        "body": [
-            "<div>",
-            "",
-            "</div>"
-        ]
-    },
-    "tabs": {
-        "prefix": "tab",
-        "body": [
-            "{% tabs size:big align:fullwidth%}",
-            "<!-- tab id:$1  title:$2 active -->",
-            "",
-            "<!-- endtab -->",
-            "<!-- tab id:$3 title:$4 -->",
-            "",
-            "<!-- endtab -->",
-            "{% endtabs %}"
-        ]
-    },
-    "math": {
-        "prefix": "math",
-        "body": [
-            "$$",
-            "\\begin{align*}",
-            "& $1",
-            "\\end{align*}",
-            "$$"
-        ]
-    },
-    "heimu": {
-        "prefix": "heimu",
-        "body": "<span class=\"heimu\">$1</span>"
-    },
-    "friend": {
-        "prefix": "friend",
-        "body": [
-            "<div class=\"friend\">",
-            "\t\t<div class=\"friend-avatar\" style=\"background-image: url(背景图片)\"> </div>",
-            "\t\t<div class=\"friend-detail\">",
-            "\t\t\t<div>$2&nbsp</div>",
-            "\t\t\t<div><a target=\"_blank\" href=\"$2\">$3</a></div>",
-            "\t\t</div>",
-            "\t\t<div class=\"friend-pop\">",
-            "\t\t\t<div>$4</div>",
-            "\t</div>",
-            "</div>"
-        ]
-    },
-    "columns": {
-        "prefix": "twoColumnFlex",
-        "body": [
-            "<div style=\"display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem;\">",
-            "  <!-- Column 1-->",
-            "  <div style=\"flex: 1;\">",
-            "    ",
-            "  </div>",
-            "  <!-- Column 2-->",
-            "  <div style=\"flex: 1;\">",
-            "    ",
-            "  </div>",
-            "</div>"
-        ],
-        "description": "A two-column flex layout with space between and flex-start alignment."
-    }
+  "Markdown Callout": {
+    "prefix": "callout",
+    "body": [
+      "> [!${1|info,todo,success,check,done,warning,caution,attention,question,help,faq,danger,error,bug,failure,fail,missing,tip,hint,important,example,abstract,summary,tldr,quote,cite|}] ${2:message}"
+    ],
+    "description": "Create a callout block with different types: NOTE, TIP etc."
+  },
+  "Message Box": {
+    "prefix": "msg",
+    "body": [
+      "{% message color:primary \"title:\"%}",
+      "",
+      "{% endmessage %}"
+    ],
+    "description": "Message Box"
+  },
+  "anchor": {
+    "prefix": "anchor",
+    "body": [
+      "<a href=\"#$1\">$2</a>"
+    ]
+  },
+  "quote": {
+    "prefix": "hexo-quote",
+    "body": [
+      "{% blockquote $1 $2%}",
+      "$3",
+      "{% endblockquote %}"
+    ]
+  },
+  "img": {
+    "prefix": "img",
+    "body": [
+      "<img src=\"$1\" alt=\"$2\" style=\"zoom: 80%\"/>"
+    ]
+  },
+  "raw": {
+    "prefix": "raw",
+    "body": [
+      "{% raw %}",
+      "",
+      "$1",
+      "",
+      "{% endraw %}"
+    ]
+  },
+  "style": {
+    "prefix": "style",
+    "body": [
+      "<style>",
+      "",
+      "</style>"
+    ]
+  },
+  "div tag": {
+    "prefix": "div",
+    "body": [
+      "<div>",
+      "",
+      "</div>"
+    ]
+  },
+  "tabs": {
+    "prefix": "tab",
+    "body": [
+      "{% tabs size:big align:fullwidth%}",
+      "<!-- tab id:$1  title:$2 active -->",
+      "",
+      "<!-- endtab -->",
+      "<!-- tab id:$3 title:$4 -->",
+      "",
+      "<!-- endtab -->",
+      "{% endtabs %}"
+    ]
+  },
+  "math": {
+    "prefix": "math",
+    "body": [
+      "$$",
+      "\\begin{align*}",
+      "& $1",
+      "\\end{align*}",
+      "$$"
+    ]
+  },
+  "heimu": {
+    "prefix": "heimu",
+    "body": "<span class=\"heimu\">$1</span>"
+  },
+  "friend": {
+    "prefix": "friend",
+    "body": [
+      "<div class=\"friend\">",
+      "\t\t<div class=\"friend-avatar\" style=\"background-image: url(背景图片)\"> </div>",
+      "\t\t<div class=\"friend-detail\">",
+      "\t\t\t<div>$2&nbsp</div>",
+      "\t\t\t<div><a target=\"_blank\" href=\"$2\">$3</a></div>",
+      "\t\t</div>",
+      "\t\t<div class=\"friend-pop\">",
+      "\t\t\t<div>$4</div>",
+      "\t</div>",
+      "</div>"
+    ]
+  },
+  "columns": {
+    "prefix": "twoColumnFlex",
+    "body": [
+      "<div style=\"display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem;\">",
+      "  <!-- Column 1-->",
+      "  <div style=\"flex: 1;\">",
+      "    ",
+      "  </div>",
+      "  <!-- Column 2-->",
+      "  <div style=\"flex: 1;\">",
+      "    ",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "A two-column flex layout with space between and flex-start alignment."
+  },
+  "cat-line": {
+    "prefix": "cat-line",
+    "body": [
+      "<p align=\"center\">",
+      " <img src=\"/img/misc/cat-line.svg?sanitize=true\" alt=\"cat-line\"/>",
+      "</p>"
+    ],
+    "description": "A centered cat line image."
+  }
 }
