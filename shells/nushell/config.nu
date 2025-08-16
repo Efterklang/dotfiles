@@ -22,16 +22,16 @@ $env.config = {
     completions: {}
 
     cursor_shape: {
-        emacs: block # block, underscore, line, blink_block, blink_underscore, blink_line, inherit to skip setting cursor shape (line is the default)
-        vi_insert: block # block, underscore, line, blink_block, blink_underscore, blink_line, inherit to skip setting cursor shape (block is the default)
-        vi_normal: underscore # block, underscore, line, blink_block, blink_underscore, blink_line, inherit to skip setting cursor shape (underscore is the default)
+        emacs: block
+        vi_insert: blink_block
+        vi_normal: blink_underscore
     }
 
     footer_mode: "auto" # always, never, number_of_rows, auto
     float_precision: 2 # the precision for displaying floats in tables
     use_ansi_coloring: true
     bracketed_paste: true # enable bracketed paste, currently useless on windows
-    edit_mode: vi # emacs, vi
+    edit_mode: vi
     shell_integration: {
         osc2: true
         osc7: true
@@ -92,7 +92,7 @@ $env.config = {
             type: {
                 layout: ide
                 min_completion_width: 0,
-                max_completion_width: 70,
+                max_completion_width: 80,
                 max_completion_height: 20, # will be limited by the available lines in the terminal
                 padding: 0,
                 border: true,

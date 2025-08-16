@@ -1,22 +1,20 @@
 [metadata]
 name = "procs"
-description = "A channel to fuzzy find and manage running processes"
+description = "A channel to find and manage running processes"
 requirements = ["ps"]
 
 [source]
-# command = "ps -e -o pid,comm"
-command = "ps -e -o pid,ucomm | tail -n +2 | awk '{$1=$1;print $1 \"\t\" substr($0, index($0,$2))}'"
-# The output on selection is the first column (the PID), split by the tab.
-display = "{split:\t:1}"
-output = "{split:\t:0}"
+command = "ps -e -o pid=,ucomm= | awk '{print $1, $2}'"
+display = "{split: :1}"
+output = "{split: :0}"
 
 [preview]
-command = "ps -p '{split:\t:0}' -o user,pid,ppid,state,%cpu,%mem"
+command = "ps -p '{split: :0}' -o user,pid,ppid,state,%cpu,%mem"
+
 [actions.kill]
 description = "Kill the selected process(es)"
-command = "kill -9 {split:\t:0}"
-mode = "fork"
+command = "kill -9 {split: :0}"
+mode = "execute"
 
 [keybindings]
-shortcut = "f2"
 ctrl-k = "actions:kill"

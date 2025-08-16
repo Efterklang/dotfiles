@@ -14,9 +14,6 @@
   //   "height": 25,
   //   "width": 40
   // },
-  "general": {
-    "multithreading": true
-  },
   "display": {
     "separator": "➜   "
   },
@@ -127,11 +124,6 @@
       "keyColor": "magenta",
       "type": "localip",
       "compact": true
-    },
-    {
-      "key": "󰩟 Public IP      ",
-      "keyColor": "magenta",
-      "type": "publicip"
     },
     "break",
     {
