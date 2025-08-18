@@ -44,7 +44,7 @@
       path: application/karabiner
       if: "[ `uname` = Darwin ]"
     ~/.config/sketchybar:
-      path: ./application/sketchybar/sketchybar_felix_sh
+      path: ./application/sketchybar/sketchybar_main
       if: "[ `uname` = Darwin ]"
     ~/Library/Application Support/Code/User/settings.json:
       path: application/vscode/settings.json

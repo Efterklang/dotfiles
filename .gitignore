@@ -12,5 +12,4 @@ lazy-lock.json
 # chrome extension
 *.pak
 secret.toml
-application/sketchybar/sketchybar_frog
 application/karabiner/automatic_backups
