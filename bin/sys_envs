@@ -2,28 +2,28 @@
 
 # Define a macro function for setting environment variables
 env() {
-    os_name=$(uname -s)
+  os_name=$(uname -s)
 
-    case "$os_name" in
-        Darwin)
-            # For macOS, use launchctl to set environment variables
-            launchctl setenv "$1" "$2"
-            # launchctl setenv does not work for current shell session(which executes this script),
-            # for example, when set `XDG_CONFIG_HOME/bat`, the XDG_CONFIG_HOME will be expanded as empty string.
-            export "$1=$2"
-            ;;
-        Linux)
-            export "$1=$2"
-            # Replace $HOME with ~ for /etc/environment
-            env_value="${2//$HOME/~}"
-            # Append to /etc/environment with sudo
-            echo "$1=$env_value" | sudo tee -a /etc/environment > /dev/null
-            ;;
-        *)
-            echo "Unsupported OS: $os_name"
-            exit 1
-            ;;
-    esac
+  case "$os_name" in
+  Darwin)
+    # For macOS, use launchctl to set environment variables
+    launchctl setenv "$1" "$2"
+    # launchctl setenv does not work for current shell session(which executes this script),
+    # for example, when set `XDG_CONFIG_HOME/bat`, the XDG_CONFIG_HOME will be expanded as empty string.
+    export "$1=$2"
+    ;;
+  Linux)
+    export "$1=$2"
+    # Replace $HOME with ~ for /etc/environment
+    env_value="${2//$HOME/~}"
+    # Append to /etc/environment with sudo
+    echo "$1=$env_value" | sudo tee -a /etc/environment >/dev/null
+    ;;
+  *)
+    echo "Unsupported OS: $os_name"
+    exit 1
+    ;;
+  esac
 }
 
 env XDG_BIN_HOME "$HOME/.local/bin"
@@ -74,3 +74,5 @@ env YAZI_CONFIG_HOME "$XDG_CONFIG_HOME/yazi"
 # editor
 env EDITOR nvim
 env MANPAGER 'nvim +Man!'
+# LS_COLOR, carapace, fd respect this env-var
+env LS_COLORS "$(vivid generate catppuccin-mocha)"

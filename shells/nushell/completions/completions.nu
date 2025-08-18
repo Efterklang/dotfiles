@@ -1,4 +1,3 @@
-source ./vscode.nu
 source ./uv.nu
 source ./zellij.nu
 
