@@ -4,7 +4,8 @@ POPUP_CLICK_SCRIPT="sketchybar --set ical popup.drawing=toggle"
 
 ical=(
 	update_freq=180
-	icon=􀉉
+	icon=
+	icon.color=$LAVENDER
 	icon.padding_right=0
 	icon.align=left
 	popup.align=right

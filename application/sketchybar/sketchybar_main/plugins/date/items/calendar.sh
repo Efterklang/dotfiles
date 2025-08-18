@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 
+TIME_FONT="$FONT:Bold:13.0"
+TIME_COLOR=$LAVENDER
+
 calendar_date=(
   icon=date
-  icon.font="$FONT:Bold:13.0"
+  icon.font="$TIME_FONT"
+  icon.color=$TIME_COLOR
   icon.align=right
   icon.padding_right=0
   width=30
@@ -14,7 +18,8 @@ calendar_date=(
 
 calendar_clock=(
   icon=clock
-  icon.font="$FONT:Bold:12.0"
+  icon.font="$TIME_FONT"
+  icon.color="$TIME_COLOR"
   icon.align=right
   icon.padding_right=0
   background.padding_right=-20
