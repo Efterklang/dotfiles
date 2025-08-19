@@ -2,12 +2,14 @@
 
 # General Icons
 LOADING=􀖇
-APPLE=􀣺
+# LOGO=􀣺
+LOGO=󰀶
 PREFERENCES=􀺽
 ACTIVITY=􀒓
 LOCK=􀒳
 BELL=􀋚
 BELL_DOT=􀝗
+QQ=
 WECHAT=󰘑
 WIFI_ON=󰖩
 WIFI_OFF=󰖪

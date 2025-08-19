@@ -3,17 +3,18 @@ source "$HOME/.config/sketchybar/colors.sh"
 source "$HOME/.config/sketchybar/icons.sh"
 
 PREV_COUNT=$(sketchybar --query brew | jq -r .popup.items | grep ".package*" -c)
+FONT="Maple Mono NF CN:Bold:13.0"
 
 render_bar_item() {
   case "$COUNT" in
   [3-5][0-9])
-    COLOR=$PEACH
+    COLOR=$RED
     ;;
   [1-2][0-9])
     COLOR=$YELLOW
     ;;
   [1-9])
-    COLOR=$TEXT
+    COLOR=$PEACH
     ;;
   0)
     COLOR=$GREEN
@@ -21,13 +22,12 @@ render_bar_item() {
     ;;
   esac
 
-  sketchybar --set "$NAME" label="$COUNT" icon.color="$COLOR"
+  sketchybar --set "$NAME" label="$COUNT" icon.color="$COLOR" label.font="$FONT"
 }
 
 add_outdated_header() {
   brew_header=(
     label="$(echo -e 'Outdated Brews')"
-    label.font="$FONT:Bold:14.0"
     label.align=left
     icon.drawing=off
     click_script="sketchybar --set $NAME popup.drawing=off"
@@ -52,7 +52,6 @@ render_popup() {
         label.padding_left=20
         icon.drawing=off
         click_script="sketchybar --set $NAME popup.drawing=off"
-
       )
       item=brew.package."$COUNTER"
 

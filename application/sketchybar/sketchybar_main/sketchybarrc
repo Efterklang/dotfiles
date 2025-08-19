@@ -21,7 +21,7 @@ launchctl unload -F /System/Library/LaunchAgents/com.apple.OSDUIHelper.plist >/d
 bar=(
   height=35
   color=$BAR_COLOR
-  border_width=2
+  border_width=3
   border_color=$SURFACE0
   corner_radius=10
   blur_radius=15
@@ -30,8 +30,8 @@ bar=(
   sticky=on
   padding_right=5
   padding_left=5
-  y_offset=3
-  margin=6
+  y_offset=1
+  margin=5
   topmost=window
   display=all
   notch_width=200
@@ -71,13 +71,14 @@ default=(
 sketchybar --default "${default[@]}"
 
 # Left
-source "$ITEM_DIR/logo.sh"
-source "$ITEM_DIR/spaces.sh"
+source "$PLUGIN_DIR/logo/item.sh"
+source "$PLUGIN_DIR/spaces/item.sh"
 
 # Right
 source "$PLUGIN_DIR/date/item.sh"
 source "$PLUGIN_DIR/battery/item.sh"
-source "$ITEM_DIR/wechat.sh"
+source "$PLUGIN_DIR/chat/wechat.sh"
+source "$PLUGIN_DIR/chat/qq.sh"
 source "$PLUGIN_DIR/brew/item.sh"
 source "$PLUGIN_DIR/stats/item.sh"
 
@@ -94,7 +95,7 @@ brackets=(
   background.drawing=on
 )
 
-sketchybar --add bracket apps wechat battery brew \
+sketchybar --add bracket apps qq wechat battery brew \
   --set apps "${brackets[@]}"
 
 sketchybar --hotload false
