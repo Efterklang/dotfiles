@@ -1,0 +1,10 @@
+[metadata]
+name = "zoxide"
+description = "A channel to select from directories"
+requirements = ["lla"]
+
+[source]
+command = ["zoxide query --list"]
+
+[preview]
+command = "lla --sizemap '{}'"

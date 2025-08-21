@@ -1,27 +1,7 @@
-# CONFIGURATION FILE LOCATION ON YOUR SYSTEM:
-# -------------------------------------------
-# Defaults:
-# ---------
-#  Linux:   `$HOME/.config/television/config.toml`
-#  macOS:   `$HOME/.config/television/config.toml`
-#  Windows: `%APPDATA%\television\config.toml`
-#
-# XDG dirs:
-# ---------
-# You may use XDG_CONFIG_HOME if set on your system.
-# In that case, television will expect the configuration file to be in:
-# `$XDG_CONFIG_HOME/television/config.toml`
-#
-
-# General settings
 # ----------------------------------------------------------------------------
 tick_rate = 50
 default_channel = "files"
 
-# History settings
-# ---------------
-# Maximum number of entries to keep in the global history (default: 100)
-# The history tracks search queries across all channels and sessions
 # Set to 0 to disable history functionality entirely
 history_size = 200
 
@@ -58,38 +38,10 @@ ui_scale = 100
 input_bar_position = "top"
 # What orientation should tv be (landscape or portrait)
 orientation = "landscape"
-# The theme to use for the UI
-# A list of builtin themes can be found in the `themes` directory of the television
-# repository. You may also create your own theme by creating a new file in a `themes`
-# directory in your configuration directory (see the `config.toml` location above).
 theme = "catppuccin"
 
-# Theme color overrides
-# ---------------------
-# You can override specific colors from the selected theme by adding them here.
-# This allows you to customize the appearance without creating a full theme file.
-# Colors can be specified as ANSI color names (e.g., "red", "bright-blue") or
-# as hex values (e.g., "#ff0000", "#1e1e2e").
-#
-# Example overrides:
-# [ui.theme_overrides]
-# background = "#000000"
-# text_fg = "#ffffff"
-# selection_bg = "#444444"
-# match_fg = "#ff0000"
-# The default size of the preview panel (in percentage of the screen)
 preview_size = 50
 
-# UI Features
-# -------------
-# Each feature can have two states: enabled/disabled and visible/not visible
-# - enabled: controls whether the feature is functional
-# - visible: controls whether the feature is displayed (only works if enabled)
-#
-# You can use the old array format for backward compatibility:
-# features = ["preview_panel", "status_bar", "remote_control"]
-#
-# Or use the new detailed format:
 [ui.features]
 preview_panel = { enabled = true, visible = true }
 help_panel = { enabled = true, visible = false }
@@ -99,10 +51,6 @@ remote_control = { enabled = true, visible = false }
 # Feature-specific configurations
 # Each feature can have its own configuration section
 [ui.status_bar]
-# Status bar separators (bubble):
-#separator_open = ""
-#separator_close = ""
-# Status bar separators (box):
 separator_open = ""
 separator_close = ""
 
@@ -120,15 +68,6 @@ show_channel_descriptions = true
 sort_alphabetically = true
 
 # Shell integration
-# ----------------------------------------------------------------------------
-#
-# The shell integration feature allows you to use television as a picker for
-# your shell commands (as well as your shell history with <CTRL-R>).
-# E.g. typing `git checkout <CTRL-T>` will open television with a list of
-# branches to choose from.
-
-[shell_integration]
-# This specifies the default fallback channel if no other channel is matched.
 fallback_channel = "files"
 
 [shell_integration.channel_triggers]
@@ -136,7 +75,7 @@ fallback_channel = "files"
 # by the corresponding commands.
 "alias" = ["alias", "unalias"]
 "env" = ["export", "unset"]
-"dirs" = ["cd", "ls", "rmdir"]
+"dirs" = ["cd", "ls", "rmdir", "z"]
 "files" = [
   "cat",
   "less",
@@ -176,9 +115,5 @@ fallback_channel = "files"
 "procs" = ["kill", "procs"]
 
 [shell_integration.keybindings]
-# controls which key binding should trigger tv
-# for shell autocomplete
 "smart_autocomplete" = "ctrl-t"
-# controls which keybinding should trigger tv
-# for command history
 "command_history" = "ctrl-r"
