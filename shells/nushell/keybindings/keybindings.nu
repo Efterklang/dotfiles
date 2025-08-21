@@ -29,23 +29,13 @@ $env.config.keybindings = [
     #  │               Custom keybindings                      │
     #  ╰───────────────────────────────────────────────────────╯
     {
-        name: fuzzy_command
+        name: tv_folder
         modifier: control
         keycode: char_f
         mode: [emacs, vi_normal, vi_insert]
         event: {
             send: executehostcommand
-            cmd: "tv_smart_autocomplete"
+            cmd: "cd (tv zoxide)"
         }
-    }
-    {
-        name: fuzzy_command
-        modifier: control
-        keycode: char_h
-        mode: [emacs, vi_normal, vi_insert]
-        event: {
-            send: executehostcommand
-            cmd: "fuzzy-command-search"
-        }
-    }
+    } 
 ]

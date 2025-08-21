@@ -43,10 +43,5 @@ def --env --wrapped __zoxide_z [...rest: string] {
   cd $path
 }
 
-# Jump to a directory using interactive search.
-def --env --wrapped __zoxide_zi [...rest:string] {
-  cd $'(zoxide query --interactive -- ...$rest | str trim -r -c "\n")'
-}
-
 alias z = __zoxide_z
-alias zi = __zoxide_zi
+alias zi = cd (tv zoxide)
