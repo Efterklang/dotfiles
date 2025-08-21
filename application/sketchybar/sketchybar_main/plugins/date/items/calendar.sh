@@ -1,12 +1,9 @@
 #!/usr/bin/env bash
 
-TIME_FONT="$FONT:Bold:13.0"
-TIME_COLOR=$LAVENDER
-
 calendar_date=(
   icon=date
-  icon.font="$TIME_FONT"
-  icon.color=$TIME_COLOR
+  icon.font="$FONT:Bold:13.0"
+  icon.color="$TEXT"
   icon.align=right
   icon.padding_right=0
   width=30
@@ -18,14 +15,14 @@ calendar_date=(
 
 calendar_clock=(
   icon=clock
-  icon.font="$TIME_FONT"
-  icon.color="$TIME_COLOR"
+  icon.font="$FONT:Bold:12.0"
+  icon.color="$SUBTEXT0"
   icon.align=right
   icon.padding_right=0
   background.padding_right=-20
-  background.padding_left=0
+  background.padding_left=10
   y_offset=-8
-  update_freq=15
+  update_freq=1
   script="$PLUGIN_DIR/date/scripts/clock.sh"
   click_script="$PLUGIN_DIR/date/scripts/zen.sh"
   label.padding_left=-50
