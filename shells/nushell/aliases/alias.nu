@@ -16,6 +16,12 @@ def trim_history [] {
 	open $history | lines | uniq | save -f $history
 }
 
+def cprv [input_file: string] {
+  let base = ($input_file | path parse | get stem)
+  let output_file = $"($base).webm"
+  ffmpeg -i $input_file -vcodec libvpx-vp9 $output_file
+}
+
 alias a = gh copilot suggest
 alias b = bun run
 alias c = code

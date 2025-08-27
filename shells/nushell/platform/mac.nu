@@ -32,7 +32,6 @@ def brew-update-all [] {
 }
 
 alias rm = ^rm
-alias open = ^open
 alias kill = ^kill
 alias clip = pbcopy
 alias python = python3

@@ -10,13 +10,13 @@ $env.config = {
         always_trash: true
     }
 
-    error_style: "fancy" # "fancy" or "plain" for screen reader-friendly error messages
+    error_style: "fancy"
 
     history: {
-        max_size: 5000 # Session has to be reloaded for this to take effect
-        sync_on_enter: true # Enable to share history between multiple sessions, else you have to close the session to write history to file
-        file_format: "plaintext" # "sqlite" or "plaintext"
-        isolation: false # only available with sqlite file_format. true enables history isolation, false disables it. true will allow the history to be isolated to the current session using up/down arrows. false will allow the history to be shared across all sessions.
+        max_size: 5000
+        sync_on_enter: true
+        file_format: "plaintext"
+        isolation: false
     }
 
     completions: {}
@@ -43,7 +43,7 @@ $env.config = {
     }
     render_right_prompt_on_last_line: false # true or false to enable or disable right prompt to be rendered on last line of the prompt.
     use_kitty_protocol: true # enables keyboard enhancement protocol implemented by kitty console, only if your terminal support this.
-    highlight_resolved_externals: true # true enables highlighting of external commands in the repl resolved by which.
+    highlight_resolved_externals: true
     recursion_limit: 50 # the maximum number of times nushell allows recursion before stopping it
 
     plugins: {} # Per-plugin configuration. See https://www.nushell.sh/contributor-book/plugins.html#configuration.
@@ -61,7 +61,12 @@ $env.config = {
         pre_prompt: [{ null }] # run before the prompt is shown
         pre_execution: [{ null }] # run before the repl input is run
         env_change: {
-            PWD: [{|before, after| null }] # run if the PWD environment is different since the last repl input
+            PWD: [{ ||
+                if (which direnv | is-empty) {
+                    return
+                }
+                direnv export json | from json | default {} | load-env
+            }]
         }
         display_output: "if (term size).columns >= 100 { table -e } else { table }" # run to display the output of a pipeline
         command_not_found: { null } # return an error message when a command is not found
@@ -120,7 +125,47 @@ $env.config = {
         }
     ]
 
-    keybindings: []
+    keybindings: [
+        {
+            name: completion_menu
+            modifier: control
+            keycode: char_i
+            mode: [emacs, vi_normal, vi_insert]
+            event: {
+                until: [
+                    { send: menu name: completion_menu }
+                    { send: menunext }
+                    { edit: complete }
+                ]
+            }
+        }
+        {
+            name: ide_completion_menu
+            modifier: none
+            keycode: tab
+            mode: [emacs, vi_normal, vi_insert]
+            event: {
+                until: [
+                    { send: menu name: ide_completion_menu }
+                    { send: menunext }
+                    { edit: complete }
+                ]
+            }
+        }
+        #  ╭───────────────────────────────────────────────────────╮
+        #  │               Custom keybindings                      │
+        #  ╰───────────────────────────────────────────────────────╯
+        {
+            name: tv_folder
+            modifier: control
+            keycode: char_f
+            mode: [emacs, vi_normal, vi_insert]
+            event: {
+                send: executehostcommand
+                cmd: "cd (tv zoxide)"
+            }
+        }
+    ]
 }
 
 
@@ -132,7 +177,6 @@ source $window_module
 source $mac_module
 
 source ./plugins/plugins.nu
-source ./aliases/aliases.nu
+source ./aliases/alias.nu
 source ./completions/completions.nu
-source ./keybindings/keybindings.nu
 source ./themes/catppuccin-mocha.nu
