@@ -79,6 +79,29 @@ case $@ in
 "Emacs")
   icon_result=":emacs:"
   ;;
+# VPN
+"Clash Verge")
+  icon_result=":nord_vpn:"
+  ;;
+# MacOs Apps
+"Activity Monitor")
+  icon_result=":cpu:"
+  ;;
+"Finder" | "访达")
+  icon_result=":finder:"
+  ;;
+"Spotlight")
+  icon_result=":spotlight:"
+  ;;
+"Keynote")
+  icon_result=":keynote:"
+  ;;
+"Xcode")
+  icon_result=":xcode:"
+  ;;
+"App Store")
+  icon_result=":app_store:"
+  ;;
 # ------ MISC
 "Keyboard Maestro")
   icon_result=":keyboard_maestro:"
@@ -133,9 +156,6 @@ case $@ in
   ;;
 "GitHub Desktop")
   icon_result=":git_hub:"
-  ;;
-"App Store")
-  icon_result=":app_store:"
   ;;
 "zoom.us")
   icon_result=":zoom:"
@@ -239,9 +259,6 @@ case $@ in
 "Android Studio")
   icon_result=":android_studio:"
   ;;
-"Xcode")
-  icon_result=":xcode:"
-  ;;
 "Slack")
   icon_result=":slack:"
   ;;
@@ -266,9 +283,6 @@ case $@ in
 "Canary Mail" | "HEY" | "Mail" | "Mailspring" | "MailMate" | "邮件" | "Outlook")
   icon_result=":mail:"
   ;;
-"Keynote")
-  icon_result=":keynote:"
-  ;;
 "Reeder")
   icon_result=":reeder5:"
   ;;
@@ -280,9 +294,6 @@ case $@ in
   ;;
 "Joplin")
   icon_result=":joplin:"
-  ;;
-"Spotlight")
-  icon_result=":spotlight:"
   ;;
 "Steam Helper")
   icon_result="󰓓"
@@ -364,9 +375,6 @@ case $@ in
   ;;
 "Calibre")
   icon_result=":book:"
-  ;;
-"Finder" | "访达")
-  icon_result=":finder:"
   ;;
 "Linear")
   icon_result=":linear:"

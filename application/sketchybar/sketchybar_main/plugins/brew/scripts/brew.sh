@@ -29,6 +29,8 @@ add_outdated_header() {
   brew_header=(
     label="$(echo -e 'Outdated Brews')"
     label.align=left
+    label.font="$FONT:Bold:16.0"
+    label.color="$MAROON"
     icon.drawing=off
     click_script="sketchybar --set $NAME popup.drawing=off"
   )
@@ -50,6 +52,8 @@ render_popup() {
         label="$package"
         label.align=right
         label.padding_left=20
+        label.font="$FONT:Regular:15.0"
+        label.color="$YELLOW"
         icon.drawing=off
         click_script="sketchybar --set $NAME popup.drawing=off"
       )

@@ -2,7 +2,6 @@
 
 source "$CONFIG_DIR/colors.sh"   # Loads all defined colors
 source "$CONFIG_DIR/icons.sh"    # Loads all defined icons
-ITEM_DIR="$CONFIG_DIR/items"     # Directory where the items are configured
 PLUGIN_DIR="$CONFIG_DIR/plugins" # Directory where all the plugin scripts are stored
 
 export FONT="Maple Mono NF CN"
@@ -77,6 +76,7 @@ source "$PLUGIN_DIR/spaces/item.sh"
 # Right
 source "$PLUGIN_DIR/date/item.sh"
 source "$PLUGIN_DIR/battery/item.sh"
+source "$PLUGIN_DIR/volume/item.sh"
 source "$PLUGIN_DIR/chat/wechat.sh"
 source "$PLUGIN_DIR/chat/qq.sh"
 source "$PLUGIN_DIR/brew/item.sh"
@@ -95,7 +95,7 @@ brackets=(
   background.drawing=on
 )
 
-sketchybar --add bracket apps qq wechat battery brew \
+sketchybar --add bracket apps qq wechat volume battery brew \
   --set apps "${brackets[@]}"
 
 sketchybar --hotload false

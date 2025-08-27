@@ -1,1 +1,0 @@
-sketchybar --add alias "Redline,Item-0" left \
