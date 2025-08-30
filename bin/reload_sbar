@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Required parameters:
+# @raycast.schemaVersion 1
+# @raycast.title reload_sketechybar
+# @raycast.mode compact
+
+# Optional parameters:
+# @raycast.icon 🤖
+
+# Documentation:
+# @raycast.author gnixaij_oag
+# @raycast.authorURL https://raycast.com/gnixaij_oag
+
+sketchybar --reload
