@@ -1,5 +1,6 @@
 source ./git.nu
 source ./replace.nu
+source ./ffmpeg.nu
 
 def --env y [...args] {
 	let tmp = (mktemp -t "yazi-cwd.XXXXXX")
@@ -14,13 +15,6 @@ def --env y [...args] {
 def trim_history [] {
 	let history = $nu.history-path
 	open $history | lines | uniq | save -f $history
-}
-
-def cprv [input_file: string] {
-  let base = ($input_file | path parse | get stem)
-  let output_file = $"($base).webm"
-  ffmpeg -i $input_file -vcodec libvpx-vp9 $output_file
-  # ffmpeg -i $input_file -vcodec libaom-av1 $output_file
 }
 
 def omni-open [path: string = "."] {
