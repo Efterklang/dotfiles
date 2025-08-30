@@ -60,18 +60,6 @@ const ruleProviderCommon = {
 };
 // 规则集配置
 const ruleProviders = {
-  "reject": {
-    ...ruleProviderCommon,
-    "behavior": "domain",
-    "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt",
-    "path": "./ruleset/loyalsoldier/reject.yaml"
-  },
-  "icloud": {
-    ...ruleProviderCommon,
-    "behavior": "domain",
-    "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt",
-    "path": "./ruleset/loyalsoldier/icloud.yaml"
-  },
   "apple": {
     ...ruleProviderCommon,
     "behavior": "domain",
@@ -183,25 +171,18 @@ const ruleProviders = {
 };
 // 规则
 const rules = [
-  // 额外自定义规则       //在此添加你想要的规则
+  // 额外自定义规则
   "PROCESS-NAME,steam.exe,🐬 自定义直连",
   // "PROCESS-NAME,OneDrive,🐬 自定义直连",
-  "PROCESS-NAME,linux.do,🐬 自定义直连",
-  "DOMAIN-SUFFIX,cursor.sh,🐳 自定义代理",
-  "DOMAIN-SUFFIX,cursor-cdn.com,🐳 自定义代理",
-  "DOMAIN-SUFFIX,cursorapi.com,🐳 自定义代理",
-  "DOMAIN-SUFFIX,cursor.com,🐳 自定义代理",
+  "DOMAIN-SUFFIX,linux.do,🐬 自定义直连",
+  "DOMAIN-SUFFIX,vluv.space,🐬 自定义直连",
   "DOMAIN-SUFFIX,workos.com,🐳 自定义代理",
   "DOMAIN-SUFFIX,immersivetranslate.com,🐳 自定义代理",
-  // "DOMAIN-SUFFIX,bing.com,🐳 自定义代理",
-  // 自定义规则
+  "DOMAIN-SUFFIX,bing.com,🐳 自定义代理",
   "DOMAIN-SUFFIX,googleapis.cn,⚙️ 节点选择", // Google服务
   "DOMAIN-SUFFIX,gstatic.com,⚙️ 节点选择", // Google静态资源
   "DOMAIN-SUFFIX,xn--ngstr-lra8j.com,⚙️ 节点选择", // Google Play下载服务
-  "DOMAIN-SUFFIX,github.io,⚙️ 节点选择", // Github Pages
   "DOMAIN,v2rayse.com,⚙️ 节点选择", // V2rayse节点工具
-  // blackmatrix7 规则集
-  
   // MetaCubeX 规则集
   "RULE-SET,openai,💸 ChatGPT-Gemini-XAI-Perplexity",
   "RULE-SET,pikpak,🅿️ PikPak",
@@ -212,9 +193,7 @@ const rules = [
   // Loyalsoldier 规则集
   "RULE-SET,applications,🔗 全局直连",
   "RULE-SET,private,🔗 全局直连",
-  "RULE-SET,reject,🥰 广告过滤",
   "RULE-SET,microsoft,Ⓜ️ 微软服务",
-  "RULE-SET,icloud,🍎 苹果服务",
   "RULE-SET,apple,🍎 苹果服务",
   "RULE-SET,google,📢 谷歌服务",
   "RULE-SET,proxy,⚙️ 节点选择",
@@ -396,7 +375,7 @@ const proxyGroupsConfig =  [
 // 程序入口
 function main(config) {
   const proxyCount = config?.proxies?.length ?? 0;
-        
+
   // 先获取 proxy-providers 的值，使用可选链保证 config 不为 null/undefined
   const pp = config?.["proxy-providers"];
   const proxyProviderCount = pp !== null && typeof pp === 'object' ? Object.keys(pp).length : 0;

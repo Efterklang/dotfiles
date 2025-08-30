@@ -106,3 +106,4 @@ logs/
 .cache/
 .tmp/
 temp/
+**/*backup*

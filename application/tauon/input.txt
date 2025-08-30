@@ -33,12 +33,12 @@ toggle-shuffle .
 toggle-repeat ,
 
 random-track ;
-random-track-start /
+random-track-start \
 random-album ; Alt
 revert / Shift
 
-cycle-playlist-left Left
-cycle-playlist-right Right
+cycle-playlist-left H Alt
+cycle-playlist-right L Alt
 
 goto-playing '
 goto-previous ' Ctrl
@@ -57,7 +57,6 @@ pagedown PageDown
 
 delete-playlist W Ctrl
 delete-playlist-force W Shift Ctrl
-rename-playlist R Ctrl
 rename-playlist F2
 new-playlist T Ctrl
 
@@ -67,8 +66,7 @@ edit-generator E Ctrl
 search-lyrics-selected
 substitute-search-selected
 
-quick-find \
-quick-find F Ctrl
+quick-find /
 global-search G Ctrl
 add-to-queue Q Alt
 clear-queue Q Shift Alt

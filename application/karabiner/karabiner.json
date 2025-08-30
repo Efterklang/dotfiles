@@ -1,5 +1,8 @@
 {
-    "global": { "check_for_updates_on_startup": false },
+    "global": {
+        "check_for_updates_on_startup": false,
+        "enable_notification_window": false
+    },
     "profiles": [
         {
             "complex_modifications": {
@@ -569,7 +572,10 @@
                     "to": [{ "key_code": "left_control" }]
                 }
             ],
-            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+            "virtual_hid_keyboard": {
+                "indicate_sticky_modifier_keys_state": false,
+                "keyboard_type_v2": "ansi"
+            }
         }
     ]
 }
