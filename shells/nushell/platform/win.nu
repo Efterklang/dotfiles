@@ -4,9 +4,8 @@ source ../aliases/scoop.nu
 source ../completions/scoop.nu
 source ../completions/winget.nu
 
-
 def --env pwd [] {
-    $env.PWD | str replace --all '\' '/'
+  $env.PWD | str replace --all '\' '/'
 }
 
 alias su = scoop update
@@ -26,4 +25,3 @@ alias cde = cd e://
 alias man = cheat
 alias sync = pwsh -File E://projects/config/install.ps1
 alias exp = explorer.exe .
-

@@ -139,23 +139,23 @@ let scheme = {
   operator: $theme.sky
   string: $theme.green
   virtual_text: $theme.surface2
-  variable: { fg: $theme.flamingo attr: i }
+  variable: {fg: $theme.flamingo attr: i}
   filepath: $theme.yellow
 }
 
 $env.config.color_config = {
-  separator: { fg: $theme.surface2 attr: b }
-  leading_trailing_space_bg: { fg: $theme.lavender attr: u }
-  header: { fg: $theme.text attr: b }
+  separator: {fg: $theme.surface2 attr: b}
+  leading_trailing_space_bg: {fg: $theme.lavender attr: u}
+  header: {fg: $theme.text attr: b}
   row_index: $scheme.virtual_text
   record: $theme.text
   list: $theme.text
   hints: $scheme.virtual_text
-  search_result: { fg: $theme.base bg: $theme.yellow }
+  search_result: {fg: $theme.base bg: $theme.yellow}
   shape_closure: $theme.teal
   closure: $theme.teal
-  shape_flag: { fg: $theme.maroon attr: i }
-  shape_matching_brackets: { attr: u }
+  shape_flag: {fg: $theme.maroon attr: i}
+  shape_matching_brackets: {attr: u}
   shape_garbage: $theme.red
   shape_keyword: $theme.mauve
   shape_match_pattern: $theme.green
@@ -163,4 +163,3 @@ $env.config.color_config = {
   shape_table: $scheme.punctuation
   cell-path: $scheme.punctuation
   shape_list: $scheme.punctuation
-

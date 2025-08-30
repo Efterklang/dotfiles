@@ -5,82 +5,82 @@ a-z-]+)' | get command
 
 def "nu-complete zellij" [] {
   [
-    { value: "action", description: "Send actions to a specific session [aliases: ac]" },
-    { value: "attach", description: "Attach to a session [aliases: a]" },
-    { value: "convert-config", description: "" },
-    { value: "convert-layout", description: "" },
-    { value: "convert-theme", description: "" },
-    { value: "delete-all-sessions", description: "Delete all sessions [aliases: da]" },
-    { value: "delete-session", description: "Delete a specific session [aliases: d]" },
-    { value: "edit", description: "Edit file with default $EDITOR / $VISUAL [aliases: e]" },
-    { value: "help", description: "Print this message or the help of the given subcommand(s)" },
-    { value: "kill-all-sessions", description: "Kill all sessions [aliases: ka]" },
-    { value: "kill-session", description: "Kill the specific session [aliases: k]" },
-    { value: "list-sessions", description: "List active sessions [aliases: ls]" },
-    { value: "options", description: "Change behaviour of zellij" },
-    { value: "pipe", description: "Send data to one or more plugins, launch them if they are not running" },
-    { value: "plugin", description: "Load a plugin [aliases: p]" },
-    { value: "run", description: "Run a command in a new pane [aliases: r]" },
-    { value: "setup", description: "Setup zellij and check its configuration" },
-  
+    {value: "action" description: "Send actions to a specific session [aliases: ac]"}
+    {value: "attach" description: "Attach to a session [aliases: a]"}
+    {value: "convert-config" description: ""}
+    {value: "convert-layout" description: ""}
+    {value: "convert-theme" description: ""}
+    {value: "delete-all-sessions" description: "Delete all sessions [aliases: da]"}
+    {value: "delete-session" description: "Delete a specific session [aliases: d]"}
+    {value: "edit" description: "Edit file with default $EDITOR / $VISUAL [aliases: e]"}
+    {value: "help" description: "Print this message or the help of the given subcommand(s)"}
+    {value: "kill-all-sessions" description: "Kill all sessions [aliases: ka]"}
+    {value: "kill-session" description: "Kill the specific session [aliases: k]"}
+    {value: "list-sessions" description: "List active sessions [aliases: ls]"}
+    {value: "options" description: "Change behaviour of zellij"}
+    {value: "pipe" description: "Send data to one or more plugins, launch them if they are not running"}
+    {value: "plugin" description: "Load a plugin [aliases: p]"}
+    {value: "run" description: "Run a command in a new pane [aliases: r]"}
+    {value: "setup" description: "Setup zellij and check its configuration"}
+
     # Aliases
-    { value: "ac", description: "Alias for `action`" },
-    { value: "a", description: "Alias for `attach`" },
-    { value: "e", description: "Alias for `edit`" },
-    { value: "da", description: "Alias for `delete-all-sessions`" },
-    { value: "d", description: "Alias for `delete-session`" },
-    { value: "ka", description: "Alias for `kill-all-sessions`" },
-    { value: "k", description: "Alias for `kill-session`" },
-    { value: "ls", description: "Alias for `list-sessions`" },
-    { value: "p", description: "Alias for `plugin`" },
-    { value: "r", description: "Alias for `run`" },
+    {value: "ac" description: "Alias for `action`"}
+    {value: "a" description: "Alias for `attach`"}
+    {value: "e" description: "Alias for `edit`"}
+    {value: "da" description: "Alias for `delete-all-sessions`"}
+    {value: "d" description: "Alias for `delete-session`"}
+    {value: "ka" description: "Alias for `kill-all-sessions`"}
+    {value: "k" description: "Alias for `kill-session`"}
+    {value: "ls" description: "Alias for `list-sessions`"}
+    {value: "p" description: "Alias for `plugin`"}
+    {value: "r" description: "Alias for `run`"}
   ]
 }
 
 def "nu-complete zellij action" [] {
   [
-    { value: "close-pane", description: "Close the focused pane" },
-    { value: "close-tab", description: "Close the current tab" },
-    { value: "dump-screen", description: "Dump the focused pane to a file" },
-    { value: "edit", description: "Open the specified file in a new zellij pane with your default EDITOR" },
-    { value: "edit-scrollback", description: "Open the pane scrollback in your default editor" },
-    { value: "focus-next-pane", description: "Change focus to the next pane" },
-    { value: "focus-previous-pane", description: "Change focus to the precvious pane" },
-    { value: "go-to-next-tab", description: "Go to the next tab" },
-    { value: "go-to-previous-tab", description: "Go to the previous tab" },
-    { value: "go-to-tab", description: "Go to tab with index [index]" },
-    { value: "half-page-scroll-down", description: "Scroll down half page in focus pane" },
-    { value: "half-page-scroll-up", description: "Scroll up half page in focus pane" },
-    { value: "help", description: "Print this message or the help of the given subcommand(s)" },
-    { value: "move-focus", description: "Move the focused pane in the specified direction. [right|left|up|down]" },
-    { value: "move-focus-or-tab", description: "Move focus to the pane or tab (if on screen edge) in the specified direction. [right|left|up|down]" },
-    { value: "move-pane", description: "Change the location of the focused pane in the specified direction. [right|left|up|down]" },
-    { value: "new-pane", description: "Open a new pane in the specified direction. [right|down] If no direction specified, will try to use the biggest available space" },
-    { value: "new-tab", description: "Create a new tab, optionally with a specified tab layout and name" },
-    { value: "page-scroll-down", description: "Scroll down one page in focus pane" },
-    { value: "page-scroll-up", description: "Scroll up one page in focus pane" },
-    { value: "rename-pane", description: "Renames the focused pane" },
-    { value: "rename-tab", description: "Renames the focused tab" },
-    { value: "resize", description: "Resize the focused pane in the specified direction. [right|left|up|down|+|-]" },
-    { value: "scroll-down", description: "Scroll down to the bottom in focus pane" },
-    { value: "scroll-up", description: "Scroll up in the focused pane" },
-    { value: "switch-mode", description: "Switch input mode of all connected clients [locked|pane|tab|resize|move|search|session]" },
-    { value: "toggle-active-sync-tab", description: "Toggle between sending text commands to all panes on the current tab and normal mode" },
-    { value: "toggle-floating-panes", description: "Toggle visibility of all floating panes in the current tab, open one if none exist" },
-    { value: "toggle-fullscreen", description: "Toggle between fullscreen focus pane and normal layout" },
-    { value: "toggle-pane-embed-or-floating", description: "Embed focused pane if floating or float focused pane if embedded" },
-    { value: "toggle-pane-frames", description: "Toggle frames around panes in the UI" },
-    { value: "undo-rename-pane", description: "Remove a previously set pane name" },
-    { value: "undo-rename-tab", description: "Remove a previously set tab name" },
-    { value: "write", description: "Write bytes to the terminal" },
-    { value: "write-chars", description: "Write characters to the terminal" },
+    {value: "close-pane" description: "Close the focused pane"}
+    {value: "close-tab" description: "Close the current tab"}
+    {value: "dump-screen" description: "Dump the focused pane to a file"}
+    {value: "edit" description: "Open the specified file in a new zellij pane with your default EDITOR"}
+    {value: "edit-scrollback" description: "Open the pane scrollback in your default editor"}
+    {value: "focus-next-pane" description: "Change focus to the next pane"}
+    {value: "focus-previous-pane" description: "Change focus to the precvious pane"}
+    {value: "go-to-next-tab" description: "Go to the next tab"}
+    {value: "go-to-previous-tab" description: "Go to the previous tab"}
+    {value: "go-to-tab" description: "Go to tab with index [index]"}
+    {value: "half-page-scroll-down" description: "Scroll down half page in focus pane"}
+    {value: "half-page-scroll-up" description: "Scroll up half page in focus pane"}
+    {value: "help" description: "Print this message or the help of the given subcommand(s)"}
+    {value: "move-focus" description: "Move the focused pane in the specified direction. [right|left|up|down]"}
+    {value: "move-focus-or-tab" description: "Move focus to the pane or tab (if on screen edge) in the specified direction. [right|left|up|down]"}
+    {value: "move-pane" description: "Change the location of the focused pane in the specified direction. [right|left|up|down]"}
+    {value: "new-pane" description: "Open a new pane in the specified direction. [right|down] If no direction specified, will try to use the biggest available space"}
+    {value: "new-tab" description: "Create a new tab, optionally with a specified tab layout and name"}
+    {value: "page-scroll-down" description: "Scroll down one page in focus pane"}
+    {value: "page-scroll-up" description: "Scroll up one page in focus pane"}
+    {value: "rename-pane" description: "Renames the focused pane"}
+    {value: "rename-tab" description: "Renames the focused tab"}
+    {value: "resize" description: "Resize the focused pane in the specified direction. [right|left|up|down|+|-]"}
+    {value: "scroll-down" description: "Scroll down to the bottom in focus pane"}
+    {value: "scroll-up" description: "Scroll up in the focused pane"}
+    {value: "switch-mode" description: "Switch input mode of all connected clients [locked|pane|tab|resize|move|search|session]"}
+    {value: "toggle-active-sync-tab" description: "Toggle between sending text commands to all panes on the current tab and normal mode"}
+    {value: "toggle-floating-panes" description: "Toggle visibility of all floating panes in the current tab, open one if none exist"}
+    {value: "toggle-fullscreen" description: "Toggle between fullscreen focus pane and normal layout"}
+    {value: "toggle-pane-embed-or-floating" description: "Embed focused pane if floating or float focused pane if embedded"}
+    {value: "toggle-pane-frames" description: "Toggle frames around panes in the UI"}
+    {value: "undo-rename-pane" description: "Remove a previously set pane name"}
+    {value: "undo-rename-tab" description: "Remove a previously set tab name"}
+    {value: "write" description: "Write bytes to the terminal"}
+    {value: "write-chars" description: "Write characters to the terminal"}
   ]
 }
 
 def "nu-complete zellij attach" [] {
   [
-    { value: "help", description: "Print this message or the help of a given subcommand(s)" },
-    { value: "options", description: "Change the behaviour of zellij" },
+    {value: "help" description: "Print this message or the help of a given subcommand(s)"}
+    {value: "options" description: "Change the behaviour of zellij"}
   ]
 }
 
@@ -89,26 +89,26 @@ def "nu-complete sessions" [] {
 }
 
 def "nu-complete zellij layouts" [] {
-	let layout_dir = if 'ZELLIJ_CONFIG_DIR' in $env {
-		[$env.ZELLIJ_CONFIG_DIR "layouts"] | path join
-	} else {
-		match $nu.os-info.name {
-			"linux" => "~/.config/zellij/layouts/"
-			"macos" => {
-				if ("~/.config/zellij/layouts/" | path exists) {
-					"~/.config/zellij/layouts/"
-				} else {
-					"~/Library/Application Support/org.Zellij-Contributors.Zellij/layouts"
-				}
-			}
-			_ => (error make { msg: "Unsupported OS for zellij" })
-		}
-	}
+  let layout_dir = if 'ZELLIJ_CONFIG_DIR' in $env {
+    [$env.ZELLIJ_CONFIG_DIR "layouts"] | path join
+  } else {
+    match $nu.os-info.name {
+      "linux" => "~/.config/zellij/layouts/"
+      "macos" => {
+        if ("~/.config/zellij/layouts/" | path exists) {
+          "~/.config/zellij/layouts/"
+        } else {
+          "~/Library/Application Support/org.Zellij-Contributors.Zellij/layouts"
+        }
+      }
+      _ => (error make {msg: "Unsupported OS for zellij"})
+    }
+  }
 
-	ls ( $layout_dir | path expand )
-		| where name =~ "\\.kdl" 
-		| get name 
-		| each { |$it| { value: ($it | path basename | str replace ".kdl" ""), description: $it } }
+  ls ($layout_dir | path expand)
+  | where name =~ "\\.kdl"
+  | get name
+  | each {|$it| {value: ($it | path basename | str replace ".kdl" "") description: $it} }
 }
 
 # Turned off since it messes with sub-commands
@@ -128,7 +128,7 @@ def "nu-complete zellij layouts" [] {
 # Send actions to a specific session
 export extern "zellij action" [
   command: string@"nu-complete zellij action"
-  --help(-h) # Print help information
+  --help (-h) # Print help information
 ]
 
 # Renames the focused tab
@@ -138,52 +138,52 @@ export extern "zellij action rename-tab" [
 
 # Create a new tab, optionally with a specified tab layout and name
 export extern "zellij action new-tab" [
-  --cwd(-c): path # Change the working directory of the new tab
-  --help(-h) # Print help information
-  --layout(-l): string@"nu-complete zellij layouts" # Layout to use for the new tab
+  --cwd (-c): path # Change the working directory of the new tab
+  --help (-h) # Print help information
+  --layout (-l): string@"nu-complete zellij layouts" # Layout to use for the new tab
   --layout-dir: path # Default folder to look for layouts
-  --name(-n): string # Name for the tab
+  --name (-n): string # Name for the tab
 ]
 
 # Attach to a session
 export extern "zellij attach" [
   session_name: string@"nu-complete sessions" # Name of the session to attach to
   command?: string@"nu-complete zellij attach"
-  --create(-c) # Create a session if one does not exist
-  --help(-h)   # Print help information
-  --index      # <INDEX> Number of the session index in the active sessions ordered by creation date
+  --create (-c) # Create a session if one does not exist
+  --help (-h) # Print help information
+  --index # <INDEX> Number of the session index in the active sessions ordered by creation date
 ]
 
 # <OLD_CONFIG_FILE>
 export extern "zellij convert-config" [
   file: path
-  --help(-h) # Print help information
+  --help (-h) # Print help information
 ]
 
 # <OLD_LAYOUT_FILE>
 export extern "zellij convert-layout" [
   file: path
-  --help(-h) # Print help information
+  --help (-h) # Print help information
 ]
 
 # <OLD_THEME_FILE>
 export extern "zellij convert-theme" [
   file: path
-  --help(-h) # Print help information
+  --help (-h) # Print help information
 ]
 
 def "nu-complete directions" [] {
-  [ "right" "left" "down" "up" ]
+  ["right" "left" "down" "up"]
 }
 
 # Edit file with default $EDITOR / $VISUAL
 export extern "zellij edit" [
   file: path
-  --cwd: path                                      # <CWD> Change the working directory of the editor
-  --direction(-d): string@"nu-complete directions" # <DIRECTION> Direction to open the new pane in
-  --floating(-f)                                   # Open the new pane in floating mode
-  --help(-h)                                       # Print help information
-  --line-number(-l): number                        # <LINE_NUMBER> Open the file in the specified line number
+  --cwd: path # <CWD> Change the working directory of the editor
+  --direction (-d): string@"nu-complete directions" # <DIRECTION> Direction to open the new pane in
+  --floating (-f) # Open the new pane in floating mode
+  --help (-h) # Print help information
+  --line-number (-l): number # <LINE_NUMBER> Open the file in the specified line number
 ]
 
 # Print this message or the help of the given subcommand(s)
@@ -193,45 +193,45 @@ export extern "zellij help" [
 
 # Delete all sessions
 export extern "zellij delete-all-sessions" [
-  --force(-f) # Kill the sessions if they're running before deleting them
-  --help(-h)  # Print help information
-  --yes(-y) # Automatic yes to prompts
+  --force (-f) # Kill the sessions if they're running before deleting them
+  --help (-h) # Print help information
+  --yes (-y) # Automatic yes to prompts
 ]
 
 # Delete the specific session
 export extern "zellij delete-session" [
   session_name: string@"nu-complete sessions" # <TARGET_SESSION> Name of target session
-  --force(-f) # Kill the sessions if they're running before deleting them
-  --help(-h)  # Print help information
+  --force (-f) # Kill the sessions if they're running before deleting them
+  --help (-h) # Print help information
 ]
 
 # Kill all sessions
 export extern "zellij kill-all-sessions" [
-  --help(-h) # Print help information
-  --yes(-y)  # Automatic yes to prompts
+  --help (-h) # Print help information
+  --yes (-y) # Automatic yes to prompts
 ]
 
 # Kill the specific session
 export extern "zellij kill-session" [
   session_name: string@"nu-complete sessions" # <TARGET_SESSION> Name of target session
-  --help(-h) # Print help information         # Print help information
+  --help (-h) # Print help information         # Print help information
 ]
 
 # List active sessions
 export extern "zellij list-sessions" [
-  --help(-h) # Print help information
+  --help (-h) # Print help information
 ]
 
 def "nu-complete string bools" [] {
-  [ "'true'" "'false'" ]
+  ["'true'" "'false'"]
 }
 
 def "nu-complete option copy-clipboard" [] {
-  [ "system", "primary" ]
+  ["system" "primary"]
 }
 
 def "nu-complete option on-force-close" [] {
-  [ "quit" "detach" ]
+  ["quit" "detach"]
 }
 
 # Change the behaviour of zellij
@@ -244,7 +244,7 @@ export extern "zellij options" [
   --default-mode # <DEFAULT_MODE> Set the default mode
   --default-shell # <DEFAULT_SHELL> Set the default shell
   --disable-mouse-mode # Disable handling of mouse events
-  --help(-h) # Print help information
+  --help (-h) # Print help information
   --layout-dir: path # <LAYOUT_DIR> Set the layout_dir, defaults to subdirectory of config dir
   --mirror-session: string@"nu-complete string bools" # Mirror session when multiple users are connected (true or false) [possible values: true, false]
   --mouse-mode: string@"nu-complete string bools" # <MOUSE_MODE> Set the handling of mouse events (true or false) Can be temporarily bypassed by the [SHIFT] key [possible values: true, false]
@@ -260,37 +260,36 @@ export extern "zellij options" [
 
 # Send data to one or more plugins, launch them if they are not running
 export extern "zellij pipe" [
-  --name(-n): string # <NAME> The name of the pipe
-  --args(-a): string # <ARGS> The args of the pipe
-  --plugin(-p): string # <PLUGIN> The plugin url (eg. file:/tmp/my-plugin.wasm) to direct this pipe to, if not specified, will be sent to all plugins, if specified and is not running, the plugin will be launched
-  --plugin-configuration(-c): string # <PLUGIN_CONFIGURATION> The plugin configuration (note: the same plugin with different configuration is considered a different plugin for the purposes of determining the pipe destination)
-  --help(-h) # Print help information
+  --name (-n): string # <NAME> The name of the pipe
+  --args (-a): string # <ARGS> The args of the pipe
+  --plugin (-p): string # <PLUGIN> The plugin url (eg. file:/tmp/my-plugin.wasm) to direct this pipe to, if not specified, will be sent to all plugins, if specified and is not running, the plugin will be launched
+  --plugin-configuration (-c): string # <PLUGIN_CONFIGURATION> The plugin configuration (note: the same plugin with different configuration is considered a different plugin for the purposes of determining the pipe destination)
+  --help (-h) # Print help information
 ]
 
 # Load a plugin
 export extern "zellij plugin" [
-   --configuration(-c): string # <CONFIGURATION> Plugin configuration
-   --floating(-f) # Open the new pane in floating mode
-   --help(-h) # Print help information
-   --height: any # <HEIGHT> The height if the pane is floating as a bare integer (eg. 1) or percent (eg. 10%)
-   --in-place(-i) # Open the new pane in place of the current pane, temporarily suspending it
-   --skip-plugin-cache(-s) # Skip the memory and HD cache and force recompile of the plugin (good for development)
-   --width: any # <WIDTH> The width if the pane is floating as a bare integer (eg. 1) or percent (eg. 10%)
-   --x(-x): any # <X> The x coordinates if the pane is floating as a bare integer (eg. 1) or percent (eg. 10%)
-   --y(-y): any # <Y> The y coordinates if the pane is floating as a bare integer (eg. 1) or percent (eg. 10%)
+  --configuration (-c): string # <CONFIGURATION> Plugin configuration
+  --floating (-f) # Open the new pane in floating mode
+  --help (-h) # Print help information
+  --height: any # <HEIGHT> The height if the pane is floating as a bare integer (eg. 1) or percent (eg. 10%)
+  --in-place (-i) # Open the new pane in place of the current pane, temporarily suspending it
+  --skip-plugin-cache (-s) # Skip the memory and HD cache and force recompile of the plugin (good for development)
+  --width: any # <WIDTH> The width if the pane is floating as a bare integer (eg. 1) or percent (eg. 10%)
+  --x (-x): any # <X> The x coordinates if the pane is floating as a bare integer (eg. 1) or percent (eg. 10%)
+  --y (-y): any # <Y> The y coordinates if the pane is floating as a bare integer (eg. 1) or percent (eg. 10%)
 ]
-
 
 # Run a command in a new pane
 export extern "zellij run" [
   command: string # Command to run
-  --close-on-exit(-c) # Close the pane immediately when its command exits
+  --close-on-exit (-c) # Close the pane immediately when its command exits
   --cwd: path # <CWD> Change the working directory of th new pane
-  --direction(-d): string@"nu-complete directions" # <DIRECTION> Direction to open new pane in
-  --floating(-f) # Open the new pane in floating mode
-  --help(-h) # Print help information
-  --name(-n): string # <NAME> Name of the new pane
-  --start-suspended(-s) # Start the command suspended, only running after you first presses ENTER
+  --direction (-d): string@"nu-complete directions" # <DIRECTION> Direction to open new pane in
+  --floating (-f) # Open the new pane in floating mode
+  --help (-h) # Print help information
+  --name (-n): string # <NAME> Name of the new pane
+  --start-suspended (-s) # Start the command suspended, only running after you first presses ENTER
 ]
 
 export extern "zellij setup" [
@@ -300,5 +299,5 @@ export extern "zellij setup" [
   --dump-layout: string # <DUMP_LAYOUT> Dump the specified layout file to stdout
   --generate-auto-start: string # Generates auto-start for the specified shell
   --generate-completion: string # Generates completion for the specified shell
-  --help(-h) # Print help information
+  --help (-h) # Print help information
 ]

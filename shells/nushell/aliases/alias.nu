@@ -3,25 +3,25 @@ source ./replace.nu
 source ./ffmpeg.nu
 
 def --env y [...args] {
-	let tmp = (mktemp -t "yazi-cwd.XXXXXX")
-	yazi ...$args --cwd-file $tmp
-	let cwd = (open $tmp)
-	if $cwd != "" and $cwd != $env.PWD {
-		cd $cwd
-	}
-	rm -fp $tmp
+  let tmp = (mktemp -t "yazi-cwd.XXXXXX")
+  yazi ...$args --cwd-file $tmp
+  let cwd = (open $tmp)
+  if $cwd != "" and $cwd != $env.PWD {
+    cd $cwd
+  }
+  rm -fp $tmp
 }
 
 def trim_history [] {
-	let history = $nu.history-path
-	open $history | lines | uniq | save -f $history
+  let history = $nu.history-path
+  open $history | lines | uniq | save -f $history
 }
 
 def omni-open [path: string = "."] {
   match $nu.os-info.name {
-    macos => {^open $path}
-    windows => {explorer.exe $path}
-    linux => {^xdg-open $path}
+    macos => { ^open $path }
+    windows => { explorer.exe $path }
+    linux => { ^xdg-open $path }
   }
 }
 

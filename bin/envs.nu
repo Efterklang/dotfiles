@@ -1,25 +1,25 @@
 #! /usr/bin/env nu
 
 # Define a function to set environment variables cross-platform
-def --env env [name: string, value: string] {
-    # Set env var for current session
-    load-env { $name: $value }
-    match $nu.os-info.name {
-        "macos" => {
-            launchctl setenv $name $value
-        }
-        "linux" => {
-            let env_file = "/etc/profile.d/gnix-env.sh"
-            touch $env_file
-            let lines = (open $env_file | lines | where not ($it | str starts-with $"export ($name)="))
-            let env_value = ($value | str replace $nu.home-path "$HOME")
-            let updated = ($lines | append $"export ($name)=\"($env_value)\"")
-            $updated | str join (char nl) | save --force $env_file
-        }
-        "windows" => {
-            setx $name $value
-        }
+def --env env [name: string value: string] {
+  # Set env var for current session
+  load-env {$name: $value}
+  match $nu.os-info.name {
+    "macos" => {
+      launchctl setenv $name $value
     }
+    "linux" => {
+      let env_file = "/etc/profile.d/gnix-env.sh"
+      touch $env_file
+      let lines = (open $env_file | lines | where not ($it | str starts-with $"export ($name)="))
+      let env_value = ($value | str replace $nu.home-path "$HOME")
+      let updated = ($lines | append $"export ($name)=\"($env_value)\"")
+      $updated | str join (char nl) | save --force $env_file
+    }
+    "windows" => {
+      setx $name $value
+    }
+  }
 }
 
 # XDG Base Directory variables
@@ -77,4 +77,22 @@ env EDITOR "nvim"
 env MANPAGER "nvim +Man!"
 
 # vivid colors
-env LS_COLORS ( vivid generate catppuccin-mocha | str trim )
+env LS_COLORS (vivid generate catppuccin-mocha | str trim)
+env TOPIARY_CONFIG_FILE $"($nu.home-path)/.config/topiary/languages.ncl"
+env TOPIARY_LANGUAGE_DIR $"($nu.home-path)/.config/topiary/languages"
+env FZF_DEFAULT_OPTS '
+    --info right
+    --prompt "󰥨 Search: "
+    --pointer ">"
+    --marker "󰄲"
+    --border "rounded"
+    --border-label=" 󱉭 FZF "
+    --border-label-pos center
+    --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8
+    --color=fg:#cdd6f4,header:#f38ba8,info:#b4befe,pointer:#f38ba8
+    --color=marker:#b4befe,fg+:#cdd6f4,prompt:#b4befe,hl+:#f38ba8
+    --color=selected-bg:#45475a
+    --multi
+    --layout reverse
+'
+env FZF_DEFAULT_COMMAND 'fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
