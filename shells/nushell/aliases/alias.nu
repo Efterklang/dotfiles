@@ -20,6 +20,15 @@ def cprv [input_file: string] {
   let base = ($input_file | path parse | get stem)
   let output_file = $"($base).webm"
   ffmpeg -i $input_file -vcodec libvpx-vp9 $output_file
+  # ffmpeg -i $input_file -vcodec libaom-av1 $output_file
+}
+
+def omni-open [path: string = "."] {
+  match $nu.os-info.name {
+    macos => {^open $path}
+    windows => {explorer.exe $path}
+    linux => {^xdg-open $path}
+  }
 }
 
 alias a = gh copilot suggest
@@ -36,9 +45,9 @@ alias k = commandline edit --insert (zellij delete-all-sessions -y; zellij kill-
 alias l = clear
 alias m = nvim (tv --source-command "fd -e md ." files)
 # n
-alias o = open
+alias o = omni-open
 alias p = gping
-# q
+alias q = exit 0
 alias r = commandline edit --insert (bat --color never --style plain $nu.history-path | fzf --height 70% --layout reverse --tac | str trim)
 alias s = somo
 alias t = tokei
