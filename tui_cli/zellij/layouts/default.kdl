@@ -2,7 +2,7 @@
 layout {
 default_tab_template {
         pane size=2 borderless=true {
-            plugin location="https://github.com/dj95/zjstatus/releases/latest/download/zjstatus.wasm" {
+            plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
             color_rosewater "#f5e0dc"
             color_flamingo "#f2cdcd"
             color_pink "#f5c2e7"
@@ -32,7 +32,7 @@ default_tab_template {
 
             format_left   "#[bg=$base,fg=$lavender]#[bg=$lavender,fg=$crust,bold] {session} #[bg=$base]{mode}#[bg=$base] {tabs}"
             format_center "{notifications}"
-            format_right  "#[bg=$base,fg=$flamingo]#[fg=$crust,bg=$flamingo] #[bg=$surface1,fg=$flamingo,bold] {command_user}@{command_host}#[bg=$base,fg=$surface1]#[bg=$base,fg=$maroon]#[bg=$maroon,fg=$crust]󰃭 #[bg=$surface1,fg=$maroon,bold] {datetime}#[bg=$base,fg=$surface1]"
+            format_right  "#[bg=$base,fg=$flamingo]#[fg=$crust,bg=$flamingo] #[bg=$surface1,fg=$flamingo,bold] {command_user}@{command_host}#[bg=$base,fg=$surface1]"
             // format_right "{pipe_zjstatus_hints}"
             pipe_zjstatus_hints_format "#[bg=$red,fg=$base,italic]{output}"
 
@@ -45,7 +45,7 @@ default_tab_template {
             border_format   "#[bg=$base]{char}"
             border_position "top"
 
-            hide_frame_for_single_pane "true"
+            hide_frame_for_single_pane "false"
 
             mode_normal        "#[bg=$green,fg=$crust,bold] NORMAL#[bg=$base,fg=$green]"
             mode_tmux          "#[bg=$mauve,fg=$crust,bold] TMUX#[bg=$base,fg=$mauve]"
@@ -87,11 +87,6 @@ default_tab_template {
             command_user_format     "{stdout}"
             command_user_interval   "10"
             command_user_rendermode "static"
-
-            datetime          "{format}"
-            datetime_format   "%Y-%m-%d 󰅐 %H:%M"
-            datetime_timezone "Europe/Stockholm"
-
             }
         }
         children

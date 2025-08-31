@@ -265,7 +265,7 @@ plugins {
 //
 // simplified_ui true
 
-theme "catppuccin-mocha"
+theme "ctp"
 
 default_mode "locked"
 
