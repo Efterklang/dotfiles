@@ -3,7 +3,7 @@ keybinds clear-defaults=true {
         bind "Ctrl g" { SwitchToMode "normal"; }
     }
     normal {
-        bind "f" { SwitchToMode "entersearch"; }
+        bind "/" { SwitchToMode "entersearch"; }
         bind "n" { NewTab; SwitchToMode "locked"; }
         bind "-" { NewPane "down"; SwitchToMode "locked"; }
         bind "|" { NewPane "right"; SwitchToMode "locked"; }
