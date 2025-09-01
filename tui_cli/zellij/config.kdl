@@ -23,9 +23,7 @@ keybinds clear-defaults=true {
         bind "k" { MoveFocus "up"; }
         bind "l" { MoveFocus "right"; }
         bind "n" { NewPane; SwitchToMode "locked"; }
-        bind "p" { SwitchToMode "normal"; }
         bind "w" { ToggleFloatingPanes; SwitchToMode "locked"; }
-        bind "x" { CloseFocus; SwitchToMode "locked"; }
         bind "z" { TogglePaneFrames; SwitchToMode "locked"; }
         bind "tab" { SwitchFocus; }
     }
@@ -85,7 +83,6 @@ keybinds clear-defaults=true {
         bind "Alt up" { MoveFocus "up"; SwitchToMode "locked"; }
         bind "Alt right" { MoveFocusOrTab "right"; SwitchToMode "locked"; }
         bind "e" { EditScrollback; SwitchToMode "locked"; }
-        bind "f" { SwitchToMode "entersearch"; SearchInput 0; }
         bind "Alt h" { MoveFocusOrTab "left"; SwitchToMode "locked"; }
         bind "Alt j" { MoveFocus "down"; SwitchToMode "locked"; }
         bind "Alt k" { MoveFocus "up"; SwitchToMode "locked"; }
@@ -144,20 +141,13 @@ keybinds clear-defaults=true {
         bind "Alt k" { MoveFocus "up"; }
         bind "Alt l" { MoveFocusOrTab "right"; }
         bind "Alt n" { NewPane; }
+        bind "Alt o" { NewTab; }
+        bind "Ctrl x" { CloseFocus; }
         bind "Alt y" {
             LaunchOrFocusPlugin "file:~/.config/zellij/plugins/room.wasm" {
                 floating true
                 ignore_case true
                 quick_jump true
-            }
-        }
-        bind "Alt o" {
-            LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij_forgot.wasm" {
-                floating true
-                // "LOAD_ZELLIJ_BINDINGS" "false"
-                "buy eggs" "5x"
-                "learn rust" "5h"
-                "clean up code" "tomorrow"
             }
         }
     }
@@ -227,8 +217,6 @@ keybinds clear-defaults=true {
     }
 }
 
-// Plugin aliases - can be used to change the implementation of Zellij
-// changing these requires a restart to take effect
 plugins {
     about location="zellij:about"
     compact-bar location="zellij:compact-bar"
@@ -251,106 +239,12 @@ plugins {
     }
 }
 
-// Plugins to load in the background when a new session starts
-// eg. "file:/path/to/my-plugin.wasm"
-// eg. "https://example.com/my-plugin.wasm"
-// load_plugins {
-//   zjstatus-hints
-// }
-
-// Use a simplified UI without special fonts (arrow glyphs)
-// Options:
-//   - true
-//   - false (Default)
-//
-// simplified_ui true
-
 theme "ctp"
-
 default_mode "locked"
-
-// Choose the path to the default shell that zellij will use for opening new panes
-// Default: $SHELL
-//
-// default_shell "fish"
-
-// Choose the path to override cwd that zellij will use for opening new panes
-//
-// default_cwd "/tmp"
-
-// The name of the default layout to load on startup
-// Default: "default"
-//
-// default_layout "compact"
-
-// The folder in which Zellij will look for layouts
-// (Requires restart)
-//
-// layout_dir "/tmp"
-
-// The folder in which Zellij will look for themes
-// (Requires restart)
-//
-// theme_dir "/tmp"
-
 mouse_mode true
-
-// Toggle having pane frames around the panes
-// Options:
-//   - true (default, enabled)
-//   - false
-//
-// pane_frames false
-
-// When attaching to an existing session with other users,
-// should the session be mirrored (true)
-// or should each user have their own cursor (false)
-// (Requires restart)
-// Default: false
-//
-// mirror_session true
-
-// Choose what to do when zellij receives SIGTERM, SIGINT, SIGQUIT or SIGHUP
-// eg. when terminal window with an active zellij session is closed
-// (Requires restart)
-// Options:
-//   - detach (Default)
-//   - quit
-//
-// on_force_close "quit"
-
-// Configure the scroll back buffer size
-// This is the number of lines zellij stores for each pane in the scroll back
-// buffer. Excess number of lines are discarded in a FIFO fashion.
-// (Requires restart)
-// Valid values: positive integers
-// Default value: 10000
-//
-// scroll_buffer_size 10000
 copy_clipboard "system"
 copy_on_select true
-
 session_name "gnix"
 attach_to_session true
-
 styled_underlines true
-
-// Enable or disable writing of session metadata to disk (if disabled, other sessions might not know
-// metadata info on this session)
-// (Requires restart)
-// Default: false
-//
-// disable_session_metadata false
-
-// Enable or disable support for the enhanced Kitty Keyboard Protocol (the host terminal must also support it)
-// (Requires restart)
-// Default: true (if the host terminal supports it)
-//
-// support_kitty_keyboard_protocol false
-
-// Whether to stack panes when resizing beyond a certain size
-// Default: true
-//
-// stacked_resize false
-
 show_startup_tips false
