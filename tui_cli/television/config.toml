@@ -112,7 +112,7 @@ fallback_channel = "files"
 "git-log" = ["git log", "git show"]
 "docker-images" = ["docker run"]
 "git-repos" = ["nvim", "code", "hx", "git clone"]
-"procs" = ["kill", "procs"]
+"procs" = ["kill", "procs", "caffeinate"]
 
 [shell_integration.keybindings]
 "smart_autocomplete" = "ctrl-t"

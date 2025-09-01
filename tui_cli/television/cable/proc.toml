@@ -9,7 +9,8 @@ display = "{split: :1}"
 output = "{split: :0}"
 
 [preview]
-command = "ps -p '{split: :0}' -o user,pid,ppid,state,%cpu,%mem"
+# command = "ps -p '{split: :0}' -v"
+command = "ps -p '{split: :0}' -o user,pid,ppid,state,%cpu,%mem,command"
 
 [actions.kill]
 description = "Kill the selected process(es)"
