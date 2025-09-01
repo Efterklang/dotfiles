@@ -5,7 +5,7 @@ def --env env [name: string value: string] {
   load-env {$name: $value}
   match $nu.os-info.name {
     "macos" => {
-      launchctl setenv $name $value
+      /bin/launchctl setenv $name $value
     }
     "linux" => {
       let env_file = "/etc/profile.d/gnix-env.sh"
@@ -24,6 +24,7 @@ def --env env [name: string value: string] {
 
 # XDG Base Directory variables
 env XDG_BIN_HOME $"($nu.home-path)/.local/bin"
+env PATH $"($env.XDG_BIN_HOME):($env.PATH)"
 env XDG_CACHE_HOME $"($nu.home-path)/.cache"
 env XDG_CONFIG_HOME $"($nu.home-path)/.config"
 env XDG_CONFIG_DIRS "/etc/xdg"
@@ -43,8 +44,21 @@ env XDG_VIDEOS_DIR $"($nu.home-path)/Movies"
 # Ensure directories exist
 mkdir $env.XDG_CACHE_HOME $env.XDG_CONFIG_HOME $env.XDG_DATA_HOME $env.XDG_STATE_HOME
 
+# Os-specific overrides
+match $nu.os-info.name {
+  "macos" => {
+    env PATH $"/opt/homebrew/bin:/opt/homebrew/sbin:($env.PATH)"
+    env HOMEBREW_BAT 1
+    env HOMEBREW_NO_AUTO_UPDATE 1
+  }
+  "windows" => {
+    # TODO: Set-up Scoop environment variables
+  }
+}
+
 # Application-specific overrides
 env CARGO_HOME $"($env.XDG_DATA_HOME)/cargo"
+env PATH $"($env.CARGO_HOME)/bin:($env.PATH)"
 env FFMPEG_DATADIR $"($env.XDG_CONFIG_HOME)/ffmpeg"
 env LESSHISTFILE $"($env.XDG_STATE_HOME)/less_history"
 env MYPY_CACHE_DIR $"($env.XDG_CACHE_HOME)/mypy"
@@ -77,8 +91,19 @@ env EDITOR "nvim"
 env MANPAGER "nvim +Man!"
 
 # vivid colors
-env LS_COLORS (vivid generate catppuccin-mocha | str trim)
+env LS_COLORS (vivid generate catppuccin-mocha)
+
+# topiary
 env TOPIARY_CONFIG_FILE $"($nu.home-path)/.config/topiary/languages.ncl"
 env TOPIARY_LANGUAGE_DIR $"($nu.home-path)/.config/topiary/languages"
+
+# fzf
 env FZF_DEFAULT_OPTS ' --info right --prompt "󰥨 Search: " --pointer ">" --marker "󰄲" --border "rounded" --border-label=" 󱉭 FZF " --border-label-pos center --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 --color=fg:#cdd6f4,header:#f38ba8,info:#b4befe,pointer:#f38ba8 --color=marker:#b4befe,fg+:#cdd6f4,prompt:#b4befe,hl+:#f38ba8 --color=selected-bg:#45475a --multi --layout reverse '
 env FZF_DEFAULT_COMMAND 'fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
+
+# nushell
+env PROMPT_INDICATOR_VI_INSERT ""
+env PROMPT_INDICATOR_VI_NORMAL ""
+
+# google
+env GOOGLE_CLOUD_PROJECT "gen-lang-client-0006538526"
