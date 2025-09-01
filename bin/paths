@@ -1,0 +1,29 @@
+#!/usr/bin/env nu
+
+# Usage: `sudo -E paths`
+
+mut paths = []
+print $nu.config-path
+# Add XDG_BIN_HOME if set
+if ($env | get -o XDG_BIN_HOME) != null {
+  $paths = ($paths | append $env.XDG_BIN_HOME)
+}
+
+# Add CARGO_HOME/bin if CARGO_HOME is set
+if ($env | get -o CARGO_HOME) != null {
+  $paths = ($paths | append $"($env.CARGO_HOME)/bin")
+}
+
+let mac_path = ["/Applications/Docker.app/Contents/Resources/bin/" "/Users/gjx/.spicetify" "/opt/homebrew/opt/openjdk/bin" "/opt/homebrew/bin" "/opt/homebrew/sbin"]
+
+match $nu.os-info.name {
+  "macos" => {
+    $paths = ($paths | append $mac_path)
+    let existing_paths = open /etc/paths | lines
+    $paths = ($paths | append $existing_paths | uniq)
+  }
+  "windows" => {
+  }
+}
+
+$paths | str join "\n" | save --force /etc/paths
