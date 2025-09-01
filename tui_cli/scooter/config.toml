@@ -1,0 +1,5 @@
+[editor_open]
+command = "nvim %file +%line"
+
+[preview]
+syntax_highlighting_theme = "Catppuccin Mocha"

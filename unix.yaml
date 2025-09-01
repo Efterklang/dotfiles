@@ -14,6 +14,7 @@
     ~/.config/bat: tui_cli/bat
     ~/.config/btop: tui_cli/btop
     ~/.config/fastfetch: tui_cli/fastfetch
+    ~/.config/scooter: tui_cli/scooter
     ~/.config/git: ./tui_cli/git
     ~/.config/helix: tui_cli/helix
     ~/.config/kitty: ./application/kitty/kitty_hrtowii
