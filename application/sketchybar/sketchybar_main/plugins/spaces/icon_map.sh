@@ -3,7 +3,29 @@ case $@ in
 "ChatGPT")
   icon_result=":openai:"
   ;;
-  # Browser
+# Office 办公
+"Canary Mail" | "HEY" | "Mail" | "Microsoft Outlook" | "MailMate" | "邮件" | "Outlook")
+  icon_result=":mail:"
+  ;;
+"Matlab")
+  icon_result=":matlab:"
+  ;;
+"Microsoft Excel")
+  icon_result=":microsoft_excel:"
+  ;;
+"Microsoft PowerPoint")
+  icon_result=":microsoft_power_point:"
+  ;;
+"Numbers")
+  icon_result=":numbers:"
+  ;;
+"Microsoft Word")
+  icon_result=":microsoft_word:"
+  ;;
+"Microsoft Teams")
+  icon_result=":microsoft_teams:"
+  ;;
+# Browser
 "Arc" | "Vivaldi")
   icon_result=":arc:"
   ;;
@@ -102,6 +124,13 @@ case $@ in
 "App Store")
   icon_result=":app_store:"
   ;;
+# Developer
+"Alacritty" | "Hyper" | "iTerm2" | "kitty" | "Terminal" | "WezTerm")
+  icon_result=":terminal:"
+  ;;
+"OrbStack")
+  icon_result=":orbstack:"
+  ;;
 # ------ MISC
 "Keyboard Maestro")
   icon_result=":keyboard_maestro:"
@@ -166,12 +195,6 @@ case $@ in
 "Color Picker")
   icon_result=":color_picker:"
   ;;
-"Microsoft Word")
-  icon_result=":microsoft_word:"
-  ;;
-"Microsoft Teams")
-  icon_result=":microsoft_teams:"
-  ;;
 "Iris")
   icon_result=":iris:"
   ;;
@@ -210,18 +233,6 @@ case $@ in
   ;;
 "Pine")
   icon_result=":pine:"
-  ;;
-"Microsoft Excel")
-  icon_result=":microsoft_excel:"
-  ;;
-"Microsoft PowerPoint")
-  icon_result=":microsoft_power_point:"
-  ;;
-"Matlab")
-  icon_result=":matlab:"
-  ;;
-"Numbers")
-  icon_result=":numbers:"
   ;;
 "Default")
   icon_result=":default:"
@@ -279,9 +290,6 @@ case $@ in
   ;;
 "Blender")
   icon_result=":blender:"
-  ;;
-"Canary Mail" | "HEY" | "Mail" | "Mailspring" | "MailMate" | "邮件" | "Outlook")
-  icon_result=":mail:"
   ;;
 "Reeder")
   icon_result=":reeder5:"
@@ -390,9 +398,6 @@ case $@ in
   ;;
 "Podcasts")
   icon_result=":podcasts:"
-  ;;
-"Alacritty" | "Hyper" | "iTerm2" | "kitty" | "Terminal" | "WezTerm")
-  icon_result=":terminal:"
   ;;
 "Kakoune")
   icon_result=":kakoune:"
