@@ -24,4 +24,4 @@ alias cdd = cd d://
 alias cde = cd e://
 alias man = cheat
 alias sync = pwsh -File E://projects/config/install.ps1
-alias exp = explorer.exe .
+

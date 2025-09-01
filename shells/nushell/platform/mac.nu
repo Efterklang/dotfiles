@@ -4,10 +4,8 @@ $env.PATH = (
   $env.PATH
   | split row (char esep)
   | uniq
-  | prepend ["/opt/homebrew/bin" "/opt/homebrew/sbin" "/Applications/Docker.app/Contents/Resources/bin/" "/Users/gjx/.spicetify" "/opt/homebrew/opt/openjdk/bin" "~/.local/share/cargo/bin"]
+  | prepend ["/Applications/Docker.app/Contents/Resources/bin/" "/Users/gjx/.spicetify" "/opt/homebrew/opt/openjdk/bin"]
 )
-$env.HOMEBREW_BAT = 1
-$env.HOMEBREW_NO_AUTO_UPDATE = true
 
 def brew-update-all [] {
   print "==> 🚀 Starting Homebrew update process..."
