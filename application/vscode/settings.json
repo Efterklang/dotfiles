@@ -36,8 +36,9 @@
         ]
     },
     "workbench.navigationControl.enabled": false,
-    "workbench.settings.useWeightedKeySearch": true,
     "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
+    "workbench.preferredLightColorTheme": "Catppuccin Mocha",
     "workbench.iconTheme": "catppuccin noctis icons",
     "workbench.editor.editorActionsLocation": "hidden",
     "workbench.editor.pinnedTabSizing": "shrink",
@@ -75,7 +76,7 @@
     "editor.autoClosingQuotes": "always",
     "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
     "editor.definitionLinkOpensInPeek": true,
-    "editor.experimentalEditContextEnabled": true,
+    "editor.wordWrap": "bounded",
     "editor.foldingImportsByDefault": true,
     // "editor.gotoLocation.alternativeReferenceCommand": "editor.action.goToReferences",
     // "editor.gotoLocation.alternativeDefinitionCommand": "editor.action.peekTypeDefinition",
@@ -269,10 +270,6 @@
     "custom-ui-style.external.imports": [
         "file:///Users/gjx/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js",
         "file:///Users/gjx/Projects/dotfiles/application/vscode/custom.css"
-        // {
-        //     "type": "css",
-        //     "url": "https://raw.githubusercontent.com/Efterklang/config/refs/heads/main/application/vscode/custom.css"
-        // }
     ],
     "custom-ui-style.external.loadStrategy": "cache",
     // * ╭───────────────────────────────────────────────────────╮
@@ -304,6 +301,9 @@
     "git.terminalGitEditor": true,
     "git.blame.editorDecoration.enabled": true,
     "git.blame.editorDecoration.template": "${subject}, ${authorName} (${authorDateAgo})",
+    "lazygit-vscode.lazygitPath": "/opt/homebrew/bin/lazygit",
+    "lazygit-vscode.configPath": "/Users/gjx/.config/lazygit/config.yml",
+    "lazygit-vscode.autoMaximizeWindow": true,
     "diffEditor.wordWrap": "off",
     "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.hideUnchangedRegions.enabled": true,
@@ -456,7 +456,6 @@
     "python.analysis.autoImportCompletions": true,
     "python.analysis.cacheLSPData": true,
     "python.analysis.completeFunctionParens": true,
-    "python.analysis.enableSyncServer": false,
     "python.analysis.autoIndent": true,
     "python.analysis.gotoDefinitionInStringLiteral": true,
     "python.analysis.fixAll": [
@@ -472,9 +471,7 @@
     "python.analysis.typeEvaluation.enableExperimentalFeatures": true,
     "python.analysis.typeEvaluation.enableReachabilityAnalysis": true,
     "python.languageServer": "Pylance",
-    "python.terminal.activateEnvInCurrentTerminal": true,
     "python.terminal.shellIntegration.enabled": true,
-    "debugpy.showPythonInlineValues": true,
     "debugpy.debugJustMyCode": false,
     "ruff.lint.preview": true,
     // #endregion
@@ -494,36 +491,12 @@
         ".*\\\\.log$"
     ],
     // #region Markdown
-    "markless.allowDangerousHtml": true,
-    "markless.hoverImage": false,
-    "markless.table": false,
-    "markless.inlineImage.autoPreview": false,
-    "markless.inlineImage.enabled": false,
-    "markless.html": false,
-    "markless.link": false,
     "piclist.copyType": "custom",
     "piclist.customType": "<img src=\"$url\" alt=\"$fileName\"/>",
     "markdown.preview.linkify": false,
-    "markdown.extension.theming.decoration.renderLink": true,
-    "markdown.extension.theming.decoration.renderCodeSpan": true,
-    "markdown.extension.theming.decoration.renderHardLineBreak": true,
-    "markdown.extension.theming.decoration.renderStrikethrough": true,
-    "markdown.extension.theming.decoration.renderTrailingSpace": true,
     "markdown.preview.typographer": true,
-    "markdown-preview-enhanced.enableHTML5Embed": true,
-    "markdown-preview-enhanced.enableTypographer": true,
-    "markdown-preview-enhanced.frontMatterRenderingOption": "table",
-    "markdown-preview-enhanced.mathRenderingOption": "MathJax",
-    "markdown-preview-enhanced.alwaysShowBacklinksInPreview": true,
-    "markdown-preview-enhanced.codeBlockTheme": "auto.css",
-    "markdown-preview-enhanced.enablePreviewZenMode": false,
-    "markdown-preview-enhanced.enableWikiLinkSyntax": true,
-    "markdown.extension.toc.orderedList": true,
-    "markdown.preview.fontFamily": "Monaspace Radon,Maple Mono",
+    "markdown.preview.fontFamily": "Maple Mono NF CN",
     "markdown.preview.scrollEditorWithPreview": false,
-    "markdown-preview-enhanced.previewTheme": "atom-dark.css",
-    "markdown-preview-enhanced.configPath": "/Users/gjx/.config/vscode/markdown-preview-enhanced",
-    "markdown.extension.completion.enabled": true,
     "markdown.copyFiles.destination": {
         "*": "./assets/${documentBaseName}/${documentBaseName}.${fileExtName}"
     },
@@ -538,7 +511,6 @@
         }
     },
     "[markdown]": {
-        "editor.defaultFormatter": "yzhang.markdown-all-in-one",
         "editor.quickSuggestions": {
             "comments": "on",
             "strings": "on",
@@ -552,7 +524,6 @@
     // * ╰───────────────────────────────────────────────────────╯
     "chat.agent.enabled": true,
     "chat.commandCenter.enabled": false,
-    "chat.experimental.statusIndicator.enabled": true,
     "chat.renderRelatedFiles": true,
     "github.copilot.enable": {
         "*": true,
@@ -1066,6 +1037,12 @@
                     "name": "Open Keyboard Shortcuts",
                     "type": "command",
                     "command": "workbench.action.openGlobalKeybindings"
+                },
+                {
+                    "key": "w",
+                    "name": "Edit workspace config",
+                    "type": "command",
+                    "command": "workbench.action.openWorkspaceConfigFile"
                 }
             ]
         },
@@ -1078,7 +1055,7 @@
                     "key": "p",
                     "name": "Open Project",
                     "type": "command",
-                    "command": "projectManager.listProjects"
+                    "command": "workbench.action.openRecent"
                 },
                 {
                     "key": "f",
@@ -1237,8 +1214,6 @@
     "application.experimental.rendererProfiling": true,
     "breadcrumbs.showTypeParameters": true,
     "chat.editor.wordWrap": "on",
-    "codeimg.containerPadding": "none",
-    "codeimg.format": "webp",
     "evenBetterToml.formatter.columnWidth": 80,
     "excalidraw.language": "en",
     "excalidraw.theme": "auto",
@@ -1249,15 +1224,10 @@
     "hediet.vscode-drawio.theme": "min",
     "inlineChat.accessibleDiffView": "on",
     "outline.showTypeParameters": true,
-    "projectManager.git.ignoredFolders": [ "node_modules", "test", "Markdown" ],
-    "projectManager.tags": [ "Configs", "Work" ],
     "remote.SSH.enableRemoteCommand": true,
     "remote.SSH.showLoginTerminal": true,
-    "remoteHub.gitProtocol": "ssh",
-    "remoteHub.richNavigation.enabled": true,
     "resmon.disk.format": "PercentUsed",
     "security.workspace.trust.untrustedFiles": "open",
-    "update.enableWindowsBackgroundUpdates": false,
     "update.mode": "manual",
     "wordcount_cjk.activateLanguages": [ "markdown" ],
     "code-runner.executorMapByGlob": {
@@ -1287,19 +1257,19 @@
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1
     },
-    "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
-    "workbench.preferredLightColorTheme": "Catppuccin Macchiato",
     "vscode-office.pasterImgPath": "assets/${fileName}/${now}.png",
     "window.autoDetectColorScheme": true,
     "color-highlight.useARGB": true,
     "github.copilot.chat.agent.runTasks": false,
     "window.customTitleBarVisibility": "never",
     "python.defaultInterpreterPath": "/usr/bin/python3",
-    "yazi-vscode.yaziPath": "/opt/homebrew/bin/yazi",
     "inlineChat.enableV2": true,
     "inlineChat.hideOnRequest": true,
     "code-runner.runInTerminal": true,
     "notebook.cellToolbarVisibility": "hover",
     "notebook.formatOnSave.enabled": true,
     "roo-cline.deniedCommands": [ ],
+    "yazi-vscode.yaziPath": "/opt/homebrew/bin/yazi",
+    "yazi-vscode.configPath": "/Users/gjx/.config/yazi/yazi.toml", "python.terminal.activateEnvInCurrentTerminal": true,
+    "chat.editing.confirmEditRequestRemoval": false,
 }

@@ -22,4 +22,14 @@
 		],
 		"description": "Insert a TODO comment in Python"
 	},
+	"VSCode Region Start": {
+		"prefix": "region",
+		"body": "#region ${1: Region Name}",
+		"description": "Start region"
+	},
+	"VSCode Region End": {
+		"prefix": "region",
+		"body": "#endregion",
+		"description": "End region"
+	}
 }
