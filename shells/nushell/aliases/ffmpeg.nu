@@ -1,3 +1,17 @@
+def _find_media_paths [...paths: string] {
+    let ext_pattern = '\.(mp4|webm)$'
+    # 如果没有指定路径，则默认使用当前目录
+    let files = if ($paths | is-empty) {
+        ls . | where name =~ $ext_pattern
+    } else {  # 如果指定了路径，则迭代查找这些路径下的文件
+        $paths | each {|p|
+            let expanded = ($p | path expand)
+            ls $expanded | where name =~ $ext_pattern
+        } | flatten
+    }
+    return $files
+}
+
 def _format_duration [seconds: string] {
     let sec = ($seconds | into int)
     let hours = ($sec / 3600 | into int)  # 计算小时数
@@ -53,16 +67,7 @@ def _get_video_info [file: string] {
 ╰──────┴───────────────────────────────────────────────────────────────────────╯
 """
 def vcodec-analysis [...paths: string] {
-    let ext_pattern = '\.(mp4|webm)$'
-    # 如果没有指定路径，则默认使用当前目录
-    let files = if ($paths | is-empty) {
-        ls . | where name =~ $ext_pattern
-    } else {  # 如果指定了路径，则迭代查找这些路径下的文件
-        $paths | each {|p|
-            let expanded = ($p | path expand)
-            ls $expanded | where name =~ $ext_pattern
-        } | flatten
-    }
+    let files = (_find_media_paths ...$paths)
     # 并行执行 _get_video_info 获取信息
     $files | par-each {|file|
         let video_info = (_get_video_info $file.name)
@@ -86,6 +91,31 @@ def transcode [input_file: string codec: string ext: string = "webm"] {
   let base = ($input_file | path parse | get stem)  # 获取不带扩展名的文件名
   let output_file = ($output_dir | path join $"($base).($ext)")  # 构造输出文件路径
   ffmpeg -i $input_file -vcodec $codec $output_file  # 执行转码
+}
+
+# TODO 这里其实可以优化一下，只处理非vp9编码的视频
+def vp9 [...input_file: string] {
+  let input_files  = (_find_media_paths ...$input_file)
+  $input_files | par-each {|file|
+    print $"Processing: ($file.name)";
+    transcode $file.name "libvpx-vp9";
+  }
+}
+
+# 睡前压一下视频，macos使用caffeinate避免睡眠
+alias vp9-night = caffeinate -i nu --config $nu.config-path -c "vp9 ./"
+
+# AV1压缩率要更好，但个人使用AV1编码速度还是慢于VP9
+def av1 [...input_file: string] {
+  let input_files  = (_find_media_paths ...$input_file)
+  $input_files | par-each {|file|
+    print $"Processing: ($file.name)";
+    transcode $file.name "libaom-av1";
+  }
+}
+
+def show_ffmpeg_tasks [] {
+  ps --long | where name has "ffmpeg"
 }
 
 def trans_diff [input_file: string] {
@@ -118,10 +148,18 @@ def trans_diff [input_file: string] {
   print $"📊 转码后/原文件: ($size_ratio)%\n"
 }
 
-def vp9 [input_file: string] {
-  transcode $input_file "libvpx-vp9"
-}
+alias td = trans_diff
 
-def av1 [input_file: string] {
-  transcode $input_file "libaom-av1"
+# 把当前文件用 ~/Downloads/ffmpeg_out/{file_basename}.webm 替换
+def replace_file [file_name: string] {
+  let output_file = $"~/Downloads/ffmpeg_out/($file_name | path parse | get stem).webm"
+  let output_path = ($output_file | path expand)
+
+  if not ($output_path | path exists) {
+    print $"❌ 输出文件不存在: ($output_path)"
+    return
+  }
+
+  mv $output_path $file_name
+  print $"✅ 已替换文件: ($file_name)"
 }
