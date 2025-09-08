@@ -1,6 +1,3 @@
-source ./uv.nu
-source ./zellij.nu
-
 let carapace_completer = {|spans|
   carapace $spans.0 nushell ...$spans | from json
 }
@@ -21,7 +18,7 @@ let fish_completer = {|spans|
 let multiple_completers = {|spans|
   match $spans.0 {
     z => $zoxide_completer
-    nu | kill | ffprobe | caffeinate => $fish_completer
+    bun | dust | nu | jq | lsof | uv | kill | ffprobe | caffeinate | zellij => $fish_completer
     # docker => $fish_completer
     _ => $carapace_completer
   } | do $in $spans

@@ -27,7 +27,7 @@ def omni-open [path: string = "."] {
 
 alias a = gh copilot suggest
 alias b = bun run
-alias c = code
+alias c = code (tv files)
 alias d = dust
 alias e = exit 0
 alias f = fastfetch

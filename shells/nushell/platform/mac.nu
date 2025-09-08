@@ -30,7 +30,21 @@ def brew-update-all [] {
   print "==> ✅ Homebrew update process finished!"
 }
 
-alias rm = ^rm
+def brew-backup [] {
+  let brewfile_path = "~/Projects/dotfiles/packages/homebrew/Brewfile"
+
+  print $"==> 📦 Creating Homebrew backup to ($brewfile_path)..."
+  
+  # Ensure the directory exists
+  mkdir ($brewfile_path | path dirname)
+  
+  # Generate the Brewfile with all installed packages and casks
+  brew bundle dump --file ($brewfile_path | path expand) --force
+  
+  print $"==> ✅ Brewfile backup completed at ($brewfile_path)"
+}
+
+alias nu-kill = kill
 alias kill = ^kill
 alias clip = pbcopy
 alias python = python3
