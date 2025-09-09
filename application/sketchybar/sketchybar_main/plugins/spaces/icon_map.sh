@@ -125,7 +125,7 @@ case $@ in
   icon_result=":app_store:"
   ;;
 # Developer
-"Alacritty" | "Hyper" | "iTerm2" | "kitty" | "Terminal" | "WezTerm")
+"Alacritty" | "Hyper" | "Ghostty" | "iTerm2" | "kitty" | "Terminal" | "WezTerm")
   icon_result=":terminal:"
   ;;
 "OrbStack")
