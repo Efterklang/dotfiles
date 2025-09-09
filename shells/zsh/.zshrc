@@ -17,10 +17,30 @@ _comp_options+=(globdots)
 [ -f "$XDG_CONFIG_HOME/zsh/aliasrc" ] && source "$XDG_CONFIG_HOME/zsh/aliasrc"
 
 # Completion
-
-zstyle ':completion:*' menu select
+zstyle ':completion:*' menu select=2  # 至少2项时显示菜单
 zstyle ':completion::complete:*' cache-path "$XDG_CACHE_HOME/zsh/zcompcache"
-zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+
+# IDE风格补全设置
+zstyle ':completion:*' use-cache on                  # 使用缓存加速补全
+zstyle ':completion:*' group-name ''                 # 启用分组
+zstyle ':completion:*' verbose yes                   # 显示详细信息
+zstyle ':completion:*:descriptions' format $'\e[01;34m%d\e[0m'  # 描述信息样式
+zstyle ':completion:*:messages' format $'\e[01;35m%d\e[0m'       # 消息样式
+zstyle ':completion:*:warnings' format $'\e[01;31mNo matches for: %d\e[0m'  # 警告样式
+zstyle ':completion:*:errors' format $'\e[01;31mError: %d\e[0m'   # 错误样式
+
+# 高亮匹配部分
+zstyle ':completion:*' match-original both
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
+
+# 补全排序和分组
+zstyle ':completion:*' completer _expand _complete _correct _approximate
+zstyle ':completion:*' expand prefix suffix
+zstyle ':completion:*' keep-prefix
+zstyle ':completion:*' file-sort name
+
+# Git特定配置保持不变
 zstyle ':completion:*:git:*' group-order 'main commands' 'alias commands' 'external commands'
 
 # === Plugins ===

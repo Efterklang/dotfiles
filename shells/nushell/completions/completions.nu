@@ -1,25 +1,26 @@
 let carapace_completer = {|spans|
-  carapace $spans.0 nushell ...$spans | from json
+  # if the current command is an alias, get it's expansion
+  let expanded_alias = (scope aliases | where name == $spans.0 | $in.0?.expansion?)
+
+  # overwrite
+  let spans = (if $expanded_alias != null  {
+    # put the first word of the expanded alias first in the span
+    $spans | skip 1 | prepend ($expanded_alias | split row " " | take 1)
+  } else {
+    $spans | skip 1 | prepend ($spans.0)
+  })
+
+  carapace $spans.0 nushell ...$spans
+  | from json
 }
 
 let zoxide_completer = {|spans|
   $spans | skip 1 | zoxide query -l ...$in | lines | where {|x| $x != $env.PWD }
 }
 
-let fish_completer = {|spans|
-  fish --command $"complete '--do-complete=($spans | str join ' ')'"
-  | from tsv --flexible --noheaders --no-infer
-  | rename value description
-  | update value {
-    if ($in | path exists) { $'"($in | str replace "\"" "\\\"")"' } else { $in }
-  }
-}
-
 let multiple_completers = {|spans|
   match $spans.0 {
     z => $zoxide_completer
-    bun | dust | nu | jq | lsof | uv | kill | ffprobe | caffeinate | zellij => $fish_completer
-    # docker => $fish_completer
     _ => $carapace_completer
   } | do $in $spans
 }
