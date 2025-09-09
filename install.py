@@ -46,7 +46,7 @@ def sync_git_submodules():
     print(f"{COLOR_INFO}[INFO]{COLOR_RESET} Syncing git submodules...")
 
     base_dir = get_script_dir()
-    dotbot_dir = base_dir / "dotbot"
+    dotbot_dir = base_dir / ".dotbot"
 
     # 同步子模块
     cmd1 = ["git", "-C", str(dotbot_dir), "submodule", "sync", "--quiet", "--recursive"]
@@ -84,7 +84,7 @@ def find_python():
 def run_dotbot(config_file):
     """运行dotbot安装"""
     base_dir = get_script_dir()
-    dotbot_dir = base_dir / "dotbot"
+    dotbot_dir = base_dir / ".dotbot"
     dotbot_bin = dotbot_dir / "bin" / "dotbot"
 
     if not dotbot_bin.exists():
