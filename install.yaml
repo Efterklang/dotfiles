@@ -13,6 +13,7 @@
 - link:
     ~/.config/bat: tui_cli/bat
     ~/.config/btop: tui_cli/btop
+    ~/.config/carapace: tui_cli/carapace
     ~/.config/fastfetch: tui_cli/fastfetch
     ~/.config/scooter: tui_cli/scooter
     ~/.config/git: ./tui_cli/git
@@ -30,6 +31,7 @@
     ~/.config/yazi: tui_cli/yazi
     ~/.config/zellij: tui_cli/zellij
     ~/.config/zsh: shells/zsh
+    ~/.config/fish: shells/fish
     ~/.config/.markdownlint-cli2.yaml: ./misc/.markdownlint-cli2.yaml
     ~/.local/bin/:
       glob: true
@@ -37,6 +39,16 @@
     ~/.local/share/TauonMusicBox/:
       glob: true
       path: application/tauon/**
+    # Windows specific configurations
+    ~/.config/scoop:
+      path: packages/scoop
+      if: ver
+    ~/.config/yasb:
+      path: application/yasb
+      if: ver
+    ~/.wslconfig:
+      path: misc/.wslconfig
+      if: ver
     # MacOS specific configurations
     ~/Library/LaunchAgents/env.xdg.plist:
       path: ./misc/env.xdg.plist

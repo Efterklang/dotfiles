@@ -9,6 +9,12 @@ import subprocess
 import sys
 from pathlib import Path
 
+# color codes
+COLOR_INFO = "\033[38;2;166;227;161m"  # #a6e3a1
+COLOR_ERROR = "\033[38;2;243;139;168m" # #f38ba8
+COLOR_WARNING = "\033[93m" # yellow
+COLOR_RESET = "\033[0m"
+
 
 def get_script_dir():
     """获取脚本所在目录"""
@@ -19,27 +25,25 @@ def run_command(cmd, shell=False, cwd=None):
     """运行命令并处理错误"""
     try:
         if isinstance(cmd, list):
-            print(f"[INFO] Executing: {' '.join(str(c) for c in cmd)}")
+            print(f"{COLOR_INFO}[INFO]{COLOR_RESET} Executing: {' '.join(str(c) for c in cmd)}")
         else:
-            print(f"[INFO] Executing: {cmd}")
+            print(f"{COLOR_INFO}[INFO]{COLOR_RESET} Executing: {cmd}")
 
         result = subprocess.run(
             cmd, shell=shell, check=True, cwd=cwd or get_script_dir()
         )
         return result.returncode == 0
     except subprocess.CalledProcessError as e:
-        print(f"[ERROR] Command failed (return code: {e.returncode}): {e}")
+        print(f"{COLOR_ERROR}[ERROR]{COLOR_RESET} Command failed (return code: {e.returncode}): {e}")
         return False
     except FileNotFoundError:
-        print(
-            f"[ERROR] Command not found: {cmd[0] if isinstance(cmd, list) else cmd}"
-        )
+        print(f"{COLOR_ERROR}[ERROR]{COLOR_RESET} Command not found: {cmd[0] if isinstance(cmd, list) else cmd}")
         return False
 
 
 def sync_git_submodules():
     """同步和更新git子模块"""
-    print("[INFO] Syncing git submodules...")
+    print(f"{COLOR_INFO}[INFO]{COLOR_RESET} Syncing git submodules...")
 
     base_dir = get_script_dir()
     dotbot_dir = base_dir / "dotbot"
@@ -47,13 +51,13 @@ def sync_git_submodules():
     # 同步子模块
     cmd1 = ["git", "-C", str(dotbot_dir), "submodule", "sync", "--quiet", "--recursive"]
     if not run_command(cmd1):
-        print("[WARNING] Git submodule sync failed")
+        print(f"{COLOR_WARNING}[WARNING]{COLOR_RESET} Git submodule sync failed")
         return False
 
     # 更新子模块
     cmd2 = ["git", "submodule", "update", "--init", "--recursive", str(dotbot_dir)]
     if not run_command(cmd2):
-        print("[WARNING] Git submodule update failed")
+        print(f"{COLOR_WARNING}[WARNING]{COLOR_RESET} Git submodule update failed")
         return False
 
     return True
@@ -69,7 +73,7 @@ def find_python():
                 [cmd, "-V"], capture_output=True, text=True, check=True
             )
             if result.returncode == 0:
-                print(f"[INFO] Found Python interpreter: {cmd}")
+                print(f"{COLOR_INFO}[INFO]{COLOR_RESET} Found Python interpreter: {cmd}")
                 return cmd
         except (subprocess.CalledProcessError, FileNotFoundError):
             continue
@@ -84,13 +88,13 @@ def run_dotbot(config_file):
     dotbot_bin = dotbot_dir / "bin" / "dotbot"
 
     if not dotbot_bin.exists():
-        print(f"[ERROR] dotbot executable not found: {dotbot_bin}")
+        print(f"{COLOR_ERROR}[ERROR]{COLOR_RESET} dotbot executable not found: {dotbot_bin}")
         return False
 
     # 查找Python解释器
     python_cmd = find_python()
     if not python_cmd:
-        print("[ERROR] Python interpreter not found")
+        print(f"{COLOR_ERROR}[ERROR]{COLOR_RESET} Python interpreter not found")
         return False
 
     # 构建dotbot命令
@@ -107,51 +111,29 @@ def run_dotbot(config_file):
 
 
 def install_unix():
-    """Unix系统安装 (Linux, macOS)"""
-    print("[INFO] Detected Unix system, using unix.yaml configuration")
-
     # 同步git子模块
     if not sync_git_submodules():
         return False
 
     # 运行dotbot
-    return run_dotbot("unix.yaml")
-
-
-def install_windows():
-    """Windows系统安装"""
-    print("[INFO] Detected Windows system, using windows.yaml configuration")
-
-    # 同步git子模块
-    if not sync_git_submodules():
-        return False
-
-    # 运行dotbot
-    return run_dotbot("windows.yaml")
+    return run_dotbot("install.yaml")
 
 
 def main():
     """主函数"""
-    print("[INFO] Unified dotfiles installer")
-    print("[INFO] " + "=" * 40)
+    print(f"{COLOR_INFO}[INFO]{COLOR_RESET} Unified dotfiles installer")
+    print(f"{COLOR_INFO}[INFO]{COLOR_RESET} " + "=" * 40)
 
     # 检测操作系统
     system = platform.system().lower()
-    print(f"[INFO] Detected operating system: {system}")
+    print(f"{COLOR_INFO}[INFO]{COLOR_RESET} Detected operating system: {system}")
 
-    # 根据操作系统选择安装方式
-    if system in ["linux", "darwin"]:  # Linux 或 macOS
-        success = install_unix()
-    elif system == "windows":
-        success = install_windows()
-    else:
-        print(f"[ERROR] Unsupported operating system: {system}")
-        sys.exit(1)
+    success = install_unix()
 
     if success:
-        print("[INFO] Installation completed successfully!")
+        print(f"{COLOR_INFO}[INFO]{COLOR_RESET} Installation completed successfully!")
     else:
-        print("[ERROR] Installation failed!")
+        print(f"{COLOR_ERROR}[ERROR]{COLOR_RESET} Installation failed!")
         sys.exit(1)
 
 

@@ -3,7 +3,7 @@
 ## 🚀 Quick Start
 
 1. Run `./bin/envs`, this will set-up `XDG_` and other environment variables.
-2. [Install packages ](packages/README)
+2. [Install packages](https://github.com/Efterklang/dotfiles/tree/main/packages)
 3. Run `install.py` to set up your environment.
 
 > [!WARNING]
@@ -16,9 +16,9 @@ Preferred terminals:
 
 - **Windows Terminal**: For Windows systems
 - **Kitty**: A fast, feature-rich, and highly customizable terminal emulator
-- **Wezterm**: Cross-platform terminal emulator
+- **WezTerm**: Cross-platform terminal emulator
 
-### CLI & TUI ToolSet
+### CLI & TUI Tool Set
 
 | Tools                                                       | Description                                                                                  |
 | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
@@ -134,7 +134,7 @@ Preferred terminals:
 
 | Foam + Markdown Preview Enhanced + Markless |      Custom CSS + Vim + WhichKey       |
 | :-----------------------------------------: | :------------------------------------: |
-|       ![Markdown](assets/vsc_md.webp)       | ![1753362161588](assets/which_key.png) |
+|       ![Markdown](assets/vsc_md.webp)       | ![WhichKey](assets/which_key.png) |
 
 > [!NOTE]
 >
@@ -156,4 +156,4 @@ Extension List
 
 |                Stylus                |                Vimium C                |
 | :----------------------------------: | :------------------------------------: |
-| ![1753361797073](assets/stylus.webp) | ![1753361760841](assets/vimium_c.webp) |
+| ![Stylus Github](assets/stylus.webp) | ![vimium-c](assets/vimium_c.webp) |
