@@ -17,6 +17,7 @@
     ~/.config/fastfetch: tui_cli/fastfetch
     ~/.config/scooter: tui_cli/scooter
     ~/.config/git: ./tui_cli/git
+    ~/.config/ghostty: ./application/ghostty
     ~/.config/helix: tui_cli/helix
     ~/.config/kitty: ./application/kitty/kitty_hrtowii
     ~/.config/lazygit: tui_cli/lazygit
@@ -27,6 +28,7 @@
     ~/.config/procs: tui_cli/procs
     ~/.config/television: ./tui_cli/television
     ~/.config/tig: ./tui_cli/tig
+    ~/.config/tmux: ./tui_cli/tmux
     ~/.config/vscode/markdown-preview-enhanced: application/vscode/markdown-preview-enhanced
     ~/.config/yazi: tui_cli/yazi
     ~/.config/zellij: tui_cli/zellij

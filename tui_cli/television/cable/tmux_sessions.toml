@@ -1,0 +1,23 @@
+[metadata]
+name = "tmux_sessions"
+description = "A channel to find and manage tmux sessions"
+requirements = ["tmux"]
+
+[source]
+command = "tmux list-sessions -F '#{session_id}: #{session_name}'"
+display = "{split: :1}"
+output = "{split: :1}"
+
+[actions.kill-session]
+description = "Kill the selected tmux session(s)"
+command = "tmux kill-session -t {split: :1}"
+mode = "execute"
+
+[actions.switch-client]
+description = "Switch to the selected tmux session"
+command = "tmux switch-client -t {split: :1}"
+mode = "execute"
+
+[keybindings]
+ctrl-k = "actions:kill-session"
+enter = "actions:switch-client"

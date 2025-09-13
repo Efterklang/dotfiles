@@ -13,3 +13,4 @@ lazy-lock.json
 *.pak
 secret.toml
 application/karabiner/automatic_backups
+tui_cli/tmux/plugins
