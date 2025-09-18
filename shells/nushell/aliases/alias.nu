@@ -18,6 +18,8 @@ def trim_history [] {
 }
 
 def omni-open [path: string = "."] {
+  let path = ($path | path expand)
+
   match $nu.os-info.name {
     macos => { ^open $path }
     windows => { explorer.exe $path }
@@ -25,9 +27,12 @@ def omni-open [path: string = "."] {
   }
 }
 
+let editable_files: string = "fd --exclude \"*.{code,data,webm,mp4,mp3,png,avif,webp,jpg,jpeg}\""
+
+# ===== alphabet =====
 alias a = gh copilot suggest
 alias b = bun run
-alias c = code (tv files)
+alias c = code (tv files --source-command $editable_files)
 alias d = dust
 alias e = exit 0
 alias f = fastfetch
@@ -38,7 +43,7 @@ alias j = commandline edit --insert (fd --type directory | fzf --preview 'eza --
 alias k = commandline edit --insert (zellij delete-all-sessions -y; zellij kill-all-sessions -y)
 alias l = clear
 alias m = nvim (tv --source-command "fd -e md ." files)
-# n
+alias n = exec nu
 alias o = omni-open
 alias p = gping
 alias q = exit 0
@@ -46,11 +51,12 @@ alias r = commandline edit --insert (bat --color never --style plain $nu.history
 alias s = somo
 alias t = tokei
 alias u = uv
-alias v = nvim (tv files)
+alias v = nvim (tv files --source-command $editable_files)
 alias w = wsl
 alias x = ~/.local/bin/extract
 alias y = yazi
 alias z = z
+
 alias ze = zellij attach --create gnix
 alias c2p = code2prompt
 alias ci = code

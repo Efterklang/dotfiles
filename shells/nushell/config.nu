@@ -167,6 +167,20 @@ $env.config = {
         cmd: "cd (tv zoxide)"
       }
     }
+    {
+        name: "move_to_line_start"
+        modifier: shift
+        keycode: char_h
+        mode: vi_normal
+        event: { edit: MoveToStart }
+    }
+    {
+        name: "move_to_line_end"
+        modifier: shift
+        keycode: char_l
+        mode: vi_normal
+        event: { edit: MoveToEnd }
+    }
   ]
 }
 
