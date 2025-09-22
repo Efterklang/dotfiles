@@ -19,7 +19,7 @@
     ~/.config/git: ./tui_cli/git
     ~/.config/ghostty: ./application/ghostty
     ~/.config/helix: tui_cli/helix
-    ~/.config/kitty: ./application/kitty/kitty_hrtowii
+    ~/.config/kitty: ./application/kitty
     ~/.config/lazygit: tui_cli/lazygit
     ~/.config/lla: tui_cli/lla
     ~/.config/nushell: shells/nushell
