@@ -3,8 +3,7 @@
     // * │               VSCode Workbench                        │
     // * ╰───────────────────────────────────────────────────────╯
     "workbench.colorCustomizations": {
-        // "editorCursor.background": "#fbed85",
-        "editorCursor.foreground": "#87a1ff",
+        "editorCursor.foreground": "#b4befe",
         "editorIndentGuide.activeBackground1": "#F5C2E7"
     },
     "editor.tokenColorCustomizations": {
@@ -94,7 +93,7 @@
     "editor.unicodeHighlight.ambiguousCharacters": false,
     "editor.cursorBlinking": "smooth",
     "editor.cursorStyle": "block",
-    "editor.fontFamily": "Maple Mono NF CN, SF Pro, Monaspace Radon, JetbrainsMono Nerd Font, Monaspace Argon, MonoLisa, Segoe UI Variable, Noto Sans SC, Microsoft Jhenghei, Microsoft Jhenghei UI, Monaspace Xenon, Franklin Gothic, Cascadia Code, Kristen ITC, Monaspace Neon, DejaVu Sans Mono, Inconsolata, Monaspace Krypton",
+    "editor.fontFamily": "Maple Mono NF CN, Google Sans Code, Hack Nerd Font, SF Mono, SF Pro, Monaspace Radon, JetbrainsMono Nerd Font, Monaspace Argon, MonoLisa, Segoe UI Variable, Noto Sans SC, Monaspace Xenon, Franklin Gothic, Cascadia Code, Kristen ITC, Monaspace Neon, DejaVu Sans Mono, Inconsolata, Monaspace Krypton",
     "editor.fontLigatures": true,
     "editor.fontVariations": true,
     "editor.fontSize": 16,
@@ -160,7 +159,6 @@
     "window.title": " ",
     "window.commandCenter": false,
     "window.restoreWindows": "one",
-    "window.customMenuBarAltFocus": false,
     "window.newWindowDimensions": "inherit",
     "window.openFilesInNewWindow": "off",
     "window.titleBarStyle": "custom",
@@ -222,12 +220,13 @@
     "search.followSymlinks": true,
     "search.mode": "view",
     "search.exclude": {
-        "**/node_modules": true,
-        "**/public": true,
-        "**.webp": true,
-        "**.png": true,
         "**.csv": true,
-        "**.jpg": true
+        "**.jpg": true,
+        "**.png": true,
+        "**.webp": true,
+        "**/*.min.js": true,
+        "**/node_modules": true,
+        "**/public": true
     },
     // #endregion
     "debug.console.acceptSuggestionOnEnter": "on",
@@ -271,7 +270,7 @@
         "file:///Users/gjx/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js",
         "file:///Users/gjx/Projects/dotfiles/application/vscode/custom.css"
     ],
-    "custom-ui-style.external.loadStrategy": "cache",
+    // "custom-ui-style.external.loadStrategy": "cache",
     // * ╭───────────────────────────────────────────────────────╮
     // * │                 Source Control                        │
     // * ╰───────────────────────────────────────────────────────╯
@@ -388,7 +387,7 @@
     "errorLens.fontWeight": "100",
     "leetcode.endpoint": "leetcode-cn",
     "leetcode.nodePath": "/opt/homebrew/bin/node",
-    "leetcode.workspaceFolder": "/Users/gjx/Projects/leetcode/",
+    "leetcode.workspaceFolder": "/Users/gjx/Projects/code_draft/leetcode",
     "leetcode.defaultLanguage": "python3",
     "leetcode.filePath": {
         "python3": {
@@ -422,7 +421,7 @@
         }
     },
     "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.html-language-features"
     },
     "[json]": {
         "editor.quickSuggestions": {
@@ -477,9 +476,6 @@
     // #endregion
     "java.completion.chain.enabled": true,
     "java.completion.guessMethodArguments": "insertBestGuessedArguments",
-    "java.debug.settings.hotCodeReplace": "auto",
-    "java.debug.settings.showQualifiedNames": true,
-    "java.debug.settings.showStaticVariables": true,
     "java.format.settings.profile": "GoogleStyle",
     "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
     "java.typeHierarchy.lazyLoad": true,
@@ -942,45 +938,13 @@
         },
         {
             "key": "e",
-            "name": "❌ Errors",
-            "type": "bindings",
-            "bindings": [
-                {
-                    "key": ".",
-                    "name": "Error transient",
-                    "type": "command",
-                    "command": "whichkey.showTransient",
-                    "args": "whichkey.transient.error"
-                },
-                {
-                    "key": "l",
-                    "name": "List errors",
-                    "type": "command",
-                    "command": "workbench.actions.view.problems"
-                },
-                {
-                    "key": "N",
-                    "name": "Previous error",
-                    "type": "command",
-                    "command": "editor.action.marker.prev"
-                },
-                {
-                    "key": "n",
-                    "name": "Next error",
-                    "type": "command",
-                    "command": "editor.action.marker.next"
-                },
-                {
-                    "key": "p",
-                    "name": "Previous error",
-                    "type": "command",
-                    "command": "editor.action.marker.prev"
-                }
-            ]
+            "name": "🔎 Explorer",
+            "type": "command",
+            "command": "yazi-vscode.toggle"
         },
         {
-            "key": "f",
-            "name": "🌙 Focus...",
+            "key": "v",
+            "name": "👓 View...",
             "type": "bindings",
             "bindings": [
                 {
@@ -1027,6 +991,24 @@
             "type": "bindings",
             "bindings": [
                 {
+                    "key": "c",
+                    "name": "Toggle Center Layout",
+                    "type": "command",
+                    "command": "workbench.action.toggleCenteredLayout"
+                },
+                {
+                    "key": "t",
+                    "name": "Open Theme Picker",
+                    "type": "command",
+                    "command": "workbench.action.selectTheme"
+                },
+                {
+                    "key": "z",
+                    "name": "Toggle Zen Mode",
+                    "type": "command",
+                    "command": "workbench.action.toggleZenMode"
+                },
+                {
                     "key": "s",
                     "name": "Open Settings JSON",
                     "type": "command",
@@ -1066,15 +1048,16 @@
             ]
         },
         {
-            "key": "s",
-            "name": "🔎 Search...",
+            "key": "f",
+            "name": "🗺️ Find...",
             "type": "bindings",
             "bindings": [
                 {
                     "key": "f",
                     "name": "Find File",
                     "type": "command",
-                    "command": "workbench.action.quickOpen"
+                    "command": "television.ToggleFileFinder"
+                    // "command": "workbench.action.quickOpen"
                 },
                 {
                     "key": "g",
@@ -1209,8 +1192,6 @@
     // * ╰───────────────────────────────────────────────────────╯
     "accessibility.dimUnfocused.enabled": false,
     "accessibility.hideAccessibleView": true,
-    "ActiveFileInStatusBar.fullpath": false,
-    "ActiveFileInStatusBar.revealFile": true,
     "application.experimental.rendererProfiling": true,
     "breadcrumbs.showTypeParameters": true,
     "chat.editor.wordWrap": "on",
@@ -1260,7 +1241,6 @@
     "vscode-office.pasterImgPath": "assets/${fileName}/${now}.png",
     "window.autoDetectColorScheme": true,
     "color-highlight.useARGB": true,
-    "github.copilot.chat.agent.runTasks": false,
     "window.customTitleBarVisibility": "never",
     "python.defaultInterpreterPath": "/usr/bin/python3",
     "inlineChat.enableV2": true,
@@ -1270,6 +1250,6 @@
     "notebook.formatOnSave.enabled": true,
     "roo-cline.deniedCommands": [ ],
     "yazi-vscode.yaziPath": "/opt/homebrew/bin/yazi",
-    "yazi-vscode.configPath": "/Users/gjx/.config/yazi/yazi.toml", "python.terminal.activateEnvInCurrentTerminal": true,
+    "yazi-vscode.configPath": "/Users/gjx/.config/yazi/yazi.toml",
     "chat.editing.confirmEditRequestRemoval": false,
 }

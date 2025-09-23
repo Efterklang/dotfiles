@@ -2,6 +2,7 @@
 	--font-maple: "Maple Mono NF CN";
 	--font-mh: "Maple Hand";
 	--font-jb: "JetbrainsMono Nerd Font";
+	--font-status-bar: "Maple Mono NF CN";
 	/* Catppuccin Color Scheme */
 	--rosewater: #f5e0dc;
 	--flamingo: #f2cdcd;
@@ -48,7 +49,7 @@
 }
 
 .quick-input-widget .monaco-inputbox {
-	border: solid 2px var(--blue) !important;
+	border: solid 2px var(--mauve) !important;
 	padding: 5px !important;
 	border-radius: 3px !important;
 }
@@ -144,7 +145,9 @@
 }
 
 /* Suggestion widget box style */
-.suggest-widget {
+.suggest-widget,
+.suggest-details,
+.editor-widget {
 	z-index: 100;
 	border: solid 1px var(--blue) !important;
 	border-radius: 3px !important;
@@ -154,22 +157,6 @@
 
 .suggest-widget .monaco-list-row.focused {
 	background: #4f5971 !important;
-}
-
-.suggest-details {
-	z-index: 100;
-	border: solid 1px var(--blue) !important;
-	border-radius: 3px !important;
-	box-shadow: 0px 8px 16px var(--crust) !important;
-	padding: 8px !important;
-}
-
-.editor-widget {
-	z-index: 100;
-	border: solid 1px var(--blue) !important;
-	border-radius: 3px !important;
-	box-shadow: 0px 8px 16px var(--crust) !important;
-	padding: 8px !important;
 }
 
 /* Project title's style at the top. */
@@ -240,32 +227,45 @@
 	background: none !important;
 }
 
-/* status bar */
+/* ╭───────────────────────────────────────────────────────╮ */
+/* │                 Status Bar                            │ */
+/* ╰───────────────────────────────────────────────────────╯ */
 
 .statusbar {
-	font-family: var(--font-jb) !important;
+	font-family: var(--font-status-bar) !important;
 }
 
 #status\.host {
 	order: -999 !important;
 }
 
+/* source control */
 #status\.scm\.0,
 #status\.scm\.1 {
 	background: var(--status_label_background) !important;
-	font-family: var(--font-mh) !important;
 	color: var(--lavender);
 	order: -998 !important;
 }
 
+/* error and warning icons */
+.codicon-error:before,
+.codicon-warning:before {
+	font-family: "SF Pro" !important;
+	font-size: 13px;
+	vertical-align: text-top !important;
+}
+
 .codicon-error:before {
+	content: "􀁑" !important;
 	color: var(--red);
 }
 
 .codicon-warning:before {
+	content: "􀇿" !important;
 	color: var(--yellow);
 }
 
+/* vim status label */
 #vscodevim\.vim\.primary {
 	order: -997 !important;
 	background: var(--blue) !important;
@@ -273,40 +273,31 @@
 	font-weight: 600 !important;
 }
 
+.statusbar-item-label[aria-label*="-- "] {
+	font-size: 0 !important;
+}
 
-.statusbar-item-label[aria-label="-- NORMAL --"],
-.statusbar-item-label[aria-label="-- INSERT --"],
-.statusbar-item-label[aria-label="-- VISUAL --"],
-.statusbar-item-label[aria-label="-- VISUAL LINE --"],
-.statusbar-item-label[aria-label="-- VISUAL BLOCK --"],
-.statusbar-item-label[aria-label="-- VIM: DISABLED --"] {
-	font-size: 0;
+.statusbar-item-label[aria-label*="-- "]::before {
+	font-size: 13px !important;
+	font-weight: bold !important;
 }
 
 .statusbar-item-label[aria-label="-- NORMAL --"]::before {
 	content: "NORMAL";
-	font-size: 13px;
-	font-weight: bold;
 }
 
 .statusbar-item-label[aria-label="-- INSERT --"]::before {
 	content: "INSERT";
-	font-size: 13px;
-	font-weight: bold;
 }
 
 .statusbar-item-label[aria-label="-- VISUAL --"]::before,
 .statusbar-item-label[aria-label="-- VISUAL LINE --"]::before,
 .statusbar-item-label[aria-label="-- VISUAL BLOCK --"]::before {
 	content: "VISUAL";
-	font-size: 13px;
-	font-weight: bold;
 }
 
 .statusbar-item-label[aria-label="-- VIM: DISABLED --"]::before {
 	content: "DISABLED";
-	font-size: 13px;
-	font-weight: bold;
 }
 
 #vscodevim\.vim\.primary[aria-label="-- INSERT --"] {
@@ -345,7 +336,7 @@
 /* right */
 
 #status\.editor\.selection {
-	font-family: var(--font-mh) !important;
+	font-family: var(--font-maple) !important;
 	background: var(--status_label_background) !important;
 	color: var(--lavender) !important;
 	order: -997 !important;
