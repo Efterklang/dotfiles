@@ -16,6 +16,7 @@
     ~/.config/carapace: tui_cli/carapace
     ~/.config/fastfetch: tui_cli/fastfetch
     ~/.config/scooter: tui_cli/scooter
+    ~/.config/rmpc: tui_cli/rmpc
     ~/.config/git: ./tui_cli/git
     ~/.config/ghostty: ./application/ghostty
     ~/.config/helix: tui_cli/helix
