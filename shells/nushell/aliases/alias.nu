@@ -27,6 +27,21 @@ def omni-open [path: string = "."] {
   }
 }
 
+def today-diary [] {
+  let diary_folder = $"($env.HOME)/Onedrive/Documents/diary"
+  # 获取当前日期（年、月、日）
+  let today = (date now)
+  let year = ($today | format date "%Y")
+  let month = ($today | format date "%-m")  # 不带前导零的月份（1-12）
+  let date_str = ($today | format date "%Y-%m-%d")  # 文件名格式（带前导零）
+
+  # 构建完整路径：日记根目录/年/月/年-月-日.md
+  let diary_path = ($diary_folder | path join $year $month $"($date_str).md")
+  return $diary_path
+}
+
+alias edit-diary = nvim (today-diary)
+
 let editable_files: string = "fd --exclude \"*.{code,data,webm,mp4,mp3,png,avif,webp,jpg,jpeg}\""
 
 # ===== alphabet =====

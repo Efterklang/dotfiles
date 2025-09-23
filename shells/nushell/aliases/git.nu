@@ -11,12 +11,8 @@ export def git_main_branch [] {
         | str replace --regex 'HEAD .*?[：: ]\s*(.+)' '$1'
 }
 
-export def glog [num?] {
-    if $num == null {
-        git log --pretty=%h»¦«%s»¦«%aN»¦«%aE»¦«%aD -n 5 | lines | split column "»¦«" commit subject name email date | upsert date {|d| $d.date | into datetime} | sort-by date | reverse
-    } else {
-        git log --pretty=%h»¦«%s»¦«%aN»¦«%aE»¦«%aD -n $num | lines | split column "»¦«" commit subject name email date | upsert date {|d| $d.date | into datetime} | sort-by date | reverse
-    }  
+export def glog [num?: int=5] {
+    git log --pretty=%h»¦«%s»¦«%aN»¦«%aE»¦«%aD -n $num | lines | split column "»¦«" commit subject name email date | upsert date {|d| $d.date | into datetime} | sort-by date | reverse
 }
 
 export def grank [] {
@@ -202,6 +198,7 @@ export alias gcd = git checkout develop
 export alias gcf = git config --list
 
 export alias gcl = git clone --recurse-submodules
+export alias gscl = git clone --depth=1
 export alias gclean = git clean --interactive -d
 export def gpristine [] {
     git reset --hard

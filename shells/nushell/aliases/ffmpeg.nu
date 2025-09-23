@@ -1,5 +1,5 @@
 def _find_media_paths [...paths: string] {
-    let ext_pattern = '\.(mp4|webm)$'
+    let ext_pattern = '\.(mp4|mov|webm)$'
     # 如果没有指定路径，则默认使用当前目录
     let files = if ($paths | is-empty) {
         ls . | where name =~ $ext_pattern
@@ -100,18 +100,18 @@ def _get_video_info [file: string] {
 }
 
 @example "Display video info analysis results of all video files in a directory" {vcodec-analysis ./20250706_115938.mp4 ~/OneDrive/Movie/11.mp4} --result """
-╭──────┬──────────────────────────────────────────────────────────────────────────────────╮
+╭──────┬─────────────────────────────────────────────────────────────────────────────────╮
 │      │ ╭───┬─────────────────────┬───────┬────────────┬──────────┬─────────┬─────────╮ │
 │ hevc │ │ # │        file         │ codec │ resolution │ duration │  size   │ bitrate │ │
 │      │ ├───┼─────────────────────┼───────┼────────────┼──────────┼─────────┼─────────┤ │
-│      │ │ 0 │ 20250706_115938.mp4 │ hevc  │ 1920x1080  │ 4.0s     │ 12.0 MB │ 24.0 Mbps │ │
+│      │ │ 0 │ 20250706_115938.mp4 │ hevc  │ 1920x1080  │ 4.0s     │ 12.0 MB │ 2.0 Mbps│ │
 │      │ ╰───┴─────────────────────┴───────┴────────────┴──────────┴─────────┴─────────╯ │
 │      │ ╭───┬────────┬───────┬────────────┬───────────┬──────────┬─────────╮            │
 │ h264 │ │ # │  file  │ codec │ resolution │ duration  │   size   │ bitrate │            │
 │      │ ├───┼────────┼───────┼────────────┼───────────┼──────────┼─────────┤            │
-│      │ │ 0 │ 11.mp4 │ h264  │ 1920x1080  │ 29m 42.0s │ 786.5 MB │ 3.7 Mbps │            │
+│      │ │ 0 │ 11.mp4 │ h264  │ 1920x1080  │ 29m 42.0s │ 786.5 MB │ 3.7 Mbps│            │
 │      │ ╰───┴────────┴───────┴────────────┴───────────┴──────────┴─────────╯            │
-╰──────┴──────────────────────────────────────────────────────────────────────────────────╯
+╰──────┴─────────────────────────────────────────────────────────────────────────────────╯
 """
 def vcodec-analysis [...paths: string] {
     let files = (_find_media_paths ...$paths)
@@ -188,13 +188,15 @@ def av1 [...input_file: string] {
 # 把图片转为AVIF格式
 def avif [...input_file: string] {
   let input_files = (_find_image_paths ...$input_file)
-  let output_dir = $nu.home-path | path join "Downloads/ffmpeg_out"
-  mkdir $output_dir
 
   $input_files | par-each {|file|
     print $"Processing: ($file.name)";
-    let base = ($file.name | path parse | get stem)
-    let output_file = ($output_dir | path join $"($base).avif")
+
+    let parsed = $file.name | path parse
+    let parent_dir = $parsed | get parent
+    let stem = $parsed | get stem
+
+    let output_file = ($parent_dir | path join $"($stem).avif")
 
     # 使用 libsvtav1 编码器转换图片为 AVIF 格式
     # -c:v libsvtav1: 使用 SVT-AV1 编码器
@@ -255,7 +257,9 @@ def replace_file [file_name: string] {
     return
   }
 
-  rm --interactive $file_name
+  rm $file_name
   mv $output_path ./
   print $"✅ 已替换文件: ($file_name)"
 }
+
+alias rf = replace_file
