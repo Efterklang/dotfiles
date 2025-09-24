@@ -249,7 +249,8 @@
 
 /* error and warning icons */
 .codicon-error:before,
-.codicon-warning:before {
+.codicon-warning:before,
+.codicon-info:before {
 	font-family: "SF Pro" !important;
 	font-size: 13px;
 	vertical-align: text-top !important;
@@ -263,6 +264,11 @@
 .codicon-warning:before {
 	content: "􀇿" !important;
 	color: var(--yellow);
+}
+
+.codicon-info:before {
+	content: "􀅵" !important;
+	color: var(--blue);
 }
 
 /* vim status label */
