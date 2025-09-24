@@ -26,7 +26,9 @@ return {
     ft = { "tex", "markdown", "typst" },
     opts = {
       default = {
-        dir_path = "./attachments",
+        dir_path = function()
+          return "assets/" .. vim.fn.expand("%:t:r")
+        end,
         use_absolute_path = false,
         copy_images = true,
         prompt_for_file_name = false,
