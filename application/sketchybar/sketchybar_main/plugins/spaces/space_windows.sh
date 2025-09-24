@@ -12,7 +12,7 @@ if [ "$SENDER" = "space_windows_change" ]; then
       # echo "$app" >>~/.cache/app_bar.log
     done <<<"${apps}"
   else
-    icon_strip=" —"
+    icon_strip=" :cursor:"
   fi
 
   sketchybar --animate sin 10 --set space.$space label="$icon_strip"

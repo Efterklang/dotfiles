@@ -4,7 +4,7 @@ source "$CONFIG_DIR/colors.sh"   # Loads all defined colors
 source "$CONFIG_DIR/icons.sh"    # Loads all defined icons
 PLUGIN_DIR="$CONFIG_DIR/plugins" # Directory where all the plugin scripts are stored
 
-export FONT="Maple Mono NF CN"
+export FONT="Hack Nerd Font"
 
 PADDINGS=3
 

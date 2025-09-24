@@ -102,7 +102,7 @@ case $@ in
   icon_result=":emacs:"
   ;;
 # VPN
-"Clash Verge")
+"Clash Verge" | "FlClash")
   icon_result=":nord_vpn:"
   ;;
 # MacOs Apps
