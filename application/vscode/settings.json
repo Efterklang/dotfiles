@@ -391,20 +391,17 @@
     "leetcode.defaultLanguage": "python3",
     "leetcode.filePath": {
         "python3": {
-            "folder": "python",
             "filename": "${id}.${kebab-case-name}.${ext}"
         },
         "java": {
-            "folder": "java",
             "filename": "${id}.${kebab-case-name}.${ext}"
         },
         "go": {
-            "folder": "go",
             "filename": "${id}.${kebab-case-name}.${ext}"
         }
     },
     "leetcode.hint.configWebviewMarkdown": false,
-    "leetcode.hint.commentDescription": true,
+    "leetcode.hint.commentDescription": false,
     "leetcode.hint.commandShortcut": false,
     "leetcode.showDescription": "None",
     // * ╭───────────────────────────────────────────────────────╮
@@ -494,7 +491,7 @@
     "markdown.preview.fontFamily": "Maple Mono NF CN",
     "markdown.preview.scrollEditorWithPreview": false,
     "markdown.copyFiles.destination": {
-        "*": "./assets/${documentBaseName}/${documentBaseName}.${fileExtName}"
+        "*": "./assets/${documentBaseName}.${fileExtName}"
     },
     "foam.files.attachmentExtensions": "pdf mp3 webm avi mov rtf txt doc docx",
     "foam.graph.titleMaxLength": 15,
@@ -527,9 +524,7 @@
         "markdown": true,
         "scminput": false
     },
-    "github.copilot.advanced": {
-        "authProvider": "github"
-    },
+    "github.copilot.advanced": { },
     "github.copilot.selectedCompletionModel": "",
     "github.copilot.chat.codesearch.enabled": true,
     "github.copilot.chat.agent.thinkingTool": true,
@@ -558,6 +553,8 @@
     "vim.easymotionIncSearchForegroundColor": "#a6e3a1",
     "vim.easymotionDimColor": "#6c7086",
     "vim.easymotionMarkerFontWeight": "bold",
+    "vim.searchHighlightColor": "#585b70",
+    "vim.searchMatchColor": "#6c7086",
     "vim.sneak": true,
     "vim.showMarksInGutter": true,
     "vim.shell": "/opt/homebrew/bin/nu",
@@ -585,11 +582,6 @@
         {
             "before": [ "<space>" ],
             "commands": [ "whichkey.show" ],
-            "silent": true
-        },
-        {
-            "before": [ "/" ],
-            "commands": [ "actions.find" ],
             "silent": true
         },
         {
@@ -1197,7 +1189,6 @@
     "chat.editor.wordWrap": "on",
     "evenBetterToml.formatter.columnWidth": 80,
     "excalidraw.language": "en",
-    "excalidraw.theme": "auto",
     "extensions.autoUpdate": false,
     "file-size.position": "left",
     "hediet.vscode-drawio.codeLinkActivated": true,

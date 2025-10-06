@@ -1,4 +1,14 @@
 {
+  "front matter": {
+    "prefix": "-",
+    "body": [
+      "---",
+      "cover:",
+      "tags:",
+      "---"
+    ],
+    "description": "Create front matter block"
+  },
   "Markdown Callout": {
     "prefix": "callout",
     "body": [

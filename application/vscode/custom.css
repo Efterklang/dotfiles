@@ -310,15 +310,9 @@
 	background: var(--green) !important;
 }
 
-#vscodevim\.vim\.primary[aria-label="-- VISUAL --"] {
-	background: var(--mauve) !important;
-}
-
+#vscodevim\.vim\.primary[aria-label="-- VISUAL --"],
+#vscodevim\.vim\.primary[aria-label="-- VISUAL BLOCK --"],
 #vscodevim\.vim\.primary[aria-label="-- VISUAL LINE --"] {
-	background: var(--mauve) !important;
-}
-
-#vscodevim\.vim\.primary[aria-label="-- VISUAL BLOCK --"] {
 	background: var(--mauve) !important;
 }
 
