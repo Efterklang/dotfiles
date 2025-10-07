@@ -27,6 +27,14 @@ def omni-open [path: string = "."] {
   }
 }
 
+# ===== obsidian ======
+alias ob-key = ln -s ~/Projects/dotfiles/application/obsidian/hotkeys.json ./.obsidian/hotkeys.json
+def ob-theme [] {
+  ln -s ~/Projects/dotfiles/application/obsidian/themes/AnuPpuccin ./.obsidian/themes/AnuPpuccin
+  ln -s ~/Projects/dotfiles/application/obsidian/appearance.json ./.obsidian/themes/appearance.json
+}
+
+# ===== diary ======
 def today-diary [] {
   let diary_folder = $"($env.HOME)/Onedrive/Documents/diary"
   # 获取当前日期（年、月、日）
@@ -40,7 +48,10 @@ def today-diary [] {
   return $diary_path
 }
 
-alias edit-diary = nvim (today-diary)
+def --env edit-diary [...args] {
+  cd (today-diary | path parse | get parent)
+  nvim +15 +startinsert (today-diary)
+}
 
 let editable_files: string = "fd --exclude \"*.{code,data,webm,mp4,mp3,png,avif,webp,jpg,jpeg}\""
 
@@ -78,14 +89,15 @@ alias ci = code
 alias czg = bun run czg
 alias ff = fastfetch
 alias gg = gitui
+alias lc = nvim leetcode.nvim
 alias hexo = bun run hexo
 alias hf = fuzzy-command-search
 alias pyenv = overlay use .venv/bin/activate.nu
 alias scene = adb shell sh /storage/emulated/0/Android/data/com.omarea.vtools/up.sh
 alias shizuku = adb shell sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.sh
-alias zhelp = zoxide --help
 alias zo = zoxide
 # Jump directory
 alias music = cd ~/OneDrive/Music
 alias vluv = cd ~/Projects/vluv
 alias wiki = cd ~/Projects/astro-docs
+alias draft = nvim ~/.cahce/temp.md

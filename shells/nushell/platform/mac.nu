@@ -4,7 +4,7 @@ $env.PATH = (
   $env.PATH
   | split row (char esep)
   | uniq
-  | prepend ["/Applications/Docker.app/Contents/Resources/bin/" "/Users/gjx/.spicetify" "/opt/homebrew/opt/openjdk/bin"]
+  | prepend ["/Applications/Docker.app/Contents/Resources/bin/" "/Users/gjx/.spicetify" "/opt/homebrew/opt/openjdk/bin" "/opt/homebrew/bin" "/opt/homebrew/sbin"]
 )
 
 def brew-update-all [] {
@@ -32,21 +32,21 @@ def brew-update-all [] {
 
 def brew-backup [] {
   let brewfile_path = "~/Projects/dotfiles/packages/homebrew/Brewfile"
-
   print $"==> 📦 Creating Homebrew backup to ($brewfile_path)..."
-  
   # Ensure the directory exists
   mkdir ($brewfile_path | path dirname)
-  
   # Generate the Brewfile with all installed packages and casks
   brew bundle dump --file ($brewfile_path | path expand) --force
-  
   print $"==> ✅ Brewfile backup completed at ($brewfile_path)"
 }
 
 alias nu-kill = kill
 alias kill = ^kill
 alias clip = pbcopy
-alias python = python3
+# homebrew
 alias bi = brew install
 alias bu = brew-update-all
+alias rm_brewlock = rm -rf $"(brew --prefix)/var/homebrew/locks"
+# python
+alias python = python3
+alias pip = pip3
