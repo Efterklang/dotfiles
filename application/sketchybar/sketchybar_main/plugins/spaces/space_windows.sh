@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if [ "$SENDER" = "space_windows_change" ]; then
   space="$(echo "$INFO" | jq -r '.space')"
@@ -11,8 +11,8 @@ if [ "$SENDER" = "space_windows_change" ]; then
       # debug: 把app写入到~/.cache/app_bar.log, 方便在 icon_map.sh 中自定义图标
       # echo "$app" >>~/.cache/app_bar.log
     done <<<"${apps}"
-  else
-    icon_strip=" :cursor:"
+  else  # empty space
+    icon_strip=" :claude:"
   fi
 
   sketchybar --animate sin 10 --set space.$space label="$icon_strip"

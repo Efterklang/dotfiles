@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 qq=(
   update_freq=10

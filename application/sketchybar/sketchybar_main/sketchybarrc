@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-source "$CONFIG_DIR/colors.sh"   # Loads all defined colors
-source "$CONFIG_DIR/icons.sh"    # Loads all defined icons
-PLUGIN_DIR="$CONFIG_DIR/plugins" # Directory where all the plugin scripts are stored
+source "$CONFIG_DIR/colors.sh"
+source "$CONFIG_DIR/icons.sh"
+PLUGIN_DIR="$CONFIG_DIR/plugins"
 
 export FONT="Hack Nerd Font"
 
@@ -13,9 +13,6 @@ HELPER=git.felix.helper
 killall helper
 (cd $CONFIG_DIR/helper && make)
 $CONFIG_DIR/helper/helper $HELPER >/dev/null 2>&1 &
-
-# Unload the macOS on screen indicator overlay for volume change
-launchctl unload -F /System/Library/LaunchAgents/com.apple.OSDUIHelper.plist >/dev/null 2>&1 &
 
 bar=(
   height=35
@@ -72,6 +69,7 @@ sketchybar --default "${default[@]}"
 # Left
 source "$PLUGIN_DIR/logo/item.sh"
 source "$PLUGIN_DIR/spaces/item.sh"
+source "$PLUGIN_DIR/music/item.sh"
 
 # Right
 source "$PLUGIN_DIR/date/item.sh"

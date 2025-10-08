@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 source "$PLUGIN_DIR/stats/events/toggle_stats.sh"
 

@@ -6,7 +6,7 @@
 POPUP_CLICK_SCRIPT="sketchybar --set $NAME popup.drawing=toggle"
 
 brew=(
-  script="$PLUGIN_DIR/brew/scripts/brew.sh"
+  script="$PLUGIN_DIR/brew/brew.sh"
   click_script="$POPUP_CLICK_SCRIPT"
   icon=􀐛
   label=?

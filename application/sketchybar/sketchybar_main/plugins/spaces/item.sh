@@ -1,9 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-SPACE_ICONS=("Home" "Dev" "Chat" "Music" "MISC" "6" "7" "8" "9" "10" "11" "12")
-
-# Destroy space on right click, focus space on left click.
-# New space by left clicking separator (>)
+# SPACE_ICONS=("Home" "Dev" "Chat" "Music" "MISC" "6" "7" "8" "9" "10" "11" "12")
+SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10" "11" "12")
 
 sid=0
 spaces=()
@@ -34,13 +32,8 @@ for i in "${!SPACE_ICONS[@]}"; do
 done
 
 space_creator=(
-  icon=􀆊
-  icon.font="$FONT:Bold:16.0"
-  padding_left=10
-  padding_right=8
   label.drawing=off
   display=active
-  click_script='yabai -m space --create'
   script="$PLUGIN_DIR/spaces/space_windows.sh"
   icon.color=$WHITE
 )
