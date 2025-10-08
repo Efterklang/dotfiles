@@ -41,7 +41,7 @@
             "5":       SwitchToTab("Search"),
             "q":       Quit,
             ">":       NextTrack,
-            "p":       TogglePause,
+            "<Space>": TogglePause,
             "<":       PreviousTrack,
             "f":       SeekForward,
             "z":       ToggleRepeat,
@@ -77,8 +77,6 @@
             "r":         Rename,
             "n":         NextResult,
             "g":         Top,
-            "<Space>":   Select,
-            "<C-Space>": InvertSelection,
             "G":         Bottom,
             "<CR>":      Confirm,
             "i":         FocusInput,
@@ -87,9 +85,8 @@
             "/":         EnterSearch,
             "<C-c>":     Close,
             "<Esc>":     Close,
-            "K":         MoveUp,
             "D":         Delete,
-            "B":         ShowInfo,
+            "K":         ShowInfo,
         },
         queue: {
             "D":       DeleteAll,
@@ -197,4 +194,4 @@
             ),
         )
     ],
-),
+)
