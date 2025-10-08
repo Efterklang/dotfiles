@@ -41,7 +41,7 @@ return {
     },
     sources = {
       providers = {
-        snippets = { score_offset = 1000 },
+        snippets = { score_offset = 5 },
       },
     },
   },

@@ -37,8 +37,9 @@ require("snacks").setup({
       keys = {
         { icon = "󰈞 ", key = "f", desc = "Find files", action = ":lua Snacks.picker.smart()" },
         { icon = " ", key = "o", desc = "Find history", action = "lua Snacks.picker.recent()" },
-        { icon = "󰑑 ", key = "r", desc = "Find text", action = ":lua Snacks.picker.grep()" },
-        { icon = " ", key = "e", desc = "New file", action = ":enew" },
+        { icon = "󰑑 ", key = "g", desc = "Grep", action = ":lua Snacks.picker.grep()" },
+        { icon = " ", key = "c", desc = "Config", action = ":lua Snacks.picker.files({ cwd = vim.fn.stdpath('config') })" },
+        { icon = " ", key = "d", desc = "Find dotfiles", action = ":lua Snacks.picker.files({ cwd = '~/Projects/dotfiles' })" },
         { icon = " ", key = "o", desc = "Recent files", action = ":lua Snacks.picker.recent()" },
         { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil },
         { icon = "", key = "x", desc = "Lazy Extra", action = ":LazyExtras", enabled = package.loaded.lazy ~= nil },

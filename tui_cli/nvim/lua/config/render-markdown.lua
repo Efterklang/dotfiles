@@ -93,8 +93,7 @@ require("render-markdown").setup({
     },
   },
   pipe_table = {
-    alignment_indicator = "─",
-    border = { "╭", "┬", "╮", "├", "┼", "┤", "╰", "┴", "╯", "│", "─" },
+    preset = "round",
   },
   link = {
     wiki = { icon = " ", highlight = "RenderMarkdownWikiLink", scope_highlight = "RenderMarkdownWikiLink" },
