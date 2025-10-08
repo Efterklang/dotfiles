@@ -42,7 +42,15 @@
       "key": "E"
     }
   ],
-  "markdown:toggle-preview": [],
+  "markdown:toggle-preview": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "V"
+    }
+  ],
   "easy-typing-obsidian:easy-typing-insert-codeblock": [],
   "editor:set-heading-1": [
     {
@@ -131,12 +139,51 @@
       "key": "M"
     }
   ],
-  "editor:toggle-code": [
+  "app:toggle-right-sidebar": [
     {
       "modifiers": [
         "Alt"
       ],
+      "key": "E"
+    }
+  ],
+  "easy-typing-obsidian:easy-typing-toggle-comment": [],
+  "templater-obsidian:insert-templater": [],
+  "editor:toggle-code": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
       "key": "C"
+    }
+  ],
+  "editor:add-cursor-above": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "ArrowUp"
+    }
+  ],
+  "editor:add-cursor-below": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "ArrowDown"
+    }
+  ],
+  "easy-typing-obsidian:easy-typing-paste-without-format": [],
+  "easy-typing-obsidian:easy-typing-goto-new-line-after-cur-line": [],
+  "graph:open": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "Tab"
     }
   ]
 }

@@ -1,6 +1,7 @@
 source ./git.nu
 source ./replace.nu
 source ./ffmpeg.nu
+source ./obsidian.nu
 
 def --env y [...args] {
   let tmp = (mktemp -t "yazi-cwd.XXXXXX")
@@ -25,13 +26,6 @@ def omni-open [path: string = "."] {
     windows => { explorer.exe $path }
     linux => { ^xdg-open $path }
   }
-}
-
-# ===== obsidian ======
-alias ob-key = ln -s ~/Projects/dotfiles/application/obsidian/hotkeys.json ./.obsidian/hotkeys.json
-def ob-theme [] {
-  ln -s ~/Projects/dotfiles/application/obsidian/themes/AnuPpuccin ./.obsidian/themes/AnuPpuccin
-  ln -s ~/Projects/dotfiles/application/obsidian/appearance.json ./.obsidian/themes/appearance.json
 }
 
 # ===== diary ======
@@ -73,7 +67,7 @@ alias n = exec nu
 alias o = omni-open
 alias p = gping
 alias q = exit 0
-alias r = commandline edit --insert (bat --color never --style plain $nu.history-path | fzf --height 70% --layout reverse --tac | str trim)
+alias r = rmpc
 alias s = somo
 alias t = tokei
 alias u = uv

@@ -21,11 +21,11 @@ export def grank [] {
 
 export def gtime [] {
   # 获取所有提交记录并按作者分组
-  git log --pretty=format:"%aN»¦«%aI" | 
-    lines | 
-    split column "»¦«" author date | 
-    group-by author | 
-    items {|author, records| 
+  git log --pretty=format:"%aN»¦«%aI" |
+    lines |
+    split column "»¦«" author date |
+    group-by author |
+    items {|author, records|
       # 获取每个作者的时间记录并排序
       let dates = $records | get date
       let sorted = $dates | sort
@@ -161,7 +161,7 @@ export alias gaa = git add --all
 export alias gapa = git add --patch
 export alias gau = git add --update
 export alias gav = git add --verbose
-export alias gap = git apply 
+export alias gap = git apply
 export alias gapt = git apply --3way
 
 export alias gb = git branch
@@ -231,6 +231,7 @@ export alias gfo = git fetch origin
 
 export alias gignore = git update-index --assume-unchanged
 
+# logs
 export alias gl = git log
 export alias glg = git log --stat
 export alias glgp = git log --stat --patch
@@ -238,12 +239,6 @@ export alias glgg = git log --graph
 export alias glgga = git log --graph --decorate --all
 export alias glgm = git log --graph --max-count=10
 export alias glo = git log --oneline --decorate
-export alias glod = git log --graph $'--pretty=%Cred%h%Creset -%C(char lp)auto(char rp)%d%Creset %s %Cgreen(char lp)%ad(char rp) %C(char lp)bold blue(char rp)<%an>%Creset'
-export alias glods = git log --graph $'--pretty=%Cred%h%Creset -%C(char lp)auto(char rp)%d%Creset %s %Cgreen(char lp)%ad(char rp) %C(char lp)bold blue(char rp)<%an>%Creset' --date=short
-export alias gloga = git log --oneline --decorate --graph --all
-export alias glol = git log --graph $'--pretty=%Cred%h%Creset -%C(char lp)auto(char rp)%d%Creset %s %Cgreen(char lp)%ar(char rp) %C(char lp)bold blue(char rp)<%an>%Creset'
-export alias glola = git log --graph $'--pretty=%Cred%h%Creset -%C(char lp)auto(char rp)%d%Creset %s %Cgreen(char lp)%ar(char rp) %C(char lp)bold blue(char rp)<%an>%Creset' --all
-export alias glols = git log --graph $'--pretty=%Cred%h%Creset -%C(char lp)auto(char rp)%d%Creset %s %Cgreen(char lp)%ar(char rp) %C(char lp)bold blue(char rp)<%an>%Creset' --stat
 
 export alias gm = git merge
 export alias gmtl = git mergetool --no-prompt

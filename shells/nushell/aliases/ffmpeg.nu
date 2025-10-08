@@ -1,5 +1,5 @@
 def _find_media_paths [...paths: string] {
-    let ext_pattern = '\.(mp4|mov|webm)$'
+    let ext_pattern = '\.(mp4|mov|webm|vid)$'
     # 如果没有指定路径，则默认使用当前目录
     let files = if ($paths | is-empty) {
         ls . | where name =~ $ext_pattern
