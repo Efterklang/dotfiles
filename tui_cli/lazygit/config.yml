@@ -147,3 +147,5 @@ keybinding:
   universal:
     copyToClipboard: y
     confirmInEditor: <c-d>
+os:
+  openLink: "~/.local/bin/open-link {{link}}"

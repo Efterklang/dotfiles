@@ -1,0 +1,34 @@
+#!/usr/bin/env nu
+
+# Open URL using default browser
+# Usage: open-link <URL>
+
+def main [url?: string] {
+    # Validate URL format (basic check)
+    let has_protocol = ($url | str starts-with "http://") or ($url | str starts-with "https://") or ($url | str starts-with "ftp://")
+
+    let final_url = if not $has_protocol {
+        $"https://($url)"
+    } else {
+        $url
+    }
+
+    # Open URL with the appropriate command based on OS
+    match $nu.os-info.name {
+        "windows" => {
+            # Windows 'start' command has different syntax
+            run-external "cmd" "/c" "start" "" $final_url
+        },
+        "macos" => {
+            # macOS and Linux
+            run-external "open" $final_url
+        },
+        "linux" => {
+            run-external "xdg-open" $final_url
+        },
+        _ => {
+            print "Error: Unsupported operating system"
+            exit 1
+        }
+    }
+}
