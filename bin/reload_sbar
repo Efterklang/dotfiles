@@ -12,4 +12,6 @@
 # @raycast.author gnixaij_oag
 # @raycast.authorURL https://raycast.com/gnixaij_oag
 
-sketchybar --reload
+# 先force kill sketchybar，再重启
+pkill -9 sketchybar
+sketchybar --start
