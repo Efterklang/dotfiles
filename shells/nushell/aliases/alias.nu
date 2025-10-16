@@ -18,14 +18,8 @@ def trim_history [] {
   open $history | lines | uniq | save -f $history
 }
 
-def omni-open [path: string = "."] {
-  let path = ($path | path expand)
-
-  match $nu.os-info.name {
-    macos => { ^open $path }
-    windows => { explorer.exe $path }
-    linux => { ^xdg-open $path }
-  }
+def ob [vault="posts"] {
+  start $"obsidian://open?vault=($vault)"
 }
 
 # ===== diary ======
@@ -47,7 +41,7 @@ def --env edit-diary [...args] {
   nvim +15 +startinsert (today-diary)
 }
 
-let editable_files: string = "fd --exclude \"*.{code,data,webm,mp4,mp3,png,avif,webp,jpg,jpeg}\""
+let editable_files: string = "fd -L --exclude \"*.{code,data,webm,mp4,mp3,png,avif,webp,jpg,jpeg}\""
 
 # ===== alphabet =====
 alias a = gh copilot suggest
@@ -64,8 +58,8 @@ alias k = commandline edit --insert (zellij delete-all-sessions -y; zellij kill-
 alias l = clear
 alias m = nvim (tv --source-command "fd -e md ." files)
 alias n = exec nu
-alias o = omni-open
-alias p = gping
+alias o = start
+alias p = tmux popup -w 80% -h 80%
 alias q = exit 0
 alias r = rmpc
 alias s = somo

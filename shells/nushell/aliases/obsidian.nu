@@ -31,8 +31,6 @@ def _enable_community_plugins [plugin_name: string ] {
     }
 }
 
-
-
 let global_setting_home = $"($env.HOME)/Projects/dotfiles/application/obsidian"
 
 # hotkeys
@@ -46,10 +44,21 @@ def ob-theme [] {
         mkdir "./.obsidian/snippets"
         _create_soft_link $"($global_setting_home)/snippets/obsidian.css" "./.obsidian/snippets/obsidian.css"
     }
+}
+# plugins
+def ob-plugins [] {
+    let plugin_list = [
+        "floating-toc",
+        "obsidian-style-settings",
+        "obsidian-better-command-palette",
+        "obsidian-linter",
+        "shiki-highlighter"
+    ]
 
-    # use obsidian-style-settings plugin
-    if (confirm_action "💠 Use obsidian-style-settings? (y/N): ") {
-        _create_soft_link $"($global_setting_home)/plugins/obsidian-style-settings" "./.obsidian/plugins/obsidian-style-settings"
-        _enable_community_plugins "obsidian-style-settings"
+    for plugin in $plugin_list {
+        if (confirm_action $"💠 Install and enable plugin ($plugin)? \(y/N\): ") {
+            _create_soft_link $"($global_setting_home)/plugins/($plugin)" $"./.obsidian/plugins/($plugin)"
+            _enable_community_plugins $"($plugin)"
+        }
     }
 }
