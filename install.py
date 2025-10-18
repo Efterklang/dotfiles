@@ -11,8 +11,8 @@ from pathlib import Path
 
 # color codes
 COLOR_INFO = "\033[38;2;166;227;161m"  # #a6e3a1
-COLOR_ERROR = "\033[38;2;243;139;168m" # #f38ba8
-COLOR_WARNING = "\033[93m" # yellow
+COLOR_ERROR = "\033[38;2;243;139;168m"  # #f38ba8
+COLOR_WARNING = "\033[93m"  # yellow
 COLOR_RESET = "\033[0m"
 
 
@@ -25,7 +25,9 @@ def run_command(cmd, shell=False, cwd=None):
     """运行命令并处理错误"""
     try:
         if isinstance(cmd, list):
-            print(f"{COLOR_INFO}[INFO]{COLOR_RESET} Executing: {' '.join(str(c) for c in cmd)}")
+            print(
+                f"{COLOR_INFO}[INFO]{COLOR_RESET} Executing: {' '.join(str(c) for c in cmd)}"
+            )
         else:
             print(f"{COLOR_INFO}[INFO]{COLOR_RESET} Executing: {cmd}")
 
@@ -34,10 +36,14 @@ def run_command(cmd, shell=False, cwd=None):
         )
         return result.returncode == 0
     except subprocess.CalledProcessError as e:
-        print(f"{COLOR_ERROR}[ERROR]{COLOR_RESET} Command failed (return code: {e.returncode}): {e}")
+        print(
+            f"{COLOR_ERROR}[ERROR]{COLOR_RESET} Command failed (return code: {e.returncode}): {e}"
+        )
         return False
     except FileNotFoundError:
-        print(f"{COLOR_ERROR}[ERROR]{COLOR_RESET} Command not found: {cmd[0] if isinstance(cmd, list) else cmd}")
+        print(
+            f"{COLOR_ERROR}[ERROR]{COLOR_RESET} Command not found: {cmd[0] if isinstance(cmd, list) else cmd}"
+        )
         return False
 
 
@@ -73,7 +79,9 @@ def find_python():
                 [cmd, "-V"], capture_output=True, text=True, check=True
             )
             if result.returncode == 0:
-                print(f"{COLOR_INFO}[INFO]{COLOR_RESET} Found Python interpreter: {cmd}")
+                print(
+                    f"{COLOR_INFO}[INFO]{COLOR_RESET} Found Python interpreter: {cmd}"
+                )
                 return cmd
         except (subprocess.CalledProcessError, FileNotFoundError):
             continue
@@ -88,7 +96,9 @@ def run_dotbot(config_file):
     dotbot_bin = dotbot_dir / "bin" / "dotbot"
 
     if not dotbot_bin.exists():
-        print(f"{COLOR_ERROR}[ERROR]{COLOR_RESET} dotbot executable not found: {dotbot_bin}")
+        print(
+            f"{COLOR_ERROR}[ERROR]{COLOR_RESET} dotbot executable not found: {dotbot_bin}"
+        )
         return False
 
     # 查找Python解释器
@@ -116,7 +126,7 @@ def install_unix():
         return False
 
     # 运行dotbot
-    return run_dotbot("install.yaml")
+    return run_dotbot("install.conf.yaml")
 
 
 def main():
@@ -139,3 +149,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

@@ -36,6 +36,7 @@
     ~/.config/zsh: shells/zsh
     ~/.config/fish: shells/fish
     ~/.config/.markdownlint-cli2.yaml: ./misc/.markdownlint-cli2.yaml
+    ~/.config/mpd: ./tui_cli/mpd
     ~/.local/bin/:
       glob: true
       path: bin/**

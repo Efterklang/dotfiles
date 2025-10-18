@@ -6,6 +6,7 @@
     password: None,
     theme: "catppuccin_mocha",
     cache_dir: None,
+    lyrics_dir: "~/Music/CloudMusic",
     on_song_change: None,
     volume_step: 5,
     max_fps: 30,
@@ -25,6 +26,27 @@
         disabled_protocols: ["http://", "https://"],
         vertical_align: Center,
         horizontal_align: Center,
+    ),
+    cava: (
+        framerate: 80, // default 60
+        autosens: true, // default true
+        sensitivity: 100, // default 100
+        lower_cutoff_freq: 50, // not passed to cava if not provided
+        input: (
+            method: Fifo,
+            source: "/tmp/mpd.fifo",
+            sample_rate: 44100,
+            channels: 2,
+            sample_bits: 16,
+        ),
+        smoothing: (
+            noise_reduction: 77, // default 77
+            monstercat: false, // default false
+            waves: false, // default false
+        ),
+        // this is a list of floating point numbers thats directly passed to cava
+        // they are passed in order that they are defined
+        eq: []
     ),
     keybinds: (
         global: {
@@ -128,23 +150,30 @@
                             direction: Horizontal,
                             panes: [
                                 (
-                                    size: "70%",
+                                    size: "65%",
                                     borders: "ALL",
-                                    pane: Pane(Queue),
+                                    // pane: Pane(Queue),
+                                    pane: Split(
+                                        direction: Vertical,
+                                        panes: [
+                                            (size: "70%", borders: "ALL", pane: Pane(Queue)),
+                                            (size: "30%", borders: "NONE", pane: Pane(Cava)),
+                                        ]
+                                    )
                                 ),
                                 (
-                                    size: "30%",
+                                    size: "35%",
                                     borders: "NONE",
                                     pane: Split(
                                         direction: Vertical,
                                         panes: [
                                             (
-                                                size: "75%",
+                                                size: "60%",
                                                 borders: "ALL",
                                                 pane: Pane(AlbumArt),
                                             ),
                                             (
-                                                size: "25%",
+                                                size: "40%",
                                                 borders: "NONE",
                                                 pane: Split(
                                                     direction: Vertical,
