@@ -14,7 +14,8 @@
           "properties": {
             "arch": "\uf303 Arch",
             "ubuntu": "\uf31b Ubuntu",
-            "windows": "\ue62a Windows"
+            "windows": "\ue62a Windows",
+            "macos": "\uf179 MacOS"
           },
           "style": "diamond",
           "leading_diamond": "\ue0b6",
@@ -25,15 +26,9 @@
         },
         {
           "properties": {
-            "folder_icon": "\udb86\uddec ",
-            "folder_separator_icon": "/",
-            "mapped_locations": {
-              "C:/Users/24138/AppData/Local": "LOCAL APPDATA \ue5fe",
-              "E:/OneDrive - \u5546\u4e1a\u7248/home/markdown": "My Notes \udb80\udf54",
-              "E:/OneDrive - \u5546\u4e1a\u7248/home/vluv": "Vluv's Space "
-            },
+            "max_depth": 1,
             "mixed_threshold": 4,
-            "style": "letter"
+            "style": "folder"
           },
           "style": "powerline",
           "template": " <#000>\uf414  </><b>{{ .Path }}</b> ",

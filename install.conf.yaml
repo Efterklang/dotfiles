@@ -25,7 +25,7 @@
     ~/.config/lla: tui_cli/lla
     ~/.config/nushell: shells/nushell
     ~/.config/nvim: tui_cli/nvim
-    ~/.config/ohmyposh: shells/ohmyposh
+    ~/.config/ohmyposh: tui_cli/ohmyposh
     ~/.config/procs: tui_cli/procs
     ~/.config/television: ./tui_cli/television
     ~/.config/tig: ./tui_cli/tig
