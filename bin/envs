@@ -20,6 +20,7 @@ def --env env [name: string value: string] {
       setx $name $value
     }
   }
+  print $"☑️ Set environment variable: ($name)=($value)"
 }
 
 # Os-specific overrides
@@ -76,6 +77,8 @@ env MACHINE_STORAGE_PATH $"($env.XDG_DATA_HOME)/docker_machine"
 
 # npm
 env NPM_CONFIG_USERCONFIG $"($env.XDG_CONFIG_HOME)/npm/npmrc"
+env NPM_CONFIG_CACHE $"($env.XDG_CACHE_HOME)/npm"
+env NPM_CONFIG_TMP $"($env.XDG_CACHE_HOME)/npm"
 
 # zsh
 env ZDOTDIR $"($env.XDG_CONFIG_HOME)/zsh"
@@ -101,7 +104,12 @@ env FZF_DEFAULT_COMMAND 'fd --type f --strip-cwd-prefix --hidden --follow --excl
 env GOOGLE_CLOUD_PROJECT "gen-lang-client-0006538526"
 
 # vivid colors
-env LS_COLORS (vivid generate catppuccin-mocha)
+if (which vivid | is-empty) == false {
+  env LS_COLORS (vivid generate catppuccin-mocha)
+}
+
+# wakatime
+env WAKATIME_HOME $"($env.XDG_CONFIG_HOME)/wakatime"
 
 # carapace
 env CARAPACE_MERGEFLAGS 1
