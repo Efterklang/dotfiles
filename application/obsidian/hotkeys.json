@@ -7,15 +7,7 @@
       "key": "P"
     }
   ],
-  "command-palette:open": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "P"
-    }
-  ],
+  "command-palette:open": [],
   "editor:insert-codeblock": [
     {
       "modifiers": [
@@ -184,6 +176,14 @@
         "Ctrl"
       ],
       "key": "Tab"
+    }
+  ],
+  "global-search:open": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "S"
     }
   ]
 }

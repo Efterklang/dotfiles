@@ -1,0 +1,12 @@
+{
+  "disabledLanguages": [],
+  "customThemeFolder": "",
+  "customLanguageFolder": "",
+  "darkTheme": "catppuccin-mocha",
+  "lightTheme": "catppuccin-mocha",
+  "preferThemeColors": true,
+  "inlineHighlighting": true,
+  "ecDefaultShowLineNumbers": false,
+  "ecDefaultWrap": false,
+  "ecDefaultFrame": "code"
+}

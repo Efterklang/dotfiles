@@ -10,5 +10,7 @@
   "monospaceFontFamily": "",
   "baseFontSizeAction": true,
   "theme": "system",
-  "translucency": false
+  "translucency": false,
+  "showViewHeader": true,
+  "showRibbon": false
 }
