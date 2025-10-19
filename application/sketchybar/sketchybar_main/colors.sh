@@ -20,7 +20,7 @@ export BATTERY_3=0xfff5a97f
 export BATTERY_4=0xffee99a0
 export BATTERY_5=0xffed8796
 
-export BASE=0xff24273a
+export BASE=0xff1e1e2e
 export MANTLE=0xff1e2030
 export CRUST=0xff181926
 
