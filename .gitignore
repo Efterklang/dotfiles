@@ -14,3 +14,4 @@ lazy-lock.json
 secret.toml
 application/karabiner/automatic_backups
 tui_cli/tmux/plugins
+shells/zsh/.zsh_history
