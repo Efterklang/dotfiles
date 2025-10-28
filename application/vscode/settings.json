@@ -317,65 +317,26 @@
     // * ╰───────────────────────────────────────────────────────╯
     "better-comments.tags": [
         {
-            "tag": "*",
-            "color": "#cdd6f3",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "italic": false,
+            "tag": [ "╭", "│", "╰", "*" ],
+            "color": "#b4befe",
             "bold": true
         },
         {
-            "tag": "=",
-            "color": "#cdd6f3",
+            "tag": [ "TODO", "Note" ],
+            "color": "#1e1e2e",
             "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "italic": false
+            "bold": true,
+            "backgroundColor": "#f9e2af",
+        },
+        {
+            "tag": [ "#region", "#endregion" ],
+            "color": "#1e1e2e",
+            "strikethrough": false,
+            "bold": true,
+            "italic": true,
+            "backgroundColor": "#cba6f7",
         }
     ],
-    "todo-tree.filtering.ignoreGitSubmodules": true,
-    "todo-tree.general.tags": [ "todo", "bug", "tag", "done", "note" ],
-    "todo-tree.filtering.excludeGlobs": [
-        "**/node_modules/*/**",
-        "**/*.yml",
-        "**/*.xml",
-        "**/*.sh",
-        "**/*.md"
-    ],
-    "todo-tree.regex.regex": "((%|//|#|<!--|^\\s*\\*)\\s*($TAGS)|^\\s*- \\[ \\])",
-    "todo-tree.regex.regexCaseSensitive": false,
-    "todo-tree.highlights.defaultHighlight": {
-        "foreground": "#1e1e2e",
-        "fontStyle": "italic",
-        "gutterIcon": true
-    },
-    "todo-tree.highlights.customHighlight": {
-        "todo": {
-            "icon": "alert",
-            "background": "#89B4FA",
-            "rulerColour": "#89B4FA",
-            "iconColour": "#89B4FA"
-        },
-        "bug": {
-            "icon": "bug",
-            "background": "#F38BA8",
-            "rulerColour": "#F38BA8",
-            "iconColour": "#F38BA8"
-        },
-        "tag": {
-            "icon": "tag",
-            "background": "#a6e3a1",
-            "rulerColour": "#a6e3a1",
-            "iconColour": "#a6e3a1"
-        },
-        "note": {
-            "icon": "note",
-            "background": "#cba6f7",
-            "rulerColour": "#cba6f7",
-            "iconColour": "#cba6f7"
-        }
-    },
     "errorLens.fontStyleItalic": true,
     "errorLens.delayMode": "new",
     "errorLens.gutterIconSet": "borderless",
