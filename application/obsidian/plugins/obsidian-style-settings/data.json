@@ -37,5 +37,6 @@
   "anuppuccin-theme-settings@@anp-header-color-toggle": true,
   "anuppuccin-theme-settings@@anp-header-margin-toggle": true,
   "anuppuccin-theme-settings@@anp-h1-divider": true,
-  "anuppuccin-theme-settings@@anp-table-toggle": true
+  "anuppuccin-theme-settings@@anp-table-toggle": true,
+  "floating-toc-styles@@toggle-floating-toc-header-color": true
 }
