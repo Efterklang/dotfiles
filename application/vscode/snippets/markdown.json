@@ -12,31 +12,14 @@
   "Markdown Callout": {
     "prefix": "callout",
     "body": [
-      "> [!${1|info,todo,success,check,done,warning,caution,attention,question,help,faq,danger,error,bug,failure,fail,missing,tip,hint,important,example,abstract,summary,tldr,quote,cite|}] ${2:message}"
+      "> [!${1|info,todo,success,check,done,warning,caution,attention,question,help,faq,danger,error,bug,failure,fail,missing,tips,hint,important,example,abstract,summary,tldr,quote,cite|}] ${2:message}"
     ],
     "description": "Create a callout block with different types: NOTE, TIP etc."
-  },
-  "Message Box": {
-    "prefix": "msg",
-    "body": [
-      "{% message color:primary \"title:\"%}",
-      "",
-      "{% endmessage %}"
-    ],
-    "description": "Message Box"
   },
   "anchor": {
     "prefix": "anchor",
     "body": [
       "<a href=\"#$1\">$2</a>"
-    ]
-  },
-  "quote": {
-    "prefix": "hexo-quote",
-    "body": [
-      "{% blockquote $1 $2%}",
-      "$3",
-      "{% endblockquote %}"
     ]
   },
   "img": {

@@ -1,0 +1,16 @@
+{
+	"tabs": {
+		"prefix": "Tabs",
+		"body": [
+			"<Tabs>",
+			"\t<TabItem label=\"$1\">",
+			"\t\t",
+			"\t</TabItem>",
+			"\t<TabItem label=\"$2\">",
+			"\t\t",
+			"\t</TabItem>",
+			"</Tabs>"
+		],
+		"description": "MDX Tabs Component"
+	}
+}

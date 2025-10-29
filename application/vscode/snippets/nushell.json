@@ -1,0 +1,9 @@
+{
+  "home-path": {
+    "prefix": "home-path",
+    "body": [
+      "\\$nu.home-path"
+    ],
+    "description": "Inserts the home path variable"
+  }
+}
