@@ -1,4 +1,11 @@
-# 🍚Dotfiles
+<h1 align="center">
+  <img alt="image" src="https://github.com/user-attachments/assets/b5f6fdaa-37c2-4bb4-9cc4-d5df0086b82f" width="60%"/>
+  <br>
+  Dotfiles
+  <br>
+  <img src="https://img.shields.io/github/commit-activity/y/Efterklang/dotfiles?style=for-the-badge&labelColor=%23222436&color=%235771AA" alt="Commit Frequency">
+  <img src="https://img.shields.io/github/license/Efterklang/dotfiles?style=for-the-badge&labelColor=%23222436&color=%235771AA" alt="License">
+</h1>
 
 For installation instructions, refer to [docs/INSTALL.md](docs/INSTALL.md)
 
