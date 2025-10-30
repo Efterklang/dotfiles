@@ -2,6 +2,7 @@ source ./git.nu
 source ./replace.nu
 source ./ffmpeg.nu
 source ./obsidian.nu
+source ./mpd.nu
 
 def --env y [...args] {
   let tmp = (mktemp -t "yazi-cwd.XXXXXX")
@@ -17,6 +18,21 @@ def trim_history [] {
   let history = $nu.history-path
   open $history | lines | uniq | save -f $history
 }
+
+def copy_text [] {
+  match $nu.os-info.name {
+    "windows" => {
+      # Windows 使用 clip 命令
+      $in | ^clip
+    }
+    "macos" => {
+      # macOS 使用 pbcopy 命令
+      $in | ^pbcopy
+    }
+  }
+}
+
+alias clip = copy_text
 
 def ob [vault="posts"] {
   start $"obsidian://open?vault=($vault)"
@@ -42,7 +58,6 @@ def --env edit-diary [...args] {
 }
 
 let editable_files: string = "fd -L --exclude \"*.{code,data,webm,mp4,mp3,png,avif,webp,jpg,jpeg}\""
-
 # ===== alphabet =====
 alias a = gh copilot suggest
 alias b = bun run
@@ -56,7 +71,7 @@ alias i = gemini
 alias j = commandline edit --insert (fd --type directory | fzf --preview 'eza --all --git --long --no-time --color=always --icons {}')
 alias k = commandline edit --insert (zellij delete-all-sessions -y; zellij kill-all-sessions -y)
 alias l = clear
-alias m = nvim (tv --source-command "fd -e md ." files)
+alias m = start_mpd
 alias n = exec nu
 alias o = start
 alias p = tmux popup -w 80% -h 80%
@@ -74,18 +89,16 @@ alias z = z
 alias ze = zellij attach --create gnix
 alias c2p = code2prompt
 alias ci = code
-alias czg = bun run czg
 alias ff = fastfetch
 alias gg = gitui
 alias lc = nvim leetcode.nvim
 alias hexo = bun run hexo
-alias hf = fuzzy-command-search
 alias pyenv = overlay use .venv/bin/activate.nu
 alias scene = adb shell sh /storage/emulated/0/Android/data/com.omarea.vtools/up.sh
 alias shizuku = adb shell sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.sh
 alias zo = zoxide
 # Jump directory
-alias music = cd ~/OneDrive/Music
+alias music = yazi ~/OneDrive/Music
 alias vluv = cd ~/Projects/vluv
 alias wiki = cd ~/Projects/astro-docs
 alias draft = nvim ~/.cahce/temp.md
