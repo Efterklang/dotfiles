@@ -15,6 +15,7 @@
     ~/.config/btop: tui_cli/btop
     ~/.config/carapace: tui_cli/carapace
     ~/.config/cava: tui_cli/cava
+    ~/.config/dust: tui_cli/dust
     ~/.config/fastfetch: tui_cli/fastfetch
     ~/.config/scooter: tui_cli/scooter
     ~/.config/rmpc: tui_cli/rmpc
@@ -57,6 +58,9 @@
     # MacOS specific configurations
     ~/Library/LaunchAgents/env.xdg.plist:
       path: ./misc/env.xdg.plist
+      if: "[ `uname` = Darwin ]"
+    ~/.config/borders:
+      path: application/borders
       if: "[ `uname` = Darwin ]"
     ~/.config/karabiner:
       path: application/karabiner
