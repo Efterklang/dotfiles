@@ -71,7 +71,7 @@
             "c":       ToggleConsume,
             "v":       ToggleSingle,
             "b":       SeekBack,
-            "~":       ShowHelp,
+            "?":       ShowHelp,
             "u":       Update,
             "U":       Rescan,
             "I":       ShowCurrentSongInfo,
