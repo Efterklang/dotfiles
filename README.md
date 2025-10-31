@@ -9,7 +9,68 @@
 
 For installation instructions, refer to [docs/INSTALL.md](docs/INSTALL.md)
 
-## Screenshots
+- [VSCode](#vscode)
+- [Music Player](#music-player)
+- [Bar](#bar)
+- [Browser](#browser)
+- [Terminal](#terminal)
+  - [Shell](#shell)
+  - [Terminal Multiplexer](#terminal-multiplexer)
+  - [Fuzzy finders](#fuzzy-finders)
+  - [TUI/CLI Tools](#tuicli-tools)
+
+## VSCode
+
+- Theme: Catppuccin Mocha
+- Icon: Catppuccin Noctis Icons
+- Custom CSS: check [this file](https://github.com/Efterklang/dotfiles/blob/main/application/vscode/custom.css)
+- Settings.json: check [this file](https://github.com/Efterklang/dotfiles/blob/main/application/vscode/settings.json)
+
+| File/Directory     | Description                                  |
+| ------------------ | -------------------------------------------- |
+| `custom.css`       | Custom CSS styling for VSCode                |
+| `keybindings.json` | Keyboard shortcuts configuration             |
+| `settings.json`    | VSCode global settings                       |
+| `snippets`         | Code snippets (markdown, python, java, etc.) |
+
+![1761896833616](assets/vscode.png)
+
+## Music Player
+
+|            Tauon            | mpd + rmpc + cava        |
+| :-------------------------: | ------------------------ |
+| ![tauon](assets/tauon.webp) | ![mpd](assets/rmpc.webp) |
+
+## Bar
+
+- Windows: Yasb, other options: glazewm, zebar
+- MacOS: SketchyBar
+
+| Yasb(Windows)             | SketchyBar(Mac)                       |
+| ------------------------- | ------------------------------------- |
+| ![yasb](assets/yasb.webp) | ![sketchybar](assets/sketchybar.webp) |
+
+## Browser
+
+Extension List
+
+- [**Stylus**](https://add0n.com/stylus.html)
+  - User styles manager for customizing website appearance
+- [**Vimium C**](https://github.com/gdh1995/vimium-c)
+  - Keyboard-based navigation and tab operations
+  - Features advanced omnibar functionality
+
+|                Stylus                |             Vimium C              |
+| :----------------------------------: | :-------------------------------: |
+| ![Stylus Github](assets/stylus.webp) | ![vimium-c](assets/vimium_c.webp) |
+
+## Terminal
+
+### Shell
+
+I use nushell as my default shell. It has aesthetic and powerful features.
+
+![nushell](assets/nushell.png)
 
 ### Terminal Multiplexer
 
@@ -23,72 +84,31 @@ For installation instructions, refer to [docs/INSTALL.md](docs/INSTALL.md)
 | :---------------------: | :-----------------------------------: |
 | ![Fzf](assets/fzf.webp) | ![Television](assets/television.webp) |
 
-### diff & cd replacement
+### TUI/CLI Tools
 
-|            Delta            |            Zoxide             |
-| :-------------------------: | :---------------------------: |
-| ![Delta](assets/delta.webp) | ![Zoxide](assets/zoxide.webp) |
 
-### ls & cat replacement
+| Command | Replacement |
+| ------- | ----------- |
+| diff    | delta       |
+| cd      | zoxide      |
+| ls      | eza, lla    |
+| cat     | bat         |
+| grep    | ripgrep     |
+| vim     | nvim        |
+| git     | lazygit     |
+| top     | btop        |
+| ps      | procs       |
+| ranger  | yazi        |
 
-|          eza & lla          |           Bat           |
-| :-------------------------: | :---------------------: |
-| ![eza](assets/eza_lla.webp) | ![Bat](assets/bat.webp) |
 
-### TUI Tools
-
-|           LazyVim            |             LazyGit             |
+|            Delta             |             Zoxide              |
 | :--------------------------: | :-----------------------------: |
+| ![Delta](assets/delta.webp)  |  ![Zoxide](assets/zoxide.webp)  |
+|          eza & lla           |               Bat               |
+| ![eza](assets/eza_lla.webp)  |     ![Bat](assets/bat.webp)     |
+|            NeoVim            |             LazyGit             |
 | ![LazyVim](assets/nvim.webp) | ![LazyGit](assets/lazygit.webp) |
-
-|           btop            |            Procs            |
-| :-----------------------: | :-------------------------: |
-| ![btop](assets/btop.webp) | ![Procs](assets/procs.webp) |
-
-|           Yazi            |             Scooter             |
-| :-----------------------: | :-----------------------------: |
-| ![Yazi](assets/yazi.webp) | ![Scooter](assets/scooter.webp) |
-
-### Music Player
-
-|            Tauon            | mpd + rmpc               |
-| :-------------------------: | ------------------------ |
-| ![tauon](assets/tauon.webp) | ![mpd](assets/rmpc.webp) |
-
-### StatusBar & FastFetch
-
-| Yasb(Windows)             | SketchyBar(Mac)                       |
-| ------------------------- | ------------------------------------- |
-| ![yasb](assets/yasb.webp) | ![sketchybar](assets/sketchybar.webp) |
-
-### VSCode
-
-| File/Directory              | Description                                  |
-| --------------------------- | -------------------------------------------- |
-| `custom.css`                | Custom CSS styling for VSCode                |
-| `keybindings.json`          | Keyboard shortcuts configuration             |
-| `markdown-preview-enhanced` | Enhanced markdown preview plugin settings    |
-| `settings.json`             | VSCode global settings                       |
-| `snippets`                  | Code snippets (markdown, python, java, etc.) |
-
-| Foam + Markdown Preview Enhanced + Markless |    Custom CSS + Vim + WhichKey     |
-| :-----------------------------------------: | :--------------------------------: |
-|       ![Markdown](assets/vsc_md.webp)       | ![WhichKey](assets/which-key.webp) |
-
-> [!NOTE]
->
-> VSCode Custom CSS: check 👉 [this post](https://vluv.space/custom_vscode_css/)
-
-### Browser
-
-Extension List
-
-- [**Stylus**](https://add0n.com/stylus.html)
-  - User styles manager for customizing website appearance
-- [**Vimium C**](https://github.com/gdh1995/vimium-c)
-  - Keyboard-based navigation and tab operations
-  - Features advanced omnibar functionality
-
-|                Stylus                |             Vimium C              |
-| :----------------------------------: | :-------------------------------: |
-| ![Stylus Github](assets/stylus.webp) | ![vimium-c](assets/vimium_c.webp) |
+|             btop             |              Procs              |
+|  ![btop](assets/btop.webp)   |   ![Procs](assets/procs.webp)   |
+|             Yazi             |             Scooter             |
+|  ![Yazi](assets/yazi.webp)   | ![Scooter](assets/scooter.webp) |
