@@ -147,5 +147,7 @@ keybinding:
   universal:
     copyToClipboard: y
     confirmInEditor: <c-d>
-os:
-  openLink: "~/.local/bin/open-link {{link}}"
+os: # use nushell built-in cmd
+  editPreset: nvim
+  open: "start {{filename}}"
+  openLink: "start {{link}}"
