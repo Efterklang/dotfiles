@@ -31,7 +31,7 @@ def brew-update-all [] {
 }
 
 def brew-backup [] {
-  let brewfile_path = "~/Projects/dotfiles/packages/homebrew/Brewfile"
+  let brewfile_path = $"($nu.home-path)/Projects/dotfiles/packages/homebrew/Brewfile"
   print $"==> 📦 Creating Homebrew backup to ($brewfile_path)..."
   # Ensure the directory exists
   mkdir ($brewfile_path | path dirname)
@@ -42,7 +42,6 @@ def brew-backup [] {
 
 alias nu-kill = kill
 alias kill = ^kill
-alias clip = pbcopy
 # homebrew
 alias bi = brew install
 alias bu = brew-update-all
