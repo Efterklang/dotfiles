@@ -1,0 +1,19 @@
+[metadata]
+name = "mpc"
+description = "Browse your music library using mpc"
+requirements = ["mpd", "mpc"]
+
+[source]
+command = "mpc listall"
+
+[keybindings]
+enter = "actions:open"
+
+[actions.open]
+description = "Listen to the selected track using mpc"
+command = "echo '{split: - :1}' | sed 's/\\.[^.]*$//'"
+# command = "mpc add '{}' && mpc searchplay '{split: - :1}'"
+mode = "execute"
+
+[ui.preview_panel]
+header = "{}"
