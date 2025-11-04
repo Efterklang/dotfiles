@@ -44,7 +44,7 @@ For installation instructions, refer to [docs/INSTALL.md](docs/INSTALL.md)
 ## Bar
 
 - Windows: Yasb, other options: glazewm, zebar
-- MacOS: SketchyBar
+- MacOS: SketchyBar, read [config](https://github.com/Efterklang/sketchybar)
 
 | Yasb(Windows)             | SketchyBar(Mac)                       |
 | ------------------------- | ------------------------------------- |
