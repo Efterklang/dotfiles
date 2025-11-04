@@ -50,6 +50,7 @@ source $(brew --prefix)/share/zsh-fast-syntax-highlighting/fast-syntax-highlight
 eval "$(tv init zsh)"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+eval "$(atuin init zsh)"
 
 # === Bindkey ===
 bindkey -e

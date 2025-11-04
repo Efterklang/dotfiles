@@ -1,9 +1,5 @@
 mkdir ($nu.data-dir | path join "vendor/autoload")
 
-if (which tv | is-empty) == false {
-  tv init nu | save -f ($nu.data-dir | path join "vendor/autoload/tv.nu")
-}
-
 # Prompt Theme, use oh-my-posh or starship
 let ohmyposh_autoload = $nu.data-dir | path join "vendor/autoload/oh-my-posh.nu"
 let starship_autoload = $nu.data-dir | path join "vendor/autoload/starship.nu"
@@ -22,4 +18,6 @@ match $PROMPT_THEME {
   }
 }
 
+source ./tv.nu
+source ./atuin.nu
 source ./zoxide.nu
