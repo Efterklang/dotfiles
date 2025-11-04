@@ -56,9 +56,9 @@ gui:
   commandLogSize: 2
   showRandomTip: false
 git:
-  paging:
-    colorArg: always
-    pager: "delta --dark --paging=never"
+  pagers:
+    - colorArg: always
+      pager: "delta --dark --paging=never"
   log:
     showGraph: always
     showWholeGraph: false
