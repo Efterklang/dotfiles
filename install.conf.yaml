@@ -11,6 +11,7 @@
       stdin: true
 - clean: ["~", "~/.config", "~/Library/Application Support"]
 - link:
+    ~/.config/atuin: tui_cli/atuin
     ~/.config/bat: tui_cli/bat
     ~/.config/btop: tui_cli/btop
     ~/.config/carapace: tui_cli/carapace
@@ -39,6 +40,7 @@
     ~/.config/fish: shells/fish
     ~/.config/.markdownlint-cli2.yaml: ./misc/.markdownlint-cli2.yaml
     ~/.config/mpd: ./tui_cli/mpd
+    ~/.config/starship.toml: ./tui_cli/starship.toml
     ~/.local/bin/:
       glob: true
       path: bin/**
