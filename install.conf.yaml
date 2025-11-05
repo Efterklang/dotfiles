@@ -41,9 +41,6 @@
     ~/.config/.markdownlint-cli2.yaml: ./misc/.markdownlint-cli2.yaml
     ~/.config/mpd: ./tui_cli/mpd
     ~/.config/starship.toml: ./tui_cli/starship.toml
-    ~/.local/bin/:
-      glob: true
-      path: bin/**
     ~/.local/share/TauonMusicBox/:
       glob: true
       path: application/tauon/**
