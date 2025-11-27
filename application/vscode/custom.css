@@ -3,53 +3,22 @@
 	--font-mh: "Maple Hand";
 	--font-jb: "JetbrainsMono Nerd Font";
 	--font-status-bar: "Maple Mono NF CN";
-	/* Catppuccin Color Scheme */
-	--rosewater: #f5e0dc;
-	--flamingo: #f2cdcd;
-	--pink: #f5c2e7;
-	--mauve: #cba6f7;
-	--red: #f38ba8;
-	--maroon: #eba0ac;
-	--peach: #fab387;
-	--yellow: #f9e2af;
-	--green: #a6e3a1;
-	--teal: #94e2d5;
-	--sky: #89dceb;
-	--sapphire: #74c7ec;
-	--blue: #82aaff;
-	--lavender: #b4befe;
-	--text: #cdd6f4;
-	--subtext1: #bac2de;
-	--subtext0: #a6adc8;
-	--overlay2: #9399b2;
-	--overlay1: #7f849c;
-	--overlay0: #6c7086;
-	--surface2: #585b70;
-	--surface1: #45475a;
-	--surface0: #282936;
-	--base: #1e1e2e;
-	--mantle: rgba(24, 24, 37, 0.5);
-	--crust: rgba(17, 17, 27, 0.5);
-	--focused_background: #2f334d;
-	--status_label_background: #313244;
 }
 
 /* command center palette */
-
 .quick-input-widget {
 	transform: translateY(-50%) !important;
 	top: 50% !important;
-	/* 50% of the parent container */
 	z-index: 100;
-	border: solid 2px var(--lavender) !important;
+	border: solid 2px var(--vscode-terminal-ansiBlue) !important;
 	border-radius: 6px !important;
-	box-shadow: 0px 8px 32px var(--crust) !important;
+	box-shadow: 0px 4px 8px var(--vscode-terminal-ansiBrightBlack) !important;
 	padding: 8px !important;
 	font-family: var(--font-maple), var(--font-jb);
 }
 
 .quick-input-widget .monaco-inputbox {
-	border: solid 2px var(--mauve) !important;
+	border: solid 2px var(--vscode-terminal-ansiBrightMagenta) !important;
 	padding: 5px !important;
 	border-radius: 3px !important;
 }
@@ -77,7 +46,7 @@
 	display: flex !important;
 	flex-direction: row !important;
 	align-items: center !important;
-	border-bottom: 1px solid var(--lavender) !important;
+	border-bottom: 1px solid var(--vscode-terminal-ansiBlue) !important;
 }
 
 .composite.title h2 {
@@ -134,9 +103,9 @@
 .monaco-editor-hover,
 .monaco-hover {
 	z-index: 100;
-	border: solid 1px var(--lavender) !important;
+	border: solid 1px var(--vscode-terminal-ansiBlue) !important;
 	border-radius: 3px !important;
-	box-shadow: 0px 8px 16px var(--crust) !important;
+	box-shadow: 0px 4px 8px var(--crust) !important;
 	/* padding: 8px !important; */
 }
 
@@ -149,7 +118,7 @@
 .suggest-details,
 .editor-widget {
 	z-index: 100;
-	border: solid 1px var(--blue) !important;
+	border: solid 1px var(--vscode-terminal-ansiBrightBlue) !important;
 	border-radius: 3px !important;
 	box-shadow: 0px 8px 16px var(--crust) !important;
 	padding: 8px !important;
@@ -202,7 +171,7 @@
 .editor-widget.find-widget.visible {
 	height: fit-content !important;
 	align-content: center !important;
-	border: solid 1px var(--blue) !important;
+	border: solid 1px var(--vscode-terminal-ansiBrightBlue) !important;
 	border-radius: 3px !important;
 	box-shadow: 0px 8px 24px var(--crust) !important;
 	padding: 8px !important;
@@ -242,8 +211,8 @@
 /* source control */
 #status\.scm\.0,
 #status\.scm\.1 {
-	background: var(--status_label_background) !important;
-	color: var(--lavender);
+	background: var(--vscode-notebook-symbolHighlightBackground) !important;
+	color: var(--vscode-editor-foreground);
 	order: -998 !important;
 }
 
@@ -258,25 +227,25 @@
 
 .codicon-error:before {
 	content: "􀁑" !important;
-	color: var(--red);
+	color: var(--vscode-problemsErrorIcon-foreground);
 }
 
 .codicon-warning:before {
 	content: "􀇿" !important;
-	color: var(--yellow);
+	color: var(--vscode-problemsWarningIcon-foreground);
 }
 
 .codicon-info:before {
 	content: "􀅵" !important;
-	color: var(--blue);
+	color: var(--vscode-problemsInfoIcon-foreground);
 }
 
 /* vim status label */
 #vscodevim\.vim\.primary {
 	order: -997 !important;
-	background: var(--blue) !important;
-	color: var(--base) !important;
+	background: var(--vscode-terminal-ansiBrightBlue) !important;
 	font-weight: 600 !important;
+	color: var(--vscode-button-foreground);
 }
 
 .statusbar-item-label[aria-label*="-- "] {
@@ -296,10 +265,16 @@
 	content: "INSERT";
 }
 
-.statusbar-item-label[aria-label="-- VISUAL --"]::before,
-.statusbar-item-label[aria-label="-- VISUAL LINE --"]::before,
-.statusbar-item-label[aria-label="-- VISUAL BLOCK --"]::before {
+.statusbar-item-label[aria-label="-- VISUAL --"]::before {
 	content: "VISUAL";
+}
+
+.statusbar-item-label[aria-label="-- VISUAL LINE --"]::before {
+	content: "VISUAL LINE";
+}
+
+.statusbar-item-label[aria-label="-- VISUAL BLOCK --"]::before {
+	content: "VISUAL BLOCK";
 }
 
 .statusbar-item-label[aria-label="-- VIM: DISABLED --"]::before {
@@ -307,17 +282,17 @@
 }
 
 #vscodevim\.vim\.primary[aria-label="-- INSERT --"] {
-	background: var(--green) !important;
+	background: var(--vscode-terminal-ansiBrightGreen) !important;
 }
 
 #vscodevim\.vim\.primary[aria-label="-- VISUAL --"],
 #vscodevim\.vim\.primary[aria-label="-- VISUAL BLOCK --"],
 #vscodevim\.vim\.primary[aria-label="-- VISUAL LINE --"] {
-	background: var(--mauve) !important;
+	background: var(--vscode-terminal-ansiBrightMagenta) !important;
 }
 
 #vscodevim\.vim\.primary[aria-label="-- VIM: DISABLED --"] {
-	background: var(--red) !important;
+	background: var(--vscode-terminal-ansiBrightRed) !important;
 }
 
 #vscodevim\.vim\.showcmd[aria-label="<ExtensionDisable>"] {
@@ -336,37 +311,22 @@
 /* right */
 
 #status\.editor\.selection {
+	background: var(--vscode-notebook-symbolHighlightBackground) !important;
+	color: var(--vscode-editor-foreground);
 	font-family: var(--font-maple) !important;
-	background: var(--status_label_background) !important;
-	color: var(--lavender) !important;
 	order: -997 !important;
 }
 
 div#chat\.statusBarEntry {
-	background: var(--green) !important;
-	color: var(--base) !important;
+	background: var(--vscode-terminal-ansiBrightGreen) !important;
+	color: var(--vscode-button-foreground);
 	order: -998 !important;
 }
 
 #status\.notifications {
-	background: var(--red) !important;
-	color: var(--base) !important;
+	background: var(--vscode-terminal-ansiRed) !important;
+	color: var(--vscode-button-foreground);
 	order: -999 !important;
 	margin-right: 0 !important;
 	padding-right: 2px !important;
 }
-
-/*
-.statusbar-item.left {
-	position: relative;
-	margin-right: 1px !important;
-	background-color: var(--blue) !important;
-	padding-right: 10px !important;
-	position: relative !important;
-}
-
-.statusbar-item.left::after {
-	border-top: 12px solid transparent !important;
-	border-bottom: 12px solid transparent !important;
-	border-left: 10px solid var(--blue) !important;
-} */
