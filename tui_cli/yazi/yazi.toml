@@ -94,6 +94,7 @@ rules = [
 	] },
 	{ mime = "*", use = [
 		"open",
+		"edit",
 		"reveal",
 		"code",
 	] },
