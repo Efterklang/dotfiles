@@ -52,10 +52,16 @@ def ob-plugins [] {
         "obsidian-style-settings",
         "obsidian-better-command-palette",
         "obsidian-linter",
-        "shiki-highlighter"
+        "shiki-highlighter",
+        "pexels-banner",
     ]
 
     for plugin in $plugin_list {
+        let has_plugin = ($"./.obsidian/plugins/($plugin)" | path exists)
+        if $has_plugin {
+            print $"✅ Plugin ($plugin) is already installed."
+            continue
+        }
         if (confirm_action $"💠 Install and enable plugin ($plugin)? \(y/N\): ") {
             _create_soft_link $"($global_setting_home)/plugins/($plugin)" $"./.obsidian/plugins/($plugin)"
             _enable_community_plugins $"($plugin)"

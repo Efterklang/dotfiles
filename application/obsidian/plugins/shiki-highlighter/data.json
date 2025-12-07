@@ -8,5 +8,5 @@
   "inlineHighlighting": true,
   "ecDefaultShowLineNumbers": false,
   "ecDefaultWrap": false,
-  "ecDefaultFrame": "code"
+  "ecDefaultFrame": "none"
 }
