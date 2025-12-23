@@ -221,7 +221,7 @@ export alias gdca = git diff --cached
 export alias gdcw = git diff --cached --word-diff
 export alias gdct = git describe --tags (git rev-list --tags --max-count=1)
 export alias gds = git diff --staged
-export alias gdt = git diff-tree --no-commit-id --name-only -r
+export alias gdt = git difftool
 export alias gdup = git diff @{upstream}
 export alias gdw = git diff --word-diff
 
@@ -254,7 +254,8 @@ export alias gpd = git push --dry-run
 export alias gpf = git push --force-with-lease
 export alias gpf! = git push --force
 export alias gpl = git pull
-export def gpoat [] {
+# git push all branches and tags (to ogirin)
+export def gpa [] {
     git push origin --all; git push origin --tags
 }
 export alias gpod = git push origin --delete

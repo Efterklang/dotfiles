@@ -13,3 +13,7 @@ alias kill = ^kill
 # python
 alias python = python3
 alias pip = pip3
+
+def bundleId [appName] {
+  osascript -e $'id of app "($appName)"'
+}

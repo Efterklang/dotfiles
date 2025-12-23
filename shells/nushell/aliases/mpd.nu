@@ -5,7 +5,13 @@ def start_mpd [] {
         print "[INFO] Starting MPD..."
         mpd ~/.config/mpd/mpd.conf
     } else {
-        print "[INFO] MPD is already running."
+        print "[INFO] MPD is already running. Restart? (Y/n)"
+        let answer = (input)
+        if ($answer == "" or $answer == "Y" or $answer == "y") {
+            print "[INFO] Restarting MPD..."
+            pkill mpd
+            mpd ~/.config/mpd/mpd.conf
+        }
     }
 
     # 等待mpd socket可用

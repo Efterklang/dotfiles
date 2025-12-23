@@ -8,7 +8,7 @@ def brew-update-all [] {
   # Step 2: Upgrade all installed packages
   print "==> 2/4: Running brew upgrade..."
   brew upgrade
-
+  sketchybar --trigger brew_update
   # Step 3: Upgrade all cask applications
   # The `brew cu` command is from an external tap `buo/cask-upgrade`
   print "==> 3/4: Running brew cu -ay..."
@@ -34,7 +34,7 @@ def brew-backup [] {
 # homebrew
 alias bi = brew install
 alias bui = brew uninstall
-alias bou = brew outdated 
+alias bou = brew outdated
 alias bu = brew upgrade
 alias bua = brew-update-all
 alias rm_brewlock = rm -rf $"(brew --prefix)/var/homebrew/locks"

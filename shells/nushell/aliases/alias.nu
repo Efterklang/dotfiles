@@ -59,7 +59,7 @@ def --env edit-diary [...args] {
 
 let editable_files: string = "fd -L --exclude \"*.{code,data,webm,mp4,mp3,png,avif,webp,jpg,jpeg}\""
 # ===== alphabet =====
-alias a = gh copilot suggest
+alias a = atuin
 alias b = bun run
 alias c = code (tv files --source-command $editable_files)
 alias d = dust
@@ -68,7 +68,7 @@ alias f = fastfetch
 alias g = lazygit --use-config-dir ~/.config/lazygit
 alias h = bun run hexo s
 alias i = gemini
-alias j = commandline edit --insert (fd --type directory | fzf --preview 'eza --all --git --long --no-time --color=always --icons {}')
+alias j = just
 alias k = commandline edit --insert (zellij delete-all-sessions -y; zellij kill-all-sessions -y)
 alias l = clear
 alias m = start_mpd
@@ -86,6 +86,7 @@ alias x = ~/.local/bin/extract
 alias y = yazi
 alias z = z
 
+alias ffd = commandline edit --insert (fd --type directory | fzf --preview 'eza --all --git --long --no-time --color=always --icons {}')
 alias ze = zellij attach --create gnix
 alias c2p = code2prompt
 alias ci = code
@@ -101,4 +102,6 @@ alias zo = zoxide
 alias music = yazi ~/OneDrive/Music
 alias vluv = cd ~/Projects/vluv
 alias wiki = cd ~/Projects/astro-docs
-alias draft = nvim ~/.cahce/temp.md
+alias draft = nvim ~/.cache/temp.md
+# kitty
+alias icat = kitten icat
