@@ -24,12 +24,8 @@ require("yatline"):setup({
 			section_c = {},
 		},
 		right = {
-			section_a = {
-				{ type = "string", custom = false, name = "date", params = { "%A, %d %B %Y" } },
-			},
-			section_b = {
-				{ type = "string", custom = false, name = "date", params = { "%X" } },
-			},
+			section_a = {},
+			section_b = {},
 			section_c = {},
 		},
 	},
