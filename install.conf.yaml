@@ -9,7 +9,12 @@
       stdout: true
       stderr: true
       stdin: true
-- clean: ["~", "~/.config", "~/Library/Application Support"]
+# remove dead sym links
+- clean:
+    ~/:
+      force: true
+    ~/.config:
+      recursive: true
 - link:
     ~/.config/atuin: tui_cli/atuin
     ~/.config/bat: tui_cli/bat
@@ -41,7 +46,9 @@
     ~/.config/.markdownlint-cli2.yaml: ./misc/.markdownlint-cli2.yaml
     ~/.config/mpd: ./tui_cli/mpd
     ~/.config/starship.toml: ./tui_cli/starship.toml
-    ~/.config/opencode/skills: ./tui_cli/ai_skills
+    ~/.config/opencode/:
+      glob: true
+      path: ./tui_cli/opencode/**
     ~/.local/share/TauonMusicBox/:
       glob: true
       path: application/tauon/**
@@ -56,6 +63,10 @@
       path: misc/.wslconfig
       if: ver
     # MacOS specific configurations
+    ~/Library/Rime:
+      glob: true
+      path: ./application/rime/**
+      if: "[ `uname` = Darwin ]"
     ~/Library/LaunchAgents/env.xdg.plist:
       path: ./misc/env.xdg.plist
       if: "[ `uname` = Darwin ]"
