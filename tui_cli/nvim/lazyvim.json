@@ -1,7 +1,13 @@
 {
   "extras": [
+    "lazyvim.plugins.extras.formatting.biome",
+    "lazyvim.plugins.extras.lang.go",
     "lazyvim.plugins.extras.lang.java",
-    "lazyvim.plugins.extras.lang.nushell"
+    "lazyvim.plugins.extras.lang.nushell",
+    "lazyvim.plugins.extras.lang.tailwind",
+    "lazyvim.plugins.extras.lang.toml",
+    "lazyvim.plugins.extras.lang.typescript",
+    "lazyvim.plugins.extras.lang.vue"
   ],
   "install_version": 8,
   "news": {
