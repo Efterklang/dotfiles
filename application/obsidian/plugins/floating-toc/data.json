@@ -10,6 +10,6 @@
   "expandAllSubheadings": false,
   "isDefaultHide": false,
   "enableHeadingNowrap": true,
-  "barStyle": "enable-edge-style",
+  "barStyle": "enable-bold-bar",
   "enableBarHeadingText": true
 }

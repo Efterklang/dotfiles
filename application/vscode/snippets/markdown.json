@@ -28,6 +28,14 @@
       "<img src=\"$1\" alt=\"$2\" style=\"zoom: 80%\"/>"
     ]
   },
+  "animated_image": {
+    "prefix": "img",
+    "body": [
+      "<video autoplay loop muted playinline>",
+      "  <source src=\"$1\" type=\"video/webm\">",
+      "</video>",
+    ]
+  },
   "raw": {
     "prefix": "raw",
     "body": [
@@ -57,14 +65,10 @@
   "tabs": {
     "prefix": "tab",
     "body": [
-      "{% tabs size:big align:fullwidth%}",
-      "<!-- tab id:$1  title:$2 active -->",
-      "",
-      "<!-- endtab -->",
-      "<!-- tab id:$3 title:$4 -->",
-      "",
-      "<!-- endtab -->",
-      "{% endtabs %}"
+      "::: tabs",
+      "@tab:active $1",
+      "@tab $2",
+      ":::"
     ]
   },
   "math": {

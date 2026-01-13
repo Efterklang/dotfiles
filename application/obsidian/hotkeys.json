@@ -34,15 +34,6 @@
       "key": "E"
     }
   ],
-  "markdown:toggle-preview": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "V"
-    }
-  ],
   "easy-typing-obsidian:easy-typing-insert-codeblock": [],
   "editor:set-heading-1": [
     {
@@ -168,7 +159,15 @@
       "key": "ArrowDown"
     }
   ],
-  "easy-typing-obsidian:easy-typing-paste-without-format": [],
+  "easy-typing-obsidian:easy-typing-paste-without-format": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "V"
+    }
+  ],
   "easy-typing-obsidian:easy-typing-goto-new-line-after-cur-line": [],
   "graph:open": [
     {
@@ -200,6 +199,24 @@
         "Alt"
       ],
       "key": "ArrowUp"
+    }
+  ],
+  "markdown:toggle-preview": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "R"
+    }
+  ],
+  "various-complements:reload-custom-dictionaries": [],
+  "app:open-vault": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "R"
     }
   ]
 }

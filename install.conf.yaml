@@ -38,7 +38,7 @@
     ~/.config/television: ./tui_cli/television
     ~/.config/tig: ./tui_cli/tig
     ~/.config/tmux: ./tui_cli/tmux
-    ~/.config/vscode/markdown-preview-enhanced: application/vscode/markdown-preview-enhanced
+    ~/.config/markdown-preview-enhanced: application/vscode/markdown-preview-enhanced
     ~/.config/yazi: tui_cli/yazi
     ~/.config/zellij: tui_cli/zellij
     ~/.config/zsh: shells/zsh
