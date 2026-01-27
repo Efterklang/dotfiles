@@ -3,6 +3,7 @@ source ./replace.nu
 source ./ffmpeg.nu
 source ./obsidian.nu
 source ./mpd.nu
+source ./bun.nu
 
 def --env y [...args] {
   let tmp = (mktemp -t "yazi-cwd.XXXXXX")
@@ -92,6 +93,7 @@ alias c2p = code2prompt
 alias ci = code
 alias ff = fastfetch
 alias gg = gitui
+alias oc = opencode
 alias lc = nvim leetcode.nvim
 alias hexo = bun run hexo
 alias pyenv = overlay use .venv/bin/activate.nu
