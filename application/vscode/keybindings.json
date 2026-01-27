@@ -532,11 +532,6 @@
         "when": "textInputFocus && !editorReadonly"
     },
     {
-        "key": "cmd+backspace",
-        "command": "deleteWordLeft",
-        "when": "textInputFocus && !editorReadonly"
-    },
-    {
         "key": "alt+backspace",
         "command": "-deleteWordLeft",
         "when": "textInputFocus && !editorReadonly"
@@ -686,5 +681,14 @@
     {
         "key": "cmd+;",
         "command": "workbench.action.createTerminalEditor"
+    },
+    {
+        "key": "alt+backspace",
+        "command": "deleteWordLeft"
+    },
+    {
+        "key": "alt+delete",
+        "command": "-deleteWordRight",
+        "when": "textInputFocus && !editorReadonly"
     }
 ]
