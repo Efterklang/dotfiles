@@ -22,7 +22,7 @@ def brew-update-all [] {
 }
 
 def brew-backup [] {
-  let brewfile_path = $"($nu.home-path)/Projects/dotfiles/packages/homebrew/Brewfile"
+  let brewfile_path = $"($nu.home-dir)/Projects/dotfiles/packages/homebrew/Brewfile"
   print $"==> 📦 Creating Homebrew backup to ($brewfile_path)..."
   # Ensure the directory exists
   mkdir ($brewfile_path | path dirname)
@@ -32,10 +32,9 @@ def brew-backup [] {
 }
 
 # homebrew
-alias bi = brew install
-alias bui = brew uninstall
-alias bou = brew outdated
-alias bu = brew upgrade
-alias bua = brew-update-all
+alias bri = brew install
+alias brui = brew uninstall
+alias brou = brew outdated
+alias bru = brew upgrade
+alias brua = brew-update-all
 alias rm_brewlock = rm -rf $"(brew --prefix)/var/homebrew/locks"
-

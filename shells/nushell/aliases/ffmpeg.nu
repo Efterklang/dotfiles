@@ -134,7 +134,7 @@ alias va = vcodec-analysis
 
 @example "Transcode a video file to a different codec, e.g. convert test.mp4's encoding format to vp9" {transcode test.mp4 "libvpx-vp9"} --result "This will convert test.mp4 to VP9 format and save it to ~/Downloads/ffmpeg_out/test.webm"
 def transcode [input_file: string codec: string ext: string = "webm"] {
-  let output_dir = $nu.home-path | path join "Downloads/ffmpeg_out"
+  let output_dir = $nu.home-dir| path join "Downloads/ffmpeg_out"
   mkdir $output_dir
   let base = ($input_file | path parse | get stem)  # 获取不带扩展名的文件名
   let output_file = ($output_dir | path join $"($base).($ext)")  # 构造输出文件路径
