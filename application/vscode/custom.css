@@ -1,199 +1,181 @@
 :root {
-	--font-maple: "Maple Mono NF CN";
-	--font-mh: "Maple Hand";
-	--font-jb: "JetbrainsMono Nerd Font";
-	--font-status-bar: "Maple Mono NF CN";
+  --font-maple: "Maple Mono NF CN";
+  --font-mh: "Maple Hand";
+  --font-jb: "JetbrainsMono Nerd Font";
+  --font-status-bar: "Maple Mono NF CN";
 }
 
 /* command center palette */
 .quick-input-widget {
-	transform: translateY(-50%) !important;
-	top: 50% !important;
-	z-index: 100;
-	border: solid 2px var(--vscode-terminal-ansiBlue) !important;
-	border-radius: 6px !important;
-	box-shadow: 0px 4px 8px var(--vscode-terminal-ansiBrightBlack) !important;
-	padding: 8px !important;
-	font-family: var(--font-maple), var(--font-jb);
+  transform: translateY(-50%) !important;
+  top: 50% !important;
+  z-index: 100;
+  border: solid 2px var(--vscode-terminal-ansiBlue) !important;
+  border-radius: 6px !important;
+  box-shadow: 0px 4px 8px var(--vscode-widget-shadow) !important;
+  padding: 8px !important;
+  font-family: var(--font-maple), var(--font-jb);
 }
 
 .quick-input-widget .monaco-inputbox {
-	border: solid 2px var(--vscode-terminal-ansiBrightMagenta) !important;
-	padding: 5px !important;
-	border-radius: 3px !important;
-}
-
-.monaco-inputbox input::placeholder {
-	color: var(--overlay2) !important;
+  border: solid 2px var(--vscode-terminal-ansiBrightMagenta) !important;
+  padding: 5px !important;
+  border-radius: 3px !important;
 }
 
 .label-name {
-	font-family: var(--font-maple) !important;
+  font-family: var(--font-maple) !important;
 }
 
 .windows {
-	font-family: var(--font-maple) !important;
+  font-family: var(--font-maple) !important;
 }
 
 /* Code canvas top shadow */
 .monaco-editor .scroll-decoration {
-	box-shadow: 0px 0px 20px var(--crust) !important;
-	top: -6px !important;
+  box-shadow: 0px 0px 20px var(--vscode-widget-shadow) !important;
+  top: -6px !important;
 }
 
 /* Sidebar title */
 .composite.title {
-	display: flex !important;
-	flex-direction: row !important;
-	align-items: center !important;
-	border-bottom: 1px solid var(--vscode-terminal-ansiBlue) !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  border-bottom: 1px solid var(--vscode-terminal-ansiBlue) !important;
 }
 
 .composite.title h2 {
-	font-weight: bold !important;
-	font-size: 12px !important;
-	color: var(--flamingo) !important;
+  font-weight: bold !important;
+  font-size: 12px !important;
+  color: var(--flamingo) !important;
 }
 
 /* Button */
 .monaco-button.monaco-text-button {
-	font-family: var(--font-maple) !important;
+  font-family: var(--font-maple) !important;
 }
 
 /* Incoming Outgoing line */
 [aria-label="Incoming and outgoing changes"].monaco-list-row {
-	border-top: 1px solid #fff !important;
+  border-top: 1px solid #fff !important;
 }
 
 /* File explorer action buttons */
 .monaco-workbench .part.sidebar .title-actions .actions-container {
-	display: none;
+  display: none;
 }
 
 /* File Explorer Item Label */
 .monaco-tree .monaco-tree-row .label-name,
 .monaco-list .monaco-list-row .monaco-icon-label .label-name {
-	font-family: var(--font-maple), monospace !important;
+  font-family: var(--font-maple), monospace !important;
 }
 
 /* Sidebar top shadow */
-.monaco-scrollable-element>.shadow.top {
-	box-shadow: 0px 0px 10px var(--mantle) !important;
+.monaco-scrollable-element > .shadow.top {
+  box-shadow: 0px 0px 10px var(--vscode-widget-shadow) !important;
 }
 
 /* Scroll Bar */
 .slider {
-	position: absolute !important;
-	right: 2px !important;
-	width: 4px !important;
-	background: #bc9abc !important;
-	left: auto !important;
+  position: absolute !important;
+  right: 2px !important;
+  width: 4px !important;
+  background: #bc9abc !important;
+  left: auto !important;
 }
 
 .decorationsOverviewRuler {
-	width: 5px !important;
+  width: 5px !important;
 }
 
 .codicon-toolbar-more,
 .codicon-word-wrap {
-	display: block !important;
+  display: block !important;
 }
 
 /* Tooltip box style */
 .monaco-editor-hover,
 .monaco-hover {
-	z-index: 100;
-	border: solid 1px var(--vscode-terminal-ansiBlue) !important;
-	border-radius: 3px !important;
-	box-shadow: 0px 4px 8px var(--crust) !important;
-	/* padding: 8px !important; */
+  z-index: 100;
+  border: solid 1px var(--vscode-terminal-ansiBlue) !important;
+  border-radius: 3px !important;
+  box-shadow: 0px 4px 8px var(--vscode-widget-shadow) !important;
 }
 
 .monaco-tokenized-source {
-	margin-bottom: 10px !important;
+  margin-bottom: 10px !important;
 }
 
 /* Suggestion widget box style */
 .suggest-widget,
 .suggest-details,
 .editor-widget {
-	z-index: 100;
-	border: solid 1px var(--vscode-terminal-ansiBrightBlue) !important;
-	border-radius: 3px !important;
-	box-shadow: 0px 8px 16px var(--crust) !important;
-	padding: 8px !important;
-}
-
-.suggest-widget .monaco-list-row.focused {
-	background: #4f5971 !important;
+  z-index: 100;
+  border: solid 1px var(--vscode-terminal-ansiBrightBlue) !important;
+  border-radius: 3px !important;
+  box-shadow: 0px 8px 16px var(--vscode-widget-shadow) !important;
 }
 
 /* Project title's style at the top. */
-.monaco-workbench .part.titlebar>.titlebar-container>.titlebar-center>.window-title>.command-center .action-item.command-center-center {
-	border: none !important;
-	background: transparent !important;
+.monaco-workbench .part.titlebar
+  > .titlebar-container
+  > .titlebar-center
+  > .window-title
+  > .command-center
+  .action-item.command-center-center {
+  border: none !important;
+  background: transparent !important;
 }
 
 /* Project Title */
 .titlebar-left {
-	justify-content: flex-start !important;
-	flex-grow: 0 !important;
-	width: auto !important;
-}
-
-/* Search Label */
-.search-label {
-	font-family: var(--font-maple) !important;
-	font-size: 14px !important;
-	color: #fff;
-	display: block;
-}
-
-/* Search icon */
-.search-icon {
-	display: none !important;
+  justify-content: flex-start !important;
+  flex-grow: 0 !important;
+  width: auto !important;
 }
 
 .codicon-search::before {
-	display: none !important;
+  display: none !important;
 }
 
 .codicon-arrow-right,
 .codicon-arrow-left {
-	display: none !important;
+  display: none !important;
 }
 
-.titlebar-right>* {
-	display: none !important;
+.titlebar-right > * {
+  display: none !important;
 }
 
 /* Editor Search */
 .editor-widget.find-widget.visible {
-	height: fit-content !important;
-	align-content: center !important;
-	border: solid 1px var(--vscode-terminal-ansiBrightBlue) !important;
-	border-radius: 3px !important;
-	box-shadow: 0px 8px 24px var(--crust) !important;
-	padding: 8px !important;
+  height: fit-content !important;
+  align-content: center !important;
+  border: solid 1px var(--vscode-terminal-ansiBrightBlue) !important;
+  border-radius: 3px !important;
+  box-shadow: 0px 8px 24px var(--vscode-widget-shadow) !important;
+  padding: 8px !important;
 }
 
 .find-part {
-	margin-right: 25px !important;
+  margin-right: 25px !important;
 }
 
 .button.codicon.codicon-widget-close {
-	margin-top: auto !important;
-	margin-bottom: auto !important;
-	top: 12px !important;
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+  top: 12px !important;
 }
 
 /* Remove background for lists */
 .monaco-list-rows {
-	background: transparent !important;
+  background: transparent !important;
 }
 
 .notifications-toasts .monaco-list-row:hover {
-	background: none !important;
+  background: none !important;
 }
 
 /* ╭───────────────────────────────────────────────────────╮ */
@@ -201,132 +183,132 @@
 /* ╰───────────────────────────────────────────────────────╯ */
 
 .statusbar {
-	font-family: var(--font-status-bar) !important;
+  font-family: var(--font-status-bar) !important;
 }
 
 #status\.host {
-	order: -999 !important;
+  order: -999 !important;
 }
 
 /* source control */
 #status\.scm\.0,
 #status\.scm\.1 {
-	background: var(--vscode-notebook-symbolHighlightBackground) !important;
-	color: var(--vscode-editor-foreground);
-	order: -998 !important;
+  background: var(--vscode-notebook-symbolHighlightBackground) !important;
+  color: var(--vscode-editor-foreground);
+  order: -998 !important;
 }
 
 /* error and warning icons */
 .codicon-error:before,
 .codicon-warning:before,
 .codicon-info:before {
-	font-family: "SF Pro" !important;
-	font-size: 13px;
-	vertical-align: text-top !important;
+  font-family: "SF Pro" !important;
+  font-size: 13px;
+  vertical-align: text-top !important;
 }
 
 .codicon-error:before {
-	content: "􀁑" !important;
-	color: var(--vscode-problemsErrorIcon-foreground);
+  content: "􀁑" !important;
+  color: var(--vscode-problemsErrorIcon-foreground);
 }
 
 .codicon-warning:before {
-	content: "􀇿" !important;
-	color: var(--vscode-problemsWarningIcon-foreground);
+  content: "􀇿" !important;
+  color: var(--vscode-problemsWarningIcon-foreground);
 }
 
 .codicon-info:before {
-	content: "􀅵" !important;
-	color: var(--vscode-problemsInfoIcon-foreground);
+  content: "􀅵" !important;
+  color: var(--vscode-problemsInfoIcon-foreground);
 }
 
 /* vim status label */
 #vscodevim\.vim\.primary {
-	order: -997 !important;
-	background: var(--vscode-terminal-ansiBrightBlue) !important;
-	font-weight: 600 !important;
-	color: var(--vscode-button-foreground);
+  order: -997 !important;
+  background: var(--vscode-terminal-ansiBrightBlue);
+  font-weight: 600 !important;
+  color: var(--vscode-button-foreground);
 }
 
 .statusbar-item-label[aria-label*="-- "] {
-	font-size: 0 !important;
+  font-size: 0 !important;
 }
 
 .statusbar-item-label[aria-label*="-- "]::before {
-	font-size: 13px !important;
-	font-weight: bold !important;
+  font-size: 13px !important;
+  font-weight: bold !important;
 }
 
 .statusbar-item-label[aria-label="-- NORMAL --"]::before {
-	content: "NORMAL";
+  content: "NORMAL";
 }
 
 .statusbar-item-label[aria-label="-- INSERT --"]::before {
-	content: "INSERT";
+  content: "INSERT";
 }
 
 .statusbar-item-label[aria-label="-- VISUAL --"]::before {
-	content: "VISUAL";
+  content: "VISUAL";
 }
 
 .statusbar-item-label[aria-label="-- VISUAL LINE --"]::before {
-	content: "VISUAL LINE";
+  content: "VISUAL LINE";
 }
 
 .statusbar-item-label[aria-label="-- VISUAL BLOCK --"]::before {
-	content: "VISUAL BLOCK";
+  content: "VISUAL BLOCK";
 }
 
 .statusbar-item-label[aria-label="-- VIM: DISABLED --"]::before {
-	content: "DISABLED";
+  content: "DISABLED";
 }
 
 #vscodevim\.vim\.primary[aria-label="-- INSERT --"] {
-	background: var(--vscode-terminal-ansiBrightGreen) !important;
+  background: var(--vscode-terminal-ansiBrightGreen) !important;
 }
 
 #vscodevim\.vim\.primary[aria-label="-- VISUAL --"],
 #vscodevim\.vim\.primary[aria-label="-- VISUAL BLOCK --"],
 #vscodevim\.vim\.primary[aria-label="-- VISUAL LINE --"] {
-	background: var(--vscode-terminal-ansiBrightMagenta) !important;
+  background: var(--vscode-terminal-ansiBrightMagenta) !important;
 }
 
 #vscodevim\.vim\.primary[aria-label="-- VIM: DISABLED --"] {
-	background: var(--vscode-terminal-ansiBrightRed) !important;
+  background: var(--vscode-terminal-ansiBrightRed) !important;
 }
 
 #vscodevim\.vim\.showcmd[aria-label="<ExtensionDisable>"] {
-	display: none !important;
+  display: none !important;
 }
 
 #RoscoP\.ActiveFileInStatusBar {
-	order: 999 !important;
-	/* right most */
+  order: 999 !important;
+  /* right most */
 }
 
 .statusbar-item.right.__CUSTOM_CSS_JS_INDICATOR_CLS {
-	display: none !important;
+  display: none !important;
 }
 
 /* right */
 
 #status\.editor\.selection {
-	background: var(--vscode-notebook-symbolHighlightBackground) !important;
-	color: var(--vscode-editor-foreground);
-	font-family: var(--font-maple) !important;
-	order: -997 !important;
+  background: var(--vscode-notebook-symbolHighlightBackground) !important;
+  color: var(--vscode-editor-foreground);
+  font-family: var(--font-maple) !important;
+  order: -997 !important;
 }
 
 div#chat\.statusBarEntry {
-	background: var(--vscode-terminal-ansiBrightGreen) !important;
-	color: var(--vscode-button-foreground);
-	order: -998 !important;
+  background: var(--vscode-terminal-ansiBrightGreen) !important;
+  color: var(--vscode-button-foreground);
+  order: -998 !important;
 }
 
 #status\.notifications {
-	background: var(--vscode-terminal-ansiRed) !important;
-	color: var(--vscode-button-foreground);
-	order: -999 !important;
-	margin-right: 0 !important;
-	padding-right: 2px !important;
+  background: var(--vscode-terminal-ansiRed) !important;
+  color: var(--vscode-button-foreground);
+  order: -999 !important;
+  margin-right: 0 !important;
+  padding-right: 2px !important;
 }
