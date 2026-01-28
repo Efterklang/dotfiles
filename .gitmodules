@@ -7,4 +7,4 @@
 	url = https://github.com/hackr-sh/ghostty-shaders.git
 [submodule "application/sketchybar"]
 	path = application/sketchybar
-	url = my:sketchybar
+  url = https://github.com/Efterklang/sketchybar
