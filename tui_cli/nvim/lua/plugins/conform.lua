@@ -5,6 +5,10 @@ return {
     opts = function()
       return {
         formatters_by_ft = {
+          bash = { "shfmt" },
+          sh = { "shfmt" },
+          zsh = { "shfmt" },
+          nu = { "nufmt" },
           lua = { "stylua" },
           go = { "goimports" },
           python = { "ruff_format" },
