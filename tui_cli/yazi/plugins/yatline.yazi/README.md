@@ -13,11 +13,9 @@ The first Yazi plugin for customizing both header-line and status-line.
 - Flexible
 - Simple
 - Automatic Configuration
+- Support for Yazi Plugins
 - Themes (See: [yatline-themes](https://github.com/imsi32/yatline-themes))
 - Add-ons (See: [yatline-addons](https://github.com/imsi32/yatline-addons))
-- Native Git Repository Status Component (See: [Git Repository Status Component Readme](README-git-status.md))
-
-Sample configuration at [examples/git-status-integration.lua](examples/git-status-integration.lua).
 
 ## Credits
 

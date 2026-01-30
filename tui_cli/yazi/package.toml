@@ -14,9 +14,9 @@ rev = "1612f00"
 hash = "56fdabc96fc1f4d53c96eb884b02a5be"
 
 [[plugin.deps]]
-use = "carlosedp/yatline"
-rev = "61d3a3a"
-hash = "37fe452b2406df3f24e33b429ef699c2"
+use = "imsi32/yatline"
+rev = "c5d4b48"
+hash = "e6e98d12b1648d1894c2b560d85eeaa7"
 
 [flavor]
 deps = []
