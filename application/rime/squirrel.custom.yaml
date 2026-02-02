@@ -1,0 +1,80 @@
+patch:
+  show_notifications_when: appropriate # 状态通知，可设为全开（always）全关（never）
+  style:
+    color_scheme: blue_reverie
+    color_scheme_dark: mocha
+    status_message_type: mix
+    candidate_format: '[label]. [candidate] [comment]'
+    text_orientation: horizontal
+    inline_preedit: true
+    inline_candidate: false
+    translucency: true
+    blur: true
+    mutual_exclusive: false
+    memorize_size: true
+    showPaging: false
+    alpha: 1e+0
+    candidate_list_layout: linear
+    corner_radius: 1.2e+1
+    hilited_corner_radius: 1e+1
+    border_height: 0e+0
+    border_width: 6e+0
+    line_spacing: 5e+0
+    spacing: 8e+0
+    shadow_size: 6e+0
+    font_face: PingFangSC-Regular
+    font_point: 1.6e+1
+  # 皮肤主题
+  preset_color_schemes:
+    mocha:
+      name: Catppuccin Mocha
+      back_color: 0x1B1111 # 候选条背景色 Crust
+      border_color: 0x251818 # 边框色 Mantle
+      text_color: 0xDEC2BA # 拼音行文字颜色 Subtext1
+      label_color: 0xC8ADA6 # 预选栏编号颜色 Subtext0
+      candidate_text_color: 0xF4D6CD # 预选项文字颜色 Text
+      hilited_back_color: 0xB4BEFE
+      hilited_candidate_text_color: 0x2E1E1E # 第一候选项文字颜色 Base
+      hilited_candidate_label_color: 0x443231 # 第一候选项编号颜色 Surface0
+      hilited_text_color: 0x705B58 # 高亮拼音 (需要开启内嵌编码) Surface2
+      hilited_comment_text_color: 0x443231 # 注解文字高亮 Surface0
+      comment_text_color: 0x705B58 # 拼音等提示文字颜色 Surface2
+
+    blue_reverie:
+      name: "Blue Reverie"
+      author: HunterJi
+      color_space: srgb
+      back_color: '0xFFFFFF'
+      hilited_back_color: '0x252320'
+      hilited_candidate_back_color: '0xFF7A00'
+      text_color: '0xD8000000'
+      hilited_text_color: '0xDEDDDD'
+      candidate_text_color: '0x5E5E5E'
+      hilited_candidate_text_color: '0xFFFFFF'
+      label_color: '0x888785'
+      hilited_candidate_label_color: '0xFFFFFF'
+      comment_text_color: '0xDEDDDD'
+
+  # 特定App默认中/英文输入
+  app_options:
+    com.apple.Spotlight: # 聚焦搜索
+      ascii_mode: true # true默认英文,false默认中文
+    com.raycast.macos:
+      ascii_mode: true
+    # Terminals
+    com.mitchellh.ghostty:
+      ascii_mode: true
+      vim_mode: true
+    net.kovidgoyal.kitty:
+      ascii_mode: true
+      vim_mode: true
+    # IDE & Editor
+    com.microsoft.VSCode:
+      ascii_mode: true
+      # ascii_punct: true # 中文状态输出英文标点(半角)
+      vim_mode: true
+    dev.zed.Zed:
+      ascii_mode: true
+      vim_mode: true
+    md.obsidian:
+      vim_mode: true
