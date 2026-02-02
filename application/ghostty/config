@@ -5,10 +5,11 @@ clipboard-read = allow
 clipboard-write = allow
 copy-on-select = true
 window-save-state = always
+# theme = dark:Catppuccin Mocha, light:Catppuccin Frappe
 theme = Catppuccin Mocha
 confirm-close-surface=false
 # font-family
-font-family = Maple Mono NF CN
+font-family = RecMonoCasual Nerd Font, Maple Mono NF CN
 window-title-font-family = Maple Mono NF CN
 # ss01: != and ===
 font-feature = "ss01"
