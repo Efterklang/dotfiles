@@ -39,23 +39,17 @@ def ob [vault="posts"] {
   start $"obsidian://open?vault=($vault)"
 }
 
-# ===== diary ======
-def today-diary [] {
-  let diary_folder = $"($env.HOME)/Onedrive/Documents/diary"
-  # 获取当前日期（年、月、日）
-  let today = (date now)
-  let year = ($today | format date "%Y")
-  let month = ($today | format date "%-m")  # 不带前导零的月份（1-12）
-  let date_str = ($today | format date "%Y-%m-%d")  # 文件名格式（带前导零）
-
-  # 构建完整路径：日记根目录/年/月/年-月-日.md
-  let diary_path = ($diary_folder | path join $year $month $"($date_str).md")
-  return $diary_path
+def tv-pick-file-line [] {
+    tv text
+    | str trim
+    | parse "{file}:{line}"
+    | get 0
+    | update line { into int }
 }
 
-def --env edit-diary [...args] {
-  cd (today-diary | path parse | get parent)
-  nvim +15 +startinsert (today-diary)
+def nvim_open_file_line [] {
+    let r = (tv-pick-file-line)
+    nvim +($r.line) $r.file
 }
 
 let editable_files: string = "fd -L --exclude \"*.{code,data,webm,mp4,mp3,png,avif,webp,jpg,jpeg}\""
@@ -66,7 +60,7 @@ alias c = code (tv files --source-command $editable_files)
 alias d = dust
 alias e = exit 0
 alias f = fastfetch
-alias g = lazygit --use-config-dir ~/.config/lazygit
+alias g = nvim_open_file_line
 alias h = bun run hexo s
 alias i = gemini
 alias j = just
@@ -92,7 +86,7 @@ alias ze = zellij attach --create gnix
 alias c2p = code2prompt
 alias ci = code
 alias ff = fastfetch
-alias gg = gitui
+alias gg = lazygit --use-config-dir ~/.config/lazygit
 alias oc = opencode
 alias lc = nvim leetcode.nvim
 alias hexo = bun run hexo

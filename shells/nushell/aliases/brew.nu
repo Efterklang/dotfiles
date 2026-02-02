@@ -11,8 +11,8 @@ def brew-update-all [] {
   sketchybar --trigger brew_update
   # Step 3: Upgrade all cask applications
   # The `brew cu` command is from an external tap `buo/cask-upgrade`
-  print "==> 3/4: Running brew cu -ay..."
-  brew cu -ay
+  print "==> 3/4: Running brew cu -ayf..."
+  brew cu -ayf
 
   # Step 4: Clean up old versions
   print "==> 4/4: Running brew cleanup..."
