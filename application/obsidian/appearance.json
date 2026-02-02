@@ -3,14 +3,14 @@
   "accentColor": "#89a2d7",
   "textFontFamily": "",
   "interfaceFontFamily": "",
-  "baseFontSize": 18,
+  "baseFontSize": 19,
   "enabledCssSnippets": [
     "obsidian"
   ],
-  "monospaceFontFamily": "",
+  "monospaceFontFamily": "RecMonoCasual Nerd Font",
   "baseFontSizeAction": true,
   "theme": "system",
-  "translucency": false,
+  "translucency": true,
   "showViewHeader": true,
   "showRibbon": false
 }
