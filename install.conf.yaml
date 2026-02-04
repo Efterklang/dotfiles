@@ -34,6 +34,7 @@
     ~/.config/lla: tui_cli/lla
     ~/.config/nushell: shells/nushell
     ~/.config/nvim: tui_cli/nvim
+    ~/.config/nvim/snippets: application/vscode/snippets
     ~/.config/ohmyposh: tui_cli/ohmyposh
     ~/.config/procs: tui_cli/procs
     ~/.config/television: ./tui_cli/television
