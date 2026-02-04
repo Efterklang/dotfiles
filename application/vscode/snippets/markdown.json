@@ -1,128 +1,86 @@
 {
-  "front matter": {
-    "prefix": "-",
-    "body": [
-      "---",
-      "cover:",
-      "tags:",
-      "---"
-    ],
-    "description": "Create front matter block"
-  },
-  "Markdown Callout": {
-    "prefix": "callout",
-    "body": [
-      "> [!${1|info,todo,success,check,done,warning,caution,attention,question,help,faq,danger,error,bug,failure,fail,missing,tips,hint,important,example,abstract,summary,tldr,quote,cite|}] ${2:message}"
-    ],
-    "description": "Create a callout block with different types: NOTE, TIP etc."
-  },
-  "anchor": {
-    "prefix": "anchor",
-    "body": [
-      "<a href=\"#$1\">$2</a>"
-    ]
-  },
-  "img": {
-    "prefix": "img",
-    "body": [
-      "<img src=\"$1\" alt=\"$2\" style=\"zoom: 80%\"/>"
-    ]
-  },
-  "animated_image": {
-    "prefix": "img",
-    "body": [
-      "<video autoplay loop muted playinline>",
-      "  <source src=\"$1\" type=\"video/webm\">",
-      "</video>",
-    ]
-  },
-  "raw": {
-    "prefix": "raw",
-    "body": [
-      "{% raw %}",
-      "",
-      "$1",
-      "",
-      "{% endraw %}"
-    ]
-  },
-  "style": {
-    "prefix": "style",
-    "body": [
-      "<style>",
-      "",
-      "</style>"
-    ]
-  },
-  "div tag": {
-    "prefix": "div",
-    "body": [
-      "<div>",
-      "",
-      "</div>"
-    ]
-  },
-  "tabs": {
-    "prefix": "tab",
-    "body": [
-      "::: tabs",
-      "@tab:active $1",
-      "@tab $2",
-      ":::"
-    ]
-  },
-  "math": {
-    "prefix": "math",
-    "body": [
-      "$$",
-      "\\begin{align*}",
-      "& $1",
-      "\\end{align*}",
-      "$$"
-    ]
-  },
-  "heimu": {
-    "prefix": "heimu",
-    "body": "<span class=\"heimu\">$1</span>"
-  },
-  "friend": {
-    "prefix": "friend",
-    "body": [
-      "<div class=\"friend\">",
-      "\t\t<div class=\"friend-avatar\" style=\"background-image: url(背景图片)\"> </div>",
-      "\t\t<div class=\"friend-detail\">",
-      "\t\t\t<div>$2&nbsp</div>",
-      "\t\t\t<div><a target=\"_blank\" href=\"$2\">$3</a></div>",
-      "\t\t</div>",
-      "\t\t<div class=\"friend-pop\">",
-      "\t\t\t<div>$4</div>",
-      "\t</div>",
-      "</div>"
-    ]
-  },
-  "columns": {
-    "prefix": "twoColumnFlex",
-    "body": [
-      "<div style=\"display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem;\">",
-      "  <!-- Column 1-->",
-      "  <div style=\"flex: 1;\">",
-      "    ",
-      "  </div>",
-      "  <!-- Column 2-->",
-      "  <div style=\"flex: 1;\">",
-      "    ",
-      "  </div>",
-      "</div>"
-    ],
-    "description": "A two-column flex layout with space between and flex-start alignment."
-  },
-  "cat-line": {
-    "prefix": "cat-line",
-    "body": [
-      "<p align=\"center\">",
-      " <img src=\"/img/misc/cat-line.svg?sanitize=true\" alt=\"cat-line\"/>",
-      "</p>"
-    ],
-    "description": "A centered cat line image."
-  }
+	"front matter": {
+		"prefix": "-",
+		"body": ["---", "cover:", "tags:", "---"],
+		"description": "Create front matter block"
+	},
+	"Markdown Callout": {
+		"prefix": "callout",
+		"body": [
+			"> [!${1|info,todo,success,check,done,warning,caution,attention,question,help,faq,danger,error,bug,failure,fail,missing,tips,hint,important,example,abstract,summary,tldr,quote,cite|}] ${2:message}"
+		],
+		"description": "Create a callout block with different types: NOTE, TIP etc."
+	},
+	"anchor": {
+		"prefix": "anchor",
+		"body": ["<a href=\"#$1\">$2</a>"]
+	},
+	"animated_image": {
+		"prefix": "video",
+		"body": [
+			"<video autoplay loop muted playinline>",
+			"  <source src=\"$1\" type=\"video/webm\">",
+			"</video>"
+		]
+	},
+	"raw": {
+		"prefix": "raw",
+		"body": ["{% raw %}", "", "$1", "", "{% endraw %}"]
+	},
+	"style": {
+		"prefix": "style",
+		"body": ["<style>", "", "</style>"]
+	},
+	"div tag": {
+		"prefix": "div",
+		"body": ["<div>", "", "</div>"]
+	},
+	"tabs": {
+		"prefix": "tab",
+		"body": ["::: tabs", "@tab:active $1", "@tab $2", ":::"]
+	},
+	"math": {
+		"prefix": "math",
+		"body": ["$$", "\\begin{align*}", "& $1", "\\end{align*}", "$$"]
+	},
+	"heimu": {
+		"prefix": "heimu",
+		"body": "<span class=\"heimu\">$1</span>"
+	},
+	"columns": {
+		"prefix": "twoColumnFlex",
+		"body": [
+			"<div style=\"display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem;\">",
+			"  <!-- Column 1-->",
+			"  <div style=\"flex: 1;\">",
+			"    ",
+			"  </div>",
+			"  <!-- Column 2-->",
+			"  <div style=\"flex: 1;\">",
+			"    ",
+			"  </div>",
+			"</div>"
+		],
+		"description": "A two-column flex layout with space between and flex-start alignment."
+	},
+	"cat-line": {
+		"prefix": "cat-line",
+		"body": [
+			"<p align=\"center\">",
+			" <img src=\"/img/misc/cat-line.svg?sanitize=true\" alt=\"cat-line\"/>",
+			"</p>"
+		],
+		"description": "A centered cat line image."
+	},
+	"Accordion": {
+		"prefix": ["x-accordion", "accordion"],
+		"body": [
+			"<x-accordion>",
+			"  <accordion-item title=\"$1\">",
+			"    $2",
+			"  </accordion-item>",
+			"</x-accordion>"
+		],
+		"description": "Accordion custom element with expandable items"
+	}
 }
