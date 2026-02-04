@@ -1,10 +1,11 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
+    fish_vi_key_bindings
 end
 
 # cli tools
 zoxide init fish | source
-oh-my-posh init fish --config ~/.config/ohmyposh/omp.json | source
+starship init fish | source
 tv init fish | source
 
 # alias
