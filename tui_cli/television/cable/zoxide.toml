@@ -1,10 +1,26 @@
 [metadata]
 name = "zoxide"
-description = "A channel to select from directories"
-requirements = ["lla"]
+description = "Browse zoxide directory history"
+requirements = ["zoxide"]
 
 [source]
-command = ["zoxide query --list"]
+command = "zoxide query -l"
+no_sort = true
+frecency = false
 
 [preview]
-command = "lla --sizemap '{}'"
+command = "ls -la --color=always '{}'"
+
+[keybindings]
+enter = "actions:cd"
+ctrl-d = "actions:remove"
+
+[actions.cd]
+description = "Change to the selected directory"
+command = "cd '{}' && $SHELL"
+mode = "execute"
+
+[actions.remove]
+description = "Remove the selected directory from zoxide"
+command = "zoxide remove '{}'"
+mode = "fork"

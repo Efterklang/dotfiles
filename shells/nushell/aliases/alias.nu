@@ -39,19 +39,6 @@ def ob [vault="posts"] {
   start $"obsidian://open?vault=($vault)"
 }
 
-def tv-pick-file-line [] {
-    tv text
-    | str trim
-    | parse "{file}:{line}"
-    | get 0
-    | update line { into int }
-}
-
-def nvim_open_file_line [] {
-    let r = (tv-pick-file-line)
-    nvim +($r.line) $r.file
-}
-
 let editable_files: string = "fd -L --exclude \"*.{code,data,webm,mp4,mp3,png,avif,webp,jpg,jpeg}\""
 # ===== alphabet =====
 alias a = atuin
@@ -60,7 +47,7 @@ alias c = code (tv files --source-command $editable_files)
 alias d = dust
 alias e = exit 0
 alias f = fastfetch
-alias g = nvim_open_file_line
+alias g = tv text
 alias h = bun run hexo s
 alias i = gemini
 alias j = just
@@ -101,3 +88,7 @@ alias wiki = cd ~/Projects/astro-docs
 alias draft = nvim ~/.cache/temp.md
 # kitty
 alias icat = kitten icat
+# edit
+alias vr = nvim ./README.md
+alias vp = nvim ./package.json
+alias vj = nvim ./justfile

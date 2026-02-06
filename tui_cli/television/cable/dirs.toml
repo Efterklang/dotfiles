@@ -11,3 +11,13 @@ command = "lla --sizemap '{}'"
 
 [keybindings]
 shortcut = "f2"
+
+[actions.cd]
+description = "Open a shell in the selected directory"
+command = "cd '{}'"
+mode = "execute"
+
+[actions.goto_parent_dir]
+description = "Re-opens tv in the parent directory"
+command = "tv dirs .."
+mode = "execute"
