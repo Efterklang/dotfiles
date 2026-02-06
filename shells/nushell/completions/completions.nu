@@ -1,28 +1,38 @@
-let carapace_completer = {|spans|
-  # if the current command is an alias, get it's expansion
-  let expanded_alias = (scope aliases | where name == $spans.0 | $in.0?.expansion?)
-
-  # overwrite
-  let spans = (if $expanded_alias != null  {
-    # put the first word of the expanded alias first in the span
-    $spans | skip 1 | prepend ($expanded_alias | split row " " | take 1)
-  } else {
-    $spans | skip 1 | prepend ($spans.0)
-  })
-
-  carapace $spans.0 nushell ...$spans
-  | from json
+let fish_completer = {|spans|
+    fish --command $"complete '--do-complete=($spans | str replace --all "'" "\\'" | str join ' ')'"
+    | from tsv --flexible --noheaders --no-infer
+    | rename value description
+    | update value {|row|
+      let value = $row.value
+      let need_quote = ['\' ',' '[' ']' '(' ')' ' ' '\t' "'" '"' "`"] | any {$in in $value}
+      if ($need_quote and ($value | path exists)) {
+        let expanded_path = if ($value starts-with ~) {$value | path expand --no-symlink} else {$value}
+        $'"($expanded_path | str replace --all "\"" "\\\"")"'
+      } else {$value}
+    }
 }
 
-let zoxide_completer = {|spans|
-  $spans | skip 1 | zoxide query -l ...$in | lines | where {|x| $x != $env.PWD }
+let carapace_completer = {|spans: list<string>|
+    CARAPACE_LENIENT=1 carapace $spans.0 nushell ...$spans | from json
 }
 
-let multiple_completers = {|spans|
-  match $spans.0 {
-    z => $zoxide_completer
-    _ => $carapace_completer
-  } | do $in $spans
+let external_completer = {|spans|
+    let expanded_alias = scope aliases
+    | where name == $spans.0
+    | get -o 0.expansion
+
+    let spans = if $expanded_alias != null {
+        $spans
+        | skip 1
+        | prepend ($expanded_alias | split row ' ' | take 1)
+    } else {
+        $spans
+    }
+
+    match $spans.0 {
+        nu | tv | bun | git | rclone => $fish_completer
+        _ => $carapace_completer
+    } | do $in $spans
 }
 
 $env.config.completions = {
@@ -32,8 +42,7 @@ $env.config.completions = {
   algorithm: "prefix" # prefix or fuzzy
   external: {
     enable: true
-    max_results: 100
-    completer: $multiple_completers
+    completer: $external_completer
   }
   use_ls_colors: true
 }
