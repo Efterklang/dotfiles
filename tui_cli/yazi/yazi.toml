@@ -52,14 +52,12 @@ reveal = [
 	{ run = 'explorer /select, "%1"', orphan = true, desc = "Reveal", for = "windows" },
 	{ run = '''exiftool "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show EXIF", for = "unix" },
 ]
+upload = [
+  { run = 'rclone copy "$@" bit_s4:vluv-space', desc = "Upload File To Bitiful Bucket"}
+]
 
 [open]
 rules = [
-	{ name = "*/", use = [
-		"edit",
-		"open",
-		"reveal",
-	] },
 	{ mime = "text/*", use = [
 		"edit",
 		"reveal",
@@ -71,6 +69,7 @@ rules = [
 	{ mime = "{audio,video}/*", use = [
 		"play",
 		"reveal",
+    "upload"
 	] },
 	{ mime = "inode/x-empty", use = [
 		"edit",
@@ -169,12 +168,3 @@ sort_by = "none"
 sort_reverse = false
 sort_sensitive = false
 
-[[plugin.prepend_fetchers]]
-id = "git"
-name = "*"
-run = "git"
-
-[[plugin.prepend_fetchers]]
-id = "git"
-name = "*/"
-run = "git"
