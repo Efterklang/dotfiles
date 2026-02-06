@@ -1,6 +1,6 @@
 vim.filetype.add({
-  extension = {
-    ["code-workspace"] = "jsonc",
-    ["json"] = "jsonc",
-  },
+	extension = {
+		["code-workspace"] = "jsonc",
+		["json"] = "jsonc",
+	},
 })
