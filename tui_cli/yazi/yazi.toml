@@ -3,7 +3,7 @@
 "$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
 [mgr]
-linemode = "none"
+linemode = "size"
 ratio = [1, 4, 3]
 scrolloff = 5
 show_hidden = true
@@ -29,74 +29,74 @@ edit = [
   { run = 'nvim "%*"', block = true, desc = "nvim", for = "windows" },
 ]
 code = [
-	{ run = 'code "$@"', orphan = true, desc = "VSCode", for = "unix" },
-	{ run = 'code "%1"', orphan = true, desc = "VSCode", for = "windows" },
+  { run = 'code "$@"', orphan = true, desc = "VSCode", for = "unix" },
+  { run = 'code "%1"', orphan = true, desc = "VSCode", for = "windows" },
 ]
 extract = [
-	{ run = 'unar "$1"', desc = "Extract here", for = "unix" },
-	{ run = 'unar "%1"', desc = "Extract here", for = "windows" },
+  { run = 'unar "$1"', desc = "Extract here", for = "unix" },
+  { run = 'unar "%1"', desc = "Extract here", for = "windows" },
 ]
 open = [
-	{ run = 'xdg-open "$@"', desc = "Open", for = "linux" },
-	{ run = 'open "$@"', desc = "Open", for = "macos" },
-	{ run = 'start "" "%1"', orphan = true, desc = "Open", for = "windows" },
+  { run = 'xdg-open "$@"', desc = "Open", for = "linux" },
+  { run = 'open "$@"', desc = "Open", for = "macos" },
+  { run = 'start "" "%1"', orphan = true, desc = "Open", for = "windows" },
 ]
 play = [
-	{ run = 'mpv "$@"', orphan = true, for = "unix" },
-	{ run = 'mpv "%1"', orphan = true, for = "windows" },
-	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
+  { run = 'mpv "$@"', orphan = true, for = "unix" },
+  { run = 'mpv "%1"', orphan = true, for = "windows" },
+  { run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
 ]
 reveal = [
-	{ run = 'xdg-open "$(dirname "$0")"', desc = "Reveal", for = "linux" },
-	{ run = 'open -R "$1"', desc = "Reveal", for = "macos" },
-	{ run = 'explorer /select, "%1"', orphan = true, desc = "Reveal", for = "windows" },
-	{ run = '''exiftool "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show EXIF", for = "unix" },
+  { run = 'xdg-open "$(dirname "$0")"', desc = "Reveal", for = "linux" },
+  { run = 'open -R "$1"', desc = "Reveal", for = "macos" },
+  { run = 'explorer /select, "%1"', orphan = true, desc = "Reveal", for = "windows" },
+  { run = '''exiftool "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show EXIF", for = "unix" },
 ]
 upload = [
-  { run = 'rclone copy "$@" bit_s4:vluv-space', desc = "Upload File To Bitiful Bucket"}
+  { run = 'rclone copy "$@" bit_s4:vluv-space', desc = "Upload File To Bitiful Bucket" },
 ]
 
 [open]
 rules = [
-	{ mime = "text/*", use = [
-		"edit",
-		"reveal",
-	] },
-	{ mime = "image/*", use = [
-		"open",
-		"reveal",
-	] },
-	{ mime = "{audio,video}/*", use = [
-		"play",
-		"reveal",
-    "upload"
-	] },
-	{ mime = "inode/x-empty", use = [
-		"edit",
-		"reveal",
-	] },
-	{ mime = "application/*zip", use = [
-		"extract",
-		"reveal",
-	] },
-	{ mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", use = [
-		"extract",
-		"reveal",
-	] },
-	{ mime = "application/json", use = [
-		"edit",
-		"reveal",
-	] },
-	{ mime = "*/javascript", use = [
-		"edit",
-		"reveal",
-	] },
-	{ mime = "*", use = [
-		"open",
-		"edit",
-		"reveal",
-		"code",
-	] },
+  { mime = "text/*", use = [
+    "edit",
+    "reveal",
+  ] },
+  { mime = "image/*", use = [
+    "open",
+    "reveal",
+  ] },
+  { mime = "{audio,video}/*", use = [
+    "play",
+    "reveal",
+    "upload",
+  ] },
+  { mime = "inode/x-empty", use = [
+    "edit",
+    "reveal",
+  ] },
+  { mime = "application/*zip", use = [
+    "extract",
+    "reveal",
+  ] },
+  { mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", use = [
+    "extract",
+    "reveal",
+  ] },
+  { mime = "application/json", use = [
+    "edit",
+    "reveal",
+  ] },
+  { mime = "*/javascript", use = [
+    "edit",
+    "reveal",
+  ] },
+  { mime = "*", use = [
+    "open",
+    "edit",
+    "reveal",
+    "code",
+  ] },
 ]
 
 [tasks]
@@ -168,3 +168,19 @@ sort_by = "none"
 sort_reverse = false
 sort_sensitive = false
 
+# Disable fetcher in Onedrive
+[[plugin.prepend_preloaders]]
+url = "/Users/gjx/Library/CloudStorage/OneDrive-Personal/*"
+run = "noop"
+
+[[plugin.prepend_fetchers]]
+id = "mime"
+url = "local://*"
+run = "mime-ext.local"
+prio = "high"
+
+[[plugin.prepend_fetchers]]
+id = "mime"
+url = "remote://*"
+run = "mime-ext.remote"
+prio = "high"
