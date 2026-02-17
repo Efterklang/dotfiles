@@ -61,3 +61,12 @@ require("yatline"):setup({
 require("smart-enter"):setup({
 	open_multi = true,
 })
+
+require("mime-ext.local"):setup({
+	with_exts = {
+		heic = "image/heic",
+		heif = "image/heif",
+		nu = "text/x-nushell",
+	},
+	fallback_file1 = true,
+})
