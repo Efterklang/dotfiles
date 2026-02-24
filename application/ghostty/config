@@ -9,7 +9,8 @@ theme = dark:Catppuccin Mocha, light:TokyoNight
 # theme = Catppuccin Mocha
 confirm-close-surface=false
 # font-family
-font-family = RecMonoCasual Nerd Font, Maple Mono NF CN
+font-family = RecMonoCasual Nerd Font
+font-family = Maple Mono NF CN
 window-title-font-family = Maple Mono NF CN
 # ss01: != and ===
 font-feature = "ss01"
@@ -38,7 +39,7 @@ quick-terminal-position = center
 font-feature = -calt, -liga, -dlig
 
 # shaders
-custom-shader = ./my_shaders/cursor.glsl
+# custom-shader = ./my_shaders/cursor.glsl
 # custom-shader = ./shaders/glitchy.glsl
 # custom-shader = ./shaders/bloom.glsl
 # custom-shader = ./shaders/retro-terminal.glsl
