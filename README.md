@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="image" src="https://github.com/user-attachments/assets/b5f6fdaa-37c2-4bb4-9cc4-d5df0086b82f" width="60%"/>
+  <img alt="dotfiles" src="https://github.com/user-attachments/assets/b5f6fdaa-37c2-4bb4-9cc4-d5df0086b82f" width="60%"/>
   <br>
   Dotfiles
   <br>
@@ -7,108 +7,150 @@
   <img src="https://img.shields.io/github/license/Efterklang/dotfiles?style=for-the-badge&labelColor=%23222436&color=%235771AA" alt="License">
 </h1>
 
-For installation instructions, refer to [docs/INSTALL.md](docs/INSTALL.md)
+<p align="center">
+  Personal development environment configurations for Windows, macOS, and Linux
+</p>
 
+---
+
+## Table of Contents
+
+- [Installation](#installation)
 - [VSCode](#vscode)
 - [Music Player](#music-player)
-- [Bar](#bar)
+- [Status Bar](#status-bar)
 - [Browser](#browser)
 - [Terminal](#terminal)
   - [Shell](#shell)
   - [Terminal Multiplexer](#terminal-multiplexer)
-  - [Fuzzy finders](#fuzzy-finders)
+  - [Fuzzy Finders](#fuzzy-finders)
   - [TUI/CLI Tools](#tuicli-tools)
+
+---
+
+## Installation
+
+For detailed installation instructions, please refer to [docs/INSTALL.md](docs/INSTALL.md).
+
+---
 
 ## VSCode
 
-- Theme: Catppuccin Mocha
-- Icon: Catppuccin Noctis Icons
-- Custom CSS: check [this file](https://github.com/Efterklang/dotfiles/blob/main/application/vscode/custom.css)
-- Settings.json: check [this file](https://github.com/Efterklang/dotfiles/blob/main/application/vscode/settings.json)
+| Setting | Value |
+|---------|-------|
+| Theme | Catppuccin Mocha |
+| Icon | Catppuccin Noctis Icons |
 
-| File/Directory     | Description                                  |
-| ------------------ | -------------------------------------------- |
-| `custom.css`       | Custom CSS styling for VSCode                |
-| `keybindings.json` | Keyboard shortcuts configuration             |
-| `settings.json`    | VSCode global settings                       |
-| `snippets`         | Code snippets (markdown, python, java, etc.) |
+| File/Directory | Description |
+|----------------|-------------|
+| `custom.css` | Custom CSS styling for VSCode |
+| `keybindings.json` | Keyboard shortcuts configuration |
+| `settings.json` | VSCode global settings |
+| `snippets/` | Code snippets (markdown, python, java, etc.) |
 
-![1761896833616](assets/vscode.png)
+![VSCode](assets/vscode.png)
+
+---
 
 ## Music Player
 
-|            Tauon            | mpd + rmpc + cava        |
-| :-------------------------: | ------------------------ |
+| TauonMusicBox | mpd + rmpc + cava |
+|:-------------:|:----------------:|
 | ![tauon](assets/tauon.webp) | ![mpd](assets/rmpc.webp) |
 
-## Bar
+---
 
-- Windows: Yasb, other options: glazewm, zebar
-- MacOS: SketchyBar, read [config](https://github.com/Efterklang/sketchybar)
+## Status Bar
 
-| Yasb(Windows)             | SketchyBar(Mac)                       |
-| ------------------------- | ------------------------------------- |
+| Platform | Application |
+|----------|-------------|
+| Windows | Yasb |
+| macOS | SketchyBar |
+
+| Yasb (Windows) | SketchyBar (macOS) |
+|:--------------:|:------------------:|
 | ![yasb](assets/yasb.webp) | ![sketchybar](assets/sketchybar.webp) |
+
+> **Note:** For Windows, alternative options include GlazeWM and Zebar. For macOS configuration details, see [SketchyBar config](https://github.com/Efterklang/sketchybar).
+
+---
 
 ## Browser
 
-Extension List
+### Extensions
 
-- [**Stylus**](https://add0n.com/stylus.html)
-  - User styles manager for customizing website appearance
-- [**Vimium C**](https://github.com/gdh1995/vimium-c)
-  - Keyboard-based navigation and tab operations
-  - Features advanced omnibar functionality
+| Extension | Description |
+|-----------|-------------|
+| [Stylus](https://add0n.com/stylus.html) | User styles manager for customizing website appearance |
+| [Vimium C](https://github.com/gdh1995/vimium-c) | Keyboard-based navigation and tab operations with advanced omnibar functionality |
 
-|                Stylus                |             Vimium C              |
-| :----------------------------------: | :-------------------------------: |
-| ![Stylus Github](assets/stylus.webp) | ![vimium-c](assets/vimium_c.webp) |
+| Stylus | Vimium C |
+|:------:|:---------:|
+| ![stylus](assets/stylus.webp) | ![vimium-c](assets/vimium_c.webp) |
+
+---
 
 ## Terminal
 
 ### Shell
 
-I use nushell as my default shell. It has aesthetic and powerful features.
+Nushell serves as the primary shell, providing a modern and powerful command-line experience with excellent aesthetics.
 
-![nushell](assets/nushell.png)
+![Nushell](assets/nushell.png)
 
 ### Terminal Multiplexer
 
-|            Zellij             |           Tmux            |
-| :---------------------------: | :-----------------------: |
-| ![zellij](assets/zellij.webp) | ![Tmux](assets/tmux.webp) |
+| Zellij | Tmux |
+|:------:|:----:|
+| ![zellij](assets/zellij.webp) | ![tmux](assets/tmux.webp) |
 
-### Fuzzy finders
+### Fuzzy Finders
 
-|           Fzf           |              Television               |
-| :---------------------: | :-----------------------------------: |
-| ![Fzf](assets/fzf.webp) | ![Television](assets/television.webp) |
+| fzf | Television |
+|:---:|:----------:|
+| ![fzf](assets/fzf.webp) | ![television](assets/television.webp) |
 
 ### TUI/CLI Tools
 
+#### Command Replacements
 
-| Command | Replacement |
-| ------- | ----------- |
-| diff    | delta       |
-| cd      | zoxide      |
-| ls      | eza, lla    |
-| cat     | bat         |
-| grep    | ripgrep     |
-| vim     | nvim        |
-| git     | lazygit     |
-| top     | btop        |
-| ps      | procs       |
-| ranger  | yazi        |
+| Original Command | Replacement |
+|-----------------|-------------|
+| `diff` | delta |
+| `cd` | zoxide |
+| `ls` | eza, lla |
+| `cat` | bat |
+| `grep` | ripgrep |
+| `vim` | nvim |
+| `git` | lazygit |
+| `top` | btop |
+| `ps` | procs |
+| `ranger` | yazi |
 
+#### Tool Screenshots
 
-|            Delta             |             Zoxide              |
-| :--------------------------: | :-----------------------------: |
-| ![Delta](assets/delta.webp)  |  ![Zoxide](assets/zoxide.webp)  |
-|          eza & lla           |               Bat               |
-| ![eza](assets/eza_lla.webp)  |     ![Bat](assets/bat.webp)     |
-|            NeoVim            |             LazyGit             |
-| ![LazyVim](assets/nvim.webp) | ![LazyGit](assets/lazygit.webp) |
-|             btop             |              Procs              |
-|  ![btop](assets/btop.webp)   |   ![Procs](assets/procs.webp)   |
-|             Yazi             |             Scooter             |
-|  ![Yazi](assets/yazi.webp)   | ![Scooter](assets/scooter.webp) |
+| Delta | Zoxide |
+|:-----:|:------:|
+| ![delta](assets/delta.webp) | ![zoxide](assets/zoxide.webp) |
+
+| eza & lla | bat |
+|:---------:|:---:|
+| ![eza](assets/eza_lla.webp) | ![bat](assets/bat.webp) |
+
+| NeoVim | LazyGit |
+|:------:|:-------:|
+| ![nvim](assets/nvim.webp) | ![lazygit](assets/lazygit.webp) |
+
+| btop | Procs |
+|:----:|:-----:|
+| ![btop](assets/btop.webp) | ![procs](assets/procs.webp) |
+
+| Yazi | Scooter |
+|:----:|:-------:|
+| ![yazi](assets/yazi.webp) | ![scooter](assets/scooter.webp) |
+
+---
+
+## License
+
+This project is licensed under the MIT License.
