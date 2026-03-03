@@ -129,43 +129,43 @@ const ruleProviders = {
   "openai": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/classical/openai.yaml",
+    "url": "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/classical/openai.yaml",
     "path": "./ruleset/MetaCubeX/openai.yaml"
   },
   "pikpak": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/classical/pikpak.yaml",
+    "url": "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/classical/pikpak.yaml",
     "path": "./ruleset/MetaCubeX/pikpak.yaml"
   },
   "anthropic": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/classical/anthropic.yaml",
+    "url": "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/classical/anthropic.yaml",
     "path": "./ruleset/MetaCubeX/anthropic.yaml"
   },
   "google-gemini": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/classical/google-gemini.yaml",
+    "url": "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/classical/google-gemini.yaml",
     "path": "./ruleset/MetaCubeX/google-gemini.yaml"
   },
   "xai": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/classical/xai.yaml",
+    "url": "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/classical/xai.yaml",
     "path": "./ruleset/MetaCubeX/xai.yaml"
   },
   "perplexity": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/classical/perplexity.yaml",
+    "url": "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/classical/perplexity.yaml",
     "path": "./ruleset/MetaCubeX/perplexity.yaml"
   },
   "microsoft": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/classical/microsoft.yaml",
+    "url": "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/classical/microsoft.yaml",
     "path": "./ruleset/MetaCubeX/microsoft.yaml"
   },
 };
@@ -184,12 +184,12 @@ const rules = [
   "DOMAIN-SUFFIX,xn--ngstr-lra8j.com,⚙️ 节点选择", // Google Play下载服务
   "DOMAIN,v2rayse.com,⚙️ 节点选择", // V2rayse节点工具
   // MetaCubeX 规则集
-  "RULE-SET,openai,💸 ChatGPT-Gemini-XAI-Perplexity",
+  "RULE-SET,openai,🤖 AI服务",
   "RULE-SET,pikpak,🅿️ PikPak",
-  "RULE-SET,anthropic,💵 Claude",
-  "RULE-SET,google-gemini,💸 ChatGPT-Gemini-XAI-Perplexity",
-  "RULE-SET,xai,💸 ChatGPT-Gemini-XAI-Perplexity",
-  "RULE-SET,perplexity,💸 ChatGPT-Gemini-XAI-Perplexity",
+  "RULE-SET,anthropic,🤖 AI服务",
+  "RULE-SET,google-gemini,🤖 AI服务",
+  "RULE-SET,xai,🤖 AI服务",
+  "RULE-SET,perplexity,🤖 AI服务",
   // Loyalsoldier 规则集
   "RULE-SET,applications,🔗 全局直连",
   "RULE-SET,private,🔗 全局直连",
@@ -268,21 +268,12 @@ const proxyGroupsConfig =  [
     },
     {
       ...groupBaseOption,
-      // "url": "https://chatgpt.com",
-      // "expected-status": "200",
-      "name": "💸 ChatGPT-Gemini-XAI-Perplexity",
+      "name": "🤖 AI服务",
       "type": "select",
       "include-all": true,
       "exclude-filter": "(?i)港|hk|hongkong|hong kong|俄|ru|russia|澳|macao",
+      "proxies": ["⚙️ 节点选择", "♻️ 延迟选优", "🚑 故障转移", "⚖️ 负载均衡(散列)", "☁️ 负载均衡(轮询)", "🔗 全局直连"],
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg"
-    },
-    {
-      ...groupBaseOption,
-      "name": "💵 Claude",
-      "type": "select",
-      "proxies": ["⚙️ 节点选择", "🔗 全局直连", "♻️ 延迟选优", "🚑 故障转移", "⚖️ 负载均衡(散列)", "☁️ 负载均衡(轮询)"],
-      "include-all": true,
-      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/claude.svg"
     },
     {
       ...groupBaseOption,
