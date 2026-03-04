@@ -3,7 +3,7 @@
 app_log_level: warn
 app_log_max_size: null
 app_log_max_count: null
-language: zh
+language: en
 theme_mode: system
 tray_event: null
 env_type: nushell
@@ -43,7 +43,7 @@ theme_setting:
   error_color: '#f38ba8'
   warning_color: '#fab387'
   success_color: '#a6e3a1'
-  font_family: maple mono nf cn
+  font_family: RecMonoCasual Nerd Font
   css_injection: null
 web_ui_list: null
 clash_core: verge-mihomo-alpha
