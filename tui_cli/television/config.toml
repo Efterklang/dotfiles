@@ -1,7 +1,7 @@
 # ----------------------------------------------------------------------------
 tick_rate = 50
 default_channel = "files"
-
+shell = "zsh"
 # Set to 0 to disable history functionality entirely
 history_size = 200
 
@@ -14,7 +14,7 @@ global_history = false
 # Whether to use nerd font icons in the UI
 # This option requires a font patched with Nerd Font in order to properly
 # display glyphs (see https://www.nerdfonts.com/ for more information)
-use_nerd_font_icons = false
+use_nerd_font_icons = true
 # How much space to allocate for the UI (in percentage of the screen)
 # ┌───────────────────────────────────────┐
 # │                                       │

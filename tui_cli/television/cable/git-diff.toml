@@ -29,5 +29,6 @@ mode = "fork"
 
 [actions.edit]
 description = "Open the selected file in editor"
-command = "nvim '{}'"
+command = "${EDITOR:-vim} '{}'"
+shell = "bash"
 mode = "execute"

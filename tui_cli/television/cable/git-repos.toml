@@ -26,5 +26,6 @@ mode = "execute"
 
 [actions.edit]
 description = "Open the repository in editor"
-command = "nvim '{}'"
+command = "${EDITOR:-vim} '{}'"
+shell = "bash"
 mode = "execute"
