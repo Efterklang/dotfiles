@@ -1,6 +1,6 @@
 {
 	"front matter": {
-		"prefix": "-",
+		"prefix": "front matter",
 		"body": ["---", "cover:", "tags:", "---"],
 		"description": "Create front matter block"
 	},
@@ -18,7 +18,7 @@
 	"animated_image": {
 		"prefix": "video",
 		"body": [
-			"<video autoplay loop muted playinline>",
+			"<video autoplay loop muted playsinline>",
 			"  <source src=\"$1\" type=\"video/webm\">",
 			"</video>"
 		]
@@ -75,6 +75,7 @@
 	"Accordion": {
 		"prefix": ["x-accordion", "accordion"],
 		"body": [
+			"<script data-swup-reload-script type=\"module\" src=\"/js/components/accordion.js\"></script>",
 			"<x-accordion>",
 			"  <accordion-item title=\"$1\">",
 			"    $2",
@@ -82,5 +83,36 @@
 			"</x-accordion>"
 		],
 		"description": "Accordion custom element with expandable items"
+	},
+	"AccordionItem": {
+		"prefix": ["x-accordion_item", "accordion_item"],
+		"body": [
+			"  <accordion-item title=\"$1\">",
+			"    $2",
+			"  </accordion-item>"
+		],
+		"description": "Accordion custom element with expandable items"
+	},
+	"TextImageSection": {
+		"prefix": ["text-image", "ti-section"],
+		"body": [
+			"<script data-swup-reload-script type=\"module\" src=\"/js/components/text-image-section.js\"></script>",
+			"<text-image-section image=\"$1\" alt=\"$2\" width=\"$3\">",
+			"  $0",
+			"</text-image-section>"
+		],
+		"description": "Text-image section with optional caption (alt) and width"
+	},
+	"ImageCarousel": {
+		"prefix": ["image-carousel", "carousel"],
+		"body": [
+			"<script data-swup-reload-script type=\"module\" src=\"/js/components/image-carousel.js\"></script>",
+			"<image-carousel${1/(autoplay)/(?: autoplay)/} interval=\"$2\" ratio=\"$3\">",
+			"  ![]($4)",
+			"  ![]($5)",
+			"  ![]($6)",
+			"</image-carousel>$0"
+		],
+		"description": "Image carousel with autoplay, interval and ratio support"
 	}
 }

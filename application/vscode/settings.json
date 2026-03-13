@@ -52,7 +52,7 @@
     "editor.unicodeHighlight.ambiguousCharacters": false,
     "editor.cursorBlinking": "smooth",
     "editor.cursorStyle": "block",
-    "editor.fontFamily": "Maple Mono NF CN, Monaspace Radon, Monocraft Nerd Font, Google Sans Code, Hack Nerd Font, SF Mono, SF Pro, JetbrainsMono Nerd Font, Monaspace Argon, MonoLisa, Segoe UI Variable, Noto Sans SC, Monaspace Xenon, Franklin Gothic, Cascadia Code, Kristen ITC, Monaspace Neon, DejaVu Sans Mono, Inconsolata, Monaspace Krypton",
+    "editor.fontFamily": "RecMonoCasual Nerd Font,Maple Mono NF CN, Monaspace Radon, Monocraft Nerd Font, Google Sans Code, Hack Nerd Font, SF Mono, SF Pro, JetbrainsMono Nerd Font, Monaspace Argon, MonoLisa, Segoe UI Variable, Noto Sans SC, Monaspace Xenon, Franklin Gothic, Cascadia Code, Kristen ITC, Monaspace Neon, DejaVu Sans Mono, Inconsolata, Monaspace Krypton",
     "editor.fontLigatures": true,
     "editor.fontVariations": true,
     "editor.fontSize": 16,
@@ -282,7 +282,9 @@
     },
     "custom-ui-style.external.imports": [
         "file:///Users/gjx/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js",
-        "file:///Users/gjx/Projects/dotfiles/application/vscode/custom.css"
+        "file:///Users/gjx/Projects/dotfiles/application/vscode/custom.css",
+        "file:///Users/gjx/Library/Application%20Support/Code/User/globalStorage/why-trv.neovim-statusline/statusline.css",
+        "file:///Users/gjx/.vscode/extensions/why-trv.neovim-statusline-0.2.1/assets/statusline.min.js"
     ],
     "custom-ui-style.external.loadStrategy": "cache",
     // ╭───────────────────────────────────────────────────────╮
