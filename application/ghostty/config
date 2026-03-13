@@ -40,7 +40,7 @@ quick-terminal-position = center
 font-feature = -calt, -liga, -dlig
 
 # shaders
-# custom-shader = ./my_shaders/cursor.glsl
+custom-shader = ./my_shaders/cursor.glsl
 # custom-shader = ./shaders/glitchy.glsl
 # custom-shader = ./shaders/bloom.glsl
 # custom-shader = ./shaders/retro-terminal.glsl
