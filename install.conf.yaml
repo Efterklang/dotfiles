@@ -25,7 +25,6 @@
     ~/.config/fastfetch: tui_cli/fastfetch
     ~/.config/gum: tui_cli/gum
     ~/.config/scooter: tui_cli/scooter
-    ~/.config/singbox: application/singbox
     ~/.config/mpv: tui_cli/mpv
     ~/.config/rmpc: tui_cli/rmpc
     ~/.config/git: ./tui_cli/git
