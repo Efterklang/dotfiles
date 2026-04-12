@@ -18,5 +18,10 @@ use = "yazi-rs/plugins:mime-ext"
 rev = "88990a6"
 hash = "8b177921e50732b2c8e9d71aa5956270"
 
+[[plugin.deps]]
+use = "moxuze/television"
+rev = "8d9ce62"
+hash = "b82055b61933310ebfa7ccf5239d5c46"
+
 [flavor]
 deps = []
