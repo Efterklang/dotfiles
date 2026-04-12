@@ -65,6 +65,7 @@ rules = [
   { mime = "image/*", use = [
     "open",
     "reveal",
+    "upload",
   ] },
   { mime = "{audio,video}/*", use = [
     "play",
@@ -168,10 +169,11 @@ sort_by = "none"
 sort_reverse = false
 sort_sensitive = false
 
-# Disable fetcher in Onedrive
-[[plugin.prepend_preloaders]]
-url = "/Users/gjx/Library/CloudStorage/OneDrive-Personal/*"
+[[plugin.prepend_fetchers]]
+id = "mime"
+url = "local:///Users/gjx/Library/CloudStorage/OneDrive-Personal/**/*.{mp4,mkv,mov,avi,wmv,...}"
 run = "noop"
+prio = "high"
 
 [[plugin.prepend_fetchers]]
 id = "mime"
