@@ -10,19 +10,18 @@ const loyalsoldierBase =
 const iconBase =
 	"https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/";
 
-
 // ====== 自动生成的最佳DNS配置 ======
 // 国内DNS
 const domesticNameservers = [
-  "https://223.5.5.5/dns-query", // 阿里DoH (13.1ms)
-  "https://dns.alidns.com/dns-query", // AliDNS (14.7ms)
+	"https://223.5.5.5/dns-query", // 阿里DoH (13.1ms)
+	"https://dns.alidns.com/dns-query", // AliDNS (14.7ms)
 ];
 
 // 国外DNS
 const foreignNameservers = [
-  "https://dns.google/resolve", // Google (3.4ms)
-  "https://dns.quad9.net/dns-query", // Quad9 (86.6ms)
-  "https://cloudflare-dns.com/dns-query", // Cloudflare (91.7ms)
+	"https://dns.google/resolve", // Google (3.4ms)
+	"https://dns.quad9.net/dns-query", // Quad9 (86.6ms)
+	"https://cloudflare-dns.com/dns-query", // Cloudflare (91.7ms)
 ];
 
 // DNS配置
@@ -75,8 +74,16 @@ const ruleProviderCommon = {
 	format: "yaml",
 	interval: 86400,
 };
-const mrsDomainBase = { ...ruleProviderCommon, behavior: "domain", format: "mrs" };
-const mrsIpcidrBase = { ...ruleProviderCommon, behavior: "ipcidr", format: "mrs" };
+const mrsDomainBase = {
+	...ruleProviderCommon,
+	behavior: "domain",
+	format: "mrs",
+};
+const mrsIpcidrBase = {
+	...ruleProviderCommon,
+	behavior: "ipcidr",
+	format: "mrs",
+};
 const classicalBase = { ...ruleProviderCommon, behavior: "classical" };
 // 规则集配置
 const ruleProviders = {
@@ -266,7 +273,7 @@ function main(config) {
 		throw new Error("配置文件中未找到任何代理");
 	}
 
-	config["dns"] = dnsConfig;
+	// config["dns"] = dnsConfig;
 	config["proxy-groups"] = proxyGroupsConfig;
 	config["rule-providers"] = ruleProviders;
 	config["rules"] = rules;
