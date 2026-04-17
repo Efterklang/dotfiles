@@ -10,20 +10,21 @@ const loyalsoldierBase =
 const iconBase =
 	"https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/";
 
-// 国内DNS服务器
+
+// ====== 自动生成的最佳DNS配置 ======
+// 国内DNS
 const domesticNameservers = [
-	"https://223.5.5.5/dns-query", // 阿里 DoH
-	"https://dns.alidns.com/dns-query", // 阿里云
-	"https://doh.pub/dns-query", // 腾讯 DoH
+  "https://223.5.5.5/dns-query", // 阿里DoH (13.1ms)
+  "https://dns.alidns.com/dns-query", // AliDNS (14.7ms)
 ];
-// 国外DNS服务器
+
+// 国外DNS
 const foreignNameservers = [
-	"https://1.1.1.1/dns-query", // Cloudflare
-	"https://8.8.8.8/dns-query#ecs=1.1.1.1/24&ecs-override=true", // Google
-	"https://9.9.9.9/dns-query", // Quad9
-	"tls://1.1.1.1:853", // Cloudflare DoT
-	"tls://8.8.8.8:853", // Google DoT
+  "https://dns.google/resolve", // Google (3.4ms)
+  "https://dns.quad9.net/dns-query", // Quad9 (86.6ms)
+  "https://cloudflare-dns.com/dns-query", // Cloudflare (91.7ms)
 ];
+
 // DNS配置
 const dnsConfig = {
 	enable: true,
@@ -79,16 +80,6 @@ const mrsIpcidrBase = { ...ruleProviderCommon, behavior: "ipcidr", format: "mrs"
 const classicalBase = { ...ruleProviderCommon, behavior: "classical" };
 // 规则集配置
 const ruleProviders = {
-	apple: {
-		...mrsDomainBase,
-		url: `${metacubeGeositeBase}apple.mrs`,
-		path: "./ruleset/MetaCubeX/apple.mrs",
-	},
-	google: {
-		...mrsDomainBase,
-		url: `${metacubeGeositeBase}google.mrs`,
-		path: "./ruleset/MetaCubeX/google.mrs",
-	},
 	proxy: {
 		...mrsDomainBase,
 		url: `${metacubeGeositeBase}proxy.mrs`,
@@ -161,16 +152,6 @@ const ruleProviders = {
 		url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft@cn.mrs",
 		path: "./ruleset/MetaCubeX/microsoft@cn.mrs",
 	},
-	microsoft: {
-		...mrsDomainBase,
-		url: `${metacubeGeositeBase}microsoft.mrs`,
-		path: "./ruleset/MetaCubeX/microsoft.mrs",
-	},
-	pikpak: {
-		...classicalBase,
-		url: `${metacubeClassicalBase}pikpak.yaml`,
-		path: "./ruleset/MetaCubeX/pikpak.yaml",
-	},
 	nsfw: {
 		...classicalBase,
 		url: `${metacubeClassicalBase}category-porn.yaml`,
@@ -182,13 +163,11 @@ const rules = [
 	// 额外自定义规则
 	"PROCESS-NAME,steam.exe,🔗 全局直连",
 	// "PROCESS-NAME,OneDrive,🔗 全局直连",
-	"DOMAIN-SUFFIX,vluv.space,🔗 全局直连",
 	"DOMAIN-SUFFIX,googleapis.cn,⚙️ 节点选择", // Google服务
 	"DOMAIN-SUFFIX,gstatic.com,⚙️ 节点选择", // Google静态资源
 	"DOMAIN-SUFFIX,xn--ngstr-lra8j.com,⚙️ 节点选择", // Google Play下载服务
 	"DOMAIN,v2rayse.com,⚙️ 节点选择", // V2rayse节点工具
 	"RULE-SET,openai,🤖 AI服务",
-	"RULE-SET,pikpak,🅿️ PikPak",
 	"RULE-SET,anthropic,🤖 AI服务",
 	"RULE-SET,google-gemini,🤖 AI服务",
 	"RULE-SET,xai,🤖 AI服务",
@@ -196,9 +175,6 @@ const rules = [
 	"RULE-SET,nsfw,🔞 NSFW",
 	"RULE-SET,private,🔗 全局直连",
 	"RULE-SET,microsoft-cn,🔗 全局直连",
-	"RULE-SET,microsoft,Ⓜ️ 微软服务",
-	"RULE-SET,apple,🍎 苹果服务",
-	"RULE-SET,google,📢 谷歌服务",
 	"RULE-SET,proxy,⚙️ 节点选择",
 	"RULE-SET,gfw,⚙️ 节点选择",
 	"RULE-SET,tld-not-cn,⚙️ 节点选择",
@@ -221,7 +197,7 @@ const groupBaseOption = {
 	hidden: false,
 };
 // 共享代理列表
-const autoGroups = ["♻️ 延迟选优", "🚑 故障转移", "⚖️ 负载均衡(散列)", "☁️ 负载均衡(轮询)"];
+const autoGroups = ["♻️ 延迟选优"];
 const proxyLeadProxies = ["⚙️ 节点选择", ...autoGroups, "🔗 全局直连"];
 const directSecondProxies = ["⚙️ 节点选择", "🔗 全局直连", ...autoGroups];
 const directLeadProxies = ["🔗 全局直连", "⚙️ 节点选择", ...autoGroups];
@@ -245,67 +221,12 @@ const proxyGroupsConfig = [
 	},
 	{
 		...groupBaseOption,
-		name: "🚑 故障转移",
-		type: "fallback",
-		"include-all": true,
-		icon: `${iconBase}ambulance.svg`,
-	},
-	{
-		...groupBaseOption,
-		name: "⚖️ 负载均衡(散列)",
-		type: "load-balance",
-		strategy: "consistent-hashing",
-		"include-all": true,
-		icon: `${iconBase}merry_go.svg`,
-	},
-	{
-		...groupBaseOption,
-		name: "☁️ 负载均衡(轮询)",
-		type: "load-balance",
-		strategy: "round-robin",
-		"include-all": true,
-		icon: `${iconBase}balance.svg`,
-	},
-	{
-		...groupBaseOption,
 		name: "🤖 AI服务",
 		type: "select",
 		"include-all": true,
 		"exclude-filter": "(?i)港|hk|hongkong|hong kong|俄|ru|russia|澳|macao",
 		proxies: proxyLeadProxies,
 		icon: `${iconBase}chatgpt.svg`,
-	},
-	{
-		...groupBaseOption,
-		name: "🅿️ PikPak",
-		type: "select",
-		proxies: directSecondProxies,
-		"include-all": true,
-		icon: `${iconBase}link.svg`,
-	},
-	{
-		...groupBaseOption,
-		name: "📢 谷歌服务",
-		type: "select",
-		proxies: proxyLeadProxies,
-		"include-all": true,
-		icon: `${iconBase}google.svg`,
-	},
-	{
-		...groupBaseOption,
-		name: "🍎 苹果服务",
-		type: "select",
-		proxies: proxyLeadProxies,
-		"include-all": true,
-		icon: `${iconBase}apple.svg`,
-	},
-	{
-		...groupBaseOption,
-		name: "Ⓜ️ 微软服务",
-		type: "select",
-		proxies: directSecondProxies,
-		"include-all": true,
-		icon: `${iconBase}microsoft.svg`,
 	},
 	{
 		...groupBaseOption,
@@ -322,15 +243,6 @@ const proxyGroupsConfig = [
 		"include-all": true,
 		proxies: proxyLeadProxies,
 		icon: `${iconBase}block.svg`,
-	},
-	{
-		...groupBaseOption,
-		name: "🔰 低倍率节点",
-		type: "url-test",
-		tolerance: 50,
-		"include-all": true,
-		filter: "(?i)0\\.\\d+x|×0\\.\\d+|低倍率",
-		icon: `${iconBase}speed.svg`,
 	},
 	{
 		...groupBaseOption,

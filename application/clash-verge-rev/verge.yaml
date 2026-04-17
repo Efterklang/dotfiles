@@ -4,7 +4,7 @@ app_log_level: warn
 app_log_max_size: null
 app_log_max_count: null
 language: en
-theme_mode: system
+theme_mode: dark
 tray_event: null
 env_type: nushell
 start_page: /
@@ -21,7 +21,7 @@ tun_tray_icon: true
 enable_tun_mode: true
 enable_auto_launch: true
 enable_silent_start: true
-enable_system_proxy: false
+enable_system_proxy: true
 enable_proxy_guard: false
 enable_bypass_check: null
 enable_dns_settings: true
