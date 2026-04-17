@@ -1,15 +1,14 @@
-# Clash Verge DNS Config
-
 dns:
+  default-nameserver:
+  - system
+  - 223.6.6.6
+  - 8.8.8.8
+  - 2400:3200::1
+  - 2001:4860:4860::8888
+  direct-nameserver: []
+  direct-nameserver-follow-policy: false
   enable: true
-  listen: :53
   enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
-  fake-ip-filter-mode: blacklist
-  prefer-h3: false
-  respect-rules: false
-  use-hosts: false
-  use-system-hosts: false
   fake-ip-filter:
   - '*.lan'
   - '*.local'
@@ -21,32 +20,30 @@ dns:
   - localhost.ptlogin2.qq.com
   - '*.msftncsi.com'
   - www.msftconnecttest.com
-  default-nameserver:
-  - system
-  - 223.6.6.6
-  - 8.8.8.8
-  - 2400:3200::1
-  - 2001:4860:4860::8888
-  nameserver:
-  - 8.8.8.8
-  - https://doh.pub/dns-query
-  - https://dns.alidns.com/dns-query
+  fake-ip-filter-mode: blacklist
+  fake-ip-range: 198.18.0.1/16
   fallback: []
-  nameserver-policy: {}
-  proxy-server-nameserver:
-  - https://doh.pub/dns-query
-  - https://dns.alidns.com/dns-query
-  - tls://223.5.5.5
-  direct-nameserver: []
-  direct-nameserver-follow-policy: false
   fallback-filter:
+    domain:
+    - +.google.com
+    - +.facebook.com
+    - +.youtube.com
     geoip: true
     geoip-code: CN
     ipcidr:
     - 240.0.0.0/4
     - 0.0.0.0/32
-    domain:
-    - +.google.com
-    - +.facebook.com
-    - +.youtube.com
-hosts: {}
+  ipv6: true
+  listen: :53
+  nameserver:
+  - 8.8.8.8
+  - https://doh.pub/dns-query
+  - https://dns.alidns.com/dns-query
+  prefer-h3: false
+  proxy-server-nameserver:
+  - https://doh.pub/dns-query
+  - https://dns.alidns.com/dns-query
+  - tls://223.5.5.5
+  respect-rules: false
+  use-hosts: false
+  use-system-hosts: false
