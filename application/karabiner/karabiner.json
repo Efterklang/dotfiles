@@ -27,6 +27,29 @@
                         ]
                     },
                     {
+                        "description": "F12 → Cmd+Opt+I in Safari (Dev Tools)",
+                        "manipulators": [
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "f12"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "i",
+                                        "modifiers": ["left_command", "left_option"]
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "type": "frontmost_application_if",
+                                        "bundle_identifiers": ["^com\\.apple\\.Safari$"]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
                         "description": "Enhanced CapsLock",
                         "manipulators": [
                             {
