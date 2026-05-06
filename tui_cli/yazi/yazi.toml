@@ -1,6 +1,5 @@
 # A TOML linter such as https://taplo.tamasfe.dev/ can use this schema to validate your config.
 # If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
-"$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
 [mgr]
 linemode = "size"
@@ -171,18 +170,21 @@ sort_sensitive = false
 
 [[plugin.prepend_fetchers]]
 id = "mime"
+group = "mime"
 url = "local:///Users/gjx/Library/CloudStorage/OneDrive-Personal/**/*.{mp4,mkv,mov,avi,wmv,...}"
 run = "noop"
 prio = "high"
 
 [[plugin.prepend_fetchers]]
 id = "mime"
+group = "mime"
 url = "local://*"
 run = "mime-ext.local"
 prio = "high"
 
 [[plugin.prepend_fetchers]]
 id = "mime"
+group = "mime"
 url = "remote://*"
 run = "mime-ext.remote"
 prio = "high"
