@@ -1,6 +1,5 @@
 # A TOML linter such as https://taplo.tamasfe.dev/ can use this schema to validate your config.
 # If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
-"$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
 
 [mgr]
 
@@ -715,12 +714,12 @@ run = "plugin television -- text --text"
 desc = "Edit a file via television text"
 
 [[mgr.prepend_keymap]]
-on = "z"
+on = "f"
 run = "plugin television -- files"
 desc = "Jump to a file via television files"
 
 [[mgr.prepend_keymap]]
-on = "Z"
+on = "z"
 run = """plugin television -- \
   zoxide \
   --tv-no-remote \

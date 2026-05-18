@@ -1,0 +1,30 @@
+{
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
+  "project_panel": {
+    "dock": "left",
+  },
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "git_panel": {
+    "dock": "left",
+  },
+  "theme": {
+    "mode": "dark",
+    "light": "Catppuccin Iced Latte (Blur)",
+    "dark": "Catppuccin Mocha",
+  },
+  "vim_mode": true,
+}

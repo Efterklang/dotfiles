@@ -1,0 +1,36 @@
+#! /usr/bin/env nu
+
+def main [
+    ts_file: path  # 要转换的 ts 文件路径
+] {
+    if not ($ts_file | path exists) {
+        print $"Error: file not found: ($ts_file)"
+        exit 1
+    }
+
+    if (which ffmpeg | length) == 0 {
+        print "ffmpeg not found. Install via: brew install ffmpeg"
+        exit 1
+    }
+
+    let mp4_file = ($ts_file | path parse | update extension "mp4" | path join)
+
+    print $"Converting ($ts_file) → ($mp4_file)"
+
+    try {
+        ^ffmpeg -hide_banner -loglevel warning -stats -i $ts_file -c copy -movflags +faststart -y $mp4_file
+    } catch {|err|
+        print $"ffmpeg failed: ($err.msg)"
+        exit 1
+    }
+
+    print $"Done: ($mp4_file)"
+
+    let answer = (input "Delete original .ts file? [y/N]: ")
+    if ($answer | str downcase | str trim) in ["y" "yes"] {
+        rm $ts_file
+        print $"Deleted: ($ts_file)"
+    } else {
+        print $"Kept: ($ts_file)"
+    }
+}

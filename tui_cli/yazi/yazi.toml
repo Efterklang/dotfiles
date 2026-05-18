@@ -1,6 +1,5 @@
 # A TOML linter such as https://taplo.tamasfe.dev/ can use this schema to validate your config.
 # If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
-"$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
 [mgr]
 linemode = "size"
@@ -16,9 +15,9 @@ sort_sensitive = false
 [preview]
 cache_dir = ""
 image_filter = "triangle"
-image_quality = 75
-max_height = 3000
-max_width = 3000
+image_quality = 60
+max_height = 2000
+max_width = 2000
 tab_size = 2
 ueberzug_offset = [0, 0, 0, 0]
 ueberzug_scale = 1
@@ -169,20 +168,21 @@ sort_by = "none"
 sort_reverse = false
 sort_sensitive = false
 
-[[plugin.prepend_fetchers]]
-id = "mime"
-url = "local:///Users/gjx/Library/CloudStorage/OneDrive-Personal/**/*.{mp4,mkv,mov,avi,wmv,...}"
-run = "noop"
-prio = "high"
+[plugin]
+prepend_preloaders = [
+  # Replace magick, image, video with mediainfo
+  { mime = "{audio,video,image}/*", run = "mediainfo" },
+  { mime = "application/subrip", run = "mediainfo" },
+]
 
-[[plugin.prepend_fetchers]]
-id = "mime"
-url = "local://*"
-run = "mime-ext.local"
-prio = "high"
+prepend_previewers = [
+  # Replace magick, image, video with mediainfo
+  { mime = "{audio,video,image}/*", run = "mediainfo" },
+  { mime = "application/subrip", run = "mediainfo" },
+]
 
-[[plugin.prepend_fetchers]]
-id = "mime"
-url = "remote://*"
-run = "mime-ext.remote"
-prio = "high"
+prepend_fetchers = [
+  { id = "mime", group = "mime", url = "local:///Users/gjx/Library/CloudStorage/OneDrive-Personal/**/*.{mp4,mkv,mov,avi,wmv,...}", run = "noop", prio = "high" },
+  { id = "mime", group = "mime", url = "local://*", run = "mime-ext.local", prio = "high" },
+  { id = "mime", group = "mime", url = "remote://*", run = "mime-ext.remote", prio = "high" },
+]
