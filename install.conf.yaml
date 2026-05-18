@@ -45,6 +45,10 @@
     ~/.config/yazi: tui_cli/yazi
     ~/.config/zellij: tui_cli/zellij
     ~/.config/zsh: shells/zsh
+    ~/.config/zed/:
+      glob: true
+      path: ./application/zed/**
+    ~/.config/zed/snippets: application/vscode/snippets
     ~/.config/fish: shells/fish
     ~/.config/.markdownlint-cli2.yaml: ./misc/.markdownlint-cli2.yaml
     ~/.config/mpd: ./tui_cli/mpd
@@ -55,6 +59,9 @@
     ~/.local/share/TauonMusicBox/:
       glob: true
       path: application/tauon/**
+    ~/.local/bin/:
+      glob: true
+      path: ./scripts/**
     # Windows specific configurations
     ~/.config/scoop:
       path: packages/scoop
