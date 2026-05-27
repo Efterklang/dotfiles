@@ -18,8 +18,7 @@
                                 "to": [ { "key_code": "left_control" } ],
                                 "to_if_alone": [
                                     {
-                                        "key_code": "1",
-                                        "modifiers": [ "right_alt" ]
+                                        "shell_command": "osascript -e 'set bid to \"net.kovidgoyal.kitty\"' -e 'tell application \"System Events\" to set procs to (every process whose bundle identifier is bid)' -e 'if (count of procs) > 0 and frontmost of item 1 of procs then' -e 'tell application \"System Events\" to set visible of item 1 of procs to false' -e 'else' -e 'tell application id bid to activate' -e 'end if'"
                                     }
                                 ],
                                 "type": "basic"
@@ -44,6 +43,74 @@
                                     {
                                         "type": "frontmost_application_if",
                                         "bundle_identifiers": ["^com\\.apple\\.Safari$"]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Alt+1 toggle Kitty",
+                        "manipulators": [
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "1",
+                                    "modifiers": { "mandatory": [ "option" ] }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "osascript -e 'set bid to \"net.kovidgoyal.kitty\"' -e 'tell application \"System Events\" to set procs to (every process whose bundle identifier is bid)' -e 'if (count of procs) > 0 and frontmost of item 1 of procs then' -e 'tell application \"System Events\" to set visible of item 1 of procs to false' -e 'else' -e 'tell application id bid to activate' -e 'end if'"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Alt+2 toggle Visual Studio Code",
+                        "manipulators": [
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "2",
+                                    "modifiers": { "mandatory": [ "option" ] }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "osascript -e 'set bid to \"com.microsoft.VSCode\"' -e 'tell application \"System Events\" to set procs to (every process whose bundle identifier is bid)' -e 'if (count of procs) > 0 and frontmost of item 1 of procs then' -e 'tell application \"System Events\" to set visible of item 1 of procs to false' -e 'else' -e 'tell application id bid to activate' -e 'end if'"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Alt+3 toggle Microsoft Edge Dev",
+                        "manipulators": [
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "3",
+                                    "modifiers": { "mandatory": [ "option" ] }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "osascript -e 'set bid to \"com.microsoft.edgemac.Dev\"' -e 'tell application \"System Events\" to set procs to (every process whose bundle identifier is bid)' -e 'if (count of procs) > 0 and frontmost of item 1 of procs then' -e 'tell application \"System Events\" to set visible of item 1 of procs to false' -e 'else' -e 'tell application id bid to activate' -e 'end if'"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Alt+4 toggle Obsidian",
+                        "manipulators": [
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "4",
+                                    "modifiers": { "mandatory": [ "option" ] }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "osascript -e 'set bid to \"md.obsidian\"' -e 'tell application \"System Events\" to set procs to (every process whose bundle identifier is bid)' -e 'if (count of procs) > 0 and frontmost of item 1 of procs then' -e 'tell application \"System Events\" to set visible of item 1 of procs to false' -e 'else' -e 'tell application id bid to activate' -e 'end if'"
                                     }
                                 ]
                             }
