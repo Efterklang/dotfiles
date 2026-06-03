@@ -56,6 +56,7 @@
     ~/.config/opencode/:
       glob: true
       path: ./tui_cli/opencode/**
+    ~/.config/glow: ./tui_cli/glow
     ~/.local/share/TauonMusicBox/:
       glob: true
       path: application/tauon/**
