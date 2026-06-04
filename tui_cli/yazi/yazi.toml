@@ -180,7 +180,7 @@ prepend_previewers = [
   { mime = "{audio,video,image}/*", run = "mediainfo" },
   { mime = "application/subrip", run = "mediainfo" },
   { url = "*/", run = 'piper -- eza -TL=3 --color=always --icons=always --group-directories-first --no-quotes "$1"' }, # Preview directory tree with eza
-  { url = "*.md", run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"' },                                         # Preview markdown with glow
+  { url = "*.{md,mdx}", run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"' },                                   # Preview markdown with glow
 ]
 
 prepend_fetchers = [
