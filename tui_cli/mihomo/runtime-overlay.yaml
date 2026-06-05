@@ -1,0 +1,75 @@
+---
+mode: rule
+mixed-port: 7890
+allow-lan: false
+bind-address: "*"
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9097
+secret: set-your-secret
+unified-delay: true
+profile:
+  store-selected: true
+tcp-concurrent: true
+dns:
+  enable: true
+  listen: :53
+  ipv6: true
+  prefer-h3: false
+  use-hosts: false
+  use-system-hosts: false
+  respect-rules: false
+  default-nameserver:
+  - 223.5.5.5
+  - 223.6.6.6
+  nameserver:
+  - https://dns.alidns.com/dns-query
+  - https://doh.pub/dns-query
+  proxy-server-nameserver:
+  - https://dns.alidns.com/dns-query
+  - https://doh.pub/dns-query
+  enhanced-mode: redir-host
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+  - "*.lan"
+  - "*.local"
+  - "*.arpa"
+  - time.*.com
+  - ntp.*.com
+  - "+.market.xiaomi.com"
+  - localhost.ptlogin2.qq.com
+  - "*.msftncsi.com"
+  - www.msftconnecttest.com
+  fake-ip-filter-mode: blacklist
+  direct-nameserver: []
+  direct-nameserver-follow-policy: false
+  fallback: []
+  fallback-filter:
+    domain:
+    - "+.google.com"
+    - "+.facebook.com"
+    - "+.youtube.com"
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+    - 240.0.0.0/4
+    - 0.0.0.0/32
+external-controller-cors:
+  allow-private-network: true
+  allow-origins:
+  - tauri://localhost
+  - http://tauri.localhost
+  - https://yacd.metacubex.one
+  - https://metacubex.github.io
+  - https://board.zash.run.place
+tun:
+  auto-detect-interface: true
+  auto-route: true
+  device: utun1024
+  dns-hijack:
+  - any:53
+  mtu: 1500
+  route-exclude-address: []
+  stack: system
+  strict-route: false
+  enable: true
