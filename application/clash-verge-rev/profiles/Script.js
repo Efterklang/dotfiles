@@ -170,6 +170,8 @@ const rules = [
 	// 额外自定义规则
 	"PROCESS-NAME,steam.exe,🔗 全局直连",
 	// "PROCESS-NAME,OneDrive,🔗 全局直连",
+	"DOMAIN-SUFFIX,ac-gdfrvlf-shard-00-02.sun7s3n.mongodb.net,🔗 全局直连",
+	"DOMAIN-SUFFIX,vluv.space,🔗 全局直连", // Google静态资源
 	"DOMAIN-SUFFIX,googleapis.cn,⚙️ 节点选择", // Google服务
 	"DOMAIN-SUFFIX,gstatic.com,⚙️ 节点选择", // Google静态资源
 	"DOMAIN-SUFFIX,xn--ngstr-lra8j.com,⚙️ 节点选择", // Google Play下载服务
@@ -179,6 +181,7 @@ const rules = [
 	"RULE-SET,google-gemini,🤖 AI服务",
 	"RULE-SET,xai,🤖 AI服务",
 	"RULE-SET,perplexity,🤖 AI服务",
+	"DOMAIN-SUFFIX,88newline.jb-aiwei.cc,🔞 NSFW",
 	"RULE-SET,nsfw,🔞 NSFW",
 	"RULE-SET,private,🔗 全局直连",
 	"RULE-SET,microsoft-cn,🔗 全局直连",
