@@ -1,0 +1,6 @@
+# yaml-language-server: $schema=https://carapace.sh/schemas/command.json
+name: yazi
+description: Blazing fast terminal file manager
+parsing: disabled
+completion:
+  positionalany: ["$carapace.bridge.Fish([yazi])"]
