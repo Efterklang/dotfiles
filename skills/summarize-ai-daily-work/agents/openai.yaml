@@ -1,0 +1,4 @@
+interface:
+  display_name: "总结 AI 今日工作"
+  short_description: "按日期抽取 Codex 会话，汇总 AI 今日工作并写入日记"
+  default_prompt: "Use $summarize-ai-daily-work to summarize today’s AI work and append it to the diary."
