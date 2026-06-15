@@ -1,4 +1,5 @@
 source ./git.nu
+source ./media.nu
 source ./replace.nu
 source ./ffmpeg.nu
 source ./obsidian.nu
@@ -40,6 +41,15 @@ def ob [vault="posts"] {
 }
 
 let editable_files: string = "fd -L --exclude \"*.{code,data,webm,mp4,mp3,png,avif,webp,jpg,jpeg}\""
+
+def v [] {
+  let file = (try { tv files --source-command $editable_files } catch { "" } | str trim)
+
+  if ($file | is-not-empty) {
+    nvim $file
+  }
+}
+
 # ===== alphabet =====
 alias a = atuin
 alias b = bun run
@@ -56,15 +66,14 @@ alias l = clear
 alias m = start_mpd
 alias n = exec nu
 alias o = start
-alias p = tmux popup -w 80% -h 80%
+alias p = yazi ~/OneDrive/Pictures/ ~/OneDrive/Pictures/Camera/Memory
 alias q = exit 0
 alias r = rmpc
 alias s = somo
 alias t = tokei
 alias u = uv
-alias v = nvim (tv files --source-command $editable_files)
 alias w = wsl
-alias x = ~/.local/bin/extract
+alias x = ouch
 alias y = yazi
 alias z = z
 
@@ -72,6 +81,7 @@ alias ffd = commandline edit --insert (fd --type directory | fzf --preview 'eza 
 alias ze = zellij attach --create gnix
 alias c2p = code2prompt
 alias ci = code
+alias cc = claude
 alias ff = fastfetch
 alias gg = lazygit --use-config-dir ~/.config/lazygit
 alias oc = opencode
