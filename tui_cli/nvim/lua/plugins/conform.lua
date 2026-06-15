@@ -25,20 +25,28 @@ return {
 				css = biome,
 				less = biome,
 				sass = biome,
+				toml = { "taplo" },
 			}
 
 			return {
 				formatters_by_ft = vim.tbl_extend("force", formatters, {
-					markdown = { "injected" },
+					markdown = { "rumdl" },
 				}),
 
 				formatters = {
 					-- 1. Biome configuration
 					biome = {
 						args = { "check", "--write", "--stdin-file-path", "$FILENAME" },
-					}, -- <--- Make sure this comma exists!
+					},
 
-					-- 2. Injected configuration
+					-- 2. Rumdl configuration
+					rumdl = {
+						command = "rumdl",
+						args = { "fmt", "--stdin", "--silent" },
+						stdin = true,
+					},
+
+					-- 3. Injected configuration
 					injected = {
 						options = {
 							ignore_errors = false,
