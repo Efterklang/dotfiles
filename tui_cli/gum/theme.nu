@@ -1,12 +1,17 @@
 # Catppuccin theme for gum (https://github.com/charmbracelet/gum)
 #
 # Usage:
-#   use /Users/gjx/.config/gum/theme.nu
-#   theme apply                                      # mocha / lavender / blue
-#   theme apply --flavour latte --accent peach       # auto-pick complementary highlight
-#   theme apply --accent red --highlight maroon
+#   use ~/.config/gum/theme.nu apply_gum_theme
+#   apply_gum_theme                                      # defaults: mocha + lavender
+#   apply_gum_theme --flavour latte --accent peach       # auto-pick complementary highlight
+#   apply_gum_theme --accent red --highlight maroon      # manually specify highlight color
 
-def palette [flavour: string] {
+# Completion helpers for shell auto-complete & argument check
+def complete-flavours [] { [latte frappe macchiato mocha] }
+def complete-accents [] { [rosewater flamingo pink mauve red maroon peach yellow green teal sky sapphire blue lavender] }
+
+# Get the full color palette for a given flavour
+def get_flavour_palette [flavour: string] {
     {
         latte: {
             rosewater: "#dc8a78", flamingo: "#dd7878", pink: "#ea76cb", mauve: "#8839ef",
@@ -43,7 +48,8 @@ def palette [flavour: string] {
     } | get $flavour
 }
 
-def complementary [accent: string] {
+# Get the complementary color for a given accent. Used when --highlight is not specified
+def get_complementary_for_accent [accent: string] {
     {
         rosewater: "flamingo", flamingo: "rosewater",
         pink: "mauve", mauve: "pink",
@@ -55,62 +61,58 @@ def complementary [accent: string] {
     } | get $accent
 }
 
-export def --env apply [
-    --flavour: string = "mocha"    # latte | frappe | macchiato | mocha
-    --accent: string = "lavender"  # primary color name
-    --highlight: string = ""       # secondary; auto-picked if empty
+# Apply Catppuccin theme colors to gum environment variables
+export def --env apply_gum_theme [
+    --flavour: string@complete-flavours = "mocha"
+    --accent: string@complete-accents = "lavender"
+    --highlight: string@complete-accents = ""
 ] {
-    let hl_name = if $highlight == "" { complementary $accent } else { $highlight }
-    let p = (palette $flavour)
-    let accent_c = ($p | get $accent)
-    let highlight_c = ($p | get $hl_name)
-    let bg = $p.surface0
-    let dim = $p.surface1
+    # Determine highlight color: use complementary if not specified
+    let highlight_color_name = if $highlight == "" { get_complementary_for_accent $accent } else { $highlight }
 
-    # choose
-    $env.GUM_CHOOSE_CURSOR_FOREGROUND = $accent_c
-    $env.GUM_CHOOSE_SELECTED_FOREGROUND = $accent_c
-    $env.GUM_CHOOSE_HEADER_FOREGROUND = $highlight_c
+    # Extract colors from palette
+    let choosen_palette = (get_flavour_palette $flavour)
+    let accent_color = ($choosen_palette | get $accent)
+    let highlight_color = ($choosen_palette | get $highlight_color_name)
+    let bg_color = $choosen_palette.surface0
+    let dim_color = $choosen_palette.surface1
 
-    # confirm
-    $env.GUM_CONFIRM_SELECTED_BACKGROUND = $accent_c
-    $env.GUM_CONFIRM_SELECTED_FOREGROUND = $bg
-    $env.GUM_CONFIRM_PROMPT_FOREGROUND = $highlight_c
-    $env.GUM_CONFIRM_UNSELECTED_FOREGROUND = $p.text
-    $env.GUM_CONFIRM_UNSELECTED_BACKGROUND = $bg
+    $env.GUM_CHOOSE_CURSOR_FOREGROUND = $accent_color
+    $env.GUM_CHOOSE_SELECTED_FOREGROUND = $accent_color
+    $env.GUM_CHOOSE_HEADER_FOREGROUND = $highlight_color
 
-    # input
-    $env.GUM_INPUT_CURSOR_FOREGROUND = $accent_c
-    $env.GUM_INPUT_HEADER_FOREGROUND = $highlight_c
-    $env.GUM_INPUT_PLACEHOLDER_FOREGROUND = $dim
+    $env.GUM_CONFIRM_SELECTED_BACKGROUND = $accent_color
+    $env.GUM_CONFIRM_SELECTED_FOREGROUND = $bg_color
+    $env.GUM_CONFIRM_PROMPT_FOREGROUND = $highlight_color
+    $env.GUM_CONFIRM_UNSELECTED_FOREGROUND = $choosen_palette.text
+    $env.GUM_CONFIRM_UNSELECTED_BACKGROUND = $bg_color
 
-    # filter
-    $env.GUM_FILTER_INDICATOR_FOREGROUND = $accent_c
-    $env.GUM_FILTER_SELECTED_PREFIX_FOREGROUND = $accent_c
-    $env.GUM_FILTER_UNSELECTED_PREFIX_FOREGROUND = $dim
-    $env.GUM_FILTER_HEADER_FOREGROUND = $highlight_c
-    $env.GUM_FILTER_MATCH_FOREGROUND = $highlight_c
-    $env.GUM_FILTER_PROMPT_FOREGROUND = $dim
-    $env.GUM_FILTER_PLACEHOLDER_FOREGROUND = $dim
+    $env.GUM_INPUT_CURSOR_FOREGROUND = $accent_color
+    $env.GUM_INPUT_HEADER_FOREGROUND = $highlight_color
+    $env.GUM_INPUT_PLACEHOLDER_FOREGROUND = $dim_color
 
-    # spin
-    $env.GUM_SPIN_SPINNER_FOREGROUND = $accent_c
+    $env.GUM_FILTER_INDICATOR_FOREGROUND = $accent_color
+    $env.GUM_FILTER_SELECTED_PREFIX_FOREGROUND = $accent_color
+    $env.GUM_FILTER_UNSELECTED_PREFIX_FOREGROUND = $dim_color
+    $env.GUM_FILTER_HEADER_FOREGROUND = $highlight_color
+    $env.GUM_FILTER_MATCH_FOREGROUND = $highlight_color
+    $env.GUM_FILTER_PROMPT_FOREGROUND = $dim_color
+    $env.GUM_FILTER_PLACEHOLDER_FOREGROUND = $dim_color
 
-    # table
-    $env.GUM_TABLE_SELECTED_FOREGROUND = $accent_c
-    $env.GUM_TABLE_HEADER_FOREGROUND = $highlight_c
+    $env.GUM_SPIN_SPINNER_FOREGROUND = $accent_color
 
-    # write
-    $env.GUM_WRITE_CURSOR_FOREGROUND = $accent_c
-    $env.GUM_WRITE_HEADER_FOREGROUND = $highlight_c
-    $env.GUM_WRITE_PLACEHOLDER_FOREGROUND = $dim
-    $env.GUM_WRITE_PROMPT_FOREGROUND = $highlight_c
+    $env.GUM_TABLE_SELECTED_FOREGROUND = $accent_color
+    $env.GUM_TABLE_HEADER_FOREGROUND = $highlight_color
 
-    # file
-    $env.GUM_FILE_CURSOR_FOREGROUND = $accent_c
-    $env.GUM_FILE_DIRECTORY_FOREGROUND = $highlight_c
-    $env.GUM_FILE_SELECTED_FOREGROUND = $accent_c
-    $env.GUM_FILE_PERMISSIONS_FOREGROUND = $p.subtext1
-    $env.GUM_FILE_FILE_SIZE_FOREGROUND = $p.subtext0
-    $env.GUM_FILE_SYMLINK_FOREGROUND = $p.green
+    $env.GUM_WRITE_CURSOR_FOREGROUND = $accent_color
+    $env.GUM_WRITE_HEADER_FOREGROUND = $highlight_color
+    $env.GUM_WRITE_PLACEHOLDER_FOREGROUND = $dim_color
+    $env.GUM_WRITE_PROMPT_FOREGROUND = $highlight_color
+
+    $env.GUM_FILE_CURSOR_FOREGROUND = $accent_color
+    $env.GUM_FILE_DIRECTORY_FOREGROUND = $highlight_color
+    $env.GUM_FILE_SELECTED_FOREGROUND = $accent_color
+    $env.GUM_FILE_PERMISSIONS_FOREGROUND = $choosen_palette.subtext1
+    $env.GUM_FILE_FILE_SIZE_FOREGROUND = $choosen_palette.subtext0
+    $env.GUM_FILE_SYMLINK_FOREGROUND = $choosen_palette.green
 }
