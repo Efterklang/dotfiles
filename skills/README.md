@@ -4,6 +4,7 @@
 
 - key 是 skill 名称，需要和 `skills/<skill-name>` 目录一致。
 - value 是安装目标列表。目标可以写项目根目录，脚本会安装到 `<target>/.agents/skills/<skill-name>`；也可以直接写 `.agents` 或 `skills` 目录。
+- value 也可以使用全局目标短名，例如 `codex`、`claude`、`opencode`、`agents`，分别安装到对应工具的全局 skills 目录。
 
 默认安装方式是符号链接，让目标项目直接使用 dotfiles 里的 skill 源目录。需要复制实体目录时运行：
 

@@ -4,6 +4,12 @@ const SCRIPT_PATH = path self
 const REPO_ROOT = ($SCRIPT_PATH | path dirname | path dirname)
 const SKILLS_ROOT = ([$REPO_ROOT "skills"] | path join)
 const DEFAULT_MAP = ([$SKILLS_ROOT "macOS_install_map.json"] | path join)
+const GLOBAL_TARGETS = {
+  agents: "~/.agents/skills"
+  claude: "~/.claude/skills"
+  codex: "~/.codex/skills"
+  opencode: "~/.config/opencode/skills"
+}
 
 def _is-symlink [path: string] {
   ((^test -L $path | complete).exit_code == 0)
@@ -19,8 +25,18 @@ def _resolve-map-path [map_path: string] {
   }
 }
 
+def _resolve-target [target: string] {
+  let key = ($target | str lowercase)
+
+  if $key in ($GLOBAL_TARGETS | columns) {
+    $GLOBAL_TARGETS | get $key
+  } else {
+    $target
+  }
+}
+
 def _install-root [target: string] {
-  let expanded = ($target | path expand)
+  let expanded = (_resolve-target $target | path expand)
   let basename = ($expanded | path basename)
 
   if $basename == "skills" {
