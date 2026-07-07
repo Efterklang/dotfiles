@@ -1,0 +1,26 @@
+[
+  {
+    "id": "obsidian-style-settings",
+    "name": "Style Settings"
+  },
+  {
+    "id": "obsidian-better-command-palette",
+    "name": "Better Command Palette"
+  },
+  {
+    "id": "obsidian-linter",
+    "name": "Linter"
+  },
+  {
+    "id": "shiki-highlighter",
+    "name": "Shiki Highlighter"
+  },
+  {
+    "id": "pexels-banner",
+    "name": "Pixel Banner"
+  },
+  {
+    "id": "notebook-navigator",
+    "name": "Notebook Navigator"
+  }
+]

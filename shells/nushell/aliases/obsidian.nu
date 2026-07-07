@@ -1,5 +1,3 @@
-source ../utils/confirm.nu
-
 def _create_soft_link [source: string, target: string] {
     print $"Creating symlink from ($source) to ($target)"
 
@@ -38,7 +36,7 @@ alias ob-key = _create_soft_link $"($global_setting_home)/hotkeys.json" "./.obsi
 # themes
 def ob-theme [] {
     # use AnuPpuccin theme
-    if (confirm_action "💠 Use AnuPpuccin theme? (y/N): ") {
+    if (^gum confirm "💠 Use AnuPpuccin theme?"; $env.LAST_EXIT_CODE == 0) {
         _create_soft_link $"($global_setting_home)/themes/AnuPpuccin" "./.obsidian/themes/AnuPpuccin"
         _create_soft_link $"($global_setting_home)/appearance.json" "./.obsidian/appearance.json"
         mkdir "./.obsidian/snippets"
@@ -62,7 +60,7 @@ def ob-plugins [] {
             print $"✅ Plugin ($plugin) is already installed."
             continue
         }
-        if (confirm_action $"💠 Install and enable plugin ($plugin)? \(y/N\): ") {
+        if (^gum confirm $"💠 Install and enable plugin ($plugin)?"; $env.LAST_EXIT_CODE == 0) {
             _create_soft_link $"($global_setting_home)/plugins/($plugin)" $"./.obsidian/plugins/($plugin)"
             _enable_community_plugins $"($plugin)"
         }
