@@ -1,0 +1,6 @@
+# yaml-language-server: $schema=https://carapace.sh/schemas/command.json
+name: magick
+description: 图片格式处理
+parsing: disabled
+completion:
+  positionalany: ["$carapace.bridge.Fish([magick])"]
