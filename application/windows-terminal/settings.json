@@ -1,55 +1,26 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
-    "$schema": "https://aka.ms/terminal-profiles-schema-preview",
-    "actions": 
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions":
     [
         {
-            "command": 
+            "command":
+            {
+                "action": "newTab",
+                "index": 0
+            },
+            "id": "User.newTab.7975BEED"
+        },
+        {
+            "command":
             {
                 "action": "prevTab"
             },
             "id": "User.prevTab.0"
-        },
-        {
-            "command": 
-            {
-                "action": "nextTab"
-            },
-            "id": "User.nextTab.0"
-        },
-        {
-            "command": 
-            {
-                "action": "commandPalette"
-            },
-            "id": "User.commandPalette.D3F0B923"
-        },
-        {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "id": "User.copy.224984B4"
-        },
-        {
-            "command": "closePane",
-            "id": "User.closePane"
-        },
-        {
-            "command": "openNewTabDropdown",
-            "id": "User.openNewTabDropdown"
-        },
-        {
-            "command": "find",
-            "id": "User.find"
-        },
-        {
-            "command": "paste",
-            "id": "User.paste"
         }
     ],
     "alwaysShowNotificationIcon": false,
+    "alwaysShowTabs": false,
     "autoHideWindow": false,
     "centerOnLaunch": true,
     "copyFormatting": "none",
@@ -62,39 +33,15 @@
     "initialCols": 132,
     "initialPosition": ",",
     "initialRows": 38,
-    "keybindings": 
+    "keybindings":
     [
         {
-            "id": "User.find",
-            "keys": "ctrl+f"
+            "id": "Terminal.PasteFromClipboard",
+            "keys": "ctrl+v"
         },
         {
             "id": "User.prevTab.0",
             "keys": "alt+a"
-        },
-        {
-            "id": "User.paste",
-            "keys": "ctrl+v"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+shift+f"
-        },
-        {
-            "id": "User.closePane",
-            "keys": "alt+w"
-        },
-        {
-            "id": "User.tabSearch",
-            "keys": "alt+p"
-        },
-        {
-            "id": "Terminal.DuplicatePaneRight",
-            "keys": "ctrl+/"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+shift+1"
         },
         {
             "id": null,
@@ -109,11 +56,27 @@
             "keys": "ctrl+shift+tab"
         },
         {
+            "id": null,
+            "keys": "ctrl+shift+1"
+        },
+        {
+            "id": "User.tabSearch",
+            "keys": "alt+p"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+v"
+        },
+        {
+            "id": "User.closePane",
+            "keys": "alt+w"
+        },
+        {
             "id": "Terminal.ClosePane",
             "keys": "ctrl+w"
         },
         {
-            "id": "Terminal.DuplicatePaneDown",
+            "id": "Terminal.SplitPaneRight",
             "keys": "ctrl+\\"
         },
         {
@@ -145,16 +108,12 @@
             "keys": "alt+enter"
         },
         {
-            "id": "Terminal.OpenNewTabProfile0",
-            "keys": "alt+1"
-        },
-        {
             "id": "Terminal.OpenNewTabProfile1",
             "keys": "alt+2"
         },
         {
-            "id": null,
-            "keys": "ctrl+shift+2"
+            "id": "Terminal.MoveFocusLeft",
+            "keys": "alt+h"
         },
         {
             "id": null,
@@ -165,40 +124,76 @@
             "keys": "alt+3"
         },
         {
+            "id": "Terminal.SplitPaneDown",
+            "keys": "ctrl+minus"
+        },
+        {
             "id": null,
             "keys": "ctrl+shift+3"
         },
         {
-            "id": "User.nextTab.0",
+            "id": "Terminal.NextTab",
             "keys": "alt+d"
         },
         {
             "id": null,
             "keys": "ctrl+shift+w"
+        },
+        {
+            "id": "User.newTab.7975BEED",
+            "keys": "ctrl+t"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+n"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+tab"
+        },
+        {
+            "id": "Terminal.MoveFocusUp",
+            "keys": "alt+k"
+        },
+        {
+            "id": null,
+            "keys": "alt+up"
+        },
+        {
+            "id": "Terminal.MoveFocusDown",
+            "keys": "alt+j"
+        },
+        {
+            "id": "Terminal.MoveFocusRight",
+            "keys": "alt+l"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+insert"
         }
     ],
-    "newTabMenu": 
+    "newTabMenu":
     [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles": 
+    "profiles":
     {
-        "defaults": 
+        "defaults":
         {
             "adjustIndistinguishableColors": "never",
             "backgroundImageOpacity": 0.8,
-            "colorScheme": "Catppuccin Mocha",
+            "colorScheme": "Ros\u00e9 Pine Dawn",
             "cursorShape": "filledBox",
             "experimental.repositionCursorWithMouse": true,
             "experimental.retroTerminalEffect": false,
-            "font": 
+            "font":
             {
                 "builtinGlyphs": true,
                 "colorGlyphs": true,
                 "face": "Maple Mono NF CN",
-                "features": 
+                "features":
                 {
                     "calt": 1,
                     "cv01": 1,
@@ -218,10 +213,9 @@
             "startingDirectory": "%USERPROFILE%",
             "useAcrylic": true
         },
-        "list": 
+        "list":
         [
             {
-                "colorScheme": "Catppuccin Mocha",
                 "commandline": "nu",
                 "guid": "{a47560c3-afc7-4281-b574-5a3ae4dd6de8}",
                 "hidden": false,
@@ -230,31 +224,18 @@
                 "tabTitle": "Nu"
             },
             {
-                "commandline": "ssh momenta",
-                "guid": "{3e8ebcf6-95fb-5992-a4ef-d5a43872771c}",
-                "name": "root@ubuntu"
-            },
-            {
-                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "hidden": true,
+                "hidden": false,
                 "name": "Windows PowerShell"
             },
             {
-                "guid": "{171fc56f-cbb2-5e60-a3df-7646b376628a}",
-                "hidden": false,
-                "icon": "\ud83d\udc27",
-                "name": "Arch",
-                "source": "Microsoft.WSL"
-            },
-            {
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-                "hidden": true,
+                "hidden": false,
                 "name": "Command Prompt"
             }
         ]
     },
-    "schemes": 
+    "schemes":
     [
         {
             "background": "#1E1E2E",
@@ -280,6 +261,52 @@
             "yellow": "#F9E2AF"
         },
         {
+            "background": "#191724",
+            "black": "#26233A",
+            "blue": "#31748F",
+            "brightBlack": "#6E6A86",
+            "brightBlue": "#31748F",
+            "brightCyan": "#EBBCBA",
+            "brightGreen": "#9CCFD8",
+            "brightPurple": "#C4A7E7",
+            "brightRed": "#EB6F92",
+            "brightWhite": "#E0DEF4",
+            "brightYellow": "#F6C177",
+            "cursorColor": "#E0DEF4",
+            "cyan": "#EBBCBA",
+            "foreground": "#E0DEF4",
+            "green": "#9CCFD8",
+            "name": "Ros\u00e9 Pine",
+            "purple": "#C4A7E7",
+            "red": "#EB6F92",
+            "selectionBackground": "#6E6A86",
+            "white": "#908CAA",
+            "yellow": "#F6C177"
+        },
+        {
+            "background": "#FAF4ED",
+            "black": "#E8E4E0",
+            "blue": "#286983",
+            "brightBlack": "#D4C8BB",
+            "brightBlue": "#286983",
+            "brightCyan": "#D7827D",
+            "brightGreen": "#56949F",
+            "brightPurple": "#907AA9",
+            "brightRed": "#B4637A",
+            "brightWhite": "#575279",
+            "brightYellow": "#C5A478",
+            "cursorColor": "#575279",
+            "cyan": "#D7827D",
+            "foreground": "#575279",
+            "green": "#56949F",
+            "name": "Ros\u00e9 Pine Dawn",
+            "purple": "#907AA9",
+            "red": "#B4637A",
+            "selectionBackground": "#D4C8BB",
+            "white": "#9890A5",
+            "yellow": "#C5A478"
+        },
+        {
             "background": "#1A1B2C",
             "black": "#414868",
             "blue": "#7AA2F7",
@@ -303,11 +330,9 @@
             "yellow": "#E0AF68"
         }
     ],
-    "showTabsInTitlebar": true,
-    "showTerminalTitleInTitlebar": true,
     "tabSwitcherMode": "mru",
     "tabWidthMode": "titleLength",
-    "theme": "system",
+    "theme": "dark",
     "themes": [],
     "useAcrylicInTabRow": true
 }
