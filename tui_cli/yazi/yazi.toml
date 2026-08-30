@@ -24,36 +24,30 @@ ueberzug_scale = 1
 
 [opener]
 edit = [
-  { run = '${EDITOR:=vi} "$@"', desc = "$EDITOR", block = true, for = "unix" },
-  { run = 'nvim "%*"', block = true, desc = "nvim", for = "windows" },
+  { run = "$EDITOR %s", block = true, for = "unix" },
+  { run = "%EDITOR% %s", block = true, for = "windows" },
 ]
-code = [
-  { run = 'code "$@"', orphan = true, desc = "VSCode", for = "unix" },
-  { run = 'code "%1"', orphan = true, desc = "VSCode", for = "windows" },
-]
-extract = [
-  { run = 'unar "$1"', desc = "Extract here", for = "unix" },
-  { run = 'unar "%1"', desc = "Extract here", for = "windows" },
-]
+code = [{ run = 'code %s', orphan = true, desc = "VSCode" }]
+extract = [{ run = 'unar %s', desc = "Extract here" }]
 open = [
-  { run = 'xdg-open "$@"', desc = "Open", for = "linux" },
-  { run = 'open "$@"', desc = "Open", for = "macos" },
-  { run = 'start "" "%1"', orphan = true, desc = "Open", for = "windows" },
+  { run = 'xdg-open %s', desc = "Open", for = "linux" },
+  { run = 'open %s', desc = "Open", for = "macos" },
+  { run = 'start "" %s', orphan = true, desc = "Open", for = "windows" },
+]
+icat = [
+  { run = '''clear; kitten icat --hold --stdin=no --scale-up --align=center -- %s''', block = true, desc = "Preview fullscreen (kitty icat)", for = "unix" },
 ]
 play = [
-  { run = 'mpv "$@"', orphan = true, for = "unix" },
-  { run = 'mpv "%1"', orphan = true, for = "windows" },
-  { run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
+  { run = 'mpv %s', orphan = true },
+  { run = '''mediainfo %s; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
 ]
 reveal = [
-  { run = 'xdg-open "$(dirname "$0")"', desc = "Reveal", for = "linux" },
-  { run = 'open -R "$1"', desc = "Reveal", for = "macos" },
-  { run = 'explorer /select, "%1"', orphan = true, desc = "Reveal", for = "windows" },
-  { run = '''exiftool "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show EXIF", for = "unix" },
+  { run = 'xdg-open "$(dirname %s)"', desc = "Reveal", for = "linux" },
+  { run = 'open -R %s', desc = "Reveal", for = "macos" },
+  { run = 'explorer /select, %s', orphan = true, desc = "Reveal", for = "windows" },
+  { run = '''exiftool %s; echo "Press enter to exit"; read _''', block = true, desc = "Show EXIF", for = "unix" },
 ]
-upload = [
-  { run = 'rclone copy "$@" bit_s4:vluv-space', desc = "Upload File To Bitiful Bucket" },
-]
+upload = [{ run = 'rclone copy %s bit_s4:vluv-space', desc = "Upload File To Bitiful Bucket" }]
 
 [open]
 rules = [
@@ -62,6 +56,7 @@ rules = [
     "reveal",
   ] },
   { mime = "image/*", use = [
+    "icat",
     "open",
     "reveal",
     "upload",
@@ -179,6 +174,8 @@ prepend_previewers = [
   # Replace magick, image, video with mediainfo
   { mime = "{audio,video,image}/*", run = "mediainfo" },
   { mime = "application/subrip", run = "mediainfo" },
+  { url = "*/", run = 'piper -- eza -TL=3 --color=always --icons=always --group-directories-first --no-quotes "$1"' }, # Preview directory tree with eza
+  { url = "*.{md,mdx}", run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"' },                                   # Preview markdown with glow
 ]
 
 prepend_fetchers = [

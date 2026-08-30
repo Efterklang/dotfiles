@@ -36,7 +36,7 @@ $env.config = {
     osc2: true
     osc7: true
     osc8: true
-    osc9_9: true
+    osc9_9: false
     osc133: true
     osc633: true
     reset_application_mode: true
@@ -190,6 +190,7 @@ const mac_module = if $nu.os-info.name == macos { "./platform/mac.nu" } else { n
 
 source $window_module
 source $mac_module
+source ./platform/kitty.nu
 
 source ./plugins/plugins.nu
 source ./aliases/alias.nu

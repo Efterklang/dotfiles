@@ -1,0 +1,247 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# 用途：
+#   把“机场订阅 YAML + 本机运行参数 + 可选 JS 覆写脚本”合成为 mihomo 最终读取的 config.yaml。
+#
+# 默认目录：
+#   ~/.config/mihomo
+#
+# 默认会读取这些文件：
+#   subscription-url       一行订阅链接，敏感信息，不建议放进 dotfiles 仓库
+#   runtime-overlay.yaml   本机运行参数，比如端口、DNS、TUN、external-controller
+#   script.js              可选；Clash Verge Rev profile script 格式，存在时会自动执行
+#
+# 默认会输出：
+#   config.yaml            mihomo 最终读取的配置文件；每次覆盖前会自动备份
+#
+# 常用命令：
+#   mihomo-refresh
+#   MIHOMO_DISABLE_SCRIPT=1 mihomo-refresh
+#   MIHOMO_SCRIPT_URL="https://example.com/script.js" mihomo-refresh
+#   MIHOMO_CONFIG="/tmp/test.yaml" mihomo-refresh
+#
+# 常用环境变量：
+#   MIHOMO_DIR                         覆盖默认配置目录
+#   MIHOMO_SUBSCRIPTION_URL_FILE       覆盖订阅链接文件路径
+#   MIHOMO_RUNTIME_OVERLAY             覆盖 runtime-overlay.yaml 路径
+#   MIHOMO_SCRIPT_FILE                 指定本地 JS 覆写脚本
+#   MIHOMO_SCRIPT_URL                  指定远程 JS 覆写脚本；优先级高于默认 script.js
+#   MIHOMO_DISABLE_SCRIPT=1            临时禁用 JS 覆写
+#   MIHOMO_CONFIG                      覆盖输出 config.yaml 路径，适合先写到 /tmp 测试
+
+require "fileutils"
+require "json"
+require "net/http"
+require "open3"
+require "tempfile"
+require "time"
+require "uri"
+require "yaml"
+
+# 单独使用 mihomo 时，把配置统一放在 XDG 配置目录，不再依赖 Clash Verge Rev 的应用目录。
+DEFAULT_DIR = File.expand_path("~/.config/mihomo")
+
+# 如果你临时把 MIHOMO_DIR 指向别的目录，仍然允许回退读取 ~/.config/mihomo/subscription-url。
+# 这样迁移 Homebrew 默认目录 /opt/homebrew/etc/mihomo 时不用复制订阅链接。
+FALLBACK_URL_FILE = File.expand_path("~/.config/mihomo/subscription-url")
+
+# 下面这些路径都可以用环境变量覆盖；不设置时走 ~/.config/mihomo 下的默认文件名。
+target_dir = ENV.fetch("MIHOMO_DIR", DEFAULT_DIR)
+url_file = ENV.fetch("MIHOMO_SUBSCRIPTION_URL_FILE") do
+  preferred = File.join(target_dir, "subscription-url")
+  File.exist?(preferred) ? preferred : FALLBACK_URL_FILE
+end
+overlay_file = ENV.fetch("MIHOMO_RUNTIME_OVERLAY", File.join(target_dir, "runtime-overlay.yaml"))
+default_script_file = File.join(target_dir, "script.js")
+output_file = ENV.fetch("MIHOMO_CONFIG", File.join(target_dir, "config.yaml"))
+
+# 读取环境变量时，把空字符串当成“没设置”，避免 MIHOMO_SCRIPT_FILE="" 这种情况误判。
+def env_value(name)
+  value = ENV[name]&.strip
+  value unless value.nil? || value.empty?
+end
+
+# 判断开关类环境变量：1/true/yes/on 都视为开启。
+def truthy_env?(name)
+  %w[1 true yes on].include?(ENV[name].to_s.strip.downcase)
+end
+
+# 下载订阅或远程脚本。这里手动处理重定向，并设置 User-Agent，兼容部分机场订阅接口。
+def fetch(uri, user_agent, limit = 5)
+  raise "重定向次数过多" if limit.zero?
+
+  response = Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == "https") do |http|
+    request = Net::HTTP::Get.new(uri)
+    request["User-Agent"] = user_agent
+    http.request(request)
+  end
+
+  case response
+  when Net::HTTPSuccess
+    response.body
+  when Net::HTTPRedirection
+    fetch(URI(response.fetch("location")), user_agent, limit - 1)
+  else
+    raise "下载失败: HTTP #{response.code}"
+  end
+end
+
+# 找到要执行的 JS 覆写脚本。
+#
+# 优先级：
+#   1. MIHOMO_DISABLE_SCRIPT=1 时完全不执行
+#   2. MIHOMO_SCRIPT_URL 指定远程脚本
+#   3. MIHOMO_SCRIPT_FILE 指定本地脚本
+#   4. 默认读取 ~/.config/mihomo/script.js；文件不存在就不执行
+def load_script_override(default_script_file)
+  return nil if truthy_env?("MIHOMO_DISABLE_SCRIPT")
+
+  script_url = env_value("MIHOMO_SCRIPT_URL")
+  explicit_script_file = env_value("MIHOMO_SCRIPT_FILE")
+  abort "MIHOMO_SCRIPT_URL 和 MIHOMO_SCRIPT_FILE 只能设置一个" if script_url && explicit_script_file
+
+  if script_url
+    user_agent = ENV.fetch("MIHOMO_SCRIPT_USER_AGENT", "clash-verge")
+    return [fetch(URI(script_url), user_agent), script_url]
+  end
+
+  script_file = explicit_script_file || (File.exist?(default_script_file) ? default_script_file : nil)
+  return nil unless script_file
+  abort "找不到 JS 覆写脚本: #{script_file}" unless File.exist?(script_file)
+
+  [File.read(script_file, mode: "r:BOM|UTF-8"), script_file]
+end
+
+# 用 Node.js 执行 Clash Verge Rev profile script 格式的 JS：
+#   function main(config) { ...; return config; }
+#
+# mihomo core 本身不认识 JS，所以这里先把 Ruby 里的 Hash 转成 JSON，交给 JS 的 main(config)
+# 处理，再把 JS 返回值转回 Ruby Hash，最后写成 YAML。
+def apply_script_override(config, script_source, source_name)
+  runner = <<~"JAVASCRIPT"
+    const fs = require("node:fs");
+    const vm = require("node:vm");
+
+    const scriptPath = process.argv[1];
+    const configPath = process.argv[2];
+    const profileName = process.env.MIHOMO_PROFILE_NAME || "mihomo";
+    const source = fs.readFileSync(scriptPath, "utf8");
+    const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
+
+    const module = { exports: {} };
+    const sandbox = {
+      Buffer,
+      URL,
+      URLSearchParams,
+      clearTimeout,
+      console: {
+        error: (...args) => console.error(...args),
+        info: (...args) => console.error(...args),
+        log: (...args) => console.error(...args),
+        warn: (...args) => console.error(...args),
+      },
+      exports: module.exports,
+      module,
+      setTimeout,
+    };
+    sandbox.globalThis = sandbox;
+
+    (async () => {
+      vm.createContext(sandbox);
+      vm.runInContext(source, sandbox, { filename: scriptPath });
+
+      const exported = sandbox.module.exports;
+      const directExport = sandbox.exports;
+      const main =
+        sandbox.main ||
+        (typeof exported === "function" ? exported : exported.main || exported.default) ||
+        (typeof directExport === "function" ? directExport : directExport.main || directExport.default);
+
+      if (typeof main !== "function") {
+        throw new Error("JS 覆写脚本必须定义 function main(config)，或导出一个函数");
+      }
+
+      const result = await main(config, profileName);
+      process.stdout.write(JSON.stringify(result ?? config));
+    })().catch((error) => {
+      // JS 脚本里的 console.log 会转到 stderr，stdout 专门留给最终 JSON。
+      console.error(error && error.stack ? error.stack : error);
+      process.exit(1);
+    });
+  JAVASCRIPT
+
+  # 使用临时文件传递 JS 和 JSON，避免命令行长度限制，也避免把订阅内容打印到 shell 历史。
+  Tempfile.create(["mihomo-script-", ".js"]) do |script_file|
+    Tempfile.create(["mihomo-config-", ".json"]) do |config_file|
+      script_file.write(script_source)
+      script_file.flush
+      config_file.write(JSON.generate(config))
+      config_file.flush
+
+      stdout, stderr, status = Open3.capture3(
+        ENV.fetch("MIHOMO_NODE", "node"),
+        "-e",
+        runner,
+        "--",
+        script_file.path,
+        config_file.path,
+      )
+
+      abort "JS 覆写执行失败 (#{source_name}):\n#{stderr}" unless status.success?
+
+      JSON.parse(stdout)
+    rescue JSON::ParserError => e
+      abort "JS 覆写没有返回合法 JSON (#{source_name}): #{e.message}"
+    end
+  end
+end
+
+abort "找不到订阅链接文件: #{url_file}" unless File.exist?(url_file)
+abort "找不到运行时覆盖文件: #{overlay_file}" unless File.exist?(overlay_file)
+
+# subscription-url 只需要一行订阅地址；文件里不要写其它内容。
+subscription_url = File.read(url_file, mode: "r:BOM|UTF-8").strip
+abort "订阅链接文件是空的: #{url_file}" if subscription_url.empty?
+
+# 先下载机场返回的 Clash/Mihomo YAML，再读取本机 overlay。
+remote = YAML.safe_load(
+  fetch(URI(subscription_url), ENV.fetch("MIHOMO_SUBSCRIPTION_USER_AGENT", "clash.meta")),
+  permitted_classes: [Symbol],
+  aliases: true,
+) || {}
+overlay = YAML.safe_load(
+  File.read(overlay_file),
+  permitted_classes: [Symbol],
+  aliases: true,
+) || {}
+
+unless remote.is_a?(Hash)
+  abort "订阅没有返回 Clash/Mihomo YAML；可以试试 MIHOMO_SUBSCRIPTION_USER_AGENT=clash"
+end
+
+# overlay 后合并，所以 runtime-overlay.yaml 可以覆盖订阅里的同名顶层字段。
+# 如果 script.js 存在，会在合并后再执行，最终以 JS 返回的配置为准。
+merged = remote.merge(overlay)
+script_override = load_script_override(default_script_file)
+if script_override
+  merged = apply_script_override(merged, *script_override)
+  abort "JS 覆写没有返回 Clash/Mihomo 配置对象" unless merged.is_a?(Hash)
+end
+
+# 写入 config.yaml 前先备份旧文件，方便配置不可用时手动回滚。
+FileUtils.mkdir_p(target_dir)
+if File.exist?(output_file)
+  backup = "#{output_file}.bak.#{Time.now.strftime("%Y%m%d-%H%M%S")}"
+  FileUtils.cp(output_file, backup, preserve: true)
+end
+
+File.write(output_file, YAML.dump(merged), mode: "w", perm: 0o600)
+
+# 最后一定用 mihomo 自己校验；校验失败就退出，避免悄悄留下坏配置。
+unless system("mihomo", "-t", "-d", target_dir, "-f", output_file)
+  abort "mihomo 配置校验失败: #{output_file}"
+end
+
+puts "已更新 #{output_file}"
+puts "已应用 JS 覆写: #{script_override[1]}" if script_override

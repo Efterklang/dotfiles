@@ -7,7 +7,15 @@
       "key": "P"
     }
   ],
-  "command-palette:open": [],
+  "command-palette:open": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "P"
+    }
+  ],
   "editor:insert-codeblock": [
     {
       "modifiers": [

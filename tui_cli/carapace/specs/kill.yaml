@@ -1,0 +1,6 @@
+# yaml-language-server: $schema=https://carapace.sh/schemas/command.json
+name: kill
+description: Terminate processes
+parsing: disabled
+completion:
+  positionalany: ["$carapace.bridge.Fish([kill])"]

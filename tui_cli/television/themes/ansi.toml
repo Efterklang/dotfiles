@@ -1,0 +1,28 @@
+# General
+# Leave the background unset so the terminal's default light/dark background is used.
+# background = "black"
+border_fg = "bright-black"
+text_fg = "white"
+dimmed_text_fg = "bright-black"
+
+# Input
+input_text_fg = "bright-red"
+result_count_fg = "bright-red"
+
+# Results
+result_name_fg = "bright-blue"
+result_line_number_fg = "bright-yellow"
+result_value_fg = "bright-cyan"
+selection_fg = "bright-green"
+selection_bg = "bright-black"
+match_fg = "bright-red"
+
+# Preview
+preview_title_fg = "bright-yellow"
+
+# Modes
+channel_mode_fg = "black"
+channel_mode_bg = "bright-magenta"
+remote_control_mode_fg = "black"
+remote_control_mode_bg = "bright-green"
+send_to_channel_mode_fg = "bright-cyan"

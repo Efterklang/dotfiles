@@ -52,10 +52,14 @@
     ~/.config/fish: shells/fish
     ~/.config/.markdownlint-cli2.yaml: ./misc/.markdownlint-cli2.yaml
     ~/.config/mpd: ./tui_cli/mpd
+    ~/.config/mihomo/:
+      glob: true
+      path: tui_cli/mihomo/**
     ~/.config/starship.toml: ./tui_cli/starship.toml
     ~/.config/opencode/:
       glob: true
       path: ./tui_cli/opencode/**
+    ~/.config/glow: ./tui_cli/glow
     ~/.local/share/TauonMusicBox/:
       glob: true
       path: application/tauon/**
@@ -100,15 +104,6 @@
       if: "[ `uname` = Darwin ]"
     ~/Library/Application Support/Code/User/snippets:
       path: application/vscode/snippets
-      if: "[ `uname` = Darwin ]"
-    ~/Library/Application Support/io.github.clash-verge-rev.clash-verge-rev/profiles/Script.js:
-      path: application/clash-verge-rev/profiles/Script.js
-      if: "[ `uname` = Darwin ]"
-    ~/Library/Application Support/io.github.clash-verge-rev.clash-verge-rev/dns_config.yaml:
-      path: application/clash-verge-rev/dns_config.yaml
-      if: "[ `uname` = Darwin ]"
-    ~/Library/Application Support/io.github.clash-verge-rev.clash-verge-rev/verge.yaml:
-      path: application/clash-verge-rev/verge.yaml
       if: "[ `uname` = Darwin ]"
 - shell:
     - [bat cache --build]
