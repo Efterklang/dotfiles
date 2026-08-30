@@ -1,9 +1,4 @@
 [[plugin.deps]]
-use = "yazi-rs/plugins:max-preview"
-rev = "5d5c480"
-hash = "9bc26d10d2f6e2aa93b10905b1b76979"
-
-[[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
 rev = "5d5c480"
 hash = "187cc58ba7ac3befd49c342129e6f1b6"
@@ -32,6 +27,11 @@ hash = "a32da7bd1c8bcb4c61d770dd173ec7bd"
 use = "yazi-rs/plugins:piper"
 rev = "5d5c480"
 hash = "384464b6df8cb807425c521f8cd790f3"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:toggle-pane"
+rev = "c591a36"
+hash = "5b2fbef7d1513ce38ff72623a071a5e"
 
 [flavor]
 deps = []
