@@ -30,6 +30,7 @@
     ~/.config/git: ./tui_cli/git
     ~/.config/ghostty: ./application/ghostty
     ~/.config/helix: tui_cli/helix
+    ~/.config/herdr: tui_cli/herdr
     ~/.config/kitty: ./application/kitty
     ~/.config/lazygit: tui_cli/lazygit
     ~/.config/lla: tui_cli/lla
@@ -105,5 +106,3 @@
     ~/Library/Application Support/Code/User/snippets:
       path: application/vscode/snippets
       if: "[ `uname` = Darwin ]"
-- shell:
-    - [bat cache --build]

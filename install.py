@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-"""Dotfiles installer — syncs git submodules then invokes Dotbot."""
+"""Dotfiles installer — syncs submodules, invokes Dotbot, then runs post-install tasks."""
 
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -53,10 +54,24 @@ def run_dotbot() -> bool:
     return run(cmd)
 
 
+def run_post_install(*, dry_run: bool = False) -> bool:
+    log("INFO", "Running post-install operations...")
+    bat = shutil.which("bat")
+    if bat is None:
+        log("WARNING", "bat is not installed or not available on PATH; skipping cache build")
+        return True
+    cmd = [bat, "cache", "--build"]
+    if dry_run:
+        log("INFO", f"Would execute: {' '.join(cmd)}")
+        return True
+    return run(cmd)
+
+
 def main() -> None:
     log("INFO", "Dotfiles installer")
     log("INFO", "=" * 40)
-    if not sync_submodules() or not run_dotbot():
+    dry_run = any(arg in {"-n", "--dry-run"} for arg in sys.argv[1:])
+    if not sync_submodules() or not run_dotbot() or not run_post_install(dry_run=dry_run):
         log("ERROR", "Installation failed!")
         sys.exit(1)
     log("INFO", "Installation completed successfully!")
