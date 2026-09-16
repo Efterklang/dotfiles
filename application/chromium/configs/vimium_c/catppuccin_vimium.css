@@ -1,58 +1,60 @@
 /*
-vimium-c theme: Catppuccin Mocha (Refined)
-Based on catppuccin, optimized for elegance and restraint
+vimium-c theme: Catppuccin Latte / Mocha
+Restrained variant — neutral text, a single mauve accent,
+hairline borders, soft elevation. Light & dark adaptive.
 */
 
 /* #ui */
 /* ^ do not touch this line ^ */
 
 * {
-	font-family:
-		"RecMonoCasual Nerd Font", "Maple Mono NF CN", monospace !important;
+	font-family: "Maple Mono NF CN", monospace !important;
 }
 
 .R {
-	--bg-color: #1e1e2e;
-	--select-color: #45475a;
-	--input-bg-color: #313244;
-	--input-text-color: #f5c2e7;
-	--li-source-color: #cdd6f4;
-	--li-title-color: #f5e0dc;
-	--li-url-color: #89b4fa;
-	--match-text-color: inherit;
+	--bg-color: #1e1e2e; /* Mocha Base */
+	--accent-color: #cba6f7; /* Mocha Mauve */
+	--border-color: #45475a; /* Mocha Surface1 */
 }
 
-.R.HM .LH,
-.HUD,
-.HUD.D,
-.HUD:after,
-.HUD.D:after {
-	font-family: "Bradley Hand";
-	background-color: var(--bg-color);
+/* Link hints stay dark — they float above arbitrary pages */
+.R.HM .LH {
+	background: var(--bg-color);
+	color: var(--accent-color);
+	border: 1px solid var(--border-color);
+	border-radius: 4px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 	text-shadow: none;
-	color: var(--input-text-color);
-	border: 0;
-	border-radius: 6px;
-	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-	font-size: 13px;
-	font-weight: var(--hint-font-weight);
-	background-image: none;
 }
 
-.HUD,
-.HUD.D,
-.HUD:after,
-.HUD.D:after {
-	color: var(--input-text-color);
-	border-radius: 6px 6px 0px 0px;
-	font-weight: var(--hud-font-weight);
-	background-image: none;
-}
-
+/* Typed hint characters dim instead of disappearing */
 .R.HM .LH .MC {
-	font-weight: bold;
-	color: var(--input-text-color);
-	display: none;
+	opacity: 0.4;
+}
+
+/* HUD follows the page scheme: Latte by default, Mocha when dark (.D) */
+.HUD,
+.HUD:after {
+	background: #eff1f5;
+	color: #5c5f77;
+	text-shadow: none;
+	border: 0;
+}
+
+.HUD {
+	border: 1px solid #ccd0da;
+	border-bottom: 0;
+	border-radius: 6px 6px 0 0;
+}
+
+.HUD.D,
+.HUD.D:after {
+	background: #181825;
+	color: #bac2de;
+}
+
+.HUD.D {
+	border-color: #45475a;
 }
 
 .Omnibar {
@@ -70,50 +72,57 @@ Based on catppuccin, optimized for elegance and restraint
 	--font-weight: normal;
 	--padding: 0px;
 
-	/* ----------  DAY THEME  ---------- */
-	--bg: #eff1f5;
-	/* Base */
-	--fg: #4c4f69;
-	/* Text */
-	--accent-fg: #e6e9ef;
-	--border: #ccd0da;
-	--title: #8839ef;
-	--title-accent: #04a5e5;
-	--link: #1e66f5;
-	--link-accent: #d20f39;
+	/* ----------  DAY · Latte  ---------- */
+	--bg: #eff1f5; /* Base */
+	--fg: #4c4f69; /* Text */
+	--muted: #6c6f85; /* Subtext0 — URLs */
+	--accent: #8839ef; /* Mauve — the only accent */
+	--select-bg: #e6e9ef; /* Mantle */
+	--border: #ccd0da; /* Surface0 */
 
-	/* ---------- NIGHT THEME ---------- */
-	--nbg: #181825;
-	--nfg: #313244;
-	--naccent-fg: #313244;
-	--nborder: #45475a;
-	--ntitle: #cba6f7;
-	--ntitle-accent: #94e2d5;
-	--nlink: #89b4fa;
-	--nlink-accent: #f38ba8;
+	/* ---------- NIGHT · Mocha ---------- */
+	--nbg: #181825; /* Mantle */
+	--nfg: #cdd6f4; /* Text */
+	--nmuted: #a6adc8; /* Subtext0 */
+	--naccent: #cba6f7; /* Mauve */
+	--nselect-bg: #313244; /* Surface0 */
+	--nborder: #45475a; /* Surface1 */
 
-	font-family: "Maple Mono NF CN";
+	font-family: "Maple Mono NF CN", monospace;
 }
 
 body {
-	animation: show 150ms ease-out forwards;
 	margin: 12px;
+	background: var(--bg);
+	border: 1px solid var(--border);
 	border-radius: 10px;
 	overflow: hidden;
-	box-shadow: 0 12px 48px rgba(0, 0, 0, 0.25);
+	/* shadow kept tight so it fades out inside the 12px margin */
+	box-shadow:
+		0 1px 4px rgba(76, 79, 105, 0.08),
+		0 4px 16px rgba(76, 79, 105, 0.12);
+	animation: show 150ms ease-out forwards;
 }
 
-body.has-dark {
+/* has-dark may sit on <html> or <body> — cover both */
+body.has-dark,
+.has-dark body {
+	background: var(--nbg);
+	border-color: var(--nborder);
+	box-shadow:
+		0 1px 4px rgba(0, 0, 0, 0.3),
+		0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
-/* Animate Slide in - subtle fade */
 @keyframes show {
-	0% {
+	from {
 		opacity: 0;
+		transform: translateY(-4px);
 	}
 
-	100% {
+	to {
 		opacity: 1;
+		transform: none;
 	}
 }
 
@@ -147,26 +156,28 @@ body.has-dark {
 }
 
 .has-dark #bar {
-	border-bottom: 1px solid var(--nborder);
-}
-
-#bar::before {
-	content: "";
-	position: absolute;
-	left: 16px;
-	z-index: 300;
-	padding: 6px 0;
+	border-bottom-color: var(--nborder);
 }
 
 #input {
 	padding: 6px 16px;
-	color: var(--title);
+	color: var(--fg);
+	caret-color: var(--accent);
 	border: none;
 	box-shadow: none;
 }
 
+#input::selection {
+	background: rgba(136, 57, 239, 0.2);
+}
+
 .has-dark #input {
-	color: var(--ntitle);
+	color: var(--nfg);
+	caret-color: var(--naccent);
+}
+
+.has-dark #input::selection {
+	background: rgba(203, 166, 247, 0.25);
 }
 
 .item .icon {
@@ -186,44 +197,58 @@ body.has-dark {
 	transform: scale(0.7);
 }
 
-.item.s,
-.item:hover {
-	background-color: var(--accent-fg);
+/* Reserve the indicator's 2px on every row so selection never shifts text */
+.item {
 	border: none;
-	border-left: 2px solid var(--link);
-	cursor: pointer;
+	border-left: 2px solid transparent;
 	border-radius: 0 4px 4px 0;
 }
 
-.has-dark .item.s,
+/* Hover gets the quiet background; the accent bar marks keyboard selection only */
+.item:hover {
+	background-color: var(--select-bg);
+	cursor: pointer;
+}
+
+.item.s {
+	background-color: var(--select-bg);
+	border-left-color: var(--accent);
+}
+
 .has-dark .item:hover {
-	background-color: var(--naccent-fg);
-	border-left: 2px solid var(--nlink);
+	background-color: var(--nselect-bg);
+}
+
+.has-dark .item.s {
+	background-color: var(--nselect-bg);
+	border-left-color: var(--naccent);
 }
 
 .item .top {
-	color: var(--title);
+	color: var(--fg);
 	position: relative;
 	height: auto;
 	padding: 3px 0;
 }
 
 .has-dark .item .top {
-	color: var(--ntitle);
+	color: var(--nfg);
 }
 
 .item .top .title {
 	font-size: var(--font-size);
+	font-weight: 500;
 	line-height: 1.4;
 	margin-top: 1px;
 }
 
 .item .top .title match {
-	color: var(--title-accent);
+	color: var(--accent);
+	font-weight: 600;
 }
 
 .has-dark .item .top .title match {
-	color: var(--ntitle-accent);
+	color: var(--naccent);
 }
 
 .item .top .title:empty::after {
@@ -237,43 +262,62 @@ body.has-dark {
 }
 
 .item .bottom a {
-	color: var(--link);
+	color: var(--muted);
 	font-size: var(--font-size-link);
-	opacity: 0.85;
 }
 
 .has-dark .item .bottom a {
-	color: var(--nlink);
+	color: var(--nmuted);
 }
 
 .item .bottom a match {
-	color: var(--nlink-accent);
+	color: var(--accent);
 	text-decoration: none;
 }
 
 .has-dark .item .bottom a match {
-	color: var(--nlink-accent);
+	color: var(--naccent);
 }
 
 /* #find */
 /* ^ do not touch this line ^ */
 
-.r,
-.r.D {
-	background-color: #181825;
-	color: #cba6f7 !important;
+.r {
+	background: #eff1f5;
+	color: #4c4f69 !important;
 	margin: 0;
 	padding: 6px 10px;
 	font-size: 13px;
+	font-family: "Maple Mono NF CN", monospace;
 	height: 28px;
-	border: 1px solid #45475a;
+	border: 1px solid #ccd0da;
 	border-radius: 6px;
 	box-shadow: none;
+}
+
+.r.D {
+	background: #181825;
+	color: #cdd6f4 !important;
+	border-color: #45475a;
 }
 
 .r #s,
 .r #i {
 	font-weight: 500;
-	color: #f5e0dc;
-	background-color: #313244;
+	color: #4c4f69;
+	background: #e6e9ef;
+}
+
+.r #i {
+	caret-color: #8839ef;
+}
+
+.r.D #s,
+.r.D #i {
+	color: #cdd6f4;
+	background: #313244;
+}
+
+.r.D #i {
+	caret-color: #cba6f7;
 }
