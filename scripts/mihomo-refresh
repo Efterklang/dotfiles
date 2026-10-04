@@ -31,9 +31,11 @@
 #   MIHOMO_CONFIG                      覆盖输出 config.yaml 路径，适合先写到 /tmp 测试
 
 require "fileutils"
+require "ipaddr"
 require "json"
 require "net/http"
 require "open3"
+require "resolv"
 require "tempfile"
 require "time"
 require "uri"
@@ -67,9 +69,21 @@ def truthy_env?(name)
   %w[1 true yes on].include?(ENV[name].to_s.strip.downcase)
 end
 
+# 拒绝访问内网、回环、链路本地地址（包括云厂商 metadata 服务 169.254.169.254），防止 SSRF。
+def assert_public_host!(uri)
+  raise "不支持的协议: #{uri.scheme}" unless %w[http https].include?(uri.scheme)
+
+  address = Resolv.getaddress(uri.host)
+  ip = IPAddr.new(address)
+  raise "禁止访问内部地址: #{uri.host}" if ip.private? || ip.loopback? || ip.link_local?
+rescue Resolv::ResolvError, IPAddr::Error
+  raise "无法解析或非法的主机: #{uri.host}"
+end
+
 # 下载订阅或远程脚本。这里手动处理重定向，并设置 User-Agent，兼容部分机场订阅接口。
 def fetch(uri, user_agent, limit = 5)
   raise "重定向次数过多" if limit.zero?
+  assert_public_host!(uri)
 
   response = Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == "https") do |http|
     request = Net::HTTP::Get.new(uri)
