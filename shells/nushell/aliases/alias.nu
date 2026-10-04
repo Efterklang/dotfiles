@@ -2,6 +2,7 @@ source ./git.nu
 source ./media.nu
 source ./replace.nu
 source ./ffmpeg.nu
+source ./magick.nu
 source ./obsidian.nu
 source ./mpd.nu
 source ./bun.nu
@@ -34,6 +35,15 @@ def copy_text [] {
   }
 }
 
+def ip_public [port?: int] {
+  let ip = ipconfig getifaddr en0
+  if $port == null {
+    $ip
+  } else {
+    $"($ip):($port)"
+  }
+}
+
 alias clip = copy_text
 
 def ob [vault="posts"] {
@@ -59,14 +69,14 @@ alias e = exit 0
 alias f = fastfetch
 alias g = tv text
 alias h = bun run hexo s
-alias i = gemini
+alias i = ip_public
 alias j = just
 alias k = commandline edit --insert (zellij delete-all-sessions -y; zellij kill-all-sessions -y)
 alias l = clear
 alias m = start_mpd
 alias n = exec nu
 alias o = start
-alias p = yazi ~/OneDrive/Pictures/ ~/OneDrive/Pictures/Camera/Memory
+alias p = yazi ~/OneDrive/Pictures/ ~/OneDrive/Pictures/Memory
 alias q = exit 0
 alias r = rmpc
 alias s = somo
@@ -101,4 +111,4 @@ alias icat = kitten icat
 # edit
 alias vr = nvim ./README.md
 alias vp = nvim ./package.json
-alias vj = nvim ./justfile
+alias vj = just --edit 

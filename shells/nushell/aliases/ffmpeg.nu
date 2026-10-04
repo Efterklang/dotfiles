@@ -13,7 +13,7 @@ def _find_media_paths [...paths: string] {
 }
 
 def _find_image_paths [...paths: string] {
-    let ext_pattern = '\.(jpg|jpeg|png|bmp|tiff|webp)$'
+    let ext_pattern = '\.(jpg|jpeg|png|bmp|tiff|webp|heic)$'
     # 如果没有指定路径，则默认使用当前目录
     let files = if ($paths | is-empty) {
         ls . | where name =~ $ext_pattern
